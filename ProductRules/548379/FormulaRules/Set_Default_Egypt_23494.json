@@ -1,0 +1,11 @@
+{
+    "id": 23494,
+    "condition": "[AND]([NOT](<*ATTSEL(DVM_ENG_GES)*>),<*ISSELECTED(DVM_GES_Location.GES Egypt)*>)",
+    "name": "Set_Default_Egypt",
+    "action": "<*SELECTVALUE(DVM_ENG_GES:HPS_GES_P350B_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

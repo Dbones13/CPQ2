@@ -1,0 +1,11 @@
+{
+    "id": 13982,
+    "condition": "[EQ](<*VALUE(DVM_Software_Release)*>,R700)",
+    "name": "EP-DVMR700_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Part_Summary:EP-DVMR700)*><*SETATVQTY(DVM_Sys_Part_Summary:EP-DVMR700,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

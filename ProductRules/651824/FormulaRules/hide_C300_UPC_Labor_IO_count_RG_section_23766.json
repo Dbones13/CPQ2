@@ -1,0 +1,11 @@
+{
+    "id": 23766,
+    "condition": "[AND]([NEQ](<*XValue(../SerC_CG_Type_of_Controller_Required)*>,CN100 CEE),[NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "hide C300_UPC_Labor_IO_count_RG section",
+    "action": "<*CTX ( Container(C300_UPC_Labor_IO_count_RG_1).Rows.Clear )*>\n<*CTX ( Container(C300_UPC_Labor_IO_count_RG_2).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(C300_UPC_Labor_IO_count_RG_1,Header_25_open,Header_25_close,C300_UPC_Labor_IO_count_RG_2,UPC_Labor_IO_Note)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

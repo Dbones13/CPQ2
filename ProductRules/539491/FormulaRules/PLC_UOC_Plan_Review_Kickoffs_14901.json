@@ -1,0 +1,11 @@
+{
+    "id": 14901,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_Plan Review_Kickoffs",
+    "action": "<*ASSIGNVALUE(PLC_UOC_Plan Review_Kickoffs:4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

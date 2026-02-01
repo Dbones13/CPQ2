@@ -1,0 +1,11 @@
+{
+    "id": 13915,
+    "condition": "[EQ](<*CTX( Container(PCD Additional Custom Deliverables).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Additional Custom Deliverable",
+    "action": "<*CTX( Container(PCD Additional Custom Deliverables).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

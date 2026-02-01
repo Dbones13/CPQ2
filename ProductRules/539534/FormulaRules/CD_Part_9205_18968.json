@@ -1,0 +1,11 @@
+{
+    "id": 18968,
+    "condition": "[EQ](<*VALUE(MX_CD_Quick_Disconnect_Assembly)*>,Yes)",
+    "name": "CD_Part_9205",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9205)*><*SETATVQTY(MX_CD_Bom_Parts:9205, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

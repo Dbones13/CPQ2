@@ -1,0 +1,11 @@
+{
+    "id": 23647,
+    "condition": "[OR]([GT](<*VALUE(Number of SMX System RT)*>,0),[GT](<*VALUE(Number of SMX System ST)*>,0),[GT](<*VALUE(USB Key ST Only)*>,0),[GT](<*VALUE(Number of Years of Contract)*>,0))",
+    "name": "Product Complete",
+    "action": "<*ASSIGNVALUE(Required_Attribute:1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

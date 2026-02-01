@@ -1,0 +1,11 @@
+{
+    "id": 13840,
+    "condition": "1",
+    "name": "Labor_parameter_io",
+    "action": "<*ASSIGNVALUE(Labor_parameter_io:<*Eval(0<*VALUE(Labor_parameter_ai)*>+0<*VALUE(Labor_parameter_ao)*>+0<*VALUE(Labor_parameter_di)*>+0<*VALUE(Labor_parameter_do)*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19817,
+    "condition": "[EQ](<*VALUE(SerC_CG_DO_Relay_Extension_Cable_Length)*>,)",
+    "name": "Defalt_SerC_CG_DO_Relay_Extension_Cable_Length",
+    "action": "<*SELECTVALUE(SerC_CG_DO_Relay_Extension_Cable_Length:0.5M)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

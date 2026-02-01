@@ -1,0 +1,11 @@
+{
+    "id": 18353,
+    "condition": "[AND]([IN](<*VALUE(MXP_Scanner_Type)*>,3-4022-54,3-6022-54,3-4022-64,3-6022-64,3-4022-44),[EQ](<*VALUE(MXP_Chiller)*>,Yes))",
+    "name": "Part_A_3_7225",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-7225)*><*SETATVQTY(MXP_SE_Bom_Parts:3-7225,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

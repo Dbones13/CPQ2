@@ -1,0 +1,11 @@
+{
+    "id": 24173,
+    "condition": "[EQ](<*VALUE(ARO_Trusted_Platform_Module)*>,)",
+    "name": "Default_ARO_Trusted_Platform_Module",
+    "action": "<*SELECTVALUE(ARO_Trusted_Platform_Module:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

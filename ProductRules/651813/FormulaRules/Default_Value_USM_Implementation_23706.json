@@ -1,0 +1,11 @@
+{
+    "id": 23706,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(USM Implementation).GetDisplayValue )*>,)",
+    "name": "Default_Value_USM Implementation",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(USM Implementation).Set(No) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/09/25",
+    "modifiedBy": "Narasimhan Chakravarthy"
+}

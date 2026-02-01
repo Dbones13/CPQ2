@@ -1,0 +1,11 @@
+{
+    "id": 14145,
+    "condition": "[EQ](<*VALUE(Customer_Defaults)*>,)",
+    "name": "Default_Customer_Defaults",
+    "action": "<*SELECTVALUE(Customer_Defaults:Coated)*>",
+    "description": "CXCPQ-37118",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

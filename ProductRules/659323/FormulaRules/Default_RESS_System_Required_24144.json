@@ -1,0 +1,11 @@
+{
+    "id": 24144,
+    "condition": "[EQ](<*VALUE(RESS_System_Required)*>,)",
+    "name": "Default_RESS_System_Required",
+    "action": "<*SELECTVALUE(RESS_System_Required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

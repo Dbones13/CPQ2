@@ -1,0 +1,11 @@
+{
+    "id": 13363,
+    "condition": "1",
+    "name": "Total_Points_license",
+    "action": "<*ASSIGNVALUE(Total_Points_license:<* Eval(0<*VALUE(Experion_Process_Points)*>+0<*VALUE(Experion_SCADA_Points)*>+0<*VALUE(QVCS Support for Process Points)*>+0<*VALUE(Number_of_Equipment_Points)*>+0<*VALUE(Experion UOC Analog Points)*>+0<*VALUE(Experion UOC Digital Points)*>+0<*VALUE(Experion UOC Regulatory Compliance Points)*>+0<*VALUE(Experion UOC Batch Points)*>+0<*VALUE(Experion UOC Advanced Batch Points)*>+0<*VALUE(Experion UOC Composite Device License)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

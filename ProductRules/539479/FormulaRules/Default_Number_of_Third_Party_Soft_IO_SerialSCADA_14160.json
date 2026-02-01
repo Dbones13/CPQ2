@@ -1,0 +1,11 @@
+{
+    "id": 14160,
+    "condition": "[EQ](<*VALUE(Number_of_Third_Party_Soft_IO_(Serial/SCADA))*>,)",
+    "name": "Default_Number_of_Third_Party_Soft_IO_(Serial/SCADA)",
+    "action": "<*ASSIGNVALUE(Number_of_Third_Party_Soft_IO_(Serial/SCADA):0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

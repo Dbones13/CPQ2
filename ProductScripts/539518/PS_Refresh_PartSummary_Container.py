@@ -1,0 +1,1 @@
+Product.GetContainerByName('SM_RG_PartSummary_Cont').Calculate()

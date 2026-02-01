@@ -1,0 +1,11 @@
+{
+    "id": 19680,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Exp HS Select the OS for Experion HS Server Node)*>,Windows 10 ENT 2019),[EQ](<*VALUE(Exp HS Select the OS for Exp HS Flex Station Node)*>,Windows Server 2019),[GT](<* IsNull(<*VALUE(Exp HS Quantity of Flex Station)*>,0)*>,0))",
+    "name": "EP-COAS19 Set5",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-COAS19)*>\n<*SETATVQTY(Experion_HS_PART_SUMMARY:EP-COAS19, <*VALUE(Exp HS Quantity of Flex Station)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45837 \nCondition: If \"Select the OS for Experion HS Server Node\"  = Windows 10 ENT 2019  AND Experion HS Flex Station Node = Windows Server 2019\nEP-COAS19 Qty= Value entered by user for \"Quantity of Flex Station\"",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

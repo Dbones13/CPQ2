@@ -1,0 +1,11 @@
+{
+    "id": 12237,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "ELEPIU_labor_del_Site_Installation",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_Site_Installation:<* Eval(2+[IF]([EQ](<*VALUE(ELEPIU_Will_Honeywell_equipment_installation)*>,Yes)){<* Eval(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>*8.6+<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>*0.5+<*VALUE(ELEPIU_Total_number_of_MTL_Intrinsic_Barriers)*>*1) *>}{<* Eval(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>*5.6) *>}[ENDIF]+[IF]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Serial Interface)){<* Eval(<*VALUE(ELEPIU_Total_number_of_AM_CLs_impacted_by_ELPIU)*>*0.5) *>}{0}[ENDIF]) *>\n)*>",
+    "description": "CXCPQ-60191",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

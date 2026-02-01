@@ -1,0 +1,11 @@
+{
+    "id": 18001,
+    "condition": "[EQ](<*VALUE(MXP_CD_Control_Type)*>,)",
+    "name": "Default_control_type",
+    "action": "<*SELECTVALUE(MXP_CD_Control_Type:ProFlow)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

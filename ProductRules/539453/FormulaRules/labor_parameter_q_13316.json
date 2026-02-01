@@ -1,0 +1,11 @@
+{
+    "id": 13316,
+    "condition": "1",
+    "name": "labor_parameter_q",
+    "action": "<*ASSIGNVALUE(labor_parameter_q:[IF](<*ISSELECTED(Quality of Customer Input.Static Provided by Customer)*>){0.5}{[IF](<*ISSELECTED(Quality of Customer Input.Old Graphic)*>){0.9}{[IF](<*ISSELECTED(Quality of Customer Input.Sketch)*>){1}{[IF](<*ISSELECTED(Quality of Customer Input.Clouded P&ID)*>){2}{[IF](<*ISSELECTED(Quality of Customer Input.Unclouded P&ID)*>){2.5}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "If qci = Static Provided by Customer, Q = 0.5,\nElse If qci = Old Graphic, Q = 0.9\nElse If qci = Sketch, Q = 1,\nElse If qci = Clouded P&ID, Q = 2\nElse If qci = Unclouded P&ID, Q = 2.5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

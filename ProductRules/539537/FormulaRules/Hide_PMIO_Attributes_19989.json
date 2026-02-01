@@ -1,0 +1,11 @@
+{
+    "id": 19989,
+    "condition": "[NOT]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[EQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,Yes)))",
+    "name": "Hide_PMIO_Attributes",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_FTA_Channel_Vertical_Width,SerC_CG_PMIO_Power_System_Type)*>",
+    "description": "CXCPQ-52066",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

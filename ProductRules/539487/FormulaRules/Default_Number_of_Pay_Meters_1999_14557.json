@@ -1,0 +1,11 @@
+{
+    "id": 14557,
+    "condition": "[EQ](<*VALUE(PRMS Number of Pay Meters (1-999))*>,)",
+    "name": "Default Number of Pay Meters (1-999)",
+    "action": "<*ASSIGNVALUE(PRMS Number of Pay Meters (1-999):1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

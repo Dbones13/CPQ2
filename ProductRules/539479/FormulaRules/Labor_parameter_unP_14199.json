@@ -1,0 +1,11 @@
+{
+    "id": 14199,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_parameter_unP",
+    "action": "<*ASSIGNVALUE(Labor_parameter_unP:[IF]([EQ](<*VALUE(Labor_Unreleased_Product)*>,Yes)){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26661,
+    "condition": "[IF]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes)){0}{[NOT]([IF](<*ISSELECTED(Interface with TPS Required?.Yes)*>){[AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),<*ISSELECTED(Experion Server Type.Server TPS)*>,[GT](<*VALUE(Additional Servers)*>,0))}{[AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),[OR](<*ISSELECTED(Experion Server Type.Server)*>,<*ISSELECTED(Experion Server Type.Flex Server)*>),[GT](<*VALUE(Additional Servers)*>,0))}[ENDIF])}[ENDIF]",
+    "name": "Server_Type1_hide_SVR_PER_DELL_Rack_RAID1_XE",
+    "action": "<*DISALLOWVALUES(Server Type1:SVR_PER_DELL_Rack_RAID1_XE)*>",
+    "description": "CXDEV-8007",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

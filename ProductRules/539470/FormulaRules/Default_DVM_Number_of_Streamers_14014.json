@@ -1,0 +1,11 @@
+{
+    "id": 14014,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Streamers)*>,)",
+    "name": "Default_DVM_Number_of_Streamers",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Streamers:150)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

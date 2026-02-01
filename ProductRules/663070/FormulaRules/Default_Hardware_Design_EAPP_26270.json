@@ -1,0 +1,11 @@
+{
+    "id": 26270,
+    "condition": "[EQ](<*VALUE(Hardware_Design_Selection - EAPP Node)*>,)",
+    "name": "Default_Hardware_Design_EAPP",
+    "action": "<*SELECTVALUE(Hardware Design Selection - EAPP Node:SVR_STD_DELL_Tower_RAID1)*>",
+    "description": "For Cabinet Preference",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

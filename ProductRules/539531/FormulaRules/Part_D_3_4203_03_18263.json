@@ -1,0 +1,11 @@
+{
+    "id": 18263,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,Sx15 PrecisionPlus Kr 85, 1\" (~25mm) gap)",
+    "name": "Part_D_3_4203_03",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-4203-03)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23364,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZUSER2,TP-ZUSES1,TP-Z2P2R4,TP-ZWDTD1,TP-ZWDRD1,TP-ZG2ER7,TP-ZG2ETL,TP-ZG2EH4,TP-ZWDTF1,TP-ZG2ES1,TP-ZWHTB1,TP-ZP2ET6,TP-ZP2ET7,TP-ZP2ER4,TP-ZWHTD1,TP-ZWDTC1,TP-ZWDRC1,TP-ZWHTA1,TP-ZWDTB1,TP-ZWDRB1,TP-Z2P2T6,TP-Z2P2T7,TP-ZWDTA1,TP-ZWDRA1,TP-ZWHTC1,TP-ZWDTE1,TP-ZWDRE1,TP-ZE2EH3,TP-ZE3ER1,TP-ZE2ETL,TP-ZUSRW2,TP-ZUSRW1,TP-ZUSTW1,TP-ZUSTW2,TP-ZESCH4,TP-ZESCR7,TP-ZESCD3)",
+    "name": "1 Station Upgrade",
+    "action": "<*DISALLOWATTRIBUTES(KE_Additional_Hard_Disk)*>\n<*DISALLOWATTRIBUTES(KE_Node_Type)*>\n<*DISALLOWATTRIBUTES(KE_Control_Solver_License)*>\n<*DISALLOWATTRIBUTES(KE_ISA_Adapter_Required)*>\n<*DISALLOWATTRIBUTES(KE_Hardware_Selection)*>\n<*DISALLOWATTRIBUTES(KE_COA_License_Type)*>\n<*DISALLOWATTRIBUTES(KE_Does_installed_APP)*>\n<*DISALLOWATTRIBUTES(KE_Experion_Base_Media_Delivery)*>\n<*DISALLOWATTRIBUTES(KE_C300_Horizontal_Mounting_Kit)*>\n<*DISALLOWATTRIBUTES(KE_Controller Experion peer to peer connectivity)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

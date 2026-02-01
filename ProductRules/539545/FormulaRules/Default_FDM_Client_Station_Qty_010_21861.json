@@ -1,0 +1,11 @@
+{
+    "id": 21861,
+    "condition": "[EQ](<*VALUE(FDM Client Station Qty (0-10))*>,)",
+    "name": "Default_FDM Client Station Qty (0-10)",
+    "action": "<*ASSIGNVALUE(FDM Client Station Qty (0-10):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

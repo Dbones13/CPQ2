@@ -1,0 +1,11 @@
+{
+    "id": 13905,
+    "condition": "1",
+    "name": "Final Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(CE UOC Engineering Labor Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(CE UOC Additional Custom Deliverables).Total(Final Hrs) )*>) *>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

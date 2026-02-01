@@ -1,0 +1,11 @@
+{
+    "id": 13572,
+    "condition": "[EQ](<*VALUE(Virtualization_Warranty_Extension)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_Warranty_Extension",
+    "action": "<*SELECTVALUE(Virtualization_Warranty_Extension:None)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

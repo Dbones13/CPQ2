@@ -1,0 +1,11 @@
+{
+    "id": 23014,
+    "condition": "[OR]([NOT](<*ATTSEL(SerC_IO_Mounting_Solution)*>),<*IFANYVALUE(C300_RG_UPC_Specify_Id_Modifier:YES,SerC_IO_Mounting_Solution:Cabinet,SerC_IO_Mounting_Solution:Mounting Panel,C300_RG_UPC_CN100_IO_HIVE:N,C300_RG_UPC_CNM:N)*>)",
+    "name": "Disallow_C300_RG_UPC_EIM_Attr",
+    "action": "<*DISALLOWATTRIBUTES(C300_RG_UPC_EIM)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

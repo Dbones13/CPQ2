@@ -1,0 +1,11 @@
+{
+    "id": 12094,
+    "condition": "[EQ](<*VALUE(OWS_Number of PCAP as RAPs)*>,)",
+    "name": "Default_Number of PCAP as RAPs",
+    "action": "<*ASSIGNVALUE(OWS_Number of PCAP as RAPs:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26706,
+    "condition": "[EQ](<*VALUE(Default Switch L3)*>,)",
+    "name": "Set_Default_switch_L3",
+    "action": "<*SELECTVALUE(Default Switch L3:SW_L3_RT_CISCO_24PT)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

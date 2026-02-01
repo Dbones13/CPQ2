@@ -1,0 +1,11 @@
+{
+    "id": 23496,
+    "condition": "[EQ](<*VALUE(DVM_GES_Location)*>,GES India)",
+    "name": "Hide GES Location other than IN",
+    "action": "<*DISALLOWVALUES(DVM_Additional_Project_GES_Deliverables:HPS_GES_P215B_CN,DVM_Additional_Project_GES_Deliverables:HPS_GES_P215B_RO,DVM_Additional_Project_GES_Deliverables:HPS_GES_P215B_UZ,DVM_Additional_Project_GES_Deliverables:HPS_GES_P215F_CN,DVM_Additional_Project_GES_Deliverables:HPS_GES_P215F_RO,DVM_Additional_Project_GES_Deliverables:HPS_GES_P215F_UZ,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335B_CN,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335B_RO,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335B_UZ,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335F_CN,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335F_RO,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335F_UZ,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350B_CN,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350B_RO,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350B_UZ,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350F_CN,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350F_RO,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350F_UZ,DVM_Additional_Project_GES_Deliverables:HPS_GES_P215B_EG,DVM_Additional_Project_GES_Deliverables:HPS_GES_P215F_EG,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335B_EG,DVM_Additional_Project_GES_Deliverables:HPS_GES_P335F_EG,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350B_EG,DVM_Additional_Project_GES_Deliverables:HPS_GES_P350F_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

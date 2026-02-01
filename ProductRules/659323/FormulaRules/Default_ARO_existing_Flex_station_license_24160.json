@@ -1,0 +1,11 @@
+{
+    "id": 24160,
+    "condition": "[EQ](<*VALUE(ARO_existing_Flex_station_license)*>,)",
+    "name": "Default_ARO_existing_Flex_station_license",
+    "action": "<*ASSIGNVALUE(ARO_existing_Flex_station_license:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

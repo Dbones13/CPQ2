@@ -1,0 +1,11 @@
+{
+    "id": 25931,
+    "condition": "[EQ](<*VALUE(Trusted Platform Module_TPM_ACE_T)*>,)",
+    "name": "Default_TrustedACET",
+    "action": "<*SELECTVALUE(Trusted Platform Module_TPM_ACE_T:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

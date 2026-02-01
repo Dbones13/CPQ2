@@ -1,0 +1,11 @@
+{
+    "id": 19765,
+    "condition": "[EQ](<*VALUE(Length_of_GI_IS_FTA_PDP_Cable)*>,)",
+    "name": "Default_Length_of_GI_IS_FTA_PDP_Cable",
+    "action": "<*SELECTVALUE(Length_of_GI_IS_FTA_PDP_Cable:5M)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

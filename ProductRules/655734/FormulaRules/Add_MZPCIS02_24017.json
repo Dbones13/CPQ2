@@ -1,0 +1,11 @@
+{
+    "id": 24017,
+    "condition": "[AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,Dell XR11))",
+    "name": "Add_MZ-PCIS02",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-PCIS02)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

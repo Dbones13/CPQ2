@@ -1,0 +1,11 @@
+{
+    "id": 20196,
+    "condition": "[EQ](<*VALUE(DVM_HVA -People_Counting)*>,)",
+    "name": "Default_DVM_HVA -People_Counting",
+    "action": "<*ASSIGNVALUE(DVM_HVA -People_Counting:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

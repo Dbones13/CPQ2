@@ -1,0 +1,11 @@
+{
+    "id": 4804,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Caliper))",
+    "name": "Measurement_caliper _1",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Caliper Msmt|Caliper Msmt Unifoil|Optical Caliper Msmt)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

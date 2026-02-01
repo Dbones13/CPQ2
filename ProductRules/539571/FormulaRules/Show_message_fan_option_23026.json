@@ -1,0 +1,11 @@
+{
+    "id": 23026,
+    "condition": "[NEQ](<*VALUE(SerC_RG_Power_System_Vendor)*>,TDI)",
+    "name": "Show_message_fan_option",
+    "action": "<*ALLOWATTRIBUTES(Message_fan_option)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

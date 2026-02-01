@@ -1,0 +1,11 @@
+{
+    "id": 12198,
+    "condition": "[AND](<*ISSELECTED(PSW_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(PSW_GES_Location.None)*>)",
+    "name": "PSW_FTP_Template_Import SB GES None",
+    "action": "<*ASSIGNVALUE(PSW_FTP_Template_Import:[IF]([EQ](<*VALUE(PSW_FTP_Template_Import_Scope)*>,Yes)){<* Eval((8*<*VALUE(PSW_Number_of_FTP_Templates)*>)*0.9) *>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

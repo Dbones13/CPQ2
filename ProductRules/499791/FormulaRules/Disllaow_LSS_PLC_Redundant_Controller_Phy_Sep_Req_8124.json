@@ -1,0 +1,11 @@
+{
+    "id": 8124,
+    "condition": "1",
+    "name": "Disllaow_LSS_PLC_Redundant_Controller_Phy_Sep_Req",
+    "action": "[IF]([AND]([OR]([EQ](<*VALUE(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC)*>,UOC),[EQ](<*VALUE(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC)*>,vUOC)),[EQ](<*VALUE(LSS_PLC_Controller_Type)*>,Redundant))){[IF]([EQ](<*VALUE(LSS_PLC_Redundant_Controller_Phy_Sep_Req)*>,)){<*SELECTVALUE(LSS_PLC_Redundant_Controller_Phy_Sep_Req:No)*>}{}[ENDIF]}{<*DISALLOWATTRIBUTES(LSS_PLC_Redundant_Controller_Phy_Sep_Req)*><*DISALLOWATTRIBUTES(LSS_PLC_Controller_Rack_Redundancy_type)*>}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Redundant_Controller_Phy_Sep_Req)*>,Yes)){<*DISALLOWVALUES(LSS_PLC_Controller_Rack_Redundancy_type:Single Rack)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_IO_Rack_Type)*>,4 I/O Rack)){<*DISALLOWVALUES(LSS_PLC_Power_Supply_Type:Redundant)*><*SELECTVALUE(LSS_PLC_Power_Supply_Type:Non Redundant)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+Product.Attr('SM_Product_Name').AssignValue(Product.Name)

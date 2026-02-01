@@ -1,0 +1,11 @@
+{
+    "id": 23986,
+    "condition": "[EQ](<*VALUE(Terminal_Weighbridge_Interface_required?)*>,Yes)",
+    "name": "Add_TM-WBMOD1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:TM-WBMOD1)*><*SETATVQTY(Terminal_Part_Summary:TM-WBMOD1,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

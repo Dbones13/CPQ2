@@ -1,0 +1,1 @@
+ScriptExecutor.Execute('PS_PY_List_Price_Visibility')

@@ -1,0 +1,11 @@
+{
+    "id": 10455,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,Non-SESP Exp Upgrade)",
+    "name": "Disallow Labor",
+    "action": "<*DISALLOWVALUES(MIgration_Scope_Choices:LABOR)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

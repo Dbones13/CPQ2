@@ -1,0 +1,11 @@
+{
+    "id": 26492,
+    "condition": "[EQ](<*VALUE(Cabinet_Display_size)*>,55 inch NTS)",
+    "name": "55_Display_Size_CMS_MW",
+    "action": "<*DISALLOWVALUES(CMS Multi Window Support Option Required?:Yes)*>",
+    "description": "",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

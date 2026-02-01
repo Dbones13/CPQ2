@@ -1,0 +1,11 @@
+{
+    "id": 22918,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_CabinetPower)*>,)",
+    "name": "Default_SeriesC_RG_Cabinet_Power",
+    "action": "<*SELECTVALUE(SeriesC_RG_CabinetPower:120/230/VAC Power Supply)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

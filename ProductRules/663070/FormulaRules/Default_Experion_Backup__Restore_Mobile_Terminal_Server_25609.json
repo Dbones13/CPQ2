@@ -1,0 +1,11 @@
+{
+    "id": 25609,
+    "condition": "[EQ](<*VALUE(Experion Backup & Restore (Mobile Terminal Server))*>,)",
+    "name": "Default_Experion_Backup_&_Restore_(Mobile Terminal Server)",
+    "action": "<*SELECTVALUE(Experion Backup & Restore (Mobile Terminal Server):No)*>",
+    "description": "CXCPQ-35453",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

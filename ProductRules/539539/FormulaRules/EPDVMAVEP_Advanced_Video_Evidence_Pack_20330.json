@@ -1,0 +1,11 @@
+{
+    "id": 20330,
+    "condition": "[AND]([EQ](<*VALUE(DVM_Software_Release)*>,R800),[EQ](<*VALUE(Advanced Video Evidence Pack)*>,Yes))",
+    "name": "EP-DVMAVEP_Advanced Video Evidence Pack",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMAVEP)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMAVEP, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

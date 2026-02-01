@@ -1,0 +1,11 @@
+{
+    "id": 18425,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Type)*>,)",
+    "name": "HIde_Options",
+    "action": "<*DISALLOWATTRIBUTES(Header_02_close,Header_02_open,MXP_Debris_Catcher,MXP_Electronics_End_Cooling,MXP_Remote_PMP,MXP_Wire_Calender_Kit,MXP_Radiation_lamp_Basis_Weight,MXP_Radiation_lamp_BW_X_Ray,MXP_Remote_Scan_off_sheet_buttons_1,MXP_Large_angle_kit,MXP_Edge_detection,MXP_Second_sensor_kit,MXP_Air_gap_compensation,MXP_I_O_Epansion_Kit,MXP_Fan_Cooling,MXP_Vortex_Cooling,MXP_Heat_Exchanger,MXP_Water_Cooling,MXP_Chiller,MXP_Chiller_110_VAC,MXP_Chiler_230_VAC,MXP_Dynamic_Z_Axis_compensation,MXP_Mechanical_Shutter_Indicator,MXP_Sx15_Aperture,MXP_Z_Axis_Sensor,MXP_Tachometor,MXP_Horizontal_Retract,MXP_Dusty_Environment_Kit,MXP_Optional_cable_30_feet,MXP_Optional_cable_75_feet)*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

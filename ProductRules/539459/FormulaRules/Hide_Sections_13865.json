@@ -1,0 +1,11 @@
+{
+    "id": 13865,
+    "condition": "1",
+    "name": "Hide Sections",
+    "action": "[IF]([EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(SM_Hardware).GetDisplayValue )*>,Series C)){<*ALLOWATTRIBUTES(SM_Common_Questions,SM_Hardware_Builder_Station_Cont,SM_Hardware_Historian_Station_Cont,SM_Hardware_Simulation_Station_Cont)*>}{<*DISALLOWATTRIBUTES(SM_Common_Questions,SM_Hardware_Builder_Station_Cont,SM_Hardware_Historian_Station_Cont,SM_Hardware_Simulation_Station_Cont)*>}[ENDIF]\n\n[IF]([AND]([EQ](<*VALUE(CE_Scope_Choices)*>, HW/SW + LABOR),[EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(SM_Hardware).GetDisplayValue )*>, Series C))){<*ALLOWATTRIBUTES(SM_Labor_Cont)*>}{<*DISALLOWATTRIBUTES(SM_Labor_Cont)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

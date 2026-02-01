@@ -1,0 +1,11 @@
+{
+    "id": 18101,
+    "condition": "[NEQ](<*VALUE(MXP_Scanner_Type)*>,)",
+    "name": "Test",
+    "action": "<*ALLOWATTRIBUTES(MXP_Sensor_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

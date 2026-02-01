@@ -1,0 +1,11 @@
+{
+    "id": 9619,
+    "condition": "[EQ](<*ATTSEL(PSkid FGK Percentage of Labor)*>,1)",
+    "name": "Set FGK (Amount of Labor)",
+    "action": "<*ASSIGNVALUE(PSkid FGK Amount of Labor:<* Eval(Round((<*VALUE(PSkid Production Labor Hours)*> * <*VALUE(PSkid Production Labor Hourly Rate)*> * <*VALUE(PSkid FGK Percentage of Labor)*>) /100,2))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

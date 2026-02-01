@@ -1,0 +1,43 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper">
+	<!-- ko foreach: attributes.filterByProperty('name' , "MSID_Product_Container") -->
+	<div class="col-xs-12 col-sm-4">
+	  <div class="text-center attribute-field-headers">Added Products</div>
+	  <!-- ko template: { name: $root.getAttributeTemplate } -->
+	  <!-- /ko -->
+	</div>
+	<!-- /ko -->
+  
+	<div class="col-xs-12 col-sm-6">
+	  <div class="text-center attribute-field-headers">Common Question</div>
+	  <!-- ko foreach: attributes.filterByProperty('name' , "MSID_CommonQuestions") -->
+		<!-- ko if:$data.container.columns().length !== 0-->
+		  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+		  <!-- /ko -->
+		<!-- /ko -->
+	  <!-- /ko -->
+  
+	  <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GES_Location") -->
+	  <div class="text-center attribute-field-headers mx-10">Labor Question</div>
+	  <div
+		data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" style="display:flex">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+	  </div>
+	  <!-- /ko -->
+  
+	  <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Active_Service_Contract") -->
+	  <div
+		data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" style="display:flex">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+	  </div>
+	  <!-- /ko -->
+      <!-- ko foreach: attributes.filterByProperty('name' , "Regional_Migration_Principal_Efforts_Required") -->
+	  <div
+		data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" style="display:flex">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+	  </div>
+	  <!-- /ko -->
+	</div>
+  </div>

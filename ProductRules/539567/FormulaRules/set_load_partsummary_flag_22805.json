@@ -1,0 +1,11 @@
+{
+    "id": 22805,
+    "condition": "1",
+    "name": "set load partsummary flag",
+    "action": "<*ASSIGNVALUE(flag_load_parts_cont:<*VALUE(Location_Cluster_Part_Summary)*>)*>",
+    "description": "set flag at end of rules execution",
+    "rank": "1000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

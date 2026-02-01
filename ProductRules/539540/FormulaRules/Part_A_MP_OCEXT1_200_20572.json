@@ -1,0 +1,11 @@
+{
+    "id": 20572,
+    "condition": "[AND]([EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[GT](<*VALUE(SS_3Position_Base_Unit_with_Right)*>,0))",
+    "name": "Part_A_MP_OCEXT1_200",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MP-OCEXT1-200)*><*SETATVQTY(Simulation_Bom_parts:MP-OCEXT1-200, <*VALUE(SS_3Position_Base_Unit_with_Right)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

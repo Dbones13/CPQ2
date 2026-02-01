@@ -1,0 +1,11 @@
+{
+    "id": 23821,
+    "condition": "[EQ](<*VALUE(R2QRequest)*>,Yes)",
+    "name": "HideR2QLabourDetails",
+    "action": "[IF]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)){<*CTX( Container(PLC_Labour_Details).Column(PLC_Process_Type).SetPermission(Hidden) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Ges_Location).SetPermission(Hidden) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Marshalling_Cabinet_Cont).SetPermission(Hidden) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Enter_Total_Cont).SetPermission(Hidden) )*>}[ENDIF]\n\n\n[IF]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)){<*CTX( Container(PLC_Labour_Details).Column(PLC_Process_Type).SetPermission(Editable) )*><*CTX( Container(PLC_Labour_Details).Column(PLC_Ges_Location).SetPermission(Editable) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Marshalling_Cabinet_Cont).SetPermission(Editable) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Enter_Total_Cont).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

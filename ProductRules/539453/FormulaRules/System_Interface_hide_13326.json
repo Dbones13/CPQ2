@@ -1,0 +1,11 @@
+{
+    "id": 13326,
+    "condition": "[AND]([EQ](<*VALUE(Is Fieldbus Interface in Scope?)*>,No),[EQ](<*VALUE(Is Modbus Interface in Scope?)*>,No),[EQ](<*VALUE(Is Profibus Interface in Scope?)*>,No),[EQ](<*VALUE(Is EtherNet IP Interface in Scope?)*>,No),[EQ](<*VALUE(Is OPC Interface in Scope?)*>,No),[EQ](<*VALUE(Is HART Interface in Scope?)*>,No),[EQ](<*VALUE(Is Terminal Server Interface in Scope?)*>,No),[EQ](<*VALUE(Is DeviceNet Interface in Scope?)*>,No))",
+    "name": "System_Interface_hide",
+    "action": "<*DISALLOWATTRIBUTES(Header_06_open,System_Interface_Engineering_Labor_GES_%,System_Interface_Execution_Year,System_Interface_Labor_Execution_Country,System_Interface_Labor_Productivity,System_Interface_Engineering_Labor_Container,Header_06_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

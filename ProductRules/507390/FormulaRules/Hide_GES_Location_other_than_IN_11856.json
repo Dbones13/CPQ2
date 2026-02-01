@@ -1,0 +1,11 @@
+{
+    "id": 11856,
+    "condition": "[OR](<*ISSELECTED(FDA_Labor_GES_Eng.SYS GES Eng-BO-IN)*>,<*ISSELECTED(FDA_Labor_GES_Eng.SYS GES Eng-FO-IN)*>)",
+    "name": "Hide GES Location other than IN",
+    "action": "<*DISALLOWALLVALUESEXCEPT(FDA_Labor_GES_Eng:HPS_GES_P350B_IN|HPS_GES_P350F_IN)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "27/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

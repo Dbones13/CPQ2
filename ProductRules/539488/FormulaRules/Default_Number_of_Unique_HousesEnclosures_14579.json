@@ -1,0 +1,11 @@
+{
+    "id": 14579,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Unique_Houses/Enclosures)*>,)",
+    "name": "Default Number of Unique Houses/Enclosures",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Unique_Houses/Enclosures:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

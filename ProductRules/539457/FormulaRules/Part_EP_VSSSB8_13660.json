@@ -1,0 +1,11 @@
+{
+    "id": 13660,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_VSAN_Single_Socket_Host_Licenses)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_VSSSB8",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VSSSB8)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VSSSB8,<*VALUE(Virtualization_VSAN_Single_Socket_Host_Licenses)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

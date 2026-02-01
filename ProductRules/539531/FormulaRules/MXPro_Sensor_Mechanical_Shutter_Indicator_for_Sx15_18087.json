@@ -1,0 +1,11 @@
+{
+    "id": 18087,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Mechanical_Shutter_Indicator_for_Sx15)*>,)",
+    "name": "MXPro_Sensor_Mechanical_Shutter_Indicator_for_Sx15",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Mechanical_Shutter_Indicator_for_Sx15:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

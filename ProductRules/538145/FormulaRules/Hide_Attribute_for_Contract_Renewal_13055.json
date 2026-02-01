@@ -1,0 +1,11 @@
+{
+    "id": 13055,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_Attribute_for_Contract_Renewal",
+    "action": "<*CTX ( Container(SC_Trace_Summary).Column(List_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(Unit_Cost).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(Cost_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(UI_Price).SetPermission(Hidden) )*><*SETREQUIRED(SC_License_type_PY)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

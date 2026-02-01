@@ -1,0 +1,11 @@
+{
+    "id": 15277,
+    "condition": "[NEQ](<*VALUE(MXP_Application_Sofware)*>,Online Alloy Compensation Package for Metals)",
+    "name": "Part_D_3_5280_30",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5280-30)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

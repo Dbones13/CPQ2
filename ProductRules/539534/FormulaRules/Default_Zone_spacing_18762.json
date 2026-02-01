@@ -1,0 +1,11 @@
+{
+    "id": 18762,
+    "condition": "[EQ](<*VALUE(MX_CD_Zone_spacing)*>,)",
+    "name": "Default_Zone_spacing",
+    "action": "<*SELECTVALUE(MX_CD_Zone_spacing:50mm)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

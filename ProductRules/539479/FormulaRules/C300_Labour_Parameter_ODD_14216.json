@@ -1,0 +1,11 @@
+{
+    "id": 14216,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_ODD",
+    "action": "<*ASSIGNVALUE(C300_Labour_Parameter_ODD:<* Eval((0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DI) )*>-(<*VALUE(C300_labour_Parameter_ODI)*>*1.5))/1.5 )*>)*>",
+    "description": "CXCPQ-43539",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

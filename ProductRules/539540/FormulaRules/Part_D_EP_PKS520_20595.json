@@ -1,0 +1,11 @@
+{
+    "id": 20595,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R520),[EQ](<*VALUE(SS_Experion_Base_Media_Delivery)*>,Physical Delivery)))",
+    "name": "Part_D_EP_PKS520",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-PKS520)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

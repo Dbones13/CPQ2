@@ -1,0 +1,11 @@
+{
+    "id": 25824,
+    "condition": "[EQ](<*VALUE(Node Supplier_server)*>,)",
+    "name": "set_default_desk_mount3",
+    "action": "<*SELECTVALUE(Node Supplier_server:Honewell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

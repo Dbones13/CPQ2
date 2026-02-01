@@ -1,0 +1,11 @@
+{
+    "id": 10905,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(HC900_Shield_Grounding_Strip_(Package of 2))*>,0) *>,0))",
+    "name": "Reset 900TSS-0001",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900TSS-0001)*><* DoResetAtt *>",
+    "description": "CXCPQ-40189",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

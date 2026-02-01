@@ -1,0 +1,11 @@
+{
+    "id": 23947,
+    "condition": "[EQ](<*CTX ( Container(Terminal_Workflow_Scope).Rows.GetCount )*>,0)",
+    "name": "Load Terminal_Workflow_Scope",
+    "action": "<*CTX ( Container(Terminal_Workflow_Scope).Load(select TransT_Formula from TERMINAL_ENGINEERING_DELIVERABLES) )*>",
+    "description": "Load Calculated hrs formula fields",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

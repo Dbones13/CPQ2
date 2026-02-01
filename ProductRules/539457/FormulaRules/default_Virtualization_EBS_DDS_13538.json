@@ -1,0 +1,11 @@
+{
+    "id": 13538,
+    "condition": "[EQ](<*VALUE(Virtualization_EBR_DDS)*>,)",
+    "name": "default_Virtualization_EBS_DDS",
+    "action": "<*SELECTVALUE(Virtualization_EBR_DDS:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

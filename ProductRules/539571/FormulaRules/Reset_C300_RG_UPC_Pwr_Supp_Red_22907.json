@@ -1,0 +1,11 @@
+{
+    "id": 22907,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_Pwr_Supp_Red)*>)",
+    "name": "Reset_C300_RG_UPC_Pwr_Supp_Red",
+    "action": "<*RESETATTRIBUTE(C300_RG_UPC_Pwr_Supp_Red)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

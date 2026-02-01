@@ -1,0 +1,11 @@
+{
+    "id": 18787,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NEQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Fourdrinier preheat and profiling))",
+    "name": "CD_Part_Dis_9210_2",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9210-2)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

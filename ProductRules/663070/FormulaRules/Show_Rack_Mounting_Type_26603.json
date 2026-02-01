@@ -1,0 +1,11 @@
+{
+    "id": 26603,
+    "condition": "[OR]([EQ](<*VALUE(Server_NodeType)*>,SVR_PER_DELL_Tower_RAID1),[EQ](<*VALUE(Server_NodeType)*>,SVR_STD_DELL_Tower_RAID1), [AND]([OR]([EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Experion Server Type)*>,Server TPS)),[EQ](<*VALUE(Server Mounting)*>,Cabinet)))",
+    "name": "Show_Rack_Mounting_Type",
+    "action": "<*ALLOWATTRIBUTES(Rack_Mounting_Type)*>",
+    "description": "CXCPQ-45303",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

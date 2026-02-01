@@ -1,0 +1,11 @@
+{
+    "id": 17832,
+    "condition": "[GT](<*CTX( Container(Flow Computer Interfaces).Row(1).Column(Nodes).Get )*>,0)",
+    "name": "PS_Flow Computer Interface_EP-IFLX00_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IFLX00)*><*SELECTVALUE(SCADA_BOM_Items:EP-IFLX00)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IFLX00, Qty.)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

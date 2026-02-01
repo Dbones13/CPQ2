@@ -1,0 +1,11 @@
+{
+    "id": 23025,
+    "condition": "[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M)",
+    "name": "Hide_IO_attr",
+    "action": "<*CTX ( Container(C300_RAIL_Universal_io_RG_cont_2).Rows.Clear )*>\n<*CTX ( Container(C300_RAIL_Universal_IO_cont_RG_1).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(C300_C IO_RG MS,Header_17_close,Header_17_open,Header_21_close,Header_21_open,SeriesC_General_Question_message,General_Question_Average_current_DO,ATTCON_23_close,ATTCON_23_open,C300_RG_Universal_IO_cont_1,C300_RG_Universal_IO_cont_2,Header_05_close,Header_05_open,C300Number of RAIL UIOs per Non Standard Cabinet,C300_RAIL_Universal_IO_cont_RG_1,C300_RAIL_Universal_io_RG_cont_2,ATTCON_25_close,ATTCON_25_open,Header_15_close,Header_15_open,SerC_RG_Enhanced_Function_IO_Cont,SerC_RG_Enhanced_Function_IO_Cont2,series_c_Rg_message)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

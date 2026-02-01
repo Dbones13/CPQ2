@@ -1,0 +1,11 @@
+{
+    "id": 21840,
+    "condition": "[EQ](<*VALUE(FDM HART IP Downlink License (0-1))*>,)",
+    "name": "Default_FDM HART IP Downlink License (0-1)",
+    "action": "<*ASSIGNVALUE(FDM HART IP Downlink License (0-1):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

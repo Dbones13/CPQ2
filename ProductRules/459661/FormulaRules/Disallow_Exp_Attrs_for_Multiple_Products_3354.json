@@ -1,0 +1,11 @@
+{
+    "id": 3354,
+    "condition": "[AND]([GT](<*CTX( Container(CE_System_Cont).Rows.GetCount )*>,1),[LIKE](<*VALUE(CE_Selected_Products)*>,Experion HS System))",
+    "name": "Disallow_Exp_Attrs_for_Multiple_Products",
+    "action": "<*SETOPTIONAL(Experion_Cutover)*><*DISALLOWATTRIBUTES(Experion_Cutover,Experion_HS_MSID_Choices)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

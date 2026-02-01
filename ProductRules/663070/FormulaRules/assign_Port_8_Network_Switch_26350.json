@@ -1,0 +1,11 @@
+{
+    "id": 26350,
+    "condition": "1",
+    "name": "assign Port 8 Network Switch",
+    "action": "<*ASSIGNVALUE(Port 8 Network Switch:<* Eval(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SI-3300I2)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SU-AR55N8)*>+<*VALUE(Port 8 Network Switchcluster)*>)*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18389,
+    "condition": "[EQ](<*VALUE(MXP_Sensor_Type)*>,Sx18 PrecisionPlus Promethium 147, 0.4\" (~10mm) gap)",
+    "name": "Part_A_3_4303_58",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-4303-58)*><*SETATVQTY(MXP_SE_Bom_Parts:3-4303-58,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

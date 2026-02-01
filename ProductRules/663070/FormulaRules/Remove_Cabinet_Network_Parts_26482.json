@@ -1,0 +1,11 @@
+{
+    "id": 26482,
+    "condition": "[NOT]([AND]([GT](<*CTX( Container(Exp_Ent_Grp_Part_Summary_Cont).Sum(Is_Cabinet_Part) )*>,0),[GT](<*VALUE(exp_ent_cab_qnt)*>,0)))",
+    "name": "Remove_Cabinet_Network_Parts",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51196958-400)*><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51306194-300)*><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-KVMAD1-100)*><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-KVMAD2-100)*>'\n<*RESETVALUE(Exp_Ent_Grp_Part_Summary:51305482-503)*>\n<* DoResetAtt *>",
+    "description": "CXCPQ-45057",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "08/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

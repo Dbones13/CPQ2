@@ -1,0 +1,11 @@
+{
+    "id": 25912,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Experion Software Release)*>,R510),[EQ](<*VALUE(Experion Software Release)*>,R511)),[GT](<*VALUE(stationQnt37198)*>,0))",
+    "name": "EP-COAW10 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-COAW10)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-COAW10,<*VALUE(stationQnt37198)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37545",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

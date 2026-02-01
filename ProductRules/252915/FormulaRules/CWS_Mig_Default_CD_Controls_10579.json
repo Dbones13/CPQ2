@@ -1,0 +1,11 @@
+{
+    "id": 10579,
+    "condition": "[EQ](<*VALUE(CWS_Mig_CD_Controls)*>,)",
+    "name": "CWS_Mig_Default_CD_Controls",
+    "action": "<*SELECTVALUE(CWS_Mig_CD_Controls:Traditional)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

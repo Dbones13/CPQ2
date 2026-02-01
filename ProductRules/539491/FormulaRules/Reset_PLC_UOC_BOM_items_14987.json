@@ -1,0 +1,11 @@
+{
+    "id": 14987,
+    "condition": "1",
+    "name": "Reset_PLC_UOC_BOM_items",
+    "action": "<*RESETATTRIBUTE(PLC_UOC_BOM_Items)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25722,
+    "condition": "[AND]([GT](<*VALUE(Experion Process Points (0 - 45000))*>,999),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Non Redundant))",
+    "name": "Exp_Prc_Pnt_Add_EPDPR01K_NonRed",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR01K)*>[IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Non Redundant)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DPR01K, <*eval(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-10000*INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000))-5000*INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000-(INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000)))*5000)/2000)))/1000))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP-DPR01K Non Red",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

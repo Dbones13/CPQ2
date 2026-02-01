@@ -1,0 +1,11 @@
+{
+    "id": 13132,
+    "condition": "[NEQ](<*VALUE(SC_Product_Type)*>,)",
+    "name": "Incomplete configuration",
+    "action": "<* ExecuteScript(GS_SC_HW_IncompleteMessage) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

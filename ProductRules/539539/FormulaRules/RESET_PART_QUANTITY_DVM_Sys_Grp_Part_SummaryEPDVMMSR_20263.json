@@ -1,0 +1,11 @@
+{
+    "id": 20263,
+    "condition": "[NEQ](<*VALUE(DVM_Motion_Search_on_Recorded_Video)*>,Yes)",
+    "name": "RESET_PART_QUANTITY_DVM_Sys_Grp_Part_Summary:EP-DVMMSR",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMMSR)*><* DoResetAtt *>",
+    "description": "CXCPQ-45731",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

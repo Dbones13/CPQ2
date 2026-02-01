@@ -1,0 +1,11 @@
+{
+    "id": 22376,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Software_Release)*>,R530),[NEQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[NEQ](<*VALUE(ESDC_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(ESDC_Client_Station_Qty)*>,0),[NEQ](<*VALUE(ESDC_Station_Node_Type)*>,STN_STD_DELL_Tower_NonRAID))",
+    "name": "Part_D_MZ_PCWS15",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-PCWS15)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

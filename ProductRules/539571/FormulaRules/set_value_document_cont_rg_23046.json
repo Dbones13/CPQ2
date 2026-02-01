@@ -1,0 +1,11 @@
+{
+    "id": 23046,
+    "condition": "[GT](<*CTX ( Container(Document_cont_c3001).Rows.GetCount )*>,0)",
+    "name": "set_value_document_cont_rg",
+    "action": "[IF](<*ISSELECTED(SerC_CG_PM_IO_Solution_required.Yes)*>){<*CTX ( Container(Document_cont_c3001).Row(1).Column(SerC_CG_PM_IO_Solution_required).Set(Yes) )*>}{<*CTX ( Container(Document_cont_c3001).Row(1).Column(SerC_CG_PM_IO_Solution_required).Set(No) )*>}[ENDIF]\n[IF](<*ISSELECTED(Ser_RG_Universal_Marshalling_Cabinet.No)*>){<*CTX ( Container(Document_cont_c3001).Row(1).Column(SerC_CG_Universal_Marshalling_Cabinet).Set(No) )*>}{<*CTX ( Container(Document_cont_c3001).Row(1).Column(SerC_CG_Universal_Marshalling_Cabinet).Set(Yes) )*>}[ENDIF]\n[IF](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>){<*CTX ( Container(Document_cont_c3001).Row(1).Column(Io_family).Set(seriesC) )*>}{[IF](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>){<*CTX ( Container(Document_cont_c3001).Row(1).Column(Io_family).Set(Mark2) )*>}{[IF](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>){<*CTX ( Container(Document_cont_c3001).Row(1).Column(Io_family).Set(TurboM) )*>}{<*CTX ( Container(Document_cont_c3001).Row(1).Column(Io_family).Set(None) )*>}[ENDIF]}[ENDIF]}[ENDIF]\n[IF]([OR](<*ISSELECTED(SerC_CG_Type_of_Controller_Required.CN100 CEE)*>,[AND]([NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,)))){<*CTX ( Container(Document_cont_c3001).Row(1).Column(cont_req).Set(No) )*>}{<*CTX ( Container(Document_cont_c3001).Row(1).Column(cont_req).Set(Yes) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

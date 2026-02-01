@@ -1,0 +1,11 @@
+{
+    "id": 10653,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Front_only_Cabinet Doors)*>,))",
+    "name": "default_LSS_Front_only_Cabinet Door",
+    "action": "<*SELECTVALUE(LSS_Front_only_Cabinet Doors:Standard)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

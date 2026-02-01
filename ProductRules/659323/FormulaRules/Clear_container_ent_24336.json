@@ -1,0 +1,11 @@
+{
+    "id": 24336,
+    "condition": "[EQ](<*VALUE(Enterprise_flag_check)*>,False)",
+    "name": "Clear_container_ent",
+    "action": "<*CTX ( Container(SM_Enterprise_Cluster).Rows.Clear )*>\n<*CTX ( Container(SM_Enterprise_Cluster_Sub).Rows.Clear )*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

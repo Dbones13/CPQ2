@@ -1,0 +1,11 @@
+{
+    "id": 23778,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Show_enhanced_function_cont",
+    "action": "<*ALLOWATTRIBUTES(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont1)*>\n<*ALLOWATTRIBUTES(Header_06_open,C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont,Header_06_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

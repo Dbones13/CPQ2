@@ -1,0 +1,11 @@
+{
+    "id": 23709,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(Post Delivery Support).GetDisplayValue )*>,)",
+    "name": "Default_Value_Post Delivery Support",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(Post Delivery Support).Set(No) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/09/25",
+    "modifiedBy": "Narasimhan Chakravarthy"
+}

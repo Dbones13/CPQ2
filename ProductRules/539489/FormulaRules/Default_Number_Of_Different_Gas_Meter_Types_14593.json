@@ -1,0 +1,11 @@
+{
+    "id": 14593,
+    "condition": "[EQ](<*VALUE(MSC_Number_Of_Different_Gas_Meter_Types)*>,)",
+    "name": "Default_Number_Of_Different_Gas_Meter_Types",
+    "action": "<*ASSIGNVALUE(MSC_Number_Of_Different_Gas_Meter_Types:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

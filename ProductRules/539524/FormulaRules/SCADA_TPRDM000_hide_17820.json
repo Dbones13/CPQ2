@@ -1,0 +1,11 @@
+{
+    "id": 17820,
+    "condition": "[OR]([EQ](<*CTX( Container(OPC Application Instances).Row(9).Column(Nodes).Get )*>,),[EQ](<*CTX( Container(OPC Application Instances).Row(9).Column(Nodes).Get )*>,0))",
+    "name": "SCADA_TP-RDM000_hide",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:TP-RDM000)*>",
+    "description": "Hide-SCADA_TP-RDM000",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

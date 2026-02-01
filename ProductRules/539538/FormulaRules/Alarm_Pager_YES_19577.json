@@ -1,0 +1,11 @@
+{
+    "id": 19577,
+    "condition": "[EQ](<*VALUE(Exp HS Alarm Pager)*>,Yes)",
+    "name": "Alarm Pager YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HAPAGE)*><* DoResetAtt *>",
+    "description": "SET",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

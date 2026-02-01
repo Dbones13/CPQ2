@@ -1,0 +1,11 @@
+{
+    "id": 23160,
+    "condition": "1",
+    "name": "Hide_Travel_&_Living_Expense_Required",
+    "action": "<*CTX( Container(New_exp_common_prj_input1).Column(Travel Living Expense Required).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "21/11/24",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13618,
+    "condition": "[NOT]([OR]([AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[GT](<*VALUE(Virtualization_Number_of_Clusters_in_the_network)*>,0)),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B)))",
+    "name": "Hide_premiumClusterCont",
+    "action": "<*CTX( Container(Virtualization_cluster_transpose).Rows.Clear )*><*DISALLOWATTRIBUTES(Virtualization_cluster_transpose)*><*DISALLOWATTRIBUTES(Header_02_close,Header_02_open)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

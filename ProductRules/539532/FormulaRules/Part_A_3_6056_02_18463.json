@@ -1,0 +1,11 @@
+{
+    "id": 18463,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Type)*>,3-6056-02)",
+    "name": "Part_A_3_6056_02",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SC_Bom_Parts:3-6056-02)*><*SETATVQTY(MXP_SC_Bom_Parts:3-6056-02,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14045,
+    "condition": "[EQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "EP-DVMVWO_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Part_Summary:EP-DVMVWO)*><*SETATVQTY(DVM_Sys_Part_Summary:EP-DVMVWO, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

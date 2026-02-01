@@ -1,0 +1,11 @@
+{
+    "id": 13890,
+    "condition": "1",
+    "name": "populate_xpm_check",
+    "action": "<*ASSIGNVAUE(xPM to EHPMX_check:[IF]([EQ](<*VALUE(xPM_Select_the_migration_scenario)*>,xPM to EHPMX)){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

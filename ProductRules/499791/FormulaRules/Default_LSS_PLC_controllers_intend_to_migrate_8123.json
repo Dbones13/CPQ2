@@ -1,0 +1,11 @@
+{
+    "id": 8123,
+    "condition": "[EQ](<*VALUE(LSS_PLC_controllers_intend_to_migrate)*>,)",
+    "name": "Default_LSS_PLC_controllers_intend_to_migrate",
+    "action": "<*ASSIGNVALUE(LSS_PLC_controllers_intend_to_migrate:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

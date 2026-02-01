@@ -1,0 +1,11 @@
+{
+    "id": 19575,
+    "condition": "[EQ](<*VALUE(Exp HS Advanced HMIWeb Solution Pack)*>,Yes)",
+    "name": "Advanced HMIWeb Solution Pack YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HADSP1)*><* DoResetAtt *>",
+    "description": "SET",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

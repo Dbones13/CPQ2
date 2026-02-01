@@ -1,0 +1,11 @@
+{
+    "id": 18934,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Actuator_Mounting_Adapter)*>,Yes),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_91010_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:91010-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

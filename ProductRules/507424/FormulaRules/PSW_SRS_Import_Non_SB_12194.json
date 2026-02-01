@@ -1,0 +1,11 @@
+{
+    "id": 12194,
+    "condition": "<*ISSELECTED(PSW_Implementation_Methodology.Non-Standard Build Estimate)*>",
+    "name": "PSW_SRS_Import Non SB",
+    "action": "<*ASSIGNVALUE(PSW_SRS_Import:[IF]([EQ](<*VALUE(PSW_SRS_Import_in_Scope)*>,Yes)){<* Eval(40+<*VALUE(PSW_Number of SIFs)*>*1+16) *>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

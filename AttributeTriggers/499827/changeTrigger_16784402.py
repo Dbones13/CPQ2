@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(PM_Duration_Driven_Activities_Labor_Hrs:<*EVAL(8*<*VALUE(labor_parameter_pf)*>*<*VALUE(labor_parameter_pd)*>+<*VALUE(labor_parameter_rm)*>)*>)*>

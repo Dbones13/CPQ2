@@ -1,0 +1,11 @@
+{
+    "id": 25637,
+    "condition": "[EQ](<*VALUE(Interface with TPS Required?)*>,)",
+    "name": "Default_Interface_TPS",
+    "action": "<*SELECTVALUE(Interface with TPS Required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,152 @@
+<!-- Migration1  -->
+<div class="attributes fiori3-attributes flex MigrationPrd ProductStyle" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+
+		<div class="col-xl-12 col-md-12 col-sm-12 col-xs-12 config_row padrt10"> 
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="msid-questions" onclick="toggleConfigSection(event, '#msid-questions')">  
+			  <!-- ko foreach: attributes --> 
+			  <!-- ko if:   name() == 'LBL_MSID_INFO'   --> 
+			<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }"  > 
+		 
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko --> 
+				<a id="msid-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			 <!-- /ko -->
+			 <!-- /ko -->
+			 </div>
+			 <div id="msid-questions-content"  class=" col-md-12 clear-padding">
+			 <!-- ko foreach: attributes --> 
+			  <!-- ko if:   name() == 'MIgration_Scope_Choices'   --> 
+			<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" > 
+		 
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko --> 
+			 
+			</div>
+			 <!-- /ko -->
+			<!-- ko if: name() == 'Migration_MSID_System_Number'  ||  name() == 'Migration_MSID_Choices'  ||  name() == 'MSID_PRDCHOICES'    --> 
+			<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+			  <div class="fiori3-container-label flex col-md-4" >
+				<span class="label-range-hint-wrapper flex">
+					<label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+					<span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+			 
+					 <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, tooltip: {trigger: 'focus', title: hint, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+				</span>
+			</div>
+			<div class="fiori3-select-group col-md-3 clear-padding">
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko --> 
+			</div>
+			<div class="col-xl-5 col-md-5 col-sm-5 col-xs-12 flex editicon">
+				 
+			</div>
+			</div>
+			 <!-- /ko -->
+			 <!-- /ko -->
+		</div> 
+		</div> 
+		
+ 
+	<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="msid-common" onclick="toggleConfigSection(event, '#msid-common')">  
+			  <!-- ko foreach: attributes --> 
+			  <!-- ko if:   name() == 'Common_Question'   --> 
+			<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }"  > 
+		 
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko --> 
+				<a id="msid-common-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			 <!-- /ko -->
+			 <!-- /ko -->
+	 </div>
+	  <div id="msid-common-content"  class=" col-md-12 clear-padding">
+     <!-- ko foreach: attributes -->    
+			
+			<!-- ko if: name() == 'OPM_Basic_Information' || name() == 'LCN_Design_Inputs_for_TPN_OTU_Upgrade' || name() == 'NONSESP_Design_Inputs_for_Experion_Upgrade_License' || name() == 'NONSESP_Design_Inputs_for_eServer_Upgrade_License' || name() == 'ELCN_Basic_Information' || name() == 'EBR_Basic_Information'  || name() == 'EBR_Upgrade' || name() == 'xPM_Migration_General_Qns_Cont' -->	 
+				<div class="config_row col-md-12 clear-padding pt10 flex banner_clps collapsed" data-toggle="collapse" aria-expanded="true" data-target=".expbkpandrest"  >
+				  <label class="onlytext">OPM Basic Information</label> 
+				</div>
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12 collapse in expbkpandrest collapse in' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row collapse in expbkpandrest', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+					 <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+			<!-- ko if: name() == 'EBR_New_Additional_EBR'  || name() == 'EBR_Hardware_to_Host_EBR_Physical_Node_Only'  || name() == 'xPM_Migration_Scenario_Cont' ||  name() == 'ENB_Migration_General_Qns_Cont'  || name() == 'xPM_Network_Upgrade_Cont'   -->	 
+    	 	  
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+					 <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+			<!-- ko if: name() == 'ELCN_Upgrade_New_ELCN_Nodes'    -->	 
+    	 	  
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+					 <!-- ko template: { name: "ContainerTemplate_UpgradeNode"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+			<!-- ko if: name() == 'ELCN_Upgrade_New_ELCN_Nodes'    -->	 
+    	 	  
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+					 <!-- ko template: { name: "ContainerTemplate_NewNode"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+			<!-- ko if: name() == 'xPM_Migration_Config_Cont'    -->	 
+    	 	  
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+					 <!-- ko template: { name: "ContainerTemplate_xpmConfigurations"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+			<!-- ko if: name() == 'xPM_Config_Asset_DB_Cont'  || name() == 'ENB_Config_Asset_DB_Cont'  -->	 
+    	 	  
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+					 <!-- ko template: { name: "ContainerTemplate_AssetDB"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+			<!-- ko if: name() == 'ENB_Migration_Config_Cont'    -->	 
+    	 	  
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+					 <!-- ko template: { name: "ContainerTemplate_Configurations"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+			<!-- ko if: name() == 'OPM_Node_Configuration' -->	 
+				<div class="config_row col-md-12 clear-padding pt10 flex banner_clps collapsed" data-toggle="collapse" aria-expanded="true" data-target=".node_config"  >
+				  <label class="onlytext">Node Configuration and Migration Platforms</label> 
+				</div>
+				<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12  node_config collapse in' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row node_config collapse in', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+			
+					 <!-- ko template: { name: "ContainerTemplate_nomoretable_nodeconfig"} -->
+					<!-- /ko --> 
+			   </div>
+            <!-- /ko -->
+    	<!-- ko ifnot: name() == 'Migration_MSID_System_Number'  || name() == 'MIgration_Scope_Choices'  || name() == 'Migration_MSID_Choices' ||name() == 'MSID_PRDCHOICES'  || name() == 'LBL_MSID_INFO' || name() == 'OPM_Basic_Information' || name() == 'OPM_Node_Configuration' || name() == 'LCN_Design_Inputs_for_TPN_OTU_Upgrade' || name() == 'NONSESP_Design_Inputs_for_Experion_Upgrade_License' || name() == 'NONSESP_Design_Inputs_for_eServer_Upgrade_License' || name() == 'ELCN_Basic_Information' || name() == 'ELCN_Upgrade_New_ELCN_Nodes' || name() == 'EBR_Basic_Information'  || name() == 'EBR_Upgrade' || name() == 'EBR_New_Additional_EBR' || name() == 'EBR_Hardware_to_Host_EBR_Physical_Node_Only' || name() == 'xPM_Migration_Scenario_Cont' || name() == 'xPM_Migration_General_Qns_Cont' || name() == 'xPM_Migration_Config_Cont' || name() == 'xPM_Config_Asset_DB_Cont' ||  name() == 'ENB_Migration_General_Qns_Cont' || name() == 'ENB_Migration_Config_Cont' || name() == 'ENB_Config_Asset_DB_Cont' || name() == 'xPM_Network_Upgrade_Cont' || name() == 'Common_Question' || name() == 'CONT_MSID_SUBPRD'   -->
+
+            <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+            </div>
+    	<!-- /ko -->
+    <!-- /ko -->
+</div>
+		<!-- ko foreach: attributes -->    
+			<!-- ko if: name() == 'CONT_MSID_SUBPRD'    -->
+
+            <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12 pt10' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row pt10', id: id }, css: { 'fiori3-configuration-container-wrapper ': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+            </div>
+    	<!-- /ko -->
+    <!-- /ko -->
+</div>
+

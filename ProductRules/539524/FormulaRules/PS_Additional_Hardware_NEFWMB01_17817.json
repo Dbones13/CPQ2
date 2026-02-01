@@ -1,0 +1,11 @@
+{
+    "id": 17817,
+    "condition": "1",
+    "name": "PS_Additional_Hardware_NE-FWMB01",
+    "action": "[IF]([OR]([GT](<*CTX( Container(Additional Hardware).Row(3).Column(Quantity).Get)*>,0),[GT](<*CTX( Container(Additional Hardware).Row(4).Column(Quantity).Get)*>,0),[GT](<*CTX( Container(Additional Hardware).Row(5).Column(Quantity).Get)*>,0))){<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:NE-FWMB01)*><*SELECTVALUE(SCADA_BOM_Items:NE-FWMB01)*><*SETATVQTY(SCADA_BOM_Items:NE-FWMB01,<*VALUE(Additional_Hardware_Qty)*>)*><*DoResetAtt*>}{<*DISALLOWVALUES(SCADA_BOM_Items:NE-FWMB01)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

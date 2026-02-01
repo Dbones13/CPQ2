@@ -1,0 +1,11 @@
+{
+    "id": 20037,
+    "condition": "[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_C300_Controller_Module_Type.C300(PCNT05))*>)",
+    "name": "Allow_SerC_CG_Control_Networking_Module_Required",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Control_Networking_Module_Required)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22960,
+    "condition": "[EQ](<*VALUE(SerC_RG_Distance_for_PM_Remote_Group)*>,)",
+    "name": "Default_SerC_RG_Distance_for_PM_Remote_Group",
+    "action": "<*SELECTVALUE(SerC_RG_Distance_for_PM_Remote_Group:1.5 KM)*>",
+    "description": "CXCPQ-52066",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

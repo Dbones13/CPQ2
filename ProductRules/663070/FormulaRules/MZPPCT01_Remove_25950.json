@@ -1,0 +1,11 @@
+{
+    "id": 25950,
+    "condition": "[EQ](<*VALUE(How many Experion Panel PCs required? 0_30)*>,0)",
+    "name": "MZ-PPCT01_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MZ-PPCT01)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15056,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Q2",
+    "action": "<*ASSIGNVALUE(Q2:<* Eval(0<*VALUE(MSE_Number_Multistream_Metering_Systems)*>*1.0) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

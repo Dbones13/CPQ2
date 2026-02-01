@@ -1,0 +1,11 @@
+{
+    "id": 14223,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScriptsLabor)*>,SCRIPT_RUN)",
+    "name": "Run_scripts on Add to quote Labor",
+    "action": "<* ExecuteScript(PS_Labor_Parameter)*>\n<* ExecuteScript(Populate_Engg_Labor_Del_Cont)*>\n<* ExecuteScript(PS_Calculate_C300_Labor_Hours)*>\n<* ExecuteScript(PS_Calc_Final_Hrs)*>\n<* ExecuteScript(PS_Populate_C300_Labor_Price_Cost)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

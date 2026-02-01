@@ -1,0 +1,11 @@
+{
+    "id": 25746,
+    "condition": "[EQ](<*VALUE(Hardware Selection)*>,)",
+    "name": "Default_Hardware Selection",
+    "action": "<*SELECTVALUE(Hardware Selection:SVR_STD_DELL_Rack_RAID1)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

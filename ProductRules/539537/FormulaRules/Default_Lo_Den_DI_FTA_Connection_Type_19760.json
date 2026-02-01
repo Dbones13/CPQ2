@@ -1,0 +1,11 @@
+{
+    "id": 19760,
+    "condition": "[EQ](<*VALUE(Lo_Den_DI_FTA_Connection_Type)*>,)",
+    "name": "Default_Lo_Den_DI_FTA_Connection_Type",
+    "action": "<*SELECTVALUE(Lo_Den_DI_FTA_Connection_Type:Screw)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13909,
+    "condition": "1",
+    "name": "ProcessType",
+    "action": "[IF]([IN](<*CTX( Container(UOC_Labor_Details).Row(1).Column(UOC_Process_Type_Labour).Get )*>,BatchPharma,BatchChemical)){<*CTX( Container(UOC_Labor_Details).Column(UOC_Input_Quality_Specific_Labour).SetPermission(Editable) )*>}{<*CTX( Container(UOC_Labor_Details).Column(UOC_Input_Quality_Specific_Labour).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "CXCPQ-22327",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

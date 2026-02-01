@@ -1,0 +1,11 @@
+{
+    "id": 23822,
+    "condition": "[EQ](<*VALUE(R2QRequest)*>,Yes)",
+    "name": "HideCalculationButton",
+    "action": "<*DISALLOWATTRIBUTES(Calculation_Button)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10594,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Digital_Input_24VDC_Modules_32_point)*>,)",
+    "name": "CWS_Mig_Default_Input_24VDC_Modules_32_point",
+    "action": "<*ASSIGNVALUE(CWS_Mig_Digital_Input_24VDC_Modules_32_point:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

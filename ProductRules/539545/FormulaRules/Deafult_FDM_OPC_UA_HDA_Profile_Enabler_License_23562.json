@@ -1,0 +1,11 @@
+{
+    "id": 23562,
+    "condition": "[EQ](<*VALUE(FDM_OPC_UA_HDA_Profile_Enabler_License)*>,)",
+    "name": "Deafult_FDM_OPC_UA_HDA_Profile_Enabler_License",
+    "action": "<*ASSIGNVALUE(FDM_OPC_UA_HDA_Profile_Enabler_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "20/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

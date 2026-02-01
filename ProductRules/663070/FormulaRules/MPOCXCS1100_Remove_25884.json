@@ -1,0 +1,11 @@
+{
+    "id": 25884,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>,0),[OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>,0),[NEQ](<*VALUE(Orion Console Turret Type)*>,None)))",
+    "name": "MP-OCXCS1-100_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCXCS1-100)*><* DoResetAtt *>",
+    "description": "CXCPQ-39365",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

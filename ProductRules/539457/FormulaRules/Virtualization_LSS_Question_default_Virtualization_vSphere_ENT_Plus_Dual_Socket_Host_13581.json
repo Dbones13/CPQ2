@@ -1,0 +1,11 @@
+{
+    "id": 13581,
+    "condition": "[EQ](<*VALUE(Virtualization_vSphere_ENT_Plus_Dual_Socket_Host)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_vSphere_ENT_Plus_Dual_Socket_Host",
+    "action": "<*ASSIGNVALUE(Virtualization_vSphere_ENT_Plus_Dual_Socket_Host:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

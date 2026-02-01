@@ -1,0 +1,11 @@
+{
+    "id": 4837,
+    "condition": "[EQ](<*VALUE(MX_SE_Outboard_mounting_platform)*>,)",
+    "name": "Default_Outboard_mounting",
+    "action": "<*SELECTVALUE(MX_SE_Outboard_mounting_platform:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12970,
+    "condition": "[NEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,)",
+    "name": "SC_Labor_Deliverable_Hrs_Calc",
+    "action": "[IF]([IN](<*CTX( Quote.CustomField(Booking Country) )*>,India,india)){<*ASSIGNVALUE(SC_Labor_Deliverable_Hours:<* Eval((<*VALUE(SC_Labor_Deliverable_Hours)*>)) *>)*>}{<*ASSIGNVALUE(SC_Labor_Deliverable_Hours:<* Eval(int(<*VALUE(SC_Labor_Deliverable_Hours)*>)) *>)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "10/07/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

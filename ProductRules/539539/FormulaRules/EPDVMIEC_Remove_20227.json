@@ -1,0 +1,11 @@
+{
+    "id": 20227,
+    "condition": "[NOT]([GT](<*VALUE(DVM_Internet_Explorer/ Browser_Client)*>,0))",
+    "name": "EP-DVMIEC_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMIEC)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

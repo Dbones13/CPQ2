@@ -1,0 +1,11 @@
+{
+    "id": 19649,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Redundant Servers)*>,Yes),[EQ](<*VALUE(New_Expansion)*>,New),[IF]([EQ](<*Eval(LCASE(\"<* TABLE ( SELECT Booking_Country FROM PMC_Exp_HS_Dongle_Product_BookingCountry \nWHERE  Booking_Country = '<*Eval(LCASE(\"<*CTX( Quote.CustomField(Booking Country) )*>\"))*>' ) *>\"))*>,<*Eval(LCASE(\"<*CTX( Quote.CustomField(Booking Country) )*>\"))*>)){1}{0}[ENDIF])",
+    "name": "Experion HS USB Dongle Redundant Server Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-DONUSB)*><*SETATVQTY(Experion_HS_PART_SUMMARY:EP-DONUSB, 2)*>\n<* DoResetAtt *>",
+    "description": "If the opportunity country is China / Korea / Taiwan / Indonesia / Pakistan / Thailand / Hong Kong / Vietnam \nIf Redundant Servers?=YES then Qty Value=2; Else Qty Value=1",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

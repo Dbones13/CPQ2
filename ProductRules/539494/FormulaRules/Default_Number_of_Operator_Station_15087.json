@@ -1,0 +1,11 @@
+{
+    "id": 15087,
+    "condition": "[EQ](<*VALUE(MXP_Number_of_Operator_Station)*>,)",
+    "name": "Default_Number_of_Operator_Station",
+    "action": "<*ASSIGNVALUE(MXP_Number_of_Operator_Station:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

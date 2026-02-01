@@ -1,0 +1,11 @@
+{
+    "id": 14761,
+    "condition": "[EQ](<*VALUE(MX_HC_Regulatory_Control_Software)*>,Yes)",
+    "name": "MX_Part_Q8799_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8799-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8799-50, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

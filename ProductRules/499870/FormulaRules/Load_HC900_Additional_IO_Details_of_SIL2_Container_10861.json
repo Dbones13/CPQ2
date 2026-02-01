@@ -1,0 +1,11 @@
+{
+    "id": 10861,
+    "condition": "1",
+    "name": "Load_HC900_Additional_IO_Details_of_SIL2_Container",
+    "action": "<*CTX( Container(HC900_Additional_IO_Details_of_SIL2).LoadKeys(IO_Section).Load(select IO_Section,0 as IO_Point_Quantity,0 as Barrier_TB,0 as Euro_TB,0 as RTP_1_Pt_0M,0 as RTP_2_Pt_5M,0 as RTP_5_Pt_0M from HC900_IO_Details where Condition = 'SIL2') )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

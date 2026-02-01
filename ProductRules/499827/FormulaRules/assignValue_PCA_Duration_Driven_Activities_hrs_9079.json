@@ -1,0 +1,11 @@
+{
+    "id": 9079,
+    "condition": "1",
+    "name": "assignValue_PCA Duration Driven Activities_hrs",
+    "action": "<*ASSIGNVALUE(PCA Duration Driven Activities_hrs:<*EVAL((4*<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Project Duration in weeks).Get )*>*<*VALUE(labor_parameter_pf)*>)+<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Number of Extra Progress Reports or Meetings).Get )*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

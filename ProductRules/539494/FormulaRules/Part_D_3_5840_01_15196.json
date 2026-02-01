@@ -1,0 +1,11 @@
+{
+    "id": 15196,
+    "condition": "[NEQ](<*VALUE(MXP_Vynil_Control)*>,Zone Control for Vinyl, Two or Three zone)",
+    "name": "Part_D_3_5840_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5840-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

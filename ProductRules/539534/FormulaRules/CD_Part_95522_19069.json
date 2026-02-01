@@ -1,0 +1,11 @@
+{
+    "id": 19069,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,AquaTrol),[EQ](<*VALUE(MX_CD_Pneumatic_Retraction)*>,Yes))",
+    "name": "CD_Part_95522",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:95522)*><*SETATVQTY(MX_CD_Bom_Parts:95522, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

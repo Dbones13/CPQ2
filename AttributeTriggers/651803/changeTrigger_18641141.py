@@ -1,0 +1,1 @@
+[IF](<*ISSELECTED(Hardware Refresh.Yes)*>){<*DISALLOWATTRIBUTES(Optional Hardware and Software Required)*>}{if<*ALLOWATTRIBUTES(Optional Hardware and Software Required)*>_false}[ENDIF]

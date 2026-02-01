@@ -1,0 +1,11 @@
+{
+    "id": 12985,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_Attribute_for_Contract_Renewal",
+    "action": "<*CTX ( Container(SC_Labor_Summary_Container).Column(Other_Expenses).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Deliverable_Hours).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

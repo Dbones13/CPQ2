@@ -1,0 +1,11 @@
+{
+    "id": 20022,
+    "condition": "[EQ](<*VALUE(SerC_Integrated_Marshalling_Cabinet)*>,)",
+    "name": "Default_serC_IMC",
+    "action": "<*SELECTVALUE(SerC_Integrated_Marshalling_Cabinet:Front To Back)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

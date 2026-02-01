@@ -1,0 +1,11 @@
+{
+    "id": 22846,
+    "condition": "[EQ](<*VALUE(SerC_Power_Supply_Cable_Length)*>,)",
+    "name": "Default_SerC_Power_Supply_Cable_Length",
+    "action": "<*SELECTVALUE(SerC_Power_Supply_Cable_Length:48 In)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

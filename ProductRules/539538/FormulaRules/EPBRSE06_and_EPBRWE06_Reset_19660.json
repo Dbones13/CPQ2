@@ -1,0 +1,11 @@
+{
+    "id": 19660,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS Need Experion Backup and Restore (EBR))*>,Yes))",
+    "name": "EP-BRSE06 and EP-BRWE06 Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-BRSE06)*><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-BRWE06)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

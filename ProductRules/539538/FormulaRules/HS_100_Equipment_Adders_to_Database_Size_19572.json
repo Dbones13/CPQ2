@@ -1,0 +1,11 @@
+{
+    "id": 19572,
+    "condition": "[GT](<* IsNull(<*VALUE(Exp HS HS 100 Equipment Adders to Database Size)*>,0)*>,0)",
+    "name": "HS 100 Equipment Adders to Database Size",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:HS-DEQ100)*>\n<*SETATVQTY(Experion_HS_PART_SUMMARY:HS-DEQ100,<* IsNull(<*VALUE(Exp HS HS 100 Equipment Adders to Database Size)*>)*>)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

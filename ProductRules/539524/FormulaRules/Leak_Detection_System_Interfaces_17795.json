@@ -1,0 +1,11 @@
+{
+    "id": 17795,
+    "condition": "[EQ](<*CTX( Container(Leak Detection System Interfaces).Rows.GetCount )*>,0)",
+    "name": "Leak Detection System Interfaces",
+    "action": "<*CTX( Container(Leak Detection System Interfaces).LoadKeys(Identifiers, Default_Network_type, Default_Network_Interface).Load(SELECT Identifiers, Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'Leak Detection System Interfaces') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

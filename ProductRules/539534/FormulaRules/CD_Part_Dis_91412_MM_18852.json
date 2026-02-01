@@ -1,0 +1,11 @@
+{
+    "id": 18852,
+    "condition": "[OR](<*VALUE(MX_CD_Control_Type)*>,ProFlow)",
+    "name": "CD_Part_Dis_91412_MM",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:91412-MM)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

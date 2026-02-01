@@ -1,0 +1,11 @@
+{
+    "id": 17916,
+    "condition": "[GT](<*VALUE(Scada_conatiner_sum)*>,4999)",
+    "name": "SCADA_EP-DSC05K_point",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-DSC05K)*><*SETATVQTY(SCADA_BOM_Items:EP-DSC05K, <*eval(INT(Fix((<*VALUE(Scada_conatiner_sum)*>-(INT(Fix(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000)))*>)*><* DoResetAtt *>",
+    "description": "Add-EP-DSC05K",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

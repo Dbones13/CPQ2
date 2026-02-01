@@ -1,0 +1,11 @@
+{
+    "id": 23944,
+    "condition": "[AND]([OR]([GT](<*VALUE(Terminal_Number_of_Simple_Screens_for_new_UI)*>,0),[GT](<*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*>,0),[GT](<*VALUE(Terminal_Number_of_Complex_Screens_for_new_UI)*>,0)),[EQ](<*Eval(5.5*<*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*> -int(5.5*<*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*>))*>,0))",
+    "name": "TM New User Interface Set",
+    "action": "<*ASSIGNVALUE(TM New User Interface:<*Eval(((3 * <*VALUE(Terminal_Number_of_Simple_Screens_for_new_UI)*>) +(8 * <*VALUE(Terminal_Number_of_Complex_Screens_for_new_UI)*>)+ (5.5 * <*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*>))*8.5)*>)*>",
+    "description": "Hrs = (ROUNDUP(3 * Number of Simple Screens for new UI) + ROUNDUP((3 + 8)/2 * Number of Moderate Screens for new UI) + ROUNDUP(8 * Number of Complex Screens for new UI)) * 8.5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

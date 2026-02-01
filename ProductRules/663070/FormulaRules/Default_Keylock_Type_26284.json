@@ -1,0 +1,11 @@
+{
+    "id": 26284,
+    "condition": "[EQ](<*VALUE(Keylock Type)*>,)",
+    "name": "Default_Keylock_Type",
+    "action": "<*SELECTVALUE(Keylock Type:Standard)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

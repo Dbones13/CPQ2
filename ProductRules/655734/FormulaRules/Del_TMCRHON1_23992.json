@@ -1,0 +1,11 @@
+{
+    "id": 23992,
+    "condition": "[NEQ](<*VALUE(Terminal_Card_Reader_Interface_required?)*>,Yes)",
+    "name": "Del_TM-CRHON1",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-CRHON1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

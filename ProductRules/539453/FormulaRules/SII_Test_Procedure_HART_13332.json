@@ -1,0 +1,11 @@
+{
+    "id": 13332,
+    "condition": "1",
+    "name": "SII Test Procedure_HART",
+    "action": "<*ASSIGNVALUE(SII Test Procedure_HART:<* Eval(0.15*<*VALUE(Number of HART Devices)*>) *>)*>",
+    "description": "39421",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

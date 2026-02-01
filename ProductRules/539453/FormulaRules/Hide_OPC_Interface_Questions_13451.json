@@ -1,0 +1,11 @@
+{
+    "id": 13451,
+    "condition": "[NEQ](<*VALUE(Is OPC Interface in Scope?)*>,Yes)",
+    "name": "Hide OPC Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of New/Non tested OPC Interfaces,Number of OPC Interface Types,Number of OPC Interfaces)*>",
+    "description": "Hide questions when Is OPC Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

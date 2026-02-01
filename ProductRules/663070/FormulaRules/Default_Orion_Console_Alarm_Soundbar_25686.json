@@ -1,0 +1,11 @@
+{
+    "id": 25686,
+    "condition": "[EQ](<*VALUE(Orion Console Alarm Soundbar)*>,)",
+    "name": "Default Orion Console Alarm Soundbar",
+    "action": "<*SELECTVALUE(Orion Console Alarm Soundbar:No)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

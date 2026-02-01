@@ -1,0 +1,11 @@
+{
+    "id": 15080,
+    "condition": "[EQ](<*VALUE(MXPro_GES_Location)*>,)",
+    "name": "hide_attributes",
+    "action": "<*DISALLOWATTRIBUTES(MXPro_Labor_GES_percent)*> <*CTX( Container(MXPro_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(MXPro_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n\n<*DISALLOWATTRIBUTES(MXPro_Labor_GES_percent_adc)*> <*CTX( Container(MXPro_Labor_Additional_Cust_Deliverables_con).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(MXPro_Labor_Additional_Cust_Deliverables_con).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Additional_Cust_Deliverables_con).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Additional_Cust_Deliverables_con).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Additional_Cust_Deliverables_con).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Additional_Cust_Deliverables_con).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(MXPro_Labor_Additional_Cust_Deliverables_con).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

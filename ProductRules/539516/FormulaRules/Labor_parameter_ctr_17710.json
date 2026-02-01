@@ -1,0 +1,11 @@
+{
+    "id": 17710,
+    "condition": "1",
+    "name": "Labor_parameter_ctr",
+    "action": "<*ASSIGNVALUE(Labor_parameter_ctr:<*Eval(0<*CTX( Container(SM_RemoteGroup_Cont).Sum(Labor_parameter_ctr) )*> + 0<*CTX( Container(SM_CG_PartSummary_Cont).Sum(qty_controller) )*> )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

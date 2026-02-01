@@ -1,0 +1,11 @@
+{
+    "id": 10814,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[AND]([NEQ](<*VALUE(TPA_What_system_are_we_migrating)*>,TPA Alcont),[NEQ](<*VALUE(TPA_What_system_are_we_migrating)*>,PMD R61x or older),[NEQ](<*VALUE(TPA_What_system_are_we_migrating)*>,PMD R7xx (>R612))),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "TPA_labor_constant_else",
+    "action": "<*ASSIGNVALUE(TPA_labor_para_cst_hhg:0.02)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_hng:0.02)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_hp:0.005)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_wptpas:30)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_whpb1:0.006055556)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_whpb2:0.014166667)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_gesblck:0)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_blckofst:0.73)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_blckonst:0.27)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_minfat_app:0.005)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_dsbmt:8)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_gdsb:0)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_hartdp:0)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_migsc:8)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_anbs:0)*>\n",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

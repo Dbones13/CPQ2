@@ -1,0 +1,11 @@
+{
+    "id": 13221,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "TPA_labor_del_Block_Engineering_off_onsite",
+    "action": "<*ASSIGNVALUE(TPA_labor_del_Block_Engineering:<* Eval(<* Round (<* Eval(<*VALUE(TPA_labor_para_cst_blckofst)*>*<*VALUE(TPA_labor_del_Block_Engineering_finalhr)*>) *>,2) *>)*>)*>\n\n<*ASSIGNVALUE(TPA_labor_del_Block_Engineering_OnSite:<* Eval(<* Round (<* Eval(<*VALUE(TPA_labor_para_cst_blckonst)*>*<*VALUE(TPA_labor_del_Block_Engineering_finalhr)*>) *>,2) *>)*>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25558,
+    "condition": "[OR]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Interface with TPS Required?)*>,No))",
+    "name": "Hide_Experion_Backup_Restore_TPS",
+    "action": "<*DISALLOWATTRIBUTES(Experion Backup & Restore (Experion TPS Server),Experion Backup & Restore (ACE)1,Experion Backup & Restore (ACE-T),Experion Backup & Restore (Experion APP),Experion Backup & Restore (Simulation PC)1,Experion Backup & Restore (Flex Station ES-F)1,Experion Backup & Restore (TPS Station ES-T),Experion Backup & Restore ConsoleStation Extension,Number of Network Storage Device Standard,Number of Network Storage Device Performance)*>",
+    "description": "CXCPQ-35453",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

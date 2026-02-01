@@ -1,0 +1,11 @@
+{
+    "id": 21915,
+    "condition": "[NOT]([IF]([IN](<*VALUE(FDM_Release)*>,R540,R530,R521,R520)){[EQ](<*VALUE(FDM HART-IP Server Interfaces (0-1))*>,1)}{0}[ENDIF])",
+    "name": "Del_HC-HIS000",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-HIS000)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/07/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

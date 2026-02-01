@@ -1,0 +1,11 @@
+{
+    "id": 22896,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_Fiber_Optic_Extender)*>)",
+    "name": "Reset_C300_RG_UPC_Fiber_Optic_Extender",
+    "action": "<*RESETATTRIBUTE(C300_RG_UPC_Fiber_Optic_Extender)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

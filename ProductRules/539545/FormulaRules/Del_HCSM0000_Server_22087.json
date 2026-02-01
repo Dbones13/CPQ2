@@ -1,0 +1,11 @@
+{
+    "id": 22087,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Server),[GT](<*VALUE(FDM Experion / TPS Interface License (0-10))*>,0)))",
+    "name": "Del_HC-SM0000_Server",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-SM0000)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

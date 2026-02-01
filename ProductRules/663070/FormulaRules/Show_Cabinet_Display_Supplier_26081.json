@@ -1,0 +1,11 @@
+{
+    "id": 26081,
+    "condition": "[EQ](<*VALUE(CMS Cabinet Mounting Stations required)*>,Yes)",
+    "name": "Show_Cabinet_Display_Supplier",
+    "action": "<*ALLOWATTRIBUTES(Cabinet_Display_Supplier)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

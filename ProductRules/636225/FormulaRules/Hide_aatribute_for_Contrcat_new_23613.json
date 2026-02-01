@@ -1,0 +1,11 @@
+{
+    "id": 23613,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide aatribute for Contrcat new",
+    "action": "<*DISALLOWATTRIBUTES(SC_Experion_System)*><*DISALLOWATTRIBUTES(SC_Safety_Manager_System)*><*DISALLOWATTRIBUTES(SC_TPS_LCN_Connected_System)*>\n<*DISALLOWATTRIBUTES(SC_Concurrent_Users,SC_Num_of_MSID)*><*CTX ( Container(SC_MSID_Container).Column(Select).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

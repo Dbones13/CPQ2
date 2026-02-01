@@ -1,0 +1,11 @@
+{
+    "id": 26132,
+    "condition": "[EQ](<*VALUE(Experion APP Node - Tower Mount)*>,0)",
+    "name": "Hide_App_Node_Desk",
+    "action": "<*DISALLOWATTRIBUTES(APP Node in Desk Preference,Hardware Design Selection - EAPP Node,Ent_app_desk_tpm,Node Supplier_EAPP,Additional Hard Disk_EAPP,Additional Memory_EAPP,Displays_EAPP,Display Size_EAPP,Display Supplier_EAPP,ServerLocClusNetwork_Group_ACE_T)*>",
+    "description": "CXCPQ-35420",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23663,
+    "condition": "[NOT]([AND](<*ISSELECTED(Patching and Anti-Virus Required.Yes)*>,<*ISSELECTED(Onsite Support Implementation Services.Yes)*>))",
+    "name": "Window Assets",
+    "action": "<*DISALLOWATTRIBUTES(Number of Windows Assets)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

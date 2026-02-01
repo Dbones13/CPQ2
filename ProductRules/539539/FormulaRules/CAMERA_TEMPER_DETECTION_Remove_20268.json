@@ -1,0 +1,11 @@
+{
+    "id": 20268,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Camera_Tamper_Detection)*>,Yes))",
+    "name": "CAMERA TEMPER DETECTION_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMCTD)*><* DoResetAtt *>",
+    "description": "CXCPQ-45715",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

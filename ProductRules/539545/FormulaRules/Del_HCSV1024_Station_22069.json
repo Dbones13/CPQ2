@@ -1,0 +1,11 @@
+{
+    "id": 22069,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Workstation),[GEQ](<* Eval(<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> + 15)/2048))*2048 + 15) *>,1024)))",
+    "name": "Del_HC-SV1024_Station",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-SV1024)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

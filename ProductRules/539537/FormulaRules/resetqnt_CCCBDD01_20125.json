@@ -1,0 +1,11 @@
+{
+    "id": 20125,
+    "condition": "[AND]([LT](<*VALUE(Total SeriesC CG Local Io)*>,1),[LT](<*Eval(<*CTX ( Container(C300_TurboM_IOM_CG_Cont).sum(Red_IOM))*>)*>,1))",
+    "name": "resetqnt CC-CBDD01",
+    "action": "<*RESETVALUE(Series_C_CG_Part_Summary:CC-CBDD01)*>\n<*RESETVALUE(Series_C_CG_Part_Summary:CC-CBDS01)*>\n<*RESETVALUE(Series_C_CG_Part_Summary:CC-CASS12)*>\n<*RESETVALUE(Series_C_CG_Part_Summary:CC-CADS12)*>",
+    "description": "",
+    "rank": "7",
+    "active": false,
+    "modifiedDate": "09/01/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9630,
+    "condition": "[EQ](<*ATTSEL(Pskid Net Sell Price)*>,1)",
+    "name": "Set Skid Net Sell Price USD",
+    "action": "<*ASSIGNVALUE(Pskid Net Sell Price USD:<*Eval(Round(<*VALUE(Pskid Net Sell Price)*> * <* TABLE ( SELECT Exchange_Rate FROM Currency_ExchangeRate_Mapping WHERE From_Currency = '<*CTX( Market.CurrencyCode )*>' AND To_Currency = 'USD' ) *>,2))*>)*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26295,
+    "condition": "[EQ](<*VALUE(Node Supplier Server)*>,)",
+    "name": "Node Supplier Server",
+    "action": "<*SELECTVALUE(Node Supplier Server:Honeywell)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

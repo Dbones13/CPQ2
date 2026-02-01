@@ -1,0 +1,11 @@
+{
+    "id": 20118,
+    "condition": "1",
+    "name": "Reset_Part_Summary_Attr_Val_Zero_Qty",
+    "action": "[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:CC-PEIM01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:CC-PEIM01)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:CC-TEIM01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:CC-TEIM01)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:TC-850L01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:TC-850L01)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:TC-EPLX02)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:TC-EPLX02)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:TC-PNLX01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:TC-PNLX01)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:CC-IP0101)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:CC-IP0101)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:CC-TPOX01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:CC-TPOX01)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:TC-EMBU01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:TC-EMBU01)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:DC-TEIM01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:DC-TEIM01)*>}{}[ENDIF];",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Yogesh Baisla2"
+}

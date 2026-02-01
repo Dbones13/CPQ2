@@ -1,0 +1,11 @@
+{
+    "id": 25562,
+    "condition": "[EQ](<*VALUE(Printer Required?)*>,No)",
+    "name": "Hide_LaserJet_Printer",
+    "action": "<*DISALLOWATTRIBUTES(LaserJet Printer - Monochrome (0-99))*>",
+    "description": "CXCPQ-35452",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

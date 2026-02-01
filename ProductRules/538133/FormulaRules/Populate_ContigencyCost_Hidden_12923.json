@@ -1,0 +1,11 @@
+{
+    "id": 12923,
+    "condition": "[EQ](<*CTX ( Container(SC_P1P2_Contigency_Cost_Hidden).Rows.GetCount )*>,0)",
+    "name": "Populate_ContigencyCost_Hidden",
+    "action": "<*CTX ( Container(SC_P1P2_Contigency_Cost_Hidden).Rows.Add(3) )*><*CTX ( Container(SC_P1P2_Contigency_Cost_Hidden).Row(1).Column(Service_Product).Set(Parts Holding P1) )*><*CTX ( Container(SC_P1P2_Contigency_Cost_Hidden).Row(2).Column(Service_Product).Set(Parts Holding P1 Hot) )*><*CTX ( Container(SC_P1P2_Contigency_Cost_Hidden).Row(3).Column(Service_Product).Set(Parts Holding P2) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

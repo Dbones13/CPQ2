@@ -1,0 +1,11 @@
+{
+    "id": 19770,
+    "condition": "[NOT]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[EQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,Yes)))",
+    "name": "Hide_PMIO_related_Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(AO_Non_Red_GI_IS_FTA_Fault_Detect,ATTCON_14_close,ATTCON_14_open,Combiner_Panels,Conformal_Coating_Preference_PMIOs,FTA_Connection_Type,FTA_Layout,GI_PDP_Daisy_Connection_Of_Power,Header_14_close,Header_14_open,IOP_Filler,Length_of_GI_IS_FTA_PDP_Cable,Length_of_IOP_FTA_Cable,Length_of_PS_PDP_Cable,Lo_Den_DI_FTA_Connection_Type,Rear_Cover_Needed,Russian_XK_Type_GI_IS_FTA,Shield_Option)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

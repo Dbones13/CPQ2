@@ -1,0 +1,11 @@
+{
+    "id": 13292,
+    "condition": "1",
+    "name": "Hide_Additional_CustomDev_GES",
+    "action": "[IF]([EQ](<*CTX( Container(Experion_HS_Ges_Location_Labour).Row(1).Column(GES_Location).GetDisplayValue )*>,None)){<*DISALLOWATTRIBUTES(Additional_CustomDev_GES)*> <*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng % Split).SetPermission(Hidden) )*>}{<*ALLOWATTRIBUTES(Additional_CustomDev_GES)*> <*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng % Split).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

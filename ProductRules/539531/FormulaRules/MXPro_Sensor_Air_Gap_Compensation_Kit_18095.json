@@ -1,0 +1,11 @@
+{
+    "id": 18095,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Air_Gap_Compensation_Kit)*>,)",
+    "name": "MXPro_Sensor_Air_Gap_Compensation_Kit",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Air_Gap_Compensation_Kit:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

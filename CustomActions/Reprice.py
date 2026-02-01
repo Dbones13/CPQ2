@@ -1,0 +1,1 @@
+Quote.GetCustomField('SoldToCustomerIdChange').Content=''

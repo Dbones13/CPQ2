@@ -1,0 +1,144 @@
+<style>
+	input.hidearrow::-webkit-outer-spin-button,
+	input.hidearrow::-webkit-inner-spin-button {
+		   -webkit-appearance: none;
+			margin: 0;
+	}
+</style>
+<script type="text/html" id="ContainerTextBoxTemplate">
+<div class="fiori3-input-group">
+            <!-- ko if:['Servers','Workstations','Windows - Other','SCADA Servers','TPN Nodes','Safety Manager','Controllers','Switches','SCADA Controller'].includes(headerLabel())-->
+                <div class="fiori3-input-group">
+                    <input autocomplete="off" type="text" data-bind="
+                        attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                        event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                        hasFocus: window.lastActiveElementId == $element.id,
+                        value: value,
+                        validateAttribute: value,
+                        css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+                        enable: $parents[2].isEnabled"
+                        class="form-control" style ="text-align: end;"/>
+                </div>
+            <!--/ko-->
+    	<!-- ko if:['Red (IS)', 'Non Red (IS)', 'Red (NIS)', 'Non Red (NIS)', 'Red ( RLY)', 'Non Red (RLY)'].includes(headerLabel())-->
+        	<!-- ko if: $data.options().length > 0  && ['SM_RG_IO_Count_Digital_Input_Cont','SM_RG_IO_Count_Digital_Output_Cont','SM_RG_IO_Count_Analog_Input_Cont','SM_RG_IO_Count_Analog_Output_Cont'].includes($parents[2].name()) -->
+            	<input autocomplete="off" type="text" data-bind="
+				   attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+				   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+				   hasFocus: window.lastActiveElementId == $element.id,
+				   value: value,
+				   validateAttribute: value,
+				   css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+				   enable: $parents[2].isEnabled"
+				   class="form-control" maxlength="200" />
+        	<!-- /ko -->
+            
+            <!-- ko ifnot:['SM_RG_IO_Count_Digital_Input_Cont','SM_RG_IO_Count_Digital_Output_Cont','SM_RG_IO_Count_Analog_Input_Cont','SM_RG_IO_Count_Analog_Output_Cont'].includes($parents[2].name())-->
+            	<input autocomplete="off" type="text" data-bind="
+				   attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+				   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+				   hasFocus: window.lastActiveElementId == $element.id,
+				   value: value,
+				   validateAttribute: value,
+				   css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+				   enable: $parents[2].isEnabled"
+				   class="form-control" maxlength="200" />
+        	<!-- /ko -->
+        <!-- /ko -->
+        
+		<!-- ko if:['Final Hrs'].includes(headerLabel())-->
+			<input autocomplete="off" type="text" data-bind="
+                   attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                   hasFocus: window.lastActiveElementId == $element.id,
+                   value: value,
+                   validateAttribute: value,
+                   css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+                   enable: $parents[2].isEnabled"
+                   class="form-control hidearrow" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"/>
+		<!-- /ko -->
+		<!-- ko if:['Number of Cyber App Control Servers','Number of Validated Stations','Number of Validated Servers','Number of Non‐Validated Stations','Number of Non‐Validated Servers','MIGRATIONS ONLY - Existing Server & Station Clients'].includes(headerLabel())-->
+        <input autocomplete="off" type="text" data-bind="
+        attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required, title: value },
+        event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+        hasFocus: window.lastActiveElementId == $element.id,
+        value: value,
+        validateAttribute: value,
+        css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+        enable: $parents[2].isEnabled"
+        class="form-control" onpaste="return false" onkeypress="allowNumonly(this,event);"/>
+<!-- /ko -->
+		
+		<!-- ko ifnot: ['Red (IS)', 'Non Red (IS)', 'Red (NIS)', 'Non Red (NIS)', 'Red ( RLY)', 'Non Red (RLY)','Servers','Workstations','Windows - Other','SCADA Servers','TPN Nodes','Safety Manager','Controllers','Switches','Final Hrs','SCADA Controller','Number of Cyber App Control Servers','Number of Validated Stations','Number of Validated Servers','Number of Non‐Validated Stations','Number of Non‐Validated Servers','MIGRATIONS ONLY - Existing Server & Station Clients'].includes(headerLabel())-->
+            <!-- ko if: headerLabel() == "List individual MSIDs/ESIDs" -->
+              <input autocomplete="off" type="text" data-bind="
+                   attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                   hasFocus: window.lastActiveElementId == $element.id,
+                   value: value,
+                   validateAttribute: value,
+                   css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+                   enable: $parents[2].isEnabled"
+                   class="form-control" maxlength="200" />
+            <!-- /ko -->
+            <!-- ko if:['Part #','Description'].includes(headerLabel()) && ['CCR_Third_Party_Parts'].includes($parents[2].name()) && $parents[1].rowIndex < 3 -->
+            <span data-bind="htmlOrNbsp: value"></span>
+            <!-- /ko -->
+            <!-- ko ifnot: ["List individual MSIDs/ESIDs"].includes(headerLabel()) || (["Part #",'Description'].includes(headerLabel()) && ['CCR_Third_Party_Parts'].includes($parents[2].name()) && $parents[1].rowIndex < 3)  -->
+            <!-- ko if:(($parents[2].container.columns.filterByProperty("columnId", columnId)()[0].referencedStdAttrCode > 0 && options().length > 0) ||$parents[2].container.columns.filterByProperty("columnId", columnId)()[0].referencedStdAttrCode === 0) -->
+            <input autocomplete="off" type="text" data-bind="
+                   attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required, title: value },
+                   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                   hasFocus: window.lastActiveElementId == $element.id,
+                   value: value,
+                   validateAttribute: value,
+                   css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+                   enable: $parents[2].isEnabled"
+                   class="form-control" />
+                   <!-- /ko -->
+              <!-- /ko -->
+    	<!-- /ko -->
+    </div>
+</script>
+<script type="text/html" id="ContainerTextBoxTemplate_readonly">
+    <div class="fiori3-input-group">
+        <input autocomplete="off" type="text" data-bind="
+               attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+               event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+               hasFocus: window.lastActiveElementId == $element.id,
+               value: value,
+               validateAttribute: value,
+               css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) }"
+               class="form-control" disabled="true" />
+    </div>
+</script>
+<script type="text/html" id="ContainerTextBoxTemplate_FSCIO">
+    <div class="fiori3-input-group">
+        <input autocomplete="off" type="text" data-bind="
+                   attr: {'id' : $parents[3].id() + '_' + $parent.columnId + '_' + $parents[2].rowIndex, required: $parent.required },
+                   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                   hasFocus: window.lastActiveElementId == $element.id,
+                   value: value,
+                   validateAttribute: value,
+                   css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[3].id() + '_' + $parent.columnId + '_' + $parents[2].rowIndex) },
+                   enable: $parents[3].isEnabled"
+                   class="form-control" maxlength="200" />
+    </div>
+</script>
+
+
+<script type="text/html" id="HW_ContainerTextBoxTemplate">
+
+
+    <div class="fiori3-input-group">
+        <input autocomplete="off" type="text" data-bind="
+               attr: {'id' : $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+               event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+               hasFocus: window.lastActiveElementId == $element.id,
+               value: value,
+               validateAttribute: value,
+               css: { 'validation-error': (value.isValid && !value.isValid()), 'validation-initial': !document.dirtyList.has($parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex) },
+               enable: $parents[2].isEnabled"
+               class="form-control" />
+    </div>
+</script>

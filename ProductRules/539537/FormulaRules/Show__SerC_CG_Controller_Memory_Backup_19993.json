@@ -1,0 +1,11 @@
+{
+    "id": 19993,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[NEQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,C300 CEE)))",
+    "name": "Show__SerC_CG_Controller_Memory_Backup",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Controller_Memory_Backup)*>",
+    "description": "CXCPQ-51941 - Requirement 3",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

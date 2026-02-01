@@ -1,0 +1,11 @@
+{
+    "id": 10780,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "3rd_Party_ControlEdge_PLC_UOC_Rockwell_BOM",
+    "action": "<* ExecuteScript(PS_3rd_Party_ControlEdge_PLC_UOC_Part_Summary) *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

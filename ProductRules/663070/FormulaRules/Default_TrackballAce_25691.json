@@ -1,0 +1,11 @@
+{
+    "id": 25691,
+    "condition": "[EQ](<*VALUE(Trackball (ACE))*>,TestValue)",
+    "name": "Default_TrackballAce",
+    "action": "<*SELECTVALUE(Trackball (ACE):Yes)*>",
+    "description": "35183",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

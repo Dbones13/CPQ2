@@ -1,0 +1,11 @@
+{
+    "id": 24237,
+    "condition": "1",
+    "name": "Defult_EP-STAT01_part_add",
+    "action": "<*ASSIGNVALUE(EP-STAT01_part_add:<*Eval(0<*VALUE(ARO_existing_Flex_station_license)*>+0<*VALUE(RESS_existing_Flex_station_license)*>+0<*VALUE(ARO_new_Flex_Station_licenses_required)*>+0<*VALUE(RESS_new_Flex_Station_licenses_required)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

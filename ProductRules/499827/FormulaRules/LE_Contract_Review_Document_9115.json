@@ -1,0 +1,11 @@
+{
+    "id": 9115,
+    "condition": "1",
+    "name": "LE Contract Review Document",
+    "action": "<*ASSIGNVALUE(LE Contract Review Document:<* Eval(6* <*VALUE(labor_parameter_Le_pf)*> * (1+0.2*<*VALUE(labor_parameter_tc)*>) * (1+0.5*<*VALUE(Labor_parameter_ld)*>)) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

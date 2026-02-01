@@ -1,0 +1,11 @@
+{
+    "id": 22344,
+    "condition": "[EQ](<*VALUE(ESDC_OPC_Alarm_and_Event_Server)*>,)",
+    "name": "Default_OPC_Alarm_and_Event_Server",
+    "action": "<*ASSIGNVALUE(ESDC_OPC_Alarm_and_Event_Server:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

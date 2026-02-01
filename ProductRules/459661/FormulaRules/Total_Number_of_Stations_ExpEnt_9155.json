@@ -1,0 +1,11 @@
+{
+    "id": 9155,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_Number_of_Stations_ExpEnt",
+    "action": "<*ASSIGNVALUE(Total_Number_of_Stations_ExpEnt:<* Eval(<*CTX ( Container(CE_System_Cont).Sum(Additional_Stations_ExperionSys))*>+<*CTX ( Container(CE_System_Cont).Sum(Total_SMSC_Stations))*>+<*CTX ( Container(CE_System_Cont).Sum(Total_RTU_Stations))*>+<*CTX ( Container(CE_System_Cont).Sum(Total_PLC_station))*>)*>)*>",
+    "description": "Labor Report Task\nTotal Exp Ent, SMSC,RTU,PLC",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

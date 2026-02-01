@@ -1,0 +1,324 @@
+<div id="cartHeader" class="fiori3-cart-header clearfix">
+    <div class="cart-header-div php">
+        <div class="row php_btnsec">
+          <div class="php_icon"><i class="fa fa-tag"></i></div>
+            <h2 class="top-header relative-position ellipsis example tooltip-if-long" data-bind="css: {'header-show-predictive': recommendationsData.showPredictive}">
+			<div class="quote_title">
+                 Quote
+             </div>
+            <!-- ko if : tabsData.title -->
+                <span class="quote-title" data-bind="text: (tabsData.title().replace('Quote #','')).split('for')[0], tooltip: { title: tabsData.title }"></span>
+            <!-- /ko -->
+            <!-- ko ifnot : tabsData.title -->
+            <span>@Translation.Get("Cart.QuoteTitle")</span>
+            <!-- /ko -->
+            <!-- ko with: tabsData.selectedRevision() -->
+            <span class="quote-title" data-bind="text: ' / ' + Name, css: { 'inactive-revision-title': !IsActive }"></span>
+            <!-- /ko -->
+            </h2>
+            <div class="flex phpbtn_sec">
+           
+            @*Show actions button only on Cart page*@
+            @if (this.Request.Url.LocalPath.ToLowerInvariant().EndsWith("quotation/cart.aspx"))
+            {
+                @Html.PartialWithNameAsComment("Sections/CartActions")
+            }
+    <!-- ko if: (tabsData.currentTabName() === "DOCUMENTS")-->
+          <button id = "btnGeDoc" class="btn btn-primary fiori3-btn-primary product-validation" data-bind="text: isGenDocumentAvailable()" onclick="GenDocument()"></button>
+          <!-- /ko -->
+            <div class="predictive-and-collaboration cart-actions-container">
+                <div class="recommendations-btn-div">
+                    <div style="display: none">
+                        @Html.PartialWithNameAsComment("~/Views/Cart/Dialogs/CustomerFeedbackDialogTemplate.cshtml")
+                    </div>
+                </div>
+                <div class="recommendations-btn-div" style="display: none" data-bind="visible: recommendationsData.showPredictive">
+                    <div>
+                        <button data-trigger="hover" class="btn btn-predictive btn-recommendations" data-bind="enable: recommendationsData.enabled, click: recommendationsData.showRecommendations, tooltip: { title: '@Translation.GetJS("Cart.Predictive.RecommendationsTitle")', placement: 'bottom'}">
+                            <span>&#xe024;</span>
+                            <!-- ko if: recommendationsData.inProgress -->
+                            <span class="spinner"></span>
+                            <!-- /ko -->
+                        </button>
+                    </div>
+                    <div style="display: none">
+                        @Html.PartialWithNameAsComment("PagerTemplate")
+                        @Html.PartialWithNameAsComment("~/Views/Cart/Dialogs/RecommendationsDialogTemplate.cshtml")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row php_section">	
+        
+             <!-- START - CXCPQ-64900 - 21/09/2023 - Manthan Rajguru - Added condition to show below section for quote type other than service contract-->
+                <!-- ko ifnot: isServiceContract(tabsData.currentTabName,$root) -->
+                <!-- END - CXCPQ-64900 - 21/09/2023 - Manthan Rajguru - Added condition to show below section for quote type other than service contract-->
+             
+                    <ul class="top-info border-0">
+                        <!-- Added by Chirag for Total Sell Price on 10/19 -->
+						  <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Quote Type") -->
+                        <li class="">
+                            <p class="phpfield_head">Quote Type</p>
+                            <p class="phpfield_val Quote Type" data-bind="visible: setQuoteType(content),html: content()"></p>
+                        </li>
+                        <!-- /ko -->
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Sales ORG") -->
+                        <li class="">
+                            <p class="phpfield_head">Sales Org</p>
+                            <p class="phpfield_val Sales_Org" data-bind="visible: setSalesOrg(content),html: content()"></p>
+                        </li>
+                        <!-- /ko -->
+						 <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Opportunity Number") -->
+                        <li class="">
+                            <p class="phpfield_head">Opportunity Number</p>
+                            <p class="phpfield_val Opp_num" data-bind="visible: setOppName(content),html: content()"></p>
+                        </li>
+						 <!-- /ko -->
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Total_Sell_Price_Updated") -->
+                        <li class="">
+                            <p class="phpfield_head">Total Sell Price</p>
+                            <p class="phpfield_val" data-bind="html:  $root.currencySign() + ' ' + content()" onClick="window.parent.closeIframe()"></p>
+                        </li>
+                        <!-- /ko -->
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Total Sell Price") -->
+                        <li class="">
+                            <p class="phpfield_head">Sell Price </p>
+                            <p class="phpfield_val" data-bind="html:$root.currencySign() + ' ' + content()" onClick="window.parent.closeIframe()"></p>
+                        </li>
+                        <!-- /ko -->
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Total Discount Percent") -->
+                        <li class="">
+                            <p class="phpfield_head">Discount %</p>
+                            <p class="phpfield_val" data-bind="html: content()+'%'"></p>
+                        </li>
+                         <!-- /ko -->
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Total Regional Margin Percent") -->
+                        <li class="">
+                            <p class="phpfield_head">LGM % </p>
+                            <p class="phpfield_val" data-bind="html: content()+'%'"></p>
+                        </li>
+                        <!-- /ko -->
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "TotalwtwMarginPercent") -->
+                        <li class="">
+                            <p class="phpfield_head">WTW %</p>
+                            <p class="phpfield_val" data-bind="html: content()+'%'"></p>
+                        </li>
+                        <!-- /ko -->
+																																															
+									 
+																																						
+																													 
+							 
+									
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Total_Tariff_Amount") -->
+                        <li class="">
+                            <p class="phpfield_head">Total Tariff Amount</p>
+                            <p class="phpfield_val" data-bind="html:$root.currencySign() + ' ' + content()" onClick="window.parent.closeIframe()"></p>
+                        </li>
+                        <!-- /ko -->
+                        <!-- ko foreach: $root.customFields?.filterByProperty('name' , "Total_Sell_Price_Incl_Tariff") -->
+                        <li class="">
+                            <p class="phpfield_head">Total Sell Price (Incl. Tariff)</p>
+                            <p class="phpfield_val" data-bind="html:$root.currencySign() + ' ' + content()" onClick="window.parent.closeIframe()"></p>
+                        </li>
+                        <!-- /ko -->
+                    </ul>
+                   
+                    <!-- START - CXCPQ-64900 - 21/09/2023 - Manthan Rajguru - Added condition to show below section for quote type other than service contract-->
+                    <!-- /ko -->
+                    <!-- END - CXCPQ-64900 - 21/09/2023 - Manthan Rajguru - Added condition to show below section for quote type other than service contract-->
+                    
+                    <!-- START - CXCPQ-64900 - 21/09/2023 - Manthan Rajguru - Added condition to show below section only for quote type service contract-->
+                    <!-- ko if: isServiceContract(tabsData.currentTabName,$root) -->
+                    <!-- START - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header Booking Info for service contract-->
+                    <!-- ko ifnot: tabsData.currentTabName() == "DOCUMENTS" -->
+                    <!-- ko let: {customFieldObj : (tabsData.currentTabName() === "BOOKING INFO")? $root.customFleldsModel.customFields : $root.customFields } -->
+                    <!-- END - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header Booking Info for service contract-->
+                   
+                    <ul class="top-info border-0">
+						 <!-- ko foreach: customFieldObj?.filterByProperty('name' , "Opportunity Number") -->
+							<li class="">
+								<p class="phpfield_head">Opportunity Number</p>
+								<p class="phpfield_val Opp_num" data-bind="visible: setOppName(content),html: content()"></p>
+							</li>
+						 <!-- /ko -->
+                         <!-- ko foreach: customFieldObj?.filterByProperty('name' , "Honeywell List Price(USD)") -->
+                        <li class="">
+                            <p class="phpfield_head">Honeywell List Price(USD)</p>
+                            <p class="phpfield_val"  data-bind="html:content()" onClick="window.parent.closeIframe()"></p>
+                        </li>
+                        <!-- /ko -->
+                           <!-- ko foreach: customFieldObj?.filterByProperty('name' , "Honeywell List Price") -->
+                        <li class="">
+                            <p class="phpfield_head">Honeywell List Price</p>
+                            <p class="phpfield_val" data-bind="html: content()" onClick="window.parent.closeIframe()"></p>
+                        </li>
+                        <!-- /ko -->
+                        <!-- ko foreach: customFieldObj?.filterByProperty('name' , "Total Discount Percent(CW)") -->
+                        <li class="">
+                            <p class="phpfield_head">Discount %</p>
+                            <p class="phpfield_val" data-bind="html: content()+'%'"></p>
+                        </li>
+                         <!-- /ko -->
+                         <!-- ko foreach: customFieldObj?.filterByProperty('name' , "Total Sell Price(USD)") -->
+                        <li class="">
+                            <p class="phpfield_head">Total Sell Price(USD) </p>
+                            <p class="phpfield_val" data-bind="html: content()"></p>
+                        </li>
+                        <!-- /ko -->
+                         <!-- ko foreach: customFieldObj?.filterByProperty('name' , "Total Sell Price(CW)") -->
+                        <li class="">
+                            <p class="phpfield_head">Total Sell Price:</p>
+                            <p class="phpfield_val" data-bind="html: content()"></p>
+                        </li>
+                        <!-- /ko -->
+                    </ul>
+                    
+                    <!-- /ko -->
+                    <!-- START - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header Booking Info for service contract-->
+                <!-- /ko -->
+                    <!-- /ko -->
+                    <!-- END - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header Booking Info for service contract-->
+                    <!-- END - CXCPQ-64900 - 21/09/2023 - Manthan Rajguru - Added condition to show below section only for quote type service contract-->
+                    <!-- START - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header documents tab for service contract-->
+                    <!-- ko if: (tabsData.currentTabName() === "DOCUMENTS" && getHeaderPriceDetails() !== "") -->
+                    <div style="align-self: center;" id = "headerPriceDetails">
+                    </div>
+                    <!-- /ko -->
+                    <!-- END - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header documents tab for service contract-->
+    </div>
+    <div class="tabbable show-large fiori3-cart-tabs-container  ">
+       <ul id="cartTabsContainer" class="nav nav-responsive nav-tabs fiori3-tabdrop" data-bind="foreach: tabsData.tabs">
+           <li data-bind="css: { active: active }, style: { 'margin-left': $index() == 0 ? '0' : '40px' },click: function(){ if(name=='PAS DOCUMENT TAB')sessionStorage.setItem('customSec', 1) }">
+               <a class="cartTab" data-bind="attr: { href: url }, text: name, click: onTabChange"></a>
+           </li>
+       </ul>
+   </div>
+</div>
+
+<div class="clearfix"></div>
+@Html.PartialWithNameAsComment("~/Views/Cart/Templates/CellTemplates.cshtml")
+<!-- START - CXCPQ-64900 - 11/10/2023 - Manthan Rajguru - Added condition to return flag to indicate quote type is service contract or not-->
+<script type = "text/javascript">
+    
+    function ProductValidation()
+	{
+		var CID = cpq.models.cart.cartId()
+		if((location.href == location.origin + "/quotation/Cart.aspx" || location.href == location.origin + "//quotation/Cart.aspx") && (CID != null || typeof(CID) !== "undefined"))
+		{
+			cpq.server.executeScript("GS_Effectivedate_QtyUpdate",{'Action':'getSet'},function (rdata)
+			{	console.log("GetSet Functtional called");
+				var data = '';
+											   
+											   
+													 
+													  
+				let dt = cpq.models.cart.dateModified()
+											 
+							 
+                $.ajax({
+					type: "POST",
+					url: location.origin + "/api/rd/v1/Cart/ChangeEffectiveDate?NewEffectiveDate="+dt+"&quoteId="+CID,
+					headers: {
+					  "x-csrf-token": csrfToken,
+					  "x-requested-with":"XMLHttpRequest",
+					  "Accept":"application/json, text/javascript, */*; q=0.01",
+					  "Content-Type": "application/json; charset=UTF-8"
+					},
+					data: data,
+					success: function(data) {
+						cpq.server.executeScript("GS_Effectivedate_QtyUpdate",{'Action':'setGet'},function (rdata)
+						{
+							console.log("SetGet Functtional called==>"+rdata);
+                            //setTimeout(continueExecution, 10000)
+                            location.reload()
+						});
+					}
+				});
+			});
+		}
+        //location.reload()
+	}
+function GenDocument(){
+      console.log("Generate Document is triggered");
+      cpq.server.executeScript("GS_Generate_Document",{},function (rdata)
+  {
+    console.log("GS_Generate_Document ended");
+    location.reload()
+  });
+  }
+function isGenDocumentAvailable(){
+      console.log("hide1");
+      cpq.server.executeScript("GS_Get_Quote_LOB",{},function (v_lob)
+  {
+    if ((!["LSS", "PAS","HCP","CCC","PMC"].includes(v_lob)) || ['Contract New','Contract Renewal'].includes(localStorage.getItem("setQuoteType"))){$("#btnGeDoc").hide();console.log("hide2");}
+    console.log("hide3",v_lob);
+  });
+    return 'Generate Document'
+  }
+   function isServiceContract(activeTab, quoteType){
+   var startTime = performance.now();
+       var flag = false;
+       if (activeTab !== "BOOKING INFO"){
+           if (quoteType.customFields?.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || quoteType.customFields?.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") {
+               flag = true;
+           }
+       }
+       if (activeTab() === "BOOKING INFO"){
+           if (quoteType.customFleldsModel.customFields?.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || quoteType.customFleldsModel.customFields?.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") {
+               flag = true;
+           }
+       }
+       return flag;
+	   var endTime = performance.now();
+    var executionTime = endTime - startTime;
+    //console.log('Script execution time for isServiceContract: ' + executionTime + ' milliseconds');
+   }
+   
+   <!-- START - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header documents tab for service contract-->
+   function getHeaderPriceDetails() {
+   var startTime = performance.now();
+   cpq.server.executeScript("GS_SC_GetUIPriceData", {}, function (pData) {
+   var startTime1 = performance.now();
+       if (pData) {
+           var list = $("#headerPriceDetails").append('<ul class="top-info"></ul>').find('ul');
+           let sequencePriceData = { 'Honeywell List Price(USD)': 'Honeywell List Price(USD)', 'Honeywell List Price': 'Honeywell List Price', 'Discount %': 'Total Discount Percent(CW)', 'Total Sell Price(USD)': 'Total Sell Price(USD)', 'Total Sell Price': 'Total Sell Price(CW)' };
+           for (const keys in sequencePriceData) {
+               var label, content;
+               label = keys;
+               content = (keys === 'Discount %') ? `${pData[sequencePriceData[keys]]}%` : pData[sequencePriceData[keys]];
+               var li = document.createElement('li');
+               li.innerHTML = `${label}: ${content}`;
+               list.append(li);
+           }
+       }
+       return pData;
+	var endTime1 = performance.now();
+    var executionTime = endTime1 - startTime1;
+    //console.log('Script execution time for GS_SC_GetUIPriceData - cartheader: ' + executionTime + ' milliseconds');
+   });
+   var endTime = performance.now();
+    var executionTime = endTime - startTime;
+    //console.log('Script execution time for getHeaderPriceDetails - cart header: ' + executionTime + ' milliseconds');
+}
+   <!-- END - CXCPQ-72526 - 11/29/2023 - Manthan Rajguru - Added to display Total price/Discount Info in quote header documents tab for service contract-->
+</script>
+<!-- END - CXCPQ-64900 - 11/10/2023 - Manthan Rajguru - Added condition to return flag to indicate quote type is service contract or not-->
+
+ 
+<script>
+function setQuoteType(data){
+        localStorage.setItem("setQuoteType", data())
+        return true  
+    }
+	function setOppName(data){
+        localStorage.setItem("setOppName", data())
+        return true  
+    }
+    function setSalesOrg(data){
+        localStorage.setItem("setSalesOrg", data())
+        return true  
+    }
+</script>

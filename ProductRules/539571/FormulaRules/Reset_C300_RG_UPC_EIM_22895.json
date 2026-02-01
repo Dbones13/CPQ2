@@ -1,0 +1,11 @@
+{
+    "id": 22895,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_EIM)*>)",
+    "name": "Reset_C300_RG_UPC_EIM",
+    "action": "<*ALLOWATTRIBUTES(C300_RG_UPC_EIM)*>;<*RESETATTRIBUTE(C300_RG_UPC_EIM)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

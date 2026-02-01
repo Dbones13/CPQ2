@@ -1,0 +1,11 @@
+{
+    "id": 20485,
+    "condition": "[LEQ](<*VALUE(SS_OTS_OPC_Extension_library_for_ACE_License)*>,0)",
+    "name": "Part_D_EP_OTU050",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-OTU050)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14278,
+    "condition": "[OR]([NOT](<*ATTDEF(MIQ_System_architecture)*>),<* IsNull(<*VALUE(MIQ_System_architecture)*>,1) *>)",
+    "name": "Set Default System architecture",
+    "action": "<*SELECTVALUE(MIQ_System_architecture:None)*>",
+    "description": "CXCPQ-50741",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

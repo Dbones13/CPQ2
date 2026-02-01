@@ -1,0 +1,2 @@
+import GS_CE_Utils
+GS_CE_Utils.setContainerDefaults(Product)

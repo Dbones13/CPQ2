@@ -1,0 +1,11 @@
+{
+    "id": 18456,
+    "condition": "[EQ](<*VALUE(MXP_Type of Environment)*>,)",
+    "name": "Default_MXP_Type of Environment",
+    "action": "<*SELECTVALUE(MXP_Type of Environment:Clean)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

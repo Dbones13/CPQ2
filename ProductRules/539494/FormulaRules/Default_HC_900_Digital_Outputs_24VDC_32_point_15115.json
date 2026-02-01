@@ -1,0 +1,11 @@
+{
+    "id": 15115,
+    "condition": "[EQ](<*VALUE(MXP_HC_900_Digital_Outputs_24VDC_32_point)*>,)",
+    "name": "Default_HC_900_Digital_Outputs_24VDC_32_point",
+    "action": "<*ASSIGNVALUE(MXP_HC_900_Digital_Outputs_24VDC_32_point:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

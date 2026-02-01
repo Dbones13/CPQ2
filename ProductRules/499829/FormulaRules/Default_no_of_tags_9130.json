@@ -1,0 +1,11 @@
+{
+    "id": 9130,
+    "condition": "[EQ](<*VALUE(Trace_Software_Number_of_Tags)*>,)",
+    "name": "Default_no_of_tags",
+    "action": "<*SELECTVALUE(Trace_Software_Number_of_Tags:<=50000)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,70 @@
+ <!-- RT_XP10_Actuator_Upgrade_Configurator --> 
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> 
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="XP10_Actuator_General_Information" onclick="toggleConfigSection(event, '#XP10_Actuator_General_Information')">
+       <label class="onlytext">General Information - XP10 Actuator Upgrade</label>
+         
+        </div>
+        <div id="XP10_Actuator_General_Information-content"  class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ATT_XP10ACTUPG","XP10_Actuator_current_actuator_model","XP10_Actuator_current_valve_plug_model","XP10_Actuator_Will_a_seat_removal_tool_be_needed","XP10_Actuator_Will_an_A7_actuator_tool_be_needed","XP10_Actuator_XP10_adapter_tool_be_needed","XP10_Actuator_XP10_seat_adapter_tool_be_needed") -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+              <!-- ko template: { name: $root.getAttributeTemplate } -->
+              <!-- /ko -->
+            </div>
+            <!-- /ko --> 
+          </div>
+        </div> 
+</div> 
+<!-- /ko --> 
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> 
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <div class="row col-xs-12 swagger">
+    <div id="XP10_Actuator_General_Information">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#XP10_Actuator_General_Information')">
+          <span>General Information - XP10 Actuator Upgrade</span>
+          <a id="XP10_Actuator_General_Information-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="XP10_Actuator_General_Information-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "XP10_Actuator_General_Information") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ko --> 

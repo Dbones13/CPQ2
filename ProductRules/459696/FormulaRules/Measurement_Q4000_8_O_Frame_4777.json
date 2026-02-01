@@ -1,0 +1,11 @@
+{
+    "id": 4777,
+    "condition": "[EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame)",
+    "name": "Measurement_Q4000_8_O_Frame",
+    "action": "<*xDisallowallValuesExcept(MX_SE_Measurement_Type:Basis Weight|Moisture|Infrarred|Opacity|Caliper|Ash|Color|Gloss|Surface Topography|Formation|Fiber Orientation|Porosity|Crepe Structure)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

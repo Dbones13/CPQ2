@@ -1,0 +1,11 @@
+{
+    "id": 25908,
+    "condition": "[EQ](<*VALUE(Orion_3P_Base_Unit_Left)*>,)",
+    "name": "Default_Orion_3P_Base_Unit_Left",
+    "action": "<*ASSIGNVALUE(Orion_3P_Base_Unit_Left:0)*>",
+    "description": "CXCPQ-40742",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

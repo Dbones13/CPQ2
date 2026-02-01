@@ -1,0 +1,11 @@
+{
+    "id": 20642,
+    "condition": "[IF](<*IFANYVALUE(SS_Experion_PKS_Release:R520)*>){[AND]([EQ](<*VALUE(SS_Flex_Staton _Orion_Node)*>,STN_PER_HP_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[GT](<*VALUE(SS_Flex_Station_Qty_Orion)*>,0))}{}[ENDIF]",
+    "name": "Part_A_MZ_PCWS84_2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCWS85)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCWS85, <*VALUE(SS_Flex_Station_Qty_Orion)*>)*><* DoResetAtt*>",
+    "description": "Changed to MZ-PCSW85 as part of 8032",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

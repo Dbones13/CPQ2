@@ -1,0 +1,11 @@
+{
+    "id": 19656,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Redundant Servers)*>,No),[EQ](<* IsNull(<*VALUE(Exp HS Quantity of Flex Station)*>,0)*>,0))",
+    "name": "MZ-SQLCL4 Set2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:MZ-SQLCL4)*><*SETATVQTY(Experion_HS_PART_SUMMARY:MZ-SQLCL4, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45837 Condition - Quantity of Flex Station + 1 if Redundant Server = No",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

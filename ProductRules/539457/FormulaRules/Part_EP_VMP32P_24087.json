@@ -1,0 +1,11 @@
+{
+    "id": 24087,
+    "condition": "[OR]([GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*>,0),[GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>,0))",
+    "name": "Part_EP_VMP32P",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VMP32P)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VMP32P,<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(Cluster_Name:<*VALUE(List of Locations/Clusters/ Network_Groups)*>)*>

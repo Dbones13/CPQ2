@@ -1,0 +1,11 @@
+{
+    "id": 18989,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NEQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Yankee))",
+    "name": "CD_Part_Dis_9270_1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9270-1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

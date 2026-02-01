@@ -1,0 +1,3 @@
+[IF]([AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R530),[GT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0))){<*ALLOWVALUES(SS_Flex Staton  Desk Node_desk:STN_STD_DELL_Tower_NonRAID)*>,<*SELECTVALUE(SS_Flex Staton  Desk Node_desk:STN_STD_DELL_Tower_NonRAID)*>}[ENDIF]
+
+[IF]([AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R530),[GT](<*VALUE(SS_Flex_Station_Qty_Orion)*>,0))){<*ALLOWVALUES(SS_Flex_Staton _Orion_Node:STN_STD_DELL_Tower_NonRAID)*>,<*SELECTVALUE(SS_Flex_Staton _Orion_Node:STN_STD_DELL_Tower_NonRAID)*>}[ENDIF]

@@ -1,0 +1,11 @@
+{
+    "id": 20000,
+    "condition": "[EQ](<*VALUE(SerC_CG_Number_of_Extra_HIVE_Control_Applications)*>,)",
+    "name": "Default_SerC_CG_Number_of_Extra_HIVE_Control_Applications",
+    "action": "<*ASSIGNVALUE(SerC_CG_Number_of_Extra_HIVE_Control_Applications:0)*>",
+    "description": "CXCPQ-51943",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

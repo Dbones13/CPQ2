@@ -1,0 +1,11 @@
+{
+    "id": 18993,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Aqualizer MX),[NEQ](<*VALUE(MX_CD_Zone_spacing)*>,75mm),[NEQ](<*VALUE(MX_CD_Evacuation)*>,Yes))",
+    "name": "CD_Part_Dis_9580_MXEV75",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9580-MXEV75)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

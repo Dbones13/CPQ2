@@ -1,0 +1,11 @@
+{
+    "id": 12737,
+    "condition": "1",
+    "name": "SC_SESP_EnabledServiceChkFlg",
+    "action": "[IF]([GT](<*CTX ( Container(Service Contract Modules).Sum(SESP_EnabledServiceChkFlg) )*>,0)){<*ASSIGNVALUE(SC_SESP_EnabledServiceChkFlg:1)*>}{<*ASSIGNVALUE(SC_SESP_EnabledServiceChkFlg:0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/05/24",
+    "modifiedBy": "Pavan Koganty"
+}

@@ -1,0 +1,1 @@
+Product.Attr('ContractDatesFlag_EnabledServices').AssignValue('True')

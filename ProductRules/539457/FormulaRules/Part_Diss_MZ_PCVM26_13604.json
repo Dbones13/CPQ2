@@ -1,0 +1,11 @@
+{
+    "id": 13604,
+    "condition": "[OR]([EQ](<*VALUE(Virtualization_Number_R740XL_Performance_A_Servers)*>,0),[NEQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers))",
+    "name": "Part_Diss_MZ_PCVM26",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVM26)*><* DoResetAtt *>",
+    "description": "8705 story",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

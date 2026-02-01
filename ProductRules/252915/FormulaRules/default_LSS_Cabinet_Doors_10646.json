@@ -1,0 +1,11 @@
+{
+    "id": 10646,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Cabinet_Doors)*>,))",
+    "name": "default_LSS_Cabinet_Doors",
+    "action": "<*SELECTVALUE(LSS_Cabinet_Doors:Standard)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

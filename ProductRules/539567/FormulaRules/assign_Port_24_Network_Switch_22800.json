@@ -1,0 +1,11 @@
+{
+    "id": 22800,
+    "condition": "1",
+    "name": "assign Port 24 Network Switch",
+    "action": "<*ASSIGNVALUE(Port 24 Network Switchcluster:<* Eval(<*GETATVQTY(Location_Cluster_Part_Summary:SI-920LN4)*>+<*GETATVQTY(Location_Cluster_Part_Summary:SI-930LN4)*>+<*GETATVQTY(Location_Cluster_Part_Summary:SH-2930R4)*>+<*GETATVQTY(Location_Cluster_Part_Summary:SH-2530N4)*>+<*GETATVQTY(Location_Cluster_Part_Summary:SU-2750N4)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15089,
+    "condition": "[EQ](<*VALUE(MXP_MXProLine_Base_Software)*>,)",
+    "name": "Default_MXProLine_Base _oftware",
+    "action": "<*SELECTVALUE(MXP_MXProLine_Base_Software:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

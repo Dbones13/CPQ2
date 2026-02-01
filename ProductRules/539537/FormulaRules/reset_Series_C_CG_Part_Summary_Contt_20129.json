@@ -1,0 +1,11 @@
+{
+    "id": 20129,
+    "condition": "[NOT](<*ATTSEL(Series_C_CG_Part_Summary)*>)",
+    "name": "reset Series_C_CG_Part_Summary_Contt",
+    "action": "<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Rows.Clear )*>",
+    "description": "",
+    "rank": "900",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19798,
+    "condition": "[NOT](<*ISSELECTED(FIM_Power_Conditioner_Scope.Honeywell)*>)",
+    "name": "Hide_FIM_PC_FIM_Current",
+    "action": "<*DISALLOWATTRIBUTES(FIM_power_source_FIM_Power_Conditioner,FIM_xFIM_Current_per_link_mA)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11951,
+    "condition": "[EQ](<*VALUE(FGC_Gas_Dispersion_Modeling_Required?)*>,)",
+    "name": "Default number of_FGC_Gas_Dispersion_Modeling_Required?",
+    "action": "<*SELECTVALUE(FGC_Gas_Dispersion_Modeling_Required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

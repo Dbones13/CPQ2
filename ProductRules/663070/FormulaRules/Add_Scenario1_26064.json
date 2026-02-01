@@ -1,0 +1,11 @@
+{
+    "id": 26064,
+    "condition": "[AND]([OR]([EQ](<*VALUE(CE_Site_Voltage)*>,120V),[EQ](<*VALUE(CE_Site_Voltage)*>,240V)),[NEQ](<*VALUE(CMS Cabinet Station Mounting Type)*>,None)[NEQ](<*VALUE(CMS Cabinet Mounting Stations required)*>,No))",
+    "name": "Add_Scenario1",
+    "action": "<*ASSIGNVALUE(Add_Scenario1:<* Eval(<*VALUE(CMS Flex Station Qty 0_60)*> + <*VALUE(CMS Console Station Qty 0_20)*> + <*VALUE(CMS TPS Station Qty 0_20)*> + <*VALUE(CMS Console Station Extension Qty 0_15)*>) *>)*>",
+    "description": "44029",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

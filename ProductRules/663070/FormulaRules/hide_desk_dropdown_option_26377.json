@@ -1,0 +1,11 @@
+{
+    "id": 26377,
+    "condition": "[AND]([NEQ](<*VALUE(Server Node Type_desk)*>,SVR_PER_HP_Rack_RAID5),[NEQ](<*VALUE(Server Node Type_desk)*>,SVR_PER_DELL_Rack_RAID5))",
+    "name": "hide_desk_dropdown_option",
+    "action": "<*DISALLOWVALUES(Additional Hard Disk1:Yes)*>,<*DISALLOWVALUES(Additional Memory_Server Disk:16GB)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

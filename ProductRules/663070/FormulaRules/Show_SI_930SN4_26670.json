@@ -1,0 +1,11 @@
+{
+    "id": 26670,
+    "condition": "<*ISSELECTED(Default Switch.SW_BB_RT_CISCO_24PT_SFP)*>",
+    "name": "Show_SI_930SN4",
+    "action": "\"<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:SI-930SN4)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:SI-930SN4, 2)*><* DoResetAtt *>\"",
+    "description": "CXCPQ-118467",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

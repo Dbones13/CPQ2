@@ -1,0 +1,11 @@
+{
+    "id": 19965,
+    "condition": "<*ISSELECTED(SerC_CG_Cabinet_Type_03.Normal Cabinet)*>",
+    "name": "Show_Cabinet_Door_Keylock_Default",
+    "action": "<*ALLOWVALUES(SerC_CG_Cabinet_Door_Keylock _Default:Pushbutton)*>",
+    "description": "CXCPQ-47014",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13800,
+    "condition": "<*ATTDEF(Virtualization_BOM_Parts)*>",
+    "name": "Load_part_summary_cont",
+    "action": "<*CTX( Container(Virtualization_partsummary_cont).LoadKeys(partnumber).Load(select '<*eval(Replace(\"<*VALUE(Virtualization_BOM_Parts)*>\",\", \",\"' as partnumber UNION SELECT '\"))*>' as partnumber   ) )*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

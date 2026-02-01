@@ -1,0 +1,11 @@
+{
+    "id": 10641,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_FEL/Data_gathering_required?)*>,))",
+    "name": "default_LSS_FEL/Data_gathering_required?",
+    "action": "<*SELECTVALUE(LSS_FEL/Data_gathering_required?:Yes)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

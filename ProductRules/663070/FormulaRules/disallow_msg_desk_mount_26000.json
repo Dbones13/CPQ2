@@ -1,0 +1,11 @@
+{
+    "id": 26000,
+    "condition": "[OR]([OR]([EQ](<*VALUE(Experion Server Type)*>,Flex Server),[EQ](<*VALUE(Server Mounting)*>,Cabinet)),[NEQ](<*VALUE(MIB Configuration Required?)*>,Yes),[NEQ](<*VALUE(Interface with TPS Required?)*>,No),[OR]([EQ](<*VALUE(Server Node Type_desk)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Server Node Type_desk)*>,SVR_STD_DELL_Rack_RAID1)))",
+    "name": "disallow_msg_desk_mount",
+    "action": "<*DISALLOWATTRIBUTES(desk_mount_server_msg)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

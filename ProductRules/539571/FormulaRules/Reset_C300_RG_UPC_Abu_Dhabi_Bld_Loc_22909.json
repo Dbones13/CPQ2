@@ -1,0 +1,11 @@
+{
+    "id": 22909,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_Abu_Dhabi_Bld_Loc)*>)",
+    "name": "Reset_C300_RG_UPC_Abu_Dhabi_Bld_Loc",
+    "action": "<*RESETATTRIBUTE(C300_RG_UPC_Abu_Dhabi_Bld_Loc)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

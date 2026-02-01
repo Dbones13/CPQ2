@@ -1,0 +1,11 @@
+{
+    "id": 18730,
+    "condition": "[EQ](<*VALUE(MX_CD_Devronizer_Manual_Control_Panel)*>,)",
+    "name": "Default_MX_CD_Devronizer_Manual_Control_Panel",
+    "action": "<*SELECTVALUE(MX_CD_Devronizer_Manual_Control_Panel:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

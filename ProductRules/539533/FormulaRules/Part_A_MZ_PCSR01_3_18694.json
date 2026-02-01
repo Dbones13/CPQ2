@@ -1,0 +1,11 @@
+{
+    "id": 18694,
+    "condition": "[AND]([AND]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes),[EQ](<*VALUE(ES_Hardware_Selection)*>,SVR_STD_DELL_Rack_RAID1),[EQ](<*VALUE(ES_Node_Supplier_Mobile_Server)*>,Honeywell),[EQ](<*VALUE(ES_Trusted_Platform_Module_Mobile_Server)*>,Yes)),[AND]([EQ](<*VALUE(ES_Server_Node_Type)*>,SVR_STD_DELL_Rack_RAID1),[EQ](<*VALUE(ES_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ES_Trusted_Platform_Module)*>,Yes)))",
+    "name": "Part_A_MZ_PCSR01_3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:MZ-PCSR01)*><*SETATVQTY(eServer_BOM_parts:MZ-PCSR01,2)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

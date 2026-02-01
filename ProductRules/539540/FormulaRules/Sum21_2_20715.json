@@ -1,0 +1,11 @@
+{
+    "id": 20715,
+    "condition": "[AND]([EQ](<*VALUE(SS_Simulation_PC_Station_required)*>,Yes),[EQ](<*VALUE(SS_Display_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Display_Size_Station)*>,21.33 inch NTS),[GT](<*VALUE(SS_Number_of_Simulation_PCs_required)*>,0))",
+    "name": "Sum21_2",
+    "action": "<*ASSIGNVALUE(SS_21_33inch:<* Eval(<*VALUE(SS_21_33inch)*>+<*VALUE(SS_Number_of_Simulation_PCs_required)*>) *>)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

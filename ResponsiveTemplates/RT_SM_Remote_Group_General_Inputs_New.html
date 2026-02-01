@@ -1,0 +1,284 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>@Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+            <!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") -->
+<div class="row col-xs-12 swagger">
+        <div class="Calc_btn" >
+          <div class="col-xs-12 col-sm-12">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+          </div>
+        </div>
+  </div>
+            <!-- /ko -->
+
+  <div class="row col-xs-12 swagger">
+    <div id="sm-atex-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-atex-questions', $('#sm-atex-questions-content'), '#sm-atex-questions-href', 'slow'); }">
+          <span>ATEX Compliance &amp; Enclosure Type</span>
+          <a id="sm-atex-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-atex-questions-content">
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_RG_ATEX Compliance_and_Enclosure_Type_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ko ifnot: (localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0].userInput() == 'Cabinet') -->
+  <div class="row col-xs-12 swagger" id="sm-id-modifier">
+    <div id="sm-id-modifier-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-id-modifier-questions', $('#sm-id-modifier-questions-content'), '#sm-id-modifier-questions-href', 'slow'); }">
+          <span>Identifier-Modifier for SM SC Universal Safety Cabinet 1.3M</span>
+          <a id="sm-id-modifier-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-id-modifier-questions-content">
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_RG_Universal_Safety_Cabinet_1.3M_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- ko if: cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Specify_Identifier_Modifier")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Specify_Identifier_Modifier")()[0].userInput() !== 'Yes' -->
+  <div class="row col-xs-12 swagger" id="sm-sc-universal">
+    <div id="sm-sc-universal-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-sc-universal-questions', $('#sm-sc-universal-questions-content'), '#sm-sc-universal-questions-href', 'slow'); }">
+          <span>SM SC Universal Safety Cabinet 1.3M  Details</span>
+          <a id="sm-sc-universal-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-sc-universal-questions-content">
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_SC_Universal_Safety_Cab_1_3M_Details_cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- /ko -->
+<!-- /ko -->
+ <!-- ko ifnot: (localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.actionModule.responderModule.name() == 'R2Q SM Remote Group') -->
+<!--ko if: cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_IO_Count_Digital_Output_1.3_Cabinet_Case")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_IO_Count_Digital_Output_1.3_Cabinet_Case")()[0].userInput() !== '4' -->
+        <div class="row col-xs-12 swagger">
+            <div id="sm-cg-cabinet-dio">
+              <div>
+                <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-cg-cabinet-dio', $('#sm-cg-cabinet-dio-content'), '#sm-cg-cabinet-dio-href', 'slow'); }">
+                  <span data-bind="text: cpq.models.configurator.attributes.filterByProperty('name', 'SM_RG_IO_Count_Digital_Output_1.3_Cabinet_Case')()[0].userInput().split('|')[1]" ></span>
+                  <a id="sm-cg-cabinet-dio-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div class="newtoggle" id="sm-cg-cabinet-dio-content">
+                    <ul>
+                      <li><strong><span style="font-size:12px">This IO Count will be used for Labor Calculation and IO Summary in the Proposal document. This IO Count will not be used for 1.3M Cabinet Calculation.</span></strong></li>
+                   </ul>
+                  <div class="col-xs-7 col-sm-7">
+                    <!-- ko foreach: attributes.filterByProperty('name', "SM_RG_IO_Count_Digital_Input_1.3_Cabinet_Cont") -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-16' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                         </div>
+                    <!-- /ko -->
+                  </div>
+                  <div class="col-xs-6 col-sm-6">
+                    <!-- ko foreach: attributes.filterByProperty('name', "SM_RG_IO_Count_Analog_Input_1.3_Cabinet_Cont") -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-16' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                         </div>
+                    <!-- /ko -->
+                  </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+    <!-- /ko -->
+     <!-- /ko -->
+<!-- ko if: (localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.actionModule.responderModule.name() == 'R2Q SM Remote Group' && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0].userInput() == 'Universal Safety Cab-1.3M') -->
+<div class="row col-xs-12 swagger">
+            <div id="sm-cg-cabinet-dio">
+              <div>
+                <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-cg-cabinet-dio', $('#sm-cg-cabinet-dio-content'), '#sm-cg-cabinet-dio-href', 'slow'); }">
+                  <span data-bind="text: cpq.models.configurator.attributes.filterByProperty('name', 'SM_RG_IO_Count_Digital_Output_1.3_Cabinet_Case')()[0].userInput().split('|')[1]" ></span>
+                  <a id="sm-cg-cabinet-dio-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div class="newtoggle" id="sm-cg-cabinet-dio-content">
+                    <ul>
+                      <li><strong><span style="font-size:12px">This IO Count will be used for Labor Calculation and IO Summary in the Proposal document. This IO Count will not be used for 1.3M Cabinet Calculation.</span></strong></li>
+                   </ul>
+                  <div class="col-xs-7 col-sm-7">
+                    <!-- ko foreach: attributes.filterByProperty('name', "SM_RG_IO_Count_Digital_Input_1.3_Cabinet_Cont") -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-16' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                         </div>
+                    <!-- /ko -->
+                  </div>
+                  <div class="col-xs-6 col-sm-6">
+                    <!-- ko foreach: attributes.filterByProperty('name', "SM_RG_IO_Count_Analog_Input_1.3_Cabinet_Cont") -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-16' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                         </div>
+                    <!-- /ko -->
+                  </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+<!-- /ko -->
+
+  <!-- ko ifnot: (localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0].userInput() == 'Universal Safety Cab-1.3M') -->
+  <div class="row col-xs-12 swagger" id="sm-rg-cabinet">
+    <div id="sm-rg-cabinet-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-rg-cabinet-questions', $('#sm-rg-cabinet-questions-content'), '#sm-rg-cabinet-questions-href', 'slow'); }">
+          <span> Cabinet Details  </span>
+          <a id="sm-rg-cabinet-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-rg-cabinet-questions-content">
+            <!-- ko foreach: attributes.filterByProperty('name', "SM_RG_Cabinet_Details_Cont_Left", "SM_RG_Cabinet_Details_Cont") -->
+            <div class="col-xs-6 col-sm-6">
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+            <!-- /ko -->
+           </div>`
+        </div>
+      </div>
+   </div>
+
+  <div class="row col-xs-12 swagger" id="sm-io-count">
+    <div id="sm-io-count-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-io-count-questions', $('#sm-io-count-questions-content'), '#sm-io-count-questions-href', 'slow'); }">
+          <span>IO Count for Individual IO Module and Count for GIIS with on-board P+F Isolators</span>
+          <a id="sm-io-count-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+
+        <div id="sm-io-count-questions-content">
+             <div class="newtoggle" id="SM-rg-io-content">
+                <ul>
+    <li><strong><span style="font-size:12px">Safety Manager Non Redundant UIO IOTA does not support On-line Modifications. Please be sure before ordering the same.</span></strong></li>
+    <li><strong><span style="font-size:12px">If DI/ DO points are only required, Specify DIO Points instead of UIO for MIB Configuration.</span></strong></li>
+    <li><strong><span style="font-size:12px">Below Limits (0-5000) for IOs, is considered for User Entry Limit. However, Controller Calculations will be done based on Redundancy option selection and applicable IO Limits per controller respectively (Redundant Controller= 0-1984 IOs, A.R.T+ Controller= 0-896 IOs).</span></strong></li>
+</ul>
+          </div>
+          <div class="col-xs-9 swagger">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_RG_IO_Count_Digital_Input_Cont") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-9 swagger">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_RG_IO_Count_Digital_Output_Cont") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-7 swagger">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_RG_IO_Count_Analog_Input_Cont") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-7 swagger">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_RG_IO_Count_Analog_Output_Cont") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+<!-- ko ifnot: (localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.actionModule.responderModule.name() == 'R2Q SM Remote Group') -->
+    <!-- ko if: cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_DI_RLY_NMR_Case")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_DI_RLY_NMR_Case")()[0].userInput() !== '4' -->
+        <div class="row col-xs-12 swagger">
+            <div id="sm-cg-relay-namur">
+              <div>
+                <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-cg-relay-namur', $('#sm-cg-relay-namur-content'), '#sm-cg-relay-namur-href', 'slow'); }">
+                  <span data-bind="text: cpq.models.configurator.attributes.filterByProperty('name', 'SM_RG_DI_RLY_NMR_Case')()[0].userInput().split('|')[1]" ></span>
+                  <a id="sm-cg-relay-namur-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div class="newtoggle" id="sm-cg-relay-namur-content">
+                  <div class="col-xs-10 col-sm-10">
+                    <!-- ko foreach: attributes.filterByProperty('name', "SM_RG_DI_RLY_NMR_Cont") -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-16' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                         </div>
+                    <!-- /ko -->
+                  </div>
+                  <div >
+                    <div class="col-xs-10 col-sm-10">
+                  <!-- ko foreach: attributes.filterByProperty('name',"SM_RG_DO_RLY_NMR_Cont") -->
+                      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-16' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                              <!-- ko template: { name: $root.getAttributeTemplate } -->
+                              <!-- /ko -->
+                       </div>
+                  <!-- /ko -->
+                    </div>
+                  </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+    <!-- /ko -->
+<!-- ko if: (cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "SM_RG_Enclosure_Type")()[0].userInput() === 'Cabinet' && cpq.models.configurator.attributes.filterByProperty('name', "Universal Marshalling Cabinet")()[0] && cpq.models.configurator.attributes.filterByProperty('name', "Universal Marshalling Cabinet")()[0].userInput() === 'Universal Marshalling') -->
+  <div class="row col-xs-12 swagger" id="sm-um-cabinet">
+    <div id="sm-um-cabinet-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-um-cabinet-questions', $('#sm-um-cabinet-questions-content'), '#sm-um-cabinet-questions-href', 'slow'); }">
+          <span>SM Control Group1 Remote Group1- Universal Marshalling Cabinet</span>
+          <a id="sm-um-cabinet-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-um-cabinet-questions-content">
+          <div class="col-xs-6 swagger">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_RG_Universal_Marshalling_Cabinet_Details") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- /ko -->
+  <!-- /ko -->
+</div>

@@ -1,0 +1,11 @@
+{
+    "id": 26373,
+    "condition": "[NOT]([AND](<*ISSELECTED(Cabinet Doors.Standard)*>,[EQ](<*VALUE(Cabinet Depth)*>,1M),[EQ](<*VALUE(CE_Site_Voltage)*>,240V),<*ISSELECTED(CE_Site_Frequency.50Hz)*>,[GT](<*VALUE(exp_ent_cab_qnt)*>,0)))",
+    "name": "Remove MP-C1MCB1-200",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-200)*><* DoResetAtt *>",
+    "description": "CXCPQ-37824",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

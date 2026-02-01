@@ -1,0 +1,11 @@
+{
+    "id": 19772,
+    "condition": "[AND]([EQ](<*CTX( Container(SerC_CG_FIM_FF_IO_Cont).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_Foundation_Fieldbus_Interface_required.Yes)*>)",
+    "name": "Load_FIM_FF_IOs",
+    "action": "<*CTX( Container(SerC_CG_FIM_FF_IO_Cont).LoadKeys(IO_Type, Identifiers).Load(SELECT IO_Type, Identifiers FROM FIM_FF_IO WHERE Container_Name = 'SerC_CG_FIM_FF_IO_Cont') )*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

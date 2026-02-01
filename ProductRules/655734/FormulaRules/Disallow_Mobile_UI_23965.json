@@ -1,0 +1,11 @@
+{
+    "id": 23965,
+    "condition": "<*IFANYVALUE(Terminal_Web_Portal_required?:No)*>",
+    "name": "Disallow Mobile UI",
+    "action": "<*DISALLOWATTRIBUTES(Mobile_UI)*><*SETOPTIONAL(Mobile_UI)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

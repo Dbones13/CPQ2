@@ -1,0 +1,11 @@
+{
+    "id": 14228,
+    "condition": "[AND]([NEQ](<*CTX ( Quote.CustomField(IsR2QRequest).AttrValue)*>, Yes),[EQ](<*CTX ( Container(Series_C_Control_Groups_Cont).Rows.GetCount )*>,0))",
+    "name": "Add Default row to Series-C Control Group Container",
+    "action": "<*CTX ( Container(Series_C_Control_Groups_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

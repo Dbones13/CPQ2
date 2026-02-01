@@ -1,0 +1,11 @@
+{
+    "id": 20256,
+    "condition": "[OR]([NEQ](<*VALUE(DVM_4_Camera_Database_Server_Redundant_L)*>,Yes),[EQ](<*VALUE(DVM_4_Camera_Interface)*>,0))",
+    "name": "Remove_EP-DVMR01",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMR01)*><* DoResetAtt *>",
+    "description": "CXCPQ-45453",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,608 @@
+<!--Custom_ConfiguratorView -->
+<style>
+	.configleftree  a[disabled]{
+	pointer-events:none}
+</style>
+@using WebSite.Controllers
+	<div style="display:none">
+		<!-- ko foreach: attributes.filterByProperty('name' , "R2QRequest") -->
+			<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+			</div>
+		<!-- /ko -->
+	</div>
+<div style="display:none">
+		<!-- ko foreach: attributes.filterByProperty('name' , "R2Q_QuoteNumber") -->
+			<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+			</div>
+		<!-- /ko -->
+	</div>
+<div class="quote_inner">
+		<div class="col-md-2 left_configtree" style="display: none">
+		<div onclick="GetContent()" style=" padding-left: 10px;" style="display: none"> Quote Explorer</div>
+		<span class="hide_mode " style="writing-mode: tb-rl;transform: rotate(180deg);text-align: center;margin-top: 45px;border: none;text-transform: capitalize;letter-spacing: 1px;padding: 5px;color: rgb(112, 112, 112);font-size: 14px;font-weight: 600;display:none">Quote Explorer</span>
+		<span class="sap-icon left_collapse hide_left" onclick="iconhide()">&#xe1e2;</span>
+		<span class="sap-icon left_collapse open_left" onclick="iconshow()" style="display: none">&#xe1e2;</span>
+		<div id="treeViewContainer" data-bind="template: { name: 'configurationTreeTemplate1' }" class="cpq-scroll"></div>
+	</div>
+<div id="attributesContainer" class="row configurator fiori3-configurator" data-bind="visible: isInitialized" style="display: none">
+<div id="tab_Name" class="tabbable show-large fiori3-nav-tabs-container" data-bind="visible: tabs().length > 0" tabindex="-1" id="navTabsContainer">
+		<ul class="nav nav-responsive nav-tabs fiori3-nav-tabs" id="configurator-tabs" data-bind="foreach: tabs" role="tablist">
+			<li class="nav-tab-item" data-bind="attr: { href: '#tab-' + id() }, click: activateTab, css: { active: isSelected, requiredtab: shouldHaveRequiredIndicator }, style: { 'margin-left': $index() == 0 ? '0' : '32px' }">
+				<a href="#" data-bind="attr: { id: 'tab-' + id() }" role="tab">
+					<span data-bind="text: displayName"></span>
+					<span id="tab_Name_system" data-bind="text:name" style="display: none;"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="fiori3-configurator-view" role="tabpanel">
+		<div>
+			<!-- ko if : currentTab -->
+			<div class="show-small">
+				<div class="row">
+					<div class="nav-mobile clearfix">
+						<ul class="nav pull-left">
+							<li data-bind="css: { requiredtab: currentTab().shouldHaveRequiredIndicator() }"><a href="#"><span data-bind="    text: currentTab().displayName"></span></a></li>
+						</ul>
+						@*Show tab picker button only if there is more than one tab*@
+						<button data-bind="visible: tabs().length > 1" data-target=".tabs-collapse" data-toggle="collapse" class="navbar-toggle collapsed pull-right" type="button">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="tabs-collapse collapse row clearfix">
+						<div class="navbar-inner">
+							<ul class="nav" data-bind="foreach: tabs">
+								<li data-bind="attr: { href: '#tab-' + id() }, click: activateTab, css: { active: isSelected, requiredtab: isIncomplete && $root.highlightIncomplete() }">
+									<a href="#">
+										<span data-bind="text: displayName"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /ko -->
+			
+			<!-- ko template: currentTemplateName()-->
+			<!-- /ko -->
+
+			@if (ShowNextAndPreviousTabButtons)
+			{
+				<!-- ko if : tabs().length > 0 -->
+				<div class="row bottomnav flex flex-end">
+					<!--bottom actions -->
+					<button class="btn btn-secondary fiori3-btn-secondary" data-bind="click: previousTab, css: { disabled: !hasPreviousTab() }, attr: { tabindex: !hasPreviousTab() ? '-1' : '0' }"><span class="sap-icon">&#xe067;</span>@Translation.Get("Configurator.PreviousTab")</button>
+					<button class="btn btn-secondary fiori3-btn-secondary" data-bind="click: nextTab, css: { disabled: !hasNextTab() }, attr: { tabindex: !hasNextTab() ? '-1' : '0' }">@Translation.Get("Configurator.NextTab")<span class="sap-icon">&#xe066;</span></button>
+				</div>
+				<!-- /ko -->
+			}
+		</div>
+		  @if (ConfiguratorController.CanAccessProductDebugger()) {
+			  @Html.PartialWithNameAsComment("Debugger")
+		  }
+	</div>
+</div>
+	</div>
+
+
+@* here will tabs and attributes be generated dynamically *@
+<div id="templates" style="display: none">
+	@* we are loading all custom tab templates at once because we cannot figure out what tab templates we will need(Parent/Child -> Child can have their own tab layout)*@
+	  <script type='text/html' id='Tab'>
+		  @Html.PartialWithNameAsComment("Tab")
+	  </script>
+	@foreach (string customTemplateName in ConfiguratorController.GetAllTabsCustomTemplateNames())
+	{
+		<script type='text/html' id='@customTemplateName'>
+			@Html.PartialCustomTemplate(customTemplateName)
+		</script>
+	}
+	@Html.PartialWithNameAsComment("Editors/LabelTemplate")
+	@Html.PartialWithNameAsComment("Editors/AttributeQuantityTemplate")
+	@Html.PartialWithNameAsComment("Editors/DropDownTemplate")
+	@Html.PartialWithNameAsComment("Editors/RadioButtonTemplate")
+	@Html.PartialWithNameAsComment("Editors/CheckboxTemplate")
+	@Html.PartialWithNameAsComment("Editors/ImageButtonTemplate")
+	@Html.PartialWithNameAsComment("Editors/ListBoxTemplate")
+	@Html.PartialWithNameAsComment("Editors/ListBoxMultiSelectTemplate")
+	@Html.PartialWithNameAsComment("Editors/DisplayOnlyTextTemplate")
+	@Html.PartialWithNameAsComment("Editors/TextboxTemplate")
+	@Html.PartialWithNameAsComment("Editors/ButtonTemplate")
+	@Html.PartialWithNameAsComment("Editors/MultilineTextBoxTemplate")
+	@Html.PartialWithNameAsComment("Editors/DatePickerTemplate")
+	@Html.PartialWithNameAsComment("Editors/AttachmentTemplate")
+	@Html.PartialWithNameAsComment("Editors/ConfigurationImportTemplate");
+	@Html.PartialWithNameAsComment("Editors/AutoCompleteInputTemplate");
+
+	@Html.PartialWithNameAsComment("Editors/DrillDown/DrillDownTemplate");
+	@Html.PartialWithNameAsComment("Editors/DrillDown/DrillDownDropDownTemplate");
+	@Html.PartialWithNameAsComment("Editors/DrillDown/DrillDownRadioButtonTemplate");
+	@Html.PartialWithNameAsComment("Editors/DrillDown/DrillDownImageButtonTemplate");
+	@Html.PartialWithNameAsComment("PagerTemplate")
+
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerCheckboxTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerDropDownTemplate") 
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerLabelTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerMultilineTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerRadioTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerRowSelectorTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerListBoxTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerTextBoxTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerCurrencyTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerDatePickerTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerAutocompleteTemplate")
+	@Html.PartialWithNameAsComment("Editors/Container/AddContainerRowModalTemplate");
+	@Html.PartialWithNameAsComment("Editors/Container/ContainerCopyRowModalTemplate");
+</div>
+
+<!-- Button trigger modal -->
+
+
+	<!-- Modal -->
+
+	<div class="modal fade" id="lefttreemsg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeleftpopup()">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+		  Are you sure you want to lose your changes?
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeleftpopup()">Close</button>
+			<button type="button" class="btn btn-primary" onclick="leftpopupok()">Ok</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="modal-backdrop fade in leftbackdrop" style="display:none"></div>
+<script>
+	function selectProduct(){
+	  $("#AddRowModal").addClass("hide");
+	  setTimeout(function() {
+		   $("#AddRowModal li:visible a").click();
+	  }, 500);
+	}
+	 if(document.referrer.indexOf("Configurator") == -1){
+		 sessionStorage.setItem("TriggerChange", 'no');
+		 sessionStorage.setItem("TreeChange", 'no');}// To make calculate disable first time by clearing session
+	cpq.events.sub("configurator:updated", function(data, event) {
+											$("input,select").change(function(){
+			sessionStorage.setItem("TreeChange", 'yes');
+			$(".left_configtree .configleftree  a").attr("disabled", true);
+			 });
+        name = data.model.responderModule.name()
+        if(data.model.responderModule.name() =="HCI Labor Config" || data.model.responderModule.name() =="PHD Labor" || data.model.responderModule.name() =="Uniformance Insight Labor"){
+            cpq.server.executeScript("HCI_PHD_CalculationButton_Visibility", {'name':name}, function (data) {
+                if (data == "R2QHCI"){$('.configAdd').hide()}
+            });
+        }
+		if(data.model.responderModule.name() =="Honeywell Enterprise Data Management"){
+			cpq.server.executeScript("HCI_PHD_CalculationButton_Visibility", {'name':name}, function (data) {
+                //$("button[name=Calculation_Button]").click();
+                if (data == "R2QHCI"){$('.configAdd').hide()}
+            });
+			req = $("input[name=R2QRequest]").val();
+		 
+			//$("button[name=Calculation_Button]").click();
+			if (req == "Yes"){
+				$("button[name=Calculation_Button]").click();
+				$(".HCI_PHD_ESCALATIONFACTOR").closest('tr').hide();
+				$(".HCI_PHD_Scout_Express").closest('tr').hide();
+				$(".HCI_PHD_RDI_Web_Client").closest('tr').hide();
+				$(".HCI_PHD_Tags_Base_Size").closest('tr').hide();
+				$(".HCI_PHD_Peer_Tags_Lincensed").closest('tr').hide();
+				$(".HCI_PHD_Clustering_Option").closest('tr').hide();
+			}
+			if (req != "Yes"){
+			 
+				$("input[name=R2QRequest]").hide(); 
+				$(".R2QRequest").hide();
+			}
+		}
+		if(cpq.models.configurator.responderModule.name()=="Cyber "){
+			myInterval = setInterval(function() {
+				$( "button[id^='addRowBtn_']" ).unbind( "click", selectProduct );
+				$( "button[id^='addRowBtn_']" ).bind( "click", selectProduct );
+				if($( "button[id^='addRowBtn_']" ).length)clearInterval(myInterval);
+			}, 1000);
+		}
+
+		if(cpq.models.configurator.responderModule.name()=="Cyber App Control"){
+			$('.Number_of_Validated_Servers').append('<a href="#"  class="label-hint-icon autoClosePopover" aria-label="Hint popover"  data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Number of server nodes which have been validated. For more details go the Cyber App Control SCN (Software Change Notice)."><span class="sap-icon">&#xe202;</span></a>')
+			$('.Number_of_Validated_Servers a').popover();
+
+			$('.Number_of_Non_Validated_Servers').append('<a href="#"  class="label-hint-icon autoClosePopover" aria-label="Hint popover"  data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Number of server nodes that are not been validated. For more details go the Cyber App Control SCN (Software Change Notice)."><span class="sap-icon">&#xe202;</span></a>')
+			$('.Number_of_Non_Validated_Servers a').popover();
+
+			$('.Number_of_Validated_Stations').append('<a href="#"  class="label-hint-icon autoClosePopover" aria-label="Hint popover"  data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Number of station nodes which have been validated. For more details go the Cyber App Control SCN (Software Change Notice)."><span class="sap-icon">&#xe202;</span></a>')
+			$('.Number_of_Validated_Stations a').popover();
+
+			$('.Number_of_Non_Validated_Stations').append('<a href="#"  class="label-hint-icon autoClosePopover" aria-label="Hint popover"  data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Number of station nodes which are not been validated. For more details go the Cyber App Control SCN (Software Change Notice)."><span class="sap-icon">&#xe202;</span></a>')
+			$('.Number_of_Non_Validated_Stations a').popover();
+		}
+
+		$(".banner_clps").click(function(){ 
+		  var getcls = $(this).attr('class');
+		  var checkindex = getcls.indexOf("collapsed") != -1 ;
+			  
+	checkindex == true ?  $(this).removeClass("collapsed"):$(this).addClass("collapsed");
+ 
+});
+		if (data.model.responderModule.name() == "New / Expansion Project"){
+			//if(cpq.models.configurator.currentTab().name()=="General Inputs")sessionStorage.setItem("ProdTabSec", 'Home');
+			//if(cpq.models.configurator.currentTab().name()=="PM Labor Deliverables" && sessionStorage.ProdTabSec=='Home')ManageProductTab("Header_01_open");
+			//if(cpq.models.configurator.currentTab().name()=="PM Labor Deliverables")$("#"+sessionStorage.ProdTabSec).find(".newtoggle").show();
+			if(cpq.models.configurator.currentTab().name()!="PM Labor Deliverables"  && sessionStorage.ProdTabSec!='Home')ManageEEGsec("Home");
+		}
+		else if (data.model.responderModule.name() == "MSID_New"){
+			if(cpq.models.configurator.currentTab().name()!=sessionStorage.ProdTabSName)sessionStorage.setItem("ProdTabSec", 'Home');
+			if(cpq.models.configurator.currentTab().name()=="Labor Deliverables" && sessionStorage.ProdTabSec=='Home')ManageLDsec('#noName');
+			else if(cpq.models.configurator.currentTab().name()=="Part Summary" && sessionStorage.ProdTabSec=='Home')ManageLDsec('#noName');
+			sessionStorage.setItem("ProdTabSName", cpq.models.configurator.currentTab().name());
+		}
+		else if (["3rd Party Devices/Systems Interface (SCADA)", "C300 System", "CCR", "CE PLC Control Group", "CE PLC Remote Group","ControlEdge PCD Group", "ControlEdge PLC System","ControlEdge PLC System Migration", "ControlEdge RTU System", "ControlEdge UOC System","ControlEdge CN900 System","ControlEdge UOC System Migration", "Digital Video Manager","Digital Video Manager Group", "Electrical Substation Data Collector Group", "eServer System", "eServer System Group","Experion ARO, RESS & ERG Group", "Experion Enterprise Group", "Experion Enterprise System", "Experion HS Group", "Experion HS System","FDM System Group", "Field Device Manager", "HC900 Group", "List of Locations/Clusters/ Network Groups","MXP CD Control Group", "MXProLine System", "PlantCruise Group","PlantCruise System", "PMD System","RTU Group", "Safety Manager FGS","Safety Manager BMS","Safety Manager HIPPS","Safety Manager ESD", "Series-C Control Group", "Series-C Remote Group", "Simulation System", "Simulation System Group","SM Control Group", "SM Remote Group", "UOC Control Group", "UOC Remote Group","CN900 Control Group","Virtualization System","Virtualization System Migration", "MXP Sensor Group", "Experion MX System","Scanner Group", "Sensor Group","Terminal Manager","Industrial Security (Access Control)","SMX","Assessments","PCN Hardening","Cyber App Control","MSS","Electrical Substation Data Collector",'PHD Labor','HCI Labor Config','Uniformance Insight Labor','AFM Labor','TPC System Name','TPC Product Upload'].includes(data.model.responderModule.name())){
+			if (["Experion Enterprise System"].includes(data.model.responderModule.name())){
+				sessionStorage.setItem("ProdTabSec", "Home");
+			}
+			if (["Experion Enterprise Group"].includes(data.model.responderModule.name()) && sessionStorage.ProdTabSec=="Home"){
+				$(".swagger-header").first().click();
+			}
+			if (["Series-C Control Group"].includes(data.model.responderModule.name()) && ["C300 Remote Group"].includes(cpq.models.configurator.currentTab().name())){
+				$(".dropdown-toggle.autoClosePopover").click(function(){
+					$("#containerActionsDropdown li:first-child").click(function(){
+						sessionStorage.setItem("TriggerChange", 'prodcheck');
+					});
+				});
+			}
+			if(data.model.responderModule.name() =="Series-C Remote Group" && sessionStorage.TriggerChange=='prodcheck'){
+				cpq.models.configurator.attributes().forEach(function(key,index) {
+					if(key.name()=="C300_RG_UPC_Cab_Count"){
+						sessionStorage.setItem("TriggerChange", 'yes');
+						return false;
+					}
+				});
+			}
+
+				$(".fiori3-configurator-main-actions button:contains('@Translation.GetJS("Configurator.UpdateQuote")')").removeAttr('disabled');
+				$(".fiori3-configurator-main-actions button:contains('@Translation.Get("Configurator.SubProductSave")')").removeAttr('disabled');
+				$(".fiori3-configurator-main-actions button:contains('@Translation.GetJS("Configurator.AddToQuote")')").removeAttr('disabled');
+				$(".nav-tab-item").not(".active").removeClass("quick-add-button disabled").css("opacity", "1").css("cursor", "auto");
+				$("#config_tree button").removeAttr('disabled');
+				if ((['TPC Product Upload','TPC System Name'].includes(data.model.responderModule.name()) || ["General Inputs", "General Attribute", "General Input", "General"].includes(cpq.models.configurator.currentTab().name())) && $('button[name="Calculation_Button"]').length){
+					if(sessionStorage.TriggerChange =='yes' || cpq.models.configurator.attributes.filterByProperty('name' , 'Calculation Button Trigger')()[0]?.userInput() == 'Yes'){
+						$(".fiori3-configurator-main-actions button:contains('@Translation.GetJS("Configurator.UpdateQuote")')").attr('disabled','disabled');
+						$(".fiori3-configurator-main-actions button:contains('@Translation.Get("Configurator.SubProductSave")')").attr('disabled','disabled');
+						$(".fiori3-configurator-main-actions button:contains('@Translation.GetJS("Configurator.AddToQuote")')").attr('disabled','disabled');
+						$(".nav-tab-item").not(".active").addClass("quick-add-button disabled").css("opacity", "0.5").css("cursor", "not-allowed");
+						$("#config_tree button").attr('disabled','disabled');
+						$('button[name="Calculation_Button"]').removeAttr('disabled');
+					}
+					else{
+						$('button[name="Calculation_Button"]').attr('disabled','disabled');
+					}
+					$('button[name="Calculation_Button"]').click(function(){
+						sessionStorage.setItem("TriggerChange", 'no');
+					});
+					$("#cancelAddRowProductButton").click(function(){
+						setTimeout(function () {
+							$('.modal-footer .btn-primary').click(function(){
+								sessionStorage.setItem("TriggerChange", 'no');
+							});
+						}, 500);
+					});
+                    $('button[id="applyTemplateConfigurationImport"]').click(function(){
+						sessionStorage.setItem("TriggerChange", 'yes');
+					});
+					$("input,select").change(function(){
+						sessionStorage.setItem("TriggerChange", 'yes');
+					});
+				}
+			}
+	});
+	function ManageProductTab(name){
+		if(sessionStorage.ProdTabSec != name){
+			 cpq.server.executeScript('NEP_SetAttributeVisibility', {'name':name}, function (data) {
+				 if(data){
+					 sessionStorage.setItem("ProdTabSec", name);
+					 $(".nav-tab-item.active").click();
+						setTimeout(() => {
+								$(".swagger-toggle").addClass("swagger-toggle-rotated");
+								$("#"+sessionStorage.ProdTabSec).find(".swagger-toggle").removeClass("swagger-toggle-rotated");
+								$("#"+sessionStorage.ProdTabSec).find(".newtoggle").show();
+						}, 1000);
+				 }
+			 });
+		}
+		else{
+			$(".attrItems").slideToggle("slow");
+			$("[for="+name+"]").parent().find("a").toggleClass("fiori3-rotated-quote-section-toggle");
+		}
+	}
+	function ManageLDsec(name){
+	 
+		if(sessionStorage.ProdTabSec == '#noName' || ! (sessionStorage.ProdTabSec).includes(name)){
+			 cpq.server.executeScript('NEP_SetAttributeVisibility', {'name':name}, function (data) {
+				 if(data){
+					 sessionStorage.setItem("ProdTabSec", data.name);
+					 if(cpq.models.configurator.currentTab().name()=="Labor Deliverables")$( ".banner_clps" ).not(sessionStorage.ProdTabSec).find(".swagger-toggle").addClass("swagger-toggle-rotated");
+					 if(cpq.models.configurator.currentTab().name()=="Part Summary"){
+						 $(".swagger-toggle").addClass("swagger-toggle-rotated");
+						 var selectedItems=(sessionStorage.ProdTabSec).split(",")
+						 for(i in selectedItems){
+							 $(selectedItems[i]+"-href").removeClass("swagger-toggle-rotated");
+						 }
+					 }
+					 $(".nav-tab-item.active").click();
+				 }
+			 });
+		}
+	}
+	function ManageEEGsec(name){
+	 
+		if(name=="#all" || !sessionStorage.ProdTabSec || ! (sessionStorage.ProdTabSec).includes(name)){
+			 cpq.server.executeScript('NEP_SetAttributeVisibility', {'name':name}, function (data) {
+				 if(data){
+					 sessionStorage.setItem("ProdTabSec", data.name);
+					  nIntervId =setTimeout(function() {
+						 if(data.name=="#all"){
+							 $(".swagger-toggle").removeClass("swagger-toggle-rotated");
+							 if(! $( ".swagger-toggle" ).hasClass("swagger-toggle-rotated"))clearInterval(nIntervId);
+						 }
+						 else if(data.name==""){
+							 $(".swagger-toggle").addClass("swagger-toggle-rotated");
+							 if($( ".swagger-toggle" ).hasClass("swagger-toggle-rotated"))clearInterval(nIntervId);
+						 }
+						 else{
+							 $(".swagger-toggle").not((data.name).replace("-content", "-href")).addClass("swagger-toggle-rotated");
+							 if(data.name)$((data.name).replace("-content", "-href")).removeClass("swagger-toggle-rotated");
+							 if($((data.name).replace("-content", "-href")).hasClass("swagger-toggle-rotated"))clearInterval(nIntervId);
+						 }
+					 }, 2000);
+					 $(".nav-tab-item.active").click();
+				 }
+			 });
+		}
+	}
+</script>
+
+ <script type="text/html" id="configurationTreeTemplate1">
+		<div id="treeViewContainerStyle">
+			<div class="clearfix">
+				<h3 class="config-tree-parent">
+					<a href="#" id="configTreeParent" data-bind="text: configurationTreeFieldToDisplay, click: goToRootProduct, executeOnEnter: function(){$element.click()}, css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected }"></a>
+				</h3>
+			</div>
+			<div>
+				<ul id="navCatChildren" class="navCat" data-bind="template: { name: 'configurationTreeChildTemplate1', foreach: children }"></ul>
+			</div>
+		</div>
+	</script>
+	<script type="text/html" id="configurationTreeChildTemplate1">
+		<!-- ko if:cpq.models.configurator.actionModule.productName == 'Cyber' || cpq.models.configurator.actionModule.productName == 'R2Q HCI'  -->
+		<li onclick="showpopup(event, this)" data-bind="visible: $data.canEditRows()"  class="configleftree"  >
+			
+			<span data-bind="visible: children().length === 0" class="categories-tree"></span>
+				   
+			<a tabindex="0" href="#" class="categoryName"
+		   data-bind="text: configurationTreeFieldToDisplay, attr: { id: $data.uniqueIdentifier },
+				   click: editProduct,
+				   css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected, 'disabled': $data.hasIncompleteChildren(), 'not-active': !$data.canEditRows() }"></a>
+				   <!--  <a tabindex="0" data-bind="visible: children().length > 0, click: toggleExpanded, executeOnEnter: function(){$element.click()}, clickBubble: false" class="tree-view-icons">
+						<span class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</span>
+						<span class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</span>            
+					</a>
+					<i class="fa fa-trash-o" aria-hidden="true"  style="display: none;"></i>
+			<ul class="navCat nav-cat-child" data-bind='template: { name: "configurationTreeChildTemplate1", foreach: children }, visible: isExpanded'></ul> -->
+		</li> 
+		<!-- /ko -->
+		<!--ko if: cpq.models.configurator.actionModule.productName == "MSID_New" || cpq.models.configurator.actionModule.productName == "Migration_New" -->
+		<li onclick="showpopup(event, this)" data-bind="visible: $data.canEditRows()"  class="configleftree migration_tree"  >
+			
+			<span data-bind="visible: children().length === 0" class="categories-tree"></span>
+				   
+			<a tabindex="0" href="#" class="categoryName"
+		   data-bind="text: configurationTreeFieldToDisplay, attr: { id: $data.uniqueIdentifier, title: configurationTreeFieldToDisplay() },
+				   click: editProduct,
+				   css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected, 'disabled': $data.hasIncompleteChildren(), 'not-active': !$data.canEditRows() }"></a>
+					<a tabindex="0" data-bind="visible: children().length > 0, click: toggleExpanded, executeOnEnter: function(){$element.click()}, clickBubble: false" class="tree-view-icons">
+						<span class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</span>
+						<span class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</span>            
+					</a>
+					<i class="fa fa-trash-o" aria-hidden="true"  style="display: none;"></i>
+			<ul class="navCat nav-cat-child" data-bind='template: { name: "configurationTreeChildTemplate1", foreach: children }, visible: isExpanded'></ul> 
+		</li> 
+		<!-- /ko -->
+		<!-- ko if:cpq.models.configurator.actionModule.productName != 'Cyber' && cpq.models.configurator.actionModule.productName != 'MSID_New' && cpq.models.configurator.actionModule.productName != 'Migration_New' -->
+	  
+			<li onclick="showpopup(event, this)" data-bind="visible: ((!String(partNumber()).includes('_')  )  && $data.canEditRows())"  class="configleftree"  >
+			
+			<span data-bind="visible: children().length === 0" class="categories-tree"></span>
+			<!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes' )-->
+			<a tabindex="0" href="#" class="categoryName"
+			   data-bind="text: (partNumber() ? partNumber().replace('Digital Video Manager', 'CCTV System').replace('Industrial Security (Access Control)','Personnel Access Control').replace('Tank Gauging Engineering','Tank Gauging').replace('Fire Detection & Alarm Engineering','Fire Alarm Panel') : ''),
+							   visible: ((!String(partNumber()).includes('_')  )  && $data.canEditRows()) ,
+							 attr: { id: $data.uniqueIdentifier, 
+				   title: partNumber() ? partNumber().replace('Digital Video Manager', 'CCTV System').replace('Industrial Security (Access Control)','Personnel Access Control').replace('Tank Gauging Engineering','Tank Gauging').replace('Fire Detection & Alarm Engineering','Fire Alarm Panel') : '' },
+							click: editProduct,
+					   css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected, 'disabled': $data.hasIncompleteChildren(), 'not-active': !$data.canEditRows()}"></a>
+					   	<!-- /ko -->
+			<!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes' )-->
+			<a tabindex="0" href="#" class="categoryName"
+			   data-bind="text: partNumber() ,
+							   visible: ((!String(partNumber()).includes('_')  )  && $data.canEditRows()) ,
+							 attr: { id: $data.uniqueIdentifier, 
+				   title: partNumber()   },
+							click: editProduct,
+					   css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected, 'disabled': $data.hasIncompleteChildren(), 'not-active': !$data.canEditRows()}"></a>
+					   	<!-- /ko -->
+	
+			<!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes' )-->
+					<a tabindex="0" data-bind="attr: { title: 'arrow_'+partNumber()},visible: children().length > 0, click: toggleExpanded, executeOnEnter: function(){$element.click()}, clickBubble: false" class="tree-view-icons">
+						<span class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</span>
+						<span class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</span>            
+					</a>
+					<i class="fa fa-trash-o" aria-hidden="true"  style="display: none;"></i>
+			<ul class="navCat nav-cat-child" data-bind="attr: { title: partNumber() ? partNumber().replace('Digital Video Manager', 'CCTV System').replace('Industrial Security (Access Control)','Personnel Access Control').replace('Tank Gauging Engineering','Tank Gauging').replace('Fire Detection & Alarm Engineering','Fire Alarm Panel') : '' }, template: { name: 'configurationTreeChildTemplate1', foreach: children }, visible: isExpanded"> </ul>
+			   	<!-- /ko -->
+				<!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes' )-->
+					<a tabindex="0" data-bind="attr: { title: partNumber()},visible: children().length > 0, click: toggleExpanded, executeOnEnter: function(){$element.click()}, clickBubble: false" class="tree-view-icons">
+						<span class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</span>
+						<span class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</span>            
+					</a>
+					<i class="fa fa-trash-o" aria-hidden="true"  style="display: none;"></i>
+			<ul class="navCat nav-cat-child" data-bind="attr: { title: partNumber() }, template: { name: 'configurationTreeChildTemplate1', foreach: children }, visible: isExpanded"> </ul>
+			   	<!-- /ko -->
+		</li>
+		<!-- /ko -->
+	</script>
+	<script>
+	 function GetContent(){
+			cpq.models.configurator.actionModule.showConfigurationTree();
+			$('[aria-labelledby="configurationTreeModalLabel"] .modal-footer.center button.btn.btn-secondary.fiori3-btn-secondary').trigger('click');
+	 }
+	 function showpopup(event,ele){
+		event.stopPropagation();
+		$(ele).find('a.categoryName:first').addClass('Left_click');
+		 if(sessionStorage.TreeChange=='yes')
+		{
+		   // $('#lefttreemsg,.leftbackdrop').show()
+		   // $('#lefttreemsg').addClass('in')
+			 leftpopupok();
+		}
+		else
+		{
+			$('a.categoryName').removeClass('selectedCat');
+			$('.Left_click').addClass('selectedCat');
+			$('.Left_click').removeClass('Left_click');
+			$(".left_configtree .configleftree  a").removeAttr("disabled")
+			sessionStorage.setItem("TreeChange", 'no');
+		}
+	 }
+	  function leftpopupok(){
+		$('a.categoryName').removeClass('selectedCat');
+		 sessionStorage.setItem("TreeChange", 'no');
+		 $('.Left_click').trigger('click');
+		 $('.Left_click').addClass('selectedCat');
+		 closeleftpopup();
+	 }
+	 function closeleftpopup(){
+		$('#lefttreemsg,.leftbackdrop').hide()
+		$('.Left_click').removeClass('Left_click');
+		$('#lefttreemsg').removeClass('in')
+	 }
+function iconhide() {
+	var leftConfigTree = document.getElementsByClassName("left_configtree")[0];
+	if (leftConfigTree && window.getComputedStyle(leftConfigTree).display === "block") {
+		$('.hide_left').hide();
+		$('.hide_mode').show();
+		$('.open_left').show();
+		$('.left_configtree > div').hide();
+		$('.r2q_app_main .r2q_app .left_configtree').addClass('wid1');
+		$('.r2q_app_main .r2q_app div#attributesContainer').removeClass('col-md-10').addClass('wid97');
+	} else {
+		$('.r2q_app_main .r2q_app div#attributesContainer').removeClass('col-md-10 wid97');
+	}
+}
+	function removemd12() {
+		$('.r2q_app_main .r2q_app div#attributesContainer').removeClass('col-md-10');
+		$('.r2q_app_main .r2q_app div#attributesContainer').addClass('col-md-12');
+	}
+	function iconshow() {
+		GetContent();
+		$('.hide_left').show();
+		$('.open_left').hide();
+		$('.left_configtree > div').show();
+		$('.hide_mode').hide();
+		$('.r2q_app_main .r2q_app .left_configtree').removeClass('wid1');
+		$('.r2q_app_main .r2q_app div#attributesContainer').addClass('col-md-10');
+		$('.r2q_app_main .r2q_app div#attributesContainer').removeClass('wid97');
+	}
+	</script>
+	<script>
+	cpq.events.sub("configurator:updated", function () {
+    var expectedValue = "UOC_RG_Cabinet_Cont";
+    var expectedMigraValue = "UOC_RG_Controller_Rack_Cont";
+    var attributes = cpq.models.configurator.attributes();
+    var breadcrumbs = cpq.models.configurator.breadcrumbsModule.breadcrumbs();
+    var breadcrumbsSelected = breadcrumbs.map(b => b.name);
+    var migrationUOCRG = breadcrumbsSelected.includes("Migration_New");
+    var lastLi = $('.breadcrumb li:last-child');
+    
+        if ($('.r2q_app #uoc-rg-cabinet').length) {
+            var matchingAttribute = attributes.find(function(attribute) {
+                return typeof attribute.name === 'function' && attribute.name() === expectedValue;
+            });
+            
+            if (matchingAttribute) {
+               $('.r2q_app #uoc-rg-cabinet').parent().show();
+            } else {
+               $('.r2q_app #uoc-rg-cabinet').parent().hide();
+            }
+            if (migrationUOCRG){
+                if (lastLi.text().trim() === "UOC Remote Group"){
+                    var matchingMigraAttribute = attributes.find(function(attribute) {
+                        return typeof attribute.name === 'function' && attribute.name() === expectedMigraValue;
+                    });
+                    
+                    if (matchingMigraAttribute) {
+                        $('.r2q_app #uoc-rg-cabinet').parent().show();
+                    } else {
+                        $('.r2q_app #uoc-rg-cabinet').parent().hide();
+                    }
+                }
+            }
+        }
+    });
+ 
+cpq.events.sub("configurator:updated", function () {
+	$('.btn-group.dropdown').on('click', function() {
+		$('.r2q_app_main .r2q_app #containerActionsDropdown li:contains("Copy")').css("display","block");
+	});
+});
+	function expandNavCategory() {
+	let checkElement = $(".r2q_app_main .r2q_app ul#navCatChildren .migration_tree ul.navCat.nav-cat-child li a").filter(function() {
+		return $(this).text().trim().toLowerCase() === "3rd party plc to controledge plc/uoc";
+	});
+
+	if (checkElement.length > 0) {
+		checkElement.siblings("a, ul").css("display", "block").find("a, ul").css("display", "block");
+	} else {
+		setTimeout(expandNavCategory, 500);
+	}
+}
+
+function waitForElementAndExpand() {
+	const observer = new MutationObserver(() => {
+		let rdparty = $(".r2q_app_main .r2q_app ul#navCatChildren .migration_tree ul.navCat.nav-cat-child li a").filter(function() {
+			return $(this).text().trim().toLowerCase() === "3rd party plc to controledge plc/uoc";
+		});
+
+		if (rdparty.length > 0) {
+			observer.disconnect();
+			setTimeout(expandNavCategory, 300); // Small delay for stability
+		}
+	});
+
+	const targetNode = document.querySelector(".r2q_app_main .r2q_app ul#navCatChildren");
+	if (targetNode) {
+		observer.observe(targetNode, { childList: true, subtree: true });
+	} else {
+		setTimeout(waitForElementAndExpand, 500);
+	}
+}
+
+waitForElementAndExpand();
+</script>

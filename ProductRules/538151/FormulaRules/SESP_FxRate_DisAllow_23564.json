@@ -1,0 +1,11 @@
+{
+    "id": 23564,
+    "condition": "[NEQ](<*VALUE(SC_Pricing_Escalation)*>,Yes)",
+    "name": "SESP_FxRate_DisAllow",
+    "action": "<*DISALLOWATTRIBUTES(SESP_FxRate)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "20/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

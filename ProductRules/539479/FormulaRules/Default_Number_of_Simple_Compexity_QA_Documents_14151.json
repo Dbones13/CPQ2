@@ -1,0 +1,11 @@
+{
+    "id": 14151,
+    "condition": "[EQ](<*VALUE(Number_of_Simple_Compexity_QA_Documents  (0-100))*>,)",
+    "name": "Default_Number_of_Simple_Compexity_QA_Documents",
+    "action": "<*ASSIGNVALUE(Number_of_Simple_Compexity_QA_Documents  (0-100):0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

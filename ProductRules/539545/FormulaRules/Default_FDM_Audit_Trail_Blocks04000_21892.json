@@ -1,0 +1,11 @@
+{
+    "id": 21892,
+    "condition": "[EQ](<*VALUE(FDM_Audit_Trail_Blocks(0-4000))*>,)",
+    "name": "Default_FDM_Audit_Trail_Blocks(0-4000)",
+    "action": "<*ASSIGNVALUE(FDM_Audit_Trail_Blocks(0-4000):0)*>",
+    "description": "CXCPQ-48540",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

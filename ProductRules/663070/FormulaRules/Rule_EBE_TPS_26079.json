@@ -1,0 +1,11 @@
+{
+    "id": 26079,
+    "condition": "1",
+    "name": "Rule_EBE_TPS",
+    "action": "<*ASSIGNVALUE(EBE_TPS:<*Eval(<*VALUE(Number of Network Storage Device Standard)*>+<*VALUE(Number of Network Storage Device Performance)*>) *>)*>",
+    "description": "CXCPQ-51989",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

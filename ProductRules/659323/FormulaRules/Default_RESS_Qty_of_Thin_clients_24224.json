@@ -1,0 +1,11 @@
+{
+    "id": 24224,
+    "condition": "[EQ](<*VALUE(RESS_Qty_of_Thin_clients)*>,)",
+    "name": "Default_RESS_Qty_of_Thin_clients",
+    "action": "<*ASSIGNVALUE(RESS_Qty_of_Thin_clients:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

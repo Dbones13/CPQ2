@@ -1,0 +1,52 @@
+<script type="text/html" id="customerDataTemplate">
+    <div class="fiori3-shipping-info-actions-wrapper">
+        <!-- ko if: isShippingInfo -->
+        <div class="fiori3-shipping-info-actions">
+            <h4 tabindex="0" class="pull-left"><span data-bind="text: (roleName || '') , attr: { 'aria-label': (roleName || ''), id:  roleName.replace(/[\s\W]/gm, '_') || ''}"></span></h4>
+        </div>
+        <!-- /ko -->
+    </div>
+
+    <form class="form form-horizontal fiori3-shipping-customers-form">
+        <!-- ko if: !isInViewMode -->
+        <!-- /ko-->
+        <!-- ko if: isCustomerBlockedFromDeletion() -->
+        <div class="alert alert-warning small" role="alert" aria-live="assertive">
+            <span>@Translation.Get("Admin.GDPR.PleaseChangeCustomer")</span>
+        </div>
+        <!-- /ko-->
+        
+        <div data-bind="foreach: fields.filterByProperty('fieldId' , 'CustomerCode' , 'Address1' ,'Address2' , 'City' , 'Province' , 'ZipCode' , 'CountryAbbrev')">
+            <div class="form-group">
+                <label class="col-xs-12 control-label fiori3-control-label" data-bind="text: label, css: { 'required': isRequired }, attr: { 'for': (fieldId + ($parent.roleName || '')).replace(/[\s\W]/gm, '_'), id: 'Label_' + fieldId.replace(/[\s\W]/gm, '_') + '_' + ($parent.roleName || ''), 'aria-label': ($parent.roleName || '')  + ' ' + label }" ></label>
+                <div class="col-xs-12 fiori3-input-group">
+                    <!-- ko if: isListItem() && !isSpan() -->
+                    <div class="fiori3-input-group fiori3-select-group">
+                        <select data-bind="options: items, optionsText: 'label', optionsValue: 'value', value: listItemValue, attr: { id: (fieldId + ($parent.roleName || '')).replace(/[\s\W]/gm, '_')}" class="form-control" role="combobox"></select>
+                    </div>
+                    <!-- /ko-->
+                    <!-- ko if: isTextField() && fieldId !== 'Active'-->
+                    <input type="text" data-bind="value: value,attr: { id: (fieldId + ($parent.roleName || '')).replace(/[\s\W]/gm, '_'),  'aria-labelledby': 'Label_' + fieldId.replace(/[\s\W]/gm, '_') + '_' + ($parent.roleName || '') }" class="form-control" />
+                    <!-- ko if: isPostcodeLookup-->
+                    <a href="#" data-bind="click: $parent.findAddress, attr: { id: (fieldId + ($parent.roleName || '')).replace(/[\s\W]/gm, '_'), 'aria-labelledby': 'Label_' + fieldId.replace(/[\s\W]/gm, '_') + '_' + ($parent.roleName || '') }">[@Translation.Get("xsltFindAddress")]</a>
+                    <!-- /ko -->
+                    <!-- /ko-->
+                    <!-- ko if: value() && isSpan() && fieldId !== 'Active'-->
+                    <span data-bind="text: value, attr: { id: (fieldId + ($parent.roleName || '')).replace(/[\s\W]/gm, '_'), 'aria-labelledby': 'Label_' + fieldId.replace(/[\s\W]/gm, '_') + '_' + ($parent.roleName || '') } "></span>
+                    <!-- /ko-->
+                    <!-- ko if: !value() && !(isListItem() || isTextField() && fieldId !== 'Active') -->
+                    <span>&mdash;</span>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- ko if: isShippingInfo && isEditMode() -->
+    <div class="center clearfix">
+        <button type="button" data-bind="click: save, attr: { 'aria-label': (roleName || '') + ' ' + '@(Translation.Get("Customers.SaveCustomer"))'}" class="btn btn-primary fiori3-btn-primary"  >@Translation.Get("Customers.SaveCustomer")</button>
+        <button type="button" data-bind="click: cancel, attr: { 'aria-label': (roleName || '') + ' ' + '@(Translation.Get("Customers.Cancel"))'}" class="btn btn-secondary fiori3-btn-secondary"  >@Translation.Get("Customers.Cancel")</button>
+    </div>
+    <br />
+    <!-- /ko-->
+</script>
+@Html.PartialWithNameAsComment("AddressLookup");

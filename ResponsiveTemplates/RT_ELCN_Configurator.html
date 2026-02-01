@@ -1,0 +1,247 @@
+<!-- RT_ELCN_Configurator --> 
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="elcn-questions" onclick="toggleConfigSection(event, '#elcn-questions')">
+             <label class="onlytext">ELCN Basic Information</label> 
+			 <a id="elcn-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Basic_Information") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+		<!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'ELCN' || localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="elcn_new_upgrade-questions" onclick="toggleConfigSection(event, '#elcn_new_upgrade-questions')">
+              <label class="onlytext">ELCN Upgrade Nodes</label> 
+			   <a id="elcn_new_upgrade-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <!-- /ko -->
+        <!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'ELCN' || localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="elcn_new_upgrade-questions" onclick="toggleConfigSection(event, '#elcn_new_upgrade-questions')">
+              <label class="onlytext">ELCN Upgrade / New ELCN Nodes</label> 
+        </div>
+        <!-- /ko -->
+        
+        <div id="elcn_new_upgrade-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Upgrade_New_ELCN_Nodes") -->
+            <!-- ko ifnot:  localStorage.getItem("checkR2Q") ==='Yes'-->
+            <div class="text-center attribute-field-headers config_row clear-padding"><label class="onlytext">ELCN Upgrade Nodes</label></div>
+            <!-- /ko -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_UpgradeNode"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+		  
+		  <!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'ELCN' || localStorage.getItem("checkR2Q") ==='Yes')-->
+          <div class="col-xs-12 col-sm-3">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Upgrade_New_ELCN_Nodes") -->
+              <div class="text-center attribute-field-headers config_row clear-padding"><label class="onlytext">ELCN New Nodes</label></div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_NewNode"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+		  <!-- /ko -->
+        </div>
+      
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps"  id="elcn_network-questions" onclick="toggleConfigSection(event, '#elcn_network-questions')">
+              <label class="onlytext">ELCN Network Gateway Upgrade</label> 
+			  <a id="elcn_network-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn_network-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name',"ELCN_Select_Switch_configuration_required","ATT_ELCN_Qty_of_NGs_more_than_100mts","ELCN_Select_type_of_fiber_optic_switch") --> 
+			 <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                 <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+				 </div>
+            <!-- /ko -->
+          </div>
+        </div>
+    
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="elcn_services-questions" onclick="toggleConfigSection(event, '#elcn_services-questions')">
+              <label class="onlytext">Services</label> 
+			  <a id="elcn_services-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn_services-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' ,"ELCN_Site_Acceptance_Test_required","ELCN_Will_OPM_or_TPS_to_Experion_be_performed","ATT_ELCN_Additional_hours","ELCN_Services_for_NG_Switch_Configuration","ELCN_Off_Process_Setup_Validation_Required") --> 
+			 <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                 <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+				 </div>
+            <!-- /ko -->
+          </div>
+        </div>
+     
+        <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="elcn_server_cabinet-questions" onclick="toggleConfigSection(event, '#elcn_server_cabinet-questions')">
+              <label class="onlytext">Server Cabinet Configuration</label> 
+			  <a id="elcn_server_cabinet-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <!-- /ko -->
+        <div id="elcn_server_cabinet-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+             <!-- ko foreach: attributes.filterByProperty('name' ,"ELCN_Cabinet_Depth_Size","ELCN_Power_Supply_Voltage","ELCN_Cabinet_Door_Type","ELCN_Cabinet_Keylock_Type","ELCN_Cabinet_Hinge_Type","ELCN_Cabinet_Thermostat_Required","ELCN_Cabinet_Base_Required","ELCN_Cabinet_Color") --> 
+			  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                 <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+				 </div>
+            <!-- /ko -->
+          </div>
+        </div>
+     
+</div>
+<!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <div class="row col-xs-12 swagger">
+    <div id="elcn-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#elcn-questions')">
+          <span>ELCN Basic Information</span>
+          <a id="elcn-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Basic_Information") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="row col-xs-12 swagger">
+    <div id="elcn_new_upgrade-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#elcn_new_upgrade-questions')">
+          <span>ELCN Upgrade / New ELCN Nodes</span>
+          <a id="elcn_new_upgrade-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn_new_upgrade-questions-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Upgrade_New_ELCN_Nodes") -->
+            <div class="text-center attribute-field-headers">ELCN Upgrade Nodes</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_UpgradeNode"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Upgrade_New_ELCN_Nodes") -->
+              <div class="text-center attribute-field-headers">ELCN New Nodes</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_NewNode"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="row col-xs-12 swagger">
+    <div id="elcn_network-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#elcn_network-questions')">
+          <span>ELCN Network Gateway Upgrade</span>
+          <a id="elcn_network-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn_network-questions-content">
+          <div class="col-xs-12 col-sm-7">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Network_Gateway_Upgrade") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="elcn_services-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#elcn_services-questions')">
+          <span>Services</span>
+          <a id="elcn_services-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn_services-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Services") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="row col-xs-12 swagger">
+    <div id="elcn_server_cabinet-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#elcn_server_cabinet-questions')">
+          <span>Server Cabinet Configuration</span>
+          <a id="elcn_server_cabinet-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="elcn_server_cabinet-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ELCN_Server_Cabinet_Configuration") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ko -->

@@ -1,0 +1,11 @@
+{
+    "id": 22783,
+    "condition": "1",
+    "name": "Show_51305482-210",
+    "action": "[IF]([GT](<*VALUE(Tree_B10m_cable_01000)*>,0)){<* DoNotResetAtt *><*SELECTVALUES(Location_Cluster_Part_Summary:51305482-210)*><*SETATVQTY(Location_Cluster_Part_Summary:51305482-210,<*VALUE(Tree_B10m_cable_01000)*>)*><* DoResetAtt *>}[ENDIF]",
+    "description": "CXCPQ-38371",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

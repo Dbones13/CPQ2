@@ -1,0 +1,11 @@
+{
+    "id": 24217,
+    "condition": "[EQ](<*VALUE(RESS_existing_Flex_station_license)*>,)",
+    "name": "Default_RESS_existing_Flex_station_license",
+    "action": "<*ASSIGNVALUE(RESS_existing_Flex_station_license:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

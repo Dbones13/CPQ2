@@ -1,0 +1,11 @@
+{
+    "id": 26473,
+    "condition": "[AND]([EQ](<*VALUE(Server Type1)*>,),[NEQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "Default_Server_Type",
+    "action": "<*SELECTVALUE(Server Type1:SVR_STD_DELL_Rack_RAID1)*>",
+    "description": "Server Type",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

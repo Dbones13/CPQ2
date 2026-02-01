@@ -1,0 +1,11 @@
+{
+    "id": 10590,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Digital_Output_Relays_Modules_8_point)*>,)",
+    "name": "CWS_Mig_Default_Output_Relays_Modules_8_point",
+    "action": "<*ASSIGNVALUE(CWS_Mig_Digital_Output_Relays_Modules_8_point:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9142,
+    "condition": "1",
+    "name": "set_Part_number_quantity",
+    "action": "[IF]([AND]([OR]([EQ](<*VALUE(Trace_Software_Scope_Choices)*>,HW/SW),[EQ](<*VALUE(Trace_Software_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(Trace_Software_What_is_the_scope)*>,Changes to Existing License (Expansions))),[EQ](<*VALUE(Trace_Software_Do_you_need_hardware)*>,Yes))){[IF]([EQ](<*CTX ( Container(Trace_Software_License_Configuration_transpose).Row(1).Column(Trace_Software_Business_Level_Access).Get )*>,Yes)){<*DoNotResetAtt*>\n<*ALLOWVALUES(Trace_Software_Parts_Summary_PN:MZ-PCSR06)*>\n<*SELECTVALUE(Trace_Software_Parts_Summary_PN:MZ-PCSR06)*>\n<*SETATVQTY(Trace_Software_Parts_Summary_PN:MZ-PCSR06, 2)*>\n<*DoResetAtt*>}{<*DoNotResetAtt*>\n<*ALLOWVALUES(Trace_Software_Parts_Summary_PN:MZ-PCSR06)*>\n<*SELECTVALUE(Trace_Software_Parts_Summary_PN:MZ-PCSR06)*>\n<*SETATVQTY(Trace_Software_Parts_Summary_PN:MZ-PCSR06, 1)*>\n<*DoResetAtt*>}[ENDIF]\n<*DoNotResetAtt*>\n<*ALLOWVALUES(Trace_Software_Parts_Summary_PN:EP-COAS22)*>\n<*SELECTVALUE(Trace_Software_Parts_Summary_PN:EP-COAS22)*>\n<*SETATVQTY(Trace_Software_Parts_Summary_PN:EP-COAS22,<*GETATVQTY(Trace_Software_Parts_Summary_PN:MZ-PCSR06)*>)*>\n<*DoResetAtt*>}{<*DoNotResetAtt*><*DISALLOWVALUES(Trace_Software_Parts_Summary_PN:EP-COAS22,Trace_Software_Parts_Summary_PN:MZ-PCSR06)*><*DoResetAtt*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "11/09/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12789,
+    "condition": "[NOT]([IN](<*VALUE(CurrentVer_OTSC_OTU_SESP)*>,R510,R511))",
+    "name": "MZSQLCL4 UnHide OTS",
+    "action": "<*ALLOWATTRIBUTES(MZSQLCL4_OTSC_OTU_SESP)*>",
+    "description": "UnHide MZSQLCL4 for R511 current Version",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

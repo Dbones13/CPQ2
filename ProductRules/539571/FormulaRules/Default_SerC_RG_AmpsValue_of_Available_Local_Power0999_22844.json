@@ -1,0 +1,11 @@
+{
+    "id": 22844,
+    "condition": "[EQ](<*VALUE(SerC_RG_AmpsValue_of_Available_Local_Power(0-999))*>,)",
+    "name": "Default_SerC_RG_AmpsValue_of_Available_Local_Power(0-999)",
+    "action": "<*ASSIGNVALUE(SerC_RG_AmpsValue_of_Available_Local_Power(0-999):0)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

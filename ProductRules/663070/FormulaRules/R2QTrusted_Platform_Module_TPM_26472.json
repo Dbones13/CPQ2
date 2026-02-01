@@ -1,0 +1,11 @@
+{
+    "id": 26472,
+    "condition": "[AND]([NEQ](<*VALUE(Server Type1)*>,),[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "R2QTrusted Platform Module_TPM",
+    "action": "<*SELECTVALUE(Trusted Platform Module_TPM:Yes)*>",
+    "description": "In R2Q, if the Quote Server Type1 has a value, the 'Trusted Platform Module_TPM' attribute should be set to 'Yes'.",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

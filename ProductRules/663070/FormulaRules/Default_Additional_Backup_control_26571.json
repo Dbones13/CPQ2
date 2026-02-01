@@ -1,0 +1,11 @@
+{
+    "id": 26571,
+    "condition": "[EQ](<*VALUE(Additional Backup Control Server Locations (0-1))*>,)",
+    "name": "Default_Additional_Backup_control",
+    "action": "<*ASSIGNVALUE(Additional Backup Control Server Locations (0-1):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

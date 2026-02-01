@@ -1,0 +1,11 @@
+{
+    "id": 15026,
+    "condition": "[EQ](<*VALUE(MSE_Number_Unique_Single_Stream_Designs)*>,)",
+    "name": "Default_Unique_Single_Stream_Designs",
+    "action": "<*ASSIGNVALUE(MSE_Number_Unique_Single_Stream_Designs:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26101,
+    "condition": "[EQ](<*VALUE(Orion Stations required)*>,No)",
+    "name": "Orion Stations required",
+    "action": "<*DISALLOWATTRIBUTES(Flex Station Qty (0-60),Console Station Qty (0-20),TPS Station Qty (0-20),Console Station Extension Qty  (0-15),Flex Station Hardware Selection TPS,Console Station Hardware Selection,TPS Station Hardware Selection,Console Station Extension Hardware Selection,Node Supplier,Multi-Window Support Option Required?,Desk Station node's LAN Interface Card,Orion Station Location/Cluster/Network Group)*>",
+    "description": "Rule for questions to be hidden based on Orion Stations required",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14058,
+    "condition": "1",
+    "name": "Digital Video Manager Engineering",
+    "action": "<*ASSIGNVALUE(Digital Video Manager Engineering:<* Eval(6*<*VALUE(DVM_Number_of_Graphics)*>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

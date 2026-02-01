@@ -1,0 +1,11 @@
+{
+    "id": 19857,
+    "condition": "[NOT]([EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Disallow_SerC_CG_Agency_Approval",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Agency_Approval)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

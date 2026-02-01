@@ -1,0 +1,11 @@
+{
+    "id": 4822,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Porosity))",
+    "name": "Measurement_Porosity_5",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

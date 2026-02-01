@@ -1,0 +1,11 @@
+{
+    "id": 10584,
+    "condition": "[EQ](<*VALUE(CWS_Mig_System_Chassis_with_C50_Controller)*>,)",
+    "name": "CWS_Mig_Default_C50_Controller",
+    "action": "<*ASSIGNVALUE(CWS_Mig_System_Chassis_with_C50_Controller:1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

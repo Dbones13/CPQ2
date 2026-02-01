@@ -1,0 +1,11 @@
+{
+    "id": 18723,
+    "condition": "[EQ](<*VALUE(MX_CD_Additional_Power_Control_Wire)*>,)",
+    "name": "Default_MX_CD_Additional_Power_Control_Wire",
+    "action": "<*SELECTVALUE(MX_CD_Additional_Power_Control_Wire:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

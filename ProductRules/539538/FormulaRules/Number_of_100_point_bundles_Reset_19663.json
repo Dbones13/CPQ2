@@ -1,0 +1,11 @@
+{
+    "id": 19663,
+    "condition": "[NOT]([EQ](<*ATTSEL(Exp HS Enter Number of additional Points)*>,1))",
+    "name": "Number of 100 point bundles Reset",
+    "action": "<*ASSIGNVALUE(Exp HS Number of 100 point bundles:0)*>",
+    "description": "Rule inactivated as part of CXCPQ-43096",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

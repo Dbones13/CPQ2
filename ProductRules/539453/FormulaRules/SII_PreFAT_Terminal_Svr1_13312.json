@@ -1,0 +1,11 @@
+{
+    "id": 13312,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is Terminal Server Interface in Scope?)*>,Yes))",
+    "name": "SII_PreFAT_Terminal_Svr1",
+    "action": "<*ASSIGNVALUE(SII Pre-FAT - Terminal Svr1:<* Eval(0.5 * <*VALUE(Number of Terminal server Interfaces)*>) *>)*>",
+    "description": "SII Pre-FAT - Terminal Svr1\n\nCalculated Hrs = ts*0.5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

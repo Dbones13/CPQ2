@@ -1,0 +1,11 @@
+{
+    "id": 25635,
+    "condition": "[EQ](<*VALUE(Backbone Switch Required)*>,)",
+    "name": "Default_Backbone_Switch",
+    "action": "<*SELECTVALUE(Backbone Switch Required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

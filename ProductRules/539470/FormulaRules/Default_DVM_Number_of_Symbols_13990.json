@@ -1,0 +1,11 @@
+{
+    "id": 13990,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Symbols)*>,)",
+    "name": "Default_DVM_Number_of_Symbols",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Symbols:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

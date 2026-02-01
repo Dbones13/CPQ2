@@ -1,0 +1,11 @@
+{
+    "id": 18202,
+    "condition": "[EQ](<*VALUE(MXP_Chiller)*>,)",
+    "name": "Default_MXP_Chiller",
+    "action": "<*SELECTVALUE(MXP_Chiller:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

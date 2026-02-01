@@ -1,0 +1,11 @@
+{
+    "id": 12899,
+    "condition": "[NOT](<*ATTDEF(SC_MES_ServiceProduct)*>)",
+    "name": "Default_SC_MES_ServiceProduct",
+    "action": "<*ASSIGNVALUE(SC_MES_ServiceProduct:<*VALUE(SC_MES_Service_Product)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

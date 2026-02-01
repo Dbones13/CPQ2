@@ -1,0 +1,1 @@
+Quote.GetCustomField('R2Q_Alternate_Execution_Country').Content = Product.Attr('R2Q_Alternate_Execution_Country').GetValue()

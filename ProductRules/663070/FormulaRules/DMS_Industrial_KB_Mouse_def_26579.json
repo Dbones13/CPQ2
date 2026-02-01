@@ -1,0 +1,11 @@
+{
+    "id": 26579,
+    "condition": "[EQ](<*VALUE(DMS Industrial KB Mouse)*>,)",
+    "name": "DMS Industrial KB Mouse def",
+    "action": "<*SELECTVALUE(DMS Industrial KB Mouse:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

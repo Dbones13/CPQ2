@@ -1,0 +1,11 @@
+{
+    "id": 19709,
+    "condition": "[EQ](<*VALUE(SerC_CG_IP_Rating)*>,)",
+    "name": "Default_SerC_CG_IP_Rating",
+    "action": "<*SELECTVALUE(SerC_CG_IP_Rating:IP20)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

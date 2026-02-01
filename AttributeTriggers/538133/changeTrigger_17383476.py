@@ -1,0 +1,3 @@
+[IF](<*ISSELECTED(SC_P1P2_AutoUpdate_Editable_Ext.&nbsp)*>){<*ASSIGNVALUE(SC_P1P2_Parts_Ext_Price:<*CTX ( Container(SC_P1P2_Parts_Details).Sum(Hidden_ListPrice) )*>)*>}{<*ASSIGNVALUE(SC_P1P2_Parts_Ext_Price:0)*>}[ENDIF]
+[IF]([EQ](<*VALUE(SC_Product_Type)*>,Renewal)){[IF](<*ISSELECTED(SC_P1P2_AutoUpdate_Editable_Ext.&nbsp)*>){<*ASSIGNVALUE(SC_P1P2_PY_Parts_Ext_Price:<*CTX ( Container(SC_P1P2_Parts_Details).Sum(PY_ExtPrice) )*>)*>}{<*ASSIGNVALUE(SC_P1P2_PY_Parts_Ext_Price:0)*>}[ENDIF]}{0}[ENDIF]
+<*ASSIGNVALUE(SC_Product_Status:0)*>

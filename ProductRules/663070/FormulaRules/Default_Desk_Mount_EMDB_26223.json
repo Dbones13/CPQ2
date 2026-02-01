@@ -1,0 +1,11 @@
+{
+    "id": 26223,
+    "condition": "[EQ](<*VALUE(E_MDB_Server)*>,)",
+    "name": "Default_Desk_Mount_EMDB",
+    "action": "<*SELECTVALUE(E_MDB_Server:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

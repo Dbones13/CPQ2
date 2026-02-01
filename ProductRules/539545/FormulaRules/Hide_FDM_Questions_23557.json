@@ -1,0 +1,11 @@
+{
+    "id": 23557,
+    "condition": "[OR]([NEQ](<*VALUE(FDM_Release)*>,R540),[NEQ](<*VALUE(New_Expansion)*>,New))",
+    "name": "Hide_FDM_Questions",
+    "action": "<*DISALLOWATTRIBUTES(FDM_FF_Connector_Interface_License,FDM_FF_Custom_Connector,FDM_OPC_UA_Server_Enabler_License,FDM_OPC_UA_Server_Device_Blocks,FDM_Alert_Monitoring_License)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

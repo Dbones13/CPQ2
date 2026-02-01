@@ -1,0 +1,11 @@
+{
+    "id": 26487,
+    "condition": "[AND]([GT](<*VALUE(Cabinet_No_of_Displays (0-4))*>,1),[EQ](<*VALUE(Cabinet_Display_size)*>,55 inch NTS))",
+    "name": "CM_Display_Size_55inch",
+    "action": "<*RESETVALUE(Cabinet_No_of_Displays (0-4):1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

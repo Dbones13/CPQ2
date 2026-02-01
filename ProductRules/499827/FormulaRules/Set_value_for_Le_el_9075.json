@@ -1,0 +1,11 @@
+{
+    "id": 9075,
+    "condition": "1",
+    "name": "Set value for Le el",
+    "action": "<*ASSIGNVALUE(labor_parameter_Le_el:<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(Project Exeuction Locations).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

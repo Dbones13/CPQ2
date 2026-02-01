@@ -1,0 +1,11 @@
+{
+    "id": 13053,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_Attribute_for_Contract_New",
+    "action": "<*DISALLOWATTRIBUTES(SC_License_type_PY,SC_Select_desired_Release_PY,SC_License_type_PY,SC_Select_desired_Release_PY,SC_Central_Managed_SQL_PY,SC_Standard_User_CALs_PY,SC_Business_Level_Access_PY,SC_L4_Trace_Server_Option_PY,SC_Number_of_Concurrent_Users_PY,SC_Years_of_Support_PY,SC_ESVT_PY,SC_Experion_PKS_PY,SC_Honeywell_TPS_PY,SC_Experion_LX_Plantcruise_PY,SC_Honeywell_Safety_Manager_S300_PY,SC_Triconex_PY,SC_FSC_PY,SC_Experion_SCADA_PY,SC_APC_Aspen_DMC_or_ProfitSuite_PY,SC_Honeywell_ControlEdge_PLC_PY,SC_Uniformance_PHD_PY,SC_OSI_PI_PY,SC_SPI_Tools_PY,SC_RS_Logix_PY,SC_Custom_User_Defined_System_PY,Class_0_Space,Class_1_Space,Class_2_Space,Class_3_Space,ATTCON_05_open,ATTCON_05_close)*><*CTX ( Container(SC_Trace_Summary).Column(SR_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(SA_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(Unit_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(Comments).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(PY_CostPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(CY_CostPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Trace_Summary).Column(CY_ListPrice).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(SC_Pricing_Escalation,SC_Trace_Dummy,ATTCON_06_close,ATTCON_06_open)*><*DISALLOWATTRIBUTES(ComparisonSummary)*><*SETOPTIONAL(SC_License_type_PY)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

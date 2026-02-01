@@ -1,0 +1,11 @@
+{
+    "id": 20678,
+    "condition": "[AND]([EQ](<*VALUE(SS_Display_Supplier_desk)*>,Honeywell),[EQ](<*VALUE(SS_Display_size_desk)*>,55 inch NTS),[GT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0))",
+    "name": "sum55_1",
+    "action": "<*ASSIGNVALUE(SS_55_inch_NTS:<* Eval(<*VALUE(SS_55_inch_NTS)*>+(1)*<*VALUE(SS_Flex_Station_Qty_Desk)*>) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

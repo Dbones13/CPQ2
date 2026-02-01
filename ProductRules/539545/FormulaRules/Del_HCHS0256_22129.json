@@ -1,0 +1,11 @@
+{
+    "id": 22129,
+    "condition": "[NOT]([GEQ](<* Eval(<*VALUE(FDM_HP_Server_Points)*> - (INT((<*VALUE(FDM_HP_Server_Points)*>)/1024))*1024 - (INT((<*VALUE(FDM_HP_Server_Points)*> - (INT((<*VALUE(FDM_HP_Server_Points)*>)/1024))*1024)/512))*512) *>,256))",
+    "name": "Del_HC-HS0256",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-HS0256)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9081,
+    "condition": "1",
+    "name": "Total_PM_Hrs",
+    "action": "<*ASSIGNVALUE(Total_PM_Hrs:<* Eval(<* Round (<*CTX( Container(Project_management_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(Labor_Container).Total(Final Hrs) )*>) *>) *>+<* Round (<*CTX( Container(PLE_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Total(Final Hrs) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

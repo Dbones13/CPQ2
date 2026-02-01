@@ -1,0 +1,11 @@
+{
+    "id": 19873,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Allow_SerC_CG_Current_required_for_each_DO",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Current_required_for_each_DO)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "15/10/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

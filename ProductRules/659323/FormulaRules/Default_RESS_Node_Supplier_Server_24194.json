@@ -1,0 +1,11 @@
+{
+    "id": 24194,
+    "condition": "[EQ](<*VALUE(RESS_Node_Supplier_(Server))*>,)",
+    "name": "Default_RESS_Node_Supplier_(Server)",
+    "action": "<*SELECTVALUE(RESS_Node_Supplier_(Server):Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

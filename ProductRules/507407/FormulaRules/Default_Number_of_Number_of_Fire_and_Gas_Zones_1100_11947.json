@@ -1,0 +1,11 @@
+{
+    "id": 11947,
+    "condition": "[EQ](<*VALUE(FGC_Number_of_Fire_and_Gas_Zones_(1-100))*>,)",
+    "name": "Default_Number of Number_of_Fire_and_Gas_Zones_(1-100)",
+    "action": "<*ASSIGNVALUE(FGC_Number_of_Fire_and_Gas_Zones_(1-100):5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

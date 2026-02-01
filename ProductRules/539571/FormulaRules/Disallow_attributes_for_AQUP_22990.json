@@ -1,0 +1,11 @@
+{
+    "id": 22990,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Disallow_attributes_for_AQUP",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet))){<*ALLOWATTRIBUTES(SerC_RG_AmpsValue_of_Available_Local_Power(0-999),SerC_RG_RQUP_ApprovalValue_for_Locally_Supp_Power,SerC_RG_Power_Entry_Default)*>}{<*DISALLOWATTRIBUTES(SerC_RG_AmpsValue_of_Available_Local_Power(0-999),SerC_RG_RQUP_ApprovalValue_for_Locally_Supp_Power)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

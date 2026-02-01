@@ -1,0 +1,11 @@
+{
+    "id": 12115,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "WiFi Adapters Configuration",
+    "action": "<*ASSIGNVALUE(WiFi Adapters Configuration:<* Eval(0.6*<*VALUE(OWS_Number of Wi-Fi adapters)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10576,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Customer_require_a_Touch_Screen_monitor)*>,)",
+    "name": "CWS_Mig_Default_Touch_Screen_monitor",
+    "action": "<*SELECTVALUE(CWS_Mig_Customer_require_a_Touch_Screen_monitor:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

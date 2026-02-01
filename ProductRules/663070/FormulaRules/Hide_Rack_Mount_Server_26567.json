@@ -1,0 +1,11 @@
+{
+    "id": 26567,
+    "condition": "[OR]([EQ](<*VALUE(Experion Server Type)*>,Flex Server),[EQ](<*VALUE(Server Mounting)*>,Desk))",
+    "name": "Hide_Rack_Mount_Server",
+    "action": "<*DISALLOWATTRIBUTES(Rack_Mount_Server,Server_NodeType,Node_Supplier_Server,TrustedPlatformModule_TPM,AdditionalHard_Disk,AdditionalMemory_Server Disk,Optional_DVD_ServerDisk,ServerLocation_Cluster_Network_Group,Marine_Requirement_Cabinet)*>",
+    "description": "CXCPQ-34620",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

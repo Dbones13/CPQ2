@@ -1,0 +1,11 @@
+{
+    "id": 22889,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_CN100_IO_HIVE)*>)",
+    "name": "Reset_C300_RG_UPC_CN100_IO_HIVE",
+    "action": "<*ALLOWATTRIBUTES(C300_RG_UPC_CN100_IO_HIVE)*>;<*RESETATTRIBUTE(C300_RG_UPC_CN100_IO_HIVE)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25867,
+    "condition": "[NOT]([AND]([GT]([IF]([GT](<*VALUE(Exp_Peer_Cntrl_Add_TCPCDX01_int)*>,<*VALUE(Exp_Peer_Cntrl_Add_TCPCDX01_qty)*>)){<*VALUE(Exp_Peer_Cntrl_Add_TCPCDX01_qty_Plus1)*>}{<*VALUE(Exp_Peer_Cntrl_Add_TCPCDX01_qty)*>}[ENDIF],0),[GT](<*VALUE(Exp Peer Control Data Interface License(0-256))*>,0)))",
+    "name": "Exp_Peer_Cntrl_Del_TCPCDX01",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TC-PCDX01)*><* DoResetAtt *>",
+    "description": "Delete TC-PCDX01",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

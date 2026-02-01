@@ -1,0 +1,11 @@
+{
+    "id": 14649,
+    "condition": "[EQ](<*VALUE(MX_MD_Roll_Set)*>,)",
+    "name": "Default_MX_MD_Roll_Set",
+    "action": "<*SELECTVALUE(MX_MD_Roll_Set:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

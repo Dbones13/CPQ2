@@ -1,0 +1,11 @@
+{
+    "id": 14769,
+    "condition": "[GT](<*VALUE(MX_HC_Analog_Output_0_20_Ma_4_Channel)*>,0)",
+    "name": "MX_Part_Q8787_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8787-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8787-50, <*VALUE(MX_HC_Analog_Output_0_20_Ma_4_Channel)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

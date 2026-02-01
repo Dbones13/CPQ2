@@ -1,0 +1,11 @@
+{
+    "id": 18314,
+    "condition": "[AND]([IN](<*VALUE(MXP_Scanner_Type)*>,3-6080-00,3-6080-43,3-6080-46),[EQ](<*VALUE(MXP_Electronics_End_Cooling)*>,Yes))",
+    "name": "Part_A_3_6080_31",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-6080-31)*><*SETATVQTY(MXP_SE_Bom_Parts:3-6080-31,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

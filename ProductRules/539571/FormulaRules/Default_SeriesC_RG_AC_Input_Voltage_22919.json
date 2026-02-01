@@ -1,0 +1,11 @@
+{
+    "id": 22919,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_ACInputVoltage)*>,)",
+    "name": "Default_SeriesC_RG_AC_Input_Voltage",
+    "action": "<*SELECTVALUE(SeriesC_RG_ACInputVoltage:230 VAC230 VAC)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

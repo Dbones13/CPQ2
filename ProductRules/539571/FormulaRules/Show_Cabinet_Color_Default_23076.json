@@ -1,0 +1,11 @@
+{
+    "id": 23076,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Type)*>,Normal Cabinet)",
+    "name": "Show_Cabinet_Color_Default",
+    "action": "<*ALLOWVALUES(SerC_RG_Cabinet_Color_Default:Custom,SerC_RG_Cabinet_Color_Default:Gray-RAL 7032)*>\n<*ALLOWVALUES(SerC_RG_Cabinet_Hinge_Type_Default:180 Degree)*>\n<*ALLOWVALUES(SerC_RG_Cabinet_Door_Keylock_Default:Pushbutton)*>\n<*ALLOWVALUES(SerC_RG_Cabinet_Doors_Default:Double,SerC_RG_Cabinet_Doors_Default:Reverse Front,SerC_RG_Cabinet_Doors_Default:Reverse Front & Rear,SerC_RG_Cabinet_Doors_Default:Reverse Rear)*>",
+    "description": "CXCPQ-47015",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

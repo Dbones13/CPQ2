@@ -1,0 +1,11 @@
+{
+    "id": 25944,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[EQ](<*VALUE(Orion Console Remote Periph Sol Type (RPS))*>,Extio3-Multi Mode Fiber),[EQ](<*VALUE(Node Supplier)*>,Honeywell)))",
+    "name": "TP-RPSF03-410_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-RPSF03-410)*><* DoResetAtt *>",
+    "description": "CXCPQ-39500",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

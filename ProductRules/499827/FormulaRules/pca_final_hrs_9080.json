@@ -1,0 +1,11 @@
+{
+    "id": 9080,
+    "condition": "1",
+    "name": "pca_final_hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(Labor_Container).Total(Final Hrs) )*>) *>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

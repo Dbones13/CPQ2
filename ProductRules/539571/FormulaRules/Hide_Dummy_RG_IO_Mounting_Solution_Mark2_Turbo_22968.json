@@ -1,0 +1,11 @@
+{
+    "id": 22968,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_Dummy_RG_IO_Mounting_Solution_Mark2_Turbo",
+    "action": "<*DISALLOWATTRIBUTES(Dummy_RG_IO_Mounting_Solution)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

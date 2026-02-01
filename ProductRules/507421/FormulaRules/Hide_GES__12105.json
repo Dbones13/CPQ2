@@ -1,0 +1,11 @@
+{
+    "id": 12105,
+    "condition": "[EQ](<*VALUE(OWS_GES Location)*>,None)",
+    "name": "Hide_GES_%",
+    "action": "<*DISALLOWATTRIBUTES(OWS_Addi_Labor_GES_%,OWS_Labor_GES_%)*><*CTX ( Container(OWS_Engineering_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX ( Container(OWS_Engineering_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(OWS_Engineering_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(OWS_Engineering_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(OWS_Engineering_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(OWS_Engineering_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(OWS_Engineering_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*><*CTX ( Container(OWS_Additional_Labour_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX ( Container(OWS_Additional_Labour_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(OWS_Additional_Labour_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(OWS_Additional_Labour_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(OWS_Additional_Labour_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(OWS_Additional_Labour_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(OWS_Additional_Labour_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

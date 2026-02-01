@@ -1,0 +1,11 @@
+{
+    "id": 13290,
+    "condition": "[EQ](<*VALUE(Is System Network Engineering in Scope?)*>,Yes)",
+    "name": "System_Network_unhide",
+    "action": "<*ALLOWATTRIBUTES(Header_09_open,System_Network_Engineering_Labor_GES_%,System_Network_Labor_Execution_Country,System_Network_Engineering_Labor_Container,System_Network_Labor_Execution_Year,System_Network_Labor_Productivity,Header_09_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

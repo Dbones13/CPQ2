@@ -1,0 +1,11 @@
+{
+    "id": 24190,
+    "condition": "[EQ](<*VALUE(ARO_Gateway_require_Physical_hardware)*>,)",
+    "name": "Default_ARO_Gateway_require_Physical_hardware",
+    "action": "<*SELECTVALUE(ARO_Gateway_require_Physical_hardware:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

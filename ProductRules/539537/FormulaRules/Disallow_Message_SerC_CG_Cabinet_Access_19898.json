@@ -1,0 +1,11 @@
+{
+    "id": 19898,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_MIB_Configuration_Required)*>,Yes),[EQ](<*VALUE(SerC_CG_Cabinet_Access)*>,Single Access))",
+    "name": "Disallow_Message_SerC_CG_Cabinet_Access",
+    "action": "<*DISALLOWATTRIBUTES(Message_SerC_CG_Cabinet_Access)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

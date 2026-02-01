@@ -1,0 +1,11 @@
+{
+    "id": 19920,
+    "condition": "[AND]([EQ](<*VALUE(SerC_Number of Redundant EIM for IEC61850)*>,0),<*VALUE(SerC_Number of Redundant EIM for IEC61850)*>,0)",
+    "name": "Hide_Message_message_SerC_Num EIM for IEC61850",
+    "action": "<*ALLOWATTRIBUTES(message_SerC_Number of Redundant EIM for IEC61850)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

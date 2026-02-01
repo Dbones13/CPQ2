@@ -1,0 +1,11 @@
+{
+    "id": 17876,
+    "condition": "[GT](<*CTX( Container(OPC Application Instances).Row(3).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-OPCSAE",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-OPCSAE)*><*SETATVQTY(SCADA_BOM_Items:EP-OPCSAE,<*CTX( Container(OPC Application Instances).Row(3).Column(Nodes).Get )*>)*><* DoResetAtt *>",
+    "description": "Add-EP-OPCSAE",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

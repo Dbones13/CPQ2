@@ -1,0 +1,11 @@
+{
+    "id": 14224,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Removing the labor parts",
+    "action": "<*CTX ( Container(Labor_PriceCost_Cont).Rows.Clear )*>\n<*CTX ( Container(C300_Engineering_Labor_Container).Rows.Clear )*>\n<*CTX ( Container(C300_Additional_Custom_Deliverables_Container).Rows.Clear )*>\n<*RESETATTRIBUTE(ErrorMessage)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "10/12/24",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12073,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated Hours for PAGA Hardware Configuration",
+    "action": "<*ASSIGNVALUE(PAGA Hardware Configuration:[IF](<*ISSELECTED(PAGA_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval((8*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>)+(<*VALUE(PAGA_Number_of_Reviews_(add Asbuilts))*>*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>*<*VALUE(PAGA_Number_of_Digital_Output_Modules_(DOM))*>)) *>}{[IF]([AND](<*ISSELECTED(PAGA_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(PAGA_GES_Location.None)*>)){<* Eval(((8*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>)+(<*VALUE(PAGA_Number_of_Reviews_(add Asbuilts))*>*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>*<*VALUE(PAGA_Number_of_Digital_Output_Modules_(DOM))*>))*0.6) *>}{[IF]([AND](<*ISSELECTED(PAGA_Implementation_Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(PAGA_GES_Location)*>,None))){<* Eval((((8*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>)+(<*VALUE(PAGA_Number_of_Reviews_(add Asbuilts))*>*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>*<*VALUE(PAGA_Number_of_Digital_Output_Modules_(DOM))*>))*0.6)*1.15) *>}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-61043",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

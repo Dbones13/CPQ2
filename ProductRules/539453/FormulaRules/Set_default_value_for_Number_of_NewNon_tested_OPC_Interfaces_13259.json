@@ -1,0 +1,11 @@
+{
+    "id": 13259,
+    "condition": "[EQ](<*VALUE(Number of New/Non tested OPC Interfaces)*>,)",
+    "name": "Set default value for Number of New/Non tested OPC Interfaces",
+    "action": "<*ASSIGNVALUE(Number of New/Non tested OPC Interfaces:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12085,
+    "condition": "[OR](<*ISSELECTED(PAGA_Labor_GES_Eng.SYS GES Eng-BO-RO)*>,<*ISSELECTED(PAGA_Labor_GES_Eng.SYS GES Eng-FO-RO)*>)",
+    "name": "Hide GES Location other than RO",
+    "action": "<*DISALLOWALLVALUESEXCEPT(PAGA_Labor_GES_Eng:HPS_GES_P350B_RO|HPS_GES_P350F_RO)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "27/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 2599,
+    "condition": "[AND]([NOT](<*ATTSEL(Terminal_GES_Eng)*>),<*ISSELECTED(Terminal_Ges_Location_Labour.GES India)*>)",
+    "name": "Terminal_GES_Eng_Set_Default_India",
+    "action": "<*SELECTVALUE(Terminal_GES_Eng:HPS_GES_P350B_IN)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

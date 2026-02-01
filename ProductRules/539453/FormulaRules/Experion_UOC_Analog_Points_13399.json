@@ -1,0 +1,11 @@
+{
+    "id": 13399,
+    "condition": "1",
+    "name": "Experion UOC Analog Points",
+    "action": "<*ASSIGNVALUE(Experion UOC Analog Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Experion UOC Analog Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

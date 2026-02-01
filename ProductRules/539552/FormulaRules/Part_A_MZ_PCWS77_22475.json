@@ -1,0 +1,11 @@
+{
+    "id": 22475,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[EQ](<*VALUE(ESDC_Node_Supplier)*>,Honeywell),[NEQ](<*VALUE(ESDC_Client_Station_Qty)*>,0),[NEQ](<*VALUE(ESDC_Software_Release)*>,R530))",
+    "name": "Part_A_MZ_PCWS77",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:MZ-PCWS77)*><*SETATVQTY(ESDC_BOM_Parts:MZ-PCWS77, <*VALUE(ESDC_Client_Station_Qty)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26105,
+    "condition": "[NOT]([OR]([AND](<*ISSELECTED(IKBorOEP_FlexServer.Operator Touch Panel)*>,<*ISSELECTED(Node Supplier (Flex Server).Honeywell)*>),[AND](<*ISSELECTED(DMS IKB or OEP.Operator Touch Panel)*>,<*ISSELECTED(DMS Node Supplier.Honeywell)*>),[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),<*ISSELECTED(Orion Console Membrane KB Type.Operator Touch Panel)*>)))",
+    "name": "TP-OTP231_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-OTP231)*><* DoResetAtt *>",
+    "description": "CXCPQ-38909",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

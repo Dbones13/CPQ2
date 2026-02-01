@@ -1,0 +1,11 @@
+{
+    "id": 13652,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_VMWare_Essentials_Plus_Licenses)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_VESPB8",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VESPB8)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VESPB8,<*VALUE(Virtualization_VMWare_Essentials_Plus_Licenses)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

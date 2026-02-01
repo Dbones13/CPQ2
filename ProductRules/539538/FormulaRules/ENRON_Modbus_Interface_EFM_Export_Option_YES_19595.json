@@ -1,0 +1,11 @@
+{
+    "id": 19595,
+    "condition": "[EQ](<*VALUE(Exp HS ENRON Modbus Interface, EFM Export Option)*>,Yes)",
+    "name": "ENRON Modbus Interface, EFM Export Option YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HEMBOE)*><* DoResetAtt *>",
+    "description": "Set",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

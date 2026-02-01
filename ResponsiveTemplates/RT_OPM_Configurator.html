@@ -1,0 +1,233 @@
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+	<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper"  >
+	  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		<div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+		  @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	  </div>
+	  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+	  <div>
+		<div class="msid-label">
+		  <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+		</div>
+	  </div>
+	  <!-- /ko -->
+
+	  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	  <!-- /ko -->
+
+	  <div class="row col-xs-12 swagger">
+		<div id="opm-questions">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#opm-questions')">
+			  <span>OPM Basic Information</span>
+			  <a id="opm-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="opm-questions-content">
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Basic_Information") -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+	  </div>
+	  <div class="row col-xs-12 swagger">
+		<div id="node-questions">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#node-questions')">
+			  <span>Node Configuration and Migration Platforms</span>
+			  <a id="node-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="node-questions-content">
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Node_Configuration") -->
+				<div class="text-center attribute-field-headers" data-bind="text:label">Node Configuration </div>
+				<!-- ko template: { name: $root.attributes.filterByProperty('name','MSID_Scope')()[0].userInput() !== 'LABOR'?"ContainerTemplate_nomoretable_nodeconfig":"ContainerTemplate_nomoretable_sitdb"} -->
+				<!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Migration_platforms","OPM_FTE_Switches_migration_info") -->
+				  <div class="text-center attribute-field-headers" data-bind="html:label">Node Configuration </div>
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row col-xs-12 swagger">
+		<div id="service-questions">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#service-questions')">
+			  <span>Service Configuration</span>
+			  <a id="service-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="service-questions-content">
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Which_documentation_is_required") -->
+
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+
+				<!-- /ko -->
+			  </div>
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Services",) -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+<!-- /ko -->
+
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+	<!--RT_OPM_Configurator-->
+	<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper">
+	  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		<div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+		  @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	  </div>
+	  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+	  <div>
+		<div class="msid-label">
+		  <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+		</div>
+	  </div>
+	  <!-- /ko -->
+
+	  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	  <!-- /ko --> 
+	  <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " id="opm-questions"  data-toggle="collapse" aria-expanded="true" data-target="#opm-questions-content" onclick="toggleConfigSection(event, '#opm-questions')">
+				<label class="onlytext">OPM Basic Information</label>
+				<a id="opm-questions-href" href="#" class="swagger-toggle">&#xe066;</a>			  
+			</div>
+			<!-- /ko -->
+			<!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " id="opm-questions"  data-toggle="collapse" aria-expanded="true" data-target="#opm-questions-content">
+				<label class="onlytext">OPM Basic Information</label>		  
+			</div>
+			<!-- /ko -->
+			<div id="opm-questions-content" class=" col-md-12 clear-padding collapse in">
+			  <div class="col-xs-12 col-sm-12">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Basic_Information") -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+		 
+	   
+
+			
+			 <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+					<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " data-toggle="collapse" aria-expanded="true"  onclick="toggleConfigSection(event, '#node-questions')" data-target="#node-questions-content">
+					  <label class="onlytext">Node Configuration and Migration Platforms</label> 
+					  <a id="node-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+					</div>
+				<!-- /ko --> 
+				<!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+					<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " data-toggle="collapse" aria-expanded="true" data-target="#node-questions-content">
+					  <label class="onlytext">Node Configuration and Migration Platforms</label> 
+					</div>
+				<!-- /ko --> 
+				<div id="node-questions-content" class="col-md-12 clear-padding collapse in ">
+					<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Node_Configuration") -->
+					<div  data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12   ' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row node_config ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+				
+						 <!-- ko template: { name: "ContainerTemplate_nomoretable_nodeconfig"} -->
+						<!-- /ko --> 
+				   </div>
+				   <!-- /ko -->
+				   </div>
+				
+	
+		 <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+					<div class="config_row col-md-12 clear-padding pt10 flex banner_clps "  data-toggle="collapse" aria-expanded="true" data-target="#migration-questions-content"  onclick="toggleConfigSection(event, '#migration-questions')">
+					  <label class="onlytext">Migration Platforms</label> 
+					  <a id="migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+					</div>
+				<!-- /ko -->
+				<!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+					<div class="config_row col-md-12 clear-padding pt10 flex banner_clps "  data-toggle="collapse" aria-expanded="true" data-target="#migration-questions-content">
+					  <label class="onlytext">Migration Platforms</label> 
+					</div>
+				<!-- /ko -->
+				<div id="migration-questions-content" class="col-md-12 clear-padding collapse in ">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Experion_Server_Hardware_Selection", "OPM_ACET_EAPP_Server_Hardware_Selection", "OPM_Other_Servers_Hardware_Selection", "OPM_Type_of_RPS_and_Thin_Client_for_EST", "OPM_EST_Tower_Hardware_Selection","OPM_Type_of_RPS_and_Thin_Client_for_ESC_ESF_ESCE","OPM_ESC_ESF_or_ESCE_Tower_Hardware_Selection","OPM_RESS_Server_configuration","OPM_Select_RESS_platform_configuration","OPM_Additional_Memory_for_RESS_Server","OPM_Additional_Hard_Disk_For_RESS_Server", "ATT_OPMNUMRESS") -->
+				  <div class="in" data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 Migration_platform ' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt Migration_platform ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+			  </div>
+			  
+					<!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+					<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " data-toggle="collapse" aria-expanded="true" data-target=".FTE_Switches"  onclick="toggleConfigSection(event, '#fte-questions')">
+					  <label class="onlytext">FTE Switches Migration Info</label> 
+					   <a id="fte-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+					</div>
+					<!-- /ko -->
+					<!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+					<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " data-toggle="collapse" aria-expanded="true" data-target=".FTE_Switches">
+					  <label class="onlytext">FTE Switches Migration Info</label> 
+					</div>
+					<!-- /ko -->
+					
+					<div class="col-xl-12 col-md-12 col-sm-12 col-xs-12 FTE_Switches clear-padding  collapse in">
+				 <!-- ko foreach: attributes.filterByProperty('name' , "OPM_Is_L1_L2_Switch_HW_refresh_required", "ATT_OPMQTYSWTS", "OPM_Is_Backbone_or_Agg_Switch_HW_refresh_required", "ATT_OPMQTYBBON" ) -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 ' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt  collapse in', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+				 </div>
+			  
+		  
+	  <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " id="service-questions" data-toggle="collapse" aria-expanded="true" data-target="#service-questions-content" onclick="toggleConfigSection(event, '#service-questions')" >
+			<label class="onlytext">Service Configuration</label>
+			   <a id="service-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<!-- /ko -->
+			<!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'OPM' && localStorage.getItem("checkR2Q") ==='Yes')-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps " id="service-questions" data-toggle="collapse" aria-expanded="true" data-target="#service-questions-content" onclick="toggleConfigSection(event, '#service-questions')" >
+			<label class="onlytext">Service Configuration</label>
+			   <a id="service-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<!-- /ko -->
+			<div id="service-questions-content" class=" col-md-12 clear-padding collapse in">
+			  
+			  <div class="col-xs-12 col-sm-12">
+				<!-- ko foreach: attributes.filterByProperty('name' , "OPM_Which_documentation_is_required", "OPM_Acceptance_Test_Required", "OPM_is_system_required_Domain_controller_upgrade", "ATT_OPMADNLHRS" ) -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+			  </div>
+			</div>
+		  
+	</div>
+	
+	
+<!-- /ko -->

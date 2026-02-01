@@ -1,0 +1,11 @@
+{
+    "id": 13749,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Vrtualization_1U)*>,0))",
+    "name": "Part_Diss_1U",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:51201248-100)*>\n<*DISALLOWVALUES(Virtualization_BOM_Parts:51303521-100)*>\n<*DISALLOWVALUES(Virtualization_BOM_Parts:51306194-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

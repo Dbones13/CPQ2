@@ -1,0 +1,11 @@
+{
+    "id": 18010,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_Proflow_Type)*>,Rotational),[NEQ](<*VALUE(MXP_Type_of_Valve)*>,Standard Torque (20Nm) Andritz Y))",
+    "name": "Show_proflow_machined",
+    "action": "<*DISALLOWATTRIBUTES(MXP_ProFlow_Machined_Mounting_Adapter_Valve Coupling)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25682,
+    "condition": "[EQ](<*VALUE(Orion Console Remote Periph Sol Type (RPS))*>,)",
+    "name": "Default Orion Console Remote",
+    "action": "<*SELECTVALUE(Orion Console Remote Periph Sol Type (RPS):None)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

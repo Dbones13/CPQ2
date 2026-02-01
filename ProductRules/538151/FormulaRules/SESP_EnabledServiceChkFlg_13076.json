@@ -1,0 +1,11 @@
+{
+    "id": 13076,
+    "condition": "[EQ](<*VALUE(EnableSelection_SESP)*>,&nbsp)",
+    "name": "SESP_EnabledServiceChkFlg",
+    "action": "<*ASSIGNVALUE(SESP_EnabledServiceChkFlg:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

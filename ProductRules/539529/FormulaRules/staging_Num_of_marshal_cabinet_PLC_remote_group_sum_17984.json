@@ -1,0 +1,11 @@
+{
+    "id": 17984,
+    "condition": "[NEQ](<*VALUE(PLC_Marshal_Cabinet_Qty_RG)*>,<*CTX ( Container(PLC_RemoteGroup_Cont).Sum(staging_Num_of_marshal_cabinet_PLC_remote_group) )*>)",
+    "name": "staging_Num_of_marshal_cabinet_PLC_remote_group_sum",
+    "action": "<*ASSIGNVALUE(PLC_Marshal_Cabinet_Qty_RG:<*CTX ( Container(PLC_RemoteGroup_Cont).Sum(staging_Num_of_marshal_cabinet_PLC_remote_group) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

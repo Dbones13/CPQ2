@@ -1,0 +1,196 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>@Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") -->
+   <div class="row col-xs-12 swagger"> 
+        <div class="Calc_btn" >
+          <div class="col-xs-12 col-sm-12">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+          </div>
+        </div>
+  </div>
+<!-- /ko -->
+<!-- ko ifnot: ( (cpq.models.configurator.actionModule.responderModule.name() === 'Safety Manager ESD' || cpq.models.configurator.actionModule.responderModule.name() === 'Safety Manager FGS' || cpq.models.configurator.actionModule.responderModule.name() === 'R2Q Safety Manager FGS' || cpq.models.configurator.actionModule.responderModule.name() === 'R2Q Safety Manager ESD') && localStorage.getItem("checkR2Q") === 'Yes') -->
+ <div class="row col-xs-12 swagger">
+    <div id="sm-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-questions', $('#sm-questions-content'), '#sm-questions-href', 'slow'); }">
+          <span>SM Application &amp; Hardware</span>
+          <a id="sm-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-questions-content">
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Application_Hardware_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+  <div class="row col-xs-12 swagger" id="sm-labor">
+    <div id="sm-labor-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-labor-questions', $('#sm-labor-questions-content'), '#sm-labor-questions-href', 'slow'); }">
+          <span>Labor</span>
+          <a id="sm-labor-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-labor-questions-content">
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Labor_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row col-xs-12 swagger" id="sm-common">
+    <div id="sm-common-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-common-questions', $('#sm-common-questions-content'), '#sm-common-questions-href', 'slow'); }">
+          <span>Common Questions</span>
+          <a id="sm-common-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-common-questions-content">
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Common_Questions") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+         <div class="col-xs-12 col-sm-12" >
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Enterprise_Cluster") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                     <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                 </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Enterprise_Cluster_Sub") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                     <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                 </div>
+            <!-- /ko -->
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- /ko -->
+  <div class="row col-xs-12 swagger" id="sm-safetybuilder">
+    <div id="sm-safetybuilder-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-safetybuilder-questions', $('#sm-safetybuilder-questions-content'), '#sm-safetybuilder-questions-href', 'slow'); }">
+          <span>Hardware details for Safety Builder Station in Safety Manager System</span>
+          <a id="sm-safetybuilder-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-safetybuilder-questions-content">
+          <div class="col-xs-6 swagger">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Hardware_Builder_Station_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-xs-12 swagger" id="sm-simulationsection">
+    <div id="sm-simulationsection-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-simulationsection-questions', $('#sm-simulationsection-questions-content'), '#sm-simulationsection-questions-href', 'slow'); }">
+          <span>Hardware details for Safety Simulation Station in Safety Manager System</span>
+          <a id="sm-simulationsection-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-simulationsection-questions-content">
+          <div class="col-xs-6 swagger">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Hardware_Simulation_Station_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-xs-12 swagger" id="sm-historian">
+    <div id="sm-historian-questions">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-historian-questions', $('#sm-historian-questions-content'), '#sm-historian-questions-href', 'slow'); }">
+          <span>Hardware details for Safety Historian Station in Safety Manager System</span>
+          <a id="sm-historian-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-historian-questions-content">
+          <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "SM_Hardware_Historian_Station_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="row col-xs-12 swagger" id="sm-control">
+    <div id="sm-control-group">
+      <div>
+        <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event, 'sm-control-group', $('#sm-control-group-content'), '#sm-control-group-href', 'slow'); }">
+          <span>SM Control Groups</span>
+          <a id="sm-control-group-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div class="newtoggle" id="sm-control-group-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "Number_SM_Control_Groups_Cont") -->
+                <!-- ko if:$data.container.columns().length !== 0 -->
+                  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            </div>
+            <!-- ko foreach: attributes.filterByProperty('name' , 'CE_Add_System_Rows') -->
+               <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+                </div>
+           <!-- /ko -->
+          <div class="col-xs-12 col-sm-6" style="width:52%">
+                <!-- ko foreach: attributes.filterByProperty('name' , 'SM_ControlGroup_Cont') -->
+   <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+   <!-- /ko -->
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>

@@ -1,0 +1,11 @@
+{
+    "id": 19655,
+    "condition": "[NOT]([OR]([EQ](<*VALUE(Exp HS Redundant Servers)*>,No),[EQ](<*VALUE(Exp HS Redundant Servers)*>,Yes)))",
+    "name": "MZ-SQLCL4 Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:MZ-SQLCL4)*><* DoResetAtt *>",
+    "description": "CXCPQ-45837",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

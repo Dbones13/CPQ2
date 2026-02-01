@@ -1,0 +1,1 @@
+<*CTX( Container(SM_Labor_Cont).Row(1).Column(GES_Location).Set(<*VALUECODE(Default_Ges_Location)*>) )*>

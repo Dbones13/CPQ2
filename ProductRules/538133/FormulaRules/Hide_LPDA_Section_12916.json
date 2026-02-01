@@ -1,0 +1,11 @@
+{
+    "id": 12916,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_P1P2_PartsUsageMethod)*>,List Price with Discount Applied))",
+    "name": "Hide_LPDA_Section",
+    "action": "<*DISALLOWATTRIBUTES(Header_02_close,Header_02_open,Header_04_close,Header_04_open,SC_P1P2_AutoUpdate_Editable_Ext,SC_P1P2_Fee_Percentage,SC_P1P2_ListPrice,SC_P1P2_LTYA_CY_FinalListPrice,SC_P1P2_LTYA_PY_ListPrice,SC_P1P2_LTYA_PY1_ListPrice,SC_P1P2_LTYA_PY2_ListPrice,SC_P1P2_LTYA_ScopeChange,SC_P1P2_Parts_Ext_Price,SC_P1P2_PY_Parts_Ext_Price,SC_P1P2_ScopeChange,ATTCON_02_close,ATTCON_02_open,ATTCON_04_close,ATTCON_04_open,SC_P1P2_PY_ListPrice,SC_P1P2_LTYA_AutoUpdate_Editable_Ext)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

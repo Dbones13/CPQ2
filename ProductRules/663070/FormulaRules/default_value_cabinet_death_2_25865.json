@@ -1,0 +1,11 @@
+{
+    "id": 25865,
+    "condition": "[AND](<*ISSELECTED(Experion Server Type.Flex Server)*>,[EQ](<*VALUE(Cabinet Depth)*>,))",
+    "name": "default value cabinet death 2",
+    "action": "<*ASSIGNVALUE(Cabinet Depth:0.8M)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

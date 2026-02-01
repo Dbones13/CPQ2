@@ -1,0 +1,11 @@
+{
+    "id": 15083,
+    "condition": "[EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,)",
+    "name": "Default_QCS_System_Required",
+    "action": "<*SELECTVALUE(MXP_What_QCS_System_is_required:QCS MD & CD)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23900,
+    "condition": "[NOT](<*ATTSEL(Terminal_Web_Portal_required?)*>)",
+    "name": "Select_Default_Web_Portal",
+    "action": "<*SELECTVALUE(Terminal_Web_Portal_required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

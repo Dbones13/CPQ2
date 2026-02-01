@@ -1,0 +1,11 @@
+{
+    "id": 19628,
+    "condition": "[EQ](<*VALUE(Exp HS HS OPC Integrator)*>,Yes)",
+    "name": "OPC Integrator YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:HS-OPCINT)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

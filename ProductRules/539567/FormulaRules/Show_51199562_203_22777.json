@@ -1,0 +1,11 @@
+{
+    "id": 22777,
+    "condition": "<*ISSELECTED(Power_Cord_Type.Japan)*>",
+    "name": "Show_51199562_203",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Location_Cluster_Part_Summary:51199562-203)*><*SETATVQTY(Location_Cluster_Part_Summary:51199562-203, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38334",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

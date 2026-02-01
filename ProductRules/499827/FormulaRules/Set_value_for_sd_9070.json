@@ -1,0 +1,11 @@
+{
+    "id": 9070,
+    "condition": "1",
+    "name": "Set value for sd",
+    "action": "<*ASSIGNVALUE(labor_parameter_sd: <*CTX( Container(ExpProject_Que_Right).Row(1).Column(SAT Duration in weeks).Get )*>)*>",
+    "description": "SAT Duration (in weeks)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

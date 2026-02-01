@@ -1,0 +1,11 @@
+{
+    "id": 13278,
+    "condition": "[EQ](<*VALUE(Is HART in C300 Controller?)*>,)",
+    "name": "Set default value for Is HART in C300 Controller?",
+    "action": "<*SELECTVALUE(Is HART in C300 Controller?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

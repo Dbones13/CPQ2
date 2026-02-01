@@ -1,0 +1,11 @@
+{
+    "id": 26028,
+    "condition": "[EQ](<*VALUE(File_Transfer_for_Experion_PKS)*>,)",
+    "name": "Default_File_Transfer_for_Experion_PKS",
+    "action": "<*ASSIGNVALUE(File_Transfer_for_Experion_PKS:0)*>",
+    "description": "CXCPQ-45607",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

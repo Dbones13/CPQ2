@@ -1,0 +1,11 @@
+{
+    "id": 18197,
+    "condition": "[EQ](<*VALUE(MXP_I_O_Epansion_Kit)*>,)",
+    "name": "Default_MXP_I_O_Epansion_Kit",
+    "action": "<*SELECTVALUE(MXP_I_O_Epansion_Kit:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

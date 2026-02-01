@@ -1,0 +1,11 @@
+{
+    "id": 14720,
+    "condition": "[NEQ](<*VALUE(MX_SI_Q5000_server)*>,Yes)",
+    "name": "MX_Part_Dis_Q8620_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q8620-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

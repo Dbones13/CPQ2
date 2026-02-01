@@ -1,0 +1,11 @@
+{
+    "id": 23842,
+    "condition": "1",
+    "name": "Total_AO_Points",
+    "action": "<*ASSIGNVALUE(Labor_parameter_ao:<*EVAL(0<*CTX( Container(SM_IO_Count_Analog_Output_Cont).Sum(Total AO Point) )*> )*>)*>",
+    "description": "Total_AO_Points",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

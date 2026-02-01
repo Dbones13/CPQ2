@@ -1,0 +1,11 @@
+{
+    "id": 22917,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_PowerSupplyVendor)*>,)",
+    "name": "Default_SeriesC_RG_Power_Supply_Vendor",
+    "action": "<*SELECTVALUE(SeriesC_RG_PowerSupplyVendor:Meanwell)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

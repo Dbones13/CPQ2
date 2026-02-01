@@ -1,0 +1,11 @@
+{
+    "id": 20036,
+    "condition": "[OR]([EQ](<*CTX( Container(Series_C_Remote_Groups_Cont).UniqueValues(RemoteGroupCheck).Separator() )*>,True),[NEQ](<*VALUE(TotalRemoteGroup)*>,<*CTX ( Container(Series_C_Remote_Groups_Cont).Rows.GetCount )*>))",
+    "name": "RemoteGroupCheck",
+    "action": "<* ExecuteScript(GS_Series_CG_CalculationTrigger) *>",
+    "description": "This is a flag used to calculate the control group if the remote group is calculated\nAdded 'OR' to calculate on deletion and addition of remote group",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "12/11/24",
+    "modifiedBy": "Ashritha Row"
+}

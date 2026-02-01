@@ -1,0 +1,11 @@
+{
+    "id": 19831,
+    "condition": "[AND]([EQ](<*VALUE(SerC_Integrated_Marshalling_Cabinet)*>,),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Cabinet)*>)",
+    "name": "Default_SerC_Integrated_Marshalling_Cabinet",
+    "action": "<*SELECTVALUE(SerC_Integrated_Marshalling_Cabinet:Front To Back)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

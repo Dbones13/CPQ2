@@ -1,0 +1,11 @@
+{
+    "id": 11732,
+    "condition": "[OR](<*ISSELECTED(GAS_MeterSuite_Labor_GES_Eng.SYS GES Eng-BO-RO)*>,<*ISSELECTED(GAS_MeterSuite_Labor_GES_Eng.SYS GES Eng-FO-RO)*>)",
+    "name": "Hide GES Location other than RO",
+    "action": "<*DISALLOWALLVALUESEXCEPT(GAS_MeterSuite_Labor_GES_Eng:HPS_GES_P350B_RO|HPS_GES_P350F_RO)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

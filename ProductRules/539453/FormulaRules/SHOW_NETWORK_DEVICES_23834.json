@@ -1,0 +1,11 @@
+{
+    "id": 23834,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW),[EQ](<*CTX(Quote.CustomField(R2QFlag))*>,Yes))",
+    "name": "SHOW NETWORK DEVICES",
+    "action": "<*ALLOWATTRIBUTES(Number of Types of Network Devices)*>",
+    "description": "",
+    "rank": "1002",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26301,
+    "condition": "[EQ](<*VALUE(Trackball (Sim PC))*>,)",
+    "name": "Default_Trackball_(Sim PC)",
+    "action": "<*SELECTVALUE(Trackball (Sim PC):No)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

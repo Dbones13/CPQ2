@@ -1,0 +1,11 @@
+{
+    "id": 20329,
+    "condition": "[NEQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Hide Experion DVM Integration",
+    "action": "<*DISALLOWATTRIBUTES(Experion DVM Integration)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22948,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),<*IFANYVALUE(SerC_CG_Type_of_Controller_Required:C300 CEE,SerC_CG_Type_of_Controller_Required:CN100 I/O HIVE - C300 CEE,SerC_CG_Type_of_Controller_Required:Control HIVE - Physical,SerC_CG_Type_of_Controller_Required:Control HIVE - Virtual)*>)",
+    "name": "Show_Dummy_RG_IO_Mounting_Solution",
+    "action": "<*ALLOWATTRIBUTES(Dummy_RG_IO_Mounting_Solution)*>",
+    "description": "51884",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

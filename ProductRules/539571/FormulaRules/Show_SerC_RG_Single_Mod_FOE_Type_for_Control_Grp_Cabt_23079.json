@@ -1,0 +1,11 @@
+{
+    "id": 23079,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[NEQ](<*VALUE(SerC_CG_Control_Networking_Module_Required)*>,Yes),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,C300 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE)),[NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Show_SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt,SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet)*>",
+    "description": "CXCPQ-60321",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

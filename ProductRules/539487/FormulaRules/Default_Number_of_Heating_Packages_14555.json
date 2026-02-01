@@ -1,0 +1,11 @@
+{
+    "id": 14555,
+    "condition": "[EQ](<*VALUE(PRMS Number of Heating Packages)*>,)",
+    "name": "Default Number of Heating Packages",
+    "action": "<*ASSIGNVALUE(PRMS Number of Heating Packages:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

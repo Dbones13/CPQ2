@@ -1,0 +1,11 @@
+{
+    "id": 21902,
+    "condition": "[EQ](<*VALUE(FDM_Server_Specification)*>,Server)",
+    "name": "Show_Server_Specification",
+    "action": "<*ALLOWATTRIBUTES(FDM Audit Trail Blocks (0-16000),FDM Client License (0-10),FDM Experion / TPS Interface License (0-10),FDM MAX MUX Monitoring License (0-1),FDM MAX Remote Comm Interface (RCI) License (0-1),FDM MAX Server Network Interface License (0-1),FDM MUX Monitoring License (0-1),FDM PVST Planner Blocks (0-1024),FDM Remote Comm Interface (RCI) License (0-25),FDM Server Device Adder Blocks (0-16000),FDM Server Network Interface License (0-24))*>\n<*SETREQUIRED(FDM Audit Trail Blocks (0-16000),FDM Client License (0-10),FDM Experion / TPS Interface License (0-10),FDM MAX MUX Monitoring License (0-1),FDM MAX Remote Comm Interface (RCI) License (0-1),FDM MAX Server Network Interface License (0-1),FDM MUX Monitoring License (0-1),FDM PVST Planner Blocks (0-1024),FDM Remote Comm Interface (RCI) License (0-25),FDM Server Device Adder Blocks (0-16000),FDM Server Network Interface License (0-24))*>",
+    "description": "CXCPQ-48543",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 2565,
+    "condition": "[AND]([NOT](<*ATTSEL(Experion_HS_GES_Eng)*>),<*ISSELECTED(Experion_HS_Ges_Location_Labour.GES Romania)*>)",
+    "name": "Experion_HS_GES_Eng_Set_Default_Romania",
+    "action": "<*SELECTVALUE(Experion_HS_GES_Eng:HPS_GES_P350B_RO)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10865,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(HC900_System_Type)*>,SIL2 Safety System),[EQ](<*VALUE(HC900_Controller_(CPU)_Module_NSIL2)*>,Controller C30 CPU - SIL2)))",
+    "name": "Reset Set 900C30S-0460",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900C30S-0460)*><* DoResetAtt *>",
+    "description": "CXCPQ-40184",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

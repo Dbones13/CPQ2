@@ -1,0 +1,11 @@
+{
+    "id": 13133,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Editable_valid_model_columns",
+    "action": "<*CTX ( Container(SC_ValidModels_HR_RWL).Column(SC_Quantity_HR_RWL).SetPermission(Editable) )*>\n<*CTX ( Container(SC_ValidModels_HR_RWL).Column(SC_PreviousYearListPrice_HR_RWL).SetPermission(Editable) )*>\n<*CTX ( Container(SC_ValidModels_HR_RWL).Column(SC_PreviousYearCostPrice_HR_RWL).SetPermission(Editable) )*>\n<*CTX ( Container(SC_ValidModels_HR_RWL).Column(Sc_CurrentYearListPrice_HR_RWL).SetPermission(Editable) )*>\n<*CTX ( Container(SC_ValidModels_HR_RWL).Column(SC_CurrentYearCostPrice_HR_RWL).SetPermission(Editable) )*><*CTX ( Container(SC_ValidModels_HR_RWL).Column(SC_HoneywellListPrice_HR_RWL).SetPermission(ReadOnly) )*>\n<*CTX ( Container(SC_ValidModels_HR_RWL).Column(SC_CurrentYearUnitCostPrice_HR_RWL).SetPermission(ReadOnly) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

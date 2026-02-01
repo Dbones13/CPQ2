@@ -1,0 +1,11 @@
+{
+    "id": 23957,
+    "condition": "[NOT](<*ATTSEL(Terminal_Additional_Memory)*>)",
+    "name": "Default_Additional_Memory",
+    "action": "<*SELECTVALUE(Terminal_Additional_Memory:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

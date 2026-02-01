@@ -1,0 +1,11 @@
+{
+    "id": 13878,
+    "condition": "1",
+    "name": "SM_Hardware",
+    "action": "<*ASSIGNVALUE(SM_Hardware:<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(SM_Hardware).Get )*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

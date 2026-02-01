@@ -1,0 +1,11 @@
+{
+    "id": 14624,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "gas_meter_qty",
+    "action": "<*ASSIGNVALUE(gas_meter_qty:<* Eval(0<*VALUE(PRMS_IF)*>+(0.5*0<*VALUE(MSC_Total_Number_Of_Gas_Pay_Meter_Streams)*>)+(0.5*0<*VALUE(MSC_Number_Of_Gas_Systems_With_Master_Metering)*>)+(0.25*0<*VALUE(MSC_Number_Of_Gas_Systems_With_Check_Metering)*>)+(0.2*0<*VALUE(MSC_Number_Of_Gas_Meters_With_Meter_Diagnostics)*>)+(0.25*0<*VALUE(MSC_Total_Number_Of_Gas_Chromatographs)*>)+(0.05*0<*VALUE(MSC_Total_Number_Of_Other_Gas_Analysers)*>)+(0.05*0<*VALUE(MSC_Total_Number_Of_Gas_Grab_Samplers)*>)) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

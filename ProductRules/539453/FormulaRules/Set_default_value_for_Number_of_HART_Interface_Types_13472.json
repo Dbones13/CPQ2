@@ -1,0 +1,11 @@
+{
+    "id": 13472,
+    "condition": "[EQ](<*VALUE(Number of HART Interface Types)*>,)",
+    "name": "Set default value for Number of HART Interface Types",
+    "action": "<*ASSIGNVALUE(Number of HART Interface Types:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

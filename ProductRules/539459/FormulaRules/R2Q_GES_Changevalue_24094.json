@@ -1,0 +1,11 @@
+{
+    "id": 24094,
+    "condition": "[AND]([EQ](<*VALUE(R2Q_GES_Change)*>,),[IN](<*CTX ( Container(SM_Labor_Cont).Row(1).Column(GES_Location).Get )*>,None,))",
+    "name": "R2Q_GES_Changevalue",
+    "action": "<*ASSIGNVALUE(R2Q_GES_Change:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "15/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

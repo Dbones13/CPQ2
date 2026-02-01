@@ -1,0 +1,11 @@
+{
+    "id": 20243,
+    "condition": "[OR]([GT](<*VALUE(DVM_Internet_Explorer/ Browser_Client)*>,0),[GT](<*VALUE(DVM_Console_Client)*>,0),[GT](<*VALUE(DVM_Mobile_Client_Connections)*>,0),[GT](<*VALUE(DVM_Additional_3rd Party_Client_L)*>,0))",
+    "name": "MZ-SQLCL4_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:MZ-SQLCL4)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:MZ-SQLCL4, <*\nEval(<*VALUE(DVM_Internet_Explorer/ Browser_Client)*>+<*VALUE(DVM_Console_Client)*>+<*VALUE(DVM_Mobile_Client_Connections)*>+<*VALUE(DVM_Additional_3rd Party_Client_L)*>) *>.)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

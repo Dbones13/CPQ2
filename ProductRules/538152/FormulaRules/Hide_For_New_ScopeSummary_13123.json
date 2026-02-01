@@ -1,0 +1,11 @@
+{
+    "id": 13123,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_For_New_ScopeSummary",
+    "action": "<*DISALLOWATTRIBUTES(SC_WEP_RC_Selection)*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(Model).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(Description).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(PY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(CY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(PY_CostPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(CY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(CY_CostPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(SR_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(SA_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Offering_ServiceProduct).Column(Comments).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(ComparisonSummary)*><*DISALLOWATTRIBUTES(ATTCON_08_close,ATTCON_08_open,SC_WEP_ServiceProduct_Entitlement)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

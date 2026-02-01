@@ -1,0 +1,11 @@
+{
+    "id": 23940,
+    "condition": "[NOT]([OR]([GT](<*VALUE(Terminal_No_of_Reports_with_Simple_Changes)*>,0),[GT](<*VALUE(Terminal_No_of_Reports_with_Complex_Changes)*>,0)))",
+    "name": "TM Existing Reports Reset",
+    "action": "<*ASSIGNVALUE(TM Existing Reports:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

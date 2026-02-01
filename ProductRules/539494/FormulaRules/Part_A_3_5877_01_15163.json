@@ -1,0 +1,11 @@
+{
+    "id": 15163,
+    "condition": "[EQ](<*VALUE(MXP_MXOpen_ODX_Network_link)*>,Yes)",
+    "name": "Part_A_3_5877_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5877-01)*><*SETATVQTY(MXP_Bom_Parts:3-5877-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

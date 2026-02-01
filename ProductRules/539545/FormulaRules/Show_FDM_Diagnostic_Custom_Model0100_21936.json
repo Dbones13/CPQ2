@@ -1,0 +1,11 @@
+{
+    "id": 21936,
+    "condition": "[IN](<*VALUE(FDM_Release)*>,R530,R540)",
+    "name": "Show_FDM Diagnostic Custom Model(0-100)",
+    "action": "<*ALLOWATTRIBUTES(FDM Diagnostic Custom Model (0-100))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

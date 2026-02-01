@@ -1,0 +1,11 @@
+{
+    "id": 9057,
+    "condition": "1",
+    "name": "Set value for pc",
+    "action": "<*ASSIGNVALUE(labor_parameter_pc:<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(Project Category).Get )*>)*>",
+    "description": "Project Category",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

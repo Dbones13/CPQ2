@@ -1,0 +1,11 @@
+{
+    "id": 26063,
+    "condition": "[AND](<*ISSELECTED(Interface with TPS Required?.No)*>,[NOT]([OR]([GT](<*VALUE(ACE Node Tower Mount Desk)*>,0),[GT](<*VALUE(ACE Node Rack Mount Cabinet)*>,0))))",
+    "name": "TC-SWSC01_Remove2",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TC-SWSC01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

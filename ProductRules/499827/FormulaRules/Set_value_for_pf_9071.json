@@ -1,0 +1,11 @@
+{
+    "id": 9071,
+    "condition": "1",
+    "name": "Set value for pf",
+    "action": "<*ASSIGNVALUE(labor_parameter_pf:<*CTX( Math.Maximum(0.15, <*CTX( Math.Minimum(4, <*EVAL(1 + <*VALUE(labor_parameter_A)*> + <*VALUE(labor_parameter_B)*> + <*VALUE(labor_parameter_C)*> + <*VALUE(labor_parameter_D)*> + <*VALUE(labor_parameter_E)*> + <*VALUE(labor_parameter_F)*>)*> ) )*>))*>)*>",
+    "description": "Project Size Factor",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

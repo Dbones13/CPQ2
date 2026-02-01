@@ -1,0 +1,11 @@
+{
+    "id": 19659,
+    "condition": "[EQ](<*VALUE(Exp HS Need Experion Backup and Restore (EBR))*>,Yes)",
+    "name": "EP-BRSE06 Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-BRSE06)*><*SETATVQTY(Experion_HS_PART_SUMMARY:EP-BRSE06, <*Eval(1+ <*GETATVQTY(Experion_HS_PART_SUMMARY:EP-HMRBAS)*>)*>)*>\n<* DoResetAtt *>",
+    "description": "EBR Server Component Set",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

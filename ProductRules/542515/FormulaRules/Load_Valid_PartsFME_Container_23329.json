@@ -1,0 +1,11 @@
+{
+    "id": 23329,
+    "condition": "[GT](<*CTX ( Container(Generic_System_Part_Upload_Cont).Rows.GetCount )*>,0)",
+    "name": "Load Valid Parts/FME Container",
+    "action": "<*CTX ( Container(Generic_System_Valid_FME_Cont).LoadKeys(Valid_Part_ID).Load(select <*Eval(Replace(\"<*CTX ( Container(Generic_System_Part_Upload_Cont).UniqueValues(Valid_Part_ID).Separator(,) )*>\",\",\",\" as Valid_Part_ID UNION SELECT \"))*> as Valid_Part_ID ) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

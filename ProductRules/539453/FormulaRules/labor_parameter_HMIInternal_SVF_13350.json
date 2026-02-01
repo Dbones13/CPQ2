@@ -1,0 +1,11 @@
+{
+    "id": 13350,
+    "condition": "1",
+    "name": "labor_parameter_HMIInternal_SVF",
+    "action": "<*ASSIGNVALUE(labor_parameter_HMIInternal_SVF:[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Single)){0.6}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Dual)){1}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Triple)){1.2}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Quad/Orion)){1.4}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Combination of Safeview configurations)){1.5}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-39010\nIf svf = Single, SF = 0.6\nElse If svf = Dual, SF = 1,\nElse If svf = Triple, SF = 1.2,\nElse If svf = Quad, SF = 1.4,\nElse If svf = Combination of Safeview configurations, SF = 1.5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

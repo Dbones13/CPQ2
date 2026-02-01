@@ -1,0 +1,11 @@
+{
+    "id": 26320,
+    "condition": "[EQ](<*VALUE(Multi_WindowSupportFlex_Server)*>,Yes)",
+    "name": "DeskMountFlexServer_YES",
+    "action": "<*ALLOWATTRIBUTES(Displays_Flex Server in Desk0_2)*><*DISALLOWATTRIBUTES(Displays_Flex Server in Desk0_2_2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26524,
+    "condition": "<*ISSELECTED(Power Cord Type.Europe)*>",
+    "name": "Show_51199562_201",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51199562-201)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:51199562-201, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38332",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

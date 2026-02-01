@@ -1,0 +1,11 @@
+{
+    "id": 20762,
+    "condition": "[AND]([NOT]([IF](<*IFANYVALUE(SS_Experion_PKS_Release:R530)*>){[AND](<*IFANYVALUE(SS_Flex Staton  Desk Node_desk:STN_PER_DELL_Tower_RAID1,SS_Flex Staton  Desk Node_desk:STN_PER_HP_Tower_RAID1,SS_Flex Staton  Desk Node_desk:STN_PER_DELL_Rack_RAID1)*>,[EQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell))}{}[ENDIF]),[NOT]([IF](<*IFANYVALUE(SS_Experion_PKS_Release:R530)*>){[AND](<*IFANYVALUE(SS_Flex_Staton _Orion_Node:STN_PER_DELL_Rack_RAID1,SS_Flex_Staton _Orion_Node:STN_PER_DELL_Tower_RAID1,SS_Flex_Staton _Orion_Node:STN_PER_HP_Tower_RAID1)*>,[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell))}{}[ENDIF]))",
+    "name": "Part_D_EP_COAW21_4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-COAW21)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

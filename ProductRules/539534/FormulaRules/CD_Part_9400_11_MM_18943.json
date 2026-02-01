@@ -1,0 +1,11 @@
+{
+    "id": 18943,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Calendizer),[GEQ](<*VALUE(MX_CD_Zone_Width)*>,1))",
+    "name": "CD_Part_9400_11_MM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9400-11-MM)*><*SETATVQTY(MX_CD_Bom_Parts:9400-11-MM, <*VALUE(MX_CD_Zone_Width)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

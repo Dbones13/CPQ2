@@ -1,0 +1,11 @@
+{
+    "id": 11716,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS TWIC Servers Configuration",
+    "action": "<*ASSIGNVALUE(IS TWIC Servers Configuration:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){[IF](<*ISSELECTED(IS_Is_TWIC_Server_Required_with_PIV_Check.Yes)*>){16}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){[IF](<*ISSELECTED(IS_Is_TWIC_Server_Required_with_PIV_Check.Yes)*>){16}{0}[ENDIF]}{[IF](<*ISSELECTED(IS_Is_TWIC_Server_Required_with_PIV_Check.Yes)*>){16}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

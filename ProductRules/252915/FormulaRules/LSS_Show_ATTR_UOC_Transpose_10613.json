@@ -1,0 +1,11 @@
+{
+    "id": 10613,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW))",
+    "name": "LSS_Show_ATTR_UOC_Transpose",
+    "action": "<*CTX ( Container(LSS_UOC_connection_transpose).Column(Total number of IO modules retaining wiring?).SetPermission(Editable) )*><*CTX ( Container(LSS_UOC_connection_transpose).Column(Total number of IO modules with re-wiring?).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24003,
+    "condition": "[GT](<*VALUE(Terminal_that_require_Slot_Booking_Application)*>,0)",
+    "name": "Add_TM-SBLT01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:TM-SBLT01)*><*SETATVQTY(Terminal_Part_Summary:TM-SBLT01,<*VALUE(Terminal_that_require_Slot_Booking_Application)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

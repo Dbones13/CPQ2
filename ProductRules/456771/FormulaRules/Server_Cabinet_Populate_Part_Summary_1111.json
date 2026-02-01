@@ -1,0 +1,11 @@
+{
+    "id": 1111,
+    "condition": "1",
+    "name": "Server_Cabinet_Populate_Part_Summary",
+    "action": "<*ExecuteScript(GS_ServerCabinet_Populate_Part_Summary)*>",
+    "description": "",
+    "rank": "999",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

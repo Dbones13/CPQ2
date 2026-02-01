@@ -1,0 +1,11 @@
+{
+    "id": 19981,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "SeriecC_Dummy_IO_Mounting",
+    "action": "[IF]([EQ](<*VALUE(Dummy_CG_IO_Mounting_Solution)*>,Cabinet)){<*SELECTVALUE(SerC_CG_IO_Mounting_Solution:Cabinet)*>}{<*SELECTVALUE(SerC_CG_IO_Mounting_Solution:Mounting Panel)*>}[ENDIF]",
+    "description": "51884",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

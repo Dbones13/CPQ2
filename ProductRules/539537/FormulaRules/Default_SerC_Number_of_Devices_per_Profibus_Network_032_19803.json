@@ -1,0 +1,11 @@
+{
+    "id": 19803,
+    "condition": "[EQ](<*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*>,)",
+    "name": "Default_SerC_Number_of_Devices_per_Profibus_Network (0-32)",
+    "action": "<*ASSIGNVALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32):1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21887,
+    "condition": "[EQ](<*VALUE(FDM_RCI_PC_Display_size)*>,)",
+    "name": "Default_FDM_RCI_PC_Display_size",
+    "action": "<*SELECTVALUE(FDM_RCI_PC_Display_size:24 inch NTS DELL)*>",
+    "description": "CXCPQ-46451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

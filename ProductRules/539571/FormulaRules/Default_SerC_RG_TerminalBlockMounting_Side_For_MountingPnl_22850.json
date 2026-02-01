@@ -1,0 +1,11 @@
+{
+    "id": 22850,
+    "condition": "[EQ](<*VALUE(SerC_RG_TerminalBlockMounting_Side_For_MountingPnl)*>,)",
+    "name": "Default_SerC_RG_TerminalBlockMounting_Side_For_MountingPnl",
+    "action": "<*SELECTVALUE(SerC_RG_TerminalBlockMounting_Side_For_MountingPnl:Right)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,64 @@
+<!-- ko if : ($root.customFields.firstWithProperty('name', 'CF_Multiyear_Project')?.content() ==="Yes") -->
+<div class="lcm-fields">
+    <div class="YOB-box">
+        <div class="lable col-sm-5 col-md-5 col-xs-12 cust_field_bnr">YoY Escalation BOM:</div>
+        <div class="content col-sm-7 col-md-7 col-xs-12 padding-0"
+            data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','CF_Cost_percent','CF_Sell_Price')">
+            <div class="contentField">
+                <div class="field-lable">
+                    <label
+                        data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"></label>
+                    <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+                </div>
+                <div class="field-Content">
+                    <input id="numeric" type="number"
+                        data-bind="valueUpdatedOnEnter: content, enable: editable, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" />
+                    <span data-bind="text: error, enable: editable" class="required" role="alert"
+                        aria-live="assertive"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="YOB-box">
+        <div class="lable col-sm-5 col-md-5 col-xs-12 cust_field_bnr">YoY Escalation Labor:</div>
+        <div class="content col-sm-7 col-md-7 col-xs-12 padding-0">
+            <div class="contentField"
+                data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','CF_Cost_and_Sell_percent')">
+
+                <div class="field-lable">
+                    <label
+                        data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"></label>
+                    <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+                </div>
+                <div class="field-Content">
+                    <input type="number"
+                        data-bind="valueUpdatedOnEnter: content, enable: editable, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" />
+                    <span data-bind="text: error, enable: editable" class="required" role="alert"
+                        aria-live="assertive"></span>
+                </div>
+
+            </div>
+            <div class="contentField"
+                data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','CF_Starting_Year')">
+                <div class="field-lable">
+                    <label
+                        data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"></label>
+                    <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+                </div>
+                <div class="field-Content">
+                    <!-- ko if:values.length > 0 -->
+                    <select style="width: 100% !important; padding: 3px;"
+                        data-bind="options: values, optionsText: 'value', value: selectedValue, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible}"></select>
+                    <!-- /ko -->
+                    <!-- ko if:values.length === 0 -->
+                    <select data-bind="enable: false, attr: { id: $index() + '_' + id}"></select>
+                    <!-- /ko -->
+                    <span data-bind="text: error, enable: editable" class="required" role="alert"
+                        aria-live="assertive"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

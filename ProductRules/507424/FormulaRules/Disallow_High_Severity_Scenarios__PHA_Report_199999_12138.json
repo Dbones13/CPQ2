@@ -1,0 +1,11 @@
+{
+    "id": 12138,
+    "condition": "[AND]([EQ](<*VALUE(PSW_Only_LOPA_Scope)*>,No),[EQ](<*VALUE(PSW_HAZOP+LOPA+SIL_Ver_calcs+SRS+FTP_Scope)*>,No),\n[EQ](<*VALUE(PSW_LOPA+SIL_Ver_calcs+SRS+FTP_Scope)*>,No),[EQ](<*VALUE(PSW_LOPA+SIL_Ver_calcs+SRS_Scope)*>,No))",
+    "name": "Disallow High Severity Scenarios  PHA Report (1-99999)",
+    "action": "<*DISALLOWATTRIBUTES(High Severity Scenarios in PHA Report (1-99999))*>",
+    "description": "Hide the field High Severity Scenarios in PHA Report (1-99999)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23110,
+    "condition": "1",
+    "name": "load part summary container",
+    "action": "<*ASSIGNVALUE(flag_load_parts_cont:<*VALUE(Series_C_RG_Part_Summary)*>)*>",
+    "description": "",
+    "rank": "1200",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 3319,
+    "condition": "1",
+    "name": "Item Qty",
+    "action": "<*ASSIGNVALUE(ItemQuantity:<*VALUE(Generic_ItemQuantity)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

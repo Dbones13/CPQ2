@@ -1,0 +1,11 @@
+{
+    "id": 14691,
+    "condition": "[OR]([OR]([EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD),[EQ](<*VALUE(MX_What_QCS_System_is_required)*>,Standalone CD)),[EQ](<*VALUE(MX_MD_Color_Controls)*>,))",
+    "name": "Hide_additional_colors",
+    "action": "<*DISALLOWATTRIBUTES(MX_MD_Additional_characteristics_for_Color)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

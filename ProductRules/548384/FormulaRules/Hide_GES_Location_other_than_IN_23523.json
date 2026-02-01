@@ -1,0 +1,11 @@
+{
+    "id": 23523,
+    "condition": "[OR](<*ISSELECTED(HMI_Labor_GES_Eng.SYS GES HMI Eng-BO-IN)*>,<*ISSELECTED(HMI_Labor_GES_Eng.SYS GES HMI Eng-FO-IN)*>)",
+    "name": "Hide GES Location other than IN",
+    "action": "<*DISALLOWALLVALUESEXCEPT(HMI_Labor_GES_Eng:HPS_GES_P335B_IN|HPS_GES_P335F_IN)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

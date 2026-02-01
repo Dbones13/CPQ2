@@ -1,0 +1,11 @@
+{
+    "id": 25973,
+    "condition": "[GT](<*VALUE(Experion Limit Integration (0-1))*>,0)",
+    "name": "EP-ELINT1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-ELINT1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ELINT1,<*VALUE(Experion Limit Integration (0-1))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18732,
+    "condition": "[AND]([NOT]([AND]([EQ](<*VALUE(ES_Node_Supplier_Server)*>,Honeywell),[NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R520))),[NOT]([AND]([NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R520),[EQ](<*VALUE(ES_Node_Supplier_Mobile_Server)*>,Honeywell),[EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes))))",
+    "name": "Part_D_16",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:EP-COAS16)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

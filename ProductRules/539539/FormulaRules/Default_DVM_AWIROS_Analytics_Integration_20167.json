@@ -1,0 +1,11 @@
+{
+    "id": 20167,
+    "condition": "[EQ](<*VALUE(DVM_AWIROS_Analytics_Integration)*>,)",
+    "name": "Default_DVM_AWIROS_Analytics_Integration",
+    "action": "<*SELECTVALUE(DVM_AWIROS_Analytics_Integration:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

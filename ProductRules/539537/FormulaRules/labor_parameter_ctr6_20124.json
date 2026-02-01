@@ -1,0 +1,11 @@
+{
+    "id": 20124,
+    "condition": "1",
+    "name": "labor_parameter_ctr6",
+    "action": "[IF]([OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))){[IF]([EQ](<*VALUE(SerC_CG_Controller_Type)*>,Redundant)){<*ASSIGNVALUE(labor_parameter_ctr6:<* Eval(0-INT(0-(<* Eval((0<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_CONTROLLER) )*>)/2) *>))) *>)*>}{<*ASSIGNVALUE(labor_parameter_ctr6:0<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_CONTROLLER) )*>)*>}[ENDIF]}{<*ASSIGNVALUE(labor_parameter_ctr6:0)*>}[ENDIF]",
+    "description": "CXCPQ-55250",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

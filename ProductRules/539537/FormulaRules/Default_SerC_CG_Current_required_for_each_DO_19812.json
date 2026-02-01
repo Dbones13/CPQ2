@@ -1,0 +1,11 @@
+{
+    "id": 19812,
+    "condition": "[EQ](<*VALUE(SerC_CG_Current_required_for_each_DO)*>,)",
+    "name": "Default_SerC_CG_Current_required_for_each_DO",
+    "action": "<*ASSIGNVALUE(SerC_CG_Current_required_for_each_DO:800)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "15/10/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

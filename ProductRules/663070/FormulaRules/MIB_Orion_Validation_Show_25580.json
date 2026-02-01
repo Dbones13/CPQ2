@@ -1,0 +1,11 @@
+{
+    "id": 25580,
+    "condition": "[AND](<*ISSELECTED(MIB Configuration Required?.Yes)*>,<*ISSELECTED(Orion Stations required.Yes)*>)",
+    "name": "MIB_Orion_Validation_Show",
+    "action": "<*ALLOWATTRIBUTES(MIB_Orion_Validation)*>",
+    "description": "CXCPQ-34882 - For MIB, Orion Stations should not be included",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

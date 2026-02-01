@@ -1,0 +1,11 @@
+{
+    "id": 14008,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Interior_PTZ_Cameras)*>,)",
+    "name": "Default_DVM_Number_of_Interior_PTZ_Cameras",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Interior_PTZ_Cameras:20)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

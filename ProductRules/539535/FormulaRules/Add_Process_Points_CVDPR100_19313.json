@@ -1,0 +1,11 @@
+{
+    "id": 19313,
+    "condition": "[AND]([NEQ](<* Eval(INT(<*VALUE(PlantCruise_Process_Points)*>/1000)*1000 ) *>,<*VALUE(PlantCruise_Process_Points)*>),[GT](<*VALUE(PlantCruise_Process_Points)*>,0))",
+    "name": "Add_Process_Points_CV-DPR100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DPR100)*>[IF]([GT](<* Eval(<*VALUE(PlantCruise_Process_Points)*>/100) *>,<* Eval(INT(<*VALUE(PlantCruise_Process_Points)*>/100)) *>)){<*SETATVQTY(PlantCruise_Part_Summary:CV-DPR100,<* Eval(INT((<*VALUE(PlantCruise_Process_Points)*>- (INT(<*VALUE(PlantCruise_Process_Points)*>/2000))*2000 - (INT((<*VALUE(PlantCruise_Process_Points)*>- (INT(<*VALUE(PlantCruise_Process_Points)*>/2000))*2000)/1000))*1000)/100) +1) *>)*>}{<*SETATVQTY(PlantCruise_Part_Summary:CV-DPR100,<* Eval(INT((<*VALUE(PlantCruise_Process_Points)*>- (INT(<*VALUE(PlantCruise_Process_Points)*>/2000))*2000 - (INT((<*VALUE(PlantCruise_Process_Points)*>- (INT(<*VALUE(PlantCruise_Process_Points)*>/2000))*2000)/1000))*1000)/100)) *>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

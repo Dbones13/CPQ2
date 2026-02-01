@@ -1,0 +1,11 @@
+{
+    "id": 25849,
+    "condition": "[AND]([NEQ](<*VALUE(Cabinet Depth)*>,0.8M),[NEQ](<*VALUE(Cabinet Depth)*>,1M))",
+    "name": "Setting Range for Cabinet Depth",
+    "action": "[IF]([EQ](<*VALUE(Experion Server Type)*>,Flex Server)){<*ASSIGNVALUE(Cabinet Depth:0.8M)*>}{<*ASSIGNVALUE(Cabinet Depth:1M)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

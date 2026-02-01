@@ -1,0 +1,11 @@
+{
+    "id": 17792,
+    "condition": "[EQ](<*CTX( Container(OPC Application Instances).Rows.GetCount )*>,0)",
+    "name": "OPC Application Instances",
+    "action": "<*CTX( Container(OPC Application Instances).LoadKeys(Identifiers, Default_Network_type, Default_Network_Interface).Load(SELECT Identifiers, Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'OPC Application Instances') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

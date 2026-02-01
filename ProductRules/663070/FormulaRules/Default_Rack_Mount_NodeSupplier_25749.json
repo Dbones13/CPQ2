@@ -1,0 +1,11 @@
+{
+    "id": 25749,
+    "condition": "[EQ](<*VALUE(Node Supplier (Flex Server))*>,)",
+    "name": "Default_Rack_Mount_NodeSupplier",
+    "action": "<*SELECTVALUE(Node Supplier (Flex Server):Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

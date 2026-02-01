@@ -1,0 +1,11 @@
+{
+    "id": 26306,
+    "condition": "[EQ](<*VALUE(Hardware Design Selection - Sim PC Node1)*>,)",
+    "name": "Default_Hardware_Design_Selection1",
+    "action": "<*SELECTVALUE(Hardware Design Selection - Sim PC Node1:SVR_STD_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

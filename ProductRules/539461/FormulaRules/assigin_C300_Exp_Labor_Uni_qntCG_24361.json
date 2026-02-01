@@ -1,0 +1,11 @@
+{
+    "id": 24361,
+    "condition": "[GT](<*CTX ( Container(UOC_ControlGroup_Cont).Rows.GetCount )*>,0)",
+    "name": "assigin C300_Exp_Labor_Uni_qntCG",
+    "action": "<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntCG1:<*CTX ( Container(UOC_ControlGroup_Cont).Sum(C300_Exp_Labor_Uni_qntCG) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

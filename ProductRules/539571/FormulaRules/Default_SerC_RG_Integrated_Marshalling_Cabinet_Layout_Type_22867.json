@@ -1,0 +1,11 @@
+{
+    "id": 22867,
+    "condition": "[EQ](<*VALUE(SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type)*>,)",
+    "name": "Default_SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type",
+    "action": "<*SELECTVALUE(SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type:Front To Back)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

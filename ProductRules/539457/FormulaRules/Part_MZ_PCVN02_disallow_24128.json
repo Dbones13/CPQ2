@@ -1,0 +1,11 @@
+{
+    "id": 24128,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[GT](<* Eval(<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Sum(No_of_Nutanix_Premium_Platform_32_Core_SC) )*> + <*CTX ( Container(Virtualization_Single_Node_Cluster_Conf_transpose).Sum(No_of_Nutanix_Premium_Platform_32_Core_SC) )*> * 1) *>,0)))",
+    "name": "Part_MZ_PCVN02_disallow",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVN02)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

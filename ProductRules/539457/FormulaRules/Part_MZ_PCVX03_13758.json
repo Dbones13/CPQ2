@@ -1,0 +1,11 @@
+{
+    "id": 13758,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster),[GT](<*VALUE(Virtualization_Number_of_Premium_Platforms_Gen)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVX03",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVX03)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVX03,<* Eval(<*VALUE(Virtualization_Number_of_Premium_Platforms_Gen)*> * 2) *>)*><* DoResetAtt *>a",
+    "description": "CCEECOMMBR-6879",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

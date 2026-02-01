@@ -1,0 +1,11 @@
+{
+    "id": 13672,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVMM5",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVMM5)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVMM5,<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

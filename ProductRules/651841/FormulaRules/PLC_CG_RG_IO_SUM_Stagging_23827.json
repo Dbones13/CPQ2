@@ -1,0 +1,11 @@
+{
+    "id": 23827,
+    "condition": "1",
+    "name": "PLC_CG_RG_IO_SUM_Stagging",
+    "action": "<*ASSIGNVALUE(PLC_CG_ALL_SUM:<*Eval(<*CTX ( Container(PLC_ControlGroup_Cont).Sum(PLC_RG_SUM_All) )*>+<*CTX ( Container(PLC_ControlGroup_Cont).Sum(PLC_IO_SUM) )*>)*>)*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

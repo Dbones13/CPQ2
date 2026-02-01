@@ -1,0 +1,11 @@
+{
+    "id": 25965,
+    "condition": "[GT](<*VALUE(Batch Application Services(0-1))*>,0)",
+    "name": "EP-CBRAPI_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-CBRAPI)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-CBRAPI, <*VALUE(Batch Application Services(0-1))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

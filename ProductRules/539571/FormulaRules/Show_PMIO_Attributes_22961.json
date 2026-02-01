@@ -1,0 +1,11 @@
+{
+    "id": 22961,
+    "condition": "[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_PM_IO_Solution_required.Yes)*>,[NEQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Show_PMIO_Attributes",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_Distance_for_PM_Remote_Group,SerC_RG_Fiber_Optic_IO_Link_Extender_Type_for_PMIO,SerC_RG_FTA_Channel_Vertical_Width,SerC_RG_PMIO_Power_System_Type)*>",
+    "description": "CXCPQ-52066",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

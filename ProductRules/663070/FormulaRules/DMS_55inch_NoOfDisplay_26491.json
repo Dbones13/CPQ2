@@ -1,0 +1,11 @@
+{
+    "id": 26491,
+    "condition": "[AND]([GT](<*VALUE(DMS No of Displays 0_4)*>,1),[EQ](<*VALUE(DMS Display size)*>,55 inch NTS))",
+    "name": "DMS_55inch_NoOfDisplay",
+    "action": "<*(RESETVALUE(DMS No of Displays 0_4):1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

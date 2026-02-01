@@ -1,0 +1,11 @@
+{
+    "id": 20078,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_Ethernet_Interface)*>,No),[EQ](<*VALUE(SerC_CG_Ethernet_Interface)*>,))",
+    "name": "hide_ethernet_container",
+    "action": "<*DISALLOWATTRIBUTES(Header_06_open,SerC_Number_of_Rockwell_ControlLogix_Processors,SerC_Number of Rockwell Control Processors(NON),SerC_Number of Process Connected I/O Devices 1,SerC_Control Firewall to EIM Cable Length,SerC_Number_NonRedundant_EIM_for_Modbus,SerC_Number_Redundant_EIM_for_Modbus,SerC_Number of Redunt EIM for EIP Devices (0-300),SerC_Number of Non Redundant EIM for EIP Device,SerC_Number of Redundant EIM for Profinet Devices,SerC_Number of Non Redund EIM for Profinet Devices,SerC_Number of Redundant EIM for IEC61850,SerC_Number of Non Redundant EIM for IEC61850,SerC_Nu of Proc Conn I/O Devi (Redundant ) (0-999),SerC_Number of Rockwell ControlLogix Process 999,SerC_NO of Rock Ctrl Processors Redundant0-999NEW,SerC_Number of Motor Start IOMs per EIM Redun 255,SerC_Number of Motor Starter IOMs per EIM 255,SerC_Numbe of Rockwelix Proc EIM Redundant 0-10,Header_06_close)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

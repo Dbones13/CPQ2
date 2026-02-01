@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(PM_Project_File_Workspace_Labor_Hrs:<*EVAL(1 * (1 + <*VALUE(labor_parameter_sf)*>))*>)*>

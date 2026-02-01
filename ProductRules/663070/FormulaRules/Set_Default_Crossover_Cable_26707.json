@@ -1,0 +1,11 @@
+{
+    "id": 26707,
+    "condition": "[EQ](<*VALUE(Default Crossover Cable L3)*>,)",
+    "name": "Set_Default_Crossover_Cable",
+    "action": "<*SELECTVALUE(Default Crossover Cable L3:2m)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11952,
+    "condition": "[EQ](<*VALUE(FGC_GES_Location)*>,None)",
+    "name": "Hide_column",
+    "action": "<*DISALLOWATTRIBUTES(FGC_Addi_Labor_GES_%,FGC_Labor_GES_%)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

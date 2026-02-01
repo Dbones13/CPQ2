@@ -1,0 +1,11 @@
+{
+    "id": 18388,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,Sx18 PrecisionPlus Sr 90, 1\" (~25mm) gap)",
+    "name": "Part_D_3_4303_57",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-4303-57)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23808,
+    "condition": "[GT](<* Eval((<*VALUE(Scada_conatiner_sum)*>/100)-INT(<*VALUE(Scada_conatiner_sum)*>/100)) *>,0)",
+    "name": "Round_to_100",
+    "action": "<*ASSIGNVALUE(Scada_conatiner_sum:<* Eval((INT(<*VALUE(Scada_conatiner_sum)*>/100)+1)*100) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

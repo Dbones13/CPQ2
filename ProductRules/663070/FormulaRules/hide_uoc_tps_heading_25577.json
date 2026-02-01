@@ -1,0 +1,11 @@
+{
+    "id": 25577,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "hide_uoc_tps_heading",
+    "action": "<*ALLOWATTRIBUTES(Experion UOC Point Licenses for Exp TPS Group)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

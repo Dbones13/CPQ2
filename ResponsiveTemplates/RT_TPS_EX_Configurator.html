@@ -1,0 +1,1156 @@
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+      <div class="alert fiori3-alert-info">
+        <span class="sap-icon-extended">&#xf200;</span>@Translation.GetJS("Configurator.NoAttributesOnTab")
+      </div>
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+    <div style="width:100%">
+      <div class="msid-label">
+        <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+      </div>
+    </div>
+    <!-- /ko -->
+  
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-questions">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-questions')">
+            <span>General questions - TPS to Experion</span>
+            <a id="tps-ex-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-questions-content">
+            <div class="col-xs-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_General_Questions") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_tps_general_question"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-esvt-conversion">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-esvt-conversion')">
+            <span>Conversion to ESVT Server</span>
+            <a id="tps-ex-esvt-conversion-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-esvt-conversion-content">
+            <div class="col-xs-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Conversion_ESVT_Server") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_tps_esvt_conversion"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-est-questions">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-est-questions')">
+            <span>Station Conversion to ES-T</span>
+            <a id="tps-ex-est-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-est-questions-content">
+            <div class="col-xs-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Station_Conversion_EST") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_est_conversion"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ko ifnot: localStorage.getItem("checkR2Q") === 'Yes' -->
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-addnl-server-station">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-addnl-server-station')">
+            <span>Additional Servers and Stations</span>
+            <a id="tps-ex-addnl-server-station-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-addnl-server-station-content">
+            <div class="col-xs-12 col-sm-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Additional_Servers") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_additional_servers"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+            <div class="col-xs-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Additional_Stations") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_additional_stations"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /ko -->
+  
+    
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-bundle-conversion">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-bundle-conversion')">
+            <span>Bundle Conversion Servers and Stations</span>
+            <a id="tps-ex-bundle-conversion-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-bundle-conversion-content">
+            <div class="col-xs-12 col-sm-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Bundle_Conversion_Server_Stations") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_nomoretable_bundle_conversion"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-conversion-acet-eapp">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-conversion-acet-eapp')">
+            <span>Conversion to ACE-T / Conversion to EAPP / Domain Controller</span>
+            <a id="tps-ex-conversion-acet-eapp-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-conversion-acet-eapp-content">
+            <div class="col-xs-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Conversion_ACET_EAPP") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_acet_eapp"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+            <div class="col-xs-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Need_Domain_Controller_Added") -->
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-monitors">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-monitors')">
+            <span>Monitor</span>
+            <a id="tps-ex-monitors-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-monitors-content">
+            <div class="col-xs-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Monitors") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_tps_monitors"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row col-xs-12 swagger">
+      <div id="TPS_to_EX_3rd_Party_Items-questions">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#TPS_to_EX_3rd_Party_Items-questions')">
+            <span>Third Party items</span>
+            <a id="LM_to_ELMM_3rd_Party_Items-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>  
+          <div id="TPS_to_EX_3rd_Party_Items-content">
+            <div class="clearfix"></div>
+            <div class="col-xs-12 col-sm-9">
+              
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_to_EX_3rd_Party_Items") -->
+                <!-- ko if:$data.container.columns().length !== 0 && $data.container.rows().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_TPStoEXThirdPartyCont"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-service">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-service')">
+            <span>Services</span>
+            <a id="tps-ex-service-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-service-content">
+            <div class="col-xs-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Which_Documentation_Required") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+            <div class="col-xs-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Service") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row col-xs-12 swagger">
+      <div id="tps-ex-server-cabinet">
+        <div>
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-ex-server-cabinet')">
+            <span>Server Cabinet Configuration</span>
+            <a id="tps-ex-server-cabinet-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div id="tps-ex-server-cabinet-content">
+            <div class="col-xs-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Server_Cabinet_Config") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- /ko -->
+  <!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+       <!-- RT_TPS_EX_Configurator  -->
+      <div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+        <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+          <div class="alert fiori3-alert-info">
+            <span class="sap-icon-extended">&#xf200;</span>@Translation.GetJS("Configurator.NoAttributesOnTab")
+          </div>
+        </div>
+        <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+        <div style="width:100%">
+          <div class="msid-label">
+            <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+          </div>
+        </div>
+        <!-- /ko -->
+  
+        
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-questions" onclick="toggleConfigSection(event, '#tps-ex-questions')">
+                 <label class="onlytext">General questions - TPS to Experion</label>
+                <a id="tps-ex-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-questions-content" class=" col-md-12 clear-padding">
+                <div class="col-xs-12 col-sm-12">
+                   <!-- ko foreach: attributes.filterByProperty('name',"ATT_IS_Migration_Part_Of_ELCN_Migration","TPS_EX_Setup_FTE_Network_Infrastructure","TPS_EX_FTE_Switch_Type","TPS_EX_Additional_Switches","FTE_Switch_Type","TPS_EX_QTY_New_Cabinates","TPS_EX_Additional_Server_Stations_Required","TPS_EX_Media_Kit_Type") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                  </div>
+                  <!-- /ko --> 
+              </div>
+              </div>
+  
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-esvt-conversion" onclick="toggleConfigSection(event, '#tps-ex-esvt-conversion')">
+                 <label class="onlytext">Conversion to ESVT Server</label>
+                <a id="tps-ex-esvt-conversion-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-esvt-conversion-content" class=" col-md-12 clear-padding">
+                  <div class="col-xs-12 col-sm-12">
+          <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_TDC_US_ESVT","TPS_EX_TDC_AM_ESVT","TPS_EX_TDC_APP_ESVT","TPS_EX_TDC_GUS_ESVT","TPS_EX_ESVT_Redundant","TPS_EX_ESVT_Server_Hardware","TPS_EX_ESVT_WO_Trade_Ins","TPS_EX_Additional_Hard_Drives","TPS_EX_Qty_Of_Cabinet_Slide_Mounting_For_Servers","TPS_EX_Qty_Of_Cabinet_Fix_Mounting_For_Servers") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                  </div>
+                  <!-- /ko --> 
+              </div>
+              </div>
+           
+        
+         
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps"  id="tps-ex-est-questions" onclick="toggleConfigSection(event, '#tps-ex-est-questions')">
+                 <label class="onlytext">Station Conversion to ES-T</label>
+                <a id="tps-ex-est-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-est-questions-content" class=" col-md-12 clear-padding">
+                <div class="col-xs-12">
+                  <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Station_Conversion_EST") -->
+                    <!-- ko if:$data.container.columns().length !== 0-->
+                      <!-- ko template: { name: "ContainerTemplate_est_conversion"} -->
+                      <!-- /ko -->
+                    <!-- /ko -->
+                  <!-- /ko -->
+                </div>
+              </div>
+            
+  
+           <!-- ko ifnot: localStorage.getItem("checkR2Q") === 'Yes' -->
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-addnl-server-station" onclick="toggleConfigSection(event, '#tps-ex-addnl-server-station')">
+                 <label class="onlytext">Additional Servers and Stations</label>
+                <a id="tps-ex-addnl-server-station-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-addnl-server-station-content" class=" col-md-12 clear-padding">
+                <div class="col-xs-12 col-sm-6">
+                  <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Additional_Servers") -->
+                    <!-- ko if:$data.container.columns().length !== 0-->
+                      <!-- ko template: { name: "ContainerTemplate_additional_servers"} -->
+                      <!-- /ko -->
+                    <!-- /ko -->
+                  <!-- /ko -->
+                </div>
+                <div class="col-xs-12">
+                  <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Additional_Stations") -->
+                    <!-- ko if:$data.container.columns().length !== 0-->
+                      <!-- ko template: { name: "ContainerTemplate_additional_stations"} -->
+                      <!-- /ko -->
+                    <!-- /ko -->
+                  <!-- /ko -->
+                </div>
+              </div>
+           
+        
+         <!-- /ko -->
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-bundle-conversion" onclick="toggleConfigSection(event, '#tps-ex-bundle-conversion')">
+                 <label class="onlytext">Bundle Conversion Servers and Stations</label>
+                <a id="tps-ex-bundle-conversion-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-bundle-conversion-content" class=" col-md-12 clear-padding">
+               <div class="col-xs-12 col-sm-12"> 
+                  <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_Non_Reduntant_Conversion_ESVT","TPS_EX_Redundant_Conversion_ESVT","TPS_EX_Bundle_Conversion_Existing_Node","TPS_EX_Bundle_Conversion_ESVT_Server_Hardware","TPS_EX_Bundle_Conversion_EST_Station_Hardware","TPS_EX_Bundle_Conversion_EST_Station_Mounting_Furn") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                  </div>
+                  <!-- /ko --> 
+              </div>
+              </div>
+             
+  
+        
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-conversion-acet-eapp" onclick="toggleConfigSection(event, '#tps-ex-conversion-acet-eapp')">
+                 <label class="onlytext">Conversion to ACE-T / Conversion to EAPP / Domain Controller</label>
+                <a id="tps-ex-conversion-acet-eapp-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-conversion-acet-eapp-content" class=" col-md-12 clear-padding">
+                <div class="col-xs-12">
+                  <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Conversion_ACET_EAPP") -->
+                    <!-- ko if:$data.container.columns().length !== 0-->
+                      <!-- ko template: { name: "ContainerTemplate_acet_eapp"} -->
+                      <!-- /ko -->
+                    <!-- /ko -->
+                  <!-- /ko -->
+                </div>
+                <div class="col-xs-12">
+                  <!-- ko foreach: attributes.filterByProperty('name' , "TPS_EX_Need_Domain_Controller_Added") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                  </div>
+                  <!-- /ko -->
+                </div>
+              </div>
+            
+        
+         
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-monitors" onclick="toggleConfigSection(event, '#tps-ex-monitors')">
+                 <label class="onlytext">Monitor</label>
+                <a id="tps-ex-monitors-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-monitors-content" class=" col-md-12 brdr clear-padding">
+                 <div class="col-xs-12 col-sm-12"> 
+                 <div class="col-xs-12 col-sm-7"> 
+                      <div class="col-xs-12 col-sm-4"> 
+                      <div class="config_row col-md-12 clear-padding  flex "  >
+                         <label class="onlytext">Classic Furniture monitors: <span class="flt_rt">QTY</span></label> 
+                      </div>
+                          <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_Number_FPD_Lower_Tier_OEP_NON_TS","TPS_EX_Number_FPD_Lower_Tier_OEP_TS","TPS_EX_Number_FPD_Lower_Tier_IKB_Non_TS","TPS_EX_Number_FPD_Lower_Tier_IKB_TS","TPS_EX_Number_FPD_Upper_Tier_Non_TS","TPS_EX_Number_FPD_Lower_Tier_TS") -->
+                              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 monitor_sec' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt monitor_sec', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                              
+                              <div class="fiori3-container-label flex col-md-10">
+                                  <span class="label-range-hint-wrapper flex">
+                                      <p style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode ,title: label}"  > </p>
+                                      <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+                                      <a href="#" class="label-hint-icon" data-bind="visible: hint().length > 0,attr: { id: 'popover' + id() },attr: { title: hint }" aria-label="Hint popover"  ><span class="sap-icon"></span></a>
+                                  </span>
+                              </div>
+                              
+                              <div class="fiori3-select-group col-md-2 clear-padding">
+                           
+                                  <input type="text" data-bind="
+                                          value: userInput, 
+                                          enable: isEnabled, 
+                                          css:{'error':!isValid() || hasConflict()}, 
+                                          attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                                          event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                                          hasFocus: window.lastActiveElementId == $element.id" class="form-control text-center"   >
+                                          <span class="validation-message" style="display: none;"></span>
+                              
+                              </div>
+                       
+                              
+                              </div>
+                          <!-- /ko --> 
+                      </div>
+                      <div class="col-xs-12 col-sm-4"> 
+                      <div class="config_row col-md-12 clear-padding  flex "  >
+                         <label class="onlytext">Desktop monitors: <span class="flt_rt">QTY</span></label> 
+                      </div>
+                          <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_Desktop_Number_55in_FPD_Non_TS","TPS_EX_Desktop_Number_23in_FPD_Non_TS","TPS_EX_Desktop_Number_22in_FPD_TS","TPS_EX_Desktop_Number_21_3in_FPD_Non_TS","TPS_EX_Desktop_Number_21_3in_FPD_TS") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 monitor_sec' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt monitor_sec', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                              <div class="fiori3-container-label flex col-md-10">
+                                  <span class="label-range-hint-wrapper flex">
+                                      <p style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode ,title: label}"  > </p>
+                                      <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+                                      <a href="#" class="label-hint-icon" data-bind="visible: hint().length > 0,attr: { id: 'popover' + id() },attr: { title: hint }" aria-label="Hint popover"  ><span class="sap-icon"></span></a>
+                                  </span>
+                              </div>
+                              
+                              <div class="fiori3-select-group col-md-2 clear-padding">
+                           
+                                  <input type="text" data-bind="
+                                          value: userInput, 
+                                          enable: isEnabled, 
+                                          css:{'error':!isValid() || hasConflict()}, 
+                                          attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                                          event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                                          hasFocus: window.lastActiveElementId == $element.id" class="form-control text-center"   >
+                                          <span class="validation-message" style="display: none;"></span>
+                              
+                              </div>
+                                    
+                  </div>
+                  <!-- /ko --> 
+                      </div>
+                      <div class="col-xs-12 col-sm-4"> 
+                      <div class="config_row col-md-12 clear-padding  flex "  >
+                         <label class="onlytext">Z Console monitors: <span class="flt_rt">QTY</span></label> 
+                      </div>
+                          <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_Z_Console_Number_22in_FPD_Non_TS","TPS_EX_Z_Console_Number_22in_FPS_TS") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 monitor_sec' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt monitor_sec' , id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                              <div class="fiori3-container-label flex col-md-10">
+                                  <span class="label-range-hint-wrapper flex">
+                                      <p style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode ,title: label}"  > </p>
+                                      <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+                                      <a href="#" class="label-hint-icon" data-bind="visible: hint().length > 0,attr: { id: 'popover' + id() },attr: { title: hint }" aria-label="Hint popover"  ><span class="sap-icon"></span></a>
+                                  </span>
+                              </div>
+                              
+                              <div class="fiori3-select-group col-md-2 clear-padding">
+                           
+                                  <input type="text" data-bind="
+                                          value: userInput, 
+                                          enable: isEnabled, 
+                                          css:{'error':!isValid() || hasConflict()}, 
+                                          attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                                          event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                                          hasFocus: window.lastActiveElementId == $element.id" class="form-control text-center"   >
+                                          <span class="validation-message" style="display: none;"></span>
+                              
+                              </div>
+                       
+                  </div>
+                  <!-- /ko --> 
+                      </div>
+                      
+                 </div> 
+                 <div class="col-xs-12 col-sm-5"> 
+                      <div class="col-xs-12 col-sm-6"> 
+                      <div class="config_row col-md-12 clear-padding  flex "  >
+                         <label class="onlytext">EZ Console monitors: <span class="flt_rt">QTY</span></label> 
+                      </div>
+                      <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_EZ_Console_Number_21_3in_FPD_TS","TPS_EX_EZ_Console_Number_21_3in_FPD_Non_TS","TPS_EX_EZ_Console_Number_22in_FPD_NON_TS","TPS_EX_EZ_Console_Number_22in_FPD_TS") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 monitor_sec' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt monitor_sec', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                              <div class="fiori3-container-label flex col-md-10">
+                                  <span class="label-range-hint-wrapper flex">
+                                      <p style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode ,title: label}"  > </p>
+                                      <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+                                      <a href="#" class="label-hint-icon" data-bind="visible: hint().length > 0,attr: { id: 'popover' + id() },attr: { title: hint }" aria-label="Hint popover"  ><span class="sap-icon"></span></a>
+                                  </span>
+                              </div>
+                              
+                              <div class="fiori3-select-group col-md-2 clear-padding">
+                           
+                                  <input type="text" data-bind="
+                                          value: userInput, 
+                                          enable: isEnabled, 
+                                          css:{'error':!isValid() || hasConflict()}, 
+                                          attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                                          event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                                          hasFocus: window.lastActiveElementId == $element.id" class="form-control text-center"   >
+                                          <span class="validation-message" style="display: none;"></span>
+                              
+                              </div>
+                       
+                  </div>
+                  <!-- /ko --> 
+                      </div>	
+                      <div class="col-xs-12 col-sm-6"> 
+                      <div class="config_row col-md-12 clear-padding  flex "  >
+                         <label class="onlytext">Icon Console monitors: <span class="flt_rt">QTY</span></label> 
+                      </div>
+                      <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_Icon_Console_Number_21_3in_FPD_Non_TS","TPS_EX_Icon_Console_Number_21_3in_FPD_TS") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 monitor_sec' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt monitor_sec', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                              <div class="fiori3-container-label flex col-md-10">
+                                  <span class="label-range-hint-wrapper flex">
+                                      <p style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode ,title: label}"  > </p>
+                                      <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+                                      <a href="#" class="label-hint-icon" data-bind="visible: hint().length > 0,attr: { id: 'popover' + id() },attr: { title: hint }" aria-label="Hint popover"  ><span class="sap-icon"></span></a>
+                                  </span>
+                              </div>
+                              
+                              <div class="fiori3-select-group col-md-2 clear-padding">
+                           
+                                  <input type="text" data-bind="
+                                          value: userInput, 
+                                          enable: isEnabled, 
+                                          css:{'error':!isValid() || hasConflict()}, 
+                                          attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                                          event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                                          hasFocus: window.lastActiveElementId == $element.id" class="form-control text-center"   >
+                                          <span class="validation-message" style="display: none;"></span>
+                              
+                              </div>
+                       
+                  </div>
+                  <!-- /ko --> 
+                      </div>
+                 </div>
+                  
+              </div>
+              </div>
+            
+                 <!-- ko ifnot:(localStorage.getItem("checkR2Q") ==='Yes')-->
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="TPS_to_EX_3rd_Party_Items-questions" onclick="toggleConfigSection(event, '#TPS_to_EX_3rd_Party_Items-questions')">
+                 <label class="onlytext">Third Party items</label>
+                <a id="LM_to_ELMM_3rd_Party_Items-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>  
+              <div id="TPS_to_EX_3rd_Party_Items-content" class=" col-md-12 clear-padding">
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-sm-9">
+                  
+                  <!-- ko foreach: attributes.filterByProperty('name' , "TPS_to_EX_3rd_Party_Items") -->
+                    <!-- ko if:$data.container.columns().length !== 0 && $data.container.rows().length !== 0-->
+                      <!-- ko template: { name: "ContainerTemplate_TPStoEXThirdPartyCont"} -->
+                      <!-- /ko -->
+                    <!-- /ko -->
+                  <!-- /ko -->
+                </div>
+              </div>
+              <!-- /ko -->
+              
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-service" onclick="toggleConfigSection(event, '#tps-ex-service')">
+                 <label class="onlytext">Services</label>
+                <a id="tps-ex-service-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              
+              <div id="tps-ex-service-content" class=" col-md-12 clear-padding">
+               
+                <div class="col-xs-12">
+                  <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_Which_Documentation_Required","TPS_EX_Will_System_be_migrated_virtual_system","TPS_Will_Honeywell_perform_equipment_installation","ATT_TPS_Qty_Existing_Cabinets") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                  </div>
+                  <!-- /ko --> 
+              
+                </div>
+              </div>
+           
+                <!-- ko ifnot:(localStorage.getItem("checkR2Q") ==='Yes')-->
+              <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="tps-ex-server-cabinet" onclick="toggleConfigSection(event, '#tps-ex-server-cabinet')">
+                 <label class="onlytext">Server Cabinet Configuration</label>
+                <a id="tps-ex-server-cabinet-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+              <div id="tps-ex-server-cabinet-content" class=" col-md-12 clear-padding">
+              <div class="col-xs-12">
+                  <!-- ko foreach: attributes.filterByProperty('name',"TPS_EX_Cabinet_Depth_Size","TPS_EX_Power_Supply_Voltage","TPS_EX_Cabinet_Door_Type","TPS_EX_Cabinet_Keylock_Type","TPS_EX_Cabinet_Hinge_Type","TPS_EX_Cabinet_Thermostat_Required","TPS_EX_Cabinet_Base_Required","TPS_EX_Cabinet_Color") --> 
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                  </div>
+                  <!-- /ko --> 
+              
+                </div>
+              </div>
+              <!-- /ko -->
+          
+      </div>
+  <!-- /ko -->
+  
+      <script type="text/html" id="ContainerTemplate_nomoretable_bundle_conversion">
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-12">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko let : {nonRedundantConversion : values()[0].value() , redundantConversion:values()[1].value() } -->
+                  <!-- ko foreach: values -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <!-- ko if: (headerLabel() === "Non Redundant Conversion to ESVT?" && redundantConversion === "YES") || (headerLabel() === "Redundant Conversion to ESVT?" && nonRedundantConversion === "YES")-->
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : "ContainerLabelTemplate" , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                      <!-- /ko -->
+                      <!-- ko ifnot: (headerLabel() === "Non Redundant Conversion to ESVT?" && redundantConversion === "YES") || (headerLabel() === "Redundant Conversion to ESVT?" && nonRedundantConversion === "YES")-->
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                      <!-- /ko -->
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                    <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+      </script>
+  
+  
+      <script type="text/html" id="ContainerTemplate_tps_monitors">
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-2">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <tr>
+                      <td class="col-xs-8">
+                          <p style="display:inline-block">Classic Furniture monitors:</p>
+                      </td>
+                      <td class="col-xs-4">
+                          QTY
+                      </td>
+                  </tr>
+                  <!-- ko foreach: values.slice(0,6) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-2">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <tr>
+                      <td class="col-xs-8">
+                          <p style="display:inline-block">Desktop monitors:</p>
+                      </td>
+                      <td class="col-xs-4">
+                          QTY
+                      </td>
+                  </tr>
+                  <!-- ko foreach: values.slice(6,11) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+        
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-2">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <tr>
+                      <td class="col-xs-8">
+                          <p style="display:inline-block">Z Console monitors:</p>
+                      </td>
+                      <td class="col-xs-4">
+                          QTY
+                      </td>
+                  </tr>
+                  <!-- ko foreach: values.slice(11,13) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+        
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-2">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <tr>
+                      <td class="col-xs-8">
+                          <p style="display:inline-block">EZ Console monitors:</p>
+                      </td>
+                      <td class="col-xs-4">
+                          QTY
+                      </td>
+                  </tr>
+                  <!-- ko foreach: values.slice(13,17) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+        
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-2">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <tr>
+                      <td class="col-xs-8">
+                          <p style="display:inline-block">Icon Console monitors:</p>
+                      </td>
+                      <td class="col-xs-4">
+                          QTY
+                      </td>
+                  </tr>
+                  <!-- ko foreach: values.slice(17,19) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+      </script>
+  
+  
+      <script type="text/html" id="ContainerTemplate_tps_general_question">
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-4">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko foreach: values.slice(0,3) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                         <div class="form-group">
+                          <p data-bind="text:headerLabel" style="display:inline"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a></div>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-4">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko foreach: values.slice(3,6) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                        <div class="form-group">
+                          <p data-bind="text:headerLabel" style="display:inline"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a></div>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                          
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+        
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-4">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko foreach: values.slice(6) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+      </script>
+  
+      <script type="text/html" id="ContainerTemplate_tps_esvt_conversion">
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-4">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko foreach: values.slice(0,5) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-1">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 1}) -->
+                  <!-- ko foreach: values.slice(0,5) -->
+                  <tr>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                            <!-- ko template : { name : "ContainerLabelTemplate" , data : $data } -->
+                      <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-4">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko foreach: values.slice(5) -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+      </script>
+  
+      <script type="text/html" id="ContainerTemplate_additional_servers">
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-8">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() + '_0' }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko foreach: values -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko if: !(["Cabinet Mounting Type"].includes(headerLabel()))  -->
+                            <!-- ko template : { name : template , data : $data } -->
+                            <!-- /ko -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-4">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() + '_1' }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 1}) -->
+                  <!-- ko foreach: values -->
+                  <tr>
+                      <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                          <!-- ko if: !(["Display Required","Trackball"].includes(headerLabel()))  -->
+                            <!-- ko template : { name : template , data : $data } -->
+                            <!-- /ko -->
+                          <!-- /ko -->
+                      </td>
+                   </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+      </script>
+  
+  
+      <script type="text/html" id="ContainerTemplate_additional_stations">
+          <div id="no-more-tables" class="config-container cpq-scroll col-xs-2">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  <!-- ko foreach: container.rows.filter((data) => {return data.rowIndex === 0}) -->
+                  <!-- ko foreach: values -->
+                  <!-- ko if: columnId !== 2 -->
+                  <tr>
+                      <td class="col-xs-8" data-bind="ifnot : isEmpty">
+                          <p data-bind="text:headerLabel" style="display:inline-block"></p>
+                          <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parents[1].container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+                              <span>&#xe202;</span>
+                          </a>
+                      </td>
+                  </tr>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+          <div data-bind="foreach: { data: [0,1,2,3,4,5,6,7,8,9,10,11], as: 'itrIndex', noChildContext: true }" style="display:flex;overflow:scroll;">
+            <div id="no-more-tables" class="config-container cpq-scroll col-xs-4" style="overflow:visible; margin:0;padding-right: 0px; padding-left: 0px;">
+                <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() + '_' + itrIndex}">
+                    <tbody data-bind="foreach: {data : container.rows}">
+                    <!-- ko if: rowIndex === itrIndex -->
+                    <!-- ko foreach: values -->
+                    <!-- ko if: headerLabel() !== "Hardware" -->
+                    <tr>
+                        <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                            <!-- ko let: {typeValue : $parent.values()[0]?.value()} -->
+                              <!-- ko if: typeValue.includes("Cabinet") && !(["Multi-window support","Qty of Displays","Display Size","Touch Screen","Trackball","IKB or OEP","Interface card"].includes(headerLabel()))  -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                              <!-- /ko -->
+                              <!-- ko if: typeValue.includes("Desk") && !(["Multi-window support","RPS - Quad Video Required?","RPS - Mounting Furniture","Interface card","Cabinet Mounting Type"].includes(headerLabel()))  -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                              <!-- /ko -->
+                              <!-- ko if: typeValue.includes("Orion") && !(["Multi-window support","RPS Type","RPS - Quad Video Required?","RPS - Mounting Furniture","Multi-window support","Qty of Displays","Display Size","Touch Screen","Trackball","IKB or OEP","Interface card","Cabinet Mounting Type"].includes(headerLabel()))  -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                              <!-- /ko -->
+                              <!-- ko if: typeValue.includes("Flex Station") && (["Multi-window support"].includes(headerLabel()))  -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                              <!-- /ko -->
+                              <!-- ko if: typeValue.includes("ES-T Station - Desk") && (["Multi-window support"].includes(headerLabel()))  -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                              <!-- /ko -->
+                              <!-- ko if: typeValue !== "Console Station - Orion" && typeValue !== "ES-T Station - Orion" && (["Interface card"].includes(headerLabel()))  -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                              <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+                     </tr>
+                    <!-- /ko -->
+                    <!-- ko if: headerLabel() === "Hardware" && $parent.values()[0]?.value().includes('Desk') && columnId === 2 -->
+                    <tr>
+                        <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                            <!-- ko let: {typeVaue : $parent.values()[0]?.value()} -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+                     </tr>
+                    <!-- /ko -->
+                    <!-- ko if: headerLabel() === "Hardware" && !($parent.values()[0]?.value().includes('Desk')) && columnId === 3 -->
+                    <tr>
+                        <td class="col-xs-4" data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                            <!-- ko let: {typeVaue : $parent.values()[0]?.value()} -->
+                                <!-- ko template : { name : template , data : $data } -->
+                                <!-- /ko -->
+                            <!-- /ko -->
+                        </td>
+                     </tr>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                    <!-- /ko -->
+                    </tbody>
+                </table>
+            </div>
+          </div>
+      </script>
+  
+  
+      <script type="text/html" id="ContainerTemplate_acet_eapp">
+          <div id="no-more-tables" class="config-container cpq-scroll">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  @*Header*@
+                  <thead>
+                  <tr>
+                      <!-- ko foreach : container.columns -->
+                      <th data-bind="click: function () { sort($parent.id() + '_' + columnId) }">
+                          <div class="sortable-display-icon fiori3-sortable-display-icon">
+                              <span data-bind="text: headerLabel, css: { 'required-attribute': required }"></span>
+                              <span class="sortable-icon-position" data-bind="attr: { id: $parent.id() + '_' + columnId, 'aria-label': sortTooltipTitle }, event: { keyup: function() { sortOnEnter(event, $parent.id() + '_' + columnId); }, focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id,
+                                    tooltip: { title: sortTooltipTitle }, css: { 'sorting_asc': isAscSort(), 'sorting_desc': isDescSort(), 'sorting': !isAscSort() && !isDescSort() }" tabindex="0"></span>
+                          </div>
+                      </th>
+                      <!-- /ko -->
+                  </tr>
+                  </thead>
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  @*Rows*@
+                  <!-- ko foreach: container.rows -->
+                  <tr>
+                    <!-- ko let: {eapp_type : values()[0]?.value()} -->
+                    <!-- ko foreach: values -->
+                    <td data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                    	<!-- ko if: headerLabel() !== "Does installed APP contain Sol Package?" || eapp_type != "APP to ACE-T" -->
+                          <!-- ko template : { name : template , data : $data } -->
+                          <!-- /ko -->
+                        <!-- /ko -->
+                    </td>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                    </tr>
+                    <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+      </script>
+  
+      <script type="text/html" id="ContainerTemplate_est_conversion">
+          <div id="no-more-tables" class="config-container cpq-scroll">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  @*Header*@
+                  <thead>
+                  <tr>
+                      <!-- ko foreach : container.columns -->
+                      <th data-bind="click: function () { sort($parent.id() + '_' + columnId) }">
+                          <div class="sortable-display-icon fiori3-sortable-display-icon">
+                              <span data-bind="text: headerLabel, css: { 'required-attribute': required }"></span>
+                              <span class="sortable-icon-position" data-bind="attr: { id: $parent.id() + '_' + columnId, 'aria-label': sortTooltipTitle }, event: { keyup: function() { sortOnEnter(event, $parent.id() + '_' + columnId); }, focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id,
+                                    tooltip: { title: sortTooltipTitle }, css: { 'sorting_asc': isAscSort(), 'sorting_desc': isDescSort(), 'sorting': !isAscSort() && !isDescSort() }" tabindex="0"></span>
+                          </div>
+                      </th>
+                      <!-- /ko -->
+                  </tr>
+                  </thead>
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  @*Rows*@
+                  <!-- ko foreach: container.rows -->
+                  <tr>
+                    <!-- ko let: {conversion_type : values()[0]?.value()} -->
+                    <!-- ko foreach: values -->
+                    <td data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                      <!-- ko if: conversion_type === "US_AM to ES-T" && !(["Computer Adapter Kit","RPS Type","Existing Monitor Type"].includes(headerLabel()))  -->
+                        <!-- ko template : { name : template , data : $data } -->
+                        <!-- /ko -->
+                      <!-- /ko -->
+                      <!-- ko if: conversion_type === "GUS to ES-T" && !(["Keyboard Type"].includes(headerLabel()))  -->
+                        <!-- ko template : { name : template , data : $data } -->
+                        <!-- /ko -->
+                      <!-- /ko -->
+                      <!-- ko if: conversion_type === "UGUS to ES-T" && !([""].includes(headerLabel()))  -->
+                        <!-- ko template : { name : template , data : $data } -->
+                        <!-- /ko -->
+                      <!-- /ko -->
+                    </td>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                    </tr>
+                    <!-- /ko -->
+                  </tbody>
+              </table>
+          </div>
+      </script>

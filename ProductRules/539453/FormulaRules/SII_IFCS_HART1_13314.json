@@ -1,0 +1,11 @@
+{
+    "id": 13314,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is HART Interface in Scope?)*>,Yes))",
+    "name": "SII_IFCS_HART1",
+    "action": "[IF]([EQ](<*VALUE(Is HART in C300 Controller?)*>,Yes)){<*ASSIGNVALUE(SII I/F Configuration Settings-HART1:0)*>}{<*ASSIGNVALUE(SII I/F Configuration Settings-HART1:<* Eval((3 * <*VALUE(Number of HART Interface Types)*>)+ (0.33 *<*VALUE(Number of HART Devices)*>) ) *>)*>}[ENDIF]",
+    "description": "SII I/F Configuration Settings-HART1\n\nCalculated Hrs = IF(htc=\"Yes\",0,htt*3 + ht*0.33)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

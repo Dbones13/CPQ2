@@ -1,0 +1,11 @@
+{
+    "id": 5454,
+    "condition": "[AND]([NEQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,0),[EQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,4))",
+    "name": "Group 4 Allow",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_01_close,ATTCON_01_open,Header_02_close,Header_02_open,TL_Travel_Phase_1,TL_Inputs_1,TL_Expense_Calculation_Cont_1)*>\n<*ALLOWATTRIBUTES(ATTCON_02_close,ATTCON_02_open,Header_03_close,Header_03_open,TL_Travel_Phase_2,TL_Inputs_2,TL_Expense_Calculation_Cont_2)*>\n<*ALLOWATTRIBUTES(ATTCON_03_close,ATTCON_03_open,Header_04_close,Header_04_open,TL_Travel_Phase_3,TL_Inputs_3,TL_Expense_Calculation_Cont_3)*>\n<*ALLOWATTRIBUTES(ATTCON_04_close,ATTCON_04_open,Header_05_close,Header_05_open,TL_Travel_Phase_4,TL_Inputs_4,TL_Expense_Calculation_Cont_4)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

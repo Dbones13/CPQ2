@@ -1,0 +1,11 @@
+{
+    "id": 1066,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,xPM to C300 Migration),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW))",
+    "name": "Hide_xpm_services",
+    "action": "<*DISALLOWATTRIBUTES(xPM_C300_Which_Documentation_Required)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "08/03/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

@@ -1,0 +1,172 @@
+<!-- RT_Favourites  -->
+<script type="text/html" id="AddToFavoritesDialogTemplate">
+    <div class="modal fade" tabindex="-1" role="dialog" id="AddRowModal" aria-labelledby="AddRowModalLabel" aria-hidden="true">
+        <div class="modal-dialog fiori3-modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close close-dialog-button fiori3-icon-button" data-dismiss="modal" data-bind="executeOnEnter: function() { closeAddToFavorites($data) }, tooltip: { title: '@Translation.Get("Msg.Close")' }" aria-label="@Translation.Get("Msg.Close")">
+                        <span class="sap-icon">&#xe03e;</span>
+                    </button>
+                    <h3 data-bind="text: isShared ? '@Translation.Get("Favorites.MoveToFolder")' : '@Translation.Get("Favorites.AddToFavorites")'"></h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group fiori3-input-group" data-bind="visible: !isShared">
+                            <label for="favoritesName" class="control-label required-attribute">@Translation.Get("Favorites.Create.Name")</label>
+                            <input id="favoritesName" class="form-control" type="text" data-bind="value: name, validateInput: { val: name, event: 'keypress input blur' },
+                                   css: { 'validation-error': name.isValid && !name.isValid() }">
+                        </div>
+                        <div class="form-group fiori3-input-group" data-bind="visible: !isShared">
+                            <label for="favoritesDescription" class="control-label">@Translation.Get("Favorites.Create.Description")</label>
+                            <input id="favoritesDescription" class="form-control" type="text" data-bind="value: description, validateInput: { val: description, event: 'keypress input blur' },
+                                   css: { 'validation-error': description.isValid && !description.isValid() }">
+                        </div>
+
+                        <div class="form-group fiori3-input-group">
+                            <label for="selectFolder" data-bind="text: shouldCreateNewFolder() ? '@Translation.Get("Favorites.Create.ChooseLocationforNewFolder")' : isShared ? '@Translation.Get("Favorites.Move.ChooseLocationforFolder")' : '@Translation.Get("Favorites.Create.AddtoExistingFolder")'"></label>
+                            <div>
+                                <select id="selectFolder" data-bind="options: favoriteFolders, value: favoriteFolderId, optionsValue: 'id', optionsText: 'name'" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="new-folder-wrapper">
+                            <div class="form-group fiori3-input-group">
+                                <label class="fiori3-toggle-label">
+                                    <span class="fiori3-toggle fiori3-toggle-compact">
+                                        <input id="createNewFolderToggle" class="fiori3-toggle-input" type="checkbox" name="" value="" aria-labelledby="createNewFolderLabel" data-bind="checked: shouldCreateNewFolder">
+                                        <div class="fiori3-toggle-wrapper">
+                                            <div class="fiori3-toggle-track">
+                                                <span class="fiori3-toggle-handle" role="presentation"></span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span id="createNewFolderLabel" class="fiori3-toggle-text">@Translation.Get("Favorites.Create.CreateNewFolder")</span>
+                                </label>
+                            </div>
+                            <div class="form-group fiori3-input-group new-folder-input" data-bind="visible: shouldCreateNewFolder">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <label id="newFoldersNameLabel" class="control-label required-attribute">@Translation.Get("Favorites.Create.Name")</label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <input id="newFolderName" type="text" class="form-control" data-bind="value: folderName,
+                                                                                                        validateInput: { val: folderName, event: 'keypress input blur' },
+                                                                                                        css: { 'validation-error': folderName.isValid && !folderName.isValid() }">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+                        <div data-bind="visible: allowToShareWithCompanyUsers && !isShared">
+                            <label class="fiori3-checkbox-group">
+                                <input type="checkbox" id="ShareInCompany" data-bind="checked: isSharedWithCompanyUsers">
+                                <span>@Translation.Get("Favorites.Create.ShareWithCompanyUsers")</span>
+                            </label>
+                        </div>
+                        <div data-bind="visible: allowToShareWithAllUsers && !isShared">
+                            <label class="fiori3-checkbox-group">
+                                <input type="checkbox" id="ShareWithAll" data-bind="checked: isSharedWithAllUsers">
+                                <span>@Translation.Get("Favorites.Create.ShareToAll")</span>
+                            </label>
+                        </div>
+						<!-- /ko -->
+                    </form>
+                </div>
+				<!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+                <div class="modal-footer">
+				 <button onclick="SaveR2QFavorites(event)" data-bind="click: confirm, executeOnEnter: function() { saveAddToFavorites($data) }" class="btn btn-primary fiori3-btn-primary">@Translation.Get("Msg.Save")</button>
+                    <button class="btn btn-tertiary fiori3-btn-tertiary" data-dismiss="modal" aria-hidden="true" data-bind="executeOnEnter: function() { closeAddToFavorites($data) }">@Translation.Get("Msg.Close")</button>
+                </div>
+				<!-- /ko -->
+				
+				<!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+                <div class="modal-footer">
+                    <button data-bind="click: confirm, executeOnEnter: function() { saveAddToFavorites($data) }" class="btn btn-primary fiori3-btn-primary">@Translation.Get("Msg.Save")</button>
+                    <button class="btn btn-tertiary fiori3-btn-tertiary" data-dismiss="modal" aria-hidden="true" data-bind="executeOnEnter: function() { closeAddToFavorites($data) }">@Translation.Get("Msg.Close")</button>
+                </div>
+				<!-- /ko -->
+				
+            </div>
+        </div>
+    </div>
+	
+</script>
+<script>
+function SaveR2QFavorites(event){	
+	var editfavoriteId = cpq.models.configurator.actionModule.favoriteId();
+	localStorage.setItem('editfavoriteId',editfavoriteId)
+    var productName = cpq.models.configurator.actionModule.productName;
+	localStorage.setItem('productName',productName)
+	var prod_id = cpq.models.configurator.productId()
+	localStorage.setItem('prod_id',prod_id)	
+	setTimeout(() => { 
+		cpq.server.executeScript('GS_R2Q_FAVORITES', { 'Action': "Save", productName:productName, editfavoriteId:editfavoriteId}, function (data) {
+		});
+	}, 1000);									   
+}
+
+ function R2QEditSaveFav(event){
+ sessionStorage.setItem("Favsave", '1');
+ }
+if(sessionStorage.getItem("Favsave") == '1'){
+    var hrefurl =   window.location.pathname
+	var prod_id = localStorage.getItem('prod_id')
+    if(hrefurl == '/Favorites/Favorites.aspx'){
+	sessionStorage.setItem("Favsave", '');
+	sessionStorage.setItem('editquote_number','');
+	sessionStorage.setItem('editquote_num','');									   
+	editfavoriteId=localStorage.getItem('editfavoriteId')
+	productName =localStorage.getItem('productName')
+		
+	cpq.server.executeScript('GS_R2Q_FAVORITES', { 'Action': "Save", productName:productName, editfavoriteId:editfavoriteId}, function (data) {
+	localStorage.setItem('productName','')
+	localStorage.setItem('editfavoriteId','')
+    });
+        window.location.href= "/Configurator.aspx?pid=" + prod_id;
+		localStorage.setItem('prod_id','')
+    }
+}
+function r2q_removeFav(ele){
+   var replacefavid = ele.id;
+   var favoriteId = replacefavid.replace("favoriteIcon","");
+   localStorage.setItem("favoriteId", favoriteId)
+   var productName = $(ele).closest('.image-on-hover').find('a.product-title.focus-helper').text();
+   var message = `Are you sure you want to delete ${productName} ?`; // Create the message
+    $("#deleteFavpopup .modal-body p").text(message);
+}
+function view_favfolder(ele){
+    var folderid = (ele.id).replace('catList','');
+    cpq.server.executeScript('GS_R2Q_FAVORITES', { 'Action': "View",'folderid':folderid}, function (data) {
+    $('ul.breadcrumb_ul').empty();
+    $('ul.breadcrumb_ul').append(data[4]);
+    document.getElementById('View_Fav_popup_inner').innerHTML = data[0];
+    $('#r2q_favorites').bootstrapTable({
+	data: data[1]
+	});
+	if(data[3].length != 0){
+    document.getElementById('View_popup_folder').innerHTML = data[2];
+    $('#r2q_favfolder').bootstrapTable({
+	data: data[3]
+	});
+    }else{
+        document.getElementById('View_popup_folder').innerHTML = '';
+    }
+});
+}
+
+function R2QcancelFav(){
+	sessionStorage.setItem('editquote_number','');
+	sessionStorage.setItem('editquote_num','');											  
+	var prod_id = cpq.models.configurator.productId()				   
+	window.location.href = "/Configurator.aspx?pid=" + prod_id;
+}
+cpq.events.sub("configurator:updated", function () {
+	setTimeout(function() {
+		if (sessionStorage.getItem("editquote_number") == '1') {
+			var faveditquotenumber = sessionStorage.getItem("editquote_num");
+			if (faveditquotenumber) {
+				$('.r2q_app_main .r2q_php_header .php_btnsec span').text(faveditquotenumber);
+			}
+		}
+	}, 1000);
+});
+</script>

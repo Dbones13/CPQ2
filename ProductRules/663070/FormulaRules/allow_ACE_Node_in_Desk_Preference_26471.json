@@ -1,0 +1,11 @@
+{
+    "id": 26471,
+    "condition": "[NEQ](<*VALUE(ACE Node Tower Mount Desk)*>,0)",
+    "name": "allow_ACE Node in Desk Preference",
+    "action": "<*ALLOWATTRIBUTES(Hardware Design Selection_ ACE_Node,Node Supplier_ACE1,Trusted Platform Module_TPM_ACE_desk,Additional Hard Disk ACE desk pre,Optional DVDACE desk pre,Displays_ace_desk_pre,Display Size _ACE_desk_pre,Display Supplier (ACE),Trackball (ACE),ServerLocationClusterNetwork_Group desk,ACE Node in Desk Preference)*><*SETREQUIRED(Hardware Design Selection_ ACE_Node,Node Supplier_ACE1,Trusted Platform Module_TPM_ACE_desk,Additional Hard Disk ACE desk pre,Optional DVDACE desk pre,Displays_ace_desk_pre,Display Size _ACE_desk_pre,Display Supplier (ACE),Trackball (ACE),ServerLocationClusterNetwork_Group desk,ACE Node in Desk Preference)*>\n<*xDisallowallValuesExcept(ServerLocationClusterNetwork_Group desk:<* LIST ( SELECT AttValue FROM \nClusterAttValues WHERE CAST (AttValueCode AS float) \n<= '<*CTX( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>' ) *>)*>\n[IF]([IN](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(Additional Memory ACE_desk_pre)*><*DISALLOWATTRIBUTES(Additional Memory ACE_desk_pre)*>}{<*ALLOWATTRIBUTES(Additional Memory ACE_desk_pre)*><*SETREQUIRED(Additional Memory ACE_desk_pre)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

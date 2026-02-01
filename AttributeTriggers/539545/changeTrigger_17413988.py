@@ -1,0 +1,4 @@
+[IF]([AND]([EQ](<*VALUE(FDM_Experion_PKS_Release)*>,R530),[EQ](<*VALUE(FDM_Server_Specification)*>,Workstation))){<*ALLOWVALUES(FDM_Station Node Type:STN_STD_DELL_Tower_NonRAID)*>,<*SELECTVALUE(FDM_Station Node Type:STN_STD_DELL_Tower_NonRAID)*>}[ENDIF]
+[IF]([AND]([EQ](<*VALUE(FDM_Experion_PKS_Release)*>,R530),[EQ](<*VALUE(FDM Client Stations required)*>,Yes))){<*ALLOWVALUES(FDM_Client_Station Node Type:STN_STD_DELL_Tower_NonRAID)*>,<*SELECTVALUE(FDM_Client_Station Node Type:STN_STD_DELL_Tower_NonRAID)*>}[ENDIF]
+
+[IF]([AND]([EQ](<*VALUE(FDM_Experion_PKS_Release)*>,R530),[EQ](<*VALUE(FDM_RCI_PC_required)*>,Yes))){<*ALLOWVALUES(FDM_RCI_PC_Station_Node_Type:STN_STD_DELL_Tower_NonRAID)*>,<*SELECTVALUE(FDM_RCI_PC_Station_Node_Type:STN_STD_DELL_Tower_NonRAID)*>}[ENDIF]

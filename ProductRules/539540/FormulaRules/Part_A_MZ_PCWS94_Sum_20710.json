@@ -1,0 +1,11 @@
+{
+    "id": 20710,
+    "condition": "[AND]([AND]([EQ](<*VALUE(SS_Flex_Staton _Orion_Node)*>,STN_PER_DELL_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[GT](<*VALUE(SS_Flex_Station_Qty_Orion)*>,0)),\n[AND]([EQ](<*VALUE(SS_Flex Staton  Desk Node_desk)*>,STN_PER_DELL_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell),[GT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0)))",
+    "name": "Part_A_MZ_PCWS94_Sum",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCWS94)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCWS94, <* Eval(<*VALUE(SS_Flex_Station_Qty_Orion)*>+<*VALUE(SS_Flex_Station_Qty_Desk)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

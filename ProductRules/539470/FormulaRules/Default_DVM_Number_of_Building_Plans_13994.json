@@ -1,0 +1,11 @@
+{
+    "id": 13994,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Building_Plans)*>,)",
+    "name": "Default_DVM_Number_of_Building_Plans",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Building_Plans:4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

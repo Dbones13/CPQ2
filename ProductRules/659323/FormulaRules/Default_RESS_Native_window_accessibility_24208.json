@@ -1,0 +1,11 @@
+{
+    "id": 24208,
+    "condition": "[EQ](<*VALUE(RESS_Native_window_accessibility)*>,)",
+    "name": "Default_RESS_Native_window_accessibility",
+    "action": "<*SELECTVALUE(RESS_Native_window_accessibility:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

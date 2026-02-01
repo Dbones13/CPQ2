@@ -1,0 +1,11 @@
+{
+    "id": 26038,
+    "condition": "1",
+    "name": "Labor EBR (Flex Station ES-F)",
+    "action": "[IF]([OR]([EQ](<*VALUE(Experion Backup & Restore (Flex Station ES-F))*>,Yes),[EQ](<*VALUE(Experion Backup & Restore (Flex Station ES-F)1)*>,Yes))){<*ASSIGNVALUE(Labor EBR (Flex Station ES-F):<* Eval(0<*VALUE(Flex Station Qty (0-60))*>+0<*VALUE(Additional Stations)*>+0<*VALUE(CMS Flex Station Qty 0_60)*>+0<*VALUE(DMS Flex Station Qty 0_60)*>) *>)*>}{<*ASSIGNVALUE(Labor EBR (Flex Station ES-F):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

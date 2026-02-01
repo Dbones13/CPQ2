@@ -1,0 +1,11 @@
+{
+    "id": 23037,
+    "condition": "<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>",
+    "name": "Hide_Cabinet_Hinge_Type",
+    "action": "<*DISALLOWATTRIBUTES(SerC_RG_Cabinet_Hinge_Type_Default)*>",
+    "description": "#CXCPQ-50810",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

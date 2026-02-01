@@ -1,0 +1,27 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+	
+    
+    <div class="row col-xs-12 swagger">
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#sc-labor-summary')">
+            <span>LABOR SUMMARY</span>
+            <a id="sc-labor-summary-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>  
+        <div id="sc-labor-summary-content"  >
+   
+    <!-- ko foreach: attributes -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+     
+    
+     </div>
+    </div>
+</div>
+

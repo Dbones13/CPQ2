@@ -1,0 +1,11 @@
+{
+    "id": 23377,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZUSES1,TP-ZWDTA1)",
+    "name": "3 Station Upgrade",
+    "action": "<*DISALLOWATTRIBUTES(KE_Hardware_Selection)*>",
+    "description": "TP-ZUSES1",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

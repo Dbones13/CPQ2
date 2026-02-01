@@ -1,0 +1,11 @@
+{
+    "id": 14107,
+    "condition": "1",
+    "name": "Unique FDM value",
+    "action": "<*ASSIGNVALUE(FDM System Group List:<*CTX( Container(FDM_System_Group_Cont).UniqueValues(FDM_System_Group_Name).Separator(,) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

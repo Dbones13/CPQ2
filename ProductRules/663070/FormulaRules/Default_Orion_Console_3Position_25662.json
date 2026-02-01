@@ -1,0 +1,11 @@
+{
+    "id": 25662,
+    "condition": "[EQ](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,)",
+    "name": "Default Orion Console 3Position",
+    "action": "<*ASSIGNVALUE(Orion Console 3Position Base Unit (0-20):0)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

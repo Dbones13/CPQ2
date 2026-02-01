@@ -1,0 +1,11 @@
+{
+    "id": 23713,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Staging Area Hardware and LAN Setup).GetDisplayValue )*>,)",
+    "name": "Default_Value_Staging Area Hardware and LAN Setup",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Staging Area Hardware and LAN Setup).Set(No) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/09/25",
+    "modifiedBy": "Narasimhan Chakravarthy"
+}

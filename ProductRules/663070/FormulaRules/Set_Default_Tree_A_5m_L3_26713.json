@@ -1,0 +1,11 @@
+{
+    "id": 26713,
+    "condition": "[EQ](<*VALUE(Tree A 5m cable (0-1000) L3)*>,)",
+    "name": "Set_Default_Tree_A_5m_L3",
+    "action": "<*SELECTVALUE(Tree A 5m cable (0-1000) L3:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

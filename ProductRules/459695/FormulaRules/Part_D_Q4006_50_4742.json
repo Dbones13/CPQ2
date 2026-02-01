@@ -1,0 +1,11 @@
+{
+    "id": 4742,
+    "condition": "[NEQ](<*VALUE(MX_SG_Pack_Measuring_Head_Upgrade)*>,Yes)",
+    "name": "Part_D_Q4006_50",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q4006-50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

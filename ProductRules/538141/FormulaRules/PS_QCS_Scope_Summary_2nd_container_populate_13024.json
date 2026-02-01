@@ -1,0 +1,11 @@
+{
+    "id": 13024,
+    "condition": "[EQ](<*ATTSEL(SC_QCS_Support_Center_Select)*>,1)",
+    "name": "PS_QCS_Scope_Summary_2nd_container_populate",
+    "action": "<* ExecuteScript(PS_QCS_Scope_Summary_2nd_container_populate) *>",
+    "description": "For running the PS",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

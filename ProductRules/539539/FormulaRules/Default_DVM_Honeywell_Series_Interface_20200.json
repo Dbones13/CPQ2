@@ -1,0 +1,11 @@
+{
+    "id": 20200,
+    "condition": "[EQ](<*VALUE(DVM_Honeywell_Series_Interface)*>,)",
+    "name": "Default_DVM_Honeywell_Series_Interface",
+    "action": "<*SELECTVALUE(DVM_Honeywell_Series_Interface:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23837,
+    "condition": "[AND]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,),[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[NEQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE),[NEQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,))",
+    "name": "R2Q_default_solution",
+    "action": "<*SELECTVALUE(SerC_IO_Mounting_Solution:Cabinet)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

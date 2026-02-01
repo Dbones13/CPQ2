@@ -1,0 +1,10 @@
+{
+    "id": 60,
+    "condition": "Supervisory Network Type:FTE",
+    "name": "Default_FTE",
+    "action": "Select One LAN Type : FTE",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

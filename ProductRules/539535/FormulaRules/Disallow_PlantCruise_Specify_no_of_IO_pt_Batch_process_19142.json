@@ -1,0 +1,11 @@
+{
+    "id": 19142,
+    "condition": "[NEQ](<*VALUE(PlantCruise_Need_Experion_Batch_Points)*>,Yes)",
+    "name": "Disallow_PlantCruise_Specify_no_of_IO_pt_Batch_process",
+    "action": "<*DISALLOWATTRIBUTES(PlantCruise_Specify_no_of_IO_pt_Batch_process)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

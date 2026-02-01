@@ -1,0 +1,11 @@
+{
+    "id": 26053,
+    "condition": "[EQ](<*VALUE(Experion Backup & Restore (Console))*>,)",
+    "name": "EBR_default7",
+    "action": "<*SELECTVALUE(Experion Backup & Restore (Console):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

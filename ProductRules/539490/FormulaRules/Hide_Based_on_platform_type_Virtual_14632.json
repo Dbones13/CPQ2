@@ -1,0 +1,11 @@
+{
+    "id": 14632,
+    "condition": "[EQ](<*VALUE(MX_Platform_Type)*>,Virtual)",
+    "name": "Hide_Based_on_platform_type_Virtual",
+    "action": "<*DISALLOWATTRIBUTES(MX_number_of_operator_station)*><*DISALLOWATTRIBUTES(MX_Operation_heading)*><*DISALLOWATTRIBUTES(MX_Server_Type)*><*DISALLOWATTRIBUTES(MX_Operator_station_transpose)*><*CTX( Container(MX_Operator_station_transpose).Rows.Clear )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

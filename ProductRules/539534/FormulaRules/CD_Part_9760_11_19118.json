@@ -1,0 +1,11 @@
+{
+    "id": 19118,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Calcoil PRO),[EQ](<*VALUE(MX_CD_CalcoilPRO_Type)*>,Off Machine Power modules),[EQ](<*VALUE(MX_CD_Temperature)*>,High Temperature))",
+    "name": "CD_Part_9760_11",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9760-11)*><*SETATVQTY(MX_CD_Bom_Parts:9760-11, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

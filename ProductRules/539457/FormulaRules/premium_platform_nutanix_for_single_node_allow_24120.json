@@ -1,0 +1,11 @@
+{
+    "id": 24120,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[GT](<*VALUE(No of Nutanix Single Node Clusters in the network)*>,0))",
+    "name": "premium_platform_nutanix_for_single_node_allow",
+    "action": "<*ALLOWATTRIBUTES(Header_11_close,Header_11_open,Virtualization_Single_Node_Cluster_Conf_transpose)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

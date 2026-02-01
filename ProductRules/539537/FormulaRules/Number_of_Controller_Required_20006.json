@@ -1,0 +1,11 @@
+{
+    "id": 20006,
+    "condition": "1",
+    "name": "Number of Controller Required",
+    "action": "<*ASSIGNVALUE(SerC_CG_HIVE_Number_of_Controller_Required:<* Eval(0-Int(0-(((2*<*VALUE(SerC_CG_Control_HIVE_Availability_Level_required)*>))+(2*<*VALUE(SerC_CG_Number_of_Redundant_HIVE_Control_App)*>)+((<*VALUE(SerC_CG_Number_of_HIVE_Control_Applications(HCA))*>+<*VALUE(SerC_CG_Number_of_Extra_HIVE_Control_Applications)*>)-<*VALUE(SerC_CG_Number_of_Redundant_HIVE_Control_App)*>))/2)) *>)*>",
+    "description": "CXCPQ-51943",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

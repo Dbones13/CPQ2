@@ -1,0 +1,11 @@
+{
+    "id": 12239,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[AND]([EQ](<*CTX ( Quote.CustomField(EGAP_Proposal_Type) )*>,Firm),[OR]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Experion SCADA),[EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Serial Interface))))",
+    "name": "Hide_Total number of Process points for all the controllers (If PCDI connection)",
+    "action": "<*DISALLOWATTRIBUTES(ELEPIU_Total_number_of_Process_points_controllers)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

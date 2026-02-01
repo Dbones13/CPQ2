@@ -1,0 +1,11 @@
+{
+    "id": 15092,
+    "condition": "[EQ](<*VALUE(MXP_AutoScan)*>,)",
+    "name": "Default_AutoScan",
+    "action": "<*SELECTVALUE(MXP_AutoScan:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

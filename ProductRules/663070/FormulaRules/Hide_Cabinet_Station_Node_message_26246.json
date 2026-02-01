@@ -1,0 +1,11 @@
+{
+    "id": 26246,
+    "condition": "[NOT]([AND]([OR]([EQ](<*VALUE(Experion Software Release)*>,R511),[EQ](<*VALUE(Experion Software Release)*>,R510),[EQ](<*VALUE(Experion Software Release)*>,R520)),[OR]([GT](<*VALUE(CMS Flex Station Qty 0_60)*>,0),[GT](<*VALUE(CMS Console Station Qty 0_20)*>,0),[GT](<*VALUE(CMS Console Station Extension Qty 0_15)*>,0),[GT](<*VALUE(CMS TPS Station Qty 0_20)*>,0))))",
+    "name": "Hide_Cabinet_Station_Node_message",
+    "action": "<*DISALLOWATTRIBUTES(Cabinet_Statioan_Node_message)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

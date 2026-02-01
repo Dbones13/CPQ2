@@ -1,0 +1,11 @@
+{
+    "id": 13034,
+    "condition": "[EQ](<*CTX ( Container(SC_MSID_Container).SelectedRowsIndexes.Count )*>,<*CTX ( Container(SC_MSID_Container).Rows.GetCount )*>)",
+    "name": "Update_Model_Msid_SelectAll",
+    "action": "<* ExecuteScript(PS_Update_Model_Msid_SelectAll) *>",
+    "description": "Execute \"PS_Update_Model_Msid_SelectAll\" if row count matches selected rows count of MSID cont.",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

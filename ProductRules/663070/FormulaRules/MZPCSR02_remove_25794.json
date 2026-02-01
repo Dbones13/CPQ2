@@ -1,0 +1,11 @@
+{
+    "id": 25794,
+    "condition": "[EQ](<*VALUE(MZ_PCSR02 qnt)*>,0)",
+    "name": "MZ-PCSR02 remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCSR02)*><* DoResetAtt *>",
+    "description": "CXCPQ-37559",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

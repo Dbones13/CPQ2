@@ -1,0 +1,11 @@
+{
+    "id": 15120,
+    "condition": "[EQ](<*VALUE(MXP_Strip_Patch_Coating_Software)*>,)",
+    "name": "Default_Strip_Patch_Coating_Software",
+    "action": "<*SELECTVALUE(MXP_Strip_Patch_Coating_Software:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

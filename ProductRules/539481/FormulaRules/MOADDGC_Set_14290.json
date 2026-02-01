@@ -1,0 +1,11 @@
+{
+    "id": 14290,
+    "condition": "[GT](<* IsNull(<*VALUE(MIQ_HowManyStationsHave_GCs)*>,0)*>,0)",
+    "name": "MO-ADDGC Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:MO-ADDGC)*>\n<*SETATVQTY(MIQ_PART_SUMMARY:MO-ADDGC, <*VALUE(MIQ_HowManyStationsHave_GCs)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-50830",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20063,
+    "condition": "[AND]([NOT](<*ISSELECTED(SerC_CG_C300_Controller_Module_Type.C300(PCNT02))*>),[NOT](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>))",
+    "name": "Show Controller Required Values",
+    "action": "<*ALLOWVALUES(SerC_CG_Type_of_Controller_Required:Control HIVE - Physical,SerC_CG_Type_of_Controller_Required:Control HIVE - Virtual)*>",
+    "description": "#CXCPQ-50260",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

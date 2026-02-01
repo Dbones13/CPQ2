@@ -1,0 +1,11 @@
+{
+    "id": 18362,
+    "condition": "[EQ](<*VALUE(MXP_Mechanical_Shutter_Indicator)*>,Yes)",
+    "name": "Part_A_3_4203_SI",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-4203-SI)*><*SETATVQTY(MXP_SE_Bom_Parts:3-4203-SI,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13647,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B),[GT](<*CTX( Container(Virtualization_cluster_transpose).Sum(Virtualization_Number_of_B_VxRail_E660_Servers) )*>,0),[EQ](<*VALUE(Virtualization_Warranty_Extension)*>,7 Years),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVW02",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVW02)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVW02,<*CTX( Container(Virtualization_cluster_transpose).Sum(Virtualization_Number_of_B_VxRail_E660_Servers) )*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

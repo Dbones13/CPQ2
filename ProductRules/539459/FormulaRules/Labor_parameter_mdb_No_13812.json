@@ -1,0 +1,11 @@
+{
+    "id": 13812,
+    "condition": "[OR]([EQ](<*VALUE(Labor_Marshalling_Database)*>,No),[EQ](<*VALUE(Labor_Marshalling_Database)*>,))",
+    "name": "Labor_parameter_mdb_No",
+    "action": "<*ASSIGNVALUE(Labor_parameter_mdb:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Pavan Koganty"
+}

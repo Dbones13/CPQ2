@@ -1,0 +1,11 @@
+{
+    "id": 24084,
+    "condition": "[NOT]([GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX05)*>,0))",
+    "name": "Part_DISS_EP_VMP16P",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VMP16P)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25903,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Orion Console Center Ext Auxil Equip Unit (0-40))*>,0),[EQ](<*VALUE(Turret location in Extended Auxil Equip Unit)*>,Right),[OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Center Ext Auxil Equip Unit (0-40))*>,0),[NEQ](<*VALUE(Orion Console Turret Type)*>,None)))",
+    "name": "MP-OCXCD1-300_remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCXCD1-300)*><* DoResetAtt *>",
+    "description": "CXCPQ-39371",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

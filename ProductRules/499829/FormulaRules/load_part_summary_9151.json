@@ -1,0 +1,11 @@
+{
+    "id": 9151,
+    "condition": "1",
+    "name": "load_part_summary",
+    "action": "<*CTX( Container(Trace_Software_Added_Parts_Common_Container).LoadKeys(PartNumber).Load(select '<*eval(Replace(\"<*VALUE(Trace_Software_Parts_Summary_PN)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "",
+    "rank": "10000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

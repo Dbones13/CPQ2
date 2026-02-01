@@ -1,0 +1,11 @@
+{
+    "id": 12902,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_For_Renewal",
+    "action": "<*DISALLOWATTRIBUTES(SC_MES_Search_Model,SC_MES_Search_Model_Button)*><*CTX ( Container(SC_MES_Models).Column(Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_MES_Models).Column(Unit Price).SetPermission(Hidden) )*><*CTX ( Container(SC_MES_Models).Column(List Price).SetPermission(Hidden) )*><*CTX ( Container(SC_MES_Models_Scope).Column(Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_MES_Models_Scope).Column(Unit_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_MES_Models_Scope).Column(List_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_MES_Invalid_Models).Column(Quantity).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

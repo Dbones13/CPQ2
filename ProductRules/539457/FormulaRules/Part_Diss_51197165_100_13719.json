@@ -1,0 +1,11 @@
+{
+    "id": 13719,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<* Eval(<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*> + <*VALUE(Virtualization_Number_of_R640XL_Standard_Servers)*>  + <*VALUE(Virtualization_Number_R740XL_Performance_A_Servers)*> + <*VALUE(Virtualization_Number_R740XL_Performance_B_Servers)*> ) *>,0),[NEQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[NEQ](<*VALUE(Virtualization_Cabinet_Keylock_Type)*>,Standard))",
+    "name": "Part_Diss_51197165_100",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:51197165-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

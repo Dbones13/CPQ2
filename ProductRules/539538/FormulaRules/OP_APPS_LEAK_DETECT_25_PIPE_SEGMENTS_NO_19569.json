@@ -1,0 +1,11 @@
+{
+    "id": 19569,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS Op Apps Leak Detect, 25 Pipe Segments)*>,Yes))",
+    "name": "OP APPS LEAK DETECT 25 PIPE SEGMENTS NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-APLP25)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24193,
+    "condition": "[EQ](<*VALUE(RESS_Server_Node_Type)*>,)",
+    "name": "Default_RESS_Server_Node_Type",
+    "action": "<*SELECTVALUE(RESS_Server_Node_Type:SVR_PER_DELL_Rack_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

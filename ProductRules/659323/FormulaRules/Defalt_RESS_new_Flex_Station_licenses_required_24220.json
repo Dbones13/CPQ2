@@ -1,0 +1,11 @@
+{
+    "id": 24220,
+    "condition": "[EQ](<*VALUE(RESS_new_Flex_Station_licenses_required)*>,)",
+    "name": "Defalt_RESS_new_Flex_Station_licenses_required",
+    "action": "<*ASSIGNVALUE(RESS_new_Flex_Station_licenses_required:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

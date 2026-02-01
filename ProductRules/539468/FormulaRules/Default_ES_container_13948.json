@@ -1,0 +1,11 @@
+{
+    "id": 13948,
+    "condition": "[EQ](<*CTX( Container(ES_Group).Rows.GetCount )*>,0)",
+    "name": "Default_ES_container",
+    "action": "<*CTX( Container(ES_Group).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

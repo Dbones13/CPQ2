@@ -1,0 +1,11 @@
+{
+    "id": 14576,
+    "condition": "[EQ](<*VALUE(MSASE_Total_Number_of_Analysers_require_for_all_Systems_(1-300))*>,)",
+    "name": "Default Total Number of Analysers require for all Systems (1-300)",
+    "action": "<*ASSIGNVALUE(MSASE_Total_Number_of_Analysers_require_for_all_Systems_(1-300):1)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

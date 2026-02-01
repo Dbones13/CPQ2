@@ -1,0 +1,11 @@
+{
+    "id": 19861,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Hide_Enhanced_Function",
+    "action": "<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(Header_22_open,C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont,Header_22_close)*>",
+    "description": "CXCPQ-37808",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

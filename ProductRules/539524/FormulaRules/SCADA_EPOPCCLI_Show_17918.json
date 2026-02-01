@@ -1,0 +1,11 @@
+{
+    "id": 17918,
+    "condition": "[GT](<*CTX( Container(Modbus/OPC Interfaces).Row(6).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-OPCCLI_Show",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-OPCCLI)*><*SETATVQTY(SCADA_BOM_Items:EP-OPCCLI, 1)*><* DoResetAtt *>",
+    "description": "Add-EP-OPCCLI",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

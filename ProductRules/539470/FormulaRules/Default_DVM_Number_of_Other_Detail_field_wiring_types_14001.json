@@ -1,0 +1,11 @@
+{
+    "id": 14001,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Other_Detail_field_wiring_types)*>,)",
+    "name": "Default_DVM_Number_of_Other_Detail_field_wiring_types",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Other_Detail_field_wiring_types:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

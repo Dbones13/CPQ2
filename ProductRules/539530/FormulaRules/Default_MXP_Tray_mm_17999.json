@@ -1,0 +1,11 @@
+{
+    "id": 17999,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow),[EQ](<*VALUE(MXP_How_many_trays)*>,0))",
+    "name": "Default_MXP_Tray_mm",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Tray_mm)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

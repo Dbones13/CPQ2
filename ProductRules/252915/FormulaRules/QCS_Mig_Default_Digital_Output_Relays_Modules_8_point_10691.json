@@ -1,0 +1,11 @@
+{
+    "id": 10691,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_Digital_Output_Relays_Modules_8_point)*>,))",
+    "name": "QCS_Mig_Default_Digital_Output_Relays_Modules_8_point",
+    "action": "<*ASSIGNVALUE(QCS_Mig_Digital_Output_Relays_Modules_8_point:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

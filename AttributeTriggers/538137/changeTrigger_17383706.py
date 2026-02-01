@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(SC_Renewal_check:3)*>

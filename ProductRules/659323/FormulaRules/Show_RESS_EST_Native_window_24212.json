@@ -1,0 +1,11 @@
+{
+    "id": 24212,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(RESS_System_Required)*>,Yes))",
+    "name": "Show_RESS_EST_Native_window",
+    "action": "<*ALLOWATTRIBUTES(RESS_EST_Native_window)*><*SETREQUIRED(RESS_EST_Native_window)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

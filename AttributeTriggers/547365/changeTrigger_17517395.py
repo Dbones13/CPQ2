@@ -1,0 +1,1 @@
+<*CTX( Container(CN900_Labor_Details).Row(1).Column(CN900_Ges_Location_Labour).Set(<*VALUECODE(Default_Ges_Location)*>) )*>

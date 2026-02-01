@@ -1,0 +1,11 @@
+{
+    "id": 17699,
+    "condition": "1",
+    "name": "Cabinet_Q_Visibility2",
+    "action": "[IF]([EQ](<*CTX( Container(SM_CG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>,Universal Marshalling)){<*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Column(DI_SIL1_Relay_5K_resistor_Adapter_UMC).SetPermission(Editable) )*>}{<*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Column(DI_SIL1_Relay_5K_resistor_Adapter_UMC).SetPermission(Hidden) )*><*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Row(1).Column(DI_SIL1_Relay_5K_resistor_Adapter_UMC).Set(No) )*>}[ENDIF]\n\n[IF]([EQ](<*CTX( Container(SM_CG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>,Universal Marshalling)){<*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Column(DI/DO_SIL2/3_Relay_Adapter_UMC).SetPermission(Editable) )*>}{<*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Column(DI/DO_SIL2/3_Relay_Adapter_UMC).SetPermission(Hidden) )*><*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Row(1).Column(DI/DO_SIL2/3_Relay_Adapter_UMC).Set(No) )*> }[ENDIF]\n\n[IF]([EQ](<*CTX( Container(SM_CG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>,Universal Marshalling)){<*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Column(DI_NAMUR_proximity_Switches_Adapter_UMC).SetPermission(Editable) )*>}{<*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Column(DI_NAMUR_proximity_Switches_Adapter_UMC).SetPermission(Hidden) )*><*CTX( Container(SM_CG_Cabinet_Details_Cont_Right).Row(1).Column(DI_NAMUR_proximity_Switches_Adapter_UMC).Set(No) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

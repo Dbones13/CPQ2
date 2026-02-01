@@ -1,0 +1,1 @@
+Product.Attr('HS_Existing_System_Release').Access = AttributeAccess.ReadOnly

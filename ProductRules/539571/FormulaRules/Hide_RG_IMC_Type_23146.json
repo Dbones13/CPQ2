@@ -1,0 +1,11 @@
+{
+    "id": 23146,
+    "condition": "[AND]([EQ](<*VALUE(SerC_RG_Cabinet_Access)*>,Single Access),[OR]([EQ](<*VALUE(SerC_RG_Cabinet_Type)*>,Normal Cabinet),[EQ](<*VALUE(SerC_RG_Cabinet_Type)*>,Alternate Cabinet)),[EQ](<*VALUE(SerC_RG_Integrated_Marshalling_Cabinet)*>,Yes))",
+    "name": "Hide_RG_IMC_Type",
+    "action": "<*DISALLOWVALUES(SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type:Front To Back)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "24/10/24",
+    "modifiedBy": "Vijaya Kumar"
+}

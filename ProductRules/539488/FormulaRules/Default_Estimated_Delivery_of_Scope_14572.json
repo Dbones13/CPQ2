@@ -1,0 +1,11 @@
+{
+    "id": 14572,
+    "condition": "[EQ](<*VALUE(MSASE_Estimated_Delivery_of_Scope_(16-500))*>,)",
+    "name": "Default Estimated Delivery of Scope",
+    "action": "<*ASSIGNVALUE(MSASE_Estimated_Delivery_of_Scope_(16-500):26)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

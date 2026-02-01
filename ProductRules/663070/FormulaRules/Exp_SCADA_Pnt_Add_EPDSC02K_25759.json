@@ -1,0 +1,11 @@
+{
+    "id": 25759,
+    "condition": "[GT](<*VALUE(Experion SCADA Points (0 - 300000))*>,1999)",
+    "name": "Exp_SCADA_Pnt_Add_EPDSC02K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-DSC02K)*>[IF]([GT](<*eval(INT(Fix((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000-(INT(Fix((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000)))*5000)/2000)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DSC02K, <*eval(INT(Fix((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000-(INT(Fix((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000)))*5000)/2000)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP-DSC02K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

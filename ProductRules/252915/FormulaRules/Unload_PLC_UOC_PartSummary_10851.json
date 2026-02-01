@@ -1,0 +1,11 @@
+{
+    "id": 10851,
+    "condition": "[AND]([EQ](<*VALUE(PLC_UOC_BOM_Items)*>,),[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC))",
+    "name": "Unload_PLC_UOC_PartSummary",
+    "action": "<*CTX ( Container(MSID_Third_Party_PLC_Added_Parts_Common_Container).Rows.Clear )*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

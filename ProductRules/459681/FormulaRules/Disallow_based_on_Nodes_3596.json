@@ -1,0 +1,11 @@
+{
+    "id": 3596,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A1)*>,<*ISSELECTED(Identifiers.A2)*>,<*ISSELECTED(Identifiers.A4)*>,<*ISSELECTED(Identifiers.A5)*>,<*ISSELECTED(Identifiers.A6)*>,<*ISSELECTED(Identifiers.A7)*>,<*ISSELECTED(Identifiers.A8)*>,<*ISSELECTED(Identifiers.A18)*>,<*ISSELECTED(Identifiers.A19)*>,<*ISSELECTED(Identifiers.A20)*>,<*ISSELECTED(Identifiers.A22)*>,<*ISSELECTED(Identifiers.A23)*>,<*ISSELECTED(Identifiers.A24)*>,<*ISSELECTED(Identifiers.A25)*>,<*ISSELECTED(Identifiers.A27)*>,<*ISSELECTED(Identifiers.A28)*>,<*ISSELECTED(Identifiers.A30)*>,<*ISSELECTED(Identifiers.A31)*>,<*ISSELECTED(Identifiers.A32)*>,<*ISSELECTED(Identifiers.A33)*>,<*ISSELECTED(Identifiers.A34)*>,<*ISSELECTED(Identifiers.A35)*>,<*ISSELECTED(Identifiers.A39)*>,<*ISSELECTED(Identifiers.A40)*>,<*ISSELECTED(Identifiers.A42)*>,<*ISSELECTED(Identifiers.A44)*>,<*ISSELECTED(Identifiers.A46)*>)",
+    "name": "Disallow based on Nodes",
+    "action": "<*DISALLOWATTRIBUTES(Devices)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

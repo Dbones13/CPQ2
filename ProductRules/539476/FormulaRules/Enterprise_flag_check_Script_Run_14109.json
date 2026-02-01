@@ -1,0 +1,11 @@
+{
+    "id": 14109,
+    "condition": "[EQ](<*VALUE(Enterprise_flag_check)*>,True)",
+    "name": "Enterprise_flag_check_Script_Run",
+    "action": "<* ExecuteScript(PS_Exp_FDM_System_Data_Flow_To_Child) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

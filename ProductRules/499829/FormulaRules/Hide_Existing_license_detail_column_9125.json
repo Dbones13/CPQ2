@@ -1,0 +1,11 @@
+{
+    "id": 9125,
+    "condition": "[AND]([EQ](<*VALUE(Trace_Software_What_is_the_scope)*>,New License),[EQ](<*CTX( Container(Trace_Software_License_Configuration_transpose).Rows.GetCount )*>,2))",
+    "name": "Hide Existing license detail column",
+    "action": "<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Remove)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 3602,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A7)*>,<*ISSELECTED(Identifiers.A8)*>,<*ISSELECTED(Identifiers.A10)*>)",
+    "name": "DNP3_Interfaces_NetworkTypes",
+    "action": "<*DISALLOWVALUES(Network Type:RS232,Network Type:RS485)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

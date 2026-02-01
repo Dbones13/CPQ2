@@ -1,0 +1,11 @@
+{
+    "id": 10773,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[NEQ](<*VALUE(LSS_Experion_UOC_PROFINET_Usage_Licenses)*>,))",
+    "name": "BOM_PLC_UOC_TC-PROF01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:TC-PROF01)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:TC-PROF01, <*VALUE(LSS_Experion_UOC_PROFINET_Usage_Licenses)*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

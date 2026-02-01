@@ -1,0 +1,11 @@
+{
+    "id": 23020,
+    "condition": "[GT](0<*VALUE(C300_RG_UPC_LLAI_Count)*>,2)",
+    "name": "Disallow_C300_RG_UPC_FTA_Values",
+    "action": "<*DISALLOWALLVALUESEXCEPT(C300_RG_UPC_FTA:X)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

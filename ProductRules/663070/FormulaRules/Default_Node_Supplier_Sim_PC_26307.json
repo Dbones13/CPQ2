@@ -1,0 +1,11 @@
+{
+    "id": 26307,
+    "condition": "[EQ](<*VALUE(Node Supplier (Sim PC))*>,)",
+    "name": "Default_Node Supplier (Sim PC)",
+    "action": "<*SELECTVALUE(Node Supplier (Sim PC):Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

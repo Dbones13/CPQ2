@@ -1,0 +1,11 @@
+{
+    "id": 23844,
+    "condition": "1",
+    "name": "SM_SC_Universal_Safety_Cabinet_visibility",
+    "action": "[IF]([AND]([EQ](<*CTX( Container(SM_RG_ATEX Compliance_and_Enclosure_Type_Cont).Row(1).Column(Enclosure_Type).GetDisplayValue )*>,Universal Safety Cab-1.3M),[EQ](<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Row(1).Column(Specify_Identifier_Modifier_for_SM_SC_Universal_Safety_Cabinet).GetDisplayValue )*>,No))){<*ALLOWATTRIBUTES(SM_SC_Universal_Safety_Cab_1_3M_Details_cont)*>}{<*DISALLOWATTRIBUTES(SM_SC_Universal_Safety_Cab_1_3M_Details_cont)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

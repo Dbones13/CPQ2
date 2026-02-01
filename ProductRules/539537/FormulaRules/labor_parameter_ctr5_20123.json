@@ -1,0 +1,11 @@
+{
+    "id": 20123,
+    "condition": "1",
+    "name": "labor_parameter_ctr5",
+    "action": "[IF]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual)){[IF]([EQ](<*VALUE(SerC_CG_Controller_Type)*>,Redundant)){<*ASSIGNVALUE(labor_parameter_ctr5:<* Eval(0-INT(0-(<* Eval((0<*CTX (Container(Series_C_CG_Part_Summary_Cont).Sum(C300_ctrparameter2) )*>)/2) *>))) *>)*>}{<*ASSIGNVALUE(labor_parameter_ctr5:0<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_ctrparameter2) )*>)*>}[ENDIF]}{<*ASSIGNVALUE(labor_parameter_ctr5:0)*>}[ENDIF]",
+    "description": "CXCPQ-55250",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

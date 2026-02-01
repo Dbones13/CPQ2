@@ -1,0 +1,11 @@
+{
+    "id": 18012,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CalcoilPRO_Type)*>,On Machine Power modules),[NEQ](<*VALUE(MXP_Temperature)*>,High Temperature))",
+    "name": "Show_Temperature",
+    "action": "<*DISALLOWATTRIBUTES(MXP_kW)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

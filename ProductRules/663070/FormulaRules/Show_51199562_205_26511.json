@@ -1,0 +1,11 @@
+{
+    "id": 26511,
+    "condition": "<*ISSELECTED(Power Cord Type.Italy)*>",
+    "name": "Show_51199562_205",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51199562-205)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51199562-205, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38336",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

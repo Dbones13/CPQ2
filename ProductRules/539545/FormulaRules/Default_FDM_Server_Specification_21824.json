@@ -1,0 +1,11 @@
+{
+    "id": 21824,
+    "condition": "[EQ](<*VALUE(FDM_Server_Specification)*>,)",
+    "name": "Default_FDM_Server_Specification",
+    "action": "<*SELECTVALUE(FDM_Server_Specification:Server)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

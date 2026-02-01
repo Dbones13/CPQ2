@@ -1,0 +1,11 @@
+{
+    "id": 25932,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),<*ISSELECTED(Orion Console Membrane KB Type.Operator Touch Panel)*>)",
+    "name": "TP-OTP231_S3",
+    "action": "<*ASSIGNVALUE(TP-OTP231_s3:<* Eval((2*<*VALUE(Orion Console 2Position Base Unit (0-20))*>)+(3*<*VALUE(Orion Console 3Position Base Unit (0-20))*>)) *>)*>",
+    "description": "CXCPQ-38909",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13020,
+    "condition": "1",
+    "name": "Hide_Dropdown_SC_QCS_Number_of_Machines",
+    "action": "[IF]([EQ](<*VALUE(SC_Product_Type)*>,Renewal)){<*ALLOWVALUES(SC_QCS_Number of Machines:0)*>}{<*DISALLOWVALUES(SC_QCS_Number of Machines:0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

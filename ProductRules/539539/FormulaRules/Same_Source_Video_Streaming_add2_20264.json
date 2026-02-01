@@ -1,0 +1,11 @@
+{
+    "id": 20264,
+    "condition": "[EQ](<*VALUE(DVM_Same_Source_Video_Streaming)*>,Yes)",
+    "name": "Same Source Video Streaming_add2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMSSS)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary: EP-DVMSSS,1)*><* DoResetAtt *>",
+    "description": "cxcpq-45734",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

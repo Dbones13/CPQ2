@@ -1,0 +1,11 @@
+{
+    "id": 18196,
+    "condition": "[EQ](<*VALUE(MXP_Air_gap_compensation)*>,)",
+    "name": "Default_MXP_Air_gap_compensation",
+    "action": "<*SELECTVALUE(MXP_Air_gap_compensation:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

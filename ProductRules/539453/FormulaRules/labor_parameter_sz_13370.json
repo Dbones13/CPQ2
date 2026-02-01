@@ -1,0 +1,11 @@
+{
+    "id": 13370,
+    "condition": "1",
+    "name": "labor_parameter_sz",
+    "action": "<*ASSIGNVALUE(labor_parameter_sz:[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,50)){1}{[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,200)){2}{5}[ENDIF]}[ENDIF])*>",
+    "description": "If (sd+md+cd+vcd+rd) <= 50, SZ = 1,\nelse if (sd+md+cd+vcd+rd) > 50 and (sd+md+cd+vcd+rd) <= 200, SZ = 2\nelse SZ = 5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

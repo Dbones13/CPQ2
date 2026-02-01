@@ -1,0 +1,11 @@
+{
+    "id": 26576,
+    "condition": "[EQ](<*VALUE(DMS Console Station Extension Hardware Selection)*>,)",
+    "name": "DMS Console Station Extension Hardware Selection def",
+    "action": "<*SELECTVALUE(DMS Console Station Extension Hardware Selection:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

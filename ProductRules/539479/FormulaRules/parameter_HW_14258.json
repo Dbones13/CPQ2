@@ -1,0 +1,11 @@
+{
+    "id": 14258,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "parameter_HW",
+    "action": "<*ASSIGNVALUE(parameter_HW:[IF]([EQ](<*VALUE(C300_Implementation_Methodology)*>,Non-Standard Build Estimate)){<*Eval((1-[IF]([GT](<*VALUE(C300_Exp_Labor_Uni_qntCG)*>,0)){1}{0}[ENDIF]*0.25)*((1.2*[IF]([GT](<*VALUE(C300_Exp_Labor_Uni_qntmarsh)*>,0)){0.9}{1}[ENDIF]*(0<*VALUE(Labor_parameter_wio)*>/ 200+20*<*VALUE(C300_Labor_parameter_ffb)*>/(<*VALUE(C300_Labor_parameter_ffb)*>+1)+12*0<*VALUE(C300_Labor_parameter_is)*>/(0<*VALUE(C300_Labor_parameter_is)*> + 1)+2 * <*VALUE(C300_Labor_parameter_A)*>/ (<*VALUE(C300_Labor_parameter_A)*> + 1)+(<*VALUE(C300_Labor_parameter_iof)*> + 3 * <*VALUE(Labor_parameter_mdb)*>)*(<*VALUE(C300_Labor_parameter_iof)*> + 3 * 0<*VALUE(Labor_parameter_mdb)*>))*0.66)))*>}{<*Eval((1-[IF]([GT](<*VALUE(C300_Exp_Labor_Uni_qntCG)*>,0)){1}{0}[ENDIF]*0.25)*((1.2*[IF]([GT](<*VALUE(C300_Exp_Labor_Uni_qntmarsh)*>,0)){0.9}{1}[ENDIF]*(0<*VALUE(Labor_parameter_wio)*>/ 200+20*<*VALUE(C300_Labor_parameter_ffb)*>/(<*VALUE(C300_Labor_parameter_ffb)*>+1)+12*0<*VALUE(C300_Labor_parameter_is)*>/(0<*VALUE(C300_Labor_parameter_is)*> + 1)+2 * <*VALUE(C300_Labor_parameter_A)*>/ (<*VALUE(C300_Labor_parameter_A)*> + 1)+(<*VALUE(C300_Labor_parameter_iof)*> + 3 * <*VALUE(Labor_parameter_mdb)*>)*(<*VALUE(C300_Labor_parameter_iof)*> + 3 * 0<*VALUE(Labor_parameter_mdb)*>))*0.66)))*>}[ENDIF])*>",
+    "description": "CXCPQ-43531",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

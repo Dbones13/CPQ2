@@ -1,0 +1,11 @@
+{
+    "id": 19636,
+    "condition": "[OR]([EQ](<*VALUE(Exp HS Specify Total Care Pack)*>,Standard),[EQ](<*VALUE(Exp HS Specify Total Care Pack)*>,Enhanced))",
+    "name": "Software Support YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-ASF1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

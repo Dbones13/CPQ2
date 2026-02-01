@@ -1,0 +1,11 @@
+{
+    "id": 13021,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "UI_QCS_One_Time_Price_Hide_Rule",
+    "action": "<*DISALLOWATTRIBUTES(UI_QCS_One_Time_Price)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

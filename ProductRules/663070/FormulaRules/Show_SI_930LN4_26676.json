@@ -1,0 +1,11 @@
+{
+    "id": 26676,
+    "condition": "<*ISSELECTED(Default Switch.SW_L2_NRT_CISCO_24PT_REDPS)*>\n",
+    "name": "Show_SI_930LN4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:SI-930LN4)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:SI-930LN4, 2)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

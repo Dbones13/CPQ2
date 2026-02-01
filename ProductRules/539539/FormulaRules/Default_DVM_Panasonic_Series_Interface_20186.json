@@ -1,0 +1,11 @@
+{
+    "id": 20186,
+    "condition": "[EQ](<*VALUE(DVM_Panasonic_Series_Interface)*>,)",
+    "name": "Default_DVM_Panasonic_Series_Interface",
+    "action": "<*SELECTVALUE(DVM_Panasonic_Series_Interface:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

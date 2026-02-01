@@ -1,0 +1,11 @@
+{
+    "id": 21904,
+    "condition": "[NEQ](<*VALUE(FDM_Release)*>,R520)",
+    "name": "Hide_FDM_HART_IP_Downlink_License",
+    "action": "<*DISALLOWATTRIBUTES(FDM HART IP Downlink License (0-1))*>",
+    "description": "CXCPQ-48543",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

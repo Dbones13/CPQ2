@@ -1,0 +1,1 @@
+<*CTX( Container(Location_Cluster_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace("<*VALUE(Location_Cluster_Part_Summary)*>",", ","' as PartNumber UNION SELECT '"))*>' as PartNumber   ) )*>

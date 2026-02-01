@@ -1,0 +1,11 @@
+{
+    "id": 23659,
+    "condition": "1",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-RSIB_Yes",
+    "action": "[IF]([AND](<*ISSELECTED(Secure Remote Access.Yes)*>,<*ISSELECTED(Repository Server Required.Yes)*>)){<*SELECTVALUES(Repository Server Required BOM:CS-MSS-RSI-ANL|CS-MSS-RSIB)*><*SETATVQTY(Repository Server Required BOM:CS-MSS-RSIB, 1)*><*SETATVQTY(Repository Server Required BOM:CS-MSS-RSI-ANL,1)*>}{<*RESETATTRIBUTE(Repository Server Required BOM)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

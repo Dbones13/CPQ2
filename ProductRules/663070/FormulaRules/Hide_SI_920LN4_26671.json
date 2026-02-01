@@ -1,0 +1,11 @@
+{
+    "id": 26671,
+    "condition": "[NOT](<*ISSELECTED(Default Switch.SW_L2_NRT_CISCO_24PT)*>)\n",
+    "name": "Hide_SI_920LN4",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:SI-920LN4)*><* DoResetAtt *>\n",
+    "description": "CXCPQ-118467",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

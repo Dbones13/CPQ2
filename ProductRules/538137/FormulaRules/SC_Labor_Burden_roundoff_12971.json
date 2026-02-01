@@ -1,0 +1,11 @@
+{
+    "id": 12971,
+    "condition": "[NEQ](<*VALUE(SC_Labor_Burden_for_Hr_Day)*>,)",
+    "name": "SC_Labor_Burden_roundoff",
+    "action": "<*ASSIGNVALUE(SC_Labor_Burden_for_Hr_Day:<* Eval(<* Round ( <*VALUE(SC_Labor_Burden_for_Hr_Day)*>, 2) *>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

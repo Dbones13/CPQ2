@@ -1,0 +1,11 @@
+{
+    "id": 8135,
+    "condition": "[NEQ](<*VALUE(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC)*>,)",
+    "name": "Disallow_System_software_release",
+    "action": "[IF]([NEQ](<*VALUE(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC)*>,PLC)){<*DISALLOWATTRIBUTES(LSS_PLC_Number_of_CDA_based_Controller_Connections,LSS_PLC_Number_of_OPC_UA_Servers,LSS_PLC_Number_of_OPC_UA_Clients,LSS_PLC_Number_of_MODBUS_TCP_Slaves,LSS_PLC_Number_of_Modbus_Master,LSS_PLC_Number_of_ControlEdge_ELMM_License,LSS_PLC_Number_of_ControlEdge_PLC_Profinet_Usage,LSS_PLC_Number_of_Migration_Tool_User_Access_Lic,LSS_PLC_Number_of_Subsea_MDIS_Interface_Site_Lic,LSS_PLC_Number_of_ControlEdge_Builder_Client_Lic)*>}{}[ENDIF][IF]([EQ](<*VALUE(LSS_PLC_Power_Supply_Type)*>,Redundant)){}{<*DISALLOWATTRIBUTES(LSS_PLC_Power_Status_Module_for_Redundant_Pwr_Sply)*>}[ENDIF]\n[IF]([NEQ](<*VALUE(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC)*>,vUOC)){<*ALLOWATTRIBUTES(LSS_PLC_Operating_temp_for_Expansion_Module,LSS_PLC_Operating_temp_for_Controller_Module)*>[IF]([EQ](<*VALUE(LSS_PLC_Operating_temp_for_Expansion_Module)*>,)){<*SELECTVALUE(LSS_PLC_Operating_temp_for_Expansion_Module:0C to 60C / Marine application requirement)*>}{}[ENDIF][IF]([EQ](<*VALUE(LSS_PLC_Operating_temp_for_Controller_Module)*>,)){<*SELECTVALUE(LSS_PLC_Operating_temp_for_Controller_Module:0C to 60C / Marine application requirement)*>}{}[ENDIF]}{<*DISALLOWATTRIBUTES(LSS_PLC_Operating_temp_for_Expansion_Module,LSS_PLC_Operating_temp_for_Controller_Module)*>}[ENDIF]\n[IF]([NEQ](<*VALUE(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC)*>,PLC)){<*DISALLOWVALUES(LSS_PLC_Network_Topology:Non Redundant,LSS_PLC_Network_Topology:Ring)*>[IF]([EQ](<*VALUE(LSS_PLC_Network_Topology)*>,)){<*SELECTVALUE(LSS_PLC_Network_Topology:Redundant Star-PRP)*>}{}[ENDIF]}{[IF]([EQ](<*VALUE(LSS_PLC_Network_Topology)*>,)){<*SELECTVALUE(LSS_PLC_Network_Topology:Redundant Star)*>}{}[ENDIF]<*DISALLOWVALUES(LSS_PLC_Network_Topology:Redundant Star-PRP,LSS_PLC_Network_Topology:Ring-DLR Direct Connection,LSS_PLC_Network_Topology:Ring-DLR via ETAPs,LSS_PLC_Network_Topology:Ring-HSR)*>}[ENDIF]",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13454,
+    "condition": "[NEQ](<*VALUE(Is EtherNet IP Interface in Scope?)*>,Yes)",
+    "name": "Hide EtherNet IP Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of EtherNet IP Interface Cards,Number of EtherNet IP Interface Types,Number of EtherNet IP Devices)*>",
+    "description": "Hide questions when Is EtherNet IP Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

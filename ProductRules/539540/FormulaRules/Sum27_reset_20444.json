@@ -1,0 +1,11 @@
+{
+    "id": 20444,
+    "condition": "1",
+    "name": "Sum27_reset",
+    "action": "<*ASSIGNVALUE(SS_27inch:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

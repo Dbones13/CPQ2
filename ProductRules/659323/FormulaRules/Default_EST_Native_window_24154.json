@@ -1,0 +1,11 @@
+{
+    "id": 24154,
+    "condition": "[EQ](<*VALUE(EST_Native_window)*>,)",
+    "name": "Default_EST_Native_window",
+    "action": "<*ASSIGNVALUE(EST_Native_window:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

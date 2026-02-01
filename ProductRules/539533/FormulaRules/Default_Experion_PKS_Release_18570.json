@@ -1,0 +1,11 @@
+{
+    "id": 18570,
+    "condition": "[EQ](<*VALUE(ES_Experion_PKS_Release)*>,)",
+    "name": "Default_Experion_PKS_Release",
+    "action": "<*SELECTVALUE(ES_Experion_PKS_Release:R530)*>",
+    "description": "7957 Story",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

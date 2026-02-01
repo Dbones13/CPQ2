@@ -1,0 +1,11 @@
+{
+    "id": 26170,
+    "condition": "[AND]([GT]([IF]([GT](<*VALUE(Num_Class_Base_Add_TCCBR010_int)*>,<*VALUE(Num_Class_Base_Add_TCCBR010_qty)*>)){<*VALUE(Num_Class_Base_Add_TCCBR010_qty_plus1)*>}{<*VALUE(Num_Class_Base_Add_TCCBR010_qty)*>}[ENDIF],0),[GT](<*VALUE(Number of Class Based Recipe licenses (0-1000))*>,0))",
+    "name": "Num_Class_Base_Add_TCCBR010",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TC-CBR010)*>[IF]([GT](<*VALUE(Num_Class_Base_Add_TCCBR010_int)*>,<*VALUE(Num_Class_Base_Add_TCCBR010_qty)*>)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-CBR010,<*VALUE(Num_Class_Base_Add_TCCBR010_qty_plus1)*>)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-CBR010,<*VALUE(Num_Class_Base_Add_TCCBR010_qty)*>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "Add_TC-CBR010",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22986,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Disallow Cabinet Defaults",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet))){<*DISALLOWATTRIBUTES(ATTCON_03_open,ATTCON_04_close,Ser_RG_Universal_Marshalling_Cabinet,SerC_RG_Cabinet_Access,SerC_RG_Cabinet_Base_(Plinth),SerC_RG_Cabinet_Base_Size,SerC_RG_Cabinet_Color_Default,SerC_RG_Cabinet_Door_Keylock_Default,SerC_RG_Cabinet_Doors_Default,SerC_RG_Cabinet_Hinge_Type_Default,SerC_RG_Cabinet_Light_Default,SerC_RG_Cabinet_Thermostat_Default,SerC_RG_Cabinet_Type,SerC_RG_Complexing,SerC_RG_Fan_Option,SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type,SerC_RG_label_Cabinet_Defaults,Error_Message)*>}{<*ALLOWATTRIBUTES(ATTCON_03_open,ATTCON_04_close,Ser_RG_Universal_Marshalling_Cabinet,SerC_RG_Cabinet_Access,SerC_RG_Cabinet_Base_(Plinth),SerC_RG_Cabinet_Base_Size,SerC_RG_Cabinet_Color_Default,SerC_RG_Cabinet_Door_Keylock_Default,SerC_RG_Cabinet_Doors_Default,SerC_RG_Cabinet_Hinge_Type_Default,SerC_RG_Cabinet_Light_Default,SerC_RG_Cabinet_Thermostat_Default,SerC_RG_Complexing,SerC_RG_Fan_Option,SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type,SerC_RG_label_Cabinet_Defaults,Error_Message)*>}[ENDIF]",
+    "description": "CXCPQ-38251",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

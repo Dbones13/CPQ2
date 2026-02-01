@@ -1,0 +1,11 @@
+{
+    "id": 11647,
+    "condition": "[EQ](<*VALUE(IS_No_of_Server_Rack_Wiring_Diagrams_(0-10))*>,)",
+    "name": "Default_Number of Server Rack Wiring Diagrams (0-10)",
+    "action": "<*ASSIGNVALUE(IS_No_of_Server_Rack_Wiring_Diagrams_(0-10):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

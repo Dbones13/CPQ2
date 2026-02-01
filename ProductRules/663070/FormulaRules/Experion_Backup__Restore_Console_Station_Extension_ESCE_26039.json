@@ -1,0 +1,11 @@
+{
+    "id": 26039,
+    "condition": "1",
+    "name": "Experion Backup & Restore (Console Station Extension: ES-CE)",
+    "action": "[IF]([OR]([EQ](<*VALUE(Experion Backup & Restore (Console))*>,Yes),[EQ](<*VALUE(Experion Backup & Restore ConsoleStation Extension)*>,Yes))){<*ASSIGNVALUE(Labor EBR (Console Station Extension ES-CE):<* Eval(0<*VALUE(CMS Console Station Extension Qty 0_15)*>+0<*VALUE(Console Station Extension Qty  (0-15))*>+0<*VALUE(DMS Console Station Extension Qty 0_15)*>) *>)*>}{<*ASSIGNVALUE(Labor EBR (Console Station Extension ES-CE):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

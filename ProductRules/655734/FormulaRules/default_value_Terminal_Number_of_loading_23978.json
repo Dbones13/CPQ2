@@ -1,0 +1,11 @@
+{
+    "id": 23978,
+    "condition": "[AND](<*ISSELECTED(Terminal_Mode_of_Transport.Truck loading/unloading)*>,[EQ](<*VALUE(Terminal_Number_of_loading/unloading_bays)*>,),[EQ](<*XValue(../R2Q_Product_Name)*>,R2Q New / Expansion Project))",
+    "name": "default value Terminal_Number_of_loading",
+    "action": "<*ASSIGNVALUE(Terminal_Number_of_loading/unloading_bays:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

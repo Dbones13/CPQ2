@@ -1,0 +1,11 @@
+{
+    "id": 17853,
+    "condition": "[NOT]([GT](<*CTX( Container(Miscellaneous Interfaces).Row(2).Column(Nodes).Get )*>,0))",
+    "name": "PS_Miscellaneous_Interfaces_EP-IBBRTU_Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-IBBRTU)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

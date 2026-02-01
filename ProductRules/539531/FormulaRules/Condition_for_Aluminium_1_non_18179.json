@@ -1,0 +1,11 @@
+{
+    "id": 18179,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_Scanner_Type)*>,3-4022-54),[NEQ](<*VALUE(MXP_Measurement_Type)*>,Aluminium))",
+    "name": "Condition_for_Aluminium_1_non",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Sensor_Type:Radiation Shield|Sample paddle with Holder)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

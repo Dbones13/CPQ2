@@ -1,0 +1,11 @@
+{
+    "id": 20277,
+    "condition": "[EQ](<*VALUE(DVM_Console_Client)*>,Yes)",
+    "name": "DVM CONSOLE CLIENT_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMMSR)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMMSR,1)*><* DoResetAtt *",
+    "description": "CXCPQ-45731",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

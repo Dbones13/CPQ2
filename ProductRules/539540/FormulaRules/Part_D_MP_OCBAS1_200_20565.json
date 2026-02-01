@@ -1,0 +1,11 @@
+{
+    "id": 20565,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[GT](<*VALUE(SS_2Position_Base_Unit_with_Right)*>,0)))",
+    "name": "Part_D_MP_OCBAS1_200",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MP-OCBAS1-200)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

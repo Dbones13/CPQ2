@@ -1,0 +1,11 @@
+{
+    "id": 13103,
+    "condition": "[NOT](<*ATTDEF(SC_WEP_ServiceProduct_Halo)*>)",
+    "name": "Default_ServiceProduct_Halo",
+    "action": "<*ASSIGNVALUE(SC_WEP_ServiceProduct_Halo:Workforce Excellence Program)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

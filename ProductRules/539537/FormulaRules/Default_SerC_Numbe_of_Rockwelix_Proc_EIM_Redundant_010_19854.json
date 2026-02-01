@@ -1,0 +1,11 @@
+{
+    "id": 19854,
+    "condition": "[EQ](<*VALUE(SerC_Numbe of Rockwelix Proc EIM Redundant 0-10)*>,)",
+    "name": "Default_SerC_Numbe of Rockwelix Proc EIM Redundant 0-10",
+    "action": "<*ASSIGNVALUE(SerC_Numbe of Rockwelix Proc EIM Redundant 0-10:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

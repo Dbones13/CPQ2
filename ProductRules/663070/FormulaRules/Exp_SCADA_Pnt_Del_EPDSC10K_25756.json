@@ -1,0 +1,11 @@
+{
+    "id": 25756,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Experion SCADA Points (0 - 300000))*>,9999),[GT](<*eval(Int(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*>,0)))",
+    "name": "Exp_SCADA_Pnt_Del_EPDSC10K",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DSC10K)*><* DoResetAtt *>",
+    "description": "Del EP-DSC10K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

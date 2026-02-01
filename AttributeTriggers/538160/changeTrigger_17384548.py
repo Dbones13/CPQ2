@@ -1,0 +1,1 @@
+Product.Attr('EnabledService_Entitlement').AssignValue(Product.Attr('EnabledServices_servprod').SelectedValue.Display)

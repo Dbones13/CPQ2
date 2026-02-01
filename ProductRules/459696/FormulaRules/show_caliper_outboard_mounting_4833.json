@@ -1,0 +1,11 @@
+{
+    "id": 4833,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame)),[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Caliper))",
+    "name": "show_caliper_outboard_mounting",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Caliper_Cleaner_Kit,MX_SE_Outboard_mounting_platform)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

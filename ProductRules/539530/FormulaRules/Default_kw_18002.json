@@ -1,0 +1,11 @@
+{
+    "id": 18002,
+    "condition": "[EQ](<*VALUE(MXP_kW)*>,)",
+    "name": "Default_kw",
+    "action": "<*SELECTVALUE(MXP_kW:4.5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

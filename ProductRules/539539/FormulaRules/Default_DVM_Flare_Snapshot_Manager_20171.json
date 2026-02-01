@@ -1,0 +1,11 @@
+{
+    "id": 20171,
+    "condition": "[EQ](<*VALUE(DVM_Flare_Snapshot_Manager)*>,)",
+    "name": "Default_DVM_Flare_Snapshot_Manager",
+    "action": "<*SELECTVALUE(DVM_Flare_Snapshot_Manager:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

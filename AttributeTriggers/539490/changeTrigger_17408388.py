@@ -1,0 +1,1 @@
+MX_HC_Digital_Output_24_VDC_32_Channel

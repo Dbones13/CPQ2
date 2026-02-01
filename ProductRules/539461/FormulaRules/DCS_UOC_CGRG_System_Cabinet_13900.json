@@ -1,0 +1,11 @@
+{
+    "id": 13900,
+    "condition": "1",
+    "name": "DCS_UOC_CGRG_System_Cabinet",
+    "action": "<*ASSIGNVALUE(DCS_UOC_CGRG_System_Cabinet:<* Eval(0<*CTX ( Container(UOC_ControlGroup_Cont).Sum(staging_UOC_Num_of_Sys_Cabinets) )*>+0<*CTX ( Container(UOC_ControlGroup_Cont).Sum(Staging_UOC_Num_of_Sys_Cabinets_RG) )*>)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

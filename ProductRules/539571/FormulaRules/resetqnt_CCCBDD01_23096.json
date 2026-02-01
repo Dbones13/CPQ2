@@ -1,0 +1,11 @@
+{
+    "id": 23096,
+    "condition": "[AND]([LT](<* Eval(0<*VALUE(RG_Labor_parameter_Ai)*>+0<*VALUE(RG_Labor_parameter_Ao)*>+0<*VALUE(RG_Labor_parameter_Di)*>+0<*VALUE(RG_Labor_parameter_Do)*>) *>,1),[LT](<*Eval(<*CTX ( Container(C300_TurboM_IOM_RG_Cont).sum(Red_IOM))*>)*>,1))",
+    "name": "resetqnt CC-CBDD01",
+    "action": "<*RESETVALUE(Series_C_RG_Part_Summary:CC-CBDD01)*>\n<*RESETVALUE(Series_C_RG_Part_Summary:CC-CBDS01)*>\n<*RESETVALUE(Series_C_RG_Part_Summary:CC-CASS12)*>\n<*RESETVALUE(Series_C_RG_Part_Summary:CC-CADS12)*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

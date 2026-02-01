@@ -1,0 +1,11 @@
+{
+    "id": 25882,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),<*ISSELECTED(Orion Console Turret Type.Double Tier)*>,<*ISSELECTED(Node Supplier.Honeywell)*>,[OR]([GT](<*VALUE(Orion Console Left Extend Auxil Equip Unit (0-40))*>,0),[GT](<*VALUE(Orion Console Right Extend Auxil Equip Unit (0-40))*>,0),[GT](<*VALUE(Orion Console Center Ext Auxil Equip Unit (0-40))*>,0)))\n)",
+    "name": "MP-OCTDD1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCTDD1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38926",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

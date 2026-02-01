@@ -1,0 +1,11 @@
+{
+    "id": 10835,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "TPA_labor_del_IO_Replacement_Hardware_Engineer",
+    "action": "<*ASSIGNVALUE(TPA_labor_del_IO_Replacement_Hardware_Engineer:<* Eval((<* Round ( <* Eval(<*VALUE(TPA_Total_number_of_TPA_Racks_to_be_replaced_with_CE900)*>*4) *>, 2) *>)+(<* Round ( <* Eval((3*([IF]([EQ](<*VALUE(TPA_Total_Number_of_SWI_and_BOU_cards_to_be_replaced)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_SWI_and_BOU_cards_to_be_replaced_with_16_ch_UIO_and_Universal_Marshalling_Module)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_SWI_cards_to_be_combined_and_replaced)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_BOU_cards_to_be_combined_replaced)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_MSI_cards_to_be_replaced)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_MAI_ACO_cards_to_be_replaced)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_MAI_with_active_field_AIs_to_be_replaced)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_MAI_and_ACO_cards_to_be_replaced_with_16_ch_UIO_and_Universal_Marshalling_Module)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_PBI_cards_to_be_replaced)*>,0)){0}{1}[ENDIF]+[IF]([EQ](<*VALUE(TPA_Total_Number_of_PB0_cards_to_be_replaced)*>,0)){0}{1}[ENDIF]))/2) *>, 2 ) *>)) *>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

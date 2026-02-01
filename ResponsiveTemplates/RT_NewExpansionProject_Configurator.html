@@ -1,0 +1,222 @@
+<style>
+    .fiori3-configurator-view .debugger-links{
+        display:none !important;
+    }
+</style>
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+  <div class="row col-xs-12 swagger">
+    <div id="ce-system-group">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ce-system-group')">
+          <span>System Group</span>
+          <a id="ce-system-group-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ce-system-group-content">
+			
+			<div class="col-xs-12 col-sm-6">
+			<!-- ko foreach: attributes.filterByProperty('name' , "Number_System_Groups") -->
+                <!-- ko if:$data.container.columns().length !== 0 -->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+			</div>
+			<!-- ko foreach: attributes.filterByProperty('name' , 'CE_Add_System_Rows') -->
+
+				<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+				</div>
+
+            <!-- /ko -->
+ 			<div style="width:90%">
+                <!-- ko foreach: attributes.filterByProperty('name' , "CE_SystemGroup_Cont") -->
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                      <!-- ko template: { name: $root.getAttributeTemplate } -->
+                      <!-- /ko -->
+                  </div>
+                <!-- /ko -->
+          	</div>
+          	
+            <!-- changes by Pratik : CXCPQ-63376 (LCM).....START -->
+            <div class="row col-xs-12">
+              <!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+                <div class="swagger-header"><span>Select Category &amp; Systems</span></div>
+              <!-- /ko -->
+                 <!-- ko foreach: attributes.filterByProperty('name' , "New_Expansion_Project_Category") -->
+                   <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-3 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                    </div>
+                 <!-- /ko -->
+                 <!-- ko foreach: attributes.filterByProperty('name' , "CE_Product_Choices") -->
+              		<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-3 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name:  $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                   </div>
+                 <!-- /ko -->
+
+				<!-- ko foreach: attributes.filterByProperty('name' ,  'CE_Apply_Product_Selection') -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+				<!-- /ko -->
+
+				<!-- ko if: localStorage.getItem("checkR2Q") === 'Yes' -->
+					<div class="col-xl-3 col-md-3 col-sm-6 col-xs-12 r2q_pro_selec">
+						<!-- ko foreach: attributes.filterByProperty('name', 'R2Q_Apply_Product_Selection') -->
+						<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+							<!-- ko template: { name: $root.getAttributeTemplate } -->
+							<!-- /ko -->
+						</div>
+					<!-- /ko -->
+          <!-- ko foreach: attributes.filterByProperty('name', 'CE_Remove_Product_Selection') -->
+						<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+							<!-- ko template: { name: $root.getAttributeTemplate } -->
+							<!-- /ko -->
+						</div>
+					<!-- /ko -->
+				</div>
+          <!-- ko foreach: attributes.filterByProperty('name' , "CE_Systems_Selected") -->
+              		<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-3 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name:  $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                   </div>
+          <!-- /ko -->
+				<!-- /ko -->
+
+                <div class="col-xs-6 col-sm-4">
+                    <div class="swagger-header"><span></span></div>
+                    <div class="fiori3-container-label flex"><span class="label-range-hint-wrapper flex"></span></div>
+                    <div id="no-more-tables" class="config-container cpq-scroll col-xs-12">
+                        <table class="table table-bordered fiori3-table fiori3-configuration-container-table">
+                            <tbody>
+
+                                <!-- ko foreach: {data:attributes.filterByProperty('name' , 'LCM_MultiYear_Project', 'LCM_Multiyear_Selection'), as: 'conattribute'} -->
+
+                                    <tr data-bind="attr:{id:id()}">
+                                        <!-- ko if:template() === 'TextBoxTemplate' || template() === 'DropDownTemplate' || template() === 'AutoCompleteInputTemplate'-->
+                                            <!-- ko template: { name: 'HW_' + template() , data:cpq.models.configurator.attributes()[$index()], as: 'concattribute', noChildContext: true } -->
+                                            <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if:template() != 'TextBoxTemplate' && template() != 'DropDownTemplate'  && template() != 'AutoCompleteInputTemplate'-->
+                                            <!-- ko template: { name: $root.getAttributeTemplate, data:cpq.models.configurator.attributes()[$index()], as: 'concattribute', noChildContext: true } -->
+                                            <!-- /ko -->
+                                        <!-- /ko -->
+                                    </tr>
+                                
+                                <!-- /ko -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              
+          </div>
+          <!-- changes by Pratik : CXCPQ-63376 (LCM).....END -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="row col-xs-12 swagger">
+    <div id="plc-labor-input">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-labor-input')">
+          <span>Common Project Inputs</span>
+          <a id="plc-labor-input-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="plc-labor-input-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "New_exp_common_prj_input") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+            <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "New_exp_common_prj_input1") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row col-xs-12 swagger">
+    <div id="plc-labor">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-labor')">
+        <!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+          <span>Project Management Labor Inputs</span>
+        <!-- /ko -->
+        <!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+          <span>Project Common Questions</span>
+        <!-- /ko -->
+          <a id="plc-labor-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="plc-labor-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CE_Project_Questions_Cont") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+            <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ExpProject_Que_Right") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-xs-12 swagger">
+    <div id="ce-project-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ce-project-questions')">
+          <span>Common Labor Inputs</span>
+          <a id="ce-project-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ce-project-questions-content">
+            <!-- ko foreach: attributes.filterByProperty('name' , "Labor_Details_New/Expansion_Cont","Labor_details_newexapnsion_cont2") -->
+          <div class="col-xs-6 col-sm-6">
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+          </div>
+            <!-- /ko -->
+        </div>
+
+		<!-- ko foreach: attributes.filterByProperty('name' , "CE_Site_Voltage") -->
+          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+              <!-- ko template: { name: $root.getAttributeTemplate } -->
+              <!-- /ko -->
+          </div>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+
+</div>

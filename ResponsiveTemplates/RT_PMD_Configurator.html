@@ -1,0 +1,442 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+
+   <div class="row col-xs-12 swagger"> 
+        <div class="Calc_btn" >
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") --> 
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+            <!-- /ko -->
+          </div>
+        </div> 
+  </div>
+<div class="row col-xs-12 swagger">
+    <div id="pmd-labour">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-labour')">
+          <span>Labor Details</span>
+          <a id="pmd-labour-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="pmd-labour-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Labour_Details") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Controllers for Application Processing-->
+  <div class="row col-xs-12 swagger">
+    <div id="pmd-fce-controller">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-fce-controller')">
+          <span>Controllers for Application Processing</span>
+          <a id="pmd-fce-controller-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="pmd-fce-controller-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Controllers_2xProfibus_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">FCE Controllers with 2xProfibus (0-25)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Controllers_2xProfinet_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">FCE Controllers with 2xProfinet (0-25)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Cabinet_Rack_Mounting_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Cabinet for Rack-mountable and mounting shelf PMD Controllers (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Field_Pow_Supp_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Field Power Supply for PMD Controller (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <div class="col-xs-12 text-center attribute-field-headers">Add-on Licenses</div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Add_on_Licenses") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of swagger section pmd-fce-controller -->
+
+  <div class="row col-xs-12 swagger">
+    <div id="pmd-device-support-profibus">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-device-support-profibus')">
+          <span>Device Support blocks for PMD Controller PROFIBUS Devices</span>
+          <a id="pmd-device-support-profibus-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="pmd-device-support-profibus-content">
+
+        <div id="pmd_profibus_drives_cont">
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd_profibus_drives_cont')">
+            <span>PMD Profibus Drives</span>
+            
+          </div>
+          
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Drives_Cont") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+          
+        </div>
+        
+        <div id="pmd-links-gateways">
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-links-gateways')">
+            <span>PMD Profibus Links and Gateways</span>
+            
+          </div>
+          
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Links_and_Gateways_Cont") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+          
+        </div>
+        <div id="pmd-motor-starters">
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-motor-starters')">
+            <span>PMD Profibus Motor Starters and Controlling Devices</span>
+            
+          </div>
+          
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Motor_Starters and_CD_Cont") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+          
+        </div>
+        <div id="pmd-other-profibus-dp">
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-other-profibus-dp')">
+            <span>PMD Other Profibus DP-Devices</span>
+            
+          </div>
+          
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Other_Profibus_DP-Devices_Cont") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+          
+        </div>
+        <div id="pmd-profibus-modular-io">
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-profibus-modular-io')">
+            <span>PMD Profibus Modular I/O</span>
+            
+          </div>
+          
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Modular_IO_Cont") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+          
+        </div>
+        <div id="pmd-profibus-displays">
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-profibus-displays')">
+            <span>PMD Profibus Displays</span>
+            
+          </div>
+          
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Displays_Cont") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+          
+        </div>
+        <div id="pmd-profinet-device-support">
+          <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-profinet-device-support')">
+            <span>PMD Profinet Device Support Blocks for Devices</span>
+          
+          </div>
+          
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profinet_Device_Support_blocks_Cont") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                </div>
+              <!-- /ko -->
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end of swagger section pmd-device-support-profibus -->
+
+<div class="row col-xs-12 swagger">
+    <div id="pmd-process-io">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-process-io')">
+          <span>Process Interfacing with Extended I/O (Compact Connection Card Technique)</span>
+          <a id="pmd-process-io-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="pmd-process-io-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_CC_Cards") -->
+              <div class="col-xs-12 text-center attribute-field-headers">I/O's with Compact Connection Cards (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_IO_Ext_Rack_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">I/O-extension Racks - Compact Connection Card Technique (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Optional_Item_IO_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Optional Items for I/O Extension (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_IO_Extension_Cabinet_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">I/O Extension Cabinets (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Pulse_input_IO_KIT_PMD_Profibus_Profinet_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Pulse input I/O KIT via Profibus/Profinet (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Cross_Connection_Cabinets_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Cross Connection Cabinets (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Cross_Connection_Cabling_Terminal_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Cross Connection Cabling / Terminal blocks per I/O interface (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Field Power Supply_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Field Power Supply (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+
+          <div class="col-xs-12 text-center attribute-field-headers">System Power Supply</div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_System Power Supply_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            
+          <div class="col-xs-12 text-center attribute-field-headers">CE UOC License</div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_CE_UOC_Licences") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end of swagger section pmd-components -->
+
+  <!--Process Interfacing with ControlEdge PLC I/O-->
+
+  <div class="row col-xs-12 swagger">
+    <div id="pmd_io_controledge_plc_io_cards">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd_io_controledge_plc_io_cards')">
+          <span>Process Interfacing with ControlEdge PLC I/O</span>
+          <a id="pmd_io_controledge_plc_io_cards-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="pmd_io_controledge_plc_io_cards-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_IO_ControlEdge_PLC_IO_Cards") -->
+              <div class="col-xs-12 text-center attribute-field-headers">I/O's with ControlEdge PLC I/O Cards (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_CE_IO_Rack_Cab") -->
+              <div class="col-xs-12 text-center attribute-field-headers">ControlEdge I/O Racks / Cabinets (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Cross_Connection_Cabinets_Cont_PLCIO") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Cross Connection Cabinets (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Cross_Connection_Cabling_Terminal_Cont_PLCIO") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Cross Connection Cabling / Terminal blocks per I/O interface (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Field Power Supply_Cont_PLCIO") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Field Power Supply (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end of swagger section pmd-components -->
+
+  <!--Miscellaneous Profibus / Profinet Components-->
+
+    <div class="row col-xs-12 swagger">
+    <div id="pmd-components">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#pmd-components')">
+          <span>Miscellaneous Profibus / Profinet Components</span>
+          <a id="pmd-components-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="pmd-components-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Connectors_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Profibus Connectors (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Active_End_Resistors_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Profibus Active End Resistors (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Repeaters_Cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Profibus Repeaters (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_Coupler_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Profibus Coupler / Gateways (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profibus_PA_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Profibus PA (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Optical_Link_Modules_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Optical Link Modules (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "PMD_Profinet_Switches_cont") -->
+              <div class="col-xs-12 text-center attribute-field-headers">Profinet Switches (0-1000)</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- end of swagger section pmd-components -->
+  
+        </div>
+      </div>

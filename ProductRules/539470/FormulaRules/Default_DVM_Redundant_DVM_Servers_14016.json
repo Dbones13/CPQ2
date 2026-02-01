@@ -1,0 +1,11 @@
+{
+    "id": 14016,
+    "condition": "[EQ](<*VALUE(DVM_Redundant_DVM_Servers)*>,)",
+    "name": "Default_DVM_Redundant_DVM_Servers",
+    "action": "<*SELECTVALUE(DVM_Redundant_DVM_Servers:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

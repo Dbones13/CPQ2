@@ -1,0 +1,11 @@
+{
+    "id": 14732,
+    "condition": "[NEQ](<*VALUE(MX_Allen_Bradley_PLC_Ethernet_Link)*>,Yes)",
+    "name": "MX_Part_Dis_Q5324_53",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5324-53)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

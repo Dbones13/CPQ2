@@ -1,0 +1,11 @@
+{
+    "id": 22341,
+    "condition": "[EQ](<*VALUE(ESDC_IEC_Protocol_SCADA_Interface)*>,)",
+    "name": "Default_IEC_61850_Protocol_SCADA_Interface",
+    "action": "<*ASSIGNVALUE(ESDC_IEC_Protocol_SCADA_Interface:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

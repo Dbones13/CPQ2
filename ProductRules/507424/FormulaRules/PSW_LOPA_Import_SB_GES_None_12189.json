@@ -1,0 +1,11 @@
+{
+    "id": 12189,
+    "condition": "[AND](<*ISSELECTED(PSW_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(PSW_GES_Location.None)*>)",
+    "name": "PSW_LOPA_Import SB GES None",
+    "action": "<*ASSIGNVALUE(PSW_LOPA_Import:[IF]([EQ](<*VALUE(PSW_LOPA_Import_Scope)*>,Yes)){<* Eval((40+<*VALUE(PSW_Number_of_LOPAs)*>*1+16)*0.9) *>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

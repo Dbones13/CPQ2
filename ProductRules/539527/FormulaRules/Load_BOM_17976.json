@@ -1,0 +1,11 @@
+{
+    "id": 17976,
+    "condition": "<*ATTDEF(PCD_Part_Summary)*>",
+    "name": "Load BOM",
+    "action": "<*CTX( Container(PCD_PartSummary_Cont).LoadKeys(Partnumber).Load(select '<*Eval(Replace(\"<*VALUE(PCD_Part_Summary)*>\",\", \",\"' as Partnumber UNION SELECT '\"))*>' as Partnumber   ) )*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24367,
+    "condition": "[AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R520),[GT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0))",
+    "name": "Station_node_values_520_allow",
+    "action": "<*ALLOWVALUES(SS_Flex Staton  Desk Node_desk:STN_PER_DELL_Tower_RAID2)*>\n<*DISALLOWVALUES(SS_Flex Staton  Desk Node_desk:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

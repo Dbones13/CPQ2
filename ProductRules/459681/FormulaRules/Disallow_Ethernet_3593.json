@@ -1,0 +1,11 @@
+{
+    "id": 3593,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A23)*>,<*ISSELECTED(Identifiers.A24)*>)",
+    "name": "Disallow Ethernet",
+    "action": "<*DISALLOWVALUES(Network Type:Ethernet)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

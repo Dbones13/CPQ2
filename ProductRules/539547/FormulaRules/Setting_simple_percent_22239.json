@@ -1,0 +1,11 @@
+{
+    "id": 22239,
+    "condition": "[NOT](<*ATTDEF(Scada_Number_of_New_Simple_Equipment_Templates)*>)",
+    "name": "Setting_simple_percent",
+    "action": "<*ASSIGNVALUE(Scada_Number_of_New_Simple_Equipment_Templates:50)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

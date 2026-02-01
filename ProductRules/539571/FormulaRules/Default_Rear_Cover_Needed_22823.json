@@ -1,0 +1,11 @@
+{
+    "id": 22823,
+    "condition": "[EQ](<*VALUE(Rear_Cover_Needed)*>,)",
+    "name": "Default_Rear_Cover_Needed",
+    "action": "<*SELECTVALUE(Rear_Cover_Needed:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

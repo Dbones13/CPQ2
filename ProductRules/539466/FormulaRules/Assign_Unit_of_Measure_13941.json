@@ -1,0 +1,11 @@
+{
+    "id": 13941,
+    "condition": "[EQ](<*VALUE(Unit of Measure)*>,)",
+    "name": "Assign Unit of Measure",
+    "action": "<*ASSIGNVALUE(Unit of Measure:<* TABLE ( SELECT UnitofMeasure FROM WriteInProducts WHERE Product = '<*VALUE(Selected_WriteIn)*>' ) *>)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "18/10/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13078,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Training_Match_PY_Values",
+    "action": "<*ASSIGNVALUE(SC_Training_Match_Contract_Value_PY:<*VALUE(SC_Training_Match_Contract_Value)*>)*>\n<*ASSIGNVALUE(SC_Training_Match_Contract_Value_Percent_PY:<*VALUE(SC_Training_Match_Contract_Value_Percent)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

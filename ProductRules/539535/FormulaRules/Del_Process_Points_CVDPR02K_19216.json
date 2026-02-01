@@ -1,0 +1,11 @@
+{
+    "id": 19216,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_Process_Points)*>,1999))",
+    "name": "Del_Process_Points_CV-DPR02K",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-DPR02K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

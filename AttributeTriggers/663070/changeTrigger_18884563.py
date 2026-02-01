@@ -1,0 +1,1 @@
+[IF]([NEQ](<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,0)){<*SELECTVALUES(Rack Mounting Type for ACE-T Node:None,Node Supplier_ACE_T:Honeywell,Additional Memory_ACE_T:None,Additional Hard Disk_ACE_T:No)*>}{0}[ENDIF]

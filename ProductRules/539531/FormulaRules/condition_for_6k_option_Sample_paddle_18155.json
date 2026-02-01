@@ -1,0 +1,11 @@
+{
+    "id": 18155,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_Measurement_Type)*>,6k),[AND]([NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-41),[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-00),[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-81),[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-43),[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-46)))",
+    "name": "condition_for_6k_option_Sample_paddle",
+    "action": "<*DISALLOWATTRIBUTES(MXPro_Sensor_Sample_paddle)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

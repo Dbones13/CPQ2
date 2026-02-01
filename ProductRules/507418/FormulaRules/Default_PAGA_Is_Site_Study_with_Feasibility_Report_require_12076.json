@@ -1,0 +1,11 @@
+{
+    "id": 12076,
+    "condition": "[EQ](<*VALUE(PAGA_Is_Site_Study_with_Feasibility_Report_require)*>,)",
+    "name": "Default_PAGA_Is_Site_Study_with_Feasibility_Report_require",
+    "action": "<*SELECTVALUE(PAGA_Is_Site_Study_with_Feasibility_Report_require:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

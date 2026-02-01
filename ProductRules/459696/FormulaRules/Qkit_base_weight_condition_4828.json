@@ -1,0 +1,11 @@
+{
+    "id": 4828,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Basis Weight))",
+    "name": "Q-kit_base_weight_condition",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Is Q_Kit_required:Sx12|Sx6|Sx9|No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

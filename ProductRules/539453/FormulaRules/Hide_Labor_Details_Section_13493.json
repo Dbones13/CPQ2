@@ -1,0 +1,11 @@
+{
+    "id": 13493,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Hide Labor Details Section",
+    "action": "<*DISALLOWATTRIBUTES(Implementation Methodology,Experion_HS_Ges_Location_Labour,Use of SPI (Intools) in Scope?,Network and Server Cabinet Count,Auxiliary Cabinet Count,Number of Console Sections with Hardwired IO,Number of Operator Console Sections,Number of Physical Communication Links,Network Assessment in scope?,Is WLAN in Scope?,Number of FTE Communities,Number of FTE Community Locations,Number of Locations with FTE Switches,Number of Non Factory Installed Servers,Number of Server Types,Number of Station Types,Number of Types of Network Devices,Number of Modbus Interfaces Types,Number of Modbus Interfaces,Number of New/Non tested OPC Interfaces,Number of OPC Interface Types,Number of OPC Interfaces,Quality of Customer Input,Level of Documentation,SafeView Factor (Max quanity of Monitors in One Station),Are Alarm Groups in Scope?,Test System Responsibility,Test System Complexity,Number of Custom Context Menus,Number of Display Prototypes,Number of HMI Training Sessions,Number of Fieldbus Devices,Number of Profibus Interface Cards,Number of Profibus Interface Types,Number of Profibus Devices,Number of EtherNet IP Interface Cards,Number of EtherNet IP Interface Types,Number of EtherNet IP Devices,Number of HART Interface Types,Number of HART Devices,Is HART in C300 Controller?,Number of Terminal Server Interface Types,Number of Terminal server Interfaces,Number of Terminal Server Devices,Number of DeviceNet Interface Types,Header_02_open,Header_02_close)*>",
+    "description": "",
+    "rank": "1000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

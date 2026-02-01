@@ -1,0 +1,11 @@
+{
+    "id": 25951,
+    "condition": "[GT](<*VALUE(Recipe Manager(0-1))*>,0)",
+    "name": "EP-AERMGR_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-AERMGR)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-AERMGR, <*VALUE(Recipe Manager(0-1))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

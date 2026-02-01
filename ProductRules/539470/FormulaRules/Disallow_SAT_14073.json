@@ -1,0 +1,11 @@
+{
+    "id": 14073,
+    "condition": "[OR]([NEQ](<*VALUE(Labor_Site_Activities)*>,Yes) ,[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW))",
+    "name": "Disallow_SAT",
+    "action": "<*DISALLOWATTRIBUTES(DVM_SAT_Duration_in_Days_for_DVM)*>",
+    "description": "CXCPQ-51198",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

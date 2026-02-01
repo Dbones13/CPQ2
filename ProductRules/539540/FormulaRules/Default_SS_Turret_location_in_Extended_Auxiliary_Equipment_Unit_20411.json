@@ -1,0 +1,11 @@
+{
+    "id": 20411,
+    "condition": "[EQ](<*VALUE(SS_Turret_location_in_Extended_Auxiliary_Equipment_Unit)*>,)",
+    "name": "Default_SS_Turret_location_in_Extended_Auxiliary_Equipment_Unit",
+    "action": "<*SELECTVALUE(SS_Turret_location_in_Extended_Auxiliary_Equipment_Unit:Center)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

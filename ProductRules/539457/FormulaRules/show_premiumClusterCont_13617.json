@@ -1,0 +1,11 @@
+{
+    "id": 13617,
+    "condition": "[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B)",
+    "name": "show_premiumClusterCont",
+    "action": "<*ALLOWATTRIBUTES(Virtualization_cluster_transpose)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

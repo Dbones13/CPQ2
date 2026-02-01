@@ -1,0 +1,609 @@
+@using WebSite.Controllers
+@using Webcom.Configurator.Crm.SAP
+
+<!-- ko foreach: quoteTables.filterByProperty('name','Order_Booking_Error') -->
+  <!-- ko if: $data.rows().length > 0 -->
+<div class="row">
+    <div id="order_booking_error_section" class="fiori3-cart-section clearfix" data-bind="css: { 'section-toggled': $parent.isSectionCollapsed('order_booking_error_section') }">
+	    <div class="fiori3-quote-section-header clearfix" data-bind="click: function() { $parent.toggleQuoteSection('order_booking_error_section') }">
+            <div data-bind="visible: $parent.isSectionCollapsed('order_booking_error_section')" class="short-quote-section-info">
+              	<div class="row" style="width:100%;">
+                  <div class="row">
+                      <span tabindex="0">@Translation.Get("QuoteInfoOrderBookingError")</span>
+                  </div>
+              	</div>
+            </div>
+            
+            <div data-bind="visible: !$parent.isSectionCollapsed('order_booking_error_section')" style="display: inline;">
+            	<div class="row">
+                	<span tabindex="0" data-bind="visible: !$parent.isSectionCollapsed('order_booking_error_section')">@Translation.Get("QuoteInfoOrderBookingError")</span>
+               	</div>
+            </div>
+            <a class="fiori3-quote-section-toggle" data-bind="css: { 'fiori3-rotated-quote-section-toggle': $parent.isSectionCollapsed('order_booking_error_section') }, 
+                                                              event: { keypress: function() { $parent.toggleQuoteSectionOnKeypress(event, 'order_booking_error_section') } }" tabindex="0">&#xe066;</a>
+        </div>
+        
+		<div class="col-md-12 fiori3-quote-section-container clearfix">
+			<div id="order_booking_errors" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+			  <!-- ko template: template-->
+			  <!--/ko -->
+            </div>
+		</div>
+	</div>
+</div>
+  <!--/ko -->
+<!--/ko -->
+<div class="row">
+    <div id="quote-info-section" class="fiori3-cart-section clearfix" data-bind="css: { 'section-toggled': isSectionCollapsed('quote-info-section') }">
+	    <div class="fiori3-quote-section-header clearfix" data-bind="click: function() { toggleQuoteSection('quote-info-section') }">
+            <div data-bind="visible: isSectionCollapsed('quote-info-section')" class="short-quote-section-info">
+              	
+              	<div class="row" style="width:100%;">
+                  <div class="short-info-section">
+                      <span tabindex="0">@Translation.Get("xsltQuoteInfo")</span>
+                  </div>
+                  <div class="short-info-section">
+                      <span>@Translation.Get("xsltStatus"): </span><span data-bind="text: orderStatusName()"></span>
+                  </div>
+                  <div class="short-info-section">
+                      <span>@Translation.Get("xsltMarket"): </span><span data-bind="text: marketName()"></span>
+                  </div>
+                  <!-- ko if: pricebooks().length > 0 -->
+                  <div class="short-info-section">
+                      <span>@Translation.Get("xsltPricebook"): </span><span data-bind="text: pricebookName()"></span>
+                  </div>
+                  <!-- /ko -->
+                </div>
+              	
+            </div>
+            <div data-bind="visible: !isSectionCollapsed('quote-info-section')" style="display: inline;">
+            	<div class="row">
+                	<span tabindex="0" data-bind="visible: !isSectionCollapsed('quote-info-section')">@Translation.Get("xsltQuoteInfo")</span>
+               	</div>
+            </div>
+            <a class="fiori3-quote-section-toggle" data-bind="css: { 'fiori3-rotated-quote-section-toggle': isSectionCollapsed('quote-info-section') }, 
+                                                              event: { keypress: function() { toggleQuoteSectionOnKeypress(event, 'quote-info-section') } }" tabindex="0">&#xe066;</a>
+        </div>
+        <p style="display: block;" data-bind="text:setLocalStorage_CCC(tabsData.currentTabName(),$root.customFields())"></p>
+        
+	<!-- Start - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->
+            <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+        		<div class="fiori3-alert fiori3-alert-warning" data-bind = "visible:ServiceContractMessages(tabsData.currentTabName(),$root.customFields()).length > 0">
+            			<p class="cart-warning-group" data-bind="text:ServiceContractMessages(tabsData.currentTabName(),$root.customFields())"></p>
+        		</div>
+            <!--/ko -->
+   <!-- END - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->
+        <!-- ko if: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") -->
+            <!-- ko foreach: customFieldsAndQuoteTables.filterByProperty('name','SC_CF_Error_Msg') -->
+            <!-- ko if: content() !== '' -->
+            <!-- ko let: { errorMsg: JSON.parse(content()) } -->
+            <!-- ko if: errorMsg.hasOwnProperty('Term_Duration_Error_Msg') -->
+            <!-- ko foreach: errorMsg.Term_Duration_Error_Msg -->
+        		 <div data-bind = "css: {'fiori3-alert fiori3-alert-danger': (Type === 'Error'),'fiori3-alert fiori3-alert-warning' : (Type === 'Warning'),'fiori3-alert fiori3-alert-info' : (Type === 'Info')}">
+                     <!-- ko if: Type === 'Error' -->
+                     	<span class="sap-icon">&#xe1ec;</span>
+                     <!--/ko -->
+                     <!-- ko if: Type === 'Warning' -->
+                     	<span class="sap-icon">&#xe053;</span>
+                     <!--/ko -->
+                     <!-- ko if: Type === 'Info' -->
+                     	<span class="sap-icon-extended">&#xf200;</span>
+                     <!--/ko -->
+            			<span data-bind="text:Text"></span>
+        		 </div>
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+		<!-- ko ifnot: isSectionCollapsed('quote-info-section') -->																															
+        <div class="col-md-12 fiori3-quote-section-container clearfix">
+            <div class="col-md-4 col-sm-6 col-xs-12 clear-padding">
+                <div class="fiori3-quote-info-first-column">
+                    <div class="text-center custom-field-headers"  >
+                      @Translation.Get("xsltQuoteDetails")
+                    </div>
+                    <div data-bind="foreach: customFields.filterByProperty('name','Parent Firm Revision','Quote Tab Booking LOB','Quote Type','Booking Country','Pole','Language','EGAP_Proposal_Type','EGAP_Project_Type','Booking Revision','EGAP_Do_Want_to_Chanage_Ans_of_Func_Ques','Project_Release_Flag','SC_CF_LOCAL_REF','Revised proposal type','SC_CF_CONTRACT_NAME','SC_CF_ERPREFNO','Opportunity Number')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+				<!-- ko ifnot: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal")  -->
+					<div data-bind="foreach: customFields.filterByProperty('name','CF_ProjectId')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+				<!--/ko -->
+					
+                <!-- ko if: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal")  -->
+				 <div data-bind="foreach: customFields.filterByProperty('name','SC_CF_AGREEMENT_TYPE')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+				<div class="fiori3-input-group input-group form-group col-xs-12">
+				<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                        <label aria-label='@Translation.Get("xsltRevision")' class="control-label " for="quoteCustomDropdownMenu">@Translation.Get("xsltRevision")</label>
+						</div>
+                        <div class="col-sm-7 col-md-7 col-xs-12 padding-0 fiori3-revisions-container flex">
+                            <!-- ko ifnot: $root.showNewRevisionDialog() || $root.showRevisionNameDialog() -->
+                            <div class="fiori3-revisions-select-container" >	
+                                <div class="custom-dropdown noselect" data-bind="dropdown:{}">
+                                    <!-- start  - Itishree Mallick - 05/09/2023 -->
+                                    <button class="btn form-control" data-toggle-button="dropdown" id="quoteCustomDropdownMenu">
+                                        <span data-bind="css: { 'disabled-custom-dropdown': $root.isInViewMode() }"><span data-bind="text: $root.selectedRevisionName, enable: (orderStatusName() == 'Preparing' || orderStatusName() == 'Abandoned')"></span><span class="fa fa-caret-down" style="padding: 4px 5px 0 0;float: right"></span></span>
+                                    </button>
+                                    <div class="custom-dropdown-menu" data-bind="if: !$root.isInViewMode()">
+                                        <div data-bind="foreach: $root.availableRevisions">
+                                            <div class="revision-option" data-bind="text: Name + (IsActive? ' (@Translation.Get("QuoteRevisions.Active"))' : '') + (!$root.hasActions($data, [1, 13]) ? ' @Translation.Get("QuoteRevisions.NotAvailable")' : ''),
+                                                                                css:{'disabled-revision': !$root.hasActions($data, [1, 13])},
+                                                                                click: function(){ $root.selectRevision($data) }"></div>
+                                        </div>
+                                        <div>
+                                            <div class="revision-option" style="border-top: 1px solid #CACECC;" data-bind="click: $root.goToRevisionsPage">@Translation.Get("QuoteRevisions.GoToRevisionsPage")</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a aria-label='@Translation.Get("QuoteRevisions.SetAsActive")' href="#" style="float: right" data-bind="visible: $root.selectedRevision() && !$root.selectedRevision().IsActive && $root.hasActions($root.selectedRevision(), [15]),
+                                                                            click: function(){ $root.executeRevisionAction($root.selectedRevision(), 15) }">@Translation.Get("QuoteRevisions.SetAsActive")</a>
+                            </div>
+                            <!-- /ko -->
+                            <!-- ko if: $root.showNewRevisionDialog() || $root.showRevisionNameDialog() -->
+                            <div class="fiori3-revisions-select-container">
+                                <div>
+                                    <input type="text" placeholder="@Translation.Get("QuoteRevisions.NewRevisionName")" class="form-control"
+                                            data-bind="focusAndSelect:{},
+                                value: $root.showNewRevisionDialog() ? $root.newRevisionName : $root.selectedRevision().Name,
+                                valueUpdate: 'afterkeydown',
+                                onKey: [{ key: 13, handler: $root.saveRevisionDialog },
+                                        { key: 27, handler: $root.cancelRevisionsDialog }]" />
+                                </div>
+                            </div>
+                            <!-- /ko -->
+                            <!-- ko ifnot: $root.showNewRevisionDialog() || $root.showRevisionNameDialog()  -->
+                            <!-- ko ifnot: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") && (orderStatusName() == "Ready for Approval" || orderStatusName() == "On Hold")  -->
+                            <div tabindex="0"  class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup': function() { clickOnEnter(event) } }, visible: !$root.isInViewMode() && $root.hasActions($root.selectedRevision(), [14]),
+                                        click: function(){ $root.showNewRevisionDialog(true); }, 
+                                        tooltip: { title: '@Translation.GetJS("QuoteRevisions.CreateNewRevision")', autoClose: true, closeOnClick: true, placement: 'right', trigger: 'hover', container: 'body' }" tabindex="0"><span>&#xe058;</span></div>
+                            <div tabindex="0"  class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup':  function() { clickOnEnter(event) } }, visible: !$root.isInViewMode() && $root.hasActions($root.selectedRevision(), [13]),
+                                        click: function(){ $root.showRevisionNameDialog(true); }, 
+                                        tooltip: { title: '@Translation.GetJS("QuoteRevisions.RenameRevision")', autoClose: true, closeOnClick: true, placement: 'right', trigger: 'hover', container: 'body' }" tabindex="0"><span>&#xe038;</span></div>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- ko if: $root.showNewRevisionDialog() || $root.showRevisionNameDialog() -->
+                            <div tabindex="0" class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup':  function() { clickOnEnter(event) } }, click: $root.saveRevisionDialog"><span>&#xe05b;</span></div>
+                            <div tabindex="0" class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup':  function() { clickOnEnter(event) } }, click: $root.cancelRevisionsDialog "><span>&#xe069;</span></div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+					<!--/ko -->
+					<!-- END - CXCPQ-60167 - Manthan Rajguru - 08/10/2023 -->
+                    <!-- ko ifnot: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" || customFields.firstWithProperty('name', 'CF_Manual_Booking')?.content() === "True") -->
+                    <div class="fiori3-input-group input-group form-group col-xs-12">
+                        <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                                 <label aria-label='@Translation.Get("xsltOrderId")' class="control-label  ">
+                                 @Translation.Get("xsltOrderId")
+                               </label>
+                                   </div>
+                                   <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                        
+                              
+                               <span data-bind="text: orderId" style="font-weight: bolder;"></span>
+                             </div>
+                        </div>
+                    <!--/ko-->
+                    <!-- ko ifnot: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" || customFields.firstWithProperty('name', 'CF_Manual_Booking')?.content() !== "True") -->
+                    <div data-bind="foreach: customFields.filterByProperty('name','CF_SalesOrderId')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+                    <div data-bind="foreach: customFields.filterByProperty('name','SellPricestrategy')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+                    <div data-bind="foreach: customFields.filterByProperty('name','CustomerBudget')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+                    <!--/ko -->   
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 clear-padding">
+                <div class="col-md-12 fiori3-quote-info-second-column">
+                    <div class="text-center custom-field-headers"  >
+                      @Translation.Get("xsltQuoteKeyDates")
+                    </div>
+                    <div class="fiori3-input-group input-group form-group col-xs-12">
+					<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                        <label aria-label='@Translation.Get("xsltStatus")' class="control-label col-md-4" , for="orderStatusLabelId">
+                            @Translation.Get("xsltStatus")
+                        </label>
+						 </div>
+                        <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                            <!-- ko if: ['Internally Approved'].includes($rawData.orderStatusName())-->
+                            <select class="form-control" tabindex="1" data-bind="options: orderStatuses, optionsText: 'name', optionsValue: 'id', stringToNumericValue: orderStatusId, disable: true"></select>
+                            <!--/ko-->
+                            <!-- ko ifnot: ['Internally Approved'].includes($rawData.orderStatusName())-->
+								<select class="form-control" tabindex="1" data-bind="options: orderStatuses, optionsText: 'name', optionsValue: 'id', stringToNumericValue: orderStatusId, disable: isInViewMode"></select>
+                            <!--/ko-->
+                        </div>
+                    </div>
+                   
+                        <div class="fiori3-input-group input-group form-group col-xs-12">
+							<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                            <label aria-label='@Translation.Get("xsltDateCreated")' class="control-label col-md-4">@Translation.Get("xsltDateCreated")</label>
+							</div>
+							<div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                            <span tabindex="0"  data-bind="text: dateCreated, tooltip: { title: dateTimeCreated, autoClose: true, closeOnClick: true, placement: 'right', trigger: 'hover', container: 'body' }"></span>
+                      
+							</div>
+                        </div>
+                        <div class="fiori3-input-group input-group form-group col-xs-12">
+							<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                            <label aria-label='@Translation.Get("xsltDateModified")' class="control-label ">@Translation.Get("xsltDateModified")</label>
+                            </div>
+							 <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+							 <span tabindex="0" data-bind="text: dateModified, tooltip: { title: dateTimeModified, autoClose: true, closeOnClick: true, placement: 'right', trigger: 'hover', container: 'body' }"></span>
+                        </div>
+                    </div>
+                    <div class="fiori3-input-group input-group form-group col-xs-12">
+					<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                        <label aria-label='@Translation.Get("UserPersonalization.EffectiveDate")' class="control-label col-md-4" for="effectiveDateLabelId">@Translation.Get("UserPersonalization.EffectiveDate")
+                            <span class="tooltip-trigger" data-bind="visible: (customFields.firstWithProperty('name', 'Quote Type')?.content() === 'Contract New' || customFields.firstWithProperty('name', 'Quote Type')?.content() === 'Contract Renewal') ,tooltip: { title: 'This date will be used to fetch pricing from SAP', placement: 'top auto' }"><a href="#" class="sap-icon"><span>&#xe202;</span></a></span>
+                        </label>
+                      
+                        </div>
+                        <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                            <!-- start  - Itishree Mallick - 05/09/2023 -->
+                            <!-- ko if: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal")  -->
+                            <div class="fiori3-input-group input-group date-field" data-bind="css: { 'disabled': isInViewMode }">
+                                <input type="text" id="effectiveDateLabelId" class="form-control" data-bind="
+                                       value: effectiveDate,
+                                       validateInput: { val: effectiveDate, event: 'keypress input blur' },
+                                       attr: { placeholder: '@Environment.DateFormatString', readOnly: orderStatusName() !== 'Preparing' },
+                                       disable: isInViewMode,
+                                       css: { 'validation-error': effectiveDate.isValid &&  !effectiveDate.isValid(), 'validation-initial': !document.dirtyList.has('effectiveDateLabelId') }
+                                       " readonly/>
+                                       <a tabindex="-1" class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="datepicker: effectiveDate,css: { disabled : orderStatusName() !== 'Preparing'}" aria-haspopup="true"><i class="fa fa-calendar"></i></a>
+                            </div>
+                            <!-- /ko -->
+                            <!-- ko ifnot: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal")  -->
+                            <div class="fiori3-input-group input-group date-field" data-bind="css: { 'disabled': true }">
+                                <input type="text" id="effectiveDateLabelId" class="form-control" data-bind="
+                                       value: effectiveDate,
+                                       validateInput: { val: effectiveDate, event: 'keypress input blur' },
+                                       attr: { placeholder: '@Environment.DateFormatString' },
+                                       disable: true,
+                                       css: { 'validation-error': effectiveDate.isValid &&  !effectiveDate.isValid(), 'validation-initial': !document.dirtyList.has('effectiveDateLabelId') }
+                                       " style="background-color: #ffffff";/>
+                                <!-- ko if: isInViewMode-->
+                                <a tabindex="-1" class="input-group-addon btn btn-default" data-bind="attr: { 'disabled': true }"><span class="sap-icon">&#xe0ae;</span></a>
+                                <!-- /ko -->
+                                <!-- ko ifnot: isInViewMode -->
+                                <a tabindex="-1" class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="datepicker: effectiveDate, tooltip: { title: '@Translation.GetJS("Quote.Calendar")', placement: 'auto top' }"><span class="sap-icon">&#xe0ae;</span></a>
+                                <!-- /ko -->
+                            </div>
+                            <!-- /ko -->
+                             <!-- end  - Itishree Mallick - 05/09/2023 -->
+                        </div>
+                    </div>
+                    <!-- Start - CXCPQ-60167 - Manthan Rajguru - 08/10/2023 -->
+                    <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                    <div data-bind="foreach: customFields.filterByProperty('name','SC_CF_Term_duration_Months','SC_CF_CURANNDELSTDT','SC_CF_CURANNDELENDT','SC_CF_DUEDATE','SC_CF_CREATEDBY','SC_CF_CONTRACTDURYR','EGAP_Contract_Start_Date','EGAP_Contract_End_Date','EGAP_Project_Duration_Months','SC_CF_CONTRACTCRTDT','SC_CF_CONTRACTMDFDT')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+                    <!--/ko -->
+                    <!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                    <div class="fiori3-input-group input-group form-group col-xs-12">
+						<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                        <label aria-label='@Translation.Get("xsltRevision")' class="control-label col-md-4" for="quoteCustomDropdownMenu">@Translation.Get("xsltRevision")</label>
+						</div>
+						<div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                        <div class="fiori3-revisions-container flex">
+                            <!-- ko ifnot: $root.showNewRevisionDialog() || $root.showRevisionNameDialog() -->
+                            <div class="fiori3-revisions-select-container" >	
+                                <div class="custom-dropdown noselect" data-bind="dropdown:{}">
+                                    <button class="btn form-control" data-toggle-button="dropdown" id="quoteCustomDropdownMenu">
+                                        <span data-bind="css: { 'disabled-custom-dropdown': $root.isInViewMode() }"><span data-bind="text: $root.selectedRevisionName"></span><span class="fa fa-caret-down" style="padding: 4px 5px 0 0;float: right"></span></span>
+                                    </button>
+                                    <div class="custom-dropdown-menu" data-bind="if: !$root.isInViewMode()">
+                                        <div data-bind="foreach: $root.availableRevisions">
+                                            <div class="revision-option" data-bind="text: Name + (IsActive? ' (@Translation.Get("QuoteRevisions.Active"))' : '') + (!$root.hasActions($data, [1, 13]) ? ' @Translation.Get("QuoteRevisions.NotAvailable")' : ''),
+                                                                                css:{'disabled-revision': !$root.hasActions($data, [1, 13])},
+                                                                                click: function(){ $root.selectRevision($data) }"></div>
+                                        </div>
+                                        <div>
+                                            <div class="revision-option" style="border-top: 1px solid #CACECC;" data-bind="click: $root.goToRevisionsPage">@Translation.Get("QuoteRevisions.GoToRevisionsPage")</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a aria-label='@Translation.Get("QuoteRevisions.SetAsActive")' href="#" style="float: right" data-bind="visible: $root.selectedRevision() && !$root.selectedRevision().IsActive && $root.hasActions($root.selectedRevision(), [15]),
+                                                                            click: function(){ $root.executeRevisionAction($root.selectedRevision(), 15) }">@Translation.Get("QuoteRevisions.SetAsActive")</a>
+                            </div>
+                            <!-- /ko -->
+                            <!-- ko if: $root.showNewRevisionDialog() || $root.showRevisionNameDialog() -->
+                            <div class="fiori3-revisions-select-container">
+                                <div>
+                                    <input type="text" placeholder="@Translation.Get("QuoteRevisions.NewRevisionName")" class="form-control"
+                                            data-bind="focusAndSelect:{},
+                                value: $root.showNewRevisionDialog() ? $root.newRevisionName : $root.selectedRevision().Name,
+                                valueUpdate: 'afterkeydown',
+                                onKey: [{ key: 13, handler: $root.saveRevisionDialog },
+                                        { key: 27, handler: $root.cancelRevisionsDialog }]" />
+                                </div>
+                            </div>
+                            <!-- /ko -->
+                            <!-- ko ifnot: $root.showNewRevisionDialog() || $root.showRevisionNameDialog()  -->
+                            <div tabindex="0"  class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup': function() { clickOnEnter(event) } }, visible: !$root.isInViewMode() && $root.hasActions($root.selectedRevision(), [14]),
+                                        click: function(){ $root.showNewRevisionDialog(true); }, 
+                                        tooltip: { title: '@Translation.GetJS("QuoteRevisions.CreateNewRevision")', autoClose: true, closeOnClick: true, placement: 'right', trigger: 'hover', container: 'body' }" tabindex="0"><span>&#xe058;</span></div>
+                            <div tabindex="0"  class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup':  function() { clickOnEnter(event) } }, visible: !$root.isInViewMode() && $root.hasActions($root.selectedRevision(), [13]),
+                                        click: function(){ $root.showRevisionNameDialog(true); }, 
+                                        tooltip: { title: '@Translation.GetJS("QuoteRevisions.RenameRevision")', autoClose: true, closeOnClick: true, placement: 'right', trigger: 'hover', container: 'body' }" tabindex="0"><span>&#xe038;</span></div>
+                            <!-- /ko -->
+                            <!-- ko if: $root.showNewRevisionDialog() || $root.showRevisionNameDialog() -->
+                            <div tabindex="0" class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup':  function() { clickOnEnter(event) } }, click: $root.saveRevisionDialog"><span>&#xe05b;</span></div>
+                            <div tabindex="0" class="fiori3-icon-button fiori3-icon-button-vertical-align" data-bind="event: { 'keyup':  function() { clickOnEnter(event) } }, click: $root.cancelRevisionsDialog "><span>&#xe069;</span></div>
+                            <!-- /ko -->
+                        </div>
+                        </div>
+                    </div>
+                    <!--/ko -->
+                    <!-- END - CXCPQ-60167 - Manthan Rajguru - 08/10/2023 -->
+                </div>
+                <div data-bind="foreach: customFields.filterByProperty('name','Quote Comment')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+            </div>
+            @*Cart comment*@
+            <div class="col-md-4 col-sm-6 col-xs-12 clear-padding Addi_quoteDeta">
+                <div class="text-center custom-field-headers"  >
+                    @Translation.Get("xsltAdditionalQuoteDetails")
+                </div>
+                <div class="fiori3-input-group input-group form-group col-xs-12">
+                    <!-- Start -  Itishree Mallick 06-09-2023 -->
+                    <!-- Start - CXCPQ-60167 - Manthan Rajguru 10-08-2023 -->
+                    <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                    <!--<div class="fiori3-input-group input-group form-group col-xs-12">
+                        <label data-bind = "text:customFields.firstWithProperty('name', 'Sales ORG').label" class="control-label col-md-4" for="salesOrgLabelId"></label>
+                        <div class="col-md-8">
+                            <pre data-bind="text:customFields.firstWithProperty('name', 'Sales ORG').content"></pre>
+                        </div>
+                    </div>-->
+                    <!--/ko -->
+                    <!-- ko if: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") -->
+                    <div class="fiori3-input-group input-group form-group col-xs-12">
+					<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                        <label aria-label='@Translation.Get("xsltMarket")' class="control-label " for="marketsLabelId">
+                            Sales ORG
+                        </label>
+                      </div>
+                        <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                            <pre data-bind=" html:marketName"></pre>
+                        </div>
+                    </div>
+                    <!--/ko -->
+                    <!-- END - CXCPQ-60167 - Manthan Rajguru 10-08-2023 -->
+                    <!-- END - Itishree Mallick 06-09-2023 -->
+                    <!-- ko ifnot: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") -->
+                    <div class="fiori3-input-group input-group form-group col-xs-12">
+					<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                        <label aria-label='@Translation.Get("xsltMarket")' class="control-label  " for="marketsLabelId">
+                            @Translation.Get("xsltMarket")
+                        </label>
+                        </div>
+                        <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                            <pre data-bind="html:marketName"></pre>
+                        </div>
+                    </div>
+                    <!-- ko if: pricebooks().length > 0 -->
+                    <div class="fiori3-input-group input-group form-group col-xs-12">
+                        <!-- ko ifnot: isPricebookAvailable() -->
+                        <div class="alert alert-danger resp-danger">
+                            <i class="fa fa-exclamation-triangle"></i>
+                            <span>@Translation.Get("Quote.PricebookNotAvailableMsg")</span>
+                        </div>
+                        <!-- /ko -->
+                        <div class="row">
+						<div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+                            <label aria-label='@Translation.Get("xsltPricebook")' class="control-label col-md-4" for="pricebooksLabelId">
+                                @Translation.Get("xsltPricebook")
+                            </label>
+							 </div>
+                            <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+                                <pre data-bind="html:pricebookName"></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <!-- /ko -->
+
+					<!-- ko if:($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'CCC')-->
+						<div data-bind="foreach: customFields.filterByProperty('name','Exchange Rate')" class="quote-custom-fields">
+							<!-- ko template: template + "_Quote" -->
+							<!--/ko -->
+						</div>
+					<!-- /ko -->
+
+                    <!-- ko if: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") -->
+                    <div data-bind="foreach: customFields.filterByProperty('name','SC_CF_Parent_Contract_Number_Link','SC_CF_Parent_Quote_Number_Link','SC_CF_CURRENCY','MPA Honeywell Ref','SC_CF_EXCHANGE_RATE','SC_CF_PREVIOUS_QUOTE_NO','CF_Plant','SC_CF_IS_CONTRACT_EXTENSION','SC_CF_PRVYR_EXCHANGE_RATE')" class="quote-custom-fields">
+                        <!-- ko if: ['SC_CF_IS_CONTRACT_EXTENSION'].includes(name) -->
+                                	<!-- ko template: "customFieldCheckBoxTemplate" -->
+                                	<!--/ko -->
+                        	<!--/ko -->
+                        <!-- ko ifnot: ['SC_CF_IS_CONTRACT_EXTENSION'].includes(name) -->
+                        	<!-- ko template: template + "_Quote" -->
+                        	<!--/ko -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+
+                    <!-- Itishree Mallick 17-08-2023 start-->
+                    <!-- ko if: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New") -->
+                    
+                    <div data-bind="foreach: customFields.filterByProperty('name','SC_CF_CURRENCY','MPA Honeywell Ref', 'SC_CF_EXCHANGE_RATE','CF_Plant')" class="quote-custom-fields">
+                        <!-- ko if: name === 'Schedule Price Plan Updated' -->
+                        <!-- ko template: "customFieldCheckBoxTemplate" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                        <!-- ko ifnot: name === 'Schedule Price Plan Updated' -->
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+                    <!-- Itishree Mallick 17-08-2023 end-->
+                    <!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+                    <!-- ko if:($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'HCP')-->
+                    <div data-bind="foreach: customFields.filterByProperty('name','MPA','MPA Price Plan','Currency','Discount Request Reason','Functional Currency of Entity','MPA Threshold','MPA Validity','Selected Discount Plan','Recommended Discount Plan','Schedule Price Plan Updated','MPA Honeywell Ref','Tech/Benefit Price Factor','Competitive Price Factor')" class="quote-custom-fields">
+                        <!-- ko if: name === 'Schedule Price Plan Updated' -->
+                        <!-- ko template: "customFieldCheckBoxTemplate" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                        <!-- ko ifnot: name === 'Schedule Price Plan Updated' -->
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko if:($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'LSS') -->
+                    <div data-bind="foreach: customFields.filterByProperty('name','MPA','MPA Price Plan','Currency','Discount Request Reason','Functional Currency of Entity','MPA Threshold','MPA Validity','Selected Discount Plan','Recommended Discount Plan','Schedule Price Plan Updated','MPA Honeywell Ref')" class="quote-custom-fields">
+                        <!-- ko if: name === 'Schedule Price Plan Updated' -->
+                        <!-- ko template: "customFieldCheckBoxTemplate" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                        <!-- ko ifnot: name === 'Schedule Price Plan Updated'-->
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko if:($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'PAS')-->
+                    <div data-bind="foreach: customFields.filterByProperty('name','MPA','MPA Price Plan','Currency','Discount Request Reason','Functional Currency of Entity','MPA Threshold','MPA Validity','Selected Discount Plan','Recommended Discount Plan','Schedule Price Plan Updated')" class="quote-custom-fields">
+                        <!-- ko if: name === 'Schedule Price Plan Updated' -->
+                        <!-- ko template: "customFieldCheckBoxTemplate" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                        <!-- ko ifnot: name === 'Schedule Price Plan Updated' -->
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko if:(($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'PMC') && ($root.customFields.firstWithProperty('name','Quote Type')?.content() === 'Parts and Spot'))-->
+                    <div data-bind="foreach: customFields.filterByProperty('name', 'MPA', 'Enable MPA', 'MPA Price Plan','Currency','Discount Request Reason','Functional Currency of Entity','MPA Threshold','MPA Validity','PROS Guidance Recommendation','CF_Plant','PMC Type','PMC Product Family','PMC Product Line')" class="quote-custom-fields">
+                        <!-- ko if: name === 'Enable MPA' -->
+                            <!-- ko template: "customFieldCheckBoxTemplate" -->
+                            <!--/ko -->
+                        <!--/ko -->
+                        <!-- ko ifnot: name === 'Enable MPA'-->
+                            <!-- ko template: template + "_Quote" -->
+                            <!--/ko -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+					<!-- ko if:(($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'PMC') && ($root.customFields.firstWithProperty('name','Quote Type')?.content() != 'Parts and Spot'))-->
+                    <div data-bind="foreach: customFields.filterByProperty('name', 'MPA', 'MPA Price Plan','Currency','Discount Request Reason','Functional Currency of Entity','MPA Threshold','MPA Validity','PROS Guidance Recommendation','CF_Plant','PMC Type','PMC Product Family','PMC Product Line')" class="quote-custom-fields">
+                        <!-- ko if: name === 'Enable MPA' -->
+                            <!-- ko template: "customFieldCheckBoxTemplate" -->
+                            <!--/ko -->
+                        <!--/ko -->
+                        <!-- ko ifnot: name === 'Enable MPA'-->
+                            <!-- ko template: template + "_Quote" -->
+                            <!--/ko -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+                    <!-- /ko -->
+					<!-- ko if:(($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'LSS') || ($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'PAS') || ($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'HCP') || ($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'CCC') || ($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'PMC') || ($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'HTS') || ($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'SME'))&& ($root.customFields.firstWithProperty('name','Quote Type')?.content() == 'Projects')-->
+                    <div data-bind="foreach: customFields.filterByProperty('name','Opportunity for Petrofac')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+          <!-- ko if:($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() === 'HCP') && ($root.customFields.firstWithProperty('name','Quote Type')?.content() == 'Parts and Spot')-->
+                    <div data-bind="foreach: customFields.filterByProperty('name','Opportunity for Petrofac')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko if:($root.customFields.firstWithProperty('name','Quote Type')?.content() == 'Projects')-->
+                    <div data-bind="foreach: customFields.filterByProperty('name','Entitlement Report')" class="quote-custom-fields">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    </div>
+                        <!-- ko if: (($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() == 'LSS' && (['Projects','Contract New','Contract Renewal']).includes($root.customFields.firstWithProperty('name', 'Quote Type')?.content())) || ($root.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.content() == 'PAS' && (['Projects']).includes($root.customFields.firstWithProperty('name', 'Quote Type')?.content()))) -->
+                        <div data-bind="foreach: customFields.filterByProperty('name', 'Labor MPA discount to be applied Manually')" class="quote-custom-fields">
+                            <!-- ko template: template + "_Quote" -->
+                            <!--/ko -->
+                        </div>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </div>
+
+            </div>
+        </div>
+        <!--/ko --><!-- closing iscollapse above -->
+    </div>
+</div>
+<span data-bind="text:(function(){
+                            var Opp_statusName =orderStatusName();
+                            localStorage.setItem('Opp_statusName',Opp_statusName) 
+                            console.log('Opp_statusName',Opp_statusName)
+                              })();"></span>
+<!-- Start - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->
+<script type="text/javascript">
+    function setLocalStorage_CCC(activeTab, customFields){
+		let ccc_mandatorycf = customFields.filter((cf) => {
+			return cf.isRequired == true;
+		});
+		switch (activeTab) {
+			case "QUOTATION":
+			  ccc_mandatorycf.forEach(function (item, index) {
+					
+					console.log("ItemName==>",item.name)
+				});
+			}
+	}
+    function ServiceContractMessages(activeTab, customFields) {
+  let errorMessage = "Please enter mandatory fields such as";
+  let finalMessage = "";
+  let tabMessage = ""
+  let mandatoryCF = customFields.filter((cf) => {
+    return cf.isRequired == true;
+  });
+  switch (activeTab) {
+    case "QUOTATION":
+      mandatoryCF.forEach(function (item, index) {
+        if (item.content() === '') {
+          if (tabMessage !== '') {
+            tabMessage = `${tabMessage},`;
+          }
+          tabMessage = `${tabMessage}${item.label}`;
+        }
+      });
+      break;
+  }
+  if (tabMessage !== '') {
+    finalMessage = `${errorMessage} ${tabMessage}`;
+  }
+  return finalMessage;
+}
+/* R2Q vc product cost refresh - CXCPQ-111107*/
+cpq.ready(function(){
+    cpq.events.sub('cart:updated',function(){ 
+        console.log("---cart--111---")
+        if(cpq.models.cart.customFields()){
+            Getcustom = cpq.models.cart.customFields();
+            for (i =0;i<Getcustom.length;i++){
+                if(Getcustom[i].name == 'CF_R2Q_RefreshCart' && Getcustom[i].content()=="Yes"){
+                    Getcustom[i].content("No")     
+                    break;         
+                }
+            }
+        }
+    });
+});
+</script>
+<!-- Start  - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->

@@ -1,0 +1,11 @@
+{
+    "id": 22305,
+    "condition": "[EQ](<*VALUE(MSID_Crate_Design)*>,)",
+    "name": "Default_crate_Design",
+    "action": "<*SELECTVALUE(MSID_Crate_Design:Standard)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

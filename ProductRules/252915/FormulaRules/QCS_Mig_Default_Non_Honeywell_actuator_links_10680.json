@@ -1,0 +1,11 @@
+{
+    "id": 10680,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Number_of_Non_Honeywell_actuator_links)*>,)",
+    "name": "QCS_Mig_Default_Non_Honeywell_actuator_links",
+    "action": "<*ASSIGNVALUE(QCS_Mig_Number_of_Non_Honeywell_actuator_links:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13712,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Number_R740XL_Performance_B_Servers)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVM22",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVM22)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVM22,<*VALUE(Virtualization_Number_R740XL_Performance_B_Servers)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

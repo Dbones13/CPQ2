@@ -1,0 +1,11 @@
+{
+    "id": 24364,
+    "condition": "[NEQ](<*VALUE(SS_Experion_PKS_Release)*>,R520)",
+    "name": "Station_node_values_520_disallow_Orion",
+    "action": "<*DISALLOWVALUES(SS_Flex_Staton _Orion_Node:STN_PER_DELL_Tower_RAID2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

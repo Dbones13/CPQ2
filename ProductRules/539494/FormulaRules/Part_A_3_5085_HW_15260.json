@@ -1,0 +1,11 @@
+{
+    "id": 15260,
+    "condition": "[EQ](<*VALUE(MXP_MXProLine_AllianceView_Station)*>,Yes)",
+    "name": "Part_A_3_5085_HW",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5085-HW)*><*SETATVQTY(MXP_Bom_Parts:3-5085-HW,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18181,
+    "condition": "[AND]([OR]([EQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-41),[EQ](<*VALUE(MXP_Scanner_Type)*>,3-6022-54),[EQ](<*VALUE(MXP_Scanner_Type)*>,3-6022-64),[EQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-46)),[EQ](<*VALUE(MXP_Measurement_Type)*>,Non-GH Head))",
+    "name": "Condition_Dual_Head_single_head_6k",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Sensor_Type:Radiation Shield|MXIR CWT SSIR PE/PP/PET)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

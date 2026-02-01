@@ -1,0 +1,11 @@
+{
+    "id": 26042,
+    "condition": "1",
+    "name": "EBR (ACE-T)",
+    "action": "[IF]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes)){[IF]([EQ](<*VALUE(Experion Backup & Restore (ACE-T))*>,Yes)){<*ASSIGNVALUE(Labor Experion Backup & Restore (ACE-T):<* Eval(0<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>+0<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>) *>)*>}{<*ASSIGNVALUE(Labor Experion Backup & Restore (ACE-T):0)*>}[ENDIF]}{<*ASSIGNVALUE(Labor Experion Backup & Restore (ACE-T):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23077,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery)",
+    "name": "Show_GIIS_Turbomachinery",
+    "action": "<*ALLOWATTRIBUTES(C300_SerC_GIIS_RG_Cont,Header_04_close,Header_04_open)*>",
+    "description": "#CXCPQ-50811",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

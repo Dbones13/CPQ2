@@ -1,0 +1,11 @@
+{
+    "id": 21821,
+    "condition": "[EQ](<*VALUE(FDM_Base_Media_Delivery)*>,)",
+    "name": "Default_FDM_Base_Media_Delivery",
+    "action": "<*SELECTVALUE(FDM_Base_Media_Delivery:Electronic Download)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

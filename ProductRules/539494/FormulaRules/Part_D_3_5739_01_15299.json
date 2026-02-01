@@ -1,0 +1,11 @@
+{
+    "id": 15299,
+    "condition": "[NEQ](<*VALUE(MXP_Same_Spot_S_W)*>,Yes)",
+    "name": "Part_D_3_5739_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5739-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

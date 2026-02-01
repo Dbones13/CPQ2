@@ -1,0 +1,11 @@
+{
+    "id": 13913,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Hide_Labor_Details",
+    "action": "<*SETOPTIONAL(PCD_Ges_Location_Labour)*><*DISALLOWATTRIBUTES(Header_03_close,Header_03_open,PCD_Ges_Location_Labour,PCD_System_Complexity_and_Documentation_Input)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

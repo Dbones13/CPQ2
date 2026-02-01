@@ -1,0 +1,11 @@
+{
+    "id": 17720,
+    "condition": "[NEQ](<*VALUE(SM_Sys_Cabinets_RG)*>,<*CTX ( Container(SM_RemoteGroup_Cont).Sum(staging_Num_of_System_cabinet_SM_remote_group) )*>)",
+    "name": "staging_Num_of_System_cabinet_remote_group_sum",
+    "action": "<*ASSIGNVALUE(SM_Sys_Cabinets_RG:<*CTX ( Container(SM_RemoteGroup_Cont).Sum(staging_Num_of_System_cabinet_SM_remote_group) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

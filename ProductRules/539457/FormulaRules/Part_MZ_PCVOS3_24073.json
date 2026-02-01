@@ -1,0 +1,11 @@
+{
+    "id": 24073,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes),[OR]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster)),[GT](<* Eval( <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>) *>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVOS3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVOS3)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVOS3,<* Eval( <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

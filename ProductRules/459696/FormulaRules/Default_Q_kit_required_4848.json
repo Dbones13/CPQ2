@@ -1,0 +1,11 @@
+{
+    "id": 4848,
+    "condition": "[EQ](<*VALUE(MX_SE_Is Q_Kit_required)*>,)",
+    "name": "Default_Q_kit_required",
+    "action": "<*SELECTVALUE(MX_SE_Is Q_Kit_required:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

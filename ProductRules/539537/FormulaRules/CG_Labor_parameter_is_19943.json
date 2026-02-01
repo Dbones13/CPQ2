@@ -1,0 +1,11 @@
+{
+    "id": 19943,
+    "condition": "1",
+    "name": "CG_Labor_parameter_is",
+    "action": "<*ASSIGNVALUE(CG_Labor_parameter_is:[IF]([OR]([GT](<* Eval(0<*CTX ( Container(C300_SerC_GIIS_CG_Cont).Sum(labor_parameter_is) )*>+0<*CTX ( Container(C300_C IO MS).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_C IO MS2).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_C IO MS3).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_2).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_1).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_CG_Universal_IO_cont_2).Sum(Labor_IS) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Sum(Labor_IS) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont2).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_CG_Universal_IO_cont_1).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont1).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).Sum(Labor_IS) )*>) *>,0),[GT](<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(Labor_parameter_is) )*>,0))){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

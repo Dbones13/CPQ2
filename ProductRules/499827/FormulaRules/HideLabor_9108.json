@@ -1,0 +1,11 @@
+{
+    "id": 9108,
+    "condition": "1",
+    "name": "HideLabor",
+    "action": "[IF]([EQ](<*CTX( Container(CE_SystemGroup_Cont).SelectedRow.Column(Scope).GetDisplayValue )*>,HW/SW)){<*DISALLOWATTRIBUTES(Labor_Details_New/Expansion_Cont)*>}{<*ALLOWATTRIBUTES(Labor_Details_New/Expansion_Cont)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "05/10/24",
+    "modifiedBy": "Shiva Kumar Gurram"
+}

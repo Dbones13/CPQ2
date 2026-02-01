@@ -1,0 +1,11 @@
+{
+    "id": 14840,
+    "condition": "[EQ](<*VALUE(MX_MD_Mid_range_Control)*>,Yes)",
+    "name": "MX_Part_Q5904_87",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-87)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-87, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

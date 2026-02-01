@@ -1,0 +1,11 @@
+{
+    "id": 14883,
+    "condition": "[NEQ](<*VALUE(MX_CD_Stand_Alone_CD_Control_Link_Interface)*>,Yes)",
+    "name": "Part_Diss_9985",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:9985)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

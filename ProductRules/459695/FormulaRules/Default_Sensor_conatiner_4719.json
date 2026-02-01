@@ -1,0 +1,11 @@
+{
+    "id": 4719,
+    "condition": "[AND](<*ATTDEF(Scanner_Group_Name)*>,[EQ](<*CTX( Container(MX_Sensor_Group).Rows.GetCount )*>,0))",
+    "name": "Default_Sensor_conatiner",
+    "action": "<*CTX( Container(MX_Sensor_Group).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

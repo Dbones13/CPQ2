@@ -1,0 +1,11 @@
+{
+    "id": 14827,
+    "condition": "[GT](<*VALUE(MX_MD_multivariable_add_on_CV)*>,0)",
+    "name": "MX_Part_Q5904_INC",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-INC)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-INC, <*VALUE(MX_MD_multivariable_add_on_CV)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

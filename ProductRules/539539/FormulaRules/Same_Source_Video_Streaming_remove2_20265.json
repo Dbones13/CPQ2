@@ -1,0 +1,11 @@
+{
+    "id": 20265,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Same_Source_Video_Streaming)*>,Yes))",
+    "name": "Same Source Video Streaming_remove2",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMSSS)*><* DoResetAtt *>",
+    "description": "cxcpq-45734",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

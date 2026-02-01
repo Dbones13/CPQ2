@@ -1,0 +1,11 @@
+{
+    "id": 13490,
+    "condition": "1",
+    "name": "Total_FTE_Communities",
+    "action": "<*ASSIGNVALUE(Total_FTE_Communities:<*VALUE(Number of FTE Communities)*>)*>",
+    "description": "Labor Report task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

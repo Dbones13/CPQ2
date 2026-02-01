@@ -1,0 +1,11 @@
+{
+    "id": 23697,
+    "condition": "[EQ](<*CTX ( Quote.CustomField(R2Q_Save) )*>,Submit)",
+    "name": "R1",
+    "action": "<* ExecuteScript(GS_UNI_LoadLabor) *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

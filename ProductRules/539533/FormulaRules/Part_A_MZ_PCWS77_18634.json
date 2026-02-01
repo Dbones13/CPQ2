@@ -1,0 +1,11 @@
+{
+    "id": 18634,
+    "condition": "[AND]([EQ](<*VALUE(ES_eServer_Staton_Node)*>,STN_PER_DELL_Rack_RAID1),[EQ](<*VALUE(ES_Node_Supplier_station)*>,Honeywell),[GT](<*VALUE(ES_Additional_Stations_for_eServer)*>,0),[NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R530))",
+    "name": "Part_A_MZ_PCWS77",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:MZ-PCWS77)*><*SETATVQTY(eServer_BOM_parts:MZ-PCWS77,<*VALUE(ES_Additional_Stations_for_eServer)*>)*>\n<* DoResetAtt *>",
+    "description": "7963 story",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

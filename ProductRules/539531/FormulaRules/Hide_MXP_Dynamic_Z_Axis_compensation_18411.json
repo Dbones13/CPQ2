@@ -1,0 +1,11 @@
+{
+    "id": 18411,
+    "condition": "[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-5080-43)",
+    "name": "Hide_MXP_Dynamic_Z_Axis_compensation",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Dynamic_Z_Axis_compensation)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

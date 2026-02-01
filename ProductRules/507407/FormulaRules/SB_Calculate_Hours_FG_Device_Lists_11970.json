@@ -1,0 +1,11 @@
+{
+    "id": 11970,
+    "condition": "<*ISSELECTED(FGC_Implementation_Methodology.Standard Build Estimate)*>",
+    "name": "SB Calculate Hours F&G Device Lists",
+    "action": "<*ASSIGNVALUE(F&G Device Lists:<* Eval(<* Eval(<*VALUE(FGC_Number_of_Fire_&_Gas_Device_Types_(1-10))*>+(<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>*<*VALUE(FGC_Number_of_Fire_&_Gas_Device_Types_(1-10))*>*0.25)) *>*0.5) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

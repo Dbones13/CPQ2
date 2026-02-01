@@ -1,0 +1,11 @@
+{
+    "id": 10787,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,CWS RAE Upgrade),[EQ](<*VALUE(CWS_Mig_Upgrade_Scenario)*>,Physical hardware only))",
+    "name": "CWS_Mig_Hide_Virtualization",
+    "action": "<*DISALLOWATTRIBUTES(CWS_Mig_Virtualization_Configuration)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

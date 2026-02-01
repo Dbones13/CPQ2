@@ -1,0 +1,11 @@
+{
+    "id": 26036,
+    "condition": "1",
+    "name": "EBR  (Experion APP)",
+    "action": "[IF]([EQ](<*VALUE(Experion Backup & Restore (Experion APP))*>,Yes)){<*ASSIGNVALUE(Labor Experion Backup & Restore (Experion APP):<* Eval(0<*VALUE(Experion APP Node - Rack Mount)*>+0<*VALUE(Experion APP Node - Tower Mount)*>) *>)*>}{<*ASSIGNVALUE(Labor Experion Backup & Restore (Experion APP):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

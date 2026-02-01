@@ -1,0 +1,11 @@
+{
+    "id": 23953,
+    "condition": "[NOT](<*ATTSEL(Terminal_Cabinet_Mounting_Type)*>)",
+    "name": "Default_Cabinet_Mounting_Type",
+    "action": "<*SELECTVALUE(Terminal_Cabinet_Mounting_Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

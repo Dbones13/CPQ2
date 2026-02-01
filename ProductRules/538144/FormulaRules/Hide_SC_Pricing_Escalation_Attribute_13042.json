@@ -1,0 +1,11 @@
+{
+    "id": 13042,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_SC_Pricing_Escalation_Attribute",
+    "action": "<*DISALLOWATTRIBUTES(SC_Pricing_Escalation)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

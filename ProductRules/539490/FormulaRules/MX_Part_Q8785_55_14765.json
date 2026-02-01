@@ -1,0 +1,11 @@
+{
+    "id": 14765,
+    "condition": "[EQ](<*VALUE(MX_HC_HC900_Chassis_in_wall_mount_cabinet)*>,Yes)",
+    "name": "MX_Part_Q8785_55",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8785-55)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8785-55, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

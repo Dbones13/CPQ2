@@ -1,0 +1,11 @@
+{
+    "id": 20741,
+    "condition": "[AND]([NOT]([AND]([EQ](<*VALUE(SS_Server_Node_Type)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module)*>,Yes))),[NOT]([AND]([EQ](<*VALUE(SS_Server_Node_Type_Workstation)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module_Station)*>,Yes))))",
+    "name": "Part_D_MZ_PCST01_4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MZ-PCST01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

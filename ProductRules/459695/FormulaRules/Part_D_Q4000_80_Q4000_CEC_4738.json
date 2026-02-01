@@ -1,0 +1,11 @@
+{
+    "id": 4738,
+    "condition": "[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame)",
+    "name": "Part_D_Q4000_80_Q4000_CEC",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q4000-80)*><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q4000-CEC)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

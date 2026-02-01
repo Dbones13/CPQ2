@@ -1,0 +1,11 @@
+{
+    "id": 20656,
+    "condition": "[IF](<*IFANYVALUE(SS_Experion_PKS_Release:R520)*>){[AND]([EQ](<*VALUE(SS_Flex_Staton _Orion_Node)*>,STN_PER_DELL_Rack_RAID1),[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell))}{}[ENDIF]",
+    "name": "Part_A_MZ_PCWS77_2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCWS77)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCWS77, <*VALUE(SS_Flex_Station_Qty_Orion)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

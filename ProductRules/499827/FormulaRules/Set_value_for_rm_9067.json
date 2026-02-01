@@ -1,0 +1,11 @@
+{
+    "id": 9067,
+    "condition": "1",
+    "name": "Set value for rm",
+    "action": "<*ASSIGNVALUE(labor_parameter_rm: <*CTX( Container(ExpProject_Que_Right).Row(1).Column(Number of Extra Progress Reports or Meetings).Get )*>)*>",
+    "description": "Number of Extra Progress Reports or Meetings",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

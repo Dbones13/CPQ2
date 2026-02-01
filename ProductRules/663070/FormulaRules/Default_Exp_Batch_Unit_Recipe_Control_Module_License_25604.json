@@ -1,0 +1,11 @@
+{
+    "id": 25604,
+    "condition": "[EQ](<*VALUE(Exp Batch Unit/ Recipe Control Module License(0-600))*>,)",
+    "name": "Default Exp Batch Unit/ Recipe Control Module License",
+    "action": "<*ASSIGNVALUE(Exp Batch Unit/ Recipe Control Module License(0-600):0)*>",
+    "description": "Default Exp Batch Unit/ Recipe Control Module License",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

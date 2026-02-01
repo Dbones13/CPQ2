@@ -1,0 +1,11 @@
+{
+    "id": 10581,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Number_of_Standalone_CD_Control_Links)*>,)",
+    "name": "CWS_Mig_Default_Standalone_CD_Control_Links",
+    "action": "<*ASSIGNVALUE(CWS_Mig_Number_of_Standalone_CD_Control_Links:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

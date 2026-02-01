@@ -1,0 +1,11 @@
+{
+    "id": 20252,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Authorized_Recording_Playback)*>,Yes))",
+    "name": "Remove_EP-DVMAPB",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAPB)*><* DoResetAtt *>",
+    "description": "CXCPQ-45724",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

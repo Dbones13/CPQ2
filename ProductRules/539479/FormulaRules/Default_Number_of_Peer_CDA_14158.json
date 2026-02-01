@@ -1,0 +1,11 @@
+{
+    "id": 14158,
+    "condition": "[EQ](<*VALUE(Number_of_Peer_CDA)*>,)",
+    "name": "Default_Number_of_Peer_CDA",
+    "action": "<*ASSIGNVALUE(Number_of_Peer_CDA:0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

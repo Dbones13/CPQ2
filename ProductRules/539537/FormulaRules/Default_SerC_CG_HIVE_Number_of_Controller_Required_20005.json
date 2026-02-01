@@ -1,0 +1,11 @@
+{
+    "id": 20005,
+    "condition": "[EQ](<*VALUE(SerC_CG_HIVE_Number_of_Controller_Required)*>,)",
+    "name": "Default_SerC_CG_HIVE_Number_of_Controller_Required",
+    "action": "<*ASSIGNVALUE(SerC_CG_HIVE_Number_of_Controller_Required:0)*>",
+    "description": "CXCPQ-51943",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

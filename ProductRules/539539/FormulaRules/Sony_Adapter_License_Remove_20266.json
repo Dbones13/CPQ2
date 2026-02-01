@@ -1,0 +1,11 @@
+{
+    "id": 20266,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Sony_Adapter_License)*>,Yes))",
+    "name": "Sony Adapter License_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMSOI)*><* DoResetAtt *>",
+    "description": "cxcpq-45460",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23630,
+    "condition": "[LIKE](<*CTX ( Container(Cyber Configurations).UniqueValues(Part Desc).Separator(,) )*>,Assessments)",
+    "name": "Disallow_selected_product_Assessments",
+    "action": "<*DISALLOWVALUES(AR_CyberPrdChoices:Assessments)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23949,
+    "condition": "[NOT](<*ATTSEL(Terminal_Experion_Client_PC)*>)",
+    "name": "Default_Experion_Client_PC",
+    "action": "<*SELECTVALUE(Terminal_Experion_Client_PC:Tower)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

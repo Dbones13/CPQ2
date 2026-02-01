@@ -1,0 +1,11 @@
+{
+    "id": 4721,
+    "condition": "1",
+    "name": "Scanner_Group_Name_header",
+    "action": "<*ASSIGNVALUE(Scanner_Group_Name_header:<*VALUE(Header_01_open)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

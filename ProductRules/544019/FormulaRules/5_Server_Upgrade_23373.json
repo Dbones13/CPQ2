@@ -1,0 +1,11 @@
+{
+    "id": 23373,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZSDRD1,TP-ZSDRE1,TP-ZSDRB1,TP-ZSDRC1,TP-ZUSEV3,TP-ZUSEV4,TP-ZAMEV3,TP-ZAMEV4,TP-ZSDRK1,TP-ZSDRJ1,TP-ZG2EV3,TP-ZG2EV4,TP-ZSHRD1,TP-ZSDRL1,TP-ZA2EV3,TP-ZA2EV4,TP-ZSDRP1,TP-ZSDRQ1,TP-ZESVT1,TP-ZESVT2)",
+    "name": "5 Server Upgrade",
+    "action": "<*DISALLOWATTRIBUTES(KE_EBR_Required)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Release)*>\n<*DISALLOWATTRIBUTES(KE_Node_Type)*>\n<*DISALLOWATTRIBUTES(KE_SESP)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Media_Delivery)*>\n<*DISALLOWATTRIBUTES(KE_Experion_Base_Media_Delivery)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

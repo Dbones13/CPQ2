@@ -1,0 +1,11 @@
+{
+    "id": 9143,
+    "condition": "[EQ](<*VALUE(LCM_Multiyear_Selection)*>,)",
+    "name": "Default LCM_Multiyear_Selection",
+    "action": "<*SELECTVALUE(LCM_Multiyear_Selection:No Multi-year)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

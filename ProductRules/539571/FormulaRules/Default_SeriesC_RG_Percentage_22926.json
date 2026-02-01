@@ -1,0 +1,11 @@
+{
+    "id": 22926,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_Percentage)*>,)",
+    "name": "Default_SeriesC_RG_Percentage",
+    "action": "<*ASSIGNVALUE(SeriesC_RG_Percentage:0)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

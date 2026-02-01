@@ -1,0 +1,11 @@
+{
+    "id": 18783,
+    "condition": "[EQ](<*VALUE(MX_CD_Quick_Disconnect_Assembly)*>,)",
+    "name": "Default_Quick_disconnect_Assebly_calendizer",
+    "action": "<*SELECTVALUE(MX_CD_Quick_Disconnect_Assembly:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

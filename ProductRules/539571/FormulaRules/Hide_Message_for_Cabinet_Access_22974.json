@@ -1,0 +1,11 @@
+{
+    "id": 22974,
+    "condition": "1",
+    "name": "Hide_Message_for_Cabinet Access",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_MIB_Configuration_Required)*>,Yes),[EQ](<*VALUE(SerC_RG_Cabinet_Access)*>,Single Access))){<*ALLOWATTRIBUTES(Message_for_Cabinet Access)*>}{<*DISALLOWATTRIBUTES(Message_for_Cabinet Access)*>}[ENDIF]",
+    "description": "CXCPQ-58586",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

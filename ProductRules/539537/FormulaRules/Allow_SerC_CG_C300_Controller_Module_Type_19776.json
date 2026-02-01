@@ -1,0 +1,11 @@
+{
+    "id": 19776,
+    "condition": "[OR]([EQ](<*VALUE(Experion_PKS_Software_Release)*>,R511),[EQ](<*VALUE(Experion_PKS_Software_Release)*>,R510))",
+    "name": "Allow_SerC_CG_C300_Controller_Module_Type",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_C300_Controller_Module_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

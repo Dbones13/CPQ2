@@ -1,0 +1,11 @@
+{
+    "id": 9049,
+    "condition": "[EQ](<*CTX( Container(CE_SystemGroup_Cont).Row(1).Column(Scope).Get)*>,HWSWLABOR)",
+    "name": "assign_valueTo_hmi",
+    "action": "[IF]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System)){<*ALLOWATTRIBUTES(Is HMI Engineering in Scope?)*>[IF]([EQ](<*CTX( Container(Labor_details_newexapnsion_cont2).Row(1).Column(Is HMI Engineering in Scope).GetDisplayValue)*>,Yes)){<*SELECTVALUE(Is HMI Engineering in Scope?:Yes)*>}{<*SELECTVALUE(Is HMI Engineering in Scope?:No)*>}[ENDIF]}{<*DISALLOWATTRIBUTES(Is HMI Engineering in Scope?)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

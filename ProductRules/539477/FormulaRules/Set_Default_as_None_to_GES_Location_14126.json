@@ -1,0 +1,11 @@
+{
+    "id": 14126,
+    "condition": "[NOT](<*ATTSEL(PlantCruise_Ges_Location_Labour)*>)",
+    "name": "Set Default as None to GES Location",
+    "action": "<*SELECTVALUE(PlantCruise_Ges_Location_Labour:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18007,
+    "condition": "[EQ](<*VALUE(MXP_How_many_trays)*>,)",
+    "name": "Default_MXP_How_many_trays",
+    "action": "<*SELECTVALUE(MXP_How_many_trays:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

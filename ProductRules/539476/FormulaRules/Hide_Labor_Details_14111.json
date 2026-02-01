@@ -1,0 +1,11 @@
+{
+    "id": 14111,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Hide_Labor_Details",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_02_close,ATTCON_02_open,FDM_GES_Location,FDM_Number_of_Experion_Servers(1-20),Header_02_close,Header_02_open,No_of_ Exp_Stations_with_FDM_Maintenance_Station)*>",
+    "description": "CXCPQ-48372",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

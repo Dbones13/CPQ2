@@ -1,0 +1,11 @@
+{
+    "id": 19557,
+    "condition": "[AND]([EQ](<*VALUECODE(Exp HS Runtime System)*>,No),[EQ](<*VALUE(New_Expansion)*>,New))",
+    "name": "RunTime System NO EPHMBASE",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HMBASE)*><* DoResetAtt *>",
+    "description": "Add EP-HMBASE",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

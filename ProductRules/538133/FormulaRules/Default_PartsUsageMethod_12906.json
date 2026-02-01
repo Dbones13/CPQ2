@@ -1,0 +1,11 @@
+{
+    "id": 12906,
+    "condition": "[NOT](<*ATTDEF(SC_P1P2_PartsUsageMethod)*>)",
+    "name": "Default_PartsUsageMethod",
+    "action": "<*ASSIGNVALUE(SC_P1P2_PartsUsageMethod:1 Year Pricing)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

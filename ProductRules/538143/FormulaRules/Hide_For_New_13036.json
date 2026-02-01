@@ -1,0 +1,11 @@
+{
+    "id": 13036,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_For_New",
+    "action": "<*DISALLOWATTRIBUTES(SC_Experion_RC_Selection)*>\n<*DISALLOWATTRIBUTES(SC_Pricing_Escalation)*>\n<*DISALLOWATTRIBUTES(ComparisonSummary)*>\n<*CTX ( Container(SC_Experion_Models_Summary).Column(PY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(Renewal_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(PY_CostPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(HW_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(SR_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(SA_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(Comment).SetPermission(Hidden) )*>\n\n<*CTX ( Container(SC_Experion_Models_Scope).Column(PY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(Renewal_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(PY_CostPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(HW_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(SR_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(SA_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(Comment).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

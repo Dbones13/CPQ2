@@ -1,0 +1,11 @@
+{
+    "id": 17756,
+    "condition": "1",
+    "name": "Labor_parameter_swt",
+    "action": "<*ASSIGNVALUE(Labor_parameter_swt:<*CTX( Container(SM_RG_PartSummary_Cont).Sum(qty_switches_safety_system) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

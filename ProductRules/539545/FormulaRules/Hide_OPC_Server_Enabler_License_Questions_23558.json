@@ -1,0 +1,11 @@
+{
+    "id": 23558,
+    "condition": "[OR]([NEQ](<*VALUE(FDM_Release)*>,R540),[NEQ](<*VALUE(FDM_OPC_UA_Server_Enabler_License)*>,1))",
+    "name": "Hide_OPC_Server_Enabler_License_Questions",
+    "action": "<*DISALLOWATTRIBUTES(FDM_OPC_UA_AC_Profile_Enabler_License,FDM_OPC_UA_DA_Profile_Enabler_License,FDM_OPC_UA_HDA_Profile_Enabler_License)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

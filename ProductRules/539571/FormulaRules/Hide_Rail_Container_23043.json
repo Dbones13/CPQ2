@@ -1,0 +1,11 @@
+{
+    "id": 23043,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "Hide Rail Container",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_25_close,ATTCON_25_open,C300_RAIL_Universal_IO_cont_RG_1,C300_RAIL_Universal_io_RG_cont_2,C300Number of RAIL UIOs per Non Standard Cabinet,Header_05_close,Header_05_open,series_c_Rg_message)*>",
+    "description": "CXCPQ-40339",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22241,
+    "condition": "[OR]([EQ](<*VALUE(SCADA_Ges_Location_Labour)*>,None),[EQ](<*VALUE(SCADA_Ges_Location_Labour)*>,))",
+    "name": "hide_attributes",
+    "action": "<*DISALLOWATTRIBUTES(SCADA_Labor_GES_%)*> <*CTX( Container(SCADA_Engineering_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(SCADA_Engineering_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Engineering_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Engineering_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Engineering_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Engineering_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Engineering_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n\n<*DISALLOWATTRIBUTES(SCADA_Labor_GES_%_adc)*> <*CTX( Container(SCADA_Additional_Custom_Deliverables_Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(SCADA_Additional_Custom_Deliverables_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Additional_Custom_Deliverables_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Additional_Custom_Deliverables_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Additional_Custom_Deliverables_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Additional_Custom_Deliverables_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(SCADA_Additional_Custom_Deliverables_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

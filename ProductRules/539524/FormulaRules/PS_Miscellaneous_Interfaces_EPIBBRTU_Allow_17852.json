@@ -1,0 +1,11 @@
+{
+    "id": 17852,
+    "condition": "[GT](<*CTX( Container(Miscellaneous Interfaces).Row(2).Column(Nodes).Get )*>,0)",
+    "name": "PS_Miscellaneous_Interfaces_EP-IBBRTU_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IBBRTU)*><*SELECTVALUE(SCADA_BOM_Items:EP-IBBRTU)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IBBRTU, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

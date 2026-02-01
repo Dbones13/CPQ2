@@ -1,0 +1,11 @@
+{
+    "id": 13315,
+    "condition": "1",
+    "name": "HMI Engineering Plan",
+    "action": "<*ASSIGNVALUE(HMI Engineering Plan:[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,50)){8}{[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,200)){16}{40}[ENDIF]}[ENDIF])*>",
+    "description": "If (sd+md+cd+vcd+rd) <= 50, then 8\nElse if (sd+md+cd+vcd+rd) > 50 and <= 200, then 16\nElse 40",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

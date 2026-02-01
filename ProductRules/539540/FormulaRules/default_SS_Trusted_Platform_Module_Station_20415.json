@@ -1,0 +1,11 @@
+{
+    "id": 20415,
+    "condition": "[EQ](<*VALUE(SS_Trusted_Platform_Module_Station)*>,)",
+    "name": "default_SS_Trusted_Platform_Module_Station",
+    "action": "<*SELECTVALUE(SS_Trusted_Platform_Module_Station:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

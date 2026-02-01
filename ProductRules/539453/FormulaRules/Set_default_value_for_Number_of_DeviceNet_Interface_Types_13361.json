@@ -1,0 +1,11 @@
+{
+    "id": 13361,
+    "condition": "[EQ](<*VALUE(Number of DeviceNet Interface Types)*>,)",
+    "name": "Set default value for Number of DeviceNet Interface Types",
+    "action": "<*ASSIGNVALUE(Number of DeviceNet Interface Types:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

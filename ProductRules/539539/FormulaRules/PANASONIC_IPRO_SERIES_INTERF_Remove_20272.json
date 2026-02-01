@@ -1,0 +1,11 @@
+{
+    "id": 20272,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Panasonic_Series_Interface)*>,Yes))",
+    "name": "PANASONIC IPRO SERIES INTERF_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMPAN)*><* DoResetAtt *>",
+    "description": "CXCPQ-45726",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

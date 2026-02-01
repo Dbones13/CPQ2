@@ -1,0 +1,11 @@
+{
+    "id": 23785,
+    "condition": "[NEQ](<*VALUE(SerC_GC_Profibus_Gateway_Interface)*>,Yes)",
+    "name": "Hide_Container_profitbus_gateway",
+    "action": "<*DISALLOWATTRIBUTES(Header_07_open,SerC_Number_of_Profibus_DP_Slave_devices - Non_Red,SerC_Number_of_Profibus_DP_Slave_devices - Red,SerC_Number_of_Devices_per_Profibus_Network (0-32),Header_07_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25582,
+    "condition": "[EQ](<*VALUE(Backbone Switch Required)*>,No)",
+    "name": "Hide_Backbone_switch_Details",
+    "action": "<*SETOPTIONAL(Backbone Switch Details,Cluster_Name_Backbone,Default Switch,Default Crossover Cable,Power Cord Type,PDU Power Cable Req for HP/ Huawei Switch,Accessories of Backbone Switch,Tree A 2m cable (0-1000),Tree A 5m cable (0-1000),Tree A 10m cable (0-1000),Tree A 20m cable (0-1000),Tree B 2m cable (0-1000),Tree B 5m cable (0-1000),Tree B 10m cable (0-1000),Tree B 20m cable (0-1000))*><*DISALLOWATTRIBUTES(Backbone Switch Details,Cluster_Name_Backbone,Default Switch,Default Crossover Cable,Power Cord Type,PDU Power Cable Req for HP/ Huawei Switch,Accessories of Backbone Switch,Tree A 2m cable (0-1000),Tree A 5m cable (0-1000),Tree A 10m cable (0-1000),Tree A 20m cable (0-1000),Tree B 2m cable (0-1000),Tree B 5m cable (0-1000),Tree B 10m cable (0-1000),Tree B 20m cable (0-1000))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

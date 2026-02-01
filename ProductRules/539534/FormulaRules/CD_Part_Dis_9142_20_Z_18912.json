@@ -1,0 +1,11 @@
+{
+    "id": 18912,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,AutoSlice),[NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW45L SuperFlex SS),[NEQ](<*VALUE(MX_CD_Actuator_Housing_Autoslice)*>,Stainless steel),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_9142_20_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9142-20-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

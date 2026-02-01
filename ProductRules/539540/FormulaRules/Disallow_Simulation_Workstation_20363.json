@@ -1,0 +1,11 @@
+{
+    "id": 20363,
+    "condition": "[EQ](<*VALUE(SS_Simulation_PC_Station_required)*>,No)",
+    "name": "Disallow_Simulation_Workstation",
+    "action": "<*DISALLOWATTRIBUTES(SS_Number_of_Simulation_PCs_required)*>\n<*DISALLOWATTRIBUTES(SS_Server_Node_Type_Workstation)*>\n<*DISALLOWATTRIBUTES(SS_Node_Supplier_Station)*>\n<*DISALLOWATTRIBUTES(SS_Trusted_Platform_Module_Station)*>\n<*DISALLOWATTRIBUTES(SS_Additional_Hard Disk_Station)*>\n<*DISALLOWATTRIBUTES(SS_Display_Size_Station)*>\n<*DISALLOWATTRIBUTES(SS_Display_Supplier_Station)*>\n<*DISALLOWATTRIBUTES(SS_Simulation_Workstation_heading)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

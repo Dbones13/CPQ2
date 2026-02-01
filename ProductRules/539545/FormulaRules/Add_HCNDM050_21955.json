@@ -1,0 +1,11 @@
+{
+    "id": 21955,
+    "condition": "[IF]([EQ](<*VALUE(FDM_Release)*>,R530)){[INR](<*VALUE(FDM Diagnostic Custom Model (0-100))*>,41,50)}{0}[ENDIF]",
+    "name": "Add_HC-NDM050",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-NDM050)*><*SETATVQTY(FDM_Part_Summary:HC-NDM050,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

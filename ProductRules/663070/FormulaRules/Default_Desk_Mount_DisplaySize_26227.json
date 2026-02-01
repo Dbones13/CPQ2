@@ -1,0 +1,11 @@
+{
+    "id": 26227,
+    "condition": "[AND]([EQ](<*VALUE(TouchScreen_FlexServerDesk)*>,Yes),[EQ](<*VALUE(Display_Size_FlexServer)*>,))",
+    "name": "Default_Desk_Mount_DisplaySize",
+    "action": "<*SELECTVALUE(Display_Size_FlexServer:24 inch Touch Dell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

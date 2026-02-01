@@ -1,0 +1,11 @@
+{
+    "id": 12786,
+    "condition": "[EQ](<*VALUE(CurrentVer_EOPC_OTU_SESP)*>,R511)",
+    "name": "MZSQLCL4 Hide EOP",
+    "action": "<*DISALLOWATTRIBUTES(MZSQLCL4_EOPC_OTU_SESP)*>",
+    "description": "Hide MZSQLCL4 for R511 current Version",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

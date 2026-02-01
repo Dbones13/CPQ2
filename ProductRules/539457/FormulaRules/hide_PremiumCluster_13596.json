@@ -1,0 +1,11 @@
+{
+    "id": 13596,
+    "condition": "[NEQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster)",
+    "name": "hide_PremiumCluster",
+    "action": "<*DISALLOWATTRIBUTES(Header_02_open)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

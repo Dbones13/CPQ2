@@ -1,0 +1,11 @@
+{
+    "id": 23552,
+    "condition": "[EQ](<*VALUE(FDM_FF_Connector_Interface_License)*>,)",
+    "name": "Default_FDM_FF_connector_interface_Licence",
+    "action": "<*ASSIGNVALUE(FDM_FF_Connector_Interface_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17914,
+    "condition": "[GT](<*VALUE(Scada_conatiner_sum)*>,9999)",
+    "name": "SCADA_EP-DSC10K_point",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-DSC10K)*><*SETATVQTY(SCADA_BOM_Items:EP-DSC10K, <*eval(Int(Fix(<*VALUE(Scada_conatiner_sum)*>/10000)))*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

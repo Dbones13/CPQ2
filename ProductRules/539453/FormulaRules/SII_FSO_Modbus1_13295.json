@@ -1,0 +1,11 @@
+{
+    "id": 13295,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is Modbus Interface in Scope?)*>,Yes))",
+    "name": "SII_FSO_Modbus1",
+    "action": "<*ASSIGNVALUE(SII FAT and Sign Off-Modbus1:<* Eval(0.25 * <*VALUE(Number of Modbus Interfaces)*> )*>)*>",
+    "description": "SII FAT and Sign Off-Modbus1\n\nCalculated Hrs = mb*0.25",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

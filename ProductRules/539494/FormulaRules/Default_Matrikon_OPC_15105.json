@@ -1,0 +1,11 @@
+{
+    "id": 15105,
+    "condition": "[EQ](<*VALUE(MXP_Matrikon_OPC)*>,)",
+    "name": "Default_Matrikon_OPC",
+    "action": "<*SELECTVALUE(MXP_Matrikon_OPC:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

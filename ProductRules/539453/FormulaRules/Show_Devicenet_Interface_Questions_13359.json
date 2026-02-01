@@ -1,0 +1,11 @@
+{
+    "id": 13359,
+    "condition": "[AND]([EQ](<*VALUE(Is Devicenet Interface in Scope?)*>,Yes),[EQ](<*VALUE(Number of DeviceNet Interface Types)*>,))",
+    "name": "Show Devicenet Interface Questions",
+    "action": "<*ALLOWATTRIBUTES(Number of DeviceNet Interface Types)*>\n<*ASSIGNVALUE(Number of DeviceNet Interface Types:0)*>",
+    "description": "Display questions when Is Devicenet Interface in Scope? = Yes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

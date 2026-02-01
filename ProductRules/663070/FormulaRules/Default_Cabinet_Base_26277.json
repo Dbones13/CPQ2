@@ -1,0 +1,11 @@
+{
+    "id": 26277,
+    "condition": "[EQ](<*VALUE(Cabinet Base)*>,)",
+    "name": "Default_Cabinet_Base",
+    "action": "<*SELECTVALUE(Cabinet Base:No)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

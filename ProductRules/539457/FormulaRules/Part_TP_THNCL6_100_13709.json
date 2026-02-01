@@ -1,0 +1,11 @@
+{
+    "id": 13709,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Number_P_&_F_BTC12_Dual_Thin_Client)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_TP_THNCL6_100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:TP-THNCL6-100)*><*SETATVQTY(Virtualization_BOM_Parts:TP-THNCL6-100,<*VALUE(Virtualization_Number_P_&_F_BTC12_Dual_Thin_Client)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

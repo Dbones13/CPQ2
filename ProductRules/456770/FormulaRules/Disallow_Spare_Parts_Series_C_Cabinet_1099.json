@@ -1,0 +1,11 @@
+{
+    "id": 1099,
+    "condition": "[NOT]([OR]([NOT](<*ISSELECTED(Spare_Parts_Cabinet_Door_Type.Standard)*>),[NOT](<*ISSELECTED(Spare_Parts_Cabinet_Hinge_Type.130 Degree)*>),[NOT](<*ISSELECTED(Spare_Parts_Cabinet_Keylock_Type.Standard)*>),[NOT](<*ISSELECTED(Spare_Parts_Cabinet_Color.Gray-RAL7035)*>)))",
+    "name": "Disallow Spare Parts Series C Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(Series_C_Cabinet_Base_Required,Spare_Parts_Cabinet_TDI_Power_Supply_Cable_Length)*>",
+    "description": "",
+    "rank": "100",
+    "active": false,
+    "modifiedDate": "13/07/23",
+    "modifiedBy": "Suresh Naidu Pendela"
+}

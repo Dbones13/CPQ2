@@ -1,0 +1,11 @@
+{
+    "id": 18994,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Aqualizer MX),[EQ](<*VALUE(MX_CD_Water_Control_Unit_Aqualizer)*>,Yes))",
+    "name": "CD_Part_9580_WCU",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9580-WCU)*><*SETATVQTY(MX_CD_Bom_Parts:9580-WCU, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

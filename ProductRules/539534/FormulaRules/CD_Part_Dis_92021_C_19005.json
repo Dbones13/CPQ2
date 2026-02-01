@@ -1,0 +1,11 @@
+{
+    "id": 19005,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NEQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Couch),[NEQ](<*VALUE(MX_CD_Mounting_Upgrade)*>,Yes))",
+    "name": "CD_Part_Dis_92021_C",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:92021-C)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

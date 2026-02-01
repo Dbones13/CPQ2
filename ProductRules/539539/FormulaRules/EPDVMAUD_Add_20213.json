@@ -1,0 +1,11 @@
+{
+    "id": 20213,
+    "condition": "[EQ](<*VALUE(DVM_Bi-Directional_Audio)*>,Yes)",
+    "name": "EP-DVMAUD_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAUD)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMAUD,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

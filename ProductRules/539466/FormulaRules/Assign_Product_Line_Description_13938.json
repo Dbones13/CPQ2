@@ -1,0 +1,11 @@
+{
+    "id": 13938,
+    "condition": "1",
+    "name": "Assign Product Line Description",
+    "action": "<*ASSIGNVALUE(Product Line Description:<* TABLE ( SELECT ProductLineDescription FROM WriteInProducts WHERE Product = '<*VALUE(Selected_WriteIn)*>' ) *>)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "18/10/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

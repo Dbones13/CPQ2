@@ -1,0 +1,11 @@
+{
+    "id": 26553,
+    "condition": "[NEQ](<*VALUE(Hardware Design Selection_ACE Node)*>,)",
+    "name": "Hide_Additional_MemoryDisk_ACECabinet",
+    "action": "<*DISALLOWVALUES(Additional Hard Disk _ACE:Yes,Additional Memory_ACE:16GB)*>",
+    "description": "ACE Node in Cabinet Preference\nCXCPQ-42837",
+    "rank": "8",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

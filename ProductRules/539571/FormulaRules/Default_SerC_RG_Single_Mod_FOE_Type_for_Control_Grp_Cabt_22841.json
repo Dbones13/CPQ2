@@ -1,0 +1,11 @@
+{
+    "id": 22841,
+    "condition": "[EQ](<*VALUE(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt)*>,)",
+    "name": "Default_SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt",
+    "action": "[IF]([OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)){<*SELECTVALUE(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt:Single IOTA)*>}{<*SELECTVALUE(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt:Separate IOTA)*>}[ENDIF]",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

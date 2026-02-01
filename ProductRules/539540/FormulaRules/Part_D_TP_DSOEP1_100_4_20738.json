@@ -1,0 +1,11 @@
+{
+    "id": 20738,
+    "condition": "[AND]([OR]([LEQ](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0),[NEQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell),[NEQ](<*VALUE(SS_IKB_or_OEP_desk)*>,OEP)),[OR]([AND]([LEQ](<*VALUE(SS_Orion_Console_2_Position_Base_Unit_Total)*>,0),[NEQ](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,0)),[NEQ](<*VALUE(SS_Orion_Console_Membrane_KB_Type)*>,OEP)))",
+    "name": "Part_D_TP_DSOEP1_100_4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-DSOEP1-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

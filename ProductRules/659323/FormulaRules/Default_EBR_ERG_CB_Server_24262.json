@@ -1,0 +1,11 @@
+{
+    "id": 24262,
+    "condition": "[EQ](<*VALUE(EBR_Required_ERG(CB Server))*>,)",
+    "name": "Default_EBR_ERG_CB_Server",
+    "action": "<*SELECTVALUE(EBR_Required_ERG(CB Server):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12220,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering)\n,[EQ](<*VALUE(ELEPIU_Will_Honeywell_equipment_installation)*>,))",
+    "name": "Default_Will Honeywell perform equipment installation activities",
+    "action": "<*SELECTVALUE(ELEPIU_Will_Honeywell_equipment_installation:Yes)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

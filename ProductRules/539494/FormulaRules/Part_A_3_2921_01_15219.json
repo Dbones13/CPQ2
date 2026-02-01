@@ -1,0 +1,11 @@
+{
+    "id": 15219,
+    "condition": "[EQ](<*VALUE(MXP_Tire_Calendar_Control)*>,Speed Gap Feedforward)",
+    "name": "Part_A_3_2921_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-2921-01)*><*SETATVQTY(MXP_Bom_Parts:3-2921-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

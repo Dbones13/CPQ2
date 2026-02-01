@@ -1,0 +1,11 @@
+{
+    "id": 26696,
+    "condition": "[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R520)",
+    "name": "Show_Station_Node_Options2",
+    "action": "<*ALLOWVALUES(ES_eServer_Staton_Node:STN_PER_DELL_Tower_RAID2)*>\n<*DISALLOWVALUES(ES_eServer_Staton_Node:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Ravika Pupneja"
+}

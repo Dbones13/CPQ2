@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(PM_Project_Schedule_Labor_Hrs:<*EVAL(1*<*VALUE(labor_parameter_pf)*>*<*VALUE(labor_parameter_sp)*>)*>)*>

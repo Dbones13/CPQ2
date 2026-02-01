@@ -1,0 +1,11 @@
+{
+    "id": 18473,
+    "condition": "[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6056-02)",
+    "name": "Part_D_3_6056_02",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SC_Bom_Parts:3-6056-02)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

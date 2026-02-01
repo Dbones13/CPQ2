@@ -1,0 +1,11 @@
+{
+    "id": 18373,
+    "condition": "[EQ](<*VALUE(MXP_Optional_cable_30_feet)*>,Yes)",
+    "name": "Part_A_3_30F_HR",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-30F-HR)*><*SETATVQTY(MXP_SE_Bom_Parts:3-30F-HR,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

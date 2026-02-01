@@ -1,0 +1,11 @@
+{
+    "id": 25829,
+    "condition": "[EQ](<*VALUE(Optional DVD (Mobile Server))*>,)",
+    "name": "Default_Optional_DVD _Mobile_Server",
+    "action": "<*SELECTVALUE(Optional DVD (Mobile Server):No)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

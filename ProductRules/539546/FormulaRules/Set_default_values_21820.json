@@ -1,0 +1,11 @@
+{
+    "id": 21820,
+    "condition": "[EQ](<*CTX ( Quote.CustomField(EGAP_Proposal_Type) )*>,Budgetary)",
+    "name": "Set default values",
+    "action": "<*ASSIGNVALUE(ELEPIU_Total_numberof_Scada_points_for_controllers:<* Eval([IF]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Serial Interface)){0}{[IF]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Experion SCADA)){<* Eval(<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>*16) *>}{0}[ENDIF]}[ENDIF]) *>)*>\n\n\n<*ASSIGNVALUE(ELEPIU_Total_number_of_Process_points_controllers:<* Eval([IF]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Serial Interface)){0}{[IF]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,PCDI)){<* Eval(<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>*16) *>}{0}[ENDIF]}[ENDIF]) *>)*>\n\n\n<*ASSIGNVALUE(ELEPIU_Total_number_of_graphics_affected_by_ELPIU:<* Eval(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>*7) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "04/10/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

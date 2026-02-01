@@ -1,0 +1,11 @@
+{
+    "id": 9631,
+    "condition": "[GT](<*CTX ( Container(PRODUCTIZED _SKID_BOM).Rows.GetCount )*>,0)",
+    "name": "Load Valid Parts/FME Container",
+    "action": "<*CTX ( Container(Pskid_SimpleParts_Cont).LoadKeys(Partnumber).Load(select <*Eval(Replace(\"<*CTX ( Container(PRODUCTIZED _SKID_BOM).UniqueValues(Valid_ID).Separator(,) )*>\",\",\",\" as Partnumber UNION SELECT \"))*> as Partnumber) )*>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

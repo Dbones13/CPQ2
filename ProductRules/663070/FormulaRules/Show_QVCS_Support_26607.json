@@ -1,0 +1,11 @@
+{
+    "id": 26607,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,No)",
+    "name": "Show_QVCS_Support",
+    "action": "<*ALLOWATTRIBUTES(QVCS Support)*><*SETREQUIRED(QVCS Support)*>",
+    "description": "#34919 , Display question QVCS Support only if MIB Configuration required? is selected as No",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15190,
+    "condition": "[NEQ](<*VALUE(MXP_Flat_Die_Extrusion_and_Non_Woven_Control)*>,Average Thickness Control for Flat Die Extrusion/Nonwoven)",
+    "name": "Part_D_3_5811_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5811-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11944,
+    "condition": "[EQ](<*VALUE(FGC_GES_Location)*>,)",
+    "name": "Default_Number of GES Location",
+    "action": "<*SELECTVALUE(FGC_GES_Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

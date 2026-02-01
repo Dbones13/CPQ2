@@ -1,0 +1,1 @@
+[IF]([NEQ](<*VALUE(C300_GES_Location)*>,None)){<*ASSIGNVALUE(eServer_labor_GES_check:Country)*>}{<*ASSIGNVALUE(eServer_labor_GES_check:None)*>}[ENDIF]

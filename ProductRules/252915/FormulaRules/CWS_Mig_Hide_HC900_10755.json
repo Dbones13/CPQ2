@@ -1,0 +1,11 @@
+{
+    "id": 10755,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,CWS RAE Upgrade),[NEQ](<*VALUE(CWS_Mig_Machine_Cross_Direction_controls_upgraded_peripheral_hardware_licensing)*>,Yes))",
+    "name": "CWS_Mig_Hide_HC900",
+    "action": "<*DISALLOWATTRIBUTES(Header_19_close,Header_19_open,CWS_Mig_System_Chassis_with_C50_Controller,CWS_Mig_Analog_Input_Modules_8_point,CWS_Mig_Analog_Output_Modules_4_point,CWS_Mig_Digital_Input_Contact_type_Modules_16_point,CWS_Mig_Digital_Input_24VDC_Modules_16_point,CWS_Mig_Digital_Input_120_240_VAC_Modules_16_point,CWS_Mig_Digital_Output_Relays_Modules_8_point,CWS_Mig_Digital_Output_24VDC_Modules_16_point,CWS_Mig_Digital_Output_120_240_VAC_Modules_8_point,CWS_Mig_Digital_Output_24VDC_Modules_32_point,CWS_Mig_Digital_Input_24VDC_Modules_32_point,CWS_Mig_Hi_level_Analog_Input_Modules_16_point,CWS_Mig_Pulse_Frequency_Quadrature_Input_Modules_4_point)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

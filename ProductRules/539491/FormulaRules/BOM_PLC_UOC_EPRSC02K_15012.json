@@ -1,0 +1,11 @@
+{
+    "id": 15012,
+    "condition": "[AND]([EQ](<*VALUE(LSS_PLC_Server_Redundancy)*>,Redundant),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "BOM_PLC_UOC_EP-RSC02K",
+    "action": "[IF]([AND]([GEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,3900),[LEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,4000))){<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-RSC02K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-RSC02K, 2)*>}{[IF]([AND]([GEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,1900),[LEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,2000))){<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-RSC02K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-RSC02K, 1)*>}{[IF]([LEQ](<*Eval(int(((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC10K)*>*10000)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC05K)*>*5000))/2000))*>,0)){}{<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-RSC02K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-RSC02K,<*Eval(int(((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC10K)*>*10000)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC05K)*>*5000))/2000))*>)*>}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

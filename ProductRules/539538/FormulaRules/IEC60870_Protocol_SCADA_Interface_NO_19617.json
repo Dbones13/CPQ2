@@ -1,0 +1,11 @@
+{
+    "id": 19617,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS IEC-60870 Protocol SCADA Interface)*>,Yes))",
+    "name": "IEC-60870 Protocol SCADA Interface NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:HS-I60870)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

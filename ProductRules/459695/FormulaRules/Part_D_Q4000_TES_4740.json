@@ -1,0 +1,11 @@
+{
+    "id": 4740,
+    "condition": "[NEQ](<*VALUE(MX_SG_Thermal_Equalizatio_System)*>,Yes)",
+    "name": "Part_D_Q4000_TES",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q4000-TES)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25840,
+    "condition": "[EQ](<*VALUE(TouchScreen_FlexServerDesk)*>,)",
+    "name": "Default_Desk_Mount_TouchScreen",
+    "action": "<*SELECTVALUE(TouchScreen_FlexServerDesk:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

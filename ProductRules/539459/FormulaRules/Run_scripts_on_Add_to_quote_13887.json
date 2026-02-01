@@ -1,0 +1,11 @@
+{
+    "id": 13887,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScripts)*>,SCRIPT_RUN)",
+    "name": "Run_scripts on Add to quote",
+    "action": "<* ExecuteScript(GS_SM_ScriptOnAddtoQuote)*>\n<* ExecuteScript(GS_SM_System_PartSummary)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

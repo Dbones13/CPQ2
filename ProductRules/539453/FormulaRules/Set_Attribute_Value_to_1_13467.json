@@ -1,0 +1,11 @@
+{
+    "id": 13467,
+    "condition": "[EQ](<*VALUE(Number of Experion Enterprise Groups)*>,)",
+    "name": "Set Attribute Value to 1",
+    "action": "<*SELECTVALUE(Number of Experion Enterprise Groups:1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

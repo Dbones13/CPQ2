@@ -1,0 +1,11 @@
+{
+    "id": 26062,
+    "condition": "1",
+    "name": "Rule_EBE_PS",
+    "action": "<*ASSIGNVALUE(EBE_PS:<*Eval(<*VALUE(Number of Network Storage Device - Standard(0-100))*>+<*VALUE(Number of Network Storage Device - Performance(0-100))*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

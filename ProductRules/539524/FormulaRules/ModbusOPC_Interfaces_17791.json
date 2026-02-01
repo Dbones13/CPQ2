@@ -1,0 +1,11 @@
+{
+    "id": 17791,
+    "condition": "[EQ](<*CTX( Container(Modbus/OPC Interfaces).Rows.GetCount )*>,0)",
+    "name": "Modbus/OPC Interfaces",
+    "action": "<*CTX( Container(Modbus/OPC Interfaces).LoadKeys(Identifiers, Default_Network_type, Default_Network_Interface).Load(SELECT Identifiers, Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'Modbus/OPC Interfaces') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14292,
+    "condition": "[EQ](<*VALUE(MIQ_Do_we_require_Uncertainty)*>,Yes)",
+    "name": "MO-UNCRT Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:MO-UNCRT)*>\n<*SETATVQTY(MIQ_PART_SUMMARY:MO-UNCRT,<*Eval(<*GETATVQTY(MIQ_PART_SUMMARY:MO-BASE01)*> + <*GETATVQTY(MIQ_PART_SUMMARY:MO-ADDMET)*> + <*GETATVQTY(MIQ_PART_SUMMARY:MO-ADDGC)*>)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-50830",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

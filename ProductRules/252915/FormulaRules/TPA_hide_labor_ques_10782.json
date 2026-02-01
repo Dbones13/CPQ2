@@ -1,0 +1,11 @@
+{
+    "id": 10782,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "TPA_hide_labor_ques",
+    "action": "<*DISALLOWATTRIBUTES(TPA_How_many_process_scada_points_are_licensed_currently_in_existing_PMD,TPA_How_many_flex_licenses_are_currently_licensed_in_existing_PMD,TPA_How_many_multi_window_licenses_are_currently_licensed_in_existing_PMD,TPA_How_many_additional_new_replaced_switches_are_required,TPA_Include_and_deliver_new_GPS_clock,TPA_Include_new_AV_client_licenses_to_delvery,TPA_Include_EBR_and_NAS,TPA_Amount_of_fiber_optic_convertters_GBICs_required,TPA_Select_the_type_of_fiber_optic_converters_GBICs_required,TPA_How_many_PMD_systems_need_to_publish_DSA_data_in_DSA_community,TPA_Are_HMI_and_DxM_LCD_displays_in_Honeywell_scope_of_supply)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

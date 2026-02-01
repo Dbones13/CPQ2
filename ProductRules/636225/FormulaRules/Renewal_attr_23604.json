@@ -1,0 +1,11 @@
+{
+    "id": 23604,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Renewal_attr",
+    "action": "<*DISALLOWVALUES(SC_Select_subscription_type:New)*>",
+    "description": "it will change attr of Scope selection based on Product type.",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

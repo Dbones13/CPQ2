@@ -1,0 +1,11 @@
+{
+    "id": 20190,
+    "condition": "[EQ](<*VALUE(DVM_Additional_3rd Party_Client_L)*>,)",
+    "name": "Default_DVM_Additional_3rd Party_Client_L",
+    "action": "<*ASSIGNVALUE(DVM_Additional_3rd Party_Client_L:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

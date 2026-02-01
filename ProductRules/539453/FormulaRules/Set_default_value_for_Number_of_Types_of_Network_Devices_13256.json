@@ -1,0 +1,11 @@
+{
+    "id": 13256,
+    "condition": "[EQ](<*VALUE(Number of Types of Network Devices)*>,)",
+    "name": "Set default value for Number of Types of Network Devices",
+    "action": "<*ASSIGNVALUE(Number of Types of Network Devices:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

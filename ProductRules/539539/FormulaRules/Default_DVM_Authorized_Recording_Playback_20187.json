@@ -1,0 +1,11 @@
+{
+    "id": 20187,
+    "condition": "[EQ](<*VALUE(DVM_Authorized_Recording_Playback)*>,)",
+    "name": "Default_DVM_Authorized_Recording_Playback",
+    "action": "<*SELECTVALUE(DVM_Authorized_Recording_Playback:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10025,
+    "condition": "[EQ](<*CTX ( Container(Migration_MSID_Selection_Container).SelectedRow.Column(Scope).GetDisplayValue )*>,HW/SW)",
+    "name": "Graphics_Migration_Display",
+    "action": "<*DISALLOWVALUES(Migration_Product_Choices:Graphics_Migration)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "21/10/23",
+    "modifiedBy": "Madhuri Sharma"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25599,
+    "condition": "[EQ](<*VALUE(Quick Builder(0-11))*>,)",
+    "name": "Default Quick Builder",
+    "action": "<*ASSIGNVALUE(Quick Builder(0-11):0)*>",
+    "description": "Default Quick Builder",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

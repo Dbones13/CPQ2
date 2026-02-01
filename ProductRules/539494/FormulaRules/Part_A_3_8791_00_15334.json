@@ -1,0 +1,11 @@
+{
+    "id": 15334,
+    "condition": "[GT](<*VALUE(MXP_HC_900_Digital_Outputs_Relays_8_point)*>,0)",
+    "name": "Part_A_3_8791_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-8791-00)*><*SETATVQTY(MXP_Bom_Parts:3-8791-00,<*VALUE(MXP_HC_900_Digital_Outputs_Relays_8_point)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

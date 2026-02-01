@@ -1,0 +1,11 @@
+{
+    "id": 21842,
+    "condition": "[EQ](<*VALUE(FDM_Server Node Type)*>,)",
+    "name": "Default_Server Node Type",
+    "action": "<*SELECTVALUE(FDM_Server Node Type:SVR_STD_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

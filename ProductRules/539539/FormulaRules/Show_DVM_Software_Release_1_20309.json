@@ -1,0 +1,11 @@
+{
+    "id": 20309,
+    "condition": "[IN](<*VALUE(DVM_Software_Release)*>,R710,R800)",
+    "name": "Show_DVM_Software_Release_1",
+    "action": "<*ALLOWATTRIBUTES(DVM_Occupancy_Compliance_Monitoring,DVM_Public_Gateway,DVM_Video_Recording_Encryption,DVM_Web_Portal,DVM_Honeywell_Maxpro_Integratio,DVM_AWIROS_Analytics_Integration)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

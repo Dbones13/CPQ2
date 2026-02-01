@@ -1,0 +1,11 @@
+{
+    "id": 17981,
+    "condition": "1",
+    "name": "Total_RTU_Grp_IOs",
+    "action": "<*ASSIGNVALUE(Total_RTU_Grp_IOs:<*CTX( Math.Sum(<*CTX ( Container(RTU_CG_IO_Container).Sum(Non_HART_Analog_Input) )*>,<*CTX ( Container(RTU_CG_IO_Container).Sum(HART_Analog_Input) )*>,<*CTX ( Container(RTU_CG_IO_Container).Sum(Non_HART_Analog_Output) )*>,<*CTX ( Container(RTU_CG_IO_Container).Sum(HART_Analog_Output) )*>,<*CTX ( Container(RTU_CG_IO_Container).Sum(Digital_Input) )*>,<*CTX ( Container(RTU_CG_IO_Container).Sum(Digital_Output) )*>,<*CTX ( Container(RTU_CG_IO_Container).Sum(FIM_Analog_Input) )*>) )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

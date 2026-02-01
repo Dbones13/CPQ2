@@ -1,0 +1,11 @@
+{
+    "id": 11941,
+    "condition": "[EQ](<*VALUE(FGC_Implementation_Methodology)*>,)",
+    "name": "Default_Number of Implementation_Methodology",
+    "action": "<*SELECTVALUE(FGC_Implementation_Methodology:Standard Build Estimate)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13239,
+    "condition": "[EQ](<*VALUE(Experion Backup Restore Software Release)*>,)",
+    "name": "default Experion Backup  Restore Software Release",
+    "action": "<*SELECTVALUE(Experion Backup Restore Software Release:R501)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

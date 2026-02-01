@@ -1,0 +1,11 @@
+{
+    "id": 24115,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[GT](<*VALUE(Number of Nutanix Standard Clusters in the network)*>,0))",
+    "name": "premium_platform_nutanix_for_standard_allow",
+    "action": "<*ALLOWATTRIBUTES(Header_10_close,Header_10_open,Virtualization_Std_Cluster_Conf_transpose)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14246,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Batch_Application_Configuration",
+    "action": "<*ASSIGNVALUE(C300_Labour_Batch_Application_Configuration:[IF]([OR]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Chemical),[EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma))){<* Eval(0<*VALUE(C300_Labour_Parameter_Master)*>+0<*VALUE(C300_Labour_Parameter_Instance)*>) *>}{0}[ENDIF])*>",
+    "description": "CXCPQ-43575\nCalculated Hours = Master Hrs + Instance Hrs",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

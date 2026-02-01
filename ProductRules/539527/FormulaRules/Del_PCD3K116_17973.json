@@ -1,0 +1,11 @@
+{
+    "id": 17973,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(PCD_I/O_Extension_cable_length)*>,1200mm),[GT](<*GETATVQTY(PCD_Part_Summary:HPCD3.C200)*>,<*GETATVQTY(PCD_Part_Summary:HPCD3.M6893)*>)))",
+    "name": "Del_PCD3.K116",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PCD_Part_Summary:PCD3.K116)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

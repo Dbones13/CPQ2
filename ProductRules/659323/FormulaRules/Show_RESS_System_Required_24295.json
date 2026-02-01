@@ -1,0 +1,11 @@
+{
+    "id": 24295,
+    "condition": "[EQ](<*VALUE(RESS_System_Required)*>,Yes)",
+    "name": "Show_RESS_System_Required",
+    "action": "<*ALLOWATTRIBUTES(Header_03_open,ATTCON_06_open,Experion_server_type_at_location,Remote_client_station_hardware,RESS_Common_Questions,RESS_new_Flex_Station_licenses_required,RESS_Stations_require_Multiwindow_support,RESS_OTP_hardware_&_software_required,RESS_Qty_of_Thin_clients,RESS_Does_site_have_DMZ,RESS_Honeywell_to_Supply_the_hardware,RESS_Tower_server_preferred,RESS_server_require_Physical_hardware,ATTCON_06_close,ATTCON_09_open,RESS_Additional_Stations,RESS_Staton_Node,RESS_Node_Supplier,RESS_Display_size_WS,ATTCON_09_close,Header_03_close,Header_51_open,Header_51_close,RESS_Concurrent_Remote_Access_device_nodes,Experion_RESS_Node_Licenses,RESS_Experion_System_Software_Licenses)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

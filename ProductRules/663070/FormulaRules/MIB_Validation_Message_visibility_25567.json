@@ -1,0 +1,11 @@
+{
+    "id": 25567,
+    "condition": "[NEQ](<*VALUE(MIB Configuration Required?)*>,0)",
+    "name": "MIB_Validation_Message_visibility",
+    "action": "[IF]([AND]([EQ](<*VALUE(MIB Configuration Required?)*>,Yes),[OR]([NEQ](<*VALUE(ACE Node Rack Mount Cabinet)*>,0),[NEQ](<*VALUE(ACE Node Tower Mount Desk)*>,0)))){<*ALLOWATTRIBUTES(MIB_Validation_Cabinet_Desk_Message)*>}{<*DISALLOWATTRIBUTES(MIB_Validation_Cabinet_Desk_Message)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

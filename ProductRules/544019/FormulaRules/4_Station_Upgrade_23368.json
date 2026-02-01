@@ -1,0 +1,11 @@
+{
+    "id": 23368,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZWDTF1,TP-ZG2ES1)",
+    "name": "4 Station Upgrade",
+    "action": "<*DISALLOWATTRIBUTES(KE_Key_Board_Type)*>\n<*DISALLOWATTRIBUTES(KE_COA_License_Type)*>",
+    "description": "TP-ZWDTF1,TP-ZG2ES1",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

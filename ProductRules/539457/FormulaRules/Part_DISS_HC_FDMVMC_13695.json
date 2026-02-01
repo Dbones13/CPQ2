@@ -1,0 +1,11 @@
+{
+    "id": 13695,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_FDM_Virtualization_Client_CAL)*>,0))",
+    "name": "Part_DISS_HC_FDMVMC",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:HC-FDMVMC)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26150,
+    "condition": "[GT](<*VALUE(Off_Process_Base_Additional_License)*>,9)",
+    "name": "EP_ETSU10_Add_OffAdd",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-ETSU10)*>[IF]([GT](<*eval(INT(Fix((<*VALUE(Off_Process_Base_Additional_License)*>-(INT(Fix(<*VALUE(Off_Process_Base_Additional_License)*>/50)))*50)/10)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ETSU10, <*eval(INT(Fix((<*VALUE(Off_Process_Base_Additional_License)*>-(INT(Fix(<*VALUE(Off_Process_Base_Additional_License)*>/50)))*50)/10)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "EP-ETSU10",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

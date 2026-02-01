@@ -1,0 +1,11 @@
+{
+    "id": 20298,
+    "condition": "[NOT]([GT](<*VALUE(Alert_Standerd)*>,0))",
+    "name": "HVA-ACTIVE ALERT PREMIUM_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAAP)*><* DoResetAtt *>",
+    "description": "CXCPQ-45709",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

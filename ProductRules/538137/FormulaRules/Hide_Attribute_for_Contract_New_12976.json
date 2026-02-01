@@ -1,0 +1,11 @@
+{
+    "id": 12976,
+    "condition": "[EQ](<*VALUE(SC_Labor_Product_Type)*>,1)",
+    "name": "Hide_Attribute_for_Contract_New",
+    "action": "<*DISALLOWATTRIBUTES(SC_Labor_Contigency_Cost,SC_Labor_Pricing_Escalation_Based,SC_Labor_PY_Deliverables_Hours)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/10/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

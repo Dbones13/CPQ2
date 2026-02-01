@@ -1,0 +1,11 @@
+{
+    "id": 25648,
+    "condition": "[EQ](<*VALUE(Display Supplier_EAPP)*>,)",
+    "name": "Default Display_Supplier(Desk)",
+    "action": "<*SELECTVALUE(Display Supplier_EAPP:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

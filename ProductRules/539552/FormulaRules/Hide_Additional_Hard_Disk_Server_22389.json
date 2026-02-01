@@ -1,0 +1,11 @@
+{
+    "id": 22389,
+    "condition": "[EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID1_XE)",
+    "name": "Hide_Additional_Hard_Disk_(Server)",
+    "action": "<*DISALLOWVALUES(ESDC_Additional_Hard_Disk:Yes,ESDC_Additional_Memory:16GB)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

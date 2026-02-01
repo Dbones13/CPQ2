@@ -1,0 +1,11 @@
+{
+    "id": 13320,
+    "condition": "[NEQ](<*VALUE(Implementation Methodology)*>,)",
+    "name": "HMI Display Documentation",
+    "action": "<*ASSIGNVALUE(HMI Display Documentation:<* Eval([IF]([EQ](<*VALUE(Implementation Methodology)*>,)){0<*VALUE(labor_parameter_lod)*>*(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>+0<*VALUE(labor_parameter_cd)*>)}{0<*VALUE(labor_parameter_lod)*>*(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>+0<*VALUE(labor_parameter_cd)*>)*0.6*1.1}[ENDIF]) *>)*>",
+    "description": "If im=non SB then\n calculated Hrs = LD * ( sd + md + cd + vcd + rd )\nElse If ges= none and im=SB then\ncalculated Hrs = LD * ( sd + md + cd + vcd + rd ) * 0.6\nElse If ges!=none and im=SB then\n calculated Hrs = LD * ( sd + md + cd + vcd + rd ) * 0.6 * 1.1",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

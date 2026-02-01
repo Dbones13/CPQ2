@@ -1,0 +1,11 @@
+{
+    "id": 14673,
+    "condition": "[EQ](<*CTX( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Addl Custom Deliverable",
+    "action": "<*CTX( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

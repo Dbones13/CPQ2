@@ -1,0 +1,11 @@
+{
+    "id": 26281,
+    "condition": "[EQ](<*VALUE(Cabinet Thermostat)*>,)",
+    "name": "Default_Cabinet_Thermostat",
+    "action": "<*SELECTVALUE(Cabinet Thermostat:No)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

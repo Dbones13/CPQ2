@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(SerC_CG_Current_required_for_each_DO1:<*Xvalue(../SerC_CG_Current_required_for_each_DO)*>)*>

@@ -1,0 +1,11 @@
+{
+    "id": 26568,
+    "condition": "[EQ](<*VALUE(Display Size (Mobile Server))*>,)",
+    "name": "Default_Display_Size_Mobile_Server",
+    "action": "<*SELECTVALUE(Display Size (Mobile Server):27 inch NTS NEC)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

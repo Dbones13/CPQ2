@@ -1,0 +1,11 @@
+{
+    "id": 14260,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300 Site Acceptance Test",
+    "action": "<*ASSIGNVALUE(C300 Site Acceptance Test:<* Eval((0.17 * 0.3 * (0<*VALUE(Labor_parametre_sys)*>* 40*0.5 +0<*VALUE(Labor_parameter_mar)*>* (40 + 0<*VALUE(C300_Labor_parameter_is)*>*10)))+0<*VALUE(SW_SAT)*>) *>)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

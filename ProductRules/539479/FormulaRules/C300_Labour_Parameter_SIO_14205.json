@@ -1,0 +1,11 @@
+{
+    "id": 14205,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_SIO",
+    "action": "<*ASSIGNVALUE(C300_Labour_Parameter_SIO:[IF]([AND]([GT](<*VALUE(Labor_parameter_sio)*>,0),[LEQ](<*VALUE(Labor_parameter_sio)*>,400))){8}{[IF]([AND]([GT](<*VALUE(Labor_parameter_sio)*>,400),[LEQ](<*VALUE(Labor_parameter_sio)*>,2000))){16}{[IF]([AND]([GT](<*VALUE(Labor_parameter_sio)*>,2000),[LEQ](<*VALUE(Labor_parameter_sio)*>,5000))){24}{[IF]([GT](<*VALUE(Labor_parameter_sio)*>,5000)){<*CTX( Container(C300_Labor_Base_Details).Row(4).Column(Base_Values).Get )*>}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-43574\nif sio >0 and sio<=400 then Sbase = 8,\nsio>400 and sio<=2000 then Sbase = 16,\nsio>2000 and sio<=5000 then Sbase = 24,\nsio>5000 the Sbase = 48",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "24/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

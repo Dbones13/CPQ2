@@ -1,0 +1,11 @@
+{
+    "id": 22928,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Show_CN100_I/O_HOVE",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_CN100_I/O_HOVE,SerC_RG_Distance_for_SeriesC_Remote_Group,SerC_RG_CN100/_FOE_Fiber_Type)*>",
+    "description": "CXCPQ-44728",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

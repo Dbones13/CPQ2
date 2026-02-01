@@ -1,0 +1,11 @@
+{
+    "id": 15306,
+    "condition": "[EQ](<*VALUE(MXP_Preset_Controls)*>,Yes)",
+    "name": "Part_A_3_PRESETS",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-PRESETS)*><*SETATVQTY(MXP_Bom_Parts:3-PRESETS,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

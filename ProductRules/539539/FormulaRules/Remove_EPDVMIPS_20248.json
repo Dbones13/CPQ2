@@ -1,0 +1,11 @@
+{
+    "id": 20248,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_IPSOTEK_Analytics_Integration)*>,Yes))",
+    "name": "Remove_EP-DVMIPS",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMIPS)*><* DoResetAtt *>",
+    "description": "CXCPQ-45746",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

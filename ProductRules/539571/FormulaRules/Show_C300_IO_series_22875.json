@@ -1,0 +1,11 @@
+{
+    "id": 22875,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "Show_C300 IO series",
+    "action": "<*ALLOWATTRIBUTES(C300_C IO_RG MS,Header_17_close,Header_17_open)*>",
+    "description": "38254",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17986,
+    "condition": "1",
+    "name": "add_operating_temprature",
+    "action": "<*ASSIGNVALUE(PLC_Operating_Temperature:<*CTX( Container(PLC_CG_Controller_Rack_Cont).Row(1).Column(PLC_Operating_Temperature).GetDisplayValue )*>)*>",
+    "description": "CXCPQ-81805",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

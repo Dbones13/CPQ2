@@ -1,0 +1,11 @@
+{
+    "id": 20723,
+    "condition": "[AND]([EQ](<*VALUE(SS_Simulation_PC_Station_required)*>,Yes),[EQ](<*VALUE(SS_Display_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Display_Size_Station)*>,27 inch NTS DELL),[GT](<*VALUE(SS_Number_of_Simulation_PCs_required)*>,0))",
+    "name": "Sum27_NTS_Dell_2",
+    "action": "<*ASSIGNVALUE(SS_27inch_NTS_Dell:<* Eval(<*VALUE(SS_27inch_NTS_DELL)*>+<*VALUE(SS_Number_of_Simulation_PCs_required)*>) *>)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

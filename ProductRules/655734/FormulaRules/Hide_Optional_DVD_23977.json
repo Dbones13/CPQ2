@@ -1,0 +1,11 @@
+{
+    "id": 23977,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,Dell XR11),[GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0)))",
+    "name": "Hide_Optional_DVD",
+    "action": "<*SETOPTIONAL(Terminal_Optional_DVD)*><*DISALLOWATTRIBUTES(Terminal_Optional_DVD)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

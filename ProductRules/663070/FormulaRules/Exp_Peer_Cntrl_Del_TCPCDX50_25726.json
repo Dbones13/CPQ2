@@ -1,0 +1,11 @@
+{
+    "id": 25726,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Exp Peer Control Data Interface License(0-256))*>,49),[GT](<*eval(Int(Fix(<*VALUE(Exp Peer Control Data Interface License(0-256))*>/50)))*>,0)))",
+    "name": "Exp_Peer_Cntrl_Del_TCPCDX50",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TC-PCDX50)*><* DoResetAtt *>",
+    "description": "Delete TC-PCDX50",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

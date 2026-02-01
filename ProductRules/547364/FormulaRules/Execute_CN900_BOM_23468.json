@@ -1,0 +1,11 @@
+{
+    "id": 23468,
+    "condition": "[OR](<*ATTDEF(CN900_Bom_Parts)*>,[GT](<*CTX ( Container(CN900_Cabinet_Controller_Cont).Row(1).Column(CN900_Controller_Modules).Get )*>,0))",
+    "name": "Execute_CN900_BOM",
+    "action": "<* ExecuteScript(CN900_CG_PartSummary_Population) *>",
+    "description": "",
+    "rank": "99",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

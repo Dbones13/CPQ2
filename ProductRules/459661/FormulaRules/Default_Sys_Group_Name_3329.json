@@ -1,0 +1,11 @@
+{
+    "id": 3329,
+    "condition": "[AND]([EQ](<*VALUE(Sys_Group_Name)*>,),[NEQ](<*VALUE(CE_System_Index)*>,))",
+    "name": "Default Sys Group Name",
+    "action": "<*ASSIGNVALUE(Sys_Group_Name:System Group <*VALUE(CE_System_Index)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

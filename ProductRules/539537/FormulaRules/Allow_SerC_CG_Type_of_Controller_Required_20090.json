@@ -1,0 +1,11 @@
+{
+    "id": 20090,
+    "condition": "[AND]([OR](EQ](<*VALUE(Experion_PKS_Software_Release)*>,R520),EQ](<*VALUE(Experion_PKS_Software_Release)*>,R530)),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C))",
+    "name": "Allow_SerC_CG_Type_of_Controller_Required",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Type_of_Controller_Required)*>[IF]([EQ](<*VALUE(SerC_CG_C300_Controller_Module_Type)*>,C300(PCNT02))){<*DISALLOWVALUES(SerC_CG_Type_of_Controller_Required:Control HIVE - Physical,SerC_CG_Type_of_Controller_Required:Control HIVE - Virtual)*>}{<*ALLOWVALUES(SerC_CG_Type_of_Controller_Required:Control HIVE - Physical,SerC_CG_Type_of_Controller_Required:Control HIVE - Virtual)*>}[ENDIF]",
+    "description": "CXCPQ-51941 - Requirement 1",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

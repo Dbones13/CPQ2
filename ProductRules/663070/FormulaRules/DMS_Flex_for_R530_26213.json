@@ -1,0 +1,11 @@
+{
+    "id": 26213,
+    "condition": "[AND]([EQ](<*VALUE(Experion Software Release)*>,R530),[EQ](<*VALUE(DMS Desk Mounting Stations required)*>,Yes),[NEQ](<*VALUE(DMS Flex Station Qty 0_60)*>,0))",
+    "name": "DMS Flex for R530",
+    "action": "<*ALLOWVALUES(DMS Flex Station Hardware Selection:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "7712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

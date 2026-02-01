@@ -1,0 +1,11 @@
+{
+    "id": 23908,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[NOT](<*ISSELECTED(Terminal_Mode_of_Transport.Truck loading/unloading)*>))",
+    "name": "Disallow_Truck_Road_Column",
+    "action": "<*CTX( Container(Terminal_SAP_ERP_BSI_Interface_Scope).Column(Truck Road).SetPermission(Hidden) )*><*CTX( Container(Terminal_Workflow_Scope).Column(Truck Road).SetPermission(Hidden) )*><*CTX( Container(Terminal_Devices_Scope).Column(Truck Road).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

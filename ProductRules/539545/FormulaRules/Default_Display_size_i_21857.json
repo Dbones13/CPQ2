@@ -1,0 +1,11 @@
+{
+    "id": 21857,
+    "condition": "[EQ](<*VALUE(FDM_Display size (i))*>,)",
+    "name": "Default_Display size (i)",
+    "action": "<*SELECTVALUE(FDM_Display size (i):24 inch NTS DELL)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

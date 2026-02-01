@@ -1,0 +1,11 @@
+{
+    "id": 14180,
+    "condition": "[EQ](<*VALUE(C300_Implementation_Methodology)*>,)",
+    "name": "Default_C300_Implementation_Methodology",
+    "action": "<*SELECTVALUE(C300_Implementation_Methodology:Non-Standard Build Estimate)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

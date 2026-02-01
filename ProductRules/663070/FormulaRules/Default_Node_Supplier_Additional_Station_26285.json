@@ -1,0 +1,11 @@
+{
+    "id": 26285,
+    "condition": "[EQ](<*VALUE(Node Supplier (Additional Station))*>,)",
+    "name": "Default_Node_Supplier_Additional_Station",
+    "action": "<*SELECTVALUE(Node Supplier (Additional Station):Honeywell)*>",
+    "description": "Node Supplier (Additional Station)",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

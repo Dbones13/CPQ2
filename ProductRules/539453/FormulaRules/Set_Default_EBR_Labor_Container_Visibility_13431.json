@@ -1,0 +1,11 @@
+{
+    "id": 13431,
+    "condition": "[EQ](<*VALUE(EBR_Labor_Container_Visibility)*>,)",
+    "name": "Set_Default_EBR_Labor_Container_Visibility",
+    "action": "<*SELECTVALUE(EBR_Labor_Container_Visibility:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

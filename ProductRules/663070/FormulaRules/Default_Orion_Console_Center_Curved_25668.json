@@ -1,0 +1,11 @@
+{
+    "id": 25668,
+    "condition": "[EQ](<*VALUE(Orion Console Center Curv Auxil Equip Unit (0-40))*>,)",
+    "name": "Default Orion Console Center Curved",
+    "action": "<*ASSIGNVALUE(Orion Console Center Curv Auxil Equip Unit (0-40):0)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

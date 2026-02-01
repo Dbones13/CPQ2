@@ -1,0 +1,11 @@
+{
+    "id": 19648,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(Exp HS Enter Number of additional Stations)*>,0)*>,0)\n)",
+    "name": "Station Points Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HSTA01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

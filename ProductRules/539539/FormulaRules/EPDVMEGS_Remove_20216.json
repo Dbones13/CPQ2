@@ -1,0 +1,11 @@
+{
+    "id": 20216,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Edge_Device_Video_Storage_Support)*>,Yes))",
+    "name": "EP-DVMEGS_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMEGS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

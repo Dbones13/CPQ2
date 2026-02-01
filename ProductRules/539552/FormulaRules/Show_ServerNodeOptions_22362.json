@@ -1,0 +1,11 @@
+{
+    "id": 22362,
+    "condition": "[NEQ](<*VALUE(ESDC_Software_Release)*>,R511)",
+    "name": "Show_ServerNodeOptions",
+    "action": "<*ALLOWVALUES(ESDC_Server_Node_Type:SVR_PER_DELL_Rack_RAID1_XE,ESDC_Server_Node_Type:SVR_PER_HP_Rack_RAID5,ESDC_Server_Node_Type:SVR_PER_DELL_Rack_RAID5)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

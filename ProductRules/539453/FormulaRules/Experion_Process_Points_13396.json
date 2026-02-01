@@ -1,0 +1,11 @@
+{
+    "id": 13396,
+    "condition": "1",
+    "name": "Experion_Process_Points",
+    "action": "<*ASSIGNVALUE(Experion_Process_Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Experion_Process_Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

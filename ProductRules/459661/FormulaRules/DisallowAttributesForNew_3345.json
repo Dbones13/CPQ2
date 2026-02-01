@@ -1,0 +1,11 @@
+{
+    "id": 3345,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,New)",
+    "name": "DisallowAttributesForNew",
+    "action": "<*SETOPTIONAL(HS_Existing_Op_Apps_Leak_Detect_25_Pipe_Segments,Experion_Cutover,Experion_HS_MSID_Choices)*><*DISALLOWATTRIBUTES(HS_Existing_Equipment_Points,HS_Existing_Op_Apps_Core_25_Pipe_Segments,HS_Existing_Op_Apps_Leak_Detect_25_Pipe_Segments,HS_Existing_System_Release,HS_Number_of_Existing_Stations,HS_Number_of_Existing_Points,Experion_Cutover,Experion_HS_MSID_Choices)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

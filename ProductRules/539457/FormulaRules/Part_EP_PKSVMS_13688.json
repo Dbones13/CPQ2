@@ -1,0 +1,11 @@
+{
+    "id": 13688,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Experion_Virtualization_Server_CAL)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_PKSVMS",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-PKSVMS)*><*SETATVQTY(Virtualization_BOM_Parts:EP-PKSVMS,<*VALUE(Virtualization_Experion_Virtualization_Server_CAL)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

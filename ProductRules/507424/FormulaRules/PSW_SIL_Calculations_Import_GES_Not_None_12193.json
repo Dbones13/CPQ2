@@ -1,0 +1,11 @@
+{
+    "id": 12193,
+    "condition": "[AND](<*ISSELECTED(PSW_Implementation_Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(PSW_GES_Location)*>,None))",
+    "name": "PSW_SIL_Calculations_Import GES Not None",
+    "action": "<*ASSIGNVALUE(PSW_SIL_Calculations_Import:[IF]([EQ](<*VALUE(PSW_SIL_Calculation_Import_Scope)*>,Yes)){<* Eval(((40+<*VALUE(PSW_Number of SIFs)*>*1+16)*0.9)*1.1) *>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

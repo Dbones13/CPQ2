@@ -1,0 +1,11 @@
+{
+    "id": 10744,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_T_L_for_International_project_or_Domestic_proposal)*>,))",
+    "name": "TPA_Default_T_L_for_International_project_or_Domestic_proposal",
+    "action": "<*SELECTVALUE(TPA_T_L_for_International_project_or_Domestic_proposal:Domestic proposal)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

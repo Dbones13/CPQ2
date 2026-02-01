@@ -1,0 +1,11 @@
+{
+    "id": 3353,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(CE_Selected_Products)*>,PlantCruise System))",
+    "name": "Hide_Attribute_for_Plantcruise_System",
+    "action": "<*CTX( Container(CE_General_Inputs_Cont).Column(CE_EBR_Media).SetPermission(Hidden) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_System_Number).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

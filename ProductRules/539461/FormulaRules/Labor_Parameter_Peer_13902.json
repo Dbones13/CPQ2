@@ -1,0 +1,11 @@
+{
+    "id": 13902,
+    "condition": "1",
+    "name": "Labor_Parameter_Peer",
+    "action": "<*ASSIGNVALUE(Labor_Parameter_Peer:<*CTX ( Math.Sum(<*CTX ( Container(UOC_Labor_Details).Row(1).Column(UOC_Num_Peer_PCDI_Labour).Get )*>,<*CTX ( Container(UOC_Labor_Details).Sum(UOC_Num_Peer_CDA_Labour) )*>,<*CTX ( Container(UOC_Labor_Details).Sum(UOC_Num_Peer_to_Peer) )*>) )*>)*>",
+    "description": "Labor Report",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

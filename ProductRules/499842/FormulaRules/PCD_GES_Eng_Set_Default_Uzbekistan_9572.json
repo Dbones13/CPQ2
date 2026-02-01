@@ -1,0 +1,11 @@
+{
+    "id": 9572,
+    "condition": "[AND]([NOT](<*ATTSEL(PCD_GES_Eng)*>),<*ISSELECTED(PCD_Ges_Location_Labour.GES Uzbekistan)*>)",
+    "name": "PCD_GES_Eng_Set_Default_Uzbekistan",
+    "action": "<*SELECTVALUE(PCD_GES_Eng:HPS_GES_P350B_UZ)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

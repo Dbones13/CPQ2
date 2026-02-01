@@ -1,0 +1,11 @@
+{
+    "id": 25980,
+    "condition": "[EQ](<*VALUE(DSA Remote Server License)*>,No)",
+    "name": "EP-XRESR1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-XRESR1)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

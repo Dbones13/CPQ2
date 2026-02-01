@@ -1,0 +1,11 @@
+{
+    "id": 4878,
+    "condition": "<*ATTSEL(Scanner_sensor_bom_parts)*>",
+    "name": "Load_part_summary_cont",
+    "action": "<*CTX( Container(Scanner_sensor_partsummary_cont).LoadKeys(partnumber).Load(select '<*eval(Replace(\"<*VALUE(Scanner_sensor_bom_parts)*>\",\", \",\"' as partnumber UNION SELECT '\"))*>' as partnumber   ) )*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

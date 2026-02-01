@@ -1,0 +1,11 @@
+{
+    "id": 13481,
+    "condition": "1",
+    "name": "HMI FAT & Sign Off",
+    "action": "<*ASSIGNVALUE(HMI FAT & Sign Off:<* Eval(<*VALUE(labor_parameter_d)*>+<*VALUE(labor_parameter_s)*>+<*VALUE(labor_parameter_f)*>+0<*VALUE(Number of Custom Context Menus)*>+(1.5*<*VALUE(labor_parameter_sf1)*>)+(2*<*VALUE(Labor_Parameter_Sta_System)*>)+(4*<*VALUE(labor_parameter_ag)*>)) *>)*>",
+    "description": "Calculated Hrs = D + S + F + ccm + 1.5 * SF + 2 * sta + 4 * ag",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

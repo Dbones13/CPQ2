@@ -1,0 +1,11 @@
+{
+    "id": 10021,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "assign_subcal_EP-1BP100",
+    "action": "<*ASSIGNVALUE(Subcal_EP_1BP100:<*Eval([IF]([AND]([GT](<*Eval(<*VALUE(LSS_Total_Experion_UOC_Batch_Points)*>-<*Eval(<*Eval(int(<*Eval(<*VALUE(LSS_Total_Experion_UOC_Batch_Points)*>/100)*>))*>*100)*>)*>\n,50),[LT](<*Eval(<*VALUE(LSS_Total_Experion_UOC_Batch_Points)*>-<*Eval(<*Eval(int(<*Eval(<*VALUE(LSS_Total_Experion_UOC_Batch_Points)*>/100)*>))*>*100)*>)*>,100))){1}{0}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "21/10/23",
+    "modifiedBy": "Madhuri Sharma"
+}

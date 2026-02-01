@@ -1,0 +1,11 @@
+{
+    "id": 24266,
+    "condition": "[EQ](<*VALUE(ERG CB Server Node Type)*>,)",
+    "name": "Default_ERG_CB_Server_Node_Type",
+    "action": "<*SELECTVALUE(ERG CB Server Node Type:SVR_STD_DELL_Rack_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20035,
+    "condition": "[NOT]([NOT]([AND]([OR]([EQ](<*VALUE(Experion_PKS_Software_Release)*>,R520),[EQ](<*VALUE(Experion_PKS_Software_Release)*>,R530)),[NOT](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>))),[OR]([EQ](<*VALUE(Experion_PKS_Software_Release)*>,R511),[EQ](<*VALUE(Experion_PKS_Software_Release)*>,R510)))",
+    "name": "Allow_SerC_CG_C300_Controller_Module_Type",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_C300_Controller_Module_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

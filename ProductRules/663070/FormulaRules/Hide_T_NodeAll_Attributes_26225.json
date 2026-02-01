@@ -1,0 +1,11 @@
+{
+    "id": 26225,
+    "condition": "[EQ](<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,)",
+    "name": "Hide_T_Node(All Attributes)",
+    "action": "<*DISALLOWATTRIBUTES(ACE-T Node in Cabinet Preference,Ent_ace_t_Cab_tpm,Hardware Design Selection,Rack Mounting Type for ACE-T Node,Node Supplier_ACE_T,Additional Memory_ACE_T,Additional Hard Disk_ACE_T)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

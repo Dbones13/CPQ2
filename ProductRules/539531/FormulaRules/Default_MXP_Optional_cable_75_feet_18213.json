@@ -1,0 +1,11 @@
+{
+    "id": 18213,
+    "condition": "[EQ](<*VALUE(MXP_Optional_cable_75_feet)*>,)",
+    "name": "Default_MXP_Optional_cable_75_feet",
+    "action": "<*SELECTVALUE(MXP_Optional_cable_75_feet:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

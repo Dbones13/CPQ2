@@ -1,0 +1,11 @@
+{
+    "id": 13521,
+    "condition": "[EQ](<*VALUE(Virtualization_Does_the_customer_want_Honeywell)*>,)",
+    "name": "Default_customer_want_honeywell_configure_switches",
+    "action": "<*SELECTVALUE(Virtualization_Does_the_customer_want_Honeywell:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

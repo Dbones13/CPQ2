@@ -1,0 +1,11 @@
+{
+    "id": 23971,
+    "condition": "[AND]([NEQ](<*VALUE(Terminal_Experion_Server_(ESV)_Type)*>,Desk),[GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0))",
+    "name": "Hide_Attributes_Hardware_Components1",
+    "action": "<*ALLOWATTRIBUTES(Terminal_Cabinet_Mounting_Type)*><*SETREQUIRED(Terminal_Cabinet_Mounting_Type)*><*SETOPTIONAL(Terminal_Display_Required,Terminal_Trackball)*><*DISALLOWATTRIBUTES(Terminal_Display_Required,Terminal_Trackball)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

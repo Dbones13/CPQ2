@@ -1,0 +1,11 @@
+{
+    "id": 17921,
+    "condition": "[AND]([EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(1).Column(Devices).Get )*>,Yes),[GT](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(2).Column(Nodes).Get )*>,0))",
+    "name": "PS_EP-IGES90_Allow",
+    "action": "<* DoNotResetAtt *><*ALLOWVALUES(SCADA_BOM_Items:EP-IGES90)*><*SELECTVALUE(SCADA_BOM_Items:EP-IGES90)*><*SETATVQTY(SCADA_BOM_Items:EP-IGES90, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

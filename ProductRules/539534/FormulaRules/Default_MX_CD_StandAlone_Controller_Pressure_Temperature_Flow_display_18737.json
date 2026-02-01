@@ -1,0 +1,11 @@
+{
+    "id": 18737,
+    "condition": "[EQ](<*VALUE(MX_CD_Stand-Alone_Controller_Pressure_Temperature_Flow_display)*>,)",
+    "name": "Default_MX_CD_Stand-Alone_Controller_Pressure_Temperature_Flow_display",
+    "action": "<*SELECTVALUE(MX_CD_Stand-Alone_Controller_Pressure_Temperature_Flow_display:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10606,
+    "condition": "[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR)",
+    "name": "HIDE_LSS_third_party",
+    "action": "<*DISALLOWATTRIBUTES(LSS_Third_party_items)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

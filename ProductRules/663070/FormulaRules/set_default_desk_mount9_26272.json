@@ -1,0 +1,11 @@
+{
+    "id": 26272,
+    "condition": "[EQ](<*VALUE(Display Size_server)*>,)",
+    "name": "set_default_desk_mount9",
+    "action": "<*SELECTVALUE(Display Size_server:27 inch NTS NEC)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

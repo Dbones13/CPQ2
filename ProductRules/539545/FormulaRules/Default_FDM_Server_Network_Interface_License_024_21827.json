@@ -1,0 +1,11 @@
+{
+    "id": 21827,
+    "condition": "[EQ](<*VALUE(FDM Server Network Interface License (0-24))*>,)",
+    "name": "Default_FDM Server Network Interface License (0-24)",
+    "action": "<*ASSIGNVALUE(FDM Server Network Interface License (0-24):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

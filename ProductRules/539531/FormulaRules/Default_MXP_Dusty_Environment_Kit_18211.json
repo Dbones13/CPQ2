@@ -1,0 +1,11 @@
+{
+    "id": 18211,
+    "condition": "[EQ](<*VALUE(MXP_Dusty_Environment_Kit)*>,)",
+    "name": "Default_MXP_Dusty_Environment_Kit",
+    "action": "<*SELECTVALUE(MXP_Dusty_Environment_Kit:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(EXP_Red_non_red)*>,Yes)){<*ASSIGNVALUE(MXP_Redundant_Server_Y_N:2)*>}{<*ASSIGNVALUE(MXP_Redundant_Server_Y_N:1)*>}[ENDIF]

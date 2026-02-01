@@ -1,0 +1,11 @@
+{
+    "id": 13771,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_store_F55",
+    "action": "<*ASSIGNVALUE(Labor_parameter_store_F55:<* Eval([IF]([EQ](<*VALUE(Labor_parameter_varn_20)*>,Yes)){(<*VALUE(Labor_parameter_varn_14)*>*1)}{0}[ENDIF]+(<*VALUE(Labor_parameter_varn_1)*>*0.75)+(<*VALUE(Labor_parameter_varn_16)*>*0.5)+(<*VALUE(Labor_parameter_varn_17)*>*0.5)+(<*VALUE(Labor_parameter_var_12)*>*0.5)) *>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23013,
+    "condition": "<*IFANYVALUE(C300_RG_UPC_CNM:N)*>",
+    "name": "Disallow_ C300_RG_UPC_CNM_Exp_Module",
+    "action": "<*DISALLOWVALUES(C300_RG_UPC_CNM_Exp_Module:Y)*><*SELECTVALUE(C300_RG_UPC_CNM_Exp_Module:N)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

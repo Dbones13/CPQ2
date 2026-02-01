@@ -1,0 +1,11 @@
+{
+    "id": 25564,
+    "condition": "[LEQ](<*VALUE(Flex Station Qty (0-60))*>,0)",
+    "name": "Flex Station Qty gt 0",
+    "action": "<*DISALLOWATTRIBUTES(Flex Station Hardware Selection TPS,Multi-Window Support Option Required?)*>",
+    "description": "CXCPQ-34882 - 3",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20305,
+    "condition": "[AND]([EQ](<*VALUE(DVM_Console_Client)*>,0),[EQ](<*VALUE(DVM_Motion_Search_on_Recorded_Video)*>,Yes))",
+    "name": "Add_EP-DVMCNC_Qty0",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMCNC)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMCNC, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45731",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

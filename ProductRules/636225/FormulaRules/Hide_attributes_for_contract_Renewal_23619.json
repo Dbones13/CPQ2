@@ -1,0 +1,11 @@
+{
+    "id": 23619,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide attributes for contract Renewal",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_09_close,ATTCON_09_open,ATTCON_10_close,ATTCON_10_open,HDP Additional Concurrent user,HDP Safety Manager,HDP TPS Only,HDP_Additiona_MSID,HDP_Additiona_MSID,HDP_Additional_Appliance,HDP_Additional_MSID_Name,HDP_Base_Msid,HDP_Base_Msid,HDP_Exprion_TPSPlus_EXP,HDP_MSID_Name,HDP_Swap_MSID,HDP_System_additional_Size,HDP_System_additional_Size,HDP_System_additional_Size,HDP_System_Size,HDP_System_Size,HDP_System_Size,HDPBase Package,HDPBase Package,HDPBase Package,Header_09_close,Header_09_open,Header_10_close,Header_10_open)*>\n<*CTX ( Container(SC_MSID_Container).Column(Base MSID).SetPermission(Hidden) )*><*CTX ( Container(SC_MSID_Container).Column(Additional MSID).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

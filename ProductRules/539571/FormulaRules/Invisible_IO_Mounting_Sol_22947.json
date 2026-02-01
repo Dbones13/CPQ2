@@ -1,0 +1,11 @@
+{
+    "id": 22947,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),<*IFANYVALUE(SerC_CG_Type_of_Controller_Required:C300 CEE,SerC_CG_Type_of_Controller_Required:CN100 I/O HIVE - C300 CEE,SerC_CG_Type_of_Controller_Required:Control HIVE - Physical,SerC_CG_Type_of_Controller_Required:Control HIVE - Virtual)*>))",
+    "name": "Invisible_IO_Mounting_Sol",
+    "action": "<*DISALLOWATTRIBUTES(SerC_IO_Mounting_Solution)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

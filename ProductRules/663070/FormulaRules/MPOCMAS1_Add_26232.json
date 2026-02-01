@@ -1,0 +1,11 @@
+{
+    "id": 26232,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),<*ISSELECTED(Orion Console Display Size.55 inch NTS)*>, <*ISSELECTED(Orion Console Display Supplier.Honeywell)*>)",
+    "name": "MP-OCMAS1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MP-OCMAS1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCMAS1, <* Eval(2*((2*<*VALUE(Orion Console 2Position Base Unit (0-20))*>)+(3*<*VALUE(Orion Console 3Position Base Unit (0-20))*>))) *>.)*><* DoResetAtt *>",
+    "description": "CXCPQ-39016",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

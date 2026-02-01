@@ -1,0 +1,11 @@
+{
+    "id": 18790,
+    "condition": "[EQ](<*VALUE(MXP_Communication_Link_to_Non_Honeywell_QCS)*>,)",
+    "name": "Default_Communication_Link _o_Non_honeywel_QCS",
+    "action": "<*SELECTVALUE(MXP_Communication_Link_to_Non_Honeywell_QCS:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10777,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "BOM_PLC_UOC_EP-DSC10K",
+    "action": "[IF]([AND]([GEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,9900),[LEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,10000))){<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-DSC10K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-DSC10k, 1)*>}{[IF]([LEQ](<*Eval(int((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)/10000))*>,0)){}{<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-DSC10K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-DSC10K, <*Eval(int((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)/10000))*>)*>}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

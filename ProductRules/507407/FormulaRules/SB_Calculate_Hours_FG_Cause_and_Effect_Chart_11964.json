@@ -1,0 +1,11 @@
+{
+    "id": 11964,
+    "condition": "<*ISSELECTED(FGC_Implementation_Methodology.Standard Build Estimate)*>",
+    "name": "SB Calculate Hours F&G Cause and Effect Chart",
+    "action": "<*ASSIGNVALUE(F&G Cause and Effect Chart:<* Eval([IF](<*ISSELECTED(FGC_Cause_and_Effect_Matrix_Required?.Yes)*>){<* Eval((8*<*VALUE(FGC_Number_of_Process_Plot_Plans_(1-20))*>)+(<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>*<*VALUE(FGC_Number_of_Process_Plot_Plans_(1-20))*>*0.25)) *>}{0}[ENDIF]*0.5) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

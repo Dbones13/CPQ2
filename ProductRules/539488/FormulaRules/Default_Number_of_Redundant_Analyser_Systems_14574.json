@@ -1,0 +1,11 @@
+{
+    "id": 14574,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Redundant_Analyser_Systems)*>,)",
+    "name": "Default Number of Redundant Analyser Systems",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Redundant_Analyser_Systems:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

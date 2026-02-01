@@ -1,0 +1,11 @@
+{
+    "id": 25976,
+    "condition": "[EQ](<*VALUE(Experion Profit Controller Interface (0-95))*>,0)",
+    "name": "TC-PCMV01_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TC-PCMV01)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

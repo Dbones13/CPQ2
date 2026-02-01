@@ -1,0 +1,11 @@
+{
+    "id": 14219,
+    "condition": "[NEQ](<*CTX( Math.Sum(<*VALUE(C300_Marshalling_cabinet_count (0-500))*>,<*CTX( Container(Series_C_Control_Groups_Cont).Sum(Staging_C300_Marshal_Cabinets) )*>,<*CTX( Container(Series_C_Control_Groups_Cont).Sum(C300_Marshal_Cabinets_RG) )*>) )*>,<*VALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc)*>)",
+    "name": "staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc",
+    "action": "<*ASSIGNVALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc:<*CTX( Math.Sum(<*VALUE(C300_Marshalling_cabinet_count (0-500))*>,<*CTX( Container(Series_C_Control_Groups_Cont).Sum(Staging_C300_Marshal_Cabinets) )*>,<*CTX( Container(Series_C_Control_Groups_Cont).Sum(C300_Marshal_Cabinets_RG) )*>) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26290,
+    "condition": "[EQ](<*VALUE(Display Supplier (ACE-T))*>,)",
+    "name": "Default_Display Supplier (ACE-T)",
+    "action": "<*SELECTVALUE(Display Supplier (ACE-T):Honeywell)*>",
+    "description": "35416",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20110,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "PST_mark2_Dropdown_val",
+    "action": "[IF]([EQ](<*VALUE(SerC_CG_Power_System_Vendor)*>,TDI)){<*DISALLOWVALUES(SerC_CG_Power_System_Type:Locally Supplied Power,SerC_CG_Power_System_Type:Minimum Required Non Redundant,SerC_CG_Power_System_Type:Minimum Required Redundant,SerC_CG_Power_System_Type:Non Redundant 20A,SerC_CG_Power_System_Type:Non Redundant 40A,SerC_CG_Power_System_Type:Redundant 40A)*>}{<*DISALLOWVALUES(SerC_CG_Power_System_Type:Locally Supplied Power,SerC_CG_Power_System_Type:Minimum Required Non Redundant,SerC_CG_Power_System_Type:Minimum Required Redundant,SerC_CG_Power_System_Type:Non Redundant 20A,SerC_CG_Power_System_Type:Non Redundant 40A,SerC_CG_Power_System_Type:Redundant 40A,SerC_CG_Power_System_Type:Redundant with BBU 20A)*>\n}[ENDIF]",
+    "description": "# This Rule is used to set values of \"Power system type\" based on \"Power system vendor\" selection for mark2.",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

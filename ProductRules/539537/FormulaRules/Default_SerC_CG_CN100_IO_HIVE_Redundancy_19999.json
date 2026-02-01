@@ -1,0 +1,11 @@
+{
+    "id": 19999,
+    "condition": "[EQ](<*VALUE(SerC_CG_CN100_IO_HIVE_Redundancy)*>,)",
+    "name": "Default_SerC_CG_CN100_IO_HIVE_Redundancy",
+    "action": "<*SELECTVALUE(SerC_CG_CN100_IO_HIVE_Redundancy:Redundant)*>",
+    "description": "CXCPQ-51941 - Requirement 4",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4832,
+    "condition": "[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture)",
+    "name": "hide_sensor_calibration_kit",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Is_Sensor_Calibration_Kit_required)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

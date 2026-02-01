@@ -1,0 +1,11 @@
+{
+    "id": 8223,
+    "condition": "[IN]('<*VALUE(IO_Type)*>','Series-C: DI (32) 110 VAC (0-5000)', 'Series-C: DI (32) 110 VAC PROX (0-5000)', 'Series-C: DI (32) 220 VAC (0-5000)')",
+    "name": "Hide Input1",
+    "action": "<*DISALLOWATTRIBUTES(red_is,future_red_is,non_red_is,red_isltr,future_red_isltr,non_red_isltr,red_rly,future_red_rly,non_red_rly,red_hv_rly,future_red_hv_rly,non_red_hv_rly)*>",
+    "description": "Red (IS), Future Red (IS), Non Red (IS), Red (ISLTR), Future Red (ISLTR), Non Red (ISLTR), Red (RLY), Future Red (RLY), Non Red (RLY),Red (HV RLY), Future Red (HV RLY), Non Red (HV RLY).",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/04/24",
+    "modifiedBy": "Siddharth Chandrasekaran"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20161,
+    "condition": "[EQ](<*VALUE(DVM_Occupancy_Compliance_Monitoring)*>,)",
+    "name": "Default_DVM_Occupancy_Compliance_Monitoring",
+    "action": "<*SELECTVALUE(DVM_Occupancy_Compliance_Monitoring:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

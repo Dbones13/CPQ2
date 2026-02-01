@@ -1,0 +1,11 @@
+{
+    "id": 13661,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[EQ](<*VALUE(Virtualization_VMWare_vSphere_Plus_Single_Socket)*>,0))",
+    "name": "Part_DISS_EP_VVESB8",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VVESB8)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20096,
+    "condition": "1",
+    "name": "labor_parameter_ctr3",
+    "action": "[IF]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 I/O HIVE - C300 CEE)){[IF]([EQ](<*VALUE(SerC_CG_Controller_Type)*>,Redundant)){<*ASSIGNVALUE(labor_parameter_ctr3:<* Eval(0-INT(0-(<* Eval((0<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_CONTROLLER) )*>)/2) *>))) *>)*>}{<*ASSIGNVALUE(labor_parameter_ctr3:0<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_CONTROLLER) )*>)*>}[ENDIF]}{<*ASSIGNVALUE(labor_parameter_ctr3:0)*>}[ENDIF]",
+    "description": "55250",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

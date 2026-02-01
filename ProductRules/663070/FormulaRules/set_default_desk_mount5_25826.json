@@ -1,0 +1,11 @@
+{
+    "id": 25826,
+    "condition": "[EQ](<*VALUE(Additional Hard Disk1)*>,)",
+    "name": "set_default_desk_mount5",
+    "action": "<*SELECTVALUE(Additional Hard Disk1:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

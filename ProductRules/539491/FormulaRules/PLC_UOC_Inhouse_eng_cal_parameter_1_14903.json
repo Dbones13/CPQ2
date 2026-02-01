@@ -1,0 +1,11 @@
+{
+    "id": 14903,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_Inhouse_eng_cal_parameter_1",
+    "action": "<*ASSIGNVALUE(PLC_UOC_Inhouse_eng_cal_parameter_1:[IF]([EQ](<* Eval(<*VALUE(PLC_UOC_labor_parameter_var_3)*>+<*VALUE(PLC_UOC_labor_parameter_var_61)*>+<*VALUE(PLC_UOC_labor_parameter_var_62)*>+<*VALUE(PLC_UOC_labor_parameter_var_63)*>) *>,0)){0}{<* EVAL((<*VALUE(PLC_UOC_labor_parameter_var_3)*>*0.7+<*VALUE(PLC_UOC_labor_parameter_var_61)*>+<*VALUE(PLC_UOC_labor_parameter_var_62)*>*1.3+<*VALUE(PLC_UOC_labor_parameter_var_63)*>*1.7)/(<*VALUE(PLC_UOC_labor_parameter_var_3)*>+<*VALUE(PLC_UOC_labor_parameter_var_61)*>+<*VALUE(PLC_UOC_labor_parameter_var_62)*>+<*VALUE(PLC_UOC_labor_parameter_var_63)*>)) *>}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

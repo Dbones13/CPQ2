@@ -1,0 +1,11 @@
+{
+    "id": 13080,
+    "condition": "[NEQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "PY_SC_Coverage",
+    "action": "<*ASSIGNVALUE(PY_SC_Coverage:<*VALUE(SC_Coverage)*>)*>",
+    "description": "This rule is for getting the Previous year Coverage value for OPB",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17804,
+    "condition": "[EQ](<*CTX( Container(IEC/DNP3 Interfaces).Rows.GetCount )*>,0)",
+    "name": "IEC/DNP3 Interfaces Data",
+    "action": "<*CTX( Container(IEC/DNP3 Interfaces).LoadKeys(Identifiers, Default_Network_type, Default_Network_Interface).Load(SELECT Identifiers, Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'IEC/DNP3 Interfaces') )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

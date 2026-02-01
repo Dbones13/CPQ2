@@ -1,0 +1,11 @@
+{
+    "id": 19935,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "Show_FIM_FF_IOs_with_Power_conditioner",
+    "action": "<*ALLOWATTRIBUTES(FIM_FF_IOs_with_Power_conditioner)*>",
+    "description": "CXCPQ-44721",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

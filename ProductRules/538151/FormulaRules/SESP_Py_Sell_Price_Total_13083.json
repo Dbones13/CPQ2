@@ -1,0 +1,11 @@
+{
+    "id": 13083,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "SESP_Py_Sell_Price_Total",
+    "action": "<*ASSIGNVALUE(SESP_Py_Sell_Price:<* Eval(<*CTX ( Container(SC_Models_Scope_Renewal).Sum(PY_SellPrice) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

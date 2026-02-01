@@ -1,0 +1,11 @@
+{
+    "id": 13199,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "TPA_labor_del_MD-CD_Line_Drive_Engineering",
+    "action": "<*ASSIGNVALUE(TPA_labor_del_MD-CD_Line_Drive_Engineering:<* Round ( <* Eval(<*VALUE(TPA_How_many_MD_control_packages_are_done_in_TPA_PMD)*>*<*VALUE(TPA_labor_para_cst_md_upg)*>+<*VALUE(TPA_How_many_CD_control_packages_are_done_in_TPA_PMD)*>*<*VALUE(TPA_labor_para_cst_cd_upg)*>+<*VALUE(TPA_How_many_Line_drive_packages_are_done_in_TPA)*>*<*VALUE(TPA_labor_para_cst_ld_upg)*>) *>,2) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

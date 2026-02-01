@@ -1,0 +1,11 @@
+{
+    "id": 20328,
+    "condition": "[EQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Show Experion DVM Integration",
+    "action": "<*ALLOWATTRIBUTES(Experion DVM Integration)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

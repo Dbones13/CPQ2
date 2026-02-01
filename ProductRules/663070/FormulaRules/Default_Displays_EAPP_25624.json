@@ -1,0 +1,11 @@
+{
+    "id": 25624,
+    "condition": "[EQ](<*VALUE(Displays_EAPP)*>,)",
+    "name": "Default_Displays EAPP",
+    "action": "<*SELECTVALUE(Displays_EAPP:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

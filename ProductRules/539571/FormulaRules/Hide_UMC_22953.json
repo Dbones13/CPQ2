@@ -1,0 +1,11 @@
+{
+    "id": 22953,
+    "condition": "[NOT]([OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>))",
+    "name": "Hide_UMC",
+    "action": "<*DISALLOWATTRIBUTES(Ser_RG_Universal_Marshalling_Cabinet)*>",
+    "description": "#CXCPQ-50810",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

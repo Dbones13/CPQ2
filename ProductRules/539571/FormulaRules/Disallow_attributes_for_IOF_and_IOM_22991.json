@@ -1,0 +1,11 @@
+{
+    "id": 22991,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Mounting Panel)))",
+    "name": "Disallow attributes for IOF and IOM",
+    "action": "<*DISALLOWATTRIBUTES(Ser_C_RG_Mounting_Panel_Type,SerC_RG_TerminalBlockMounting_Side_For_MountingPnl)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

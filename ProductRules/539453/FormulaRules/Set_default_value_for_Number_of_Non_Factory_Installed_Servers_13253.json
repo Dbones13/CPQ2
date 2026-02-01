@@ -1,0 +1,11 @@
+{
+    "id": 13253,
+    "condition": "[EQ](<*VALUE(Number of Non Factory Installed Servers)*>,)",
+    "name": "Set default value for Number of Non Factory Installed Servers",
+    "action": "<*ASSIGNVALUE(Number of Non Factory Installed Servers:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

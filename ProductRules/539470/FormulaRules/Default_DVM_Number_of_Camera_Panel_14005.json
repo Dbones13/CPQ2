@@ -1,0 +1,11 @@
+{
+    "id": 14005,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Camera_Panel)*>,)",
+    "name": "Default_DVM_Number_of_Camera_Panel",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Camera_Panel:2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

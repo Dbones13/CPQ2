@@ -1,0 +1,11 @@
+{
+    "id": 9056,
+    "condition": "[EQ](<*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Rows.GetCount )*>,0)",
+    "name": "Set_Default_Row_Additional",
+    "action": "<*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "05/10/24",
+    "modifiedBy": "Shiva Kumar Gurram"
+}

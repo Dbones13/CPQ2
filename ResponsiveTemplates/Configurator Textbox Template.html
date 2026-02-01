@@ -1,0 +1,236 @@
+<script type="text/html" id="TextBoxTemplate">
+    <!-- ko template: { name: 'LabelTemplate' } -->
+    <!-- /ko -->
+	<!-- ko ifnot: name() == 'SESP_Enabled_Service_Product_ReadOnly' || name() == 'SESP_Enabled_Service_A360_ReadOnly' || name() == 'EnabledsearchBox' || name() == 'SC_Service_Product_Model' || name() == 'SC_MSID_Search_Field' || name() == 'SC_MSID_Search_Field_Scope_Select' || name() == 'SC_Labor_Burden_for_Hr_Day' || name() == 'SC_Labor_Honeywell_List_Price' || name() == 'SC_Labor_Deliverable_Hours' || name() == 'SC_Labor_Hrs_per_Full_Day' || name() == 'SC_Labor_Customer_List_Price' || name() == 'SC_Labor_Discount' || name() == 'SC_Labor_CY_Gross_Margin' || name() == 'SC_Labor_CY_sell_price' || name() == 'SC_Labor_CY_Cost_Price' || name() == 'SC_HWOS_Service_Product' || name() == 'SC_HWOS_Service_Product_ScopeSummary' || name() == 'SC_TPS_Service_Product' ||  name() == 'CurrentSupportContract_EnabledService' || name() == 'EnabledService_Entitlement' || name() == 'DurationOfPlan_enabledServices' || name() == 'SC_MES_Search_Model' || name() == 'CurrentSupportContract_EnabledService' ||  name() == 'DurationOfPlan_enabledServices' || name() == '#_of_independent_"areas"_enabledServicesModel' || name() == '#_of_recommended_udc_servers_enabledServicesModel' || name() == '#_l3_l4_file_move_licenses_enabledServicesModel' || name() == 'Matrix License' || name() == 'SC_BGP_Model_Search' || name() == 'SC_Cyber_Model_Search' || name() == 'OTU_ServiceProduct' || name() == 'OTU_Entitlement' || name() == 'OTU_Contract' || name() == 'SC_WEP_ServiceProduct_HIF' || name() == 'SC_WEP_ServiceProduct_IFS' || name() == 'SC_WEP_ServiceProduct_Halo' || name() == 'SC_WEP_ServiceProduct_Training' || name() == 'SC_WEP_ServiceProduct_TNA' || name() == 'SearchMsid_SESP_OTU_Summary' || name() == 'SC_MSID_Search_Sope_Selection' || name() == 'SC_TPS_RC_Entitlement_Search' || name() == 'SC_SearchInputSS_HR_RWL' || name() == 'SC_ServiceProduct_HR_RWL' || name() == 'Number of SMX System RT' || name() == 'Number of SMX System ST' || name() == 'Number of Years of Contract' || name() == 'USB Key ST Only' || name() == 'Number of Domains' || name() == 'AWL-Cb Physical Server' || name() == 'Remote Instrumentation Enclosures (RIE)' || name() == 'DCS or FTE Communities' || name() == 'Control Rooms' || name() == 'Switches and Routers' || name() == 'Controllers and PLCs' || name() == "PC's and Servers" || name() == 'Firewalls (redundant pair)' || name() == 'Number of Domains' || name() == 'Number of Windows Assets' || name() == 'Number of Tokens Required'|| name() == 'SC_GN_AT_Model_Search' -->
+    <div class="fiori3-input-group">
+        <input type="text" data-bind="value: userInput, enable: isEnabled, css:{'error':!isValid() || hasConflict()}, attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control" style="width: 20%;" />
+    </div>
+	<!-- /ko -->
+	<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+		<!-- ko if: name() == 'Migration_Number_Of_MSID'  -->
+		<div class="fiori3-input-group ">
+			<input type="text" data-bind="
+					value: userInput, 
+					enable: isEnabled, 
+					css:{'error':!isValid() || hasConflict()}, 
+					attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+					event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+					hasFocus: window.lastActiveElementId == $element.id" 
+					class="form-control"   />
+		</div>
+		<!-- /ko -->
+    <!-- /ko -->
+	<!-- ko if : name() == "SC_SearchInputSS_HR_RWL" || name() == 'SC_ServiceProduct_HR_RWL' -->
+      <div class="fiori3-input-group">
+        <input type="text" data-bind="
+                value: userInput, 
+                enable: isEnabled, 
+                css:{'error':!isValid() || hasConflict()}, 
+                attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                hasFocus: window.lastActiveElementId == $element.id" 
+                class="form-control" />
+        </div>
+      <!--/ko-->
+	<!-- ko if : name() == "Number of SMX System RT" || name() == 'Number of SMX System ST' || name() == 'Number of Years of Contract' || name() == 'USB Key ST Only' || name() == 'Number of Domains' || name() == 'AWL-Cb Physical Server' || name() == 'Remote Instrumentation Enclosures (RIE)' || name() == 'DCS or FTE Communities' || name() == 'Control Rooms' || name() == 'Switches and Routers' || name() == 'Controllers and PLCs' || name() == "PC's and Servers" || name() == 'Firewalls (redundant pair)' || name() == 'Number of Domains' || name() == 'Number of Windows Assets' || name() == 'Number of Tokens Required'-->
+
+	<div class="fiori3-input-group">
+        <input type="text" data-bind="
+                value: userInput, 
+                enable: isEnabled, 
+                css:{'error':!isValid() || hasConflict()}, 
+                attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                hasFocus: window.lastActiveElementId == $element.id" 
+                class="form-control" onpaste="return false" onkeypress="allowNumonly(this,event);"/>
+        </div>
+    <!--/ko-->
+	  <!-- ko if : name() == 'EnabledsearchBox' || name() == "SC_MSID_Search_Field_Scope_Select"-->
+      	<div class="fiori3-input-group">
+		  <input placeholder = 'MSID' type="text" data-bind="
+				  value: userInput, 
+				  enable: isEnabled, 
+				  css:{'error':!isValid() || hasConflict()}, 
+				  attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				  event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				  hasFocus: window.lastActiveElementId == $element.id" 
+				  class="form-control" />
+	  	</div>
+      <!--/ko-->
+      <!-- ko if: name() == 'SC_WEP_ServiceProduct_Training' -->
+	  <div class="fiori3-input-group">
+        <input type="text" data-bind="
+                value: userInput, 
+                enable: isEnabled, 
+                css:{'error':!isValid() || hasConflict()}, 
+                attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                hasFocus: window.lastActiveElementId == $element.id" 
+                class="form-control" style="width: 120%;" />
+    </div>
+    <!-- /ko -->
+	  <!-- ko if: name() == 'SC_Service_Product_Model' -->
+	  <div class="fiori3-input-group">
+		  <input type="text" data-bind="
+				  value: userInput, 
+				  enable: isEnabled, 
+				  css:{'error':!isValid() || hasConflict()}, 
+				  attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				  event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				  hasFocus: window.lastActiveElementId == $element.id" 
+				  class="form-control" style="width: 50%;" />
+	  </div>
+	  <!-- /ko -->
+	  <!-- ko if: name() == 'EnabledService_Entitlement' || name() == 'SESP_Enabled_Service_Product_ReadOnly' || name() == 'SESP_Enabled_Service_A360_ReadOnly' -->
+	  <div class="fiori3-input-group" style="width: 100%; pointer-events: none;">
+		<input type="text" style="pointer-events:none" data-bind="
+				value: userInput, 
+				enable: isEnabled, 
+				css:{'error':!isValid() || hasConflict()}, 
+				attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				hasFocus: window.lastActiveElementId == $element.id" 
+				class="form-control" style="width: 100%;" />
+	</div>
+	<!-- /ko -->
+    <!-- ko if:name() == 'DurationOfPlan_enabledServices' || name() == 'CurrentSupportContract_EnabledService' -->
+        <div class="fiori3-input-group" style="pointer-events: none;">
+            <input type="text" data-bind="
+                    value: userInput, 
+                    enable: isEnabled, 
+                    css:{'error':!isValid() || hasConflict()}, 
+                    attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                    event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                    hasFocus: window.lastActiveElementId == $element.id" 
+                    class="form-control" disabled />
+        </div>
+    <!--/ko-->
+     <!-- ko if:  name() == '#_l3_l4_file_move_licenses_enabledServicesModel' || name() == 'Matrix License'-->
+	  <div class="fiori3-input-group" style="pointer-events: none;width:30%;">
+		<input type="text" data-bind="
+				value: userInput, 
+				enable: isEnabled, 
+				css:{'error':!isValid() || hasConflict()}, 
+				attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				hasFocus: window.lastActiveElementId == $element.id" 
+				class="form-control" style="width: 50%;text-align: end;" disabled />
+	</div>
+	<!-- /ko -->
+    <!-- ko if: name() == '#_of_recommended_udc_servers_enabledServicesModel'-->
+	  <div class="fiori3-input-group" style="pointer-events: none;width:30%;">
+		<input type="text" data-bind="
+				value: userInput, 
+				enable: isEnabled, 
+				css:{'error':!isValid() || hasConflict()}, 
+				attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				hasFocus: window.lastActiveElementId == $element.id" 
+				class="form-control" style="width: 50%;text-align: end; margin-left: 38px !important;" disabled />
+	</div>
+	<!-- /ko -->
+    <!-- ko if: name() == '#_of_independent_"areas"_enabledServicesModel' -->
+	  <div class="fiori3-input-group" style="width: 30%;">
+		<input type="text" data-bind="
+				value: userInput, 
+				enable: isEnabled, 
+				css:{'error':!isValid() || hasConflict()}, 
+				attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				hasFocus: window.lastActiveElementId == $element.id" 
+				class="form-control" style="width: 50%;text-align: end; margin-left:45px !important" disabled />
+	</div>
+	<!-- /ko -->
+
+    <!-- ko if: name() == 'SC_HWOS_Service_Product_ScopeSummary' -->
+	  <div class="fiori3-input-group" style="width: 72%;pointer-events: none;">
+		<input type="text" data-bind="
+				value: userInput, 
+				enable: isEnabled, 
+				css:{'error':!isValid() || hasConflict()}, 
+				attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				hasFocus: window.lastActiveElementId == $element.id" 
+				class="form-control" style="width: 100%;" disabled />
+	</div>
+	<!-- /ko -->
+	  <!-- ko if: name() == 'SC_MSID_Search_Field' || name() == 'SC_Labor_Burden_for_Hr_Day' || name() == 'SC_Labor_Honeywell_List_Price' || name() == 'SC_Labor_Deliverable_Hours' || name() == 'SC_Labor_Hrs_per_Full_Day' || name() == 'SC_Labor_Customer_List_Price' || name() == 'SC_Labor_Discount' || name() == 'SC_Labor_CY_Gross_Margin' || name() == 'SC_Labor_CY_sell_price' || name() == 'SC_Labor_CY_Cost_Price' || name() == 'SC_MES_Search_Model' || name() == 'SC_BGP_Model_Search' || name() == 'SC_Cyber_Model_Search' || name() == 'OTU_ServiceProduct' || name() == 'OTU_Entitlement' || name() == 'OTU_Contract' || name() == 'SC_TPS_Service_Product' || name() == 'SC_HWOS_Service_Product' || name() == 'SearchMsid_SESP_OTU_Summary' || name() == 'SC_MSID_Search_Sope_Selection' || name() == 'SC_TPS_RC_Entitlement_Search' || name() == 'SC_GN_AT_Model_Search' -->
+	  <div class="fiori3-input-group">
+		  <input type="text" data-bind="
+				  value: userInput, 
+				  enable: isEnabled, 
+				  css:{'error':!isValid() || hasConflict()}, 
+				  attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+				  event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+				  hasFocus: window.lastActiveElementId == $element.id" 
+				  class="form-control" style="width: 100%;" />
+	  </div>
+	  <!-- /ko -->
+      <!-- ko if: name() == 'SC_WEP_ServiceProduct_HIF' || name() == 'SC_WEP_ServiceProduct_IFS' || name() == 'SC_WEP_ServiceProduct_Halo' || name() == 'SC_WEP_ServiceProduct_TNA' -->
+	  <div class="fiori3-input-group">
+        <input type="text" data-bind="
+                value: userInput, 
+                enable: isEnabled, 
+                css:{'error':!isValid() || hasConflict()}, 
+                attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, 
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } }, 
+                hasFocus: window.lastActiveElementId == $element.id" 
+                class="form-control" style="width: 130%;" />
+    </div>
+    <!-- /ko -->
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+</script>
+<script type="text/html" id="HW_TextBoxTemplate">
+
+<!-- ko if:name() !== 'EnabledsearchBox'-->
+	<td data-bind="class:(['Contract_OTU_SESP','SC_Experion_Extended_Support_RQUP','SC_Exp_Ext_Supp_RQUP_summary'].includes(name())) ? 'col-xs-6':'col-xs-8'">
+	  <!-- ko template: { name: 'HW_LabelTemplate' } -->
+	  <!-- /ko -->
+	</td>
+		<td data-bind="attr : { 'data-title' : label},class:(['Contract_OTU_SESP','SC_Experion_Extended_Support_RQUP','SC_Exp_Ext_Supp_RQUP_summary'].includes(name())) ?'col-xs-6':'col-xs-8'">
+			<div class="fiori3-input-group">
+				<input type="text" data-bind="value: userInput, enable: isEnabled, css:{'error':!isValid() || hasConflict()}, attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control"  />
+			</div>
+			<!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+			<!-- /ko -->
+		</td>
+    <!--/ko -->
+    <!-- ko if:name() === 'EnabledsearchBox'-->
+        <div class="fiori3-input-group">
+            <input autocomplete="off" type="text" data-bind="
+                validateAttribute: userInput,
+                value: userInput,
+                enable: isEnabled,
+                css: { 'validation-error': userInput.isValid && !userInput.isValid(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + ''), 'error': hasConflict(), },
+                attr: { name: name, id: stdAttrCode(), 'aria-label': name(), required: required },
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                hasFocus: window.lastActiveElementId == $element.id"
+                class="form-control">
+        </div>
+        <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+        <!-- /ko -->
+    <!-- /ko -->
+               
+</script>
+<script type="text/html" id="CBM_TextBoxTemplate">
+	<td class = "col-xs-6">
+	  <!-- ko template: { name: 'HW_LabelTemplate' } -->
+	  <!-- /ko -->
+	</td>
+	<td class = "col-xs-6">
+        <div class="fiori3-input-group">
+            <input type="text" data-bind="value: userInput, enable: isEnabled, css:{'error':!isValid() || hasConflict()}, attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control"  />
+        </div>
+        <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+        <!-- /ko -->
+	</td>
+  </script>
+  <script>
+    function allowNumonly(ele, event) {
+    var charCode = event.keyCode || event.which;
+    if (!(charCode >= 48 && charCode <= 57)) {
+        event.preventDefault()
+    }
+    };
+  </script>

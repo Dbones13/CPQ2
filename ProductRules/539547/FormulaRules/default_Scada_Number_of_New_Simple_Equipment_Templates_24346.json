@@ -1,0 +1,11 @@
+{
+    "id": 24346,
+    "condition": "[EQ](<*VALUE(Scada_Number_of_New_Simple_Equipment_Templates)*>,)",
+    "name": "default_Scada_Number_of_New_Simple_Equipment_Templates",
+    "action": "<*ASSIGNVALUE(Scada_Number_of_New_Simple_Equipment_Templates:50)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

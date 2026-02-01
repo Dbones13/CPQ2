@@ -1,0 +1,11 @@
+{
+    "id": 20369,
+    "condition": "1",
+    "name": "Hide_Simulation_Software_Release",
+    "action": "<*DISALLOWATTRIBUTES(SS_Simulation_Software_Release)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

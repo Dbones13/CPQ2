@@ -1,0 +1,11 @@
+{
+    "id": 12060,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "PAGA Detailed Design Specifications (DDS)",
+    "action": "<*ASSIGNVALUE(PAGA Detailed Design Specifications (DDS):[IF](<*ISSELECTED(PAGA_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval(24+(<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>+<*VALUE(PAGA_Number_of_Digital_Output_Modules_(DOM))*>+<*VALUE(PAGA_Number_of_Universal_Interface_Modules_(UIM))*>)*<*VALUE(PAGA_Number_of_Reviews_(add Asbuilts))*>) *>}{[IF]([AND](<*ISSELECTED(PAGA_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(PAGA_GES_Location.None)*>)){<* Eval((24+(<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>+<*VALUE(PAGA_Number_of_Digital_Output_Modules_(DOM))*>+<*VALUE(PAGA_Number_of_Universal_Interface_Modules_(UIM))*>)*<*VALUE(PAGA_Number_of_Reviews_(add Asbuilts))*>)*0.75) *>}{[IF]([AND](<*ISSELECTED(PAGA_Implementation_Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(PAGA_GES_Location)*>,None))){<* Eval((24+(<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>+<*VALUE(PAGA_Number_of_Digital_Output_Modules_(DOM))*>+<*VALUE(PAGA_Number_of_Universal_Interface_Modules_(UIM))*>)*<*VALUE(PAGA_Number_of_Reviews_(add Asbuilts))*>)*0.75*1.15) *>}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

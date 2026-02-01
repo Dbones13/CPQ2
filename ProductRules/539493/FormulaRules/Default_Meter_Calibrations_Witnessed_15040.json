@@ -1,0 +1,11 @@
+{
+    "id": 15040,
+    "condition": "[EQ](<*VALUE(MSE_Percentage_Meter_Calibrations_Witnessed)*>,)",
+    "name": "Default_Meter_Calibrations_Witnessed",
+    "action": "<*ASSIGNVALUE(MSE_Percentage_Meter_Calibrations_Witnessed:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

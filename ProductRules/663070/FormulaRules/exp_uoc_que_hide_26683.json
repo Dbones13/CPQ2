@@ -1,0 +1,11 @@
+{
+    "id": 26683,
+    "condition": "[AND]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System),[LIKE](<*VALUE(CE_Selected_Products)*>,ControlEdge UOC System),[EQ](<*VALUE(Experion Software Release)*>,R510))",
+    "name": "exp_uoc_que_hide",
+    "action": "<*DISALLOWATTRIBUTES(Experion UOC PROFINET Usage License (0-30))*>",
+    "description": "Logic has been handled through script, so the rule has been inactivated as per ticket CXCPQ-118445",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

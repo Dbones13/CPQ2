@@ -1,0 +1,11 @@
+{
+    "id": 26010,
+    "condition": "[EQ](<*VALUE(Server Mounting)*>,)",
+    "name": "Default_Server_Mounting",
+    "action": "<*SELECTVALUE(Server Mounting:Desk)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

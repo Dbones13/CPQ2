@@ -1,0 +1,11 @@
+{
+    "id": 13324,
+    "condition": "[EQ](<*VALUE(Is HMI Engineering in Scope?)*>,Yes)",
+    "name": "UnHide HMI Engineering",
+    "action": "<*ALLOWATTRIBUTES(Header_08_open,HMI_Engineering_Labor_Productivity,HMI_Engineering_Labor_Execution_Year,HMI_Engineering_Labor_Execution_Country,HMI_Engineering_Labor_GES_%,HMI_Engineering_Labor_Container,Header_08_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

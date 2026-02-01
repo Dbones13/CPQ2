@@ -1,0 +1,11 @@
+{
+    "id": 15399,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Configure Graphics",
+    "action": "<*ASSIGNVALUE(FDA Graphics Configuration:[IF](<*ISSELECTED(FDA Implementation Methodology.Non-Standard Build Estimate)*>){[IF]([EQ](<*VALUE(FDA Graphics Required)*>,Yes)){<* Eval(((2*<*VALUE(FDA Number of Graphics)*>)+((<*VALUE(FDA Number of Standard Detectors)*>+<*VALUE(FDA Number of Specialty Detectors)*>+<*VALUE(FDA Number of Monitor Module points)*>+<*VALUE(FDA Number of 4-20mA monitor module points)*>+<*VALUE(FDA Number of Control module points)*>+<*VALUE(FDA Number of Isolation modules)*>+<*VALUE(FDA Number of pull stations)*>+<*VALUE(FDA Number of horns)*>+<*VALUE(FDA Number of strobes)*>+<*VALUE(FDA Number of combination units)*>)*0.167))) *>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,<*ISSELECTED(FDA GES Location.None)*>)){[IF]([EQ](<*VALUE(FDA Graphics Required)*>,Yes)){<* Eval(((2*<*VALUE(FDA Number of Graphics)*>)+((<*VALUE(FDA Number of Standard Detectors)*>+<*VALUE(FDA Number of Specialty Detectors)*>+<*VALUE(FDA Number of Monitor Module points)*>+<*VALUE(FDA Number of 4-20mA monitor module points)*>+<*VALUE(FDA Number of Control module points)*>+<*VALUE(FDA Number of Isolation modules)*>+<*VALUE(FDA Number of pull stations)*>+<*VALUE(FDA Number of horns)*>+<*VALUE(FDA Number of strobes)*>+<*VALUE(FDA Number of combination units)*>)*0.167))) *>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(FDA GES Location)*>,None))){[IF]([EQ](<*VALUE(FDA Graphics Required)*>,Yes)){<* Eval(((2*<*VALUE(FDA Number of Graphics)*>)+((<*VALUE(FDA Number of Standard Detectors)*>+<*VALUE(FDA Number of Specialty Detectors)*>+<*VALUE(FDA Number of Monitor Module points)*>+<*VALUE(FDA Number of 4-20mA monitor module points)*>+<*VALUE(FDA Number of Control module points)*>+<*VALUE(FDA Number of Isolation modules)*>+<*VALUE(FDA Number of pull stations)*>+<*VALUE(FDA Number of horns)*>+<*VALUE(FDA Number of strobes)*>+<*VALUE(FDA Number of combination units)*>)*0.167))) *>}{0}[ENDIF]}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

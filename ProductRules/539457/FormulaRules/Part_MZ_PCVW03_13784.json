@@ -1,0 +1,11 @@
+{
+    "id": 13784,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B)),[GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX03)*>,0),[EQ](<*VALUE(Virtualization_Warranty_Extension)*>,7 Years),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVW03",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVW03)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVW03,<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX03)*>)*><* DoResetAtt *>",
+    "description": "CCEECOMMBR-6879",
+    "rank": "6",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

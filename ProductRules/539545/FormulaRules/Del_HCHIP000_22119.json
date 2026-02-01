@@ -1,0 +1,11 @@
+{
+    "id": 22119,
+    "condition": "[NOT]([IF]([EQ](<*VALUE(FDM_Release)*>,R520)){[GT](<*VALUE(FDM HART-IP Downlink license (0-10))*>,0)}{0}[ENDIF])",
+    "name": "Del_HC-HIP000",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-HIP000)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": false,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

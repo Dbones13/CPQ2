@@ -1,0 +1,11 @@
+{
+    "id": 26462,
+    "condition": "1",
+    "name": "Labor_Number of Operator Console Sections",
+    "action": "<*ASSIGNVALUE(Number of Operator Console Sections:<*Eval(0<*VALUE(DMS Flex Station Qty 0_60)*>+0<*VALUE(DMS Console Station Qty 0_20)*>+0<*VALUE(DMS Console Station Extension Qty 0_15)*>+0<*VALUE(Orion Console 2Position Base Unit (0-20))*>*2+0<*VALUE(Orion Console 3Position Base Unit (0-20))*>*3+0[IF]([EQ](<*VALUE(Node Supplier_ACE1)*>,Honeywell)){<*VALUE(ACE Node Tower Mount Desk)*>}{0}[ENDIF]+0[IF]([AND]([EQ](<*VALUE(Node Supplier (Sim PC))*>,Honeywell),[OR]([GT](<*VALUE(SIM-ACE Licenses (0-7))*>,0),[GT](<*VALUE(Sim-Cx00 PC Licenses (0-20))*>,0),[GT](<*VALUE(SIM-FFD Licenses (0-125))*>,0)),[EQ](<*VALUE(Simulation PC Furniture)*>,Desk))){1}{0}[ENDIF]+0[IF]([AND]([EQ](<*VALUE(Node Supplier (Additional Station))*>,Honeywell),[EQ](<*VALUE(Additional Server Furniture)*>,Desk))){<*VALUE(Additional Stations)*>}{0}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "2001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

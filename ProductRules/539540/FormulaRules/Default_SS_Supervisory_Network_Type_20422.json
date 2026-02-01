@@ -1,0 +1,11 @@
+{
+    "id": 20422,
+    "condition": "[EQ](<*VALUE(SS_Supervisory_Network_Type)*>,)",
+    "name": "Default_SS_Supervisory_Network_Type",
+    "action": "<*SELECTVALUE(SS_Supervisory_Network_Type:FTE)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

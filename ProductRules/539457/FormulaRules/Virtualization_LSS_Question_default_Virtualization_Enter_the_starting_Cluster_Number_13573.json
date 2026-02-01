@@ -1,0 +1,11 @@
+{
+    "id": 13573,
+    "condition": "[EQ](<*VALUE(Virtualization_Enter_the_starting_Cluster_Number)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_Enter_the_starting_Cluster_Number",
+    "action": "<*ASSIGNVALUE(Virtualization_Enter_the_starting_Cluster_Number:1)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

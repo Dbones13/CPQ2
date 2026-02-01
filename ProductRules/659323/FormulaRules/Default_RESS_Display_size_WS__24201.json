@@ -1,0 +1,11 @@
+{
+    "id": 24201,
+    "condition": "[EQ](<*VALUE(RESS_Display_size_WS)*>,)",
+    "name": "Default_RESS_Display_size_WS_",
+    "action": "<*SELECTVALUE(RESS_Display_size_WS:23 inch)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

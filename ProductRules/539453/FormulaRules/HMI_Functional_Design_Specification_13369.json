@@ -1,0 +1,11 @@
+{
+    "id": 13369,
+    "condition": "[NEQ](<*VALUE(Implementation Methodology)*>,)",
+    "name": "HMI Functional Design Specification",
+    "action": "<*ASSIGNVALUE(HMI Functional Design Specification:<* Eval([IF]([EQ](<*VALUE(Implementation Methodology)*>,)){((28*0<*VALUE(labor_parameter_sz)*> + 4*0<*VALUE(labor_parameter_sf_temp)*>)+(24 + 16*0<*VALUE(Number of Display Prototypes)*>))}{((16*0<*VALUE(labor_parameter_sz)*> + 4*0<*VALUE(labor_parameter_sf_temp)*>)+(16 + 12*0<*VALUE(Number of Display Prototypes)*>))}[ENDIF]) *>)*>",
+    "description": "If im= Non-Standard Build\nCalculated Hrs = (( 28 * SZ + 4 * SF ) + (24 + 16 * dp)) * 0.9\nElse\nCalculated Hrs = (( 16 * SZ + 4 * SF ) + (16 + 16 * dp)) * 0.9",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24223,
+    "condition": "[EQ](<*VALUE(RESS_OTP_hardware_&_software_required)*>,)",
+    "name": "Default_RESS_OTP_hardware_&_software_required",
+    "action": "<*ASSIGNVALUE(RESS_OTP_hardware_&_software_required:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

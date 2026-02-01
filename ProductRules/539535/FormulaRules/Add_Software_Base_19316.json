@@ -1,0 +1,11 @@
+{
+    "id": 19316,
+    "condition": "[NEQ](<*VALUE(PlantCruise_Group_Name)*>,)",
+    "name": "Add_Software_Base",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(PlantCruise_Part_Summary:CV-DBASE1|CV-RBASE1|EP-DONENB|EP-DONUSB)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

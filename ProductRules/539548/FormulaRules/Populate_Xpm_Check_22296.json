@@ -1,0 +1,11 @@
+{
+    "id": 22296,
+    "condition": "1",
+    "name": "Populate_Xpm_Check",
+    "action": "<*ASSIGNVAUE(xPM to EHPMX_check:[IF]([EQ](<*CTX( Container(CONT_MSID_SUBPRD).Row(1).Column(Selected_Products).Get )*>,EHPM/EHPMX/ C300PM)){[IF]([EQ](<*VALUE(xPM_Select_the_migration_scenario)*>,xPM to EHPMX)){1}{0}[ENDIF]}{0}[ENDIF])*>",
+    "description": "Set xPM to EHPMX_check value",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

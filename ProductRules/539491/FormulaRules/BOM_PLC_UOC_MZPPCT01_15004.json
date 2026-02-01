@@ -1,0 +1,11 @@
+{
+    "id": 15004,
+    "condition": "[AND]([NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[NEQ](<*VALUE(LSS_PLC_Total_number_of_Panel_PCs_required)*>,))",
+    "name": "BOM_PLC_UOC_MZ-PPCT01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:MZ-PPCT01)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:MZ-PPCT01, <*VALUE(LSS_PLC_Total_number_of_Panel_PCs_required)*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

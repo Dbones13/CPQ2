@@ -1,0 +1,11 @@
+{
+    "id": 12898,
+    "condition": "[EQ](<*CTX ( Container(SC_MES_Optional_Entitlement).Rows.GetCount )*>,0)",
+    "name": "Optional_Entitlements",
+    "action": "<*CTX ( Container(SC_MES_Optional_Entitlement).Rows.Add(2) )*><*CTX ( Container(SC_MES_Optional_Entitlement).Row(1).Column(Entitlement).Set(On-Site Support) )*><*CTX ( Container(SC_MES_Optional_Entitlement).Row(2).Column(Entitlement).Set(Remote Field Support) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

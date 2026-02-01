@@ -1,0 +1,11 @@
+{
+    "id": 13322,
+    "condition": "[NEQ](<*VALUE(Implementation Methodology)*>,)",
+    "name": "HMI Graphic Displays",
+    "action": "<*ASSIGNVALUE(HMI Graphic Displays:<*Eval([IF]([EQ](<*VALUE(Implementation Methodology)*>,)){0<*VALUE(labor_parameter_qci)*> * (0<*VALUE(labor_parameter_sd)*> + 0<*VALUE(labor_parameter_md)*>*2 + 0<*VALUE(labor_parameter_cd)*>*3 + 0<*VALUE(labor_parameter_vcd)*>*4 + 0<*VALUE(labor_parameter_rd)*>*0.5)}{0<*VALUE(labor_parameter_qci)*> * (0<*VALUE(labor_parameter_sd)*> + 0<*VALUE(labor_parameter_md)*>*2 + 0<*VALUE(labor_parameter_cd)*>*3 + 0<*VALUE(labor_parameter_vcd)*>*4 + 0<*VALUE(labor_parameter_rd)*>*0.5)*0.9*1.2}[ENDIF])*>)*>",
+    "description": "If im=non SB then\nCalculated Hrs = Q * ( sd + md * 2 + cd * 3 + vcd * 4 + rd * 0.5 )\nElse If ges= none and im=SB then\ncalculated Hrs=  Q * ( sd + md * 2 + cd * 3 + vcd * 4 + rd * 0.5 ) * 0.9\nElse If ges!=none and im=SB then\ncalculated Hrs= Q * ( sd + md * 2 + cd * 3 + vcd * 4 + rd * 0.5 ) * 0.9 * 1.2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

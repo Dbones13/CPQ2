@@ -1,0 +1,11 @@
+{
+    "id": 14057,
+    "condition": "1",
+    "name": "DVM Plan Drawings",
+    "action": "<*ASSIGNVALUE(DVM Plan Drawings:[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Non-Standard Build Estimate)){<* Eval((14*(0<*VALUE(DVM_Number_of_Overall_Site_Plans)*>+0<*VALUE(DVM_Number_of_Enlarged_Site_Plans)*>+0<*VALUE(DVM_Number_of_Building_Plans)*>+0<*VALUE(DVM_Number_of_Room_Plans)*>))+(0<*VALUE(DVM_Number_of_Reviews)*>*(0<*VALUE(DVM_Number_of_Overall_Site_Plans)*>+0<*VALUE(DVM_Number_of_Enlarged_Site_Plans)*>+0<*VALUE(DVM_Number_of_Building_Plans)*>+0<*VALUE(DVM_Number_of_Room_Plans)*>)*.25)) *>}{[IF]([EQ](<*VALUE(DVM_GES_Location)*>,None)){<* Eval((14*(0<*VALUE(DVM_Number_of_Overall_Site_Plans)*>+0<*VALUE(DVM_Number_of_Enlarged_Site_Plans)*>+0<*VALUE(DVM_Number_of_Building_Plans)*>+0<*VALUE(DVM_Number_of_Room_Plans)*>))+(0<*VALUE(DVM_Number_of_Reviews)*>*(0<*VALUE(DVM_Number_of_Overall_Site_Plans)*>+0<*VALUE(DVM_Number_of_Enlarged_Site_Plans)*>+0<*VALUE(DVM_Number_of_Building_Plans)*>+0<*VALUE(DVM_Number_of_Room_Plans)*>)*.25)*1.0) *>}{<* Eval(((14*(0<*VALUE(DVM_Number_of_Overall_Site_Plans)*>+0<*VALUE(DVM_Number_of_Enlarged_Site_Plans)*>+0<*VALUE(DVM_Number_of_Building_Plans)*>+0<*VALUE(DVM_Number_of_Room_Plans)*>))+(0<*VALUE(DVM_Number_of_Reviews)*>*(0<*VALUE(DVM_Number_of_Overall_Site_Plans)*>+0<*VALUE(DVM_Number_of_Enlarged_Site_Plans)*>+0<*VALUE(DVM_Number_of_Building_Plans)*>+0<*VALUE(DVM_Number_of_Room_Plans)*>)*.25)*1.0)*1.1) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

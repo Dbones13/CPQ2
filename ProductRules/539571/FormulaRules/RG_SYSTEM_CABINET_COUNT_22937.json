@@ -1,0 +1,11 @@
+{
+    "id": 22937,
+    "condition": "1",
+    "name": "RG_SYSTEM_CABINET_COUNT",
+    "action": "<*ASSIGNVALUE(RG_SYSTEM_CABINET_COUNT:<* Eval(0-INT(0-(((<*CTX ( Container(Series_C_RG_Part_Summary_Cont).Sum(C300_System_cabinet_count) )*>)/2+(<*CTX ( Container(Series_C_RG_Part_Summary_Cont).Sum(C300_System_cabinet_count_2) )*>)+(0<*VALUE(C300_RG_UPC_Cab_Count)*>/4))))) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

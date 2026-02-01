@@ -1,0 +1,11 @@
+{
+    "id": 15122,
+    "condition": "[EQ](<*VALUE(MXP_Cp_CpK_Calculations)*>,)",
+    "name": "Default_Cp_CpK_Calculations",
+    "action": "<*SELECTVALUE(MXP_Cp_CpK_Calculations:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

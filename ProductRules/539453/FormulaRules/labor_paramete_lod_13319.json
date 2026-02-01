@@ -1,0 +1,11 @@
+{
+    "id": 13319,
+    "condition": "1",
+    "name": "labor_paramete_lod",
+    "action": "<*ASSIGNVALUE(labor_parameter_lod:[IF](<*ISSELECTED(Level of Documentation.No Documentation)*>){0}{[IF](<*ISSELECTED(Level of Documentation.Screen Captures Only)*>){0.1}{0.25}[ENDIF]}[ENDIF])*>",
+    "description": "If lod = No Documentation, LD = 0\nElse If lod = Screen Captures, LD = 0.1\nElse LD = 0.25",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

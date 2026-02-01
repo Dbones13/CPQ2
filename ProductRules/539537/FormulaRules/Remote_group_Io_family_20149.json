@@ -1,0 +1,11 @@
+{
+    "id": 20149,
+    "condition": "[GT](<*CTX ( Container(Series_C_Remote_Groups_Cont).Rows.GetCount )*>,0)",
+    "name": "Remote_group_Io_family",
+    "action": "<*ASSIGNVALUE(Remote_group_Io_family:<*CTX ( Container(Series_C_Remote_Groups_Cont).Row(1).Column(Remote_group_Io_family).Get )*>)*>",
+    "description": "CXCPQ-99661",
+    "rank": "2000",
+    "active": false,
+    "modifiedDate": "12/11/24",
+    "modifiedBy": "Ashritha Row"
+}

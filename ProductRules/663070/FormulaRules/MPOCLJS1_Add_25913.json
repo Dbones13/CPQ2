@@ -1,0 +1,11 @@
+{
+    "id": 25913,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),<*ISSELECTED(Orion Console Lift Jack System.Yes)*>,<*ISSELECTED(Node Supplier.Honeywell)*>)",
+    "name": "MP-OCLJS1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MP-OCLJS1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCLJS1, <* Eval(<*VALUE(Orion Console 2Position Base Unit (0-20))*>+<*VALUE(Orion Console 3Position Base Unit (0-20))*>) *>.)*><* DoResetAtt *>",
+    "description": "CXCPQ-39015",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

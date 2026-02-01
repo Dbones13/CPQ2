@@ -1,0 +1,11 @@
+{
+    "id": 2561,
+    "condition": "[EQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,GES Romania)",
+    "name": "GES_Location_Values_Romania",
+    "action": "<*DISALLOWVALUES(Experion_HS_GES_Eng:HPS_GES_P350B_CN,Experion_HS_GES_Eng:HPS_GES_P350B_IN,Experion_HS_GES_Eng:HPS_GES_P350B_UZ,Experion_HS_GES_Eng:HPS_GES_P350F_CN,Experion_HS_GES_Eng:HPS_GES_P350F_IN,Experion_HS_GES_Eng:HPS_GES_P350F_UZ,Experion_HS_GES_Eng:HPS_GES_P350B_EG,Experion_HS_GES_Eng:HPS_GES_P350F_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

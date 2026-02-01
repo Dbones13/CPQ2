@@ -1,0 +1,11 @@
+{
+    "id": 14939,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_17",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_17:<*VALUE(PLC_UOC_labor_parameter_var_17_CommonQuestions)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20015,
+    "condition": "[NEQ](<*VALUE(C300_Marshal_Cabinets_RG)*>,<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(staging_Num_of_marshal_cabinet_C300_remote_group) )*>)",
+    "name": "staging_Num_of_Marshal_cabinet_remote_group_sum",
+    "action": "<*ASSIGNVALUE(C300_Marshal_Cabinets_RG:<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(staging_Num_of_marshal_cabinet_C300_remote_group) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

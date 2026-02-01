@@ -1,0 +1,11 @@
+{
+    "id": 18543,
+    "condition": "[EQ](<*VALUE(ES_Serial_Board)*>,)",
+    "name": "Default_Serial_Board",
+    "action": "<*ASSIGNVALUE(ES_Serial_Board:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

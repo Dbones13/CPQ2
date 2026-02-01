@@ -1,0 +1,3 @@
+import GS_Populate_SM_IO_Modules
+SM_Universal_IOTA_Type = Product.Attr('SM_Universal_IOTA_Type').GetValue()
+GS_Populate_SM_IO_Modules.update_modules_universal_iota(Product, "SM_RG_IO_Count_Digital_Output_Cont", SM_Universal_IOTA_Type)

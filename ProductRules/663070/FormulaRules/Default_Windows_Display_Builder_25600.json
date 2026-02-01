@@ -1,0 +1,11 @@
+{
+    "id": 25600,
+    "condition": "[EQ](<*VALUE(Windows Display Builder(0-100))*>,)",
+    "name": "Default Windows Display Builder",
+    "action": "<*ASSIGNVALUE(Windows Display Builder(0-100):0)*>",
+    "description": "Default Windows Display Builder",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

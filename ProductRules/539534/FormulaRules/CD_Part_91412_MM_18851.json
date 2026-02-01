@@ -1,0 +1,11 @@
+{
+    "id": 18851,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,ProFlow),[GEQ](<*VALUE(MX_CD_Zone_Width)*>,1))",
+    "name": "CD_Part_91412_MM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:91412-MM)*><*SETATVQTY(MX_CD_Bom_Parts:91412-MM, <*VALUE(MX_CD_Number_of_zones)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

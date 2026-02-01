@@ -1,0 +1,11 @@
+{
+    "id": 13486,
+    "condition": "1",
+    "name": "EBR Procure Materials & Services",
+    "action": "<*ASSIGNVALUE(EBR Procure Materials & Services:[IF]([EQ](<*VALUE(Labor_parameter_var_7)*>,1)){8}{4}[ENDIF])*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

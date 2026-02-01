@@ -1,0 +1,11 @@
+{
+    "id": 23115,
+    "condition": "[GT](<*CTX ( Container(Document_cont_c3001).Rows.GetCount )*>,0)",
+    "name": "C300_RG_Total_IO_Load_Proposal",
+    "action": "<*CTX ( Container(Document_cont_c3001).Row(1).Column(C300_RG_Total_IO_Load).Set(0<*VALUE(total_family_CG_ios_doc)*>) )*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

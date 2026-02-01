@@ -1,0 +1,11 @@
+{
+    "id": 10729,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Include_EBR_and_NAS)*>,))",
+    "name": "TPA_Default_Include_EBR_and_NAS",
+    "action": "<*SELECTVALUE(TPA_Include_EBR_and_NAS:Yes)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

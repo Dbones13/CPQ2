@@ -1,0 +1,11 @@
+{
+    "id": 20299,
+    "condition": "[GT](<*VALUE(DVM_HVA -People_Counting)*>,0)",
+    "name": "HVA-PEOPLE COUNTING_ADD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAAC)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMAAC,<*VALUE(DVM_HVA -People_Counting)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45711",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

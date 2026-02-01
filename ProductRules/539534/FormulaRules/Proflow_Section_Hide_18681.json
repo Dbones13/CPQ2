@@ -1,0 +1,11 @@
+{
+    "id": 18681,
+    "condition": "[NEQ](<*VALUE(MX_CD_Control_Type)*>,ProFlow)",
+    "name": "Proflow Section Hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_Actuator_Housing_Proflow,MX_CD_How_many_trays,MX_CD_Machine_Mounting_Adapter,MX_CD_Mounting_and_coupling,MX_CD_ProFlow_Machined_Mounting_Adapter,MX_CD_Proflow_type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26313,
+    "condition": "[EQ](<*VALUE(Ent_sim_desk_tpm)*>,)",
+    "name": "assign value simdesk tpm attr",
+    "action": "<*SELECTVALUE(Ent_sim_desk_tpm:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

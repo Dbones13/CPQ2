@@ -1,0 +1,11 @@
+{
+    "id": 19502,
+    "condition": "[EQ](<*VALUE(Exp HS Do you want Honeywell supplied OS?)*>,Yes)",
+    "name": "Show HS Server Node and Flex Station Node",
+    "action": "<*ALLOWATTRIBUTES(Exp HS Select the OS for Exp HS Flex Station Node,Exp HS Select the OS for Experion HS Server Node)*><*SETREQUIRED(Exp HS Select the OS for Exp HS Flex Station Node,Exp HS Select the OS for Experion HS Server Node)*>",
+    "description": "CXCPQ-42954\nShow Below attributes when \"Do you want Honeywell supplied OS?\" is YES\nSelect the OS for Experion HS Server Node\nSelect the OS for Experion HS Flex Station Node",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

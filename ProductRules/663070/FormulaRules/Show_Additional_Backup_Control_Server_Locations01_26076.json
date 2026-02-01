@@ -1,0 +1,11 @@
+{
+    "id": 26076,
+    "condition": "[AND]([LIKE](<*VALUE(Supervisory Network Type)*>,Ethernet),[EQ](<*VALUE(Interface with TPS Required?)*>,No),[EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant))",
+    "name": "Show_Additional_Backup_Control_Server_Locations(0-1)",
+    "action": "<*ALLOWATTRIBUTES(Additional Backup Control Server Locations (0-1))*>",
+    "description": "#34580",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

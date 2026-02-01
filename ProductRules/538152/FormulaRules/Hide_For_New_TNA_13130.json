@@ -1,0 +1,11 @@
+{
+    "id": 13130,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_For_New_TNA",
+    "action": "<*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(PY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(CY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(PY_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(PY_UnitCost).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(PY_CostPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(CY_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Models_Scope_TNA).Column(CY_UnitCost).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_System_Selection_TNA).Column(PY_UserCount).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(PY_UserPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(PY_SystemPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(PY_UserCost).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(PY_SystemCost).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(CY_UserCount).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(CY_UserPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(CY_SystemPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(CY_UserCost).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(CY_SystemCost).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(SA_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_System_Selection_TNA).Column(SR_Price).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(SC_WEP_TNA_Pricing_Escalation)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

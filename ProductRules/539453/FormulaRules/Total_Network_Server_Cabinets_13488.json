@@ -1,0 +1,11 @@
+{
+    "id": 13488,
+    "condition": "1",
+    "name": "Total_Network_Server_Cabinets",
+    "action": "<*ASSIGNVALUE(Total_Network_Server_Cabinets:<*VALUE(Network and Server Cabinet Count)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

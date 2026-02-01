@@ -1,0 +1,11 @@
+{
+    "id": 20316,
+    "condition": "[EQ](<*VALUE(RTSP_Video_Streaming_Interface)*>,)",
+    "name": "Default_RTSP_Video_Streaming_Interface",
+    "action": "<*SELECTVALUE(RTSP_Video_Streaming_Interface:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13880,
+    "condition": "[EQ](<*VALUE(SM_Product_Name)*>,Safety Manager <*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>)",
+    "name": "Show_SM_SSE_Engineering_Labor_Container",
+    "action": "<*ALLOWATTRIBUTES(SM_SSE_Engineering_Labor_Container)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

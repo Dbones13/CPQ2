@@ -1,0 +1,11 @@
+{
+    "id": 24198,
+    "condition": "[EQ](<*VALUE(RESS_Additional_Stations)*>,)",
+    "name": "Default_RESS_Additional_Stations",
+    "action": "<*ASSIGNVALUE(RESS_Additional_Stations:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

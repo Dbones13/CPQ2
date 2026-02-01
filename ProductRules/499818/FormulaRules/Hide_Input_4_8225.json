@@ -1,0 +1,11 @@
+{
+    "id": 8225,
+    "condition": "[IN]('<*VALUE(IO_Type)*>','Series-C: Pulse Input (8) Single Channel (0-5000)','Series-C: Pulse Input (4) Dual Channel (0-5000)','Series-C: Pulse Input (2) Fast Cut Off Channel (0-5000)')",
+    "name": "Hide Input 4",
+    "action": "<*DISALLOWATTRIBUTES(non_red_is,non_red_nis,non_red_isltr,red_rly,future_red_rly,non_red_rly,red_hv_rly,future_red_hv_rly,non_red_hv_rly)*>",
+    "description": "Non Red (IS), Non Red (NIS), \nNon Red (ISLTR), Red (RLY), Future Red (RLY), Non Red (RLY), Red (HV RLY), Future Red (HV RLY), Non Red (HV RLY).",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/04/24",
+    "modifiedBy": "Siddharth Chandrasekaran"
+}

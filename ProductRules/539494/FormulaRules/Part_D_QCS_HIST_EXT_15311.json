@@ -1,0 +1,11 @@
+{
+    "id": 15311,
+    "condition": "[NEQ](<*VALUE(MXP_Optional_extended)*>,Yes)",
+    "name": "Part_D_QCS_HIST_EXT",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:QCS-HIST-EXT)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

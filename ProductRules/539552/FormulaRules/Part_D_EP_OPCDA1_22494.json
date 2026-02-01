@@ -1,0 +1,11 @@
+{
+    "id": 22494,
+    "condition": "[EQ](<*VALUE(ESDC_OPC_Alarm_and_Event_Server)*>,0)",
+    "name": "Part_D_EP_OPCDA1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-OPCDA1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

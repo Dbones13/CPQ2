@@ -1,0 +1,11 @@
+{
+    "id": 15146,
+    "condition": "[AND]([OR]([EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,QCS MD),[EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,QCS MD & CD)),[EQ](<*CTX( Container(MXP_Scanner_group).Rows.GetCount )*>,0))",
+    "name": "Default_Scanner_group_Container",
+    "action": "<*CTX( Container(MXP_Scanner_group).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

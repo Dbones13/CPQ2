@@ -1,0 +1,11 @@
+{
+    "id": 18350,
+    "condition": "[NEQ](<*VALUE(MXP_Heat_Exchanger)*>,Yes)",
+    "name": "Part_D_Q4611_30",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q4611-30)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

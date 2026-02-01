@@ -1,0 +1,11 @@
+{
+    "id": 11607,
+    "condition": "[OR](<*ISSELECTED(MSC_Labor_GES_Eng.SYS GES Eng-BO-UZ)*>,<*ISSELECTED(MSC_Labor_GES_Eng.SYS GES Eng-FO-UZ)*>)",
+    "name": "Hide GES Location other than UZ",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MSC_Labor_GES_Eng:HPS_GES_P350B_UZ|HPS_GES_P350F_UZ)*>",
+    "description": "",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

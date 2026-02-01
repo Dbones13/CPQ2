@@ -1,0 +1,11 @@
+{
+    "id": 21928,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Experion_PKS_Release)*>,R530),[EQ](<*VALUE(FDM_RCI_PC_required)*>,Yes))",
+    "name": "Show_NodeTypeOption_RCIPC",
+    "action": "<*ALLOWVALUES(FDM_RCI_PC_Station_Node_Type:STN_PER_HP_Tower_RAID1,FDM_RCI_PC_Station_Node_Type:STN_PER_DELL_Rack_RAID1,FDM_RCI_PC_Station_Node_Type:STN_PER_DELL_Tower_RAID1)*><*DISALLOWVALUES(FDM_RCI_PC_Station_Node_Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

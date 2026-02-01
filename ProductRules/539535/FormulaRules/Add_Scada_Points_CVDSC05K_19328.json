@@ -1,0 +1,11 @@
+{
+    "id": 19328,
+    "condition": "[GT](<* Eval(<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000)/10000))*10000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000)/10000))*10000)/8000))*8000) *>,4999)",
+    "name": "Add_Scada_Points_CV-DSC05K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DSC05K)*><*SETATVQTY(PlantCruise_Part_Summary:CV-DSC05K,<* Eval(INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000)/10000))*10000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000)/10000))*10000)/8000))*8000)/5000)) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

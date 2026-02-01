@@ -1,0 +1,11 @@
+{
+    "id": 15370,
+    "condition": "[AND]([EQ](<* ProductName *>,ControlEdge PLC System Migration),[EQ](<*VALUE(LSS_PLC_Installed_Vendor)*>,))",
+    "name": "Default_LSS_PLC_Installed_Vendor",
+    "action": "<*SELECTVALUE(LSS_PLC_Installed_Vendor:GE Bentley Nevada)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

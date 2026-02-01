@@ -1,0 +1,11 @@
+{
+    "id": 11977,
+    "condition": "<*ISSELECTED(FGC_Implementation_Methodology.Non-Standard Build Estimate)*>",
+    "name": "NSB Calculate Hours F&G Site Study with Site Survey Report",
+    "action": "<*ASSIGNVALUE(F&G Site Study with Site Survey Report:[IF](<*ISSELECTED(FGC_Site_Survey_Required?.Yes)*>){16}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

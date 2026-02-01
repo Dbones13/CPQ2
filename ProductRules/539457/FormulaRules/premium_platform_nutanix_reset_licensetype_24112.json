@@ -1,0 +1,11 @@
+{
+    "id": 24112,
+    "condition": "[AND]([EQ](<*VALUE(Nutanix License Type)*>,),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix))",
+    "name": "premium_platform_nutanix_reset_licensetype",
+    "action": "<*RESETATTRIBUTE(Nutanix License Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21950,
+    "condition": "[NOT]([IF]([EQ](<*VALUE(FDM_Release)*>,R530)){[INR](<*VALUE(FDM Diagnostic Custom Model (0-100))*>,11,20)}{0}[ENDIF])",
+    "name": "Del_HC-NDM020",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-NDM020)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

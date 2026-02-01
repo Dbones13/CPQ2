@@ -1,0 +1,11 @@
+{
+    "id": 13299,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is EtherNet IP Interface in Scope?)*>,Yes))",
+    "name": "SII_DDS_EtherNet_IP1",
+    "action": "<*ASSIGNVALUE(SII Detail Design Specification -EtherNet IP1:<* Eval(<*VALUE(Number of EtherNet IP Interface Types)*> * 0.25 * 0.9) *>)*>",
+    "description": "SII Detail Design Specification -EtherNet IP1\n\nCalculated Hrs = ent*0.25*0.9",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

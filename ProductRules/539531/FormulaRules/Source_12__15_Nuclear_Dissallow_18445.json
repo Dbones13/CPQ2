@@ -1,0 +1,11 @@
+{
+    "id": 18445,
+    "condition": "[NEQ](<*VALUE(MXP_Measurement_Type)*>,Source 12&15 Nuclear)",
+    "name": "Source_12_&_15_Nuclear_Dissallow",
+    "action": "<*DISALLOWVALUES(MXP_Sensor_Type:Sx12 PrecisionPlus Pm147 2 Curie Source 10mm gap,MXP_Sensor_Type:Sx15 Precision Kr 85 1\" (~25mm) gap,MXP_Sensor_Type:Sx15 Precision Kr 85 high ash 0.4\" gap,MXP_Sensor_Type:Sx15 Precision Kr 85 low ash 0.4\" gap,MXP_Sensor_Type:Sx15 Precision Kr 85 med ash 0.4\" gap,MXP_Sensor_Type:Sx15 Precision Sr 90 0.4\" (~10mm) gap,MXP_Sensor_Type:Sx15 Precision Sr 90 1\" (~25mm) gap,MXP_Sensor_Type:Sx15 PrecisionPlus Promethium 147 0.4\" (~10mm) gap.)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

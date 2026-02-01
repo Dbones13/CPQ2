@@ -1,0 +1,11 @@
+{
+    "id": 9139,
+    "condition": "[OR]([EQ](<*VALUE(Trace_Software_Scope_Choices)*>,HW/SW),[EQ](<*VALUE(Trace_Software_Scope_Choices)*>,))",
+    "name": "Hide Project Management Part Container",
+    "action": "<*DISALLOWATTRIBUTES(Header_12_close,Header_12_open,MSID_PM_Added_Parts_Common_Container)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

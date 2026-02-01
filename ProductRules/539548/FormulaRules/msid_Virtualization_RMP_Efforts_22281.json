@@ -1,0 +1,11 @@
+{
+    "id": 22281,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,Virtualization System),[EQ](<*VALUE(Regional_Migration_Principal_Efforts_Required)*>,Yes),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "msid_Virtualization_RMP_Efforts",
+    "action": "<*ASSIGNVALUE(msid_Virtualization_RMP_Efforts:<* Eval(<*CTX ( Math.Sum(<*VALUE(msid_Virtualization_CoE)*>,<*CTX( Container(MSID_Labor_Virtualization_con).Row(3).Column(Final_Hrs).Get )*>,<*CTX( Container(MSID_Labor_Virtualization_con).Row(4).Column(Final_Hrs).Get )*>,<*CTX( Container(MSID_Labor_Virtualization_con).Row(5).Column(Final_Hrs).Get )*>,<*CTX( Container(MSID_Labor_Virtualization_con).Row(6).Column(Final_Hrs).Get )*>,<*CTX( Container(MSID_Labor_Virtualization_con).Row(7).Column(Final_Hrs).Get )*>,<*CTX( Container(MSID_Labor_Virtualization_con).Row(11).Column(Final_Hrs).Get )*>,<*CTX( Container(MSID_Labor_Virtualization_con).Row(12).Column(Final_Hrs).Get )*>) )*>*.08) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

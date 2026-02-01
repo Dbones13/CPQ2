@@ -1,0 +1,11 @@
+{
+    "id": 24357,
+    "condition": "[NEQ](<*VALUE(Scada_Are_Equipment_Templates_Used)*>,Yes)",
+    "name": "disallow_Scada_Are_Equipment_Templates_Used",
+    "action": "<*DISALLOWATTRIBUTES(Scada_Development_of_any_custom_applications,Scada_Telecommunications_infrastructure_review,Scada_Are_there_unknown_or_unfamilar_protocols,Scada_Are_migration_of_existing_SCADA_System,Scada_Is_SCADA_System_Interface_with_Enterprise,Scada_Development_of_Custom_Standards,Scada_Number_of_Control_Rooms,Scada_Number_of_Distinct_Equipment_Templates,Scada_Number_of_Instances,Scada_Is_Integration_Testing_Required,Scada_Number_of_Third_Party_Interface_to_test,Scada_Standard_Build_Usage_for_Integration_Test_Plan,Scada_Standard_Build_Usage_for_Pre_FAT_Test_Plan,Scada_Standard_Build_Usage_for_FAT_Test_Plan,Scada_Standard_Build_Usage_for_SAT_Test_Plan,Scada_Number_of_New_Simple_Equipment_Templates,Scada_Number_of_New_Medium_Equipment_Templates,Scada_Number_of_New_Complex_Equipment_Templates,Scada_%_of_Equip_Template_to_be_Tested_During_Pre_FAT,Scada_%_of_Instances_to_be_Tested_During_Pre_FAT,Scada_%_of_Equipment_Templates_to_be_Tested_During_FAT,Scada_%_of_Instances_to_be_Tested_During_FAT,Scada_%_of_Equipment_Templates_to_be_Tested_During_SAT,Scada_%_of_Instances_to_be_Tested_During_SAT)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

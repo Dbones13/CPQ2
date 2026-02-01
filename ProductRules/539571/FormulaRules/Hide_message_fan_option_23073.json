@@ -1,0 +1,11 @@
+{
+    "id": 23073,
+    "condition": "[OR]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Mounting Panel),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M),[EQ](<*VALUE(SerC_RG_Power_System_Vendor)*>,TDI),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_message_fan_option",
+    "action": "<*DISALLOWATTRIBUTES(Message_fan_option)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

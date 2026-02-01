@@ -1,0 +1,11 @@
+{
+    "id": 26208,
+    "condition": "[AND]([EQ](<*VALUE(DMS Touch Screen required?)*>,Touch Screen),[EQ](<*VALUE(DMS Display size)*>,))",
+    "name": "default_DMS_Display_size",
+    "action": "<*SELECTVALUE(DMS Display size:24 inch Touch Dell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18779,
+    "condition": "[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R530)",
+    "name": "Part_D_16_5",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:EP-COAS16)*><* DoResetAtt *>",
+    "description": "Defect 8006",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

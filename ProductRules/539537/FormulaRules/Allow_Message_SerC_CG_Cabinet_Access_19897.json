@@ -1,0 +1,11 @@
+{
+    "id": 19897,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_MIB_Configuration_Required)*>,Yes),[EQ](<*VALUE(SerC_CG_Cabinet_Access)*>,Single Access))",
+    "name": "Allow_Message_SerC_CG_Cabinet_Access",
+    "action": "<*ALLOWATTRIBUTES(Message_SerC_CG_Cabinet_Access)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19902,
+    "condition": "[NOT]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[NOT](<*IFANYVALUE(SerC_CG_IO_Mounting_Solution:Mounting Panel)*>),<*ISSELECTED(SerC_CG_Universal_Marshalling_Cabinet.No)*>))",
+    "name": "Hide C300_SerC_GIIS_CG_Cont",
+    "action": "<*CTX ( Container(C300_SerC_GIIS_CG_Cont).Rows.Clear )*><*DISALLOWATTRIBUTES(C300_SerC_GIIS_CG_Cont,Header_04_close,Header_04_open)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

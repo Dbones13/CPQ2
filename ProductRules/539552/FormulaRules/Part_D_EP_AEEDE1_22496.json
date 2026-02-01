@@ -1,0 +1,11 @@
+{
+    "id": 22496,
+    "condition": "[EQ](<*VALUE(ESDC_Microsoft_Excel_Data_Exchange)*>,0)",
+    "name": "Part_D_EP_AEEDE1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-AEEDE1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

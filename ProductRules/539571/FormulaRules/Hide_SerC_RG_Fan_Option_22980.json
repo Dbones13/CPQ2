@@ -1,0 +1,11 @@
+{
+    "id": 22980,
+    "condition": "<*IFANYVALUE(SerC_CG_IO_Family_Type:Series C)*>",
+    "name": "Hide_SerC_RG_Fan_Option",
+    "action": "<*DISALLOWATTRIBUTES(SerC_RG_Fan_Option)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

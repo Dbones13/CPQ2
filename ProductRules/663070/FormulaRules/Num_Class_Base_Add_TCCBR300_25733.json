@@ -1,0 +1,11 @@
+{
+    "id": 25733,
+    "condition": "[GT](<*VALUE(Number of Class Based Recipe licenses (0-1000))*>,299)",
+    "name": "Num_Class_Base_Add_TCCBR300",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TC-CBR300)*>[IF]([GT](<*eval(Int(Fix(<*VALUE(Number of Class Based Recipe licenses (0-1000))*>/300)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-CBR300, <*eval(Int(Fix(<*VALUE(Number of Class Based Recipe licenses (0-1000))*>/300)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add TC-CBR300",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

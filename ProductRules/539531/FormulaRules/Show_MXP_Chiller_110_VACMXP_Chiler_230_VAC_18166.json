@@ -1,0 +1,11 @@
+{
+    "id": 18166,
+    "condition": "[IN](<*VALUE(MXP_Scanner_Type)*>,3-5080-00,3-5080-23,3-5080-24,3-6080-00,3-5080-43,3-6080-43,3-6080-46)",
+    "name": "Show_MXP_Chiller_110_VAC|MXP_Chiler_230_VAC",
+    "action": "<*ALLOWATTRIBUTES(MXP_Chiller_110_VAC,MXP_Chiler_230_VAC)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

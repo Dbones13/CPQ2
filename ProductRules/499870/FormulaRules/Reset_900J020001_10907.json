@@ -1,0 +1,11 @@
+{
+    "id": 10907,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(HC900_TerminalBoardJumpers_10_2_position_jumpers)*>,0) *>,0))",
+    "name": "Reset 900J02-0001",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900J02-0001)*><* DoResetAtt *>",
+    "description": "CXCPQ-40189",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

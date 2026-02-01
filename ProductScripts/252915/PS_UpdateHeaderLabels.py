@@ -1,0 +1,2 @@
+from GS_MigrationUtil import populateHeaders
+populateHeaders(Product)

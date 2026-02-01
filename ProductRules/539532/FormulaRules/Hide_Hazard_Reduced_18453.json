@@ -1,0 +1,11 @@
+{
+    "id": 18453,
+    "condition": "[NEQ](<*VALUE(MXP_New Smart_Scanner)*>,Yes)",
+    "name": "Hide_Hazard_Reduced",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Hazard_Reduced)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

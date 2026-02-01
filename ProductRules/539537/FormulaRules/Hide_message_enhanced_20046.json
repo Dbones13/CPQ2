@@ -1,0 +1,11 @@
+{
+    "id": 20046,
+    "condition": "[OR]([EQ](<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).Sum(Validation_check) )*>,0),[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II))",
+    "name": "Hide_message_enhanced",
+    "action": "<*DISALLOWATTRIBUTES(Enhanced_function_message)*>",
+    "description": "CXCPQ-37808",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

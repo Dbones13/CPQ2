@@ -1,0 +1,11 @@
+{
+    "id": 20370,
+    "condition": "[EQ](<*VALUE(SS_Simulation_Server_required)*>,Yes)",
+    "name": "Show_ServerNodeTypeOptions",
+    "action": "<*ALLOWVALUES(SS_Server_Node_Type:SVR_PER_DELL_Rack_RAID1_XE)*>\n<*ALLOWVALUES(SS_Server_Node_Type:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

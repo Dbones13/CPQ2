@@ -1,0 +1,11 @@
+{
+    "id": 14279,
+    "condition": "[OR]([NOT](<*ATTDEF(MIQ_DoesEachStationHaveGas_Chromatograph)*>),<* IsNull(<*VALUE(MIQ_DoesEachStationHaveGas_Chromatograph)*>,1) *>)",
+    "name": "Set Default Gas Chromatograph",
+    "action": "<*SELECTVALUE(MIQ_DoesEachStationHaveGas_Chromatograph:No)*>",
+    "description": "CXCPQ-50741",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

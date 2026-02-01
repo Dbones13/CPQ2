@@ -1,0 +1,11 @@
+{
+    "id": 15125,
+    "condition": "[EQ](<*VALUE(MXP_Stand_Alone_CD_Control_Link_Interface)*>,)",
+    "name": "Default_Standalone_interface",
+    "action": "<*SELECTVALUE(MXP_Stand_Alone_CD_Control_Link_Interface:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

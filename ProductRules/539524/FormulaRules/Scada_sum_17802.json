@@ -1,0 +1,11 @@
+{
+    "id": 17802,
+    "condition": "1",
+    "name": "Scada_sum",
+    "action": "<*ASSIGNVALUE(Scada_conatiner_sum:<* Round ( <* Eval(<* Eval(<*CTX ( Container(Miscellaneous Interfaces).Sum(SCADA Points) )*> + <*CTX ( Container(Modbus/OPC Interfaces).Sum(SCADA Points) )*> + <*CTX ( Container(IEC/DNP3 Interfaces).Sum(SCADA Points) )*> +<*CTX ( Container(Leak Detection System Interfaces).Sum(SCADA Points) )*> + <*CTX ( Container(Allen-Bradley/Siemens Interfaces).Sum(SCADA Points) )*> + <*CTX ( Container(GE_OR_OMNI_Interfaces).Sum(SCADA_Points) )*>+<*CTX ( Container(Flow Computer Interfaces).Sum(SCADA Points) )*>) *>*(1+<*VALUE(Scada_X_Percent_SCADA_Point_Spare)*>/100)) *>, 0 ) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

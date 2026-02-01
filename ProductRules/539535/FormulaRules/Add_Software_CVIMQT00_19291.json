@@ -1,0 +1,11 @@
+{
+    "id": 19291,
+    "condition": "[EQ](<*VALUE(PlantCruise_MQTT_SCADA_Interface)*>,Yes)",
+    "name": "Add_Software_CV-IMQT00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-IMQT00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

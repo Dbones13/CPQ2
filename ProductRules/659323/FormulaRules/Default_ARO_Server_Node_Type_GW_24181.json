@@ -1,0 +1,11 @@
+{
+    "id": 24181,
+    "condition": "[EQ](<*VALUE(ARO_Server_Node_Type_GW)*>,)",
+    "name": "Default_ARO_Server_Node_Type_GW",
+    "action": "<*SELECTVALUE(ARO_Server_Node_Type_GW:SVR_STD_DELL_Rack_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

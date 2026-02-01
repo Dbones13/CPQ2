@@ -1,0 +1,11 @@
+{
+    "id": 19043,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NEQ](<*VALUE(MX_CD_Do_you_need_SCU)*>,SCU Skid, up to   3,500 lb/hr (1,600 kg/hr)))",
+    "name": "CD_Part_Dis_9203_S3",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9203-S3)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

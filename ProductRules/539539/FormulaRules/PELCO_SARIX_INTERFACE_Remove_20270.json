@@ -1,0 +1,11 @@
+{
+    "id": 20270,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Pelco_Sarix_Interface)*>,Yes))",
+    "name": "PELCO SARIX INTERFACE_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMPEL)*><* DoResetAtt *>",
+    "description": "CXCPQ-45721",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

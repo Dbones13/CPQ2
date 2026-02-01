@@ -1,0 +1,11 @@
+{
+    "id": 22206,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Server),[GEQ](<* Eval(<*VALUE(FDM_Server_Service_2)*> - (INT((<*VALUE(FDM_Server_Service_2)*>)/64))*64 - (INT((<*VALUE(FDM_Server_Service_2)*> - (INT((<*VALUE(FDM_Server_Service_2)*>)/64))*64)/32))*32) *>,16))",
+    "name": "Add_HC-SV0016_Server",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-SV0016)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,166 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+      <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+        @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+    <div style="width:100%">
+      <div class="msid-label">
+        <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+      </div>
+    </div>
+    <!-- /ko -->
+  
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+   	<div class="row col-xs-12 swagger"> 
+        <div class="Calc_btn">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") --> 
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+            <!-- /ko -->
+          </div>
+     </div>
+    <div class="row col-xs-12 swagger">
+      <div id="plc-questions">
+        <div>
+          <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-questions')"> -->
+          <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-questions',$('#plc-questions-content'), $('#plc-questions-href'), 'slow');  }">
+            <span>CE PLC System Software & Common Question</span>
+            <a id="plc-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div class="newtoggle" id="plc-questions-content">
+            <div class="col-xs-12 col-sm-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PLC_Software_Question_Cont") -->
+                  <!-- ko if:$data.container.columns().length !== 0-->
+                    <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+            <!-- ko ifnot: (localStorage.getItem("checkR2Q") ==='Yes')-->
+            <div class="col-xs-12 col-sm-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "PLC_Common_Questions_Cont") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+            <!-- /ko -->
+            <!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.breadcrumbsModule.breadcrumbs.filter(function(item){ return item.name=='R2Q New / Expansion Project' })().length) -->
+            <div class="col-xs-12 col-sm-6">
+                <!-- ko foreach: attributes.filterByProperty('name' , "PLC_Common_Questions_Cont") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- /ko -->
+
+                <!-- ko foreach: attributes.filterByProperty('name' , "CE_PLC_System_Hardware") -->
+                <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- /ko -->
+            </div>
+            <!-- /ko --> 
+         </div>
+        </div>
+      </div>
+    </div>
+ 		<!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.breadcrumbsModule.breadcrumbs.filter(function(item){ return item.name=='R2Q New / Expansion Project' })().length) -->   
+    <div class="row col-xs-12 swagger">
+      <div id="plc-hardware">
+        <div>
+          <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-hardware')"> -->
+            <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-hardware',$('#plc-hardware-content'), $('#plc-hardware-href'), 'slow');  }">
+            <span>CE PLC System Hardware Qty and Model nos selection</span>
+            <a id="plc-hardware-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div class="newtoggle" id="plc-hardware-content">
+            <div class="col-xs-12 col-sm-9">
+              <!-- ko foreach: attributes.filterByProperty('name' , "CE_PLC_System_Hardware") -->
+                  <!-- ko if:$data.container.columns().length !== 0-->
+                    <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- /ko -->    
+    <!-- ko foreach: attributes.filterByProperty('name' , "PLC_Labour_Details") -->
+    <!-- ko if:$data.container.columns().length !== 0-->
+    <!-- ko if: ( localStorage.getItem("checkR2Q") !== 'Yes' || ( localStorage.getItem("checkR2Q") === 'Yes' && cpq.models.configurator.breadcrumbsModule.breadcrumbs.filter(function(item){ return item.name=='R2Q New / Expansion Project' })().length)) -->
+    <div class="row col-xs-12 swagger">
+      <div id="plc-labor">
+        <div>
+          <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-labor')"> -->
+            <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-labor',$('#plc-labor-content'), $('#plc-labor-href'), 'slow');  }">
+            <span>Labor Details</span>
+            <a id="plc-labor-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div class="newtoggle" id="plc-labor-content">
+            <div class="col-xs-12 col-sm-6">
+                    <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                  <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- /ko -->
+    <!-- /ko -->
+     <!-- /ko -->
+    <div class="row col-xs-12 swagger">
+      <div id="plc-control-group">
+        <div>
+          <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-control-group')"> -->
+          <div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-control-group',$('#plc-control-group-content'), $('#plc-control-group-href'), 'slow');  }">
+            <span>PLC Control Group</span>
+            <a id="plc-control-group-href" href="#" class="swagger-toggle">&#xe066;</a>
+          </div>
+          <div class="newtoggle" id="plc-control-group-content">
+          
+          
+              <div class="col-xs-12 col-sm-6">
+              <!-- ko foreach: attributes.filterByProperty('name' , "Number_PLC_Control_Groups") -->
+                  <!-- ko if:$data.container.columns().length !== 0 -->
+                    <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                  <!-- /ko -->
+                <!-- /ko -->
+              <!-- /ko -->
+              </div>
+      
+      
+              <!-- ko foreach: attributes.filterByProperty('name' , 'CE_Add_System_Rows') -->
+  
+                  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+                  </div>
+  
+              <!-- /ko -->
+          
+          
+          
+            <div class="col-xs-12 col-sm-12"  >
+                  <!-- ko foreach: attributes.filterByProperty('name' , 'PLC_ControlGroup_Cont') -->
+  
+      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+      </div>
+  
+      <!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>

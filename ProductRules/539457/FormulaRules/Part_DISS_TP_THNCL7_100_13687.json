@@ -1,0 +1,11 @@
+{
+    "id": 13687,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_of_P&F_BTC14_Quad_Video_Thin_Client)*>,0))",
+    "name": "Part_DISS_TP_THNCL7_100",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:TP-THNCL7-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

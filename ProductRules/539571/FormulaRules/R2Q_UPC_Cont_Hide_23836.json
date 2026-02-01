@@ -1,0 +1,11 @@
+{
+    "id": 23836,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M),[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[NOT]([IN](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,C300 CEE,CN100 I/O HIVE - C300 CEE,Control HIVE - Physical,Control HIVE - Virtual,)),[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)),[AND]([NEQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M),[NEQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes)))",
+    "name": "R2Q_UPC_Cont_Hide",
+    "action": "<*CTX ( Container(C300_UPC_Labor_IO_count_RG_1).Rows.Clear )*>\n<*CTX ( Container(C300_UPC_Labor_IO_count_RG_2).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(C300_UPC_Labor_IO_count_RG_1,Header_25_open,Header_25_close,C300_UPC_Labor_IO_count_RG_2,UPC_Labor_IO_Note)*>",
+    "description": "",
+    "rank": "15",
+    "active": true,
+    "modifiedDate": "11/08/25",
+    "modifiedBy": "Lahu Giri"
+}

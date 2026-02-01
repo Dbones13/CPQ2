@@ -1,0 +1,11 @@
+{
+    "id": 24319,
+    "condition": "[AND]([EQ](<*VALUE(Enterprise_flag_check)*>,True),[EQ](<*CTX ( Container(SM_Enterprise_Cluster_2).SelectedRow.Index )*>,7))",
+    "name": "Load_cluster18",
+    "action": "<*CTX( Container(SM_Enterprise_Cluster_Sub_2).LoadKeys(ListIndex).Load(select <*eval(Replace(Replace(\"<*VALUE(cluster8)*>\",\"| \",\"' as LocationCluster UNION SELECT \") + \"'\",\"#\",\" as ListIndex ,'\"))*> as LocationCluster  ))*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

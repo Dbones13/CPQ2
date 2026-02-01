@@ -1,0 +1,11 @@
+{
+    "id": 24081,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B),[GT](<*CTX( Container(Virtualization_cluster_transpose).Sum(Virtualization_Number_of_B_VxRail_E660_Servers) )*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVX05",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVX05)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVX05,<*CTX( Container(Virtualization_cluster_transpose).Sum(Virtualization_Number_of_B_VxRail_E660_Servers) )*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

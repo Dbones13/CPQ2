@@ -1,0 +1,11 @@
+{
+    "id": 19953,
+    "condition": "[OR](<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Mounting Panel)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)",
+    "name": "Disallow_power_system",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Power_System_Vendor)*>",
+    "description": "#CXCPQ-50810",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

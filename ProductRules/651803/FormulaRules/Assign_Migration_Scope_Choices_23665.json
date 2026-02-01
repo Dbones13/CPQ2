@@ -1,0 +1,11 @@
+{
+    "id": 23665,
+    "condition": "[EQ](<*VALUE(MIgration_Scope_Choices)*>,)",
+    "name": "Assign_Migration_Scope_Choices",
+    "action": "<*ASSIGNVALUE(MIgration_Scope_Choices:HWSW)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

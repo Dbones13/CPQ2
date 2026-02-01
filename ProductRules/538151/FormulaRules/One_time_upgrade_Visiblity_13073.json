@@ -1,0 +1,11 @@
+{
+    "id": 13073,
+    "condition": "[OR]([EQ](<*CTX( Quote.CustomField(Quote Type) )*>,Contract Renewal),[EQ](<*CTX( Quote.CustomField(Quote Type) )*>,Contract New))",
+    "name": "One_time_upgrade_Visiblity",
+    "action": "[IF]([EQ](<*CTX( Quote.CustomField(Quote Type) )*>,Contract Renewal)){<*DISALLOWATTRIBUTES(One time upgrade)*>}{<*ALLOWATTRIBUTES(One time upgrade)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "11/12/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

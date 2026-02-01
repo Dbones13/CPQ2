@@ -1,0 +1,11 @@
+{
+    "id": 17879,
+    "condition": "[GT](<*CTX( Container(OPC Application Instances).Row(9).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_TP-RDM000",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:TP-RDM000)*><*SETATVQTY(SCADA_BOM_Items:TP-RDM000, <*CTX( Container(OPC Application Instances).Row(9).Column(Nodes).Get )*>)*><* DoResetAtt *>",
+    "description": "Add-TP-RDM000",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

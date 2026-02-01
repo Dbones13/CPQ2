@@ -1,0 +1,11 @@
+{
+    "id": 19075,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Fourdrinier preheat and profiling),[GEQ](<*VALUE(MX_CD_Zone_Width)*>,1))",
+    "name": "CD_Part_9210_2_MM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9210-2-MM)*><*SETATVQTY(MX_CD_Bom_Parts:9210-2-MM, <*VALUE(MX_CD_Zone_Width)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

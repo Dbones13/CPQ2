@@ -1,0 +1,11 @@
+{
+    "id": 9613,
+    "condition": "[EQ](<*ATTSEL(PSkid MGK General material costs percentage)*>,1)",
+    "name": "Set MGK General material costs amount",
+    "action": "<*ASSIGNVALUE(PSkid MGK General material costs amount:<* Eval(Round((<*CTX( Container(PRODUCTIZED _SKID_BOM).Total(Net Cost) )*> * <*VALUE(PSkid MGK General material costs percentage)*>) /100,2))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

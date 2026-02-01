@@ -1,0 +1,117 @@
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+      <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+        @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+
+    <!-- ko if : attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}) != null -->
+	<!-- ko if : attributes.first((elem) => {return elem.name() === 'Generic_System_PartsSummary'}) != null -->
+        <div class="row col-xs-12 swagger" data-bind="visible: attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}).userInput().includes('Cyber Generic System')">
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="generic-engineering" onclick="toggleConfigSection(event, '#generic-engineering')">
+                <label class="onlytext">Cyber Generic System</label>
+                <a id="generic-engineering-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="generic-engineering-content" class=" col-md-12 clear-padding">
+                <!-- ko foreach: attributes.filterByProperty('name' , "Generic_System_PartsSummary") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+	<!-- /ko -->
+
+        <div class="row col-xs-12 swagger" data-bind="visible: attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}).userInput().includes('SMX')">
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="smx-engineering" onclick="toggleConfigSection(event, '#smx-engineering')">
+                <label class="onlytext">SMX</label>
+                <a id="smx-engineering-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="smx-engineering-content" class=" col-md-12 clear-padding">
+                <!-- ko foreach: attributes.filterByProperty('name' , "AR_Cyber_PartsSummary") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+
+        <div class="row col-xs-12 swagger" data-bind="visible: attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}).userInput().includes('Assessments')">
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="assessment-engineering" onclick="toggleConfigSection(event, '#assessment-engineering')">
+                <label class="onlytext">Assessments</label>
+                <a id="assessment-engineering-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="assessment-engineering-content" class=" col-md-12 clear-padding">
+                <!-- ko foreach: attributes.filterByProperty('name' , "AR_Assessments_PartsSummary") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+
+        <div class="row col-xs-12 swagger" data-bind="visible: attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}).userInput().includes('Cyber App Control')">
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="cac-engineering" onclick="toggleConfigSection(event, '#cac-engineering')">
+                <label class="onlytext">Cyber App Control</label>
+                <a id="cac-engineering-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="cac-engineering-content" class=" col-md-12 clear-padding">
+                <!-- ko foreach: attributes.filterByProperty('name' , "AR_CAC_PartsSummary") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+
+        <div class="row col-xs-12 swagger" data-bind="visible: attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}).userInput().includes('PCN Hardening')">
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="pcn-engineering" onclick="toggleConfigSection(event, '#pcn-engineering')">
+                <label class="onlytext">PCN Hardening</label>
+                <a id="pcn-engineering-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="pcn-engineering-content" class=" col-md-12 clear-padding">
+                <!-- ko foreach: attributes.filterByProperty('name' , "AR_PCNH_PartsSummary") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+
+        <div class="row col-xs-12 swagger" data-bind="visible: attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}).userInput().includes('MSS')">
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="mss-engineering" onclick="toggleConfigSection(event, '#mss-engineering')">
+                <label class="onlytext">MSS</label>
+                <a id="mss-engineering-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="mss-engineering-content" class=" col-md-12 clear-padding">
+                <!-- ko foreach: attributes.filterByProperty('name' , "AR_MSS_PartsSummary") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <div class="row col-xs-12 swagger" data-bind="visible: attributes.first((elem) => {return elem.name() === 'AR_Cyber_SelectedProducts'}).userInput().includes('Project Management')">
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="pm-engineering" onclick="toggleConfigSection(event, '#pm-engineering')">
+                <label class="onlytext">Project Management</label>
+                <a id="pm-engineering-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="pm-engineering-content" class=" col-md-12 clear-padding">
+                <!-- ko foreach: attributes.filterByProperty('name' , "MSID_PM_Added_Parts_Common_Container") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    <!-- /ko -->
+</div>

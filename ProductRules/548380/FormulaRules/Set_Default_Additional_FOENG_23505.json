@@ -1,0 +1,11 @@
+{
+    "id": 23505,
+    "condition": "[NOT](<*ATTDEF(DVM_Additional_Project_FOENG_Deliverables)*>)",
+    "name": "Set_Default_Additional_FOENG",
+    "action": "<*SELECTVALUE(DVM_Additional_Project_FOENG_Deliverables:HPS_SYS_CPA_P305)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

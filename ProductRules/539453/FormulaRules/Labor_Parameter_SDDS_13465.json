@@ -1,0 +1,11 @@
+{
+    "id": 13465,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_Parameter_SDDS",
+    "action": "<*ASSIGNVALUE(SHE Detail Design Specification:<* Eval([IF]([EQ](<*VALUE(Implementation Methodology)*>,Non-Standard Build Estimate)){<*Eval(<*Eval((1-[IF]([GT](<*XValue(../C300_Exp_Labor_Uni_qntCG)*>,0)){1}{0}[ENDIF]*0.15)*1.1*[IF]([GT](<*XValue(../C300_Exp_Labor_Uni_qntmarsh)*>,0)){0.9}{1}[ENDIF]*(20*0<*VALUE(Network and Server Cabinet Count)*>+8*0<*VALUE(Number of Operator Console Sections)*>+60*<*VALUE(Number of Console Sections with Hardwired IO)*>+50*<*VALUE(Auxiliary Cabinet Count)*>)*0.9)*>+<*Eval(2*(10+(0<*VALUE(Network and Server Cabinet Count)*>+<*VALUE(Auxiliary Cabinet Count)*>)*0.5+(0<*VALUE(Number of Operator Console Sections)*>+<*VALUE(Number of Console Sections with Hardwired IO)*>)*2)*0.9)*>)*>}{<*Eval(<*Eval((1-[IF]([GT](<*XValue(../C300_Exp_Labor_Uni_qntCG)*>,0)){1}{0}[ENDIF]*0.15)*1.1*[IF]([GT](<*XValue(../C300_Exp_Labor_Uni_qntmarsh)*>,0)){0.9}{1}[ENDIF]*(20*0<*VALUE(Network and Server Cabinet Count)*>+8*0<*VALUE(Number of Operator Console Sections)*>+60*<*VALUE(Number of Console Sections with Hardwired IO)*>+50*<*VALUE(Auxiliary Cabinet Count)*>)*0.9)*>*0.7+<*Eval(2*(10+(0<*VALUE(Network and Server Cabinet Count)*>+<*VALUE(Auxiliary Cabinet Count)*>)*0.5+(0<*VALUE(Number of Operator Console Sections)*>+<*VALUE(Number of Console Sections with Hardwired IO)*>)*2)*0.9)*>)*>}[ENDIF])*>)*>\n",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

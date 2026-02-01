@@ -1,0 +1,11 @@
+{
+    "id": 23833,
+    "condition": "[AND]([EQ](<*VALUE(OPM_Is_the_Experion_System_LCN_Connected)*>,No),[EQ](<*VALUE(OPM_Servers_and_Stations_HW_replace_needed)*>,Yes),[OR]([EQ](<*VALUE(MSID_Future_Experion_Release)*>,R530),[EQ](<*VALUE(MSID_Future_Experion_Release)*>,R520)))",
+    "name": "Show_Dell R350XE_Experion_Server",
+    "action": "<*ALLOWVALUES(OPM_Experion_Server_Hardware_Selection:DELL R360 MLK)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

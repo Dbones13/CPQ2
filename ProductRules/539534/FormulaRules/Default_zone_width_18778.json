@@ -1,0 +1,11 @@
+{
+    "id": 18778,
+    "condition": "[EQ](<*VALUE(MX_CD_Zone_Width)*>,)",
+    "name": "Default_zone_width",
+    "action": "<*ASSIGNVALUE(MX_CD_Zone_Width:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

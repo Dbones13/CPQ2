@@ -1,0 +1,11 @@
+{
+    "id": 18185,
+    "condition": "[EQ](<*VALUE(MXP_Debris_Catcher)*>,)",
+    "name": "Default_MXP_Debris_Catcher",
+    "action": "<*SELECTVALUE(MXP_Debris_Catcher:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

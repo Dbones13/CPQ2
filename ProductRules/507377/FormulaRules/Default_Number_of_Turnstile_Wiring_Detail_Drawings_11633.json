@@ -1,0 +1,11 @@
+{
+    "id": 11633,
+    "condition": "[EQ](<*VALUE(IS_No_of_Turnstile_Wiring_Detail_Drawings)*>,)",
+    "name": "Default_Number of Turnstile Wiring Detail Drawings",
+    "action": "<*ASSIGNVALUE(IS_No_of_Turnstile_Wiring_Detail_Drawings:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

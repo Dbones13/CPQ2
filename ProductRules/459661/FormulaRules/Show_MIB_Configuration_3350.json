@@ -1,0 +1,11 @@
+{
+    "id": 3350,
+    "condition": "[AND]([GEQ](<*CTX( Container(CE_System_Cont).Rows.GetCount )*>,1), [OR]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System),[LIKE](<*VALUE(CE_Selected_Products)*>,C300 System)))",
+    "name": "Show MIB Configuration",
+    "action": "<*ALLOWATTRIBUTES(MIB Configuration Required?)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

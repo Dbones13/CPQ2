@@ -1,0 +1,11 @@
+{
+    "id": 12121,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Internal Test & FAT Procedure",
+    "action": "<*ASSIGNVALUE(Internal Test & FAT Procedure:<* Eval(24+8+4+(<*VALUE(OWS_Number of Transmitters)*>/10)+<*VALUE(OWS_Number of Wi-Fi adapters)*>+<*VALUE(OWS_Number of Mobile Stations)*>+<*VALUE(OWS_Number of FEWIO)*>+(<*VALUE(OWS_Number of RADIUS Servers)*>*2)+(<*VALUE(OWS_Number of RESS servers)*>*4)) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

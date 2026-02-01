@@ -1,0 +1,11 @@
+{
+    "id": 10853,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[AND]([EQ](<*CTX ( Container(TPA_Third_Party_Items_Cont).Rows.GetCount )*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR)))\n",
+    "name": "default load TPa third party",
+    "action": "<*CTX( Container(TPA_Third_Party_Items_Cont).Load(SELECT UI_Name as WriteIn ,Unit_Price,Unit_Cost,Custom_Cal as Calculated_Qty, WriteIn_Type FROM TPA_THIRD_PARTY_ITEMS_2 ) )*>",
+    "description": "",
+    "rank": "28",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

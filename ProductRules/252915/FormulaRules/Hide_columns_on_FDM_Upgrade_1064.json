@@ -1,0 +1,11 @@
+{
+    "id": 1064,
+    "condition": "[EQ](<*VALUE(MIgration_Scope_Choices)*>, Labor)",
+    "name": "Hide columns on FDM Upgrade",
+    "action": "<*CTX( Container(FDM_Upgrade_Configuration).Column(FDM_Upgrade_Total_Multiplexer_(MUX)_Monitoring_Network_Licenses\n).SetPermission(Hidden) )*>\n<*CTX( Container(FDM_Upgrade_Configuration).Column(FDM_Upgrade_Total_RCIs_excluding_Experion_PKS_Server_Interfaces\n).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "24/01/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20281,
+    "condition": "[EQ](<*VALUE(DVM_Adaptive Video Streaming)*>,Yes)",
+    "name": "Adaptive Video Streaming_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAVS)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMAVS,1)*><* DoResetAtt *",
+    "description": "CXCPQ-45735",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13357,
+    "condition": "1",
+    "name": "HMIAdvanced_StationConfiguration",
+    "action": "[IF]([EQ](<*VALUE(Implementation Methodology)*>,Non-Standard Build Estimate)){<*ASSIGNVALUE(HMIAdvanced_StationConfiguration:<* Eval(<*VALUE(labor_parameter_HMI_sf)*>*4+8+<*VALUE(Labor_Parameter_Sta_System)*>+16*<*VALUE(labor_parameter_HMI_ag)*>) *>)*>}{<*ASSIGNVALUE(HMIAdvanced_StationConfiguration:<* Eval(<*VALUE(labor_parameter_HMI_sf)*>*4+6+0.8*<*VALUE(Labor_Parameter_Sta_System)*>+12*<*VALUE(labor_parameter_HMI_ag)*>) *>)*>}[ENDIF]",
+    "description": "39007",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

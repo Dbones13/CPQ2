@@ -1,0 +1,11 @@
+{
+    "id": 22757,
+    "condition": "<*ISSELECTED(Default_Crossover_Cable.20m)*>",
+    "name": "Show_51305786_520",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Location_Cluster_Part_Summary:51305786-520)*>\n<*SETATVQTY(Location_Cluster_Part_Summary:51305786-520, 1)*><* DoResetAtt *>",
+    "description": "38329",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

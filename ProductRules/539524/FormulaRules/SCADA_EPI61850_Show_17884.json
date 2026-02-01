@@ -1,0 +1,11 @@
+{
+    "id": 17884,
+    "condition": "[GT](<*CTX( Container(IEC/DNP3 Interfaces).Row(1).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-I61850_Show",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-I61850)*><*SETATVQTY(SCADA_BOM_Items:EP-I61850, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10697,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_Pulse_Frequency_Quadrature_Input_Modules_4)*>,))",
+    "name": "QCS_Mig_Default_Pulse_Frequency_Quadrature_Input_Modules_4_point",
+    "action": "<*ASSIGNVALUE(QCS_Mig_Pulse_Frequency_Quadrature_Input_Modules_4:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

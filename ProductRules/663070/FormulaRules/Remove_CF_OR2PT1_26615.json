@@ -1,0 +1,11 @@
+{
+    "id": 26615,
+    "condition": "[NOT]([AND]([AND]([AND]([EQ](<*VALUE(Orion Stations required)*>,Yes),[OR]([GT](<*VALUE(Flex Station Qty (0-60))*>,0),[GT](<*VALUE(Console Station Qty (0-20))*>,0),[GT](<*VALUE(Console Station Extension Qty  (0-15))*>,0))),[GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0)),[EQ](<*VALUE(Node Supplier)*>,Honeywell)))",
+    "name": "Remove_CF_OR2PT1",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:CF-OR2PT1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "05/01/26",
+    "modifiedBy": "Leo Joseph"
+}

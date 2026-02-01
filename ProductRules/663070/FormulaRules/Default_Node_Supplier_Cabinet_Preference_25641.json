@@ -1,0 +1,11 @@
+{
+    "id": 25641,
+    "condition": "[EQ](<*VALUE(Node_Supplier_EAPP)*>,)",
+    "name": "Default_Node Supplier (Cabinet Preference)",
+    "action": "<*SELECTVALUE(Node_Supplier_EAPP:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

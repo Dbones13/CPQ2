@@ -1,0 +1,11 @@
+{
+    "id": 26112,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),<*ISSELECTED(Orion Console Membrane KB Type.OEP)*>,<*ISSELECTED(Node Supplier.Honeywell)*>)",
+    "name": "TP-DSOEP1-100_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:TP-DSOEP1-100)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-DSOEP1-100,<* Eval((2*<*VALUE(Orion Console 2Position Base Unit (0-20))*>)+(3*<*VALUE(Orion Console 3Position Base Unit (0-20))*>)) *>)*><* DoResetAtt *>",
+    "description": "CXCPQ-38913",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

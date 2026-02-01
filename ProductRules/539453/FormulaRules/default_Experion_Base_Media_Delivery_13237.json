@@ -1,0 +1,11 @@
+{
+    "id": 13237,
+    "condition": "[EQ](<*VALUE(Experion Base Media Delivery)*>,)",
+    "name": "default Experion Base Media Delivery",
+    "action": "<*SELECTVALUE(Experion Base Media Delivery:Electronic Download)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

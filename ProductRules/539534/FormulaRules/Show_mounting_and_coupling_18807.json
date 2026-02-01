@@ -1,0 +1,11 @@
+{
+    "id": 18807,
+    "condition": "[AND]([NEQ](<*VALUE(MX_CD_Type_of_Valve_torque)*>,Standard Torque (20Nm) Andritz N),[NEQ](<*VALUE(MX_CD_Type_of_Valve_torque)*>,High Torque))",
+    "name": "Show mounting and coupling",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_Mounting_and_coupling)*>\n<*DISALLOWATTRIBUTES(MX_CD_Stop_Disc)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

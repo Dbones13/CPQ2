@@ -1,0 +1,11 @@
+{
+    "id": 13987,
+    "condition": "[EQ](<*VALUE(DVM_Implementation_Methodology)*>,)",
+    "name": "Default_DVM_Implementation_Methodology",
+    "action": "<*SELECTVALUE(DVM_Implementation_Methodology:Non-Standard Build Estimate)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

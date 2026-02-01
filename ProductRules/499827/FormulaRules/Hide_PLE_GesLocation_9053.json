@@ -1,0 +1,11 @@
+{
+    "id": 9053,
+    "condition": "[OR]([EQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,None),[EQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,))",
+    "name": "Hide_PLE_GesLocation",
+    "action": "<*DISALLOWATTRIBUTES(PLE_GES_%)*> <*CTX( Container(PLE_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(PLE_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(PLE_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(PLE_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(PLE_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(PLE_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(PLE_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "CXCPQ- 36568",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

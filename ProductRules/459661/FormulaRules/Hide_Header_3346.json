@@ -1,0 +1,11 @@
+{
+    "id": 3346,
+    "condition": "[OR]([EQ](<*VALUE(New_Expansion)*>,New),[NOT]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion HS System)))",
+    "name": "Hide_Header",
+    "action": "<*DISALLOWATTRIBUTES(Header_03_open)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

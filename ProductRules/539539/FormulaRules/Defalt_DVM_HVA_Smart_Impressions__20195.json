@@ -1,0 +1,11 @@
+{
+    "id": 20195,
+    "condition": "[EQ](<*VALUE(DVM_HVA -Smart_Impressions)*>,)",
+    "name": "Defalt_DVM_HVA -Smart_Impressions_",
+    "action": "<*ASSIGNVALUE(DVM_HVA -Smart_Impressions:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

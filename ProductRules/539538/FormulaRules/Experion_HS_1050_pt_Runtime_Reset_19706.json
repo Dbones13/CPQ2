@@ -1,0 +1,11 @@
+{
+    "id": 19706,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Exp HS Runtime System)*>,Yes),[EQ](<*VALUE(Exp HS Enter Number of additional Points RunTime)*>,1050 pt)))",
+    "name": "Experion HS 1050 pt Runtime Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HRB01K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

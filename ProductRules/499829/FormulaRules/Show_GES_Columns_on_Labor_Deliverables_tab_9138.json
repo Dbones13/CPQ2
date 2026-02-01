@@ -1,0 +1,11 @@
+{
+    "id": 9138,
+    "condition": "[NEQ](<*VALUE(Trace_software_GES_Location)*>,None)",
+    "name": "Show GES Columns on Labor Deliverables tab",
+    "action": "<*CTX( Container(Trace_Software_Labor_con).Column(GES_Eng).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Software_Labor_con).Column(GES_Eng_Percentage_Split).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Software_Labor_con).Column(GES_ListPrice).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Software_Labor_con).Column(GES_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Software_Labor_con).Column(GES_MPA_Price).SetPermission(Editable) )*>\n\n<*CTX( Container(Trace_Project_Management_Labor_con).Column(GES_Eng).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Project_Management_Labor_con).Column(GES_Eng_Percentage_Split).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Project_Management_Labor_con).Column(GES_ListPrice).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Project_Management_Labor_con).Column(GES_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Project_Management_Labor_con).Column(GES_MPA_Price).SetPermission(Editable) )*>\n\n<*CTX( Container(Trace_Additional_Custom_Deliverables).Column(GES_Eng).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Additional_Custom_Deliverables).Column(GES_Eng_Percentage_Split).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Additional_Custom_Deliverables).Column(GES_ListPrice).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Additional_Custom_Deliverables).Column(GES_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(Trace_Additional_Custom_Deliverables).Column(GES_MPA_Price).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

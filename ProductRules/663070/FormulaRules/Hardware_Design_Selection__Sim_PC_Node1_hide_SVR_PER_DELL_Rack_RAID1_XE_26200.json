@@ -1,0 +1,11 @@
+{
+    "id": 26200,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[NOT]([AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),<*ISSELECTED(Interface with TPS Required?.Yes)*>,<*ISSELECTED(Simulation PC Furniture.Desk)*>)))",
+    "name": "Hardware_Design_Selection_-_Sim_PC_Node1_hide_SVR_PER_DELL_Rack_RAID1_XE",
+    "action": "<*DISALLOWVALUES(Hardware Design Selection - Sim PC Node1:SVR_PER_DELL_Rack_RAID1_XE)*>",
+    "description": "CXDEV-8007",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

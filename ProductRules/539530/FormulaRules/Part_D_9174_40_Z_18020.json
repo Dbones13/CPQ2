@@ -1,0 +1,11 @@
+{
+    "id": 18020,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow),[NEQ](<*VALUE(MXP_Proflow_Type)*>,Linear),[NEQ](<*VALUE(MXP_Type_of_Valve_length)*>,Standard stroke length),[NEQ](<*VALUE(MXP_Actuator_Housing_cover)*>,Zytel ),[LEQ](<*VALUE(MXP_Number_of_Zones)*>,0))",
+    "name": "Part_D_9174_40_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_CD_Bom_Parts:9174-40-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

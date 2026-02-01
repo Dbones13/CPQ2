@@ -1,0 +1,11 @@
+{
+    "id": 24088,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_Number_P_&_F_BTC12_Dual_Thin_Client)*>,0))",
+    "name": "Part_DISS_TP_THNR01_100",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:TP-THNR01-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

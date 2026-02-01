@@ -1,0 +1,11 @@
+{
+    "id": 19578,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS Alarm Pager)*>,Yes))",
+    "name": "Alarm Pager NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HAPAGE)*><* DoResetAtt *>",
+    "description": "Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

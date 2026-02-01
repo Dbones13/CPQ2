@@ -1,0 +1,11 @@
+{
+    "id": 26609,
+    "condition": "[EQ](<*VALUE(Additional Server Cabinet Mounting Type)*>,)",
+    "name": "Default_Additional_Server_Cabinet_Mounting_Type",
+    "action": "<*SELECTVALUE(Additional Server Cabinet Mounting Type:None)*>",
+    "description": "Additional Server Cabinet Mounting Type",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

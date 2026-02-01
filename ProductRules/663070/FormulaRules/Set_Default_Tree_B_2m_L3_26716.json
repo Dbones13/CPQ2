@@ -1,0 +1,11 @@
+{
+    "id": 26716,
+    "condition": "[EQ](<*VALUE(Tree B 2m cable (0-1000) L3)*>,)",
+    "name": "Set_Default_Tree_B_2m_L3",
+    "action": "<*SELECTVALUE(Tree B 2m cable (0-1000) L3:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

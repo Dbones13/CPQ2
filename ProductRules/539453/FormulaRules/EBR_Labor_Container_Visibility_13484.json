@@ -1,0 +1,11 @@
+{
+    "id": 13484,
+    "condition": "[EQ](<*VALUE(EBR_Labor_Container_Visibility)*>,No)",
+    "name": "EBR_Labor_Container_Visibility",
+    "action": "<*DISALLOWATTRIBUTES(Header_10_open,Header_10_close,EBR_Engineering_Labor_GES_%,EBR_Engineering_Labor_Container,EBR_Engineering_Labor_Execution_Country,EBR_Engineering_Labor_Execution_Year,EBR_Engineering_Labor_Productivity)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

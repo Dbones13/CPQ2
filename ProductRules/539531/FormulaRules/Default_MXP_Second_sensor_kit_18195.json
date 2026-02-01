@@ -1,0 +1,11 @@
+{
+    "id": 18195,
+    "condition": "[EQ](<*VALUE(MXP_Second_sensor_kit)*>,)",
+    "name": "Default_MXP_Second_sensor_kit",
+    "action": "<*SELECTVALUE(MXP_Second_sensor_kit:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

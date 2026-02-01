@@ -1,0 +1,11 @@
+{
+    "id": 14825,
+    "condition": "[EQ](<*VALUE(MX_MD_Multivariable_Control_Packages)*>,MD Multivariable Tissue Ctrl pkg (Includes 6CVs, -86, -87, -89))",
+    "name": "MX_Part_Q5904_55",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-55)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-55, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

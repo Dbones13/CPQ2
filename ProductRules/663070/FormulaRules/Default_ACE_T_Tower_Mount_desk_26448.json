@@ -1,0 +1,11 @@
+{
+    "id": 26448,
+    "condition": "[EQ](<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,)",
+    "name": "Default ACE T Tower_Mount_desk",
+    "action": "<*ASSIGNVALUE(ACE_T_Node _Tower_Mount_Desk:0)*>",
+    "description": "Default Value for ACE-T Node -Tower Mount (Desk) (0-7)",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

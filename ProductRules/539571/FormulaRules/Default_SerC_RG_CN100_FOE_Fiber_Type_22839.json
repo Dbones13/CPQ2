@@ -1,0 +1,11 @@
+{
+    "id": 22839,
+    "condition": "[EQ](<*VALUE(SerC_RG_CN100/_FOE_Fiber_Type)*>,)",
+    "name": "Default_SerC_RG_CN100/_FOE_Fiber_Type",
+    "action": "<*SELECTVALUE(SerC_RG_CN100/_FOE_Fiber_Type:Multi Mode)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

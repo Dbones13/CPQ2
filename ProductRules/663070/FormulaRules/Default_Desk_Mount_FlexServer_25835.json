@@ -1,0 +1,11 @@
+{
+    "id": 25835,
+    "condition": "[EQ](<*VALUE(FlexServer_NodeType)*>,)",
+    "name": "Default_Desk_Mount_FlexServer",
+    "action": "<*SELECTVALUE(FlexServer_NodeType:SVR_F_PER_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

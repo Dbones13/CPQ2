@@ -1,0 +1,136 @@
+<style>
+    #vertical-table-custom table {
+      width:100%
+    }
+
+    #vertical-table-custom table,#vertical-table-custom thead,#vertical-table-custom tbody,#vertical-table-custom tfoot,#vertical-table-custom th,#vertical-table-custom td,#vertical-table-custom tr {
+      display: block
+    }
+
+    #vertical-table-custom th.hidden-md,#vertical-table-custom td.hidden-md,#vertical-table-custom th.hidden-lg,#vertical-table-custom td.hidden-lg {
+      display: block!important
+    }
+
+    #vertical-table-custom thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px
+    }
+
+    #vertical-table-custom tr {
+      border: 1px solid #ccc
+    }
+
+    #vertical-table-custom td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 45%!important;
+      white-space: normal;
+      /* text-align:right; */
+      word-wrap: break-word;
+    }
+
+    #vertical-table-custom td .numberCell {
+      white-space: normal
+    }
+
+    #vertical-table-custom td.column-with-actions,#vertical-table-custom td.manage-items {
+      padding-left: 5px!important;
+      text-align: left
+    }
+
+    #vertical-table-custom tfoot td:first-child {
+      border-top: 4px solid #ccc
+    }
+
+    #vertical-table-custom td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      -o-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden
+    }
+
+    #vertical-table-custom>.table.table-predictive td:before {
+      white-space: normal
+    }
+
+    #vertical-table-custom>.table.table-predictive td.height-50-on-sm {
+      height: 50px
+    }
+
+    .table-bordered td,.table-bordered th {
+      overflow: visible
+    }
+
+    #vertical-table-custom td:before {
+      content: attr(data-title)
+    }
+
+    #vertical-table-custom td:empty {
+      display: none
+    }
+
+    #vertical-table-custom .item-column>div,#vertical-table-custom .item-column>div>div:nth-child(4n),#vertical-table-custom .item-column-absolute>div>div:nth-child(4n),#vertical-table-custom .item-column,#vertical-table-custom .item-column-predictive,#vertical-table-custom .item-column-predictive>.item-column-table {
+      width: 100%;
+      min-width: 100%
+    }
+
+    #vertical-table-custom .item-column>div>div,#vertical-table-custom .item-column>div,#vertical-table-custom .item-column-predictive>.item-column-table {
+      padding-left: 0!important
+    }
+
+    .margin-health {
+      text-align: right
+    }
+
+    #vertical-table-custom td.item-column,#vertical-table-custom td.item-column-predictive {
+      text-align: left;
+      padding-left: 10px!important
+    }
+
+    #vertical-table-custom .bold-border {
+      border-top: none!important
+    }
+    .fiori3-input-group {
+        width: 100%!important;
+    }
+    input[type=text] {
+        width: 100%!important;
+    }
+</style>
+
+<div class="attributes fiori3-attributes flex" style="justify-content:space-around" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+	<div class="col-xs-12 col-sm-4">
+      	  <div class="text-center custom-field-headers"   data-bind="visible: attributes.filterByProperty('name' , 'K&E Configuration')().length > 0" style="margin-left: -16px;margin-right: -16px;"> KE Configuration </div>
+              <!-- ko foreach: attributes.filterByProperty('isWholeRow', false) -->
+            <!-- ko if: dataType() !== 'Container'-->
+            <div id="vertical-table-custom" class="config-container cpq-scroll">
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" style="display: inline-flex;">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+            </div>
+            <!-- /ko -->
+    <!-- /ko -->
+    </div>
+  	<div class="col-xs-12 col-sm-7" >
+      <div class="text-center custom-field-headers" data-bind="visible: attributes.filterByProperty('name' , 'Pricing Parts' , 'Non Pricing Parts')().length > 0" style="margin: 0;"> Parts Summary </div>
+      <!-- ko foreach: attributes.filterByProperty('name' , "Pricing Parts" , "Non Pricing Parts") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+      <!-- /ko -->
+    </div>
+</div>

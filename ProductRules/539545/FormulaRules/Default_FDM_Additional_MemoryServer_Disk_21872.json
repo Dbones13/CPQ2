@@ -1,0 +1,11 @@
+{
+    "id": 21872,
+    "condition": "[EQ](<*VALUE(FDM_Additional_Memory(Server Disk))*>,)",
+    "name": "Default_FDM_Additional_Memory(Server Disk)",
+    "action": "<*SELECTVALUE(FDM_Additional_Memory(Server Disk):None)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

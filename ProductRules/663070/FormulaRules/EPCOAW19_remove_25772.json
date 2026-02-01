@@ -1,0 +1,11 @@
+{
+    "id": 25772,
+    "condition": "[OR]([NEQ](<*VALUE(Experion Software Release)*>,R520),[EQ](<*VALUE(stationQnt37198)*>,0))",
+    "name": "EP-COAW19 remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-COAW19)*><* DoResetAtt *>",
+    "description": "CXCPQ-37546",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

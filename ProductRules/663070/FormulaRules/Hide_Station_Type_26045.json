@@ -1,0 +1,11 @@
+{
+    "id": 26045,
+    "condition": "[EQ](<*VALUE(Additional Stations)*>,0)",
+    "name": "Hide_Station_Type",
+    "action": "<*DISALLOWATTRIBUTES(Station Type)*>",
+    "description": "CXCPQ-35454",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4861,
+    "condition": "[OR]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Basis Weight),[NEQ](<*VALUE(MX_SE_Z_Axis_Sensor)*>,Yes))",
+    "name": "Part_D_Q2252_05",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q2252-05)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

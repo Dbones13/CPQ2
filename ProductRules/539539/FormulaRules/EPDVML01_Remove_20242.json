@@ -1,0 +1,11 @@
+{
+    "id": 20242,
+    "condition": "[NOT]([GT](<*VALUE(DVM_4_Camera_Interface)*>,0))",
+    "name": "EP-DVML01_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVML01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

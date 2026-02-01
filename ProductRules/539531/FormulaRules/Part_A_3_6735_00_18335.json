@@ -1,0 +1,11 @@
+{
+    "id": 18335,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Large_angle_kit)*>,Yes),[IN](<*VALUE(MXP_Scanner_Type)*>,3-6080-41,3-6080-00,3-6080-81,3-6080-43,3-6022-54,3-6022-64,3-6080-46))",
+    "name": "Part_A_3_6735_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-6735-00)*><*SETATVQTY(MXP_SE_Bom_Parts:3-6735-00,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

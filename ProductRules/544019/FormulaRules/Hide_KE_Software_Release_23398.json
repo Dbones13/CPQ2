@@ -1,0 +1,11 @@
+{
+    "id": 23398,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,CC-ZHR041,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,MC-ZH6EXS,MC-ZH6EHS,MC-ZEHPR4,MC-ZEHPS4,MC-ZEHPS9,MC-ZH4EHR,MC-ZH4EHS,MC-ZH6EXR,MC-ZEHPR9,MC-ZH4EXR,MC-ZH4EXS,MC-ZH2EXS,MC-ZH2EXR,MC-ZEXPS7,MC-ZEXPS2,MC-ZEXPR7,MC-ZEXPR2,MC-ZH6EHR,0,0)",
+    "name": "Hide_KE_Software_Release",
+    "action": "<*DISALLOWATTRIBUTES(KE_Software_Release)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

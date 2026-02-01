@@ -1,0 +1,11 @@
+{
+    "id": 14235,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Base",
+    "action": "<*ASSIGNVALUE(Base:[IF]([OR]([LT](<*VALUE(labor_parameter_io)*>,400),[EQ](<*VALUE(labor_parameter_io)*>,400))){60}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,400),[LT](<*VALUE(labor_parameter_io)*>,2000))){80}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,2000),[LT](<*VALUE(labor_parameter_io)*>,5000))){100}{[IF]([GT](<*VALUE(labor_parameter_io)*>,5000)){<*CTX( Container(C300_Labor_Base_Details).Row(2).Column(Base_Values).Get )*>}{[IF]([EQ](<*VALUE(labor_parameter_io)*>,2000)){80}{[IF]([EQ](<*VALUE(labor_parameter_io)*>,5000)){100}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-43531",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "24/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

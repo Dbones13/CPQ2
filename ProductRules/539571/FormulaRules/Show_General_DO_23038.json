@@ -1,0 +1,11 @@
+{
+    "id": 23038,
+    "condition": "[NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M)",
+    "name": "Show_General_DO",
+    "action": "<*ALLOWATTRIBUTES(General_Question_Average_current_DO,ATTCON_23_close,ATTCON_23_open,SeriesC_General_Question_message)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

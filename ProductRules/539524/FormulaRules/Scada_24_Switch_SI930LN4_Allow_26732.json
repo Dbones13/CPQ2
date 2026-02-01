@@ -1,0 +1,11 @@
+{
+    "id": 26732,
+    "condition": "[EQ](<*CTX( Container(Additional Hardware).Row(1).Column(Switch_Port).Get)*>,24 Ports)",
+    "name": "Scada_24_Switch_SI-930LN4_Allow",
+    "action": "<* DoNotResetAtt *><*ALLOWVALUES(SCADA_BOM_Items:SI-930LN4)*><*SELECTVALUE(SCADA_BOM_Items:SI-930LN4)*><*SETATVQTY(SCADA_BOM_Items:SI-930LN4,<*VALUE(SubCal_SI-930LN4)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "06/01/26",
+    "modifiedBy": "Yogesh Baisla2"
+}

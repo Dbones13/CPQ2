@@ -1,0 +1,11 @@
+{
+    "id": 5444,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScriptsLabor)*>,Yes)",
+    "name": "PERF_ExecuteScriptsLabor",
+    "action": "<* ExecuteScript(PS_CalculateLaborHours) *>;<* ExecuteScript(PS_CalculateLaborHours_2) *>;<* ExecuteScript(PS_CalculateLaborHours_3) *>;<* ExecuteScript(PS_Labor_Delivrable_calculated_hrs) *>;<* ExecuteScript(PS_CalculateProjectManagementLaborHours) *>;<* ExecuteScript(PS_PopulatePartContainer) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "21/10/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

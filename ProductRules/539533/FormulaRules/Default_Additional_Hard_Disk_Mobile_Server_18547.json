@@ -1,0 +1,11 @@
+{
+    "id": 18547,
+    "condition": "[EQ](<*VALUE(ES_Additional_Hard_Disk_Mobile_Server)*>,)",
+    "name": "Default_Additional_Hard_Disk_Mobile_Server",
+    "action": "<*SELECTVALUE(ES_Additional_Hard_Disk_Mobile_Server:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

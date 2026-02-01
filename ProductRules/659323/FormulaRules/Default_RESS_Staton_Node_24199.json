@@ -1,0 +1,11 @@
+{
+    "id": 24199,
+    "condition": "[EQ](<*VALUE(RESS_Staton_Node)*>,)",
+    "name": "Default_RESS_Staton_Node",
+    "action": "<*SELECTVALUE(RESS_Staton_Node:STN_PER_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

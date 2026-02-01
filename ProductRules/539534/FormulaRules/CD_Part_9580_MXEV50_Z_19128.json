@@ -1,0 +1,11 @@
+{
+    "id": 19128,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Aqualizer MX),[EQ](<*VALUE(MX_CD_Zone_spacing)*>,50mm),[EQ](<*VALUE(MX_CD_Evacuation)*>,Yes),[GEQ](<*VALUE(MX_CD_Number_of_zones)*>,1))",
+    "name": "CD_Part_9580_MXEV50_Z",
+    "action": "<* DoNotResetAtt *>\n<*SELECTVALUE(MX_CD_Bom_Parts:9580-MXEV50-Z)*><*SETATVQTY(MX_CD_Bom_Parts:9580-MXEV50-Z, <*VALUE(MX_CD_Number_of_zones)*>)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

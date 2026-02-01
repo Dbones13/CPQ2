@@ -1,0 +1,11 @@
+{
+    "id": 19855,
+    "condition": "[EQ](TestedValue,TestValue)<*VALUE(SerC_Num Rock ControlLogix Proc Redundant EI0-999)*>",
+    "name": "Default_SerC_Num Rock ControlLogix Proc Redundant EI0-999",
+    "action": "<*ASSIGNVALUE(SerC_Num Rock ControlLogix Proc Redundant EI0-999:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

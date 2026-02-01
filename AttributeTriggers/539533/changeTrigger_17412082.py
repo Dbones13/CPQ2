@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes)){<*ASSIGNVALUE(eServer_MZ_SQLCL4_sum1:1)*>}{<*ASSIGNVALUE(eServer_MZ_SQLCL4_sum1:0)*>}[ENDIF]

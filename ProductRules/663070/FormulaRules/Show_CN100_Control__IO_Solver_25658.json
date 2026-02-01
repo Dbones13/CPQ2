@@ -1,0 +1,11 @@
+{
+    "id": 25658,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,New)",
+    "name": "Show_CN100 Control & I/O Solver",
+    "action": "<*ALLOWATTRIBUTES(CN100 Control & I/O Solver - Simulation (0-60))*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11193,
+    "condition": "1",
+    "name": "Set ARO_RESS_EBR_Required fields",
+    "action": "[IF]([LIKE](<*CTX ( Container(CE_System_Cont).UniqueValues(ARO_System_Required).Separator(|) )*>,Yes)){<*SELECTVALUES(ARO_System_Required:Yes)*>}{<*SELECTVALUES(ARO_System_Required:No)*>}[ENDIF][IF]([LIKE](<*CTX ( Container(CE_System_Cont).UniqueValues(RESS_System_Required).Separator(|) )*>,Yes)){<*SELECTVALUES(RESS_System_Required:Yes)*>}{<*SELECTVALUES(RESS_System_Required:No)*>}[ENDIF][IF]([LIKE](<*CTX ( Container(CE_System_Cont).UniqueValues(EBR_Software_Required).Separator(|) )*>,Yes)){<*SELECTVALUES(EBR_Software_Required:Yes)*>}{<*SELECTVALUES(EBR_Software_Required:No)*>}[ENDIF]",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "22/10/23",
+    "modifiedBy": "Hemanth N"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18467,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Scanner_Size)*>,Small),[EQ](<*VALUE(MXP_Type of Environment)*>,Dirty))",
+    "name": "Condition_for_Small_Dirty",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Scanner_Type:3-5080-43|3-6080-43|3-6080-81)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

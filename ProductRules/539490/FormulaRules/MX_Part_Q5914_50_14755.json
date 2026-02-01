@@ -1,0 +1,11 @@
+{
+    "id": 14755,
+    "condition": "[EQ](<*VALUE(MX_MD_Speed_Draw_Display)*>,Yes)",
+    "name": "MX_Part_Q5914_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5914-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5914-50, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14735,
+    "condition": "[EQ](<*VALUE(MX_Modbus_Ethernet_Link)*>,Yes)",
+    "name": "MX_Part_Q5324_55",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5324-55)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5324-55, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

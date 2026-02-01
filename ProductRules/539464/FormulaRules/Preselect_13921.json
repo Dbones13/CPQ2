@@ -1,0 +1,11 @@
+{
+    "id": 13921,
+    "condition": "1",
+    "name": "Preselect",
+    "action": "[IF]([EQ](<*VALUE(C200_C300_Cabinet_Doors)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Doors)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Cabinet_Hinge_Type)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Hinge_Type)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Cabinet_Light_Required)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Light_Required)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Cabinet_Thermostat_Required)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Thermostat_Required)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Cabinet_Keylock_Type)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Keylock_Type)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Power_Entry)*>,)){<*RESETATTRIBUTE(C200_C300_Power_Entry)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_TDI_Power_Supply_Cable_Length)*>,)){<*RESETATTRIBUTE(C200_C300_TDI_Power_Supply_Cable_Length)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Cabinet_Color)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Color)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Fan_Voltage)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Hinge_Type)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Cabinet_Base_Required)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Base_Required)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(C200_C300_Cabinet_Doors_FAO)*>,)){<*RESETATTRIBUTE(C200_C300_Cabinet_Doors_FAO)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300CABHTYP)*>,)){<*RESETATTRIBUTE(ATT_C200C300CABHTYP)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300CABLITREQ)*>,)){<*RESETATTRIBUTE(ATT_C200C300CABLITREQ)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300CABTHREQ)*>,)){<*RESETATTRIBUTE(ATT_C200C300CABTHREQ)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300CABKEYTYP)*>,)){<*RESETATTRIBUTE(ATT_C200C300CABKEYTYP)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300PWREN)*>,)){<*RESETATTRIBUTE(ATT_C200C300PWREN)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300TDIPWRCAB)*>,)){<*RESETATTRIBUTE(ATT_C200C300TDIPWRCAB)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300CABCLR)*>,)){<*RESETATTRIBUTE(ATT_C200C300CABCLR)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300FANVOLT)*>,)){<*RESETATTRIBUTE(ATT_C200C300FANVOLT)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_C200C300CABBSREQ)*>,)){<*RESETATTRIBUTE(ATT_C200C300CABBSREQ)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

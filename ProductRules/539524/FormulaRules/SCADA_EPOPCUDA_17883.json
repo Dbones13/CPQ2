@@ -1,0 +1,11 @@
+{
+    "id": 17883,
+    "condition": "[GT](<*CTX( Container(OPC Application Instances).Row(2).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-OPCUDA",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-OPCUDA)*><*SETATVQTY(SCADA_BOM_Items:EP-OPCUDA,<*CTX( Container(OPC Application Instances).Row(2).Column(Nodes).Get )*>)*><* DoResetAtt *>",
+    "description": "Add-EP-OPCUDA",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

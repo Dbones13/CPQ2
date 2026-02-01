@@ -1,0 +1,11 @@
+{
+    "id": 24269,
+    "condition": "[EQ](<*VALUE(ARO_Multi_Window_Client_4)*>,)",
+    "name": "DefaultValue - ARO_Multi_Window_Client_4",
+    "action": "<*ASSIGNVALUE(ARO_Multi_Window_Client_4:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

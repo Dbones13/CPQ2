@@ -1,0 +1,11 @@
+{
+    "id": 14273,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*CTX ( Container(MIQ Engineering Labor Container).Rows.GetCount )*>,0))",
+    "name": "Add_MIQ_Engineering_Rows",
+    "action": "<*CTX ( Container(MIQ Engineering Labor Container).Rows.Add(2) )*><*CTX ( Container(MIQ Engineering Labor Container).Row(1).Column(Deliverable).Set(MIQ Site Service) )*><*CTX ( Container(MIQ Engineering Labor Container).Row(1).Column(Execution Country).Set(<*VALUE(MIQ_Execution_Country)*>) )*><*CTX ( Container(MIQ Engineering Labor Container).Row(2).Column(Deliverable).Set(Enterprise Installation Service) )*><*CTX ( Container(MIQ Engineering Labor Container).Row(2).Column(Execution Country).Set(<*VALUE(MIQ_Execution_Country)*>) )*><* ExecuteScript(Default_Execution_Year_and_Country) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

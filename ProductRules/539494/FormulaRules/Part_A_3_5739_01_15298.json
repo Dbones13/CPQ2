@@ -1,0 +1,11 @@
+{
+    "id": 15298,
+    "condition": "[EQ](<*VALUE(MXP_Same_Spot_S_W)*>,Yes)",
+    "name": "Part_A_3_5739_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5739-01)*><*SETATVQTY(MXP_Bom_Parts:3-5739-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

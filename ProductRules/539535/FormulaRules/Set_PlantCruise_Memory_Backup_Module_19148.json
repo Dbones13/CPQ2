@@ -1,0 +1,11 @@
+{
+    "id": 19148,
+    "condition": "[NEQ](<*VALUE(PlantCruise_Memory_Backup_Module)*>,Yes)",
+    "name": "Set_PlantCruise_Memory_Backup_Module",
+    "action": "<*SELECTVALUE(PlantCruise_Memory_Backup_Module:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

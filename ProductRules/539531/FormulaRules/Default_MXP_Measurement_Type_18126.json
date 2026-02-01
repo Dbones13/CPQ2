@@ -1,0 +1,11 @@
+{
+    "id": 18126,
+    "condition": "[EQ](<*VALUE(MXP_Measurement_Type)*>,)",
+    "name": "Default_MXP_Measurement_Type",
+    "action": "<*SELECTVALUE(MXP_Measurement_Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

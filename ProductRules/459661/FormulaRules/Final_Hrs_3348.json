@@ -1,0 +1,11 @@
+{
+    "id": 3348,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Final_Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<*CTX ( Container(CE_System_Cont).Sum(Final_Hrs) )*> + <*CTX ( Container(PMC_Generic_System_Cont).Sum(Final_Hrs) )*>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

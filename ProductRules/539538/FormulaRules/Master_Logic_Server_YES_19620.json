@@ -1,0 +1,11 @@
+{
+    "id": 19620,
+    "condition": "[EQ](<*VALUE(Exp HS Master Logic Server)*>,Yes)",
+    "name": "Master Logic Server YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HSMLSR)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

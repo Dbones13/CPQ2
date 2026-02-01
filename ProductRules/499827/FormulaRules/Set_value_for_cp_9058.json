@@ -1,0 +1,11 @@
+{
+    "id": 9058,
+    "condition": "1",
+    "name": "Set value for cp",
+    "action": "<*ASSIGNVALUE(labor_parameter_cp:<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(Contracting Parties).Get )*>)*>",
+    "description": "Contracting Parties",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

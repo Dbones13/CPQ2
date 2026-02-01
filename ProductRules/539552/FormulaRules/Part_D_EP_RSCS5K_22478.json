@@ -1,0 +1,11 @@
+{
+    "id": 22478,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Red_nonRed_Check)*>,2),[EQ](<*VALUE(ESDC_SCADA_Points)*>,0))",
+    "name": "Part_D_EP_RSCS5K",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-RSCS5K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

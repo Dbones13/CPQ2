@@ -1,0 +1,11 @@
+{
+    "id": 18249,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(MXP_Measurement_Type)*>,Aluminium),[EQ](<*VALUE(MXPro_Sensor_Sample_paddle_with_Holder)*>,Yes)))",
+    "name": "Part_D_3_7648_02",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-7648-02)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

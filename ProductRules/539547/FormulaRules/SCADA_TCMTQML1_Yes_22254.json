@@ -1,0 +1,11 @@
+{
+    "id": 22254,
+    "condition": "[EQ](<*VALUE(Scada_METTLER_TOLEDO_Q_iMPACT)*>,Yes)",
+    "name": "SCADA_TC-MTQML1_Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:TC-MTQML1)*><*SETATVQTY(SCADA_BOM_Items:TC-MTQML1, 1)*><* DoResetAtt *>",
+    "description": "Add-TC-MTQML1",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

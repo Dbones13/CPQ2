@@ -1,0 +1,11 @@
+{
+    "id": 13402,
+    "condition": "1",
+    "name": "Experion UOC Batch Points",
+    "action": "<*ASSIGNVALUE(Experion UOC Batch Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Experion UOC Batch Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26688,
+    "condition": "[OR]([EQ](<*VALUE(EBR_Software_Required)*>,No),[EQ](<*VALUE(EBR_Server_Check)*>,No))",
+    "name": "HIDE_EBR_New",
+    "action": "<*DISALLOWATTRIBUTES(EBR_Engineering_Labor_Container,EBR_Engineering_Labor_Productivity,EBR_Engineering_Labor_Execution_Year,EBR_Engineering_Labor_Execution_Country,EBR_Engineering_Labor_GES_%,Header_08_close,Header_10_open)*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Vignesh Narayanasamy"
+}

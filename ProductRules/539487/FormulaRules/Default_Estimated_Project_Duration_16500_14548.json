@@ -1,0 +1,11 @@
+{
+    "id": 14548,
+    "condition": "[EQ](<*VALUE(PRMS Estimated Project Duration (16-500))*>,)",
+    "name": "Default Estimated Project Duration (16-500)",
+    "action": "<*ASSIGNVALUE(PRMS Estimated Project Duration (16-500):40)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

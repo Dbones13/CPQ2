@@ -1,0 +1,11 @@
+{
+    "id": 23973,
+    "condition": "[NOT]([AND]([OR]([EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,Dell R740XL),[EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,HP DL360 G10)),[GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0)))",
+    "name": "Hide_Additional_Hard_Drive",
+    "action": "<*SETOPTIONAL(Terminal_Additional_Hard_Drive)*><*DISALLOWATTRIBUTES(Terminal_Additional_Hard_Drive)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

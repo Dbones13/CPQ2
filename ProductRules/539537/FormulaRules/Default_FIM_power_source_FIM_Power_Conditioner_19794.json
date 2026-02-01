@@ -1,0 +1,11 @@
+{
+    "id": 19794,
+    "condition": "[EQ](<*VALUE(FIM_power_source_FIM_Power_Conditioner)*>,)",
+    "name": "Default_FIM_power_source_FIM_Power_Conditioner",
+    "action": "<*SELECTVALUE(FIM_power_source_FIM_Power_Conditioner:Internal)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

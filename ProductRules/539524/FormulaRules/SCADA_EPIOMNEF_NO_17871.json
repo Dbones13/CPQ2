@@ -1,0 +1,11 @@
+{
+    "id": 17871,
+    "condition": "[EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(5).Column(Devices).Get )*>,No)",
+    "name": "SCADA_EP-IOMNEF_NO",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-IOMNEF)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

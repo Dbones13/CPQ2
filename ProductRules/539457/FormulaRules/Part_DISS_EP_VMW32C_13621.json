@@ -1,0 +1,11 @@
+{
+    "id": 13621,
+    "condition": "[NOT]([GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM26)*>,0))",
+    "name": "Part_DISS_EP_VMW32C",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VMW32C)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22593,
+    "condition": "[EQ](<*VALUE(GAS MeterSuite GES Location)*>,None)",
+    "name": "Hide GES Columns",
+    "action": "<*DISALLOWATTRIBUTES(GAS_MeterSuite_Addi_Labor_GES_%,GAS_MeterSuite_Labor_GES_%)*><*CTX ( Container(Gas_MeterSuite_Engineering_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Engineering_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Engineering_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Engineering_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Engineering_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Engineering_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Engineering_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Additional_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Additional_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Additional_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Additional_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Additional_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Additional_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(Gas_MeterSuite_Additional_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

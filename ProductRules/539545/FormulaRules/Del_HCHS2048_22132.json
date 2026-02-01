@@ -1,0 +1,11 @@
+{
+    "id": 22132,
+    "condition": "[NOT]([GEQ](<* Eval(<*VALUE(FDM HART-IP Server Points/Devices (0-5000))*> - (INT((<*VALUE(FDM HART-IP Server Points/Devices (0-5000))*> + 15)/5000))*5000 - (INT((<*VALUE(FDM HART-IP Server Points/Devices (0-5000))*> - (INT((<*VALUE(FDM HART-IP Server Points/Devices (0-5000))*> + 15)/5000))*5000 + 15)/4096))*4096 + 15) *>,2048))",
+    "name": "Del_HC-HS2048",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-HS2048)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

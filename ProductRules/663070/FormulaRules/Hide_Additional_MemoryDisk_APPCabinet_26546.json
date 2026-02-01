@@ -1,0 +1,11 @@
+{
+    "id": 26546,
+    "condition": "[NEQ](<*VALUE(Hardware_Design_Selection - EAPP Node)*>,)",
+    "name": "Hide_Additional_MemoryDisk_APPCabinet",
+    "action": "<*DISALLOWVALUES(Additional_Hard_Disk_EAPP:Yes,Additional_Memory_EAPP:16GB)*>",
+    "description": "APP Node in Cabinet Preference\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10910,
+    "condition": "[EQ](<*VALUE(HC900_900_Control_Station_Designer)*>,Yes)",
+    "name": "Set CR-SDSGSW",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(HC900_PART_SUMMARY:CR-SDSGSW)*><* DoResetAtt *>",
+    "description": "CXCPQ-40188",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,10 @@
+{
+    "id": 59,
+    "condition": "Supervisory Network Type:Ethernet",
+    "name": "Default_Ethernet",
+    "action": "Select One LAN Type : Ethernet",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

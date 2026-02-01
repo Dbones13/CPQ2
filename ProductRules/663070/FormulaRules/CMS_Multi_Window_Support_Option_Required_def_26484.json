@@ -1,0 +1,11 @@
+{
+    "id": 26484,
+    "condition": "[EQ](<*VALUE(CMS Multi Window Support Option Required?)*>,)",
+    "name": "CMS Multi Window Support Option Required? def",
+    "action": "<*SELECTVALUE(CMS Multi Window Support Option Required?:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

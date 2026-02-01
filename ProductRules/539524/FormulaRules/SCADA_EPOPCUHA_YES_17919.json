@@ -1,0 +1,11 @@
+{
+    "id": 17919,
+    "condition": "[EQ](<*CTX( Container(OPC Application Instances).Row(7).Column(Devices).Get )*>,Yes)",
+    "name": "SCADA_EP-OPCUHA_YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-OPCUHA)*><*SETATVQTY(SCADA_BOM_Items:EP-OPCUHA, 1)*><* DoResetAtt *>",
+    "description": "Add-EP-OPCUHA",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

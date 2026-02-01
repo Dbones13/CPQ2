@@ -1,0 +1,11 @@
+{
+    "id": 23802,
+    "condition": "1",
+    "name": "order_status",
+    "action": "<*ASSIGNVALUE(Order_Status:<*CTX ( Quote.Status.Name )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17848,
+    "condition": "[AND]([EQ](<*CTX(Container(Allen-Bradley/Siemens Interfaces).Row(2).Column(Devices).Get )*>,Yes),[EQ](<*CTX( Product.Attribute(Scada_SCADA_Server_Redundancy).Value.Translated )*>,Yes))",
+    "name": "PS_Allen Bradley Interface_EP-IRSL25_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IRSL25)*><*SELECTVALUE(SCADA_BOM_Items:EP-IRSL25)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IRSL25, 2)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

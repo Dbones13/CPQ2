@@ -1,0 +1,11 @@
+{
+    "id": 23478,
+    "condition": "[EQ](<*CTX ( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).Get )*>,EG)",
+    "name": "set value GES location 6",
+    "action": "<*CTX ( Container(Labor_Details_New/Expansion_Cont).Row(1).Column(GES_Location).Set(EG) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Leo Joseph"
+}

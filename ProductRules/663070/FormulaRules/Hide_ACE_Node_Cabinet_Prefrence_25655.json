@@ -1,0 +1,11 @@
+{
+    "id": 25655,
+    "condition": "[EQ](<*VALUE(ACE Node Rack Mount Cabinet)*>,0)",
+    "name": "Hide_ACE Node Cabinet Prefrence",
+    "action": "<*DISALLOWATTRIBUTES(ACE Node in Cabinet Preference,Hardware Design Selection_ACE Node,Rack Mounting Type for_ACE Node,Node Supplier_ACE,Trusted Platform Module_TPM_ACE_Node,Additional Hard Disk _ACE,Additional Memory_ACE,Optional DVD_ACE,ServerLocClusNetwork_Group desk)*>",
+    "description": "CXCPQ-35417",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

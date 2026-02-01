@@ -1,0 +1,11 @@
+{
+    "id": 14976,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_12",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_12:<*VALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_EPLCG)*>)*>\n[IF]([AND]([OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR))[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[OR]([NEQ](<*VALUE(LSS_PLC_Number_of_ControlEdge_PLC_Groups_required)*>,0),[AND]([NEQ](<*VALUE(LSS_PLC_Number_of_ControlEdge_PLC_UOC_vUOC_confi)*>,0),[LIKE](<*CTX( Container(LSS_Configuration_for_Rockwell_transpose).UniqueValues(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Separator(,) )*>,PLC))))){<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_12:<*VALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_EPLCG)*>)*>}{<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_12:0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18750,
+    "condition": "[EQ](<*VALUE(MX_CD_Proflow_Type)*>,)",
+    "name": "Default_Proflow_Type",
+    "action": "<*SELECTVALUE(MX_CD_Proflow_type:Linear)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

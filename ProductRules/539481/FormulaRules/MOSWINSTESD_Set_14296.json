@@ -1,0 +1,11 @@
+{
+    "id": 14296,
+    "condition": "[EQ](<*VALUE(MIQ_Base_Media_Delivery)*>,Electronic Download)",
+    "name": "MO-SWINST-ESD Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:MO-SWINST-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

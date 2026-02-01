@@ -1,0 +1,11 @@
+{
+    "id": 26563,
+    "condition": "[EQ](<*VALUE(DMS Flex Station Hardware Selection)*>,)",
+    "name": "DMS Flex Station Hardware Selection def",
+    "action": "<*SELECTVALUE(DMS Flex Station Hardware Selection:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

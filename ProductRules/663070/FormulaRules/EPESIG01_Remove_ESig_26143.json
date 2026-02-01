@@ -1,0 +1,11 @@
+{
+    "id": 26143,
+    "condition": "[EQ](<*VALUE(E_Sig_Electronic_Signature_Option)*>,0)",
+    "name": "EPESIG01_Remove_ESig",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-ESIG01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

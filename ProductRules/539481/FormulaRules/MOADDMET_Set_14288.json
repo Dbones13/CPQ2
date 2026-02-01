@@ -1,0 +1,11 @@
+{
+    "id": 14288,
+    "condition": "[AND]([GT](<* IsNull(<*VALUE(MIQ_How_many_stations)*>,0)*>,0),[GT](<* IsNull(<*VALUE(MIQ_How_many_streams_per_station)*>,0)*>,0),[GT](<* IsNull(<*VALUE(MIQ_How_many_devices_per_stream)*>,0)*>,0))",
+    "name": "MO-ADDMET Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:MO-ADDMET)*>\n<*SETATVQTY(MIQ_PART_SUMMARY:MO-ADDMET,<*Eval( (<*VALUE(MIQ_How_many_stations)*> * <*VALUE(MIQ_How_many_streams_per_station)*> * <*VALUE(MIQ_How_many_devices_per_stream)*>)-<*VALUE(MIQ_How_many_stations)*>)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-50830",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

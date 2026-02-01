@@ -1,0 +1,11 @@
+{
+    "id": 20141,
+    "condition": "[GT](<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Rows.GetCount )*>,0)",
+    "name": "C300_Controller_and_IO_Mounting_Panel",
+    "action": "<*ASSIGNVALUE(C300_Controller_and_IO_Mounting_Panel:<* Eval(0<*GETATVQTY(Series_C_CG_Part_Summary:51454345-100)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:51454345-200)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:51454345-300)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:51454345-400)*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(C300_Controller_and_IO_Mounting_Panel) )*>) *>)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

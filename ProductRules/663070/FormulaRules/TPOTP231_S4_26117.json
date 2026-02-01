@@ -1,0 +1,11 @@
+{
+    "id": 26117,
+    "condition": "[AND](<*ISSELECTED(Cabinet_IKB_or_OEP.Operator Touch Panel)*>,<*ISSELECTED(CMS Node Supplier.Honeywell)*>)",
+    "name": "TP-OTP231_S4",
+    "action": "<*ASSIGNVALUE(TP-OTP231_S4:<* Eval(<*VALUE(CMS Flex Station Qty 0_60)*>+<*VALUE(CMS Console Station Qty 0_20)*>+<*VALUE(CMS TPS Station Qty 0_20)*>+<*VALUE(CMS Console Station Extension Qty 0_15)*>) *>)*>",
+    "description": "#CXCPQ-48560 - CMS",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

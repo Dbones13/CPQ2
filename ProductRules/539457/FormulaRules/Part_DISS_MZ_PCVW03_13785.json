@@ -1,0 +1,11 @@
+{
+    "id": 13785,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[OR]([NEQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B)),[EQ](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX03)*>,0),[NEQ](<*VALUE(Virtualization_Warranty_Extension)*>,7 Years))",
+    "name": "Part_DISS_MZ_PCVW03",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVW03)*><* DoResetAtt *>",
+    "description": "CCEECOMMBR-6879",
+    "rank": "6",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

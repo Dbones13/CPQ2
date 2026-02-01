@@ -1,0 +1,11 @@
+{
+    "id": 26431,
+    "condition": "[AND]([AND]([OR](<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-100)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-200)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-100)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-200)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-103)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-203)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-103)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-203)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-102)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-202)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-102)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-202)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-101)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-201)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-101)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-201)*>),[EQ](<*VALUE(CMS Cabinet Station Mounting Type)*>,Slide Mount)),[EQ](<*VALUE(CE_Site_Voltage)*>,120V))",
+    "name": "TP-WPCMS1-101 part add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:TP-WPCMS1-101)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-WPCMS1-101,<* Eval(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>) *>)*><* DoResetAtt *>",
+    "description": "CXCPQ-38426",
+    "rank": "1000",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

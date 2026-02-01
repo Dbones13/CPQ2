@@ -1,0 +1,11 @@
+{
+    "id": 18863,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Aqualizer MX),[EQ](<*VALUE(MX_CD_Zone_spacing)*>,75mm),[EQ](<*VALUE(MX_CD_MD_Rows)*>,2))",
+    "name": "CD_Part_9580_72",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9580-72)*><*SETATVQTY(MX_CD_Bom_Parts:9580-72, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9060,
+    "condition": "1",
+    "name": "Set value for el",
+    "action": "<*ASSIGNVALUE(labor_parameter_el:<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(Project Exeuction Locations).Get )*>)*>",
+    "description": "Honeywell Execution Location",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

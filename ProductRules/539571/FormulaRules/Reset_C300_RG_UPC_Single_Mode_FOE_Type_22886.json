@@ -1,0 +1,11 @@
+{
+    "id": 22886,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_Single_Mode_FOE_Type)*>)",
+    "name": "Reset_C300_RG_UPC_Single_Mode_FOE_Type",
+    "action": "<*RESETATTRIBUTE(C300_RG_UPC_Single_Mode_FOE_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

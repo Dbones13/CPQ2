@@ -1,0 +1,11 @@
+{
+    "id": 26379,
+    "condition": "[LIKE](<*VALUE(Supervisory Network Type)*>,Ethernet)",
+    "name": "Super_Net_Type_Ethernet",
+    "action": "<*DISALLOWVALUES(LAN Type:FTE)*>",
+    "description": "Display options for LAN Type as Ethernet & None if Supervisory Network Type is selected as Ethernet. In this case, default value for LAN Type will be Ethernet.",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

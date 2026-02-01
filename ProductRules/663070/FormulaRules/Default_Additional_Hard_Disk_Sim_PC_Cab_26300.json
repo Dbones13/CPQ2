@@ -1,0 +1,11 @@
+{
+    "id": 26300,
+    "condition": "[EQ](<*VALUE(Additional Hard Disk (Sim PC Desk))*>,)",
+    "name": "Default_Additional_Hard_Disk_(Sim PC Cab)",
+    "action": "<*SELECTVALUE(Additional Hard Disk (Sim PC Desk):No)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

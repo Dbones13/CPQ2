@@ -1,0 +1,11 @@
+{
+    "id": 25621,
+    "condition": "[EQ](<*VALUE(Experion UOC Regulatory Compliance Points (0-61440))*>,)",
+    "name": "select_default_UOC7",
+    "action": "<*SELECTVALUE(Experion UOC Regulatory Compliance Points (0-61440):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

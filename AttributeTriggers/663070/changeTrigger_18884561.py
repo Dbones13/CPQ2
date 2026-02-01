@@ -1,0 +1,1 @@
+[IF]([NEQ](<*VALUE(ACE Node Rack Mount Cabinet)*>,0)){<*SELECTVALUES(Hardware Design Selection_ ACE_Node:SVR_STD_DELL_Rack_RAID1,Rack Mounting Type for_ACE Node:None,Node Supplier_ACE:Honeywell,Trusted Platform Module_TPM_ACE_Node:Yes,Additional Memory_ACE:None,Additional Hard Disk _ACE:No,Optional DVD_ACE:No,ACE Node Cluster:Network Group1)*>}{if_false}[ENDIF]

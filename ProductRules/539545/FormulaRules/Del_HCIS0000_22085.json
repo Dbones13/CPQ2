@@ -1,0 +1,11 @@
+{
+    "id": 22085,
+    "condition": "[NOT]([GT](<*VALUE(FDM Asset Sentinnel Interface (0-1))*>,0))",
+    "name": "Del_HC-IS0000",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-IS0000)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13769,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_var_12",
+    "action": "<*ASSIGNVALUE(Labor_parameter_var_12:<*Eval(<*VALUE(Virtualization_Number_P_&_F_BTC12_Dual_Thin_Client)*>+<*VALUE(Virtualization_of_P&F_BTC14_Quad_Video_Thin_Client)*>+<*VALUE(Virtualization_OPTIPLEX_3000_Thin_Client)*>) *>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13340,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is Profibus Interface in Scope?)*>,Yes))",
+    "name": "SII FAT and Sign Off-Profibus",
+    "action": "<*ASSIGNVALUE(SII FAT and Sign Off-Profibus:<* Eval(<*VALUE(Number of Profibus Devices)*>*0.25) *>)*>",
+    "description": "CXCPQ-39354",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

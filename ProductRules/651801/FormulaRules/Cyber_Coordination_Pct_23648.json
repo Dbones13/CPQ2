@@ -1,0 +1,11 @@
+{
+    "id": 23648,
+    "condition": "[NOT](<*ISSELECTED(Include Services.Yes)*>)",
+    "name": "Cyber Coordination Pct",
+    "action": "<*DISALLOWATTRIBUTES(Cybert Coordination Pct)*>",
+    "description": "",
+    "rank": "70",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22871,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "SHOW_Environmental Condition",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_02_open,ATTCON_02_close,Header_02_open,Header_02_close,Serc_Environmental Condition)*>",
+    "description": "CXCPQ-37963",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

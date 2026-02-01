@@ -1,0 +1,11 @@
+{
+    "id": 10677,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Number_of_AllianceView_Thin_Clients)*>,)",
+    "name": "QCS_Mig_Default_AllianceView_Thin_Clients",
+    "action": "<*ASSIGNVALUE(QCS_Mig_Number_of_AllianceView_Thin_Clients:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

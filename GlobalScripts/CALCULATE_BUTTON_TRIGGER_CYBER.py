@@ -1,0 +1,1 @@
+Product.Attr('calculate_value_set').AssignValue('True')

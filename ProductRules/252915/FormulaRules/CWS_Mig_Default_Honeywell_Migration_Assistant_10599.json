@@ -1,0 +1,11 @@
+{
+    "id": 10599,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Migration_performed_by_PEC_using_Honeywell_Migration_Assistant)*>,)",
+    "name": "CWS_Mig_Default_Honeywell_Migration_Assistant",
+    "action": "<*SELECTVALUE(CWS_Mig_Migration_performed_by_PEC_using_Honeywell_Migration_Assistant:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

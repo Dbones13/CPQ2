@@ -1,0 +1,11 @@
+{
+    "id": 19543,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Select Honeywell supplied switch type)*>,C9200 (24 port) w/o router),[EQ](<*VALUE(Exp HS Select LAN Type)*>,Dual LAN))",
+    "name": "Set \u200b\u200b\u200bSI-920LN4 Dual LAN",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:SI-920LN4)*><*SETATVQTY(Experion_HS_PART_SUMMARY:SI-920LN4, 2)*>\n<* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

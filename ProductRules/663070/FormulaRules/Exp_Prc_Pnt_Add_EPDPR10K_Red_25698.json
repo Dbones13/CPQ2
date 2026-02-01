@@ -1,0 +1,11 @@
+{
+    "id": 25698,
+    "condition": "[GT](<*VALUE(Experion Process Points (0 - 45000))*>,9999)",
+    "name": "Exp_Prc_Pnt_Add_EPDPR10K_Red",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR10K)*>[IF]([GT](<*eval(Int(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DPR10K, <*eval(Int(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add  EP_DPR10K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

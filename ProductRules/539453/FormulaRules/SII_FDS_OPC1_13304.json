@@ -1,0 +1,11 @@
+{
+    "id": 13304,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is OPC Interface in Scope?)*>,Yes))",
+    "name": "SII_FDS_OPC1",
+    "action": "[IF]([GT](<*VALUE(Number of OPC Interface Types)*>,0)){<*ASSIGNVALUE(SII Function Design Specification -OPC1:<* Eval(16 * 0.9 + (<*VALUE(Number of OPC Interface Types)*> - 1 ) * 4 *0.9) *>)*>}{<*ASSIGNVALUE(SII Function Design Specification -OPC1:0)*>}[ENDIF]",
+    "description": "SII Function Design Specification -OPC1\n\nCalculated Hrs = Hrs = IF(opt > 0,16*0.9 + (opt-1)*4*0.9,0)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

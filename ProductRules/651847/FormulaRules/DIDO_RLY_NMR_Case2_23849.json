@@ -1,0 +1,11 @@
+{
+    "id": 23849,
+    "condition": "[AND]([EQ](<*CTX( Container(SM_RG_Cabinet_Details_Cont).Row(1).Column(SM_DI_DORelay_Adapter_UMC).Get)*>,Yes),[IN]('<*CTX( Container(SM_RG_Cabinet_Details_Cont).Row(1).Column(SM_DI_NAMUR_Switches_Adapter_UMC).Get)*>','No', '',))",
+    "name": "DIDO_RLY_NMR_Case2",
+    "action": "<*ASSIGNVALUE(SM_RG_DI_RLY_NMR_Case:2|DI / DO for SIL 2/ 3 Relay)*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Red_SIL2_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Non_Red_SIL2_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Red_SIL3_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Non_Red_SIL3_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Red_NMR).SetPermission(Hidden) )*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Non_Red_NMR).SetPermission(Hidden) )*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Red_NMR_Safety).SetPermission(Hidden) )*>\n<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Column(Non_Red_NMR_Safety).SetPermission(Hidden) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Red_SIL2_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Non_Red_SIL2_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Red_SIL3_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Non_Red_SIL3_RLY).SetPermission(Editable) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Red_NMR).SetPermission(Hidden) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Non_Red_NMR).SetPermission(Hidden) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Red_NMR_Safety).SetPermission(Hidden) )*>\n<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Column(Non_Red_NMR_Safety).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

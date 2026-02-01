@@ -1,0 +1,11 @@
+{
+    "id": 12114,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Transmitter Configuration",
+    "action": "<*ASSIGNVALUE(Transmitter Configuration:<* Eval(0.25*<*VALUE(OWS_Number of Transmitters)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 5391,
+    "condition": "[OR]([EQ](<*VALUE(Series_C_Power_System_Vendor)*>,Meanwell),[EQ](<*VALUE(Series_C_Power_System_Vendor)*>,Phoenix Contact))",
+    "name": "Disable_Power_System_Type",
+    "action": "<*DISALLOWVALUES(Series_C_Power_System_Type:Non Redundant 40A,Series_C_Power_System_Type:Redundant 40A,Series_C_Power_System_Type:Redundant with BBU 20A)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/07/23",
+    "modifiedBy": "Suresh Naidu Pendela"
+}

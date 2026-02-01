@@ -1,0 +1,11 @@
+{
+    "id": 26312,
+    "condition": "[EQ](<*VALUE(ACE Rapid Restart License)*>,)",
+    "name": "Default_Ace_Rapid_License",
+    "action": "<*SELECTVALUE(ACE Rapid Restart License:No)*>",
+    "description": "35419",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

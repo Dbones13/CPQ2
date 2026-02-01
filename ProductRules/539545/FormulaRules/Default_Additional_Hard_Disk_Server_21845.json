@@ -1,0 +1,11 @@
+{
+    "id": 21845,
+    "condition": "[EQ](<*VALUE(FDM_Additional Hard Disk (Server))*>,)",
+    "name": "Default_Additional Hard Disk (Server)",
+    "action": "<*SELECTVALUE(FDM_Additional Hard Disk (Server):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

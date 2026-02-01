@@ -1,0 +1,11 @@
+{
+    "id": 13958,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Final Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(eServer_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(eServer_Labor_Additional_Cust_Deliverables_con).Total(Final Hrs) )*>) *>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

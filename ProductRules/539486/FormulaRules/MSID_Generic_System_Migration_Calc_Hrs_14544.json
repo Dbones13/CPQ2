@@ -1,0 +1,11 @@
+{
+    "id": 14544,
+    "condition": "1",
+    "name": "MSID_Generic_System_Migration_Calc_Hrs",
+    "action": "<*ASSIGNVALUE(MSID_Generic_System_Migration_Calc_Hrs:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

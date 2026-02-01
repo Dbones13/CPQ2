@@ -1,0 +1,11 @@
+{
+    "id": 13079,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_SC_Pricing_Escalation_Attribute",
+    "action": "<*DISALLOWATTRIBUTES(SC_Pricing_Escalation)*>\n<*DISALLOWATTRIBUTES(SESP_FxRate)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "20/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

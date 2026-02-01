@@ -1,0 +1,11 @@
+{
+    "id": 4723,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SG_Outboard_Edge_Detect)*>,Yes))",
+    "name": "Part_A_Q8735_70",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Scanner_sensor_bom_parts:Q8735-70)*><*SETATVQTY(Scanner_sensor_bom_parts:Q8735-70,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22616,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for LMS C300 Design Documents",
+    "action": "<*ASSIGNVALUE(Liquid MeterSuite C300 Design Documents:<* Eval(4*<*VALUE(Liquid MeterSuite C300 Quantity Factor)*>) *>)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

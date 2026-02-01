@@ -1,0 +1,11 @@
+{
+    "id": 25552,
+    "condition": "[AND]([EQ](<*VALUE(ACE Node Rack Mount Cabinet)*>,0),[EQ](<*VALUE(ACE Node Tower Mount Desk)*>,0))",
+    "name": "Hide_ACE_control",
+    "action": "<*DISALLOWATTRIBUTES(ACEControl Libraries SW License,ACE Hiway Output Extension Library,ACE OPC Extension Library,ACE Rapid Restart License,ACE UCN Output Extension Library)*>",
+    "description": "These questions will be displayed to User,\n If qty of ACE Node -Tower Mount (Desk) >0, AND/OR qty of ACE Node - Rack Mount (Cabinet)  >0,\nElse, hidden",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

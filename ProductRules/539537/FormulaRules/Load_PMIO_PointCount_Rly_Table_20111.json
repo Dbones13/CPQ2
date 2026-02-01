@@ -1,0 +1,11 @@
+{
+    "id": 20111,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_SerC_PointCount_PMIO_CG_RlyCont).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[EQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,Yes))",
+    "name": "Load_PMIO_PointCount_Rly_Table",
+    "action": "<*CTX ( Container(C300_SerC_PointCount_PMIO_CG_RlyCont).Load(Select top 15 IO_Type, red_is, future_red_is, non_red_is, red_nis, future_red_nis, non_red_nis from PMIO_POINT_COUNT_CG_RG_RLY_C300 WHERE IO_Type!='') )*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

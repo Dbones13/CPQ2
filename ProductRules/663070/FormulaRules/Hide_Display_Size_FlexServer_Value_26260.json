@@ -1,0 +1,11 @@
+{
+    "id": 26260,
+    "condition": "[EQ](<*VALUE(TouchScreen_FlexServerDesk)*>,Yes)",
+    "name": "Hide_Display_Size_FlexServer_Value",
+    "action": "<*DISALLOWVALUES(Display_Size_FlexServer:21.33 inch NTS,Display_Size_FlexServer:23 inch NTS,Display_Size_FlexServer:24 inch NTS NEC,Display_Size_FlexServer:24 inch NTS DELL,Display_Size_FlexServer:27 inch NTS NEC,Display_Size_FlexServer:27 inch NTS DELL,Display_Size_FlexServer:55 inch NTS)*>\n<*ALLOWVALUES(Display_Size_FlexServer:21.33 inch Touch,Display_Size_FlexServer:24 inch Touch HP,Display_Size_FlexServer:24 inch Touch Dell)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

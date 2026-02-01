@@ -1,0 +1,11 @@
+{
+    "id": 13243,
+    "condition": "[EQ](<*VALUE(Use of SPI (Intools) in Scope?)*>,)",
+    "name": "Set default value for Use of SPI",
+    "action": "<*SELECTVALUE(Use of SPI (Intools) in Scope?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

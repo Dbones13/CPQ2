@@ -1,0 +1,11 @@
+{
+    "id": 2572,
+    "condition": "[AND]([NOT](<*ATTSEL(HC900_GES_Eng)*>),<*ISSELECTED(HC900_Ges_Location_Labour.GES Romania)*>)",
+    "name": "HC900_GES_Eng_Set_Default_Romania",
+    "action": "<*SELECTVALUE(HC900_GES_Eng:HPS_GES_P350B_RO)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

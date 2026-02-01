@@ -1,0 +1,11 @@
+{
+    "id": 20546,
+    "condition": "[AND]([OR]([GT](<*VALUE(SS_Orion_Console_2_Position_Base_Unit_Total)*>,0),[GT](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,0)),[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[GT](<*VALUE(SS_Orion_Console_Center_Extended_Auxiliary_Equipment_Unit)*>,0),[EQ](<*VALUE(SS_Turret_location_in_Extended_Auxiliary_Equipment_Unit)*>,Right),[IN](<*VALUE(SS_Orion_Console_Turret_Type)*>,Single Tier,Double Tier))",
+    "name": "Part_A_MP_OCXCD1_300",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MP-OCXCD1-300)*><*SETATVQTY(Simulation_Bom_parts:MP-OCXCD1-300,<*VALUE(SS_Orion_Console_Center_Extended_Auxiliary_Equipment_Unit)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17794,
+    "condition": "[EQ](<*CTX( Container(Flow Computer Interfaces).Rows.GetCount )*>,0)",
+    "name": "Flow Computer Interfaces",
+    "action": "<*CTX( Container(Flow Computer Interfaces).Load(SELECT Third_Party_Devices_Systems_Interface_SCADA,Identifiers, Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'Flow Computer Interfaces') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

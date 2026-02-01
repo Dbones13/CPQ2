@@ -1,0 +1,11 @@
+{
+    "id": 2557,
+    "condition": "[EQ](<*VALUE(Graphics_Migration_Have_process_module_point)*>,No)",
+    "name": "Show Graphics value 2",
+    "action": "<*ALLOWVALUES(Graphics_Migration_Require_an_HMI_interface_for_AM:No,Graphics_Migration_Require_an_HMI_interface_for_AM:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "03/05/23",
+    "modifiedBy": "Madhuri Sharma"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13325,
+    "condition": "<*ISSELECTED(Exp_Application_Type.ICSS)*>",
+    "name": "Exp_Application_Type.ICSS",
+    "action": "[IF](<*ISSELECTED(Supervisory Network Type.Ethernet)*>){<*SELECTVALUE(Supervisory Network Type:Ethernet)*>}{<*SELECTVALUE(Supervisory Network Type:FTE)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

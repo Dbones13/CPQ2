@@ -1,0 +1,11 @@
+{
+    "id": 13540,
+    "condition": "[EQ](<*VALUE(Virtualization_Update existing drawing package)*>,)",
+    "name": "default_Virtualization Update existing drawing package",
+    "action": "<*SELECTVALUE(Virtualization_Update existing drawing package:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

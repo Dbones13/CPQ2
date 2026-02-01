@@ -1,0 +1,11 @@
+{
+    "id": 26134,
+    "condition": "[EQ](<*VALUE(Mobile Server Nodes (0-1))*>,0)",
+    "name": "Hide_Mobile_Nodes_Server_Configuration",
+    "action": "<*DISALLOWATTRIBUTES(Mobile Nodes Server Configuration,Hardware Selection,Node Supplier Server1,Additional Memory (Mobile Server),Additional Hard Disk (Mobile Server),Optional DVD (Mobile Server),Trackball (Mobile server),Ent_ace_t_desk_tpm,Mobile Nodes Cluster,Display Size (Mobile Server),Display Supplier (Mobile Server),Serial Board - 8 port PCI (0-1),Mobile Server Serial Board Expansion- 8 port Module (0-3),Mobile Station Access License (0-5))*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

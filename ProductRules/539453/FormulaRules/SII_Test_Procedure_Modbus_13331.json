@@ -1,0 +1,11 @@
+{
+    "id": 13331,
+    "condition": "1",
+    "name": "SII Test Procedure_Modbus",
+    "action": "<*ASSIGNVALUE(SII Test Procedure_Modbus:<* Eval(0.15*<*VALUE(Number of Modbus Interfaces)*>) *>)*>",
+    "description": "39334",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

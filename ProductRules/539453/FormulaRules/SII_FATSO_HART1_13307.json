@@ -1,0 +1,11 @@
+{
+    "id": 13307,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is HART Interface in Scope?)*>,Yes))",
+    "name": "SII_FATSO_HART1",
+    "action": "<*ASSIGNVALUE(SII FAT and Sign Off-HART1:<* Eval(0.25 * <*VALUE(Number of HART Devices)*> )*>)*>",
+    "description": "SII FAT and Sign Off-HART1\n\nCalculated Hrs = ht * 0.25",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

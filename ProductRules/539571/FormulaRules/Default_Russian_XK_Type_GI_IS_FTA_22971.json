@@ -1,0 +1,11 @@
+{
+    "id": 22971,
+    "condition": "[EQ](<*VALUE(Russian_XK_Type_GI_IS_FTA)*>,)",
+    "name": "Default_Russian_XK_Type_GI_IS_FTA",
+    "action": "<*SELECTVALUE(Russian_XK_Type_GI_IS_FTA:None)*>",
+    "description": "CXCPQ-38724",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13097,
+    "condition": "1",
+    "name": "SC_Training_Match_Contract_Value_SS_Py",
+    "action": "<*ASSIGNVALUE(SC_Training_Match_Contract_Value_SS_Py:<*CTX ( Container(ComparisonSummary).Sum(PY_Training_Match_SFDC) )*>)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

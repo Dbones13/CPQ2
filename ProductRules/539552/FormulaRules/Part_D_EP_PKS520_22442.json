@@ -1,0 +1,11 @@
+{
+    "id": 22442,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Software_Release)*>,R520),[NEQ](<*VALUE(ESDC_base_media)*>,Physical Delivery))",
+    "name": "Part_D_EP_PKS520",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-PKS520)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

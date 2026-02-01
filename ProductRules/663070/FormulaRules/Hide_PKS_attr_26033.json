@@ -1,0 +1,11 @@
+{
+    "id": 26033,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[NEQ](<*VALUE(Interface with TPS Required?)*>,Yes))",
+    "name": "Hide_PKS_attr",
+    "action": "<*DISALLOWATTRIBUTES(File_Transfer_for_Experion_PKS)*>",
+    "description": "CXCPQ-45607",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

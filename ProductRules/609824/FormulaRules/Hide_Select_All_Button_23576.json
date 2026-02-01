@@ -1,0 +1,11 @@
+{
+    "id": 23576,
+    "condition": "[EQ](<*CTX( Container(HPS_PU_Valid_Parts).Rows.GetCount )*>,0)",
+    "name": "Hide Select All Button",
+    "action": "<*DISALLOWATTRIBUTES(HPS_PU_SelectValidParts)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19777,
+    "condition": "[NOT]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C))",
+    "name": "Hide_SerC_CG_IO_Mounting_Solution",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_IO_Mounting_Solution)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

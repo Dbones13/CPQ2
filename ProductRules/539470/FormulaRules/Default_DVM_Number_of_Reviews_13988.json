@@ -1,0 +1,11 @@
+{
+    "id": 13988,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Reviews)*>,)",
+    "name": "Default_DVM_Number_of_Reviews",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Reviews:3)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

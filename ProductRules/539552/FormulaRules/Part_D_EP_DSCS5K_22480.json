@@ -1,0 +1,11 @@
+{
+    "id": 22480,
+    "condition": "[EQ](<*VALUE(ESDC_SCADA_Points)*>,0)",
+    "name": "Part_D_EP_DSCS5K",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-DSCS5K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

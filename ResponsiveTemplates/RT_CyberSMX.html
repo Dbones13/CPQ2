@@ -1,0 +1,199 @@
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+      <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+        @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+      <!-- RT_CyberSMX -->
+        <!-- ko if: cpq.models.configurator.attributes.filterByProperty('name' , 'R2QRequest')()[0]?.userInput() !=="Yes" -->
+            <!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") -->
+            <div class="row col-xs-12 swagger"> 
+                    <div class="Calc_btn" >
+                    <div class="col-xs-12 col-sm-12">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                    </div>
+                    </div>
+            </div>
+            <!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if:["SMX"].includes(cpq.models.configurator.responderModule.name()) -->
+    
+          <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="smx-questions" onclick="toggleConfigSection(event, '#smx-questions')">
+              <label class="onlytext">SMX Configuration</label>
+          </div>
+  
+          <div id="smx-questions-content" class=" col-md-12 clear-padding">
+            <div class="col-xs-12 col-sm-12">
+              <!-- ko foreach: attributes.filterByProperty('name',"Execution Country","Number of SMX System RT","Number of SMX System ST","Number of System MI","Number of Years of Contract","USB Key ST Only") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+              <!-- /ko -->
+            </div>
+          </div>
+    <div class="config_row col-md-12 clear-padding pt10 flex banner_clps"  id="smx-Services" onclick="toggleConfigSection(event, '#smx-Services')">
+             <label class="onlytext">Services/ Labor Deliverables</label>
+          </div>
+          <div id="smx-Services-content" class=" col-md-12 clear-padding">
+            <div class="col-xs-12 col-sm-12">
+               <!-- ko foreach: attributes.filterByProperty('name' , "Include Services") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+              <!-- /ko --> 
+            </div>
+          </div> 
+        <!-- ko foreach: attributes.filterByProperty('name' , "Activities") -->
+          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+            <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+            <!-- /ko -->
+          </div>
+        <!-- /ko -->
+    <!-- /ko -->
+    <!-- Cyber Assessments -->
+    <!-- ko if:["Assessments"].includes(cpq.models.configurator.responderModule.name()) -->
+      <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="assessment-questions" onclick="toggleConfigSection(event, '#assessment-questions')">
+        <label class="onlytext">Assessments Configuration</label>
+      </div>
+      <div id="assessment-questions-content" class=" col-md-12 clear-padding">
+        <div class="col-xs-12 col-sm-12">
+          <!-- ko foreach: attributes.filterByProperty('name',"Execution Country","Assessment Type","Remote Instrumentation Enclosures (RIE)","DCS or FTE Communities","Control Rooms","Switches and Routers","Controllers and PLCs","PC's and Servers","Firewalls (redundant pair)") -->
+          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+          </div>
+          <!-- /ko -->
+        </div>
+      </div>
+      <!-- ko foreach: attributes.filterByProperty('name' , "Activities") -->
+      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+        <!-- /ko -->
+      </div>
+      <!-- /ko -->
+    <!-- /ko -->
+    <!-- Cyber App Control -->
+    <!-- ko if:["Cyber App Control"].includes(cpq.models.configurator.responderModule.name()) -->
+    <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="cac-questions" onclick="toggleConfigSection(event, '#cac-questions')">
+      <label class="onlytext">Cyber App Control Configuration</label>
+    </div>
+    <div id="cac-questions-content" class=" col-md-12 clear-padding">
+      <div class="col-xs-12 col-sm-12">
+        <!-- ko foreach: attributes.filterByProperty('name',"Execution Country","AWL-Cb Physical Server","FDS & DDS Documentation Required","DCS or FTE Communities","FAT Document Verification and Execution","SAT Document Verification and Execution","AWL Cb Base License","AWL Cb Protection Agent License","Enhanced Support-Cyber CARE") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <!-- ko foreach: attributes.filterByProperty('name' , "Network Level Container") -->
+          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 CAC_CONT' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt CAC_CONT', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+            <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+            <!-- /ko -->
+          </div>
+        <!-- /ko -->
+      </div>
+      <!-- ko foreach: attributes.filterByProperty('name',"Empty Atribute") -->
+      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+      </div>
+      <!-- /ko -->
+      <!-- ko foreach: attributes.filterByProperty('name' , "Write-In Entitlements for Cyber") -->
+      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+        <!-- /ko -->
+      </div>
+      <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Activities") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+      <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+      <!-- /ko -->
+    </div>
+    <!-- /ko -->
+  <!-- /ko -->
+  
+  <!-- PCN Hardening -->
+    <!-- ko if:["PCN Hardening"].includes(cpq.models.configurator.responderModule.name()) -->
+    <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="pcn-questions" onclick="toggleConfigSection(event, '#pcn-questions')">
+      <label class="onlytext">PCN Hardening Configuration</label>
+    </div>
+    <div id="pcn-questions-content" class=" col-md-12 clear-padding">
+      <div class="col-xs-12 col-sm-12">
+        <!-- ko foreach: attributes.filterByProperty('name',"Execution Country","Enhanced Support-Cyber CARE","FDS & DDS Documentation Required","FAT Document Verification and Execution","Number of Domains") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <!-- ko foreach: attributes.filterByProperty('name' , "Domain") -->
+          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+            <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+            <!-- /ko -->
+          </div>
+        <!-- /ko -->
+      </div>
+      <!-- ko foreach: attributes.filterByProperty('name',"Empty Atribute") -->
+      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+      <!-- ko template: { name: $root.getAttributeTemplate } -->
+      <!-- /ko -->
+      </div>
+      <!-- /ko -->
+      <!-- ko foreach: attributes.filterByProperty('name' , "Write-In Entitlements for Cyber") -->
+      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+        <!-- /ko -->
+      </div>
+      <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Activities") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+      <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+      <!-- /ko -->
+    </div>
+    <!-- /ko -->
+  <!-- /ko -->
+  
+  
+  <!-- MSS -->
+    <!-- ko if:["MSS"].includes(cpq.models.configurator.responderModule.name()) -->
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="mss-questions" onclick="toggleConfigSection(event, '#mss-questions')">
+                <label class="onlytext">MSS Configuration</label>
+            </div>
+            <div id="mss-questions-content" class=" col-md-12 clear-padding">
+            <div class="col-xs-12 col-sm-12">
+                <!-- ko foreach: attributes.filterByProperty('name',"Onsite Support Implementation Services","Additional Local SW Users License Required","Secure Remote Access Redundancy Required","Hardware Refresh","Secure Remote Access","File Transfer VSE to VSE","Number of Tokens Required","Patching and Anti-Virus Required","PCN Monitoring Required","Number of Windows Assets","Number of Network Assets","Additional Services – Specials","IP Security Tunnel Required","Repository Server Required","Optional Hardware and Software Required") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+                </div>
+                <!-- /ko -->
+        
+            </div>
+            </div>
+            <div class="config_row col-md-12 clear-padding pt10 flex banner_clps"  id="mss-Services" onclick="toggleConfigSection(event, '#mss-Services')">
+            <label class="onlytext">Labor Deliverables</label>
+            </div>
+            <div id="mss-Services-content" class=" col-md-12 clear-padding">
+                <div class="col-xs-12 col-sm-12">
+                    <!-- ko foreach: attributes.filterByProperty('name',"Execution Country","SAT Document Verification and Execution","Microsoft Updates Install","FDS & DDS Documentation Required","FAT Document Verification and Execution") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "Activities") -->
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: 'ContainerTemplate_labor' } -->
+                <!-- /ko -->
+                </div>
+            <!-- /ko -->
+        
+            
+  <!-- /ko -->
+  
+  </div>

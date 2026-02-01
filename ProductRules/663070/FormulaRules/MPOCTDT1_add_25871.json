@@ -1,0 +1,11 @@
+{
+    "id": 25871,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[EQ](<*VALUE(Orion Console Turret Type)*>,Double Tier),<*ISSELECTED(Node Supplier.Honeywell)*>,[OR]([GT](<*VALUE(Orion Console Left Auxiliary Equipment Unit (0-40))*>,0),[GT](<*VALUE(Orion Console Right Auxil Equip Unit (0-40))*>,0), [GT](<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>,0), [GT](<*VALUE(Orion Console Center Curv Auxil Equip Unit (0-40))*>,0)))",
+    "name": "MP-OCTDT1_add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-OCTDT1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCTDT1, <* Eval(<*VALUE(Orion Console Left Auxiliary Equipment Unit (0-40))*>+<*VALUE(Orion Console Right Auxil Equip Unit (0-40))*>+<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>+<*VALUE(Orion Console Center Curv Auxil Equip Unit (0-40))*>) *>.)*><* DoResetAtt *>",
+    "description": "CXCPQ-38924",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10897,
+    "condition": "[NOT]([OR]([AND]([EQ](<*VALUE(HC900_System_Type)*>,SIL2 Safety System),[EQ](<*VALUE(HC900_Controller_(CPU)_Module_NSIL2)*>,Redundant Controller C75 CPU - SIL2)),[AND]([EQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Redundant Controller C75 CPU),[EQ](<*VALUE(HC900_System_Type)*>,Non-SIL HC900 System))))",
+    "name": "Reset 900RSM-0200",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900RSM-0200)*><* DoResetAtt *>",
+    "description": "CXCPQ-40184 and CXCPQ-40185",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26636,
+    "condition": "[AND](([EQ](<*VALUE(Experion Server Type)*>,Flex Server)),([EQ](<*VALUE(Server Mounting)*>,Cabinet)))",
+    "name": "Show_Rack_Mount_Flex_Server",
+    "action": "<*ALLOWATTRIBUTES(Rack_Mount_Flex_Server,Flex Server Node Type,Node Supplier (Flex Server),TrustedPlatform_Module_TPM,Multi Window Support (Flex Server),Remote Peripheral Solution Type (RPS) - (Flex Server -Cabinet),Flex Server Rack Mounting Type,RPS Mounting Furniture (Flex Server Cabinet),Server_Location/Cluster/Network Group_desk1)*>\n<*xDisallowallValuesExcept(Server_Location/Cluster/Network Group_desk1:<* LIST ( SELECT AttValue FROM ClusterAttValues WHERE CAST (AttValueCode AS float) <= '<*CTX( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>' ) *>)*>",
+    "description": "CXCPQ-34588",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24374,
+    "condition": "1",
+    "name": "Labor_parameter_var_9",
+    "action": "<*ASSIGNVALUE(Labor_parameter_var_9:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Labor_para_var_9) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

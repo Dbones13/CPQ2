@@ -1,0 +1,11 @@
+{
+    "id": 10567,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "PLC_redundancy_required",
+    "action": "<*SETREQUIRED(LSS_PLC_Server_Redundancy)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14231,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "SW_SAT",
+    "action": "<*ASSIGNVALUE(SW_SAT:[IF]([OR]([LT](<*VALUE(labor_parameter_io)*>,400),[EQ](<*VALUE(labor_parameter_io)*>,400))){40}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,400),[LT](<*VALUE(labor_parameter_io)*>,2000))){60}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,2000),[LT](<*VALUE(labor_parameter_io)*>,5000))){120}{[IF]([GT](<*VALUE(labor_parameter_io)*>,5000)){<*CTX( Container(C300_Labor_Base_Details).Row(7).Column(Base_Values).Get )*>}{[IF]([EQ](<*VALUE(labor_parameter_io)*>,2000)){60}{[IF]([EQ](<*VALUE(labor_parameter_io)*>,5000)){120}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "24/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

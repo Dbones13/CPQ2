@@ -1,0 +1,11 @@
+{
+    "id": 13942,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Hide_Labor",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_02_close,ATTCON_02_open,C300_GES_Location,Header_02_close,Header_02_open)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

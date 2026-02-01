@@ -1,0 +1,11 @@
+{
+    "id": 23820,
+    "condition": "[NEQ](<*CTX( Math.Sum(<*CTX( Container(PLC_Labour_Details).Row(1).Column(PLC_Marshalling_Cabinet_Cont).Get )*>,<*CTX( Container(PLC_ControlGroup_Cont).Sum(staging_PLC_Marshal_Cabinet_Qty) )*>,<*CTX( Container(PLC_ControlGroup_Cont).Sum(Staging_PLC_Marshal_Cabinet_Qty_RG) )*>) )*>,<*VALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc)*>)",
+    "name": "staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc",
+    "action": "<*ASSIGNVALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc:<*CTX( Math.Sum(<*CTX( Container(PLC_Labour_Details).Row(1).Column(PLC_Marshalling_Cabinet_Cont).Get )*>,<*CTX( Container(PLC_ControlGroup_Cont).Sum(staging_PLC_Marshal_Cabinet_Qty) )*>,<*CTX( Container(PLC_ControlGroup_Cont).Sum(Staging_PLC_Marshal_Cabinet_Qty_RG) )*>) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

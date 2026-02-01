@@ -1,0 +1,11 @@
+{
+    "id": 14113,
+    "condition": "[EQ](<*CTX( Container(FDM Additional Custom Deliverables).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Additional Custom Deliverable",
+    "action": "<*CTX( Container(FDM Additional Custom Deliverables).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

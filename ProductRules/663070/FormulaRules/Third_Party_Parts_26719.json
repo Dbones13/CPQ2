@@ -1,0 +1,11 @@
+{
+    "id": 26719,
+    "condition": "[AND]([GT](<*CTX ( Container(Firewall_Thirdpartycont).Rows.GetCount )*>,0),[NEQ](<*CTX ( Container(Firewall_Thirdpartycont).UniqueValues(LoadCont).Separator(aaaUNIONaaa) )*>,))",
+    "name": "Third_Party_Parts",
+    "action": "<*CTX ( Container(EPKS_Part_Summary_Cont_3rd_Party).LoadKeys(PartNumber).Load(<*eval(Replace(\"Select <*CTX( Container(Firewall_Thirdpartycont).UniqueValues(LoadCont).Separator(aaaUNIONaaa) )*>\",\"aaaUNIONaaa\",\" UNION SELECT \"))*>) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "31/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

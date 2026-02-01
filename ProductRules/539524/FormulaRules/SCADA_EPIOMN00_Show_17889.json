@@ -1,0 +1,11 @@
+{
+    "id": 17889,
+    "condition": "[GT](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(4).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-IOMN00_Show",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-IOMN00)*><*SETATVQTY(SCADA_BOM_Items:EP-IOMN00, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

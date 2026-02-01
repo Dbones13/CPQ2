@@ -1,0 +1,11 @@
+{
+    "id": 26665,
+    "condition": "<*IFANYVALUE(L3 Switch Required:Yes)*>",
+    "name": "Show_L3 Switch Details_and_Accessoriers",
+    "action": "<*ALLOWATTRIBUTES(Accessories of L3 Switch,Default Crossover Cable L3,Default Switch L3,L3 Switch Details,PDU Power Cable Req for Switch L3,Power Cord Type L3,Tree A 10m cable (0-1000) L3,Tree A 20m cable (0-1000) L3,Tree A 2m cable (0-1000) L3,Tree A 5m cable (0-1000) L3,Tree B 10m cable (0-1000) L3,Tree B 20m cable (0-1000) L3,Tree B 2m cable (0-1000) L3,Tree B 5m cable (0-1000) L3)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

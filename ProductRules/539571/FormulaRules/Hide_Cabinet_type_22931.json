@@ -1,0 +1,11 @@
+{
+    "id": 22931,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Hide_Cabinet_type",
+    "action": "<*DISALLOWATTRIBUTES(SerC_RG_Cabinet_Type)*>",
+    "description": "CXCPQ-44728",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22970,
+    "condition": "[EQ](<*VALUE(Combiner_Panels)*>,)",
+    "name": "Default_Combiner_Panels",
+    "action": "<*SELECTVALUE(Combiner_Panels:None)*>",
+    "description": "CXCPQ-38724",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

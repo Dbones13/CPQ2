@@ -1,0 +1,6 @@
+[IF]([EQ](<*VALUE(SC_QCS_Site_to_Cloud_Method)*>,Edge Device Virtual Machine)){[IF]([IN](<*VALUE(SC_QCS_Number of Machines)*>,1,2,3)){<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:1)*>}{}[ENDIF]
+[IF]([IN](<*VALUE(SC_QCS_Number of Machines)*>,4,5,6)){<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:2)*>}{}[ENDIF]
+[IF]([IN](<*VALUE(SC_QCS_Number of Machines)*>,7,8)){<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:3)*>}{}[ENDIF]
+}{<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:0)*>}[ENDIF]
+[IF]([IN](<*VALUE(SC_ScopeRemoval)*>,QCS 4.0|)){<*ASSIGNVALUE(SC_Product_Status:1)*>}{<*ASSIGNVALUE(SC_Product_Status:0)*>}[ENDIF]
+[IF]([IN](<*VALUE(SC_ScopeRemoval)*>,QCS 4.0|)){<*SELECTVALUE(SC_QCS_Number of Machines:0)*>}{0}[ENDIF]

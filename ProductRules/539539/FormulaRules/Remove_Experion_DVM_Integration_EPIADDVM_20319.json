@@ -1,0 +1,11 @@
+{
+    "id": 20319,
+    "condition": "[EQ](<*VALUE(Experion DVM Integration)*>,No)",
+    "name": "Remove_Experion DVM Integration_EP-IADDVM",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-IADDVM)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

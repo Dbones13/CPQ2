@@ -1,0 +1,11 @@
+{
+    "id": 12334,
+    "condition": "<*IFANYVALUE(LCM_MultiYear_Project:No)*>",
+    "name": "Disallow LCM_Multiyear_Selection",
+    "action": "<*DISALLOWATTRIBUTES(LCM_Multiyear_Selection)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/03/24",
+    "modifiedBy": "Pushpita Guru"
+}

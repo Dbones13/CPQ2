@@ -1,0 +1,11 @@
+{
+    "id": 13799,
+    "condition": "[AND]([NEQ](<*VALUE(Virtualization_Ges_Location)*>,None),[NEQ](<*VALUE(Virtualization_Ges_Location)*>,))",
+    "name": "Show on GES Location",
+    "action": "<*ALLOWATTRIBUTES(Virtualization_Labor_GES_Perct)*> <*CTX( Container(Virtualization_Labor_Deliverable).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(Virtualization_Labor_Deliverable).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n\n<*ALLOWATTRIBUTES(Virtualization_Labor_GES_Additonal_Perct)*> <*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

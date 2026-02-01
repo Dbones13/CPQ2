@@ -1,0 +1,11 @@
+{
+    "id": 14214,
+    "condition": "[EQ](<*VALUE(Enterprise_flag_check)*>,True)",
+    "name": "Script_run",
+    "action": "<* ExecuteScript(PS_SerC_CG_Name_flow_to_child) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

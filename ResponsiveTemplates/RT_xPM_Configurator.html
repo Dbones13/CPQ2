@@ -1,0 +1,477 @@
+<!-- RT_xPM_Configurator -->
+<style type="text/css">
+.popover img{
+max-width: 150%;
+}
+</style>
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="xpm-migration-scenario" onclick="toggleConfigSection(event, '#xpm-migration-scenario')"> 
+		<label class="onlytext">xPM Migration Scenario</label>
+          <a id="xpm-migration-scenario-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		  <!-- /ko -->
+
+  <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="xpm-migration-scenario" onclick="toggleConfigSection(event, '#xpm-migration-scenario')"> 
+		<label class="onlytext">xPM Migration Scenario</label>
+        <!--   <a id="xpm-migration-scenario-href" href="#" class="swagger-toggle">&#xe066;</a> -->
+        </div>
+		  <!-- /ko -->
+
+        <div id="xpm-migration-scenario-content" class=" col-md-12 clear-padding">
+          
+             <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Select_the_migration_scenario") -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+              <!-- ko template: { name: $root.getAttributeTemplate } -->
+              <!-- /ko -->
+            </div>
+            <!-- /ko --> 
+        </div>
+     
+ <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="xpm-migration-questions" onclick="toggleConfigSection(event, '#xpm-migration-questions')">
+         <label class="onlytext">xPM Migration - General Questions</label>
+          <a id="xpm-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		<!-- /ko --> 
+ <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="xpm-migration-questions" onclick="toggleConfigSection(event, '#xpm-migration-questions')">
+         <label class="onlytext">xPM Migration - General Questions</label>
+          <!-- <a id="xpm-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a> -->
+        </div>
+		<!-- /ko --> 
+        <div id="xpm-migration-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Migration_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      
+ <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="xpm-migration-configurations" onclick="toggleConfigSection(event, '#xpm-migration-configurations')">
+         <label class="onlytext">xPM Migration - Configurations</label>
+          <a id="xpm-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		            <!-- /ko -->
+      
+ <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="xpm-migration-configurations" onclick="toggleConfigSection(event, '#xpm-migration-configurations')">
+         <label class="onlytext">xPM Migration - Configurations</label>
+          <!-- <a id="xpm-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a> -->
+        </div>
+		            <!-- /ko -->
+
+        <div id="xpm-migration-configurations-content" class=" col-md-12 clear-padding">
+          <div class="table-overflow cpq-scroll">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Migration_Config_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_xpmConfigurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <!-- ko ifnot: ((cpq.models.configurator.actionModule.responderModule.name() === 'EHPM/EHPMX/ C300PM') && localStorage.getItem("checkR2Q") ==='Yes' )-->
+          <div class="table-overflow cpq-scroll">
+            <div class="row col-xs-12 config_row clear-padding"><label class="onlytext">Asset DB</label></div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Config_Asset_DB_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_AssetDB"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <!-- /ko -->         
+        </div>
+      
+ <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="enb-migration-questions" onclick="toggleConfigSection(event, '#enb-migration-questions')">
+          <label class="onlytext">ENB Migration - General Questions</label>
+          <a id="enb-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		 <!-- /ko -->  
+ <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="enb-migration-questions" onclick="toggleConfigSection(event, '#enb-migration-questions')">
+          <label class="onlytext">ENB Migration - General Questions</label>
+          <!-- <a id="enb-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a> -->
+        </div>
+		 <!-- /ko -->  
+        <div id="enb-migration-questions-content" class=" col-md-12 clear-padding">
+		  <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_NIMsconf" ,"xPM_DNCFLPCN", "xPM_NUMDNCF") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+        </div>
+      
+  <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#enb-migration-configurations')">
+          <label class="onlytext">ENB Migration - Configurations</label>
+          <a id="enb-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		<!-- /ko -->
+  <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#enb-migration-configurations')">
+          <label class="onlytext">ENB Migration - Configurations</label>
+         <!--  <a id="enb-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a> -->
+        </div>
+		<!-- /ko -->
+        <div id="enb-migration-configurations-content" class=" col-md-12 clear-padding">
+          <div class="table-overflow cpq-scroll">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ENB_Migration_Config_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_Configurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <!-- ko ifnot: ((cpq.models.configurator.actionModule.responderModule.name() === 'EHPM/EHPMX/ C300PM') && localStorage.getItem("checkR2Q") ==='Yes' )-->
+          <div class="col-xs-12 col-sm-12">
+            <div class="row col-xs-12 config_row clear-padding"><label class="onlytext">Asset DB</label></div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "ENB_Config_Asset_DB_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_AssetDB"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <!-- /ko -->
+        </div>
+      
+   <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-network-upgrade')">
+          <label class="onlytext">Network Upgrade</label>
+          <a id="xpm-network-upgrade-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		<!-- /ko -->
+   <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-network-upgrade')">
+          <label class="onlytext">Network Upgrade</label>
+          <!-- <a id="xpm-network-upgrade-href" href="#" class="swagger-toggle">&#xe066;</a> -->
+        </div>
+		<!-- /ko -->
+        <div id="xpm-network-upgrade-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Customer_requires_Fiber_Communication" ,"xPM_Distance_of_Fiber_Optic_Extenders", "ATT_QRPCF9IOTA", "ATT_QARPCF9IOTA", "ATT_QFTENK") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+        </div>
+      
+ 
+	<!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-services')">
+          <label class="onlytext">Services</label>
+          <a id="xpm-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+	<!-- /ko -->
+	<!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-services')">
+          <label class="onlytext">Services</label>
+          <!-- <a id="xpm-services-href" href="#" class="swagger-toggle">&#xe066;</a> -->
+        </div>
+	<!-- /ko -->
+
+        <div id="xpm-services-content" class=" col-md-12 clear-padding">
+		  <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Which_documentation_is_required" ,"xPM_Factory_Acceptance_Test_Required", "MSID_Will_Honeywell_perform_equipment_installation") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row col-sm-12 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>          
+        </div>
+      
+</div>
+ <!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-migration-scenario">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-migration-scenario')">
+          <span>xPM Migration Scenario</span>
+          <a id="xpm-migration-scenario-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-migration-scenario-content">
+          <div class="col-xs-12 col-sm-7">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Migration_Scenario_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-migration-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-migration-questions')">
+          <span>xPM Migration - General Questions</span>
+          <a id="xpm-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-migration-questions-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Migration_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-migration-configurations">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-migration-configurations')">
+          <span>xPM Migration - Configurations</span>
+          <a id="xpm-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-migration-configurations-content">
+          <div class="table-overflow cpq-scroll">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Migration_Config_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_xpmConfigurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="table-overflow cpq-scroll">
+            <div class="row col-xs-12 swagger-header">Asset DB</div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Config_Asset_DB_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_AssetDB"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="enb-migration-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#enb-migration-questions')">
+          <span>ENB Migration - General Questions</span>
+          <a id="enb-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="enb-migration-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ENB_Migration_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="enb-migration-configurations">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#enb-migration-configurations')">
+          <span>ENB Migration - Configurations</span>
+          <a id="enb-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="enb-migration-configurations-content">
+          <div class="table-overflow cpq-scroll">
+            <!-- ko foreach: attributes.filterByProperty('name' , "ENB_Migration_Config_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_Configurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="row col-xs-12 swagger-header">Asset DB</div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "ENB_Config_Asset_DB_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_AssetDB"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-network-upgrade">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-network-upgrade')">
+          <span>Network Upgrade</span>
+          <a id="xpm-network-upgrade-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-network-upgrade-content">
+          <div class="col-xs-12 col-sm-8">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Network_Upgrade_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-services">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-services')">
+          <span>Services</span>
+          <a id="xpm-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-services-content">
+		  <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Which_documentation_is_required") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>          
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_Services_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- /ko -->
+<script type="text/html" id="ContainerTemplate_xpmConfigData">
+  <div class="config-container cpq-scroll col-xs-2 mx-0 p-0" style="min-width:300px;">
+        <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': $data.label, id: 'containerTable_' + $data.stdAttrCode  + '_' + ($data.columnId+1)  }">
+            <!-- ko foreach: $data.container.rows.filter((data) => {return data.rowIndex === $data.columnId}) -->
+            <tr class="fix-height">
+                <td class="col-xs-3">
+                    <p data-bind="text: 'Config #' + ($parent.columnId+1)" ></p>
+                </td>
+            </tr>
+            <tbody>
+            <!-- ko foreach: values -->
+            <tr>
+                <td data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                    <!-- ko if:headerLabel().startsWith('Number of Red EHPM Exp connected w/o config license') || headerLabel().startsWith('Number of Red EHPM Non-Exp connected') || headerLabel().startsWith("How many EHPMX") || headerLabel().startsWith("How many Controller") -->
+                        <!-- ko if: $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Non-redundant EHPM to C300PM' || $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Redundant EHPM to C300PM' || $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Non-redundant EHPM to EHPMX' || $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Redundant EHPM to EHPMX' -->
+                            <!-- ko template : { name : template , data : $data } -->
+                            <!-- /ko -->
+                        <!-- /ko -->
+                        <!-- ko ifnot: $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Non-redundant EHPM to C300PM' || $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Redundant EHPM to C300PM' || $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Non-redundant EHPM to EHPMX' || $parents[0].values.filterByProperty('columnId', 3)()[0].value() === 'Redundant EHPM to EHPMX' -->
+                            <!-- ko template : { name : 'ContainerLabelTemplate' , data : $data } -->
+                            <!-- /ko -->
+                        <!-- /ko -->
+                    <!-- /ko -->
+                  <!-- ko ifnot: headerLabel().startsWith('Number of Red EHPM Exp connected w/o config license') || 
+								 	headerLabel().startsWith('Number of Red EHPM Non-Exp connected') || headerLabel().startsWith('How many EHPMX') || headerLabel().startsWith("How many Controller") -->
+                      <!-- ko template : { name : template , data : $data } -->
+                      <!-- /ko -->
+                  <!-- /ko -->
+                </td>
+             </tr>
+            <!-- /ko -->
+            </tbody>
+            <!-- /ko -->
+        </table>
+  </div>
+</script>
+
+<script type="text/html" id="ContainerTemplate_xpmConfigurations">
+  <div class="table-overflow cpq-scroll">
+    <div class="config-container cpq-scroll col-xs-5 mx-0 p-0">
+      <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' +stdAttrCode()  + '_0'  }">
+        <tr class="fix-height">
+          <td class="col-xs-3">&nbsp;</td>
+        </tr>
+        <tbody>
+          <!-- ko foreach : container.columns -->
+          <tr>
+            <td>
+			<!-- ko ifnot: ["Quantity of HLAI that are required to be replaced","Quantity of AO16 that are required to be replaced","Quantity of DI/DI24  that are required to be replaced","Quantity of DO16 that are required to be replaced","Quantity of DO32 that are required to be replaced"].includes(headerLabel) -->
+              <p data-bind="text:headerLabel" style="display:inline-block"></p>
+              <a href="#" class="sap-icon" tabindex='-1' data-bind="visible: $parent.container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId) , tooltip: { trigger: 'focus', title: $parent.container.properties().find((elem) => elem.name !== '' && elem.name.split('|')[1] == columnId)?.value, placement: 'top' }">
+              <span>&#xe289;</span>
+              </a>
+			  <!-- /ko -->
+			  <!-- ko if: ["Quantity of HLAI that are required to be replaced","Quantity of AO16 that are required to be replaced","Quantity of DI/DI24  that are required to be replaced","Quantity of DO16 that are required to be replaced","Quantity of DO32 that are required to be replaced"].includes(headerLabel) -->
+			  <p data-bind="text:headerLabel" style="display:inline-block"></p>
+              <a href="#" class="sap-icon" data-bind="popover: { templateId: 'tooltipimage', autoClose: true, container: 'body', placement: 'top'}" class="autoClosePopover" data-original-title="">
+              <span>&#xe289;</span>
+				</a>
+			  <!-- /ko -->
+           </td>
+           </tr>
+          <!-- /ko -->
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;overflow-x:scroll;">
+    <!-- ko foreach: new Array(container.totalNumberOfRows()) -->
+      <!--ko let: {dynamicData: {container: $parent.container, columnId: $index(), id: $parent.id, isEnabled: $parent.isEnabled, label: $parent.label, stdAttrCode: $parent.stdAttrCode()} }-->
+        <!-- ko template : { name : "ContainerTemplate_xpmConfigData" , data : dynamicData } -->
+        <!-- /ko -->
+      <!-- /ko -->
+    <!-- /ko -->
+    </div>
+  </div>
+</script>
+<script type="text/html" id="tooltipimage">
+    <img src = "https://honeywellinternational-tst.cpq.cloud.sap/mt/HONEYWELLINTERNATIONAL_TST/Additionalfiles/icontxt1.png"/>
+</script>

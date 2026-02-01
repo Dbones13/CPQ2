@@ -1,0 +1,11 @@
+{
+    "id": 23092,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_C IO_RG MS).Rows.GetCount )*>,0),[OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>),[NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Load_I/O Count",
+    "action": "<*CTX( Container(C300_C IO_RG MS).LoadKeys(IO_Type).Load(SELECT IO_Type FROM FIM_FF_IO WHERE Container_Name = 'C300_C IO_RG MS') )*>",
+    "description": "38254",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

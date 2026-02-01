@@ -1,0 +1,39 @@
+<script type="text/html" id="MultilineTextBoxTemplate">
+    <!-- ko template: { name: 'LabelTemplate' } -->
+    <!-- /ko -->
+    <div class="fiori3-input-group multiline-textbox">
+        <textarea data-bind="
+                  validateAttribute: userInput,
+                  value: userInput,
+                  attr: { rows: mlr, cols: mlc, id: stdAttrCode(), name: name, 'aria-label': name, required: required },
+                  enable: isEnabled,
+                  event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                  hasFocus: window.lastActiveElementId == $element.id,
+                  css: { 'validation-error':(userInput.isValid && !userInput.isValid()) || hasConflict(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') }"
+                  class="form-control"></textarea>
+    </div>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+</script>
+<script type="text/html" id="CBM_MultilineTextBoxTemplate">
+	<td class="col-xs-6">
+    <!-- ko template: { name: 'LabelTemplate' } -->
+    <!-- /ko -->
+    </td>
+    <td class="col-xs-6">
+    <div class="fiori3-input-group multiline-textbox">
+        <textarea data-bind="
+                  validateAttribute: userInput,
+                  value: userInput,
+                  attr: { rows: mlr, cols: mlc, id: stdAttrCode(), name: name, 'aria-label': name, required: required },
+                  enable: isEnabled,
+                  event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                  hasFocus: window.lastActiveElementId == $element.id,
+                  css: { 'validation-error':(userInput.isValid && !userInput.isValid()) || hasConflict(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') }"
+                  class="form-control"></textarea>
+    </div>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+    </td>
+</script>
+

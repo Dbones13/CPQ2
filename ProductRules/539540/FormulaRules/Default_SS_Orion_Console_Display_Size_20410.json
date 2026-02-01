@@ -1,0 +1,11 @@
+{
+    "id": 20410,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Display_Size)*>,)",
+    "name": "Default_SS_Orion_Console_Display_Size",
+    "action": "<*SELECTVALUE(SS_Orion_Console_Display_Size:55 inch NTS)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

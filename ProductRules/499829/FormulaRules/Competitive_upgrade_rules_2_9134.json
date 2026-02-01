@@ -1,0 +1,11 @@
+{
+    "id": 9134,
+    "condition": "[NEQ](<*VALUE(Trace_Software_Order_Type)*>,Competitive Upgrade)",
+    "name": "Competitive upgrade rules 2",
+    "action": "<*CTX( Container(Trace_Software_License_Configuration_transpose).Column(Trace_Software_Years_of_Support).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26229,
+    "condition": "[EQ](<*VALUE(Orion Console Display Size)*>,)",
+    "name": "Default Orion Console Display Size",
+    "action": "<*SELECTVALUE(Orion Console Display Size:55 inch NTS)*>",
+    "description": "CXCPQ-34905\nCXDEV-8345",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

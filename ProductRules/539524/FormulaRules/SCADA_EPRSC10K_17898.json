@@ -1,0 +1,11 @@
+{
+    "id": 17898,
+    "condition": "[AND]([GT](<*VALUE(Scada_conatiner_sum)*>,9999),[EQ](<*VALUE(Scada_SCADA_Server_Redundancy)*>,Yes))",
+    "name": "SCADA_EP-RSC10K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-RSC10K)*><*SETATVQTY(SCADA_BOM_Items:EP-RSC10K, <*eval(Int(Fix(<*VALUE(Scada_conatiner_sum)*>/10000)))*>)*><* DoResetAtt *>",
+    "description": "Add EP-RSC10K",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

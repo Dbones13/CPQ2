@@ -1,0 +1,11 @@
+{
+    "id": 17870,
+    "condition": "[EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(1).Column(Devices).Get )*>,No)",
+    "name": "SCADA_EP-IGEAPI_NO",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-IGEAPI)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22617,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Liquid MeterSuite C300 Test Procedures",
+    "action": "<*ASSIGNVALUE(Liquid MeterSuite C300 Test Procedures:<* Eval(<*VALUE(Liquid MeterSuite C300 Quantity Factor)*>*4+(<*VALUE(Liquid MeterSuite C300 Quantity Factor)*>*2*[IF](<*ISSELECTED(LMS_SAT Procedure Included in Scope.Yes)*>){1}{0}[ENDIF]))*>)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

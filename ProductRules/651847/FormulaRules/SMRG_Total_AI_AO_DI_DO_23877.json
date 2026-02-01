@@ -1,0 +1,11 @@
+{
+    "id": 23877,
+    "condition": "1",
+    "name": "SMRG_Total_AI_AO_DI_DO",
+    "action": "<*ASSIGNVALUE(SMRG_Total_AI_AO_DI_DO:<* Eval(0<*VALUE(Labor_parameter_ai)*>+0<*VALUE(Labor_parameter_ao)*>+0<*VALUE(Labor_parameter_di)*>+0<*VALUE(Labor_parameter_do)*>+ 0<*CTX( Container(SM_RG_DI_RLY_NMR_Cont).Sum(SM_RG_DI_NMR) )*>+ 0<*CTX( Container(SM_RG_DO_RLY_NMR_Cont).Sum(SM_RG_DO_NMR) )*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

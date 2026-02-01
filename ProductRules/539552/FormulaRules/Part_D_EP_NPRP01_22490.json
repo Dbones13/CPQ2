@@ -1,0 +1,11 @@
+{
+    "id": 22490,
+    "condition": "[EQ](<*VALUE(ESDC_IEC_Network_Drivers)*>,0)",
+    "name": "Part_D_EP_NPRP01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-NPRP01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

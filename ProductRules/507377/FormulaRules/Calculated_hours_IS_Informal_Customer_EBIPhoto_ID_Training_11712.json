@@ -1,0 +1,11 @@
+{
+    "id": 11712,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS Informal Customer EBI/Photo ID Training",
+    "action": "<*ASSIGNVALUE(IS Informal Customer EIS (EBI)/Photo ID Training:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){[IF](<*ISSELECTED(IS_Informal_Cust_EIS_(EBI)/Photo_ID_Training_Req.Yes)*>){<* Eval(8*<*VALUE(IS_No_of_EIS_(EBI)/Photo_ID_Training_Session)*>) *>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){[IF](<*ISSELECTED(IS_Informal_Cust_EIS_(EBI)/Photo_ID_Training_Req.Yes)*>){<* Eval(8*<*VALUE(IS_No_of_EIS_(EBI)/Photo_ID_Training_Session)*>) *>}{0}[ENDIF]}{[IF](<*ISSELECTED(IS_Informal_Cust_EIS_(EBI)/Photo_ID_Training_Req.Yes)*>){<* Eval(8*<*VALUE(IS_No_of_EIS_(EBI)/Photo_ID_Training_Session)*>) *>}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25838,
+    "condition": "[EQ](<*VALUE(Multi_WindowSupportFlex_Server)*>,)",
+    "name": "Default_Desk_Mount_MWSFS",
+    "action": "<*SELECTVALUE(Multi_WindowSupportFlex_Server:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

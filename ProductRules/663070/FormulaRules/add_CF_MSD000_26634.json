@@ -1,0 +1,11 @@
+{
+    "id": 26634,
+    "condition": "1",
+    "name": "add_CF_MSD000",
+    "action": "<* DoNotResetAtt *>\n<*SELECTVALUES(Exp_Ent_Grp_Part_Summary:CF-MSD000)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:CF-MSD000, 2)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

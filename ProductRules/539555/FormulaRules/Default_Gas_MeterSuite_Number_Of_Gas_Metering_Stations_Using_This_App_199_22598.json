@@ -1,0 +1,11 @@
+{
+    "id": 22598,
+    "condition": "[EQ](<*VALUE(Gas MeterSuite Number Of Gas Metering Stations Using This App (1-99))*>,)",
+    "name": "Default Gas MeterSuite Number Of Gas Metering Stations Using This App (1-99)",
+    "action": "<*ASSIGNVALUE(Gas MeterSuite Number Of Gas Metering Stations Using This App (1-99):1)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

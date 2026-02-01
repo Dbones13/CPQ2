@@ -1,0 +1,11 @@
+{
+    "id": 13348,
+    "condition": "1",
+    "name": "labor_parameter_HMI_SZ",
+    "action": "<*ASSIGNVALUE(labor_parameter_HMI_SZ:[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,50)){0.6}{[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,200)){1}{2}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-39013\nIf (sd+md+cd+vcd+rd) <= 50, SZ = 0.6,\nelse if > 50 and <= 200, SZ = 1\nelse SZ = 2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

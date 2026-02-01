@@ -1,0 +1,11 @@
+{
+    "id": 18548,
+    "condition": "[EQ](<*VALUE(ES_Display_Size_Mobile_Server)*>,)",
+    "name": "Default_Display_Size_Mobile_Server",
+    "action": "<*SELECTVALUE(ES_Display_Size_Mobile_Server:24 inch NTS DELL)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

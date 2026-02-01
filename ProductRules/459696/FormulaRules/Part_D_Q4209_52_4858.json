@@ -1,0 +1,11 @@
+{
+    "id": 4858,
+    "condition": "[OR]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture),[NEQ](<*VALUE(MX_SE_Sheet_Temperature_Sensor)*>,Yes))",
+    "name": "Part_D_Q4209_52",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q4209-52)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

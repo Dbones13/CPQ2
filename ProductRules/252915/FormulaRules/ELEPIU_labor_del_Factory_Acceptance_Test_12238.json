@@ -1,0 +1,11 @@
+{
+    "id": 12238,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "ELEPIU_labor_del_Factory_Acceptance_Test",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_Factory_Acceptance_Test:<* Eval([IF]([EQ](<*VALUE(ELEPIU_FAT required?)*>,Yes)){<* Eval(8+4*<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>) *>}{0}[ENDIF]) *>)*>",
+    "description": "CXCPQ-60193",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

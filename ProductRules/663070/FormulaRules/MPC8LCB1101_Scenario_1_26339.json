@@ -1,0 +1,11 @@
+{
+    "id": 26339,
+    "condition": "[AND](<*ISSELECTED(Cabinet Doors.Reverse Front & Rear)*>,[EQ](<*VALUE(Cabinet Depth)*>,0.8M),[EQ](<*VALUE(CE_Site_Voltage)*>,120V),<*ISSELECTED(CE_Site_Frequency.60Hz)*>,[GT](<*VALUE(exp_ent_cab_qnt)*>,0))",
+    "name": "MP-C8LCB1-101 Scenario 1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-101)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-101, <*VALUE(exp_ent_cab_qnt)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37826",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

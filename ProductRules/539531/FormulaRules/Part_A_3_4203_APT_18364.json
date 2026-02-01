@@ -1,0 +1,11 @@
+{
+    "id": 18364,
+    "condition": "[EQ](<*VALUE(MXP_Sx15_Aperture)*>,Yes)",
+    "name": "Part_A_3_4203_APT",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-4203-APT)*><*SETATVQTY(MXP_SE_Bom_Parts:3-4203-APT,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

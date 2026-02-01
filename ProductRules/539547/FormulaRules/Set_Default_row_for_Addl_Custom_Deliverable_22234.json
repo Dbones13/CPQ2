@@ -1,0 +1,11 @@
+{
+    "id": 22234,
+    "condition": "[EQ](<*CTX( Container(SCADA_Additional_Custom_Deliverables_Container).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Addl Custom Deliverable",
+    "action": "<*CTX( Container(SCADA_Additional_Custom_Deliverables_Container).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

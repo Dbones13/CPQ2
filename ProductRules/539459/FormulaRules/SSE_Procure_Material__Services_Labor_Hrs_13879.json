@@ -1,0 +1,11 @@
+{
+    "id": 13879,
+    "condition": "1",
+    "name": "SSE Procure Material & Services Labor Hrs",
+    "action": "<*ASSIGNVALUE(SSE Procure Material & Services Labor Hrs:<* Eval( ( <*VALUE(Labor_parameter_Is)*>+ 0.1 * (<*VALUE(Labor_parameter_mcab)*> ) + 2 * (<*VALUE(Labor_parameter_mcab)*>) / (<*VALUE(Labor_parameter_mcab)*>+ 1) + 2 * <*VALUE(Labor_parameter_rg)*>+ 0.25 * <*VALUE(Labor_parameter_Stn)*>) + ( <*VALUE(Labor_parameter_Is)*> *4 + <*VALUE(Labor_parameter_mcab)*> +  5 * <*VALUE(Labor_parameter_mcab)*>/ (<*VALUE(Labor_parameter_mcab)*>+ 1)  + 2 * <*VALUE(Labor_parameter_rg)*> + 0.25 * <*VALUE(Labor_parameter_Stn)*>)) *>)*>",
+    "description": "BOM Hrs = ( is + 0.1 * (mcab ) + 2 * (mcab ) / (mcab + 1) + 2 * rg  + 0.25 * Stn)\n\nOPR Hrs = ( is*4 + mcab +  5 * mcab / (mcab + 1)  + 2 * rg + 0.25 * Stn)",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

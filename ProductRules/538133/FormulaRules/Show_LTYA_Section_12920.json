@@ -1,0 +1,11 @@
+{
+    "id": 12920,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_P1P2_PartsUsageMethod)*>,Last 3 Year Average))",
+    "name": "Show_LTYA_Section",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_04_close,ATTCON_04_open,Header_04_close,Header_04_open,SC_P1P2_LTYA_CY_FinalListPrice,SC_P1P2_LTYA_PY_ListPrice,SC_P1P2_LTYA_PY1_ListPrice,SC_P1P2_LTYA_PY2_ListPrice,SC_P1P2_LTYA_ScopeChange,SC_P1P2_LTYA_AutoUpdate_Editable_Ext)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

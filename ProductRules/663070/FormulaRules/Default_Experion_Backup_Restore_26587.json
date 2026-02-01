@@ -1,0 +1,11 @@
+{
+    "id": 26587,
+    "condition": "[EQ](<*VALUE(Experion Backup & Restore ConsoleStation Extension)*>,)",
+    "name": "Default_Experion_Backup_Restore",
+    "action": "<*SELECTVALUE(Experion Backup & Restore ConsoleStation Extension:No)*>",
+    "description": "CXCPQ-35453",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

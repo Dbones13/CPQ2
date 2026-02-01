@@ -1,0 +1,11 @@
+{
+    "id": 12093,
+    "condition": "[EQ](<*VALUE(OWS_Number of Cisco Wireless LAN Controllers)*>,)",
+    "name": "Default_Number of Cisco Wireless LAN Controllers",
+    "action": "<*ASSIGNVALUE(OWS_Number of Cisco Wireless LAN Controllers:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

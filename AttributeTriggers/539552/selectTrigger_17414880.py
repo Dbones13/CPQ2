@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(ESDC_Server_Type)*>,Redundant)){<*ASSIGNVALUE(ESDC_Red_nonRed_Check:2)*>}{<*ASSIGNVALUE(ESDC_Red_nonRed_Check:1)*>}[ENDIF]

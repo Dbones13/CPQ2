@@ -1,0 +1,11 @@
+{
+    "id": 25984,
+    "condition": "[EQ](<*VALUE(Microsoft Excel Data Exchange per User(0-100))*>,0)",
+    "name": "EP-AEEDE1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-AEEDE1)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

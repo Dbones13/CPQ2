@@ -1,0 +1,11 @@
+{
+    "id": 4702,
+    "condition": "[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame)",
+    "name": "Thermal hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_SG_Pack_Measuring_Head_Upgrade,MX_SG_Thermal_Equalizatio_System)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

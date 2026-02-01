@@ -1,0 +1,11 @@
+{
+    "id": 22098,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Workstation),[GEQ](<* Eval(<*VALUE(FDM_PVST_Planner_Blocks(0-500))*> + 31) *>,512)))",
+    "name": "Del_HC-PV0512_Station",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-PV0512)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

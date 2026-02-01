@@ -1,0 +1,11 @@
+{
+    "id": 24011,
+    "condition": "[AND]([EQ](<*VALUE(Terminal_SAP_ERP_BSI_Interface_required?)*>,Yes),[EQ](<*VALUE(Terminal_Experion_Client_PC)*>,Rack Mount))",
+    "name": "Add_MZ-PCWR01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-PCWR01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26226,
+    "condition": "[NEQ](<*VALUE(Experion Backup Restore Software Release)*>,R501)",
+    "name": "Rule_Licence_EBE_1",
+    "action": "<*ASSIGNVALUE(Licence_EBE_1:<*Eval(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:EP-BRSE05)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:EP-BRSE06)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25650,
+    "condition": "[EQ](<*VALUE(Mobile Server Nodes (0-1))*>,)",
+    "name": "Default_Mobile_Server_Nodes_(0-1)",
+    "action": "<*ASSIGNVALUE(Mobile Server Nodes (0-1):0)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

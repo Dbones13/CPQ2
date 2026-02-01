@@ -1,0 +1,11 @@
+{
+    "id": 20337,
+    "condition": "[LT](<*VALUE(SS_Flex_Station_Qty_Orion)*>,1)",
+    "name": "Disallow_Flex Station Qty - Orion",
+    "action": "<*DISALLOWATTRIBUTES(SS_Station_nodes_ LAN_Interface_Card_orion)*>\n<*DISALLOWATTRIBUTES(SS_Multi_Window_Support_Option_Required_orion)*>\n<*DISALLOWATTRIBUTES(SS_Node_Supplier_orion)*>\n<*DISALLOWATTRIBUTES(SS_Flex_Staton _Orion_Node)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

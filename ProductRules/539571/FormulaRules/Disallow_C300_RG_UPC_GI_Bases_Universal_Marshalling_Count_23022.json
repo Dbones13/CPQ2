@@ -1,0 +1,11 @@
+{
+    "id": 23022,
+    "condition": "[NOT](<*IFANYVALUE(C300_RG_UPC_FTA:G)*>)",
+    "name": "Disallow_C300_RG_UPC_GI_Bases_Universal_Marshalling_Count",
+    "action": "<*DISALLOWATTRIBUTES(C300_RG_UPC_GI_Bases_Universal_Marshalling_Count)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

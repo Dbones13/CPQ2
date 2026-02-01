@@ -1,0 +1,11 @@
+{
+    "id": 26275,
+    "condition": "[EQ](<*VALUE(Additional Server Furniture)*>,)",
+    "name": "Default_Additional_Server_Furniture",
+    "action": "<*SELECTVALUE(Additional Server Furniture:Desk)*>",
+    "description": "Additional Server Furniture",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

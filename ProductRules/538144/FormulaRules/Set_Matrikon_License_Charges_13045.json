@@ -1,0 +1,11 @@
+{
+    "id": 13045,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_ES_Matrikon_License)*>,))",
+    "name": "Set Matrikon License Charges",
+    "action": "<*ASSIGNVALUE(SC_ES_Matrikon_License:<*VALUE(Matrix License)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

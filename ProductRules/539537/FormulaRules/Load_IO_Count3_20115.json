@@ -1,0 +1,11 @@
+{
+    "id": 20115,
+    "condition": "[AND]([EQ](<*CTX( Container(C300_C IO MS3).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>)",
+    "name": "Load_I/O Count3",
+    "action": "<*CTX( Container(C300_C IO MS3).LoadKeys(IO_Type).Load(SELECT IO_Type FROM FIM_FF_IO WHERE Container_Name = 'C300_C IO MS3') )*>",
+    "description": "34205 (Second container)",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19684,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Exp HS Runtime System)*>,No),[GEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,8),[LEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,12)))",
+    "name": "Experion HS 1000 Points Adder Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HME01K)*><* DoResetAtt *>",
+    "description": "Rule inactivated as part of CXCPQ-43096",
+    "rank": "6",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

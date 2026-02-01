@@ -1,0 +1,655 @@
+<!-- Custom_ActionView --> 
+@using Webcom.API.RD.Configurator
+ 
+<span id='IsQuoteStatusPreparing' style="display: none;"></span>
+<script type="text/javascript">
+
+if(location.href == location.origin + "/Configurator.aspx")
+        {
+$.ajax({
+url: location.origin + "/api/rd/v1/Configurator/GetModel",
+
+success: function(data) {
+    $('#IsSAPProduct').text(data.IsSapConfigurableProduct);
+}})
+		};
+		
+		cpq.server.executeScript("GS_SC_GetQuoteStatus", {}, function (data) {
+                isQuoteStatusPreparing = data;
+          		if ($("#IsQuoteStatusPreparing").length > 0){
+                    $("#IsQuoteStatusPreparing").text(isQuoteStatusPreparing);
+                }
+            });
+    
+    function isQuoteStatusInPreparing(){
+        var flag;
+        flag = false;
+        if ($("#IsQuoteStatusPreparing").length > 0 && $("#IsQuoteStatusPreparing").text().length > 0){
+            let quoteStatus = $("#IsQuoteStatusPreparing").text();
+            if (quoteStatus == "true"){
+                flag = true;
+            }
+        }
+        return flag;
+    }
+
+</script>
+<div class="conftop fiori3-conftop " id="actionsContainer">
+ 
+    <div class="col-md-12 clear-padding PrimaryHighlightedPanel">
+        <div class="fiori3-actions-and-status-wrapper flex">
+			<div class="fiori3-product-status flex">
+                <h2 id="productNameHeadingId" class="product-name" data-bind="text: productName"></h2>
+                <div data-bind="visible: isVisible" class="info-label" style="display: none">
+                    <span class="btn btn-primary fiori3-btn-primary label-complete" data-bind="visible: completed, css: { 'has-incomplete-children': hasIncompleteChildren }" style="display: none">@Translation.Get("Msg.Complete")</span>
+                    <button id="incompleteIndicator" class="btn btn-primary fiori3-btn-primary label-incomplete" data-bind="visible: !completed() || hasIncompleteChildren(), click: toggleHighlightIncomplete, css: { 'show-incomplete' : !completed() && highlightIncomplete() }" style="display: none">@Translation.Get("Msg.Incomplete")</button>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div id="config_tree" style="display:none;">
+                <a href="#" role="button" data-bind="click : showConfigurationTree">
+                    <button class="btn btn-primary fiori3-btn-primary" style="font-size:11px; height:18px;margin-top:7px;border-radius:2px;" ><span data-bind="html: '@Translation.Get("ActionsView.ConfigurationTree")', tooltip: { title: 'Open Configuration Tree' }"></span></button>
+                </a>
+            </div>
+			<span id="r2q_heading" style="display:none;"></span>
+            <div class="actions-and-statuses mobile-white fiori3-configurator-actions" data-bind="visible: isVisible" style="display:none;">
+                @*left actions*@
+                <div class="fiori3-configurator-main-actions flex flex-end" data-bind="visible : isVisible" style="display: none">
+                    <!-- START :  CXCPQ-63434 Changes done by Ankit for Test_PMC Write-In POC-->
+                    	<!--ko ifnot: (($data.productName==="PMC Discount Bulk Upload") || ($data.productName === "Service Contract Products" && $data.isNestedProduct())) -->
+                    <!-- END : CXCPQ-63434 Changes done by Ankit for Test_PMC Write-In POC-->
+					<!--ko if: (cpq.models.configurator.breadcrumbsModule.breadcrumbs.filter(function(item){ return item.name=='R2Q New / Expansion Project' || item.name=='Migration_New'|| item.name=='R2Q HCI'})().length && cpq.models.configurator.attributes.filterByProperty('name' , 'R2QRequest')()[0]?.userInput()==='Yes') || (cpq.models.configurator.attributes.filterByProperty('name' , 'R2QRequest')()[0]?.userInput()==='Yes' && $data.productName==="Cyber" )-->
+						<button class="btn btn-primary fiori3-btn-primary" id="submitproduct" data-toggle="modal" data-target="#submitToSalesforce" style="display:none">Submit</button>
+						
+						<button class="btn btn-secondary fiori3-btn-secondary" id="saveproduct" onclick="submitToSalesforce('Save')" style="display:none">Save &amp; Close</button>
+						
+						<button style="display:none;" class="configAdd btn btn-primary fiori3-btn-primary" id="addAndUpdateProduct" data-bind="click: addToCart, visible : canAddToQuote() && !isInFavoriteEditMode(),enable: (($data.productName === 'Service Contract Products' && !$data.isNestedProduct() ) || ($data.productName !== 'Service Contract Products' )),css: {  'disabled':  sessionStorage.getItem('QuoteStatusID') !=='32' }"><span data-bind="text: cartExists() ? '@Translation.GetJS("Configurator.UpdateQuote")' : '@Translation.GetJS("Configurator.AddToQuote")'"></span></button>
+						
+						<!--ko if: canCancel()-->
+						
+						<button class="btn btn-secondary fiori3-btn-secondary" id="saveAndExitNestedProduct" data-bind="click: saveAndExitNestedProduct, visible: isNestedProduct(),enable: (($data.productName === 'Service Contract Products' && $data.isNestedProduct()) || ($data.productName !== 'Service Contract Products'))">
+							<span data-bind="text: '@Translation.Get("Configurator.SubProductSave")'"></span>
+						</button>
+
+						<button id="cancelAddRowProductButton" class="btn btn-tertiary fiori3-btn-tertiary" data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, click: exitNestedProduct, visible : isNestedProduct()"><span data-bind="text : '@Translation.Get("Configurator.SubProductCancel")'"></span></button>
+						
+						<span class="favorites-icons r2q_favorites-icons" style="display:none">
+							<a href="#" aria-label="@Translation.Get("Msg.ViewFavorites")" data-bind="click: showFavoritesForProduct, visible: !isConfigurableExternal() && !isInFavoriteEditMode() && isFavoritesVisible(), tooltip: { title: '@Translation.Get("Msg.ViewFavorites")', placement: 'auto top' }" class="sap-icon r2q_view_favorites">&#xe0e6;</a>
+
+							<button onclick="ViewR2QFavorites()" class="btn btn-primary fiori3-btn-primary" id="r2q_view_favorites_btn" data-toggle="modal" data-target="#ViewFavoritespopup" style="display:none">ViewFavorites</button>
+
+							<a href="#" id="addRemoveFavorites" data-bind="click: handleClickOnFavorites, visible: !isConfigurableExternal() && !isInFavoriteEditMode() && isFavoritesVisible(), css: { 'in-favorites': isAddedToFavorites(), 'no-favorite': !isAddedToFavorites() }, attr: { 'aria-label': favoritesTooltipTitle }, tooltip: { title: favoritesTooltipTitle, placement: 'auto top' }"><span class="sap-icon" data-bind="text: isAddedToFavorites() ? '&#xe065;' : '&#xe0a1;'"></span></a>
+						</span>
+					
+						<!--/ko-->
+                    <!--/ko-->
+					
+                <!--ko if: cpq.models.configurator.breadcrumbsModule.breadcrumbs.filter(function(item){ return item.name=='New / Expansion Project'||item.name=='R2Q HCI'})().length || (cpq.models.configurator.attributes.filterByProperty('name' , 'R2QRequest')()[0]?.userInput() === 'Yes' && $data.productName==="Cyber" )-->
+ 						<!--<button class="btn btn-primary fiori3-btn-primary" id="addAndUpdateProduct" data-bind="click: addToCart, visible : !isNestedProduct() &&  canAddToQuote() && !isInFavoriteEditMode(),enable: (($data.productName === 'Service Contract Products' && !$data.isNestedProduct() ) || ($data.productName !== 'Service Contract Products' )),css: {  'disabled':  sessionStorage.getItem('QuoteStatusID') !=='32' }"><span data-bind="text: cartExists() ? '@Translation.GetJS("Configurator.UpdateQuote")' : '@Translation.GetJS("Configurator.AddToQuote")'"></span></button> -->
+						
+						<button class="btn btn-primary fiori3-btn-primary" id="submitproduct" data-toggle="modal" data-target="#submitToSalesforce" style="display:none">Submit</button>
+						
+                    <!--/ko-->
+
+                    <button class="configAdd btn btn-primary fiori3-btn-primary" data-bind="click: addToCart, visible : canAddToQuote() && !isInFavoriteEditMode(),enable: (($data.productName === 'Service Contract Products' && !$data.isNestedProduct() ) || ($data.productName !== 'Service Contract Products' )),css: {  'disabled':  sessionStorage.getItem('QuoteStatusID') !=='32' }"><span data-bind="text: cartExists() ? '@Translation.GetJS("Configurator.UpdateQuote")' : '@Translation.GetJS("Configurator.AddToQuote")'"></span></button>
+                  
+					<!-- START : CXCPQ-63434 Changes done by Ankit for Test_PMC Write-In POC-->
+                    	<!--/ko-->
+                    	<!--ko if: $data.productName==="PMC Discount Bulk Upload"-->
+                    	<button class=" btn btn-primary fiori3-btn-primary" data-bind="click: addToCart, visible : canAddToQuote() && !isInFavoriteEditMode()"><span>Update Quote</span></button>
+                    	<!--/ko-->
+                    <!-- END : CXCPQ-63434 Changes done by Ankit for Test_PMC Write-In POC-->
+
+						<button class=" btn btn-primary fiori3-btn-primary cancle_cart" data-bind="click : cancelAndReturnToCart, visible : !isNestedProduct() && !isInFavoriteEditMode()">@Translation.Get("Configurator.CancelAndReturnToQuote")</button>
+                    <!-- ko ifnot: canCancel() -->
+                    <button class=" btn btn-primary fiori3-btn-primary" data-bind="click: saveAndExitNestedProduct, visible : isNestedProduct()"><span data-bind="text: '@Translation.Get("Configurator.Back")'"></span></button>
+                    <!--/ko-->
+                    <!--ko ifnot: (cpq.models.configurator.breadcrumbsModule.breadcrumbs.filter(function(item){ return item.name=='R2Q New / Expansion Project' || item.name=='Migration_New'||item.name=='R2Q HCI'})().length && cpq.models.configurator.attributes.filterByProperty('name' , 'R2QRequest')()[0]?.userInput()==='Yes') || (cpq.models.configurator.attributes.filterByProperty('name' , 'R2QRequest')()[0]?.userInput() === 'Yes' && $data.productName==="Cyber" )-->
+                    <!--ko if: canCancel()-->
+                    <button class="btn btn-secondary fiori3-btn-secondary" id="saveAndExitNestedProduct" data-bind="click: saveAndExitNestedProduct, visible : isNestedProduct(),enable: (($data.productName === 'Service Contract Products' && $data.isNestedProduct() )|| ($data.productName !== 'Service Contract Products')),css: {  'disabled':  sessionStorage.getItem('QuoteStatusID') !=='32' }"><span data-bind="text: '@Translation.Get("Configurator.SubProductSave")'"></span></button>
+                    <button id="cancelAddRowProductButton" class="btn btn-tertiary fiori3-btn-tertiary" data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, click: exitNestedProduct, visible : isNestedProduct()"><span data-bind="text : '@Translation.Get("Configurator.SubProductCancel")'"></span></button>
+                    <!--/ko-->
+                    <!--/ko-->
+                    @if (ConfiguratorController.FavoritesEnabled)
+                    {
+                        <div data-bind="visible:isInFavoriteEditMode() && !isNestedProduct() && isFavoritesVisible()">
+							<!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'  -->  
+							<button data-bind="click: saveFavorite" class=" btn btn-primary fiori3-btn-primary" onclick="R2QEditSaveFav()">@Translation.Get("Msg.SaveFavorite")</button>
+                            <button class=" btn btn-primary fiori3-btn-primary" onclick="R2QcancelFav()">@Translation.Get("Msg.CancelSavingFavorite")</button>
+							<!--/ko-->
+							<!-- ko if: localStorage.getItem("checkR2Q") !=='Yes'  -->  
+                            <button data-bind="click: saveFavorite" class=" btn btn-primary fiori3-btn-primary">@Translation.Get("Msg.SaveFavorite")</button>
+                            <button class=" btn btn-primary fiori3-btn-primary" data-bind="click: close">@Translation.Get("Msg.CancelSavingFavorite")</button>
+							<!--/ko-->
+                        </div>
+                        <span class="favorites-icons">
+                            <a href="#" aria-label="@Translation.Get("Msg.ViewFavorites")" data-bind="click: showFavoritesForProduct, visible: !isConfigurableExternal() && !isInFavoriteEditMode() && isFavoritesVisible(), tooltip: { title: '@Translation.Get("Msg.ViewFavorites")', placement: 'auto top' }" class="sap-icon">&#xe0e6;</a>
+                            <a href="#" id="addRemoveFavorites" data-bind="click: handleClickOnFavorites, visible: !isConfigurableExternal() && !isInFavoriteEditMode() && isFavoritesVisible(), css: { 'in-favorites': isAddedToFavorites(), 'no-favorite': !isAddedToFavorites() }, attr: { 'aria-label': favoritesTooltipTitle }, tooltip: { title: favoritesTooltipTitle, placement: 'auto top' }"><span class="sap-icon" data-bind="text: isAddedToFavorites() ? '&#xe065;' : '&#xe0a1;'"></span></a>
+                        </span>
+                    }
+                </div>
+
+                @*right actions*@
+                <div class="info-label total fiori3-configurator-side-actions" data-bind="visible: isVisible" style="display: none">
+
+                    <label>@Translation.Get("xsltTotal:")</label>
+                    <!-- ko if: $data.responderModule.totalPriceMissingError -->
+                    <a href="#" class="label-incomplete" data-bind="tooltip: { title: $data.responderModule.totalPriceMissingError }"><span class="sap-icon">&#xe1ec;</span></a>
+                    <!-- /ko -->
+                    <a href="#" role="button" data-bind="click : showResponder">
+                        <span data-bind="html: totalPrice, tooltip: { title: 'Open Responder' }"></span>
+                    </a>
+                    @if (ConfiguratorController.IsConfigurable || ConfiguratorController.IsParentChild)
+                    {
+                        <div class="configTreeLabel">
+                            <a href="#" role="button" data-bind="click : showConfigurationTree">
+                                <span data-bind="html: '@Translation.Get("ActionsView.ConfigurationTree")', tooltip: { title: 'Open Configuration Tree' }"></span>
+                            </a>
+                        </div>
+                    }
+                    <div>
+                        <a href="#" role="button" data-bind="click : showConflictSummary">
+                            <span data-bind="html: '@Translation.Get("ActionsView.ConflictSummary")', tooltip: { title: 'Open Conflict Summary' }"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+			<div class="fiori3-container-label flex fmecls" style="display: none">
+        <div class="col-md-1" ></div>
+             <div class="fiori3-container-label flex col-md-6" >
+              <span class="label-range-hint-wrapper flex">
+                  <label style="display: inline-block" >FME INPUT</label>
+                  <span style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+
+              </span>
+          </div>
+        <div class="fiori3-input-group">
+        <input type="text" id="fmeinput" name="fme"/>
+          <button class="btn btn-primary fiori3-btn-primary" onclick = "fmetoconfig()">Configure</button>
+          </div>
+  
+    </div>
+	
+	<div class="fiori3-container-label flex fmecls" id="smc_div" style="display: none">
+        <div class="col-md-1" ></div>
+             <div class="fiori3-container-label flex col-md-6" >
+              <span class="label-range-hint-wrapper flex">
+                  <label style="display: inline-block" >Short Model Code</label>
+                  <span style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+
+              </span>
+          </div>
+        <div class="fiori3-input-group">
+        <input type="text" id="sfmeinput" name="fme" onblur="sfme_update()" />
+          </div>
+	</div>
+	<div role="alert" class="alert fiori3-alert-danger" id="y_special_alert" style="display: none">
+        <span id="y_alert"></span>
+    </div>
+        @*error messages*@
+        <div data-bind="visible: errorMessages().length > 0" style="display: none">
+            <div role="alert" class="alert fiori3-alert-danger">
+                <div>
+                    <div>
+                        <span class="sap-icon">&#xe1ec;</span>
+                    </div>
+                    <div>
+                        <ul data-bind="foreach: errorMessages" style="display: inline-block;">
+                            <li data-bind="html: $data"></li>
+                            <!-- must use html binding because binded data might contain html (e.g. <br >/>) -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*notification failed validations message*@
+        <div data-bind="visible: failedValidations().length > 0" style="display: none">
+            <div role="status" class="alert fiori3-alert-info">
+                <div>
+                    <div>
+                        <span class="sap-icon-extended">&#xf200;</span>
+                    </div>
+                    <div>
+                        <ul data-bind="foreach: failedValidations" style="display: inline-block;">
+                            <li data-bind="html: $data"></li>
+                            <!-- must use html binding because binded data might contain html (e.g. <br >/>) -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*incomplete message*@
+        <div data-bind="visible: highlightIncomplete() && lineIncompleteMessages().length > 0" style="display: none">
+            <div role="alert" class="alert fiori3-alert-warning">
+                <div>
+                    <div>
+                        <span class="sap-icon">&#xe053;</span>
+                    </div>
+                    <div>
+                        <ul data-bind="foreach: lineIncompleteMessages" style="display: inline-block;">
+                            <li data-bind="html: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-bind="visible: isInFavoriteEditMode()">
+            <h3 style="display: none">@Translation.Get("ActionView.EditingFavorite")<span data-bind="text: favoriteName()"></span></h3>
+        </div>
+
+
+    </div>
+
+    <div style="clear: both;"></div>
+    @Html.Partial("~/Views/Favourites/AddToFavoritesDialogTemplate.cshtml")
+         
+</div>
+
+<script type="text/html" id="ResponderModalTemplate">
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="responderModalLabel">
+        <div class="modal-dialog fiori3-modal-dialog fiori3-configuration-summary-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close fiori3-icon-button" data-dismiss="modal" aria-label="@Translation.GetJS("Msg.Close")" data-bind="tooltip: { title: '@Translation.Get("Msg.Close")' }"><span class="sap-icon">&#xe03e;</span></button>
+                    <h3 id="myModalLabel">@Translation.Get("ActionsView.ConfigurationSummary")</h3>
+                </div>
+                <div class="modal-body fiori3-responder-section-container" data-bind="template : { name : responderTemplateName }">
+                </div>
+                <div class="modal-footer center">
+                    <button class="btn btn-secondary fiori3-btn-secondary" data-dismiss="modal">@Translation.Get("Msg.Close")</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="ConfigurationTreeModalTemplate">
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="configurationTreeModalLabel">
+        <div class="modal-dialog fiori3-modal-dialog fiori3-configuration-tree-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close fiori3-icon-button" data-dismiss="modal"  aria-label="@Translation.GetJS("Msg.Close")" data-bind="tooltip: { title: '@Translation.Get("Msg.Close")' }"><span class="sap-icon">&#xe03e;</span></button>
+                    <h3 id="myModalLabel">@Translation.Get("ActionsView.ConfigurationTree")</h3>
+                </div>
+                <div class="modal-body fiori3-responder-section-container" data-dismiss="modal" data-bind="template: { name: 'configurationTreeTemplate' }">
+                </div>
+                <div class="modal-footer center">
+                <br>
+                <div class="clearfix">&nbsp;</div>
+                    <button class="btn btn-secondary fiori3-btn-secondary" data-dismiss="modal">@Translation.Get("Msg.Close")</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script>
+function submitToSalesforce(action) {
+    document.getElementById("redirectMessage").style.display = "flex";
+	cpq.server.executeScript("GS_R2Q_SaveAction", { action: action }, function(response) {
+		if (action === 'Submit' && response === true) {			
+			$("#addAndUpdateProduct").click();
+			setTimeout(function() {
+				window.parent.postMessage('CloseIFrame', '*');
+			}, 3000);			
+		}
+		else{
+			$("#addAndUpdateProduct").click();
+			setTimeout(function() {
+				window.parent.postMessage('CloseIFrame', '*');
+			}, 3000);
+		}
+	});
+	sessionStorage.setItem('editquote_number','');
+	sessionStorage.setItem('editquote_num','');
+}
+</script>
+
+
+	<div class="modal fade" id="submitToSalesforce" tabindex="-1" role="dialog" aria-labelledby="submitToSalesforce">
+		<div class="modal-dialog fiori3-modal-dialog fiori3-configuration-tree-modal" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close fiori3-icon-button" data-dismiss="modal"  aria-label="@Translation.GetJS("Msg.Close")" data-bind="tooltip: { title: '@Translation.Get("Msg.Close")' }"><span class="sap-icon">&#xe03e;</span></button>
+					<h3 id="myModalLabel">SUBMIT PROJECT</h3>
+				</div>
+				<div class="modal-body fiori3-responder-section-container">
+					<div class="flex">
+						<div class="warning_icon"></div>
+						<div class="text">
+							<p>Are you sure?</p>
+							<p>You want to Submit this Project</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer center">
+				<br>
+				<div class="clearfix">&nbsp;</div>
+					 <button class="btn btn-secondary fiori3-btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary fiori3-btn-secondary submit_salesforce" id="submit_salesforcebtn" onclick="submitToSalesforce('Submit')" data-dismiss="modal" >Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	$("#submitproduct").click(function() {
+	$(this).closest("body").find(".modal-backdrop.fade.in").css("display", "none");
+	});
+</script>
+
+<div class="modal fade" id="ViewFavoritespopup" tabindex="-1" role="dialog" aria-labelledby="ViewFavoritespopup">
+        <div class="modal-dialog fiori3-modal-dialog fiori3-configuration-tree-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close fiori3-icon-button" data-dismiss="modal"  aria-label="@Translation.GetJS("Msg.Close")" data-bind="tooltip: { title: '@Translation.Get("Msg.Close")' }"><span class="sap-icon">&#xe03e;</span></button>
+                    <h3 id="myModalLabel">View Favorites</h3>
+                </div>
+                <div class="modal-body fiori3-responder-section-container">
+					<div id="breadcrumb_fav">
+						<ul class="breadcrumb_ul"></ul>
+					</div>
+                   <div id="View_Fav_popup_outer">
+						<div id="View_Fav_popup_inner"></div>
+				   </div>
+					<div id="View_popup_folder"></div>
+                </div>
+                <div class="modal-footer center">
+                <br>
+                <div class="clearfix">&nbsp;</div>
+                    <button class="btn btn-secondary fiori3-btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+	<div class="modal fade" id="deleteFavpopup" tabindex="-1" role="dialog" aria-labelledby="deleteFavpopup">
+        <div class="modal-dialog fiori3-modal-dialog fiori3-configuration-tree-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close fiori3-icon-button" data-dismiss="modal"  aria-label="@Translation.GetJS("Msg.Close")" data-bind="tooltip: { title: '@Translation.Get("Msg.Close")' }"><span class="sap-icon">&#xe03e;</span></button>
+                    <h3 id="myModalLabel">Delete favorite</h3>
+                </div>
+                <div class="modal-body fiori3-responder-section-container">
+					<p></p>
+                </div>
+                <div class="modal-footer center">
+                <br>
+                <div class="clearfix">&nbsp;</div>
+                     <button onclick="deletefavyes()" class="btn btn-primary fiori3-btn-primary" data-dismiss="modal" data-bind="visible: showYesNo, click: yesCallback, attr: { 'aria-hidden': !showYesNo }">@Translation.Get("Msg.Yes")</button>
+                    <button class="btn btn-tertiary fiori3-btn-tertiary" data-dismiss="modal" data-bind="visible: showYesNo, click: noCallback, attr: { 'aria-hidden': !showYesNo }">@Translation.Get("Msg.No")</button>
+				
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="modal fade" id="deleteFavfolder" tabindex="-1" role="dialog" aria-labelledby="deleteFavfolder">
+        <div class="modal-dialog fiori3-modal-dialog fiori3-configuration-tree-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close fiori3-icon-button" data-dismiss="modal"  aria-label="@Translation.GetJS("Msg.Close")" data-bind="tooltip: { title: '@Translation.Get("Msg.Close")' }"><span class="sap-icon">&#xe03e;</span></button>
+                    <h3 id="myModalLabel">Delete favorite folder</h3>
+                </div>
+                <div class="modal-body fiori3-responder-section-container">
+					<p></p>
+                </div>
+                <div class="modal-footer center">
+                <br>
+                <div class="clearfix">&nbsp;</div>
+                     <button onclick="deletefavfold()" class="btn btn-primary fiori3-btn-primary" data-dismiss="modal" data-bind="visible: showYesNo, click: yesCallback, attr: { 'aria-hidden': !showYesNo }">@Translation.Get("Msg.Yes")</button>
+                    <button class="btn btn-tertiary fiori3-btn-tertiary" data-dismiss="modal" data-bind="visible: showYesNo, click: noCallback, attr: { 'aria-hidden': !showYesNo }">@Translation.Get("Msg.No")</button>
+				
+                </div>
+            </div>
+        </div>
+    </div>
+	 
+	<div class="modal fade" id="updateFavfolder" tabindex="-1" role="dialog" aria-labelledby="updateFavfolder">
+        <div class="modal-dialog fiori3-modal-dialog fiori3-configuration-tree-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close fiori3-icon-button" data-dismiss="modal"  aria-label="@Translation.GetJS("Msg.Close")" data-bind="tooltip: { title: '@Translation.Get("Msg.Close")' }"><span class="sap-icon">&#xe03e;</span></button>
+                    <h3 id="myModalLabel">Edit Folder</h3>
+                </div>
+                <div class="modal-body fiori3-responder-section-container">
+					<form class="form-horizontal" role="form">
+                        <div class="form-group fiori3-input-group">
+                            <label for="favoritesFolderName" class="control-label">Name <span class="required-field">*</span></label>
+                            <input id="favoritesFolderName" class="form-control" type="text">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer center">
+                <br>
+                <div class="clearfix">&nbsp;</div>
+                     <button onclick="updatefavfold()" class="btn btn-primary fiori3-btn-primary" data-dismiss="modal" data-bind="visible: showYesNo, click: yesCallback, attr: { 'aria-hidden': !showYesNo }">@Translation.Get("Msg.Yes")</button>
+                    <button class="btn btn-tertiary fiori3-btn-tertiary" data-dismiss="modal" data-bind="visible: showYesNo, click: noCallback, attr: { 'aria-hidden': !showYesNo }">@Translation.Get("Msg.No")</button>
+				
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const favoriteLink = document.querySelector('.r2q_view_favorites');
+
+        if (favoriteLink) {
+            favoriteLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                event.stopImmediatePropagation();            
+              $("#r2q_view_favorites_btn").click();
+            });
+        }
+    });
+
+function ViewR2QFavorites(){
+	cpq.server.executeScript('GS_R2Q_FAVORITES', { 'Action': "View"}, function (data) {
+    $('ul.breadcrumb_ul').empty();
+    $('ul.breadcrumb_ul').append(data[4]);
+    document.getElementById('View_Fav_popup_inner').innerHTML = data[0];
+    $('#r2q_favorites').bootstrapTable({data: data[1], filterControl: true, sortable: true});
+    if(data[3].length != 0){
+    document.getElementById('View_popup_folder').innerHTML = data[2];
+    $('#r2q_favfolder').bootstrapTable({
+                                    data: data[3]
+                                });
+    }else{
+        document.getElementById('View_popup_folder').innerHTML = '';
+    }
+});
+}
+function deletefavyes(event){
+var favId = localStorage.getItem("favoriteId");
+    //var favouriteId = cpq.models.configurator.actionModule.favoriteId();
+        var deleteFavoriteData = function (favId) {
+        return new Promise((resolve, reject) => {
+            var requestData = {
+                favoriteId: favId
+            };
+            var queryString = Object.keys(requestData)
+                .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(requestData[key])}`)
+                .join('&');
+            $.ajax({
+                url: location.origin+'/api/rd/v1/Favorites/DeleteFavorite?'+queryString,
+                type: 'POST',
+                contentType: 'application/json', // Indicates JSON format
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken // Add the CSRF token in the header
+                },
+                success: function(response) {
+                    if (response) {
+                        resolve(response);
+                    }else{
+                        reject(new Error("Script execution failed"));
+                    }
+                },
+                error: function(xhr, status, error) {
+                    reject(new Error("Script execution failed"));
+                }
+            });
+        });
+    };
+    deleteFavoriteData(favId).then((dataset) => {
+		cpq.server.executeScript('GS_R2Q_FAVORITES', { 'Action': "Delete", favId:favId}, function (data) {
+			$('.modal').modal('hide')
+            deletefavoritemsg();
+		});
+         $('div#ViewFavoritespopup').removeClass('in');
+         if (cpq.models.configurator.actionModule.favoriteId() === parseInt(favId))
+            {
+                window.location.href = '/Configurator.aspx'
+                localStorage.removeItem("favoriteId");
+            }
+    });
+}
+function r2q_removeFolder(ele) {
+    var replacefolderId = $(ele).closest('.favorite-folders-list-container').find('.folder-name.focus-helper').attr('id');
+	 var folderId = replacefolderId.replace("catList","");
+	var custfolName = $(ele).closest('.favorite-folders-list-container').find('.folder-name.focus-helper').clone().children().remove().end().text().trim();
+	 var custfolNamemessage = `Are you sure you want to delete favorite folder ${custfolName} and all its subfolders and products? Only favorites owned by you will be deleted.`;
+    $("#deleteFavfolder .modal-body p").text(custfolNamemessage);
+	localStorage.setItem("folderId",folderId);
+}
+
+function deletefavfold(event) {
+var  favoritefoldId = localStorage.getItem("folderId");
+	 var deleteFavoriteData = function (favoritefoldId) {
+        return new Promise((resolve, reject) => {
+            var requestData = {
+                favoriteFolderId: favoritefoldId
+            };
+            var queryString = Object.keys(requestData)
+                .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(requestData[key])}`)
+                .join('&');
+            $.ajax({
+                url: location.origin+'/api/rd/v1/FavoriteFolders/DeleteFavoriteFolder?'+queryString,
+                type: 'POST',
+                contentType: 'application/json', // Indicates JSON format
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken // Add the CSRF token in the header
+                },
+                success: function(response) {
+                    if (response) {
+                        resolve(response);
+                    }else{
+                        reject(new Error("Script execution failed"));
+                    }
+                },
+                error: function(xhr, status, error) {
+                    reject(new Error("Script execution failed"));
+                }
+            });
+        });
+    };
+    deleteFavoriteData(favoritefoldId).then((dataset) => {
+		cpq.server.executeScript('GS_R2Q_FAVORITES', { 'Action': "Delete", favoritefoldId:favoritefoldId}, function (data) {
+			$('.modal').modal('hide')
+			deletefavoritemsg();
+		});
+         $('div#ViewFavoritespopup').removeClass('in');
+         window.location.href = '/Configurator.aspx'
+    });
+}
+
+
+function r2q_editFolder(ele) {
+    var replacefolderId = $(ele).closest('.favorite-folders-list-container').find('.folder-name.focus-helper').attr('id');
+	var favfolderId = replacefolderId.replace("catList","");
+	localStorage.setItem("favfolderId",favfolderId);
+}
+
+function updatefavfold(event) {
+    //event.preventDefault(); // Prevent default form submission or click behavior
+
+    var favoritefoldId = localStorage.getItem("favfolderId");
+    var favFolderName = $("#updateFavfolder .modal-body #favoritesFolderName").val();
+    if (!csrfToken) {
+        return;
+    }
+    var updateFavFoldData = function (favoritefoldId, favFolderName) {
+        return new Promise((resolve, reject) => {
+            var requestData = {
+                    id: favoritefoldId,
+                    name: favFolderName                
+            };
+            $.ajax({
+                url: location.origin + '/api/rd/v1/FavoriteFolders/UpdateFavoriteFolder',
+                type: 'POST',
+                contentType: 'application/json',
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken
+                },
+                data: JSON.stringify(requestData),
+                success: function (response) {
+                    if (response) {
+                        resolve(response);
+                    } else {
+                        reject(new Error("Script execution failed: Empty response"));
+                    }
+                },
+                error: function (xhr, status, error) {
+                    reject(new Error(`Error: ${xhr.status} ${xhr.statusText} - ${error}`));
+                }
+            });
+        });
+    };
+
+    updateFavFoldData(favoritefoldId, favFolderName)
+        .then((dataset) => {
+            cpq.server.executeScript(
+                'GS_R2Q_FAVORITES',
+                { Action: "Update", favoritefoldId: favoritefoldId, favFolderName: favFolderName },
+                function (data) {
+                    $('.modal').modal('hide');
+					cpq.models.configurator.applyConfigTemplate();
+                }
+            );
+            $('div#ViewFavoritespopup').removeClass('in');
+        })
+        .catch((error) => {
+        });
+}
+function r2q_editfav(ele) {
+sessionStorage.setItem("editquote_number", '1');										
+	var replaceeditId = ele.id;
+	$("a[id^='catList'].breadcrumb-heading-tab").length == 0 ? folderId = '' : folderId = $("a[id^='catList'].breadcrumb-heading-tab").last()[0].id.replace('catList','')
+	folderId == ''? url = "/Favorites/Favorites.aspx?" : url = "/Favorites/Favorites.aspx?FolderId=" + folderId;
+	sessionStorage.setItem('FavEditClick',replaceeditId);
+	window.location.href= url;
+	$('#ViewFavoritespopup .modal-content .modal-footer button').click();
+	$('.loaderWrap').css('display','block')
+	$('.overlay').css('display','block')	
+}
+function r2q_configFav(ele) {
+	sessionStorage.setItem("editquote_number", '1');
+	$('#ViewFavoritespopup .modal-content .modal-footer button').click();
+	$('.loaderWrap').css('display','block')
+	$('.overlay').css('display','block')
+}
+setTimeout(function() {
+    if (sessionStorage.getItem("editquote_number") == '1') {
+        var faveditquotenumber = $('.r2q_app_main .r2q_php_header .php_btnsec span').text();
+        sessionStorage.setItem("editquote_num", faveditquotenumber);
+    }
+}, 2000);
+function deletefavoritemsg(){
+	$('body').append(`
+		<div id="toast-container" class="toast-top-full-width" aria-live="polite" role="alert">
+			<div class="toast toast-success">
+				<button type="button" class="toast-close-button" role="button">x</button>
+				<div class="toast-message">Successfully Deleted!</div>
+			</div>
+		</div>
+	`);
+	setTimeout(function() {
+	$('#toast-container').fadeOut(500, function() { $(this).remove(); });
+	}, 3000);
+}
+
+</script>

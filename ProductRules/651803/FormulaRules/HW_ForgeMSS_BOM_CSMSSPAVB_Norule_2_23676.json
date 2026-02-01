@@ -1,0 +1,11 @@
+{
+    "id": 23676,
+    "condition": "[AND](<*ISSELECTED(Secure Remote Access.Yes)*>,[EQ](<*VALUE(Patching and Anti-Virus Required)*>,))",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-PAVB_No-rule 2",
+    "action": "<*SETATVQTY(Patching and Anti-Virus Required PAVB BOM:CS-MSS-PAVB-ANL,0)*><*SETATVQTY(Patching and Anti-Virus Required PAVB BOM:CS-MSS-PAVB,0)*>",
+    "description": "",
+    "rank": "40",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26547,
+    "condition": "[EQ](<*VALUE(Hardware Design Selection - EAPP Node)*>,SVR_PER_DELL_Rack_RAID5)",
+    "name": "Show_Additional_MemoryDisk_APPDesk",
+    "action": "[IF]([IN](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(Additional Memory_EAPP)*><*DISALLOWATTRIBUTES(Additional Memory_EAPP)*>}{<*ALLOWVALUES(Additional Memory_EAPP:16GB)*>}[ENDIF]",
+    "description": "APP Node in Desk Preference\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

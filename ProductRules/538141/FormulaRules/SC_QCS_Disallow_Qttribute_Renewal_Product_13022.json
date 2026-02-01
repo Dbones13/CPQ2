@@ -1,0 +1,11 @@
+{
+    "id": 13022,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "SC_QCS_Disallow_Qttribute_Renewal_Product",
+    "action": "<*DISALLOWATTRIBUTES(SC_QCS_Edge_Device_Remote_Subscription,SC_QCS_One Time Service Charges,Header_02_open,Header_02_close,SC_QCS_Site_to_Cloud_Method)*>\n<*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(List Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(Select_Number_Machines).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(Select_Number_Years).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(Subscription_Tier).SetPermission(Hidden) )*>",
+    "description": "CXCPQ-73059",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

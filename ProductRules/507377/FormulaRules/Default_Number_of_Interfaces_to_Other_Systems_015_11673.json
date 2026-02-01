@@ -1,0 +1,11 @@
+{
+    "id": 11673,
+    "condition": "[EQ](<*VALUE(IS_No_of_Interfaces_to_Other_Systems_(0-15))*>,)",
+    "name": "Default_Number of Interfaces to Other Systems (0-15)",
+    "action": "<*ASSIGNVALUE(IS_No_of_Interfaces_to_Other_Systems_(0-15):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

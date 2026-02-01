@@ -1,0 +1,11 @@
+{
+    "id": 18828,
+    "condition": "[OR]([OR]([OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,ProFlow),[NEQ](<*VALUE(MX_CD_Proflow_type)*>,Rotational)),[NEQ](<*VALUE(MX_CD_Type_of_Valve_torque)*>,Standard Torque (20Nm) Andritz Y)),[NEQ](<*VALUE(MX_CD_ProFlow_Machined_Mounting_Adapter)*>,Yes),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_9177_ST_MCA_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9177-ST-MCA-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

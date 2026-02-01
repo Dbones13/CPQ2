@@ -1,0 +1,11 @@
+{
+    "id": 22615,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Liquid MeterSuite C300 Quantity Factor",
+    "action": "<*ASSIGNVALUE(Liquid MeterSuite C300 Quantity Factor:<* Eval(<* Eval([IF]([EQ](<*VALUE(LMS_No Of Liquid Meter Streams Using This App)*>,1)){0}{<* Eval(<*VALUE(LMS_No Of Liquid Metering Stations Using This App)*>*0.4) *>}[ENDIF]+[IF]([EQ](<*VALUE(LMS_No Of Liquid Meter Streams Using This App)*>,0)){0}{<* Eval(4+(0.8*(<*VALUE(LMS_No Of Liquid Meter Streams Using This App)*>-1))) *>}[ENDIF]+[IF]([EQ](<*VALUE(LMS_Number Of Stations With a Meter Prover (0-99))*>,0)){0}{<* Eval(4+(0.8*(<*VALUE(LMS_Number Of Stations With a Meter Prover (0-99))*>-1))) *>}[ENDIF]+[IF]([EQ](<*VALUE(LMS_No Of Liquid Metering Station WithaMasterMeter)*>,0)){0}{<* Eval(4+(0.8*(<*VALUE(LMS_No Of Liquid Metering Station WithaMasterMeter)*>-1))) *>}[ENDIF]+[IF]([EQ](<*VALUE(LMS_No Of Liquid MeteringStation With a CheckMeter)*>,0)){0}{<* Eval(2+(0.4*(<*VALUE(LMS_No Of Liquid MeteringStation With a CheckMeter)*>-1))) *>}[ENDIF])*>+(0.2*<*VALUE(LMS_Number Of Density Meters per Application)*>)+(0.1*<*VALUE(LMS_Number Of Liquid Analysers For FWA (0-99))*>))*>)*>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

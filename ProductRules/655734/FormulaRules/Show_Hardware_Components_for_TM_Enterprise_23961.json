@@ -1,0 +1,11 @@
+{
+    "id": 23961,
+    "condition": "[GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0)",
+    "name": "Show_Hardware_Components_for_TM_Enterprise",
+    "action": "AllowAttributes(Terminal_Blank_Experion_Server_(ESV),Terminal_Experion_Server_(ESV)_Type,Terminal_Experion_Server_Hardware,Header_09_open,Header_09_close) *><*SETREQUIRED(Terminal_Experion_Server_(ESV)_Type,Terminal_Experion_Server_Hardware)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

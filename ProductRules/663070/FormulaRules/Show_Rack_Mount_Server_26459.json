@@ -1,0 +1,11 @@
+{
+    "id": 26459,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Experion Server Type)*>,Server TPS)),[EQ](<*VALUE(Server Mounting)*>,Cabinet))",
+    "name": "Show_Rack_Mount_Server",
+    "action": "<*ALLOWATTRIBUTES(Rack_Mount_Server,Server_NodeType,Node_Supplier_Server,TrustedPlatformModule_TPM,AdditionalHard_Disk,Optional_DVD_ServerDisk,ServerLocation_Cluster_Network_Group,Marine_Requirement_Cabinet)*>\n[IF]([IN](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(AdditionalMemory_Server Disk)*><*DISALLOWATTRIBUTES(AdditionalMemory_Server Disk)*>}{<*ALLOWATTRIBUTES(AdditionalMemory_Server Disk)*><*SETREQUIRED(AdditionalMemory_Server Disk)*>}[ENDIF]\n<*xDisallowallValuesExcept(ServerLocation_Cluster_Network_Group:<* LIST ( SELECT AttValue FROM ClusterAttValues WHERE CAST (AttValueCode AS float) <= '<*CTX( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>' ) *>)*>",
+    "description": "CXCPQ-34620",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

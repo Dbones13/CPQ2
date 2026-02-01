@@ -1,0 +1,11 @@
+{
+    "id": 22860,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Hinge_Type_Default)*>,)",
+    "name": "Default_SerC_RG_Cabinet_Hinge_Type_Default",
+    "action": "<*SELECTVALUE(SerC_RG_Cabinet_Hinge_Type_Default:130 Degree)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

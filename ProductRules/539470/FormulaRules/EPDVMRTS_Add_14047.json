@@ -1,0 +1,11 @@
+{
+    "id": 14047,
+    "condition": "[EQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "EP-DVMRTS_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Part_Summary:EP-DVMRTS)*><*SETATVQTY(DVM_Sys_Part_Summary:EP-DVMRTS, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26196,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[AND]([IN](<*VALUE(Experion Software Release)*>,R511,R510),<*ISSELECTED(Interface with TPS Required?.Yes)*>,[GT](<*VALUE(ACE Node Tower Mount Desk)*>,0)))",
+    "name": "Hardware_Design_Selection__ACE_Node_hide_SVR_PER_DELL_Rack_RAID1_XE_SVR_PER_HP_Rack_RAID5",
+    "action": "<*DISALLOWVALUES(Hardware Design Selection_ ACE_Node:SVR_PER_DELL_Rack_RAID1_XE,Hardware Design Selection_ ACE_Node:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "CXDEV-8007",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

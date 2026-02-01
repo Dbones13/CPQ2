@@ -1,0 +1,11 @@
+{
+    "id": 20233,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Public_Gateway)*>,Yes))",
+    "name": "EP-DVMPBG_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMPBG)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

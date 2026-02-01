@@ -1,0 +1,11 @@
+{
+    "id": 13841,
+    "condition": "1",
+    "name": "Test Procedure FAT SAT Calculated Hrs",
+    "action": "<*ASSIGNVALUE(SSE Internal Test FAT and SAT Procedure:<*EVAL([IF]([EQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(Implementation_Methodology).Get )*>,NonStandardBuildEstimate)){(1.1 * ( 0.007 * (<*VALUE(Labor_parameter_mcab)*> * (40 + <*VALUE(Labor_parameter_Is)*> * 10)))) + (0.25 * 1.1 * ( 0.007 * (<*VALUE(Labor_parameter_mcab)*> * (40 + <*VALUE(Labor_parameter_Is)*> * 10) )))}{((1.1*(0.007*(<*VALUE(Labor_parameter_mcab)*>*(40+<*VALUE(Labor_parameter_Is)*>*10))))+(0.25*1.1*(0.007*(<*VALUE(Labor_parameter_mcab)*>*(40+<*VALUE(Labor_parameter_Is)*>*10)))))*0.94}[ENDIF] + 0[IF]([IN](<*CTX( Container(SM_Labor_Cont).Row(1).Column(GES_Location).Get )*>,None,)){8}{8*1.1}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

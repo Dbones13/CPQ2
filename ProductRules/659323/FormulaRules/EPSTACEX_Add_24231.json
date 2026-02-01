@@ -1,0 +1,11 @@
+{
+    "id": 24231,
+    "condition": "[OR]([GT](<*VALUE(ARO_new_Console_Station_Extension_License)*>,0),[GT](<*VALUE(RESS_new_Console_Station_Extension_License)*>,0))",
+    "name": "EP-STACEX_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-STACEX)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-STACEX, <*Eval(<*VALUE(ARO_new_Console_Station_Extension_License)*>+<*VALUE(RESS_new_Console_Station_Extension_License)*>) *>.)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

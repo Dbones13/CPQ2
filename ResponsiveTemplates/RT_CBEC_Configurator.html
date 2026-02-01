@@ -1,0 +1,166 @@
+<!-- RT_CBEC_Configurator -->
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper" >
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+	<!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="cbec-migration-questions" onclick="toggleConfigSection(event, '#cbec-migration-questions')">
+            <label class="onlytext">Basic Controller/Extended Controller Migration to C300-UHIO Configuration</label>
+			<a id="cbec-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+	<!-- /ko -->
+    <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="cbec-migration-questions" onclick="toggleConfigSection(event, '#cbec-migration-questions')">
+            <label class="onlytext">Basic Controller/Extended Controller Migration to C300-UHIO Configuration</label>
+        </div>
+	<!-- /ko -->
+        <div id="cbec-migration-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CB_EC_migration_to_C300_UHIO_Configuration_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+    
+		<!-- ko ifnot: ( cpq.models.configurator.actionModule.responderModule.name() === 'CB-EC Upgrade to C300-UHIO' && localStorage.getItem("checkR2Q") ==='Yes') -->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="cbec-third-party-items" onclick="toggleConfigSection(event, '#cbec-third-party-items')">
+           <label class="onlytext">Third Party Items</label>
+        </div>
+        <div id="cbec-third-party-items-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CB_EC_Third_party_items_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+		<!-- /ko -->
+   
+	<!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+		<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="cbec-services" onclick="toggleConfigSection(event, '#cbec-services')">
+			<label class="onlytext">Services</label>
+			<a id="cbec-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+		</div>
+	<!-- /ko -->
+	<!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+		<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="cbec-services" onclick="toggleConfigSection(event, '#cbec-services')">
+			<label class="onlytext">Services</label>
+		</div>
+	<!-- /ko -->
+
+        <div id="cbec-services-content" class=" col-md-12 clear-padding">        
+          <div class="col-xs-12 col-sm-12"> 
+           <!-- ko foreach: attributes.filterByProperty('name' , "CB_EC_Is_CB/EC_interfacing_with_DHEB_on_the_system", "CB_EC_Does_the_customer_have_all_updated_ILDs", "CB_EC_Does_the_Customer_validate_ILDs_by_Honeywell", "ATT_CBECPSNEDR" , "CB_EC_Do_u_know_no.of_AI_AO_Regulatory", "ATT_CBECHGAIN", "ATT_CBECHGOAT", "ATT_CBECHGREG", "ATT_CBECHGDIN", "ATT_CBECHGDOT", "ATT_CBECHGDCP", "ATT_CBECASLOOP", "ATT_CBECOMLOOP", "ATT_CBECAUXFUN","CB_EC_IsCommonPVsharingtwoormorethantwoCB/EC", "CB_EC_Detailed_DDS_required", "CB_EC_Is_HotCutover_required", "CB_ECWillHoneywellperforminstallationactivities" , "CB_EC_Data_Gathering_required" ) -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div> 
+		</div>
+     
+</div>
+<!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <div class="row col-xs-12 swagger">
+    <div id="cbec-migration-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#cbec-migration-questions')">
+          <span>Basic Controller/Extended Controller Migration to C300-UHIO Configuration</span>
+          <a id="cbec-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="cbec-migration-questions-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CB_EC_migration_to_C300_UHIO_Configuration_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="row col-xs-12 swagger">
+    <div id="cbec-third-party-items">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#cbec-third-party-items')">
+          <span>Third Party Items</span>
+          <a id="cbec-third-party-items-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="cbec-third-party-items-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CB_EC_Third_party_items_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="cbec-services">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#cbec-services')">
+          <span>Services</span>
+          <a id="cbec-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="cbec-services-content">        
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CB_EC_Services_1_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+		</div>
+		<div id="cbec-services-content">     
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CB_EC_Services_2_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ko -->

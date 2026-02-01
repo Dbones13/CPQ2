@@ -1,0 +1,11 @@
+{
+    "id": 20052,
+    "condition": "[NOT]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>,<*ISSELECTED(SerC_GC_Profibus_Gateway_Interface.Yes)*>,[GT](<*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*>,0),[OR]([GT](<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Non_Red)*>,0),[GT](<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Red)*>,0))))",
+    "name": "Part_CC_IP0101_MarkII_Remove",
+    "action": "* DoNotResetAtt *><*RESETVALUE(Series_C_CG_Part_Summary:CC-IP0101)*><* DoResetAtt *>",
+    "description": "CXCPQ-44566",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

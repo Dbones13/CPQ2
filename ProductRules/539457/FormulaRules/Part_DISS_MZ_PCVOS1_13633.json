@@ -1,0 +1,11 @@
+{
+    "id": 13633,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[AND][NEQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes),[AND]([NEQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B),[NEQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster)),[EQ](<*VALUE(Virtualization_Windows_2022_COA_Licenses_24)*>,0))",
+    "name": "Part_DISS_MZ_PCVOS1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVOS1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

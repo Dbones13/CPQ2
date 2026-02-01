@@ -1,0 +1,11 @@
+{
+    "id": 10638,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Is_PLC_Program_backup/Pdf_report_available?)*>,))",
+    "name": "default_LSS_Is_PLC_Program_backup/Pdf_report_available?",
+    "action": "<*SELECTVALUE(LSS_Is_PLC_Program_backup/Pdf_report_available?:Existing Backup)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19647,
+    "condition": "[NOT]([AND]([EQ](<*VALUECODE(Exp HS Installation Media \u2013ESD Version only)*>,No),[EQ](<*VALUE(New_Expansion)*>,New)))",
+    "name": "Installation Media  NO reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HME520)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

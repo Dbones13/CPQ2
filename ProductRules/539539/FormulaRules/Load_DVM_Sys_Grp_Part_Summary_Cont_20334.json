@@ -1,0 +1,11 @@
+{
+    "id": 20334,
+    "condition": "<*ATTSEL(DVM_Sys_Grp_Part_Summary)*>",
+    "name": "Load DVM Sys Grp Part Summary Cont",
+    "action": "<*CTX( Container(DVM_Sys_Grp_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(DVM_Sys_Grp_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "To load the part summary container from the part summary attribute. Always should run at last (rank highest)",
+    "rank": "1001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10734,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_How_many_PMD_systems_need_to_publish_DSA_data_in_DSA_community)*>,))",
+    "name": "TPA_Default_How_many_PMD_systems_need_to_publish_DSA_data_in_DSA_community",
+    "action": "<*ASSIGNVALUE(TPA_How_many_PMD_systems_need_to_publish_DSA_data_in_DSA_community:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

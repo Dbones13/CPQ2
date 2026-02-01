@@ -1,0 +1,11 @@
+{
+    "id": 19944,
+    "condition": "[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>,<*ISSELECTED(SerC_GC_Profibus_Gateway_Interface.Yes)*>,[GT](<*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*>,0),[OR]([GT](<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Non_Red)*>,0),[GT](<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Red)*>,0)))",
+    "name": "Part_DC_TPOX01_MarkII_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Series_C_CG_Part_Summary:DC-TPOX01)*><*SETATVQTY(Series_C_CG_Part_Summary:DC-TPOX01, <* Eval((INT(((INT((<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Non_Red)*> + <*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*> - 1)/<*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*>)) + 2 - 1)/ 2)) + 2 * (INT(((INT((<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Red)*> + <*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*> - 1)/<*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*>)) + 2 - 1)/ 2))) *>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44566",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13398,
+    "condition": "1",
+    "name": "QVCS Support for Process Points system",
+    "action": "<*ASSIGNVALUE(QVCS Support for Process Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(QVCS_Support_for_Process_Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14714,
+    "condition": "[NEQ](<*VALUE(MX_AllianceView_Server)*>,AllianceView 6 user license)",
+    "name": "MX_Part_Dis_QCS_AVSL6",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:QCS-AVSL6)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

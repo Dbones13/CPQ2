@@ -1,0 +1,11 @@
+{
+    "id": 18084,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Optional_75_ft_Harness_cable_from_C_frame)*>,)",
+    "name": "MXPro_Sensor_Optional_75_ft_Harness_cable_from_C_frame",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Optional_75_ft_Harness_cable_from_C_frame:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

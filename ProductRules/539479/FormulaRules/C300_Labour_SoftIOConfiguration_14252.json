@@ -1,0 +1,11 @@
+{
+    "id": 14252,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_SoftIOConfiguration",
+    "action": "<*ASSIGNVALUE(C300_Labour_SoftIOConfiguration:<* Eval(1.1*(0<*VALUE(C300_Labour_Parameter_SIO)*>+5*0<*VALUE(Number_of_SCADA_Node_Types_for_C300)*>+0.1*0<*VALUE(Number_of_Third_Party_Soft_IO_(Serial/SCADA))*>+0.05*0<*VALUE(Number_of_Peer_CDA)*>+0.15*(0<*VALUE(Number_of_Peer_PCDI)*>+0<*VALUE(Number_of_Peer_to_Peer_Soft_IO)*>))) *>)*>\n",
+    "description": "CXCPQ-43574",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

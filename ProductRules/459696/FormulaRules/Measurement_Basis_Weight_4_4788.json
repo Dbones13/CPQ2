@@ -1,0 +1,11 @@
+{
+    "id": 4788,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-20 Compact O-Frame (Extended Head)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Basis Weight))",
+    "name": "Measurement_Basis Weight_4",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Basis Weight Msmt Msmt_Sx18 Kr85 High Ash|Basis Weight Msmt Msmt_Sx18 Kr85 Med Ash|Basis Weight Msmt Msmt_Sx18 Sr90|Basis Weight Msmt_Sx18 Kr85 Low Ash)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

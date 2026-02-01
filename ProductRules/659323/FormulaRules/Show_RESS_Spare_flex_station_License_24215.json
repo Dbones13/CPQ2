@@ -1,0 +1,11 @@
+{
+    "id": 24215,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(RESS_System_Required)*>,Yes))",
+    "name": "Show_RESS_Spare_flex_station_License",
+    "action": "<*ALLOWATTRIBUTES(RESS_Spare_flex_station_License)*><*SETREQUIRED(RESS_Spare_flex_station_License)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

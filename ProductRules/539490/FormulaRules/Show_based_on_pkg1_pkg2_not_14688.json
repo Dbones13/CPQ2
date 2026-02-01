@@ -1,0 +1,11 @@
+{
+    "id": 14688,
+    "condition": "[AND]([OR]([EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS MD),[EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS MD & CD)),[OR]([EQ](<*VALUE(MX_MD_Multivariable_Control_Packages)*>,),[EQ](<*VALUE(MX_MD_Multivariable_Control_Packages)*>,MD Multivariable Tissue Ctrl pkg (Includes 6CVs, -86, -87, -89))))",
+    "name": "Show_based_on_pkg1_pkg2_not",
+    "action": "<*ALLOWATTRIBUTES(MX_MD_Jet_to_Wire_Control)*>\n<*ALLOWATTRIBUTES(MX_MD_Dry_Stock_Flow_Control)*>\n<*ALLOWATTRIBUTES(MX_MD_Dryer_Shutdown_Control)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

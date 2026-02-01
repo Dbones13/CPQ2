@@ -1,0 +1,11 @@
+{
+    "id": 14254,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "CS_CC_hrs",
+    "action": "<*ASSIGNVALUE(CS_CC_hrs:[IF]([EQ](<*VALUE(C300_Implementation_Methodology)*>,Non-Standard Build Estimate)){<* Eval((1.05 * (0<*VALUE(Labor_Parameter_hio)*> / 300 + 0.1 * 0<*VALUE(Labor_parameter_mar)*>* 0<*VALUE(Labor_parameter_mdb)*>+ 0.5 * 0<*VALUE(Labor_parametre_sys)*> + 0.5 * 0<*VALUE(C300_Labor_parameter_A)*>))+(1.2 * (0<*VALUE(Labor_parametre_sys)*>* 8 +0<*VALUE(Labor_parameter_mar)*>* (8 + 0<*VALUE(C300_Labor_parameter_is)*>*2) )*0.9)) *>}{<* Eval((1.05 * (0<*VALUE(Labor_Parameter_hio)*> / 300 + 0.1 * 0<*VALUE(Labor_parameter_mar)*>* 0<*VALUE(Labor_parameter_mdb)*>+ 0.5 * 0<*VALUE(Labor_parametre_sys)*> + 0.5 * 0<*VALUE(C300_Labor_parameter_A)*>)*0.99)+(1.2 * (0<*VALUE(Labor_parametre_sys)*>* 8 +0<*VALUE(Labor_parameter_mar)*>* (8 + 0<*VALUE(C300_Labor_parameter_is)*>*2) )*0.9*0.94)) *>}[ENDIF])*>",
+    "description": "If im = Non-Standard Build then\n    CS Hrs = 1.05 * (hio / 300 + 0.1 * mar* mdb + 0.5 * sys + 0.5 * A)\n    CC Hrs = 1.2 * (sys * 8 +mar * (8 + is*2) )*0.9\nElse\n    CS Hrs = 1.05 * (hio / 300 + 0.1 * mar* mdb + 0.5 * sys + 0.5 * A)*0.99\n    CC Hrs = 1.2 * (sys * 8 +mar * (8 +  is*2) )*0.9*0.94",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

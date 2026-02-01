@@ -1,0 +1,11 @@
+{
+    "id": 17819,
+    "condition": "[OR]([EQ](<*CTX( Container(OPC Application Instances).Row(1).Column(Nodes).Get )*>,),[EQ](<*CTX( Container(OPC Application Instances).Row(1).Column(Nodes).Get )*>,0))",
+    "name": "SCADA_EP-OPCDA1_hide",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-OPCDA1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

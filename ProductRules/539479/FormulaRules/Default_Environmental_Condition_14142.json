@@ -1,0 +1,11 @@
+{
+    "id": 14142,
+    "condition": "[EQ](<*VALUE(Environmental_Condition)*>,)",
+    "name": "Default_Environmental_Condition",
+    "action": "<*SELECTVALUE(Environmental_Condition:Un-Determined)*>",
+    "description": "CXCPQ-37118",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

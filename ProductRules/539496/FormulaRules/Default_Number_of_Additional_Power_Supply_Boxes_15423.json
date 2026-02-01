@@ -1,0 +1,11 @@
+{
+    "id": 15423,
+    "condition": "[EQ](<*VALUE(FDA Number of Additional Power Supply Boxes)*>,)",
+    "name": "Default Number of Additional Power Supply Boxes",
+    "action": "<*ASSIGNVALUE(FDA Number of Additional Power Supply Boxes:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13230,
+    "condition": "1",
+    "name": "Preselected value",
+    "action": "[IF]([EQ](<*VALUE(CD_Actuator_For_Caltrol_or_Thermatrol_Is_feedback)*>,)){<*SELECTVALUE(CD_Actuator_For_Caltrol_or_Thermatrol_Is_feedback:No)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(CD_Actuator_For_Aquatrol_what_is_solenoid_voltage)*>,)){<*SELECTVALUE(CD_Actuator_For_Aquatrol_what_is_solenoid_voltage:24 VDC)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

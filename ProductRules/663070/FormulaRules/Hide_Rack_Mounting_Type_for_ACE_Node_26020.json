@@ -1,0 +1,11 @@
+{
+    "id": 26020,
+    "condition": "[AND]([NEQ](<*VALUE(Hardware Design Selection_ACE Node)*>,SVR_PER_DELL_Tower_RAID1),[NEQ](<*VALUE(Hardware Design Selection_ACE Node)*>,SVR_STD_DELL_Tower_RAID1))",
+    "name": "Hide_Rack_Mounting_Type_for_ACE_Node",
+    "action": "<*DISALLOWATTRIBUTES(Rack Mounting Type for_ACE Node)*>",
+    "description": "CXCPQ-45303",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

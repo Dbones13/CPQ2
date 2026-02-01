@@ -1,0 +1,11 @@
+{
+    "id": 24066,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Terminal_SAP_ERP_BSI_Interface_required?)*>,Yes),[EQ](<*VALUE(Terminal_FTE_Switch)*>,SW_L2_NRT_MOXA_12PT)))",
+    "name": "Del_SM-G512I2",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:SM-G512I2)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

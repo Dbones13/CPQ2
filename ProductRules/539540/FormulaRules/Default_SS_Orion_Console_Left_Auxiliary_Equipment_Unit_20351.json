@@ -1,0 +1,11 @@
+{
+    "id": 20351,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Left_Auxiliary_Equipment_Unit)*>,)",
+    "name": "Default_SS_Orion_Console_Left_Auxiliary_Equipment_Unit",
+    "action": "<*ASSIGNVALUE(SS_Orion_Console_Left_Auxiliary_Equipment_Unit:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

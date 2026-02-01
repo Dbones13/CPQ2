@@ -1,0 +1,11 @@
+{
+    "id": 14202,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_Internal",
+    "action": "<*ASSIGNVALUE(C300_Labour_Parameter_Internal:<* Eval((1-[IF]([GT](<*VALUE(C300_Exp_Labor_Uni_qntCG)*>,0)){1}{0}[ENDIF]*0.1)*0.12*(0<*VALUE(Labor_parametre_sys)*>*40*0.5+0<*VALUE(Labor_parameter_mar)*>*(40+0<*VALUE(C300_Labor_parameter_is)*>*10) ))*>)*>",
+    "description": "CXCPQ-43576",
+    "rank": "21",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

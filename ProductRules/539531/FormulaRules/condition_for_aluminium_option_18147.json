@@ -1,0 +1,11 @@
+{
+    "id": 18147,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_Measurement_Type)*>,Aluminium),[AND]([NEQ](<*VALUE(MXP_Scanner_Type)*>,3-4036-10),[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-4036-11)))",
+    "name": "condition_for_aluminium_option",
+    "action": "<*DISALLOWATTRIBUTES(MXPro_Sensor_Optional_50_ft_Harness_cable_from_C_frame,MXPro_Sensor_Optional_75_ft_Harness_cable_from_C_frame,MXPro_Sensor_Radiation_shield,MXPro_Sensor_Sample_paddle_with_Holder)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

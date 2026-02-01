@@ -1,0 +1,11 @@
+{
+    "id": 9123,
+    "condition": "[EQ](<*VALUE(Trace_Software_What_is_the_scope)*>,Changes to Existing License (Expansions))",
+    "name": "Show_Desired_Release_Value",
+    "action": "<*ALLOWVALUES(Trace_Software_Select_desired_Release:R150,Trace_Software_Select_desired_Release:R140)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

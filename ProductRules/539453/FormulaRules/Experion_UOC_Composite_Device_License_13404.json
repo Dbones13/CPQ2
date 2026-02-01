@@ -1,0 +1,11 @@
+{
+    "id": 13404,
+    "condition": "1",
+    "name": "Experion UOC Composite Device License",
+    "action": "<*ASSIGNVALUE(Experion UOC Composite Device License:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Experion UOC Composite Device License) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

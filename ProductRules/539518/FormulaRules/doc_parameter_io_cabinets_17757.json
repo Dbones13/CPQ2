@@ -1,0 +1,11 @@
+{
+    "id": 17757,
+    "condition": "1",
+    "name": "doc_parameter_io_cabinets",
+    "action": "<*ASSIGNVALUE(doc_parameter_io_cabinets:<*CTX ( Container(SM_RG_PartSummary_Cont).Sum(io_cabinet_qty) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

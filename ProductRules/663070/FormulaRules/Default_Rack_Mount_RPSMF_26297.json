@@ -1,0 +1,11 @@
+{
+    "id": 26297,
+    "condition": "[EQ](<*VALUE(RPS Mounting Furniture (Flex Server Cabinet))*>,)",
+    "name": "Default_Rack_Mount_RPSMF",
+    "action": "<*SELECTVALUE(RPS Mounting Furniture (Flex Server Cabinet):Desk)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

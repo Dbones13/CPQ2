@@ -1,0 +1,11 @@
+{
+    "id": 17897,
+    "condition": "[OR]([EQ](<*CTX( Container(Leak Detection System Interfaces).Row(2).Column(Devices).Get )*>,No),[EQ](<*CTX( Container(Leak Detection System Interfaces).Row(1).Column(Nodes).Get )*>,0))",
+    "name": "SCADA-EP-APLD25_No",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(SCADA_BOM_Items:EP-APLD25)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "27/11/24",
+    "modifiedBy": "Ashritha Row"
+}

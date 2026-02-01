@@ -1,0 +1,11 @@
+{
+    "id": 19997,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,C300 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,)),[EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Show_SerC_CG_PM_IO_Solution_required",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_PM_IO_Solution_required)*>",
+    "description": "CXCPQ-51941 - Requirement 7 Modified condition for CXCPQ-60004 task.",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

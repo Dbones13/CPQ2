@@ -1,0 +1,11 @@
+{
+    "id": 20251,
+    "condition": "[EQ](<*VALUE(DVM_Authorized_Recording_Playback)*>,Yes)",
+    "name": "Add_EP-DVMAPB",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMAPB)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMAPB, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45724",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

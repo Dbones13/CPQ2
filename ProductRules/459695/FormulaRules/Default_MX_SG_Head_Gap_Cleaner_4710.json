@@ -1,0 +1,11 @@
+{
+    "id": 4710,
+    "condition": "[EQ](<*VALUE(MX_SG_Head_Gap_Cleaner)*>,)",
+    "name": "Default_MX_SG_Head_Gap_Cleaner",
+    "action": "<*SELECTVALUE(MX_SG_Head_Gap_Cleaner:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

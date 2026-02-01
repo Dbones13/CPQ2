@@ -1,0 +1,11 @@
+{
+    "id": 22987,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Allow attributes foe SeriesC and Cabinet",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_AmpsValue_of_Available_Local_Power(0-999),SerC_RG_RQUP_ApprovalValue_for_Locally_Supp_Power)*>",
+    "description": "CXCPQ-38251",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

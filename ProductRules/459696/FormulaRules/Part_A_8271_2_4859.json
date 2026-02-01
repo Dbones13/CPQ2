@@ -1,0 +1,11 @@
+{
+    "id": 4859,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Caliper),[EQ](<*VALUE(MX_SE_Caliper_Cleaner_Kit)*>,Yes))",
+    "name": "Part_A_8271_2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Scanner_sensor_bom_parts:8271)*><*SETATVQTY(Scanner_sensor_bom_parts:8271,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 2560,
+    "condition": "[EQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,GES China)",
+    "name": "GES_Location_Values_China",
+    "action": "<*DISALLOWVALUES(Experion_HS_GES_Eng:HPS_GES_P350B_IN,Experion_HS_GES_Eng:HPS_GES_P350B_RO,Experion_HS_GES_Eng:HPS_GES_P350B_UZ,Experion_HS_GES_Eng:HPS_GES_P350F_IN,Experion_HS_GES_Eng:HPS_GES_P350F_RO,Experion_HS_GES_Eng:HPS_GES_P350F_UZ,Experion_HS_GES_Eng:HPS_GES_P350B_EG,Experion_HS_GES_Eng:HPS_GES_P350F_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

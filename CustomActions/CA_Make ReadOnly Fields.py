@@ -1,0 +1,8 @@
+#ScriptExecutor.ExecuteGlobal('GS_GetQuoteStatus')
+#ScriptExecutor.ExecuteGlobal('GS_Make ReadOnly Fields')
+#ScriptExecutor.ExecuteGlobal('GS_Custom Field Visibilty')
+ScriptExecutor.ExecuteGlobal('GS_HideEGAPCustomFields')
+#ScriptExecutor.ExecuteGlobal('GS_SC_QUOTE_TABLE_VIEW_CONTROL')
+#ScriptExecutor.ExecuteGlobal('GS_SC_Custom_Field_Visibility')
+ScriptExecutor.Execute('GS_CFVisibility_QUOTATION')
+Quote.RefreshActions()

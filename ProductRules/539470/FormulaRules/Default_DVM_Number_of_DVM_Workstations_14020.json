@@ -1,0 +1,11 @@
+{
+    "id": 14020,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_DVM_Workstations)*>,)",
+    "name": "Default_DVM_Number_of_DVM_Workstations",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_DVM_Workstations:4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

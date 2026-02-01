@@ -1,0 +1,11 @@
+{
+    "id": 13026,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_Attribute_for_Contract_New",
+    "action": "<*DISALLOWATTRIBUTES(SC_Cyber_RC_Selection,SC_Cyber_RC_Entitlements_Scope_summary,SC_Cyber_RC_Models_Scope_Cont,SC_Cyber_RC_Invalid_Cont)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

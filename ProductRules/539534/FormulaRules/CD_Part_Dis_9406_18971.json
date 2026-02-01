@@ -1,0 +1,11 @@
+{
+    "id": 18971,
+    "condition": "[NEQ](<*VALUE(MX_CD_Calendizer_Manual_Control_Panel)*>,Yes)",
+    "name": "CD_Part_Dis_9406",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9406)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

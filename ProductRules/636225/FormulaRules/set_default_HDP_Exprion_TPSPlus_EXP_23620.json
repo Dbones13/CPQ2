@@ -1,0 +1,11 @@
+{
+    "id": 23620,
+    "condition": "[EQ](<*VALUE(HDP_Exprion_TPSPlus_EXP)*>,)",
+    "name": "set default HDP_Exprion_TPSPlus_EXP",
+    "action": "<*ASSIGNVALUE(HDP_Exprion_TPSPlus_EXP:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

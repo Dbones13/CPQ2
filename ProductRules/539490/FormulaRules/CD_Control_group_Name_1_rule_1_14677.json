@@ -1,0 +1,11 @@
+{
+    "id": 14677,
+    "condition": "1",
+    "name": "CD_Control_group_Name_1_rule_1",
+    "action": "<*ASSIGNVALUE(CD_Control_group_Name_1:<*CTX ( Container(MX_CD_group).Row(1).Column(CD_Control_group_Name).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19565,
+    "condition": "[NEQ](<*VALUECODE(Exp HS Need Experion Backup and Restore (EBR))*>,Yes)",
+    "name": "EBR No",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-BRM520-ESD)*><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-BRM520)*><* DoResetAtt *>",
+    "description": "Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

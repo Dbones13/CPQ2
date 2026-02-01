@@ -1,0 +1,11 @@
+{
+    "id": 14915,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_44",
+    "action": "[IF]([IN](<*VALUE(LSS_Number_of_Simple_Close_Loop_Programming)*>, ,0)){<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_44:<* Round (<* Eval((0<*VALUE(PLC_UOC_labor_parameter_var_24)*>+0<*VALUE(PLC_UOC_labor_parameter_var_28)*>)*0.6) *>,0) *>)*>}{<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_44:<*VALUE(LSS_Number_of_Simple_Close_Loop_Programming)*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

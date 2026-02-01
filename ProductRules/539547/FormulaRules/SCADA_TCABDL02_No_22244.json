@@ -1,0 +1,11 @@
+{
+    "id": 22244,
+    "condition": "[EQ](<*VALUE(Scada_Allen_Bradley_Drive_Interface_Library)*>,No)",
+    "name": "SCADA_TC-ABDL02_No",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:TC-ABDL02)*><* DoResetAtt *>",
+    "description": "Hide-TC-ABDL02",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

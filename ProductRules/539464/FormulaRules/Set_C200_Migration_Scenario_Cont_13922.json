@@ -1,0 +1,11 @@
+{
+    "id": 13922,
+    "condition": "[GT](<*CTX ( Container(C200_Migration_Scenario_Cont).Rows.GetCount )*>,0)",
+    "name": "Set_C200_Migration_Scenario_Cont",
+    "action": "<*CTX ( Container(C200_Migration_Scenario_Cont).Row(1).Column(C200_Select_the_Migration_Scenario).Set(<*VALUE(C200_Select_Migration_Scenario)*>) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

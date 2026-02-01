@@ -1,0 +1,11 @@
+{
+    "id": 19303,
+    "condition": "[GT](<*VALUE(PlantCruise_Profibus_Gateway)*>,0)",
+    "name": "Add_IO_Section_ 8C-TPOXA1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:8C-TPOXA1)*>[IF]([EQ](<*VALUE(PlantCruise_Redundant_Profibus_Gateway)*>,Yes)){<*SETATVQTY(PlantCruise_Part_Summary:8C-TPOXA1,<* Eval(<*VALUE(PlantCruise_Profibus_Gateway)*> * 2) *>)*>}{<*VALUE(PlantCruise_Profibus_Gateway)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

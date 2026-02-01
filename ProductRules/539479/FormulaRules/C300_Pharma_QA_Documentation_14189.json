@@ -1,0 +1,11 @@
+{
+    "id": 14189,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300 Pharma QA Documentation",
+    "action": "<*ASSIGNVALUE(C300 Pharma QA Documentation:[IF]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma)){[IF]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma)){<* Eval(8*<*VALUE(Number_of_Simple_Compexity_QA_Documents  (0-100))*>+22*<*VALUE(Number_of_Medium_Compexity_QA_Documents  (0-100))*>+48*<*VALUE(Number_of_Complex_Compexity_QA_Documents  (0-100))*>) *>}{0}[ENDIF]}{0}[ENDIF])*>",
+    "description": "CXCPQ-43535\nFor Process Type = Batch-Pharma\nCalculated Hours = bsd*8 + bmd*22 + bcd*48\n\nFor other process type, Calculated Hours = 0",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

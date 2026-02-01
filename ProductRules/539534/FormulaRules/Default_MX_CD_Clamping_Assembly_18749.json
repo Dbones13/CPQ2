@@ -1,0 +1,11 @@
+{
+    "id": 18749,
+    "condition": "[EQ](<*VALUE(MX_CD_Clamping_Assembly)*>,)",
+    "name": "Default_MX_CD_Clamping_Assembly",
+    "action": "<*SELECTVALUE(MX_CD_Clamping_Assembly:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

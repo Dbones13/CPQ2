@@ -1,0 +1,11 @@
+{
+    "id": 26641,
+    "condition": "[NOT]([AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),[OR](<*ISSELECTED(Experion Server Type.Server TPS)*>, <*ISSELECTED(Experion Server Type.Server)*>,<*ISSELECTED(Experion Server Type.Flex Server)*>),[GT](<*VALUE(ACE Node Tower Mount Desk)*>,0)))",
+    "name": "Hardware_Design_Selection_ACE_Node_desk_hide_SVR_PER_DELL_Rack_RAID1_XE",
+    "action": "<*DISALLOWVALUES(Hardware Design Selection_ ACE_Node:SVR_PER_DELL_Rack_RAID1_XE)*>",
+    "description": "CXDEV-8006",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

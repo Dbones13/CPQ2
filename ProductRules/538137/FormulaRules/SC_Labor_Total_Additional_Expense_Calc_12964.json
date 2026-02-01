@@ -1,0 +1,11 @@
+{
+    "id": 12964,
+    "condition": "[NEQ](<*CTX ( Container(SC_Labor_Deliverables).Rows.GetCount )*>,0)",
+    "name": "SC_Labor_Total_Additional_Expense_Calc",
+    "action": "<*ASSIGNVALUE(SC_Labor_Total_Additional_Exp_Price:[IF]([EQ](<*CTX ( Container(SC_Labor_Deliverables).Row(8).Column(Price).Get )*>,)){0}{<*CTX ( Container(SC_Labor_Deliverables).Row(8).Column(Price).Get )*>}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15084,
+    "condition": "[EQ](<*VALUE(MXP_Platform_Type)*>,)",
+    "name": "Default_platform_type",
+    "action": "<*SELECTVALUE(MXP_Platform_Type:Physical)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

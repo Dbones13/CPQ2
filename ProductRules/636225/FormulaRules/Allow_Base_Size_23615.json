@@ -1,0 +1,11 @@
+{
+    "id": 23615,
+    "condition": "[AND]([IN](<*VALUE(HDPBase Package)*>,TPS,TPS+Exp),[NEQ](<*CTX ( Quote.CustomField(Quote Type) )*>,Contract Renewal))",
+    "name": "Allow Base Size",
+    "action": "<*ALLOWATTRIBUTES(HDP_System_Size)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

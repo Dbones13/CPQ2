@@ -1,0 +1,11 @@
+{
+    "id": 1097,
+    "condition": "[EQ](<*VALUE(Series_C_Cabinet_Base_Required)*>,)",
+    "name": "Select Cabinet Based Required",
+    "action": "<*SELECTVALUE(Series_C_Cabinet_Base_Required:No)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

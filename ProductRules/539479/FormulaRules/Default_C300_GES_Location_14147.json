@@ -1,0 +1,11 @@
+{
+    "id": 14147,
+    "condition": "[EQ](<*VALUE(C300_GES_Location)*>,)",
+    "name": "Default_C300_GES_Location",
+    "action": "<*SELECTVALUE(C300_GES_Location:None)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10461,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "PLC_UOC_labor_parameter_var_44",
+    "action": "[IF]([IN](<*VALUE(LSS_Number_of_Simple_Close_Loop_Programming)*>, ,0)){<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_44:<* Round (<* Eval((<*VALUE(PLC_UOC_labor_parameter_var_24)*>+<*VALUE(PLC_UOC_labor_parameter_var_28)*>)*0.6) *>,0) *>)*>}{<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_44:<*VALUE(LSS_Number_of_Simple_Close_Loop_Programming)*>)*>}[ENDIF]\n",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

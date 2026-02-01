@@ -1,0 +1,11 @@
+{
+    "id": 18940,
+    "condition": "[NEQ](<*VALUE(MX_CD_Quick_Disconnect_Assembly)*>,Yes)",
+    "name": "CD_Part_Dis_9205_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9205-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

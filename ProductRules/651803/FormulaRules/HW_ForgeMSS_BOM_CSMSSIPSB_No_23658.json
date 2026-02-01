@@ -1,0 +1,11 @@
+{
+    "id": 23658,
+    "condition": "[AND](<*ISSELECTED(Secure Remote Access.Yes)*>,[EQ](<*VALUE(IP Security Tunnel Required)*>,))",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-IPSB_No",
+    "action": "<*SETATVQTY(IP Security Tunnel Required BOM:CS-MSS-IPS-ANL,0)*><*SETATVQTY(IP Security Tunnel Required BOM:CS-MSS-IPSB,0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14625,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Liquid_meter_qty",
+    "action": "<*ASSIGNVALUE(Liquid_meter_qty:<* Eval(0<*VALUE(LPMS_IF)*>+(0.5*0<*VALUE(MSC_Number_Of_Liquid_Systems_With_Meter_Provers)*>)+(0.5*0<*VALUE(MSC_Number_Of_Liquid_Systems_With_Master_Metering)*>)+(0.5*0<*VALUE(MSC_Total_Number_Of_Liquid_Pay_Meter_Streams)*>)+(0.25*0<*VALUE(MSC_Number_Of_Liquid_Systems_With_Check_Metering)*>)+(0.2*0<*VALUE(MSC_Number_Of_Liquid_Meters_With_Meter_Diagnostics)*>)+(0.1*0<*VALUE(MSC_Number_Of_Fastloops)*>)+(0.1*0<*VALUE(MSC_Number_Of_Density_Meters)*>)+(0.05*0<*VALUE(MSC_Number_Of_Analysers)*>)+(0.05*0<*VALUE(MSC_Number_Of_Fastloop_Pumps)*>)+(0.1*0<*VALUE(MSC_Total_Number_Of_Liquid_Grab_Samplers)*>)+(0.3*0<*VALUE(MSC_Number_Of_Systems_With_Batch_Reports)*>)+(0.3*0<*VALUE(MSC_Number_Of_Period_Reports_Per_Liquid_System)*>*0<*VALUE(MSC_Number_Of_Liquid_Metering_Systems)*>)+(0.3*0<*VALUE(MSC_Number_Of_Period_Reports_Per_Gas_System)*>*<*VALUE(MSC_Number_Of_Gas_Metering_Systems)*>)) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

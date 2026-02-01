@@ -1,0 +1,11 @@
+{
+    "id": 18785,
+    "condition": "[EQ](<*VALUE(MX_CD_Stop_Disc)*>,)",
+    "name": "Default_MX_CD_Stop_Disc",
+    "action": "<*SELECTVALUE(MX_CD_Stop_Disc:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

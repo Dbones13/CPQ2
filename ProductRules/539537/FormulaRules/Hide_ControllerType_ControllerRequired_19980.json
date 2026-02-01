@@ -1,0 +1,11 @@
+{
+    "id": 19980,
+    "condition": "[NOT]([IN](<*VALUE(Experion_PKS_Software_Release)*>,R530,R520))",
+    "name": "Hide_ControllerType_ControllerRequired",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_C300_Controller_Module_Type)*>",
+    "description": "#CXCPQ-50260\n#CXCPQ-110799: Removed Turbomachinery",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

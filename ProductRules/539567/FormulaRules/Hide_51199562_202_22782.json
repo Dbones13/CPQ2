@@ -1,0 +1,11 @@
+{
+    "id": 22782,
+    "condition": "[NOT](<*ISSELECTED(Power_Cord_Type.UK)*>)",
+    "name": "Hide_51199562_202",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Location_Cluster_Part_Summary:51199562-202)*><* DoResetAtt *>",
+    "description": "CXCPQ-38333",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

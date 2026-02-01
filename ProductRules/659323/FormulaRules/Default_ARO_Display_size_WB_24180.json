@@ -1,0 +1,11 @@
+{
+    "id": 24180,
+    "condition": "[EQ](<*VALUE(ARO_Display_size_WB)*>,)",
+    "name": "Default_ARO_Display_size_WB",
+    "action": "<*SELECTVALUE(ARO_Display_size_WB:23 inch)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

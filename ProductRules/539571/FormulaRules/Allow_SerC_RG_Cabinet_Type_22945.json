@@ -1,0 +1,11 @@
+{
+    "id": 22945,
+    "condition": "[AND]([NOT](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Allow_SerC_RG_Cabinet_Type",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_Cabinet_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

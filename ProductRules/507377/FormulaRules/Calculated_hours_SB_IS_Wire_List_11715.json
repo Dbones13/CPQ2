@@ -1,0 +1,11 @@
+{
+    "id": 11715,
+    "condition": "<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>",
+    "name": "Calculated hours SB IS Wire List",
+    "action": "<*ASSIGNVALUE(IS Wire List:[IF](<*ISSELECTED(IS_GES_Location.None)*>){<* Eval(<* Eval([IF](<*ISSELECTED(IS_Wire_List_Required.Yes)*>){1}{0}[ENDIF]*(<*VALUE(IS_No_of_Door_Configuration_Field_Wiring_Types)*> + <*VALUE(IS_No_of_Gate_Wiring_Detail_Drawings)*>+ <*VALUE(IS_No_of_Turnstile_Wiring_Detail_Drawings)*>+ <*VALUE(IS_No_of_IDS_Wiring_Detail_Drawings)*>+ <*VALUE(IS_No_of_Perimeter_Detec_Wiring_Details_Drawings)*>+ <*VALUE(IS_No_of_Other_Detail_Field_Wiring_Types_(0-20))*>+ <*VALUE(IS_No_of_Server_Rack_Wiring_Diagrams_(0-10))*>+ <*VALUE(IS_No_of_Workstation_Wiring_Diagrams_(0-10))*>+ <*VALUE(IS_No_of_Access_Control_cabinet/JB_Wiring_Diagrams)*>+ <*VALUE(IS_No_of_VSS_Control_cabinet/JB_Wiring_Diagrams)*>+ <*VALUE(IS_No_of_Shared_cabinet/JB_Wiring_Diagrams_(0-100))*>+ <*VALUE(IS_No_of_Muster_Reader_Detail_Drawings)*>+ <*VALUE(IS_No_of_TWIC_Wiring_Detail_Drawings)*>)*(2 + (<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*>* 0.187))) *>*0.8) *>}{<* Eval(<* Eval([IF](<*ISSELECTED(IS_Wire_List_Required.Yes)*>){1}{0}[ENDIF]*(<*VALUE(IS_No_of_Door_Configuration_Field_Wiring_Types)*> + <*VALUE(IS_No_of_Gate_Wiring_Detail_Drawings)*>+ <*VALUE(IS_No_of_Turnstile_Wiring_Detail_Drawings)*>+ <*VALUE(IS_No_of_IDS_Wiring_Detail_Drawings)*>+ <*VALUE(IS_No_of_Perimeter_Detec_Wiring_Details_Drawings)*>+ <*VALUE(IS_No_of_Other_Detail_Field_Wiring_Types_(0-20))*>+ <*VALUE(IS_No_of_Server_Rack_Wiring_Diagrams_(0-10))*>+ <*VALUE(IS_No_of_Workstation_Wiring_Diagrams_(0-10))*>+ <*VALUE(IS_No_of_Access_Control_cabinet/JB_Wiring_Diagrams)*>+ <*VALUE(IS_No_of_VSS_Control_cabinet/JB_Wiring_Diagrams)*>+ <*VALUE(IS_No_of_Shared_cabinet/JB_Wiring_Diagrams_(0-100))*>+ <*VALUE(IS_No_of_Muster_Reader_Detail_Drawings)*>+ <*VALUE(IS_No_of_TWIC_Wiring_Detail_Drawings)*>)*(2 + (<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*>* 0.187))) *>*0.8*1.1) *>}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

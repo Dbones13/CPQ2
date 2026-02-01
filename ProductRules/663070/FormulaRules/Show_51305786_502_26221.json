@@ -1,0 +1,11 @@
+{
+    "id": 26221,
+    "condition": "<*ISSELECTED(Default Crossover Cable.2m)*>",
+    "name": "Show_51305786_502",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51305786-502)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51305786-502, 1)*><* DoResetAtt *>",
+    "description": "38257",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

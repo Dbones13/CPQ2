@@ -1,0 +1,11 @@
+{
+    "id": 13135,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_Previouse_Quote_Number)*>,))",
+    "name": "SC_Assign_Value_Previouse_Quote_number",
+    "action": "<*ASSIGNVALUE(SC_Previouse_Quote_Number:<*CTX ( Quote.CustomField(SC_CF_Parent_Quote_Number_Link) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

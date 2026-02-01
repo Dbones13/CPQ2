@@ -1,0 +1,11 @@
+{
+    "id": 19747,
+    "condition": "[EQ](<*VALUE(SerC_CG_Controller_Memory_Backup)*>,)",
+    "name": "Default_SerC_CG_Controller_Memory_Backup",
+    "action": "<*SELECTVALUE(SerC_CG_Controller_Memory_Backup:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

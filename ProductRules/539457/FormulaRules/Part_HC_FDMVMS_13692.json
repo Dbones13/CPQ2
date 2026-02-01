@@ -1,0 +1,11 @@
+{
+    "id": 13692,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_FDM_Virtualization_Server_CAL)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_HC_FDMVMS",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:HC-FDMVMS)*><*SETATVQTY(Virtualization_BOM_Parts:HC-FDMVMS,<*VALUE(Virtualization_FDM_Virtualization_Server_CAL)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

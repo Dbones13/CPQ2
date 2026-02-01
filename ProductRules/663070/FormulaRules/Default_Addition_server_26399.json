@@ -1,0 +1,11 @@
+{
+    "id": 26399,
+    "condition": "[EQ](<*VALUE(Additional Servers)*>,)",
+    "name": "Default_Addition_server",
+    "action": "<*ASSIGNVALUE(Additional Servers:0)*>",
+    "description": "Default Additional Server (0-10)",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

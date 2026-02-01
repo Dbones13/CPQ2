@@ -1,0 +1,11 @@
+{
+    "id": 23946,
+    "condition": "[NOT]([OR]([GT](<*VALUE(Terminal_Number_of_New_Simple_Reports)*>,0),[GT](<*VALUE(Terminal_Number_of_New_Moderate_Reports)*>,0),[GT](<*VALUE(Terminal_Number_of_New_Complex_Reports)*>,0)))",
+    "name": "TM New User Interface Reset",
+    "action": "<*ASSIGNVALUE(TM New User Interface:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

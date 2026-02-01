@@ -1,0 +1,11 @@
+{
+    "id": 19758,
+    "condition": "[EQ](<*VALUE(FTA_Layout)*>,)",
+    "name": "Default_FTA_Layout",
+    "action": "<*SELECTVALUE(FTA_Layout:FTASide3Channel)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

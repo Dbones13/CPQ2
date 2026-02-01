@@ -1,0 +1,11 @@
+{
+    "id": 26160,
+    "condition": "[AND]([GT]([IF]([GT](<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_int)*>,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>)){<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty_plus1)*>}{<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>}[ENDIF],0),[GT](<*VALUE(Experion Process Points (0 - 45000))*>,0),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant))",
+    "name": "Exp_Red_Pnt_Add_EPRPR100_Red2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-RPR100)*>[IF]([GT](<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_int)*>,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-RPR100,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty_plus1)*>)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-RPR100,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP-RPR100",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

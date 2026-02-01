@@ -1,0 +1,11 @@
+{
+    "id": 26145,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes),[GT](<*VALUE(File_Transfer_for_Experion_PKS)*>,0)))",
+    "name": "EP_FLT000_Remove_FileTrans",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-FLT000)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

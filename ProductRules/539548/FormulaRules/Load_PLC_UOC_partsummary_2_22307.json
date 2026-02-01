@@ -1,0 +1,11 @@
+{
+    "id": 22307,
+    "condition": "[AND]([NEQ](<*VALUE(PLC_UOC_BOM_Items)*>,),[LIKE](<*VALUE(MSID_Selected_Products)*>,3rd Party PLC to ControlEdge PLC/UOC))",
+    "name": "Load_PLC_UOC_partsummary_2",
+    "action": "<*CTX( Container(MSID_Third_Party_PLC_Added_Parts_Common_Container).LoadKeys(PartNumber).Load(select '<*eval(Replace(\"<*VALUE(PLC_UOC_BOM_Items)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "",
+    "rank": "15",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

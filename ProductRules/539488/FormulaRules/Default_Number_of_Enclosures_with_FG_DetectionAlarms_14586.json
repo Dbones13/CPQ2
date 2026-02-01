@@ -1,0 +1,11 @@
+{
+    "id": 14586,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Enclosures_with_F&G_Detection/Alarms)*>,)",
+    "name": "Default Number of Enclosures with F&G Detection/Alarms",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Enclosures_with_F&G_Detection/Alarms:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

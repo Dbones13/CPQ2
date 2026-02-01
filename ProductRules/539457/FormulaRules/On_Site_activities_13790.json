@@ -1,0 +1,11 @@
+{
+    "id": 13790,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "On Site activities",
+    "action": "<*ASSIGNVALUE(On Site activities:<*Eval([IF]([AND]([EQ](<*VALUE(Labor_parameter_var_1)*>,Essentials Platforms-Dell Servers),[EQ](<*VALUE(Labor_parameter_var_22)*>,Yes))\n){<*VALUE(Labor_parameter_store_F55)*>}{0}[ENDIF]+[IF]([EQ](<*VALUE(Labor_parameter_var_1)*>,Essentials Platforms-Dell Servers)){<*VALUE(Labor_parameter_var_27)*>}{0}[ENDIF]+[IF]([IN](<*VALUE(Labor_parameter_var_1)*>,Premium Platforms Gen 3 - Performance A/B,Premium Platforms Gen 3 - 2 node cluster,Premium Platform for Nutanix)){<*VALUE(Labor_parameter_varn_23)*>}{0}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

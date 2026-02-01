@@ -1,0 +1,11 @@
+{
+    "id": 20788,
+    "condition": "[LEQ](<*VALUE(SS_27inch_NTS_DELL)*>,0)",
+    "name": "Part_D_TP_FPW272",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPW272)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

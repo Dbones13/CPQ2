@@ -1,0 +1,11 @@
+{
+    "id": 26273,
+    "condition": "[EQ](<*VALUE(Trusted Platform Module_TPM)*>,)",
+    "name": "Default_Trusted_Platform_Module_TPM",
+    "action": "<*SELECTVALUE(Trusted Platform Module_TPM:No)*>",
+    "description": "Trusted Platform Module (TPM)",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

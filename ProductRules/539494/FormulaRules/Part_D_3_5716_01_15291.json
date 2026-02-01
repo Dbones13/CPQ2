@@ -1,0 +1,11 @@
+{
+    "id": 15291,
+    "condition": "[NEQ](<*VALUE(MXP_Historical_Trending)*>,Yes)",
+    "name": "Part_D_3_5716_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5716-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

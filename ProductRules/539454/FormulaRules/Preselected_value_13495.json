@@ -1,0 +1,11 @@
+{
+    "id": 13495,
+    "condition": "1",
+    "name": "Preselected value",
+    "action": "[IF]([EQ](<*VALUE(OPM_Other_Servers_Hardware_Selection)*>,)){<*SELECTVALUE(OPM_Other_Servers_Hardware_Selection:DELL T160)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(OPM_Experion_Server_Hardware_Selection)*>,)){<*SELECTVALUE(OPM_Experion_Server_Hardware_Selection:Dell R740XL)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(OPM_ACET_EAPP_Server_Hardware_Selection)*>,)){<*SELECTVALUE(OPM_ACET_EAPP_Server_Hardware_Selection:Dell R740XL)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(OPM_EST_Tower_Hardware_Selection)*>,)){<*SELECTVALUE(OPM_EST_Tower_Hardware_Selection:Dell T5860XL)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(OPM_ESC_ESF_or_ESCE_Tower_Hardware_Selection)*>,)){<*SELECTVALUE(OPM_ESC_ESF_or_ESCE_Tower_Hardware_Selection:Dell T5860XL)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(OPM_RESS_Server_configuration)*>,)){<*SELECTVALUE(OPM_RESS_Server_configuration:Physical)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(OPM_Select_RESS_platform_configuration)*>,)){<*SELECTVALUE(OPM_Select_RESS_platform_configuration:Dell R740XL)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "08/01/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

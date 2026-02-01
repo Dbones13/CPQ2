@@ -1,0 +1,11 @@
+{
+    "id": 20333,
+    "condition": "[NOT](<*ATTSEL(DVM_Sys_Grp_Part_Summary)*>)",
+    "name": "reset_DVM_Sys_Grp_Part_Summary_Cont",
+    "action": "<*CTX ( Container(DVM_Sys_Grp_Part_Summary_Cont).Rows.Clear )*>",
+    "description": "",
+    "rank": "900",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

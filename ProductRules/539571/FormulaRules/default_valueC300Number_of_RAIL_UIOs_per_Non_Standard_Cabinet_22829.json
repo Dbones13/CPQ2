@@ -1,0 +1,11 @@
+{
+    "id": 22829,
+    "condition": "[EQ](<*VALUE(C300Number of RAIL UIOs per Non Standard Cabinet)*>,)",
+    "name": "default valueC300Number of RAIL UIOs per Non Standard Cabinet",
+    "action": "<*ASSIGNVALUE(C300Number of RAIL UIOs per Non Standard Cabinet:1)*>",
+    "description": "CXCPQ-40339",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

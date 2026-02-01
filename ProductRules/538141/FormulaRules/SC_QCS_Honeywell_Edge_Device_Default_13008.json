@@ -1,0 +1,11 @@
+{
+    "id": 13008,
+    "condition": "[AND]([EQ](<*VALUE(SC_QCS_Number of Machines)*>,1),[EQ](<*VALUE(SC_QCS_Site_to_Cloud_Method)*>,Edge Device))",
+    "name": "SC_QCS_Honeywell_Edge_Device_Default",
+    "action": "<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

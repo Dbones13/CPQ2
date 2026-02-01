@@ -1,0 +1,11 @@
+{
+    "id": 14037,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "DVM_Camera_Alarm_in_EBI_Configuration",
+    "action": "<*ASSIGNVALUE(DVM_Camera_Alarm_in_EBI_Configuration:<* Eval(0.35*<*VALUE(DVM_Number_of_Cameras_with_Algorithms)*>) *>)*>",
+    "description": "CXCPQ-51143",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

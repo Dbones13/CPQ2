@@ -1,0 +1,11 @@
+{
+    "id": 24230,
+    "condition": "[AND]([LT](<*VALUE(ARO_OTP_hardware_&_software_required)*>,1),[LT](<*VALUE(RESS_OTP_hardware_&_software_required)*>,1))",
+    "name": "EP-OCOTP1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:EP-OCOTP1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

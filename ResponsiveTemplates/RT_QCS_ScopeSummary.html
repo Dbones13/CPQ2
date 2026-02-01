@@ -1,0 +1,20 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <div class="row col-xs-12 swagger">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_QCS_Product_Container") -->
+    <div class = "col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_QCS_Pricing_Details_Cont") -->
+    <div class = "col-xs-12 col-sm-12">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+</div>
+

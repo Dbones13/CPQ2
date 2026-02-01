@@ -1,0 +1,11 @@
+{
+    "id": 13017,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Editable_Scope_summary_columns",
+    "action": "<*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(PY_Quantity).SetPermission(Editable) )*>\n<*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(PY_UnitPrice).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

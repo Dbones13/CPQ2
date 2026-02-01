@@ -1,0 +1,11 @@
+{
+    "id": 13954,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "eServer_Labor_Installation",
+    "action": "<*ASSIGNVALUE(eServer_Labor_Installation:<* Eval((<*VALUE(eServer_Labor_parameter_var_4)*>*2) + (<*VALUE(eServer_Labor_parameter_var_5)*>*2) + (<*VALUE(eServer_Labor_parameter_var_6)*>*2))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

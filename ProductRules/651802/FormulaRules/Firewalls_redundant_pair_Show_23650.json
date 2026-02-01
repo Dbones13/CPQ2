@@ -1,0 +1,11 @@
+{
+    "id": 23650,
+    "condition": "<*IFANYVALUE(Assessment Type:Cyber)*>",
+    "name": "Firewalls (redundant pair) Show",
+    "action": "<*ALLOWATTRIBUTES(Firewalls (redundant pair))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

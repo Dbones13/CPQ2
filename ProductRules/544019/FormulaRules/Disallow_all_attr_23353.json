@@ -1,0 +1,11 @@
+{
+    "id": 23353,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,)",
+    "name": "Disallow_all_attr",
+    "action": "<*DISALLOWATTRIBUTES(Cancel Package)*>\n<*DISALLOWATTRIBUTES(KE_Part_Number)*>\n<*DISALLOWATTRIBUTES(KE_Part_Name)*>\n<*DISALLOWATTRIBUTES(KE_Software_Release)*>\n<*DISALLOWATTRIBUTES(KE_SESP)*>\n<*DISALLOWATTRIBUTES(KE_Remote_Peripheral_Solution_Type)*>\n<*DISALLOWATTRIBUTES(KE_Quad_Display)*>\n<*DISALLOWATTRIBUTES(KE_Node_Type)*>\n<*DISALLOWATTRIBUTES(KE_Key_Board_Type)*>\n<*DISALLOWATTRIBUTES(KE_ISA_Adapter_Required)*>\n<*DISALLOWATTRIBUTES(KE_Hardware_Selection)*>\n<*DISALLOWATTRIBUTES(KE_Experion_Base_Media_Delivery)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Required)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Release)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Media_Delivery)*>\n<*DISALLOWATTRIBUTES(KE_Does_installed_APP)*>\n<*DISALLOWATTRIBUTES(KE_Controller Experion peer to peer connectivity)*>\n<*DISALLOWATTRIBUTES(KE_Control_Solver_License)*>\n<*DISALLOWATTRIBUTES(KE_COA_License_Type)*>\n<*DISALLOWATTRIBUTES(KE_C300_Horizontal_Mounting_Kit)*>\n<*DISALLOWATTRIBUTES(KE_Additional_Hard_Disk)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20157,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Software_Release)*>,R710))",
+    "name": "Hide_DVM_Software_Release",
+    "action": "<*DISALLOWATTRIBUTES(DVM_High_Availability_Client_Node)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

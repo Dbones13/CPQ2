@@ -1,0 +1,11 @@
+{
+    "id": 23001,
+    "condition": "[OR]([NOT]([OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)),[EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Hide Universal IO cont",
+    "action": "<*CTX ( Container(C300_RG_Universal_IO_cont_1).Rows.Clear )*><*CTX ( Container(C300_RG_Universal_IO_cont_2).Rows.Clear )*><*DISALLOWATTRIBUTES(C300_RG_Universal_IO_cont_1,C300_RG_Universal_IO_cont_2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

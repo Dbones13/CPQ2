@@ -1,0 +1,11 @@
+{
+    "id": 26014,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(Interface with TPS Required?)*>,Yes),\n[AND]([OR]([EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Experion Server Type)*>,Server TPS)),\n[EQ](<*VALUE(Server Mounting)*>,Cabinet)))",
+    "name": "Hide_Rack_DVD_Desk",
+    "action": "<*DISALLOWATTRIBUTES(Optional_DVD_ServerDisk)*>",
+    "description": "CXCPQ-34620",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

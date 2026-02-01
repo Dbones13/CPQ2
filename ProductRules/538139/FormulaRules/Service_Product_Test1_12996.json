@@ -1,0 +1,11 @@
+{
+    "id": 12996,
+    "condition": "[NEQ](<*VALUE(Service_Product_Test1)*>,Test)",
+    "name": "Service_Product_Test1",
+    "action": "<* ExecuteScript(To_Load_data)*>",
+    "description": "It will control functionality of optional Entitlements",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25551,
+    "condition": "[EQ](<*VALUE(Ethernet/IP Interface for Series C(0-100))*>,)",
+    "name": "Default Ethernet/IP Interface for Series C",
+    "action": "<*SELECTVALUE(Ethernet/IP Interface for Series C(0-100):0)*>",
+    "description": "Default Ethernet/IP Interface for Series C",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

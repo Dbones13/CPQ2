@@ -1,0 +1,11 @@
+{
+    "id": 11711,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS ACS Devices Configuration",
+    "action": "<*ASSIGNVALUE(IS ACS Devices Configuration:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval(0.12 * ( <*VALUE(IS_No_of_Digital_Inputs_(0-100))*>+ <*VALUE(IS_No_of_Digital_Outputs_(0-100))*>) + 0.17 * <*VALUE(IS_No_of_Zones_(0-100))*> + 0.25 * <*VALUE(IS_No_of_Muster_Readers_(0-100))*>+ 0.33 * <*VALUE(IS_No_of_Doors_(0-100))*>+ 0.42 * (<*VALUE(IS_No_of_Gates_(0-100))*>+ <*VALUE(IS_No_of_Turnstiles_(0-100))*>) + 0.5 * <*VALUE(IS_No_of_RTUs_(0-10000))*>+ 1 * (<*VALUE(IS_No_of_TemaServers_(0-200))*>+ <*VALUE(IS_No_of_Tema_Multis_(0-10))*>+ <*VALUE(IS_No_of_TWIC_Readers_(0-20))*>) + 1.5 * <*VALUE(IS_No_of_Custom_EIS_Report_Configurations_(0-100))*>) *>}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){<* Eval(0.12 * ( <*VALUE(IS_No_of_Digital_Inputs_(0-100))*>+ <*VALUE(IS_No_of_Digital_Outputs_(0-100))*>) + 0.17 * <*VALUE(IS_No_of_Zones_(0-100))*> + 0.25 * <*VALUE(IS_No_of_Muster_Readers_(0-100))*>+ 0.33 * <*VALUE(IS_No_of_Doors_(0-100))*>+ 0.42 * (<*VALUE(IS_No_of_Gates_(0-100))*>+ <*VALUE(IS_No_of_Turnstiles_(0-100))*>) + 0.5 * <*VALUE(IS_No_of_RTUs_(0-10000))*>+ 1 * (<*VALUE(IS_No_of_TemaServers_(0-200))*>+ <*VALUE(IS_No_of_Tema_Multis_(0-10))*>+ <*VALUE(IS_No_of_TWIC_Readers_(0-20))*>) + 1.5 * <*VALUE(IS_No_of_Custom_EIS_Report_Configurations_(0-100))*>) *>}{<* Eval(0.12 * ( <*VALUE(IS_No_of_Digital_Inputs_(0-100))*>+ <*VALUE(IS_No_of_Digital_Outputs_(0-100))*>) + 0.17 * <*VALUE(IS_No_of_Zones_(0-100))*> + 0.25 * <*VALUE(IS_No_of_Muster_Readers_(0-100))*>+ 0.33 * <*VALUE(IS_No_of_Doors_(0-100))*>+ 0.42 * (<*VALUE(IS_No_of_Gates_(0-100))*>+ <*VALUE(IS_No_of_Turnstiles_(0-100))*>) + 0.5 * <*VALUE(IS_No_of_RTUs_(0-10000))*>+ 1 * (<*VALUE(IS_No_of_TemaServers_(0-200))*>+ <*VALUE(IS_No_of_Tema_Multis_(0-10))*>+ <*VALUE(IS_No_of_TWIC_Readers_(0-20))*>) + 1.5 * <*VALUE(IS_No_of_Custom_EIS_Report_Configurations_(0-100))*>) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(SerC_Number of Non Redundant EIM for IEC61850:0)*>

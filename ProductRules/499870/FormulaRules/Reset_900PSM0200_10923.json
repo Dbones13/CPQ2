@@ -1,0 +1,11 @@
+{
+    "id": 10923,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(HC900_Redundant_I/O_Rack_Power_Supplies)*>,Yes),[OR]([GT](<*GETATVQTY(HC900_PART_SUMMARY:900P01-0601)*>,0),[GT](<*GETATVQTY(HC900_PART_SUMMARY:900P24-0601)*>,0))))",
+    "name": "Reset 900PSM-0200",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900PSM-0200)*><* DoResetAtt *>",
+    "description": "CXCPQ-51871",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

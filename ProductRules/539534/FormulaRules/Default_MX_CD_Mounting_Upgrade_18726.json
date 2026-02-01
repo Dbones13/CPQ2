@@ -1,0 +1,11 @@
+{
+    "id": 18726,
+    "condition": "[EQ](<*VALUE(MX_CD_Mounting_Upgrade)*>,)",
+    "name": "Default_MX_CD_Mounting_Upgrade",
+    "action": "<*SELECTVALUE(MX_CD_Mounting_Upgrade:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

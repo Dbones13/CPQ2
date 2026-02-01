@@ -1,0 +1,11 @@
+{
+    "id": 25548,
+    "condition": "[EQ](<*VALUE(Servers in Cabinet Total Qty)*>,)",
+    "name": "Default_Servers_in_Cabinet _Total_Qty",
+    "action": "<*ASSIGNVALUE(Servers in Cabinet Total Qty:0)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

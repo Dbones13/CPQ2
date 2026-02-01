@@ -1,0 +1,11 @@
+{
+    "id": 25811,
+    "condition": "[AND]([GT](<*VALUE(Experion Process Points (0 - 45000))*>,9999),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Non Redundant))",
+    "name": "Exp_Prc_Pnt_Add_EPDPR10K_NonRed",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR10K)*>[IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Non Redundant)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DPR10K, <*eval(Int(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add  EP_DPR10K",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

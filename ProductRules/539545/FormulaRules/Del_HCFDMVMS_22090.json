@@ -1,0 +1,11 @@
+{
+    "id": 22090,
+    "condition": "[NOT]([GT](<*VALUE(FDM Virtualization Server CAL License (0-7))*>,0))",
+    "name": "Del_HC-FDMVMS",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-FDMVMS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21945,
+    "condition": "[IF]([EQ](<*VALUE(FDM_Release)*>,R530)){[GT](<*VALUE(FDM Report license (0-1))*>,0)}{0}[ENDIF]",
+    "name": "Add_HC-ICVR00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-ICVR00)*><*SETATVQTY(FDM_Part_Summary:HC-ICVR00,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

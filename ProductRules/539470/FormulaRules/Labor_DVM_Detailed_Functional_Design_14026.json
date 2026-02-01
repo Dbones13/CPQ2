@@ -1,0 +1,11 @@
+{
+    "id": 14026,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_DVM_Detailed_Functional_Design",
+    "action": "[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Non-Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Detailed_Functional_Design:<* Eval(40+((<*VALUE(DVM_Number_of_Reviews)*>-1)*4))*>)*>}{[IF]([AND]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate),[NEQ](<*VALUE(DVM_GES_Location)*>,None))){<*ASSIGNVALUE(Labor_DVM_Detailed_Functional_Design:<* Eval((((40+((<*VALUE(DVM_Number_of_Reviews)*>-1)*4))*0.8)*1.1)) *>)*>}{[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Detailed_Functional_Design:<* Eval((40+((<*VALUE(DVM_Number_of_Reviews)*>-1)*4))*0.8) *>)*>}{0}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "CXCPQ-51341",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

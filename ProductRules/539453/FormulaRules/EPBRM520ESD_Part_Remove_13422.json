@@ -1,0 +1,11 @@
+{
+    "id": 13422,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(EBR_Server_Check)*>,Yes),[AND]([EQ](<*VALUE(Experion Backup Restore Software Release)*>,R520),[EQ](<*VALUE(Experion Backup Restore Media Delivery)*>,Electronic Download))))",
+    "name": "EP-BRM520-ESD_Part_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Sys_Part_Summary:EP-BRM520-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

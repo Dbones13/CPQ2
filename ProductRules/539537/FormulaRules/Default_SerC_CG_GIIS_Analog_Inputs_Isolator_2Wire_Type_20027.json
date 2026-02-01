@@ -1,0 +1,11 @@
+{
+    "id": 20027,
+    "condition": "[EQ](<*VALUE(SerC_CG_GIIS_Analog_Inputs_Isolator_2Wire_Type)*>,)",
+    "name": "Default_SerC_CG_GIIS_Analog_Inputs_Isolator_2Wire_Type",
+    "action": "<*SELECTVALUE(SerC_CG_GIIS_Analog_Inputs_Isolator_2Wire_Type:No)*>",
+    "description": "Story 8776",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

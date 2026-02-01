@@ -1,0 +1,11 @@
+{
+    "id": 22192,
+    "condition": "[GEQ](<* Eval(<*VALUE(FDM_Hart)*>) *>,128)",
+    "name": "Add_HC-FH0128",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-FH0128)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

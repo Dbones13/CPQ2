@@ -1,0 +1,11 @@
+{
+    "id": 25605,
+    "condition": "[EQ](<*VALUE(Exp Peer Control Data Interface License(0-256))*>,)",
+    "name": "Default Exp Peer Control Data Interface License",
+    "action": "<*ASSIGNVALUE(Exp Peer Control Data Interface License(0-256):0)*>",
+    "description": "Default Exp Peer Control Data Interface License",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

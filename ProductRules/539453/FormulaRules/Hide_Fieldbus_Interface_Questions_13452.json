@@ -1,0 +1,11 @@
+{
+    "id": 13452,
+    "condition": "[NEQ](<*VALUE(Is Fieldbus Interface in Scope?)*>,Yes)",
+    "name": "Hide Fieldbus Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of Fieldbus Devices)*>",
+    "description": "Hide questions when Is Fieldbus Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

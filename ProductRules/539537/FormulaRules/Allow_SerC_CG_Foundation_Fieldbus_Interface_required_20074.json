@@ -1,0 +1,11 @@
+{
+    "id": 20074,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Allow SerC_CG_Foundation_Fieldbus_Interface_required",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Foundation_Fieldbus_Interface_required)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14017,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_DVM_DB_Servers)*>,)",
+    "name": "Default_DVM_Number_of_DVM_DB_Servers",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_DVM_DB_Servers:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

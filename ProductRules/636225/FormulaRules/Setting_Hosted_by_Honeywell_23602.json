@@ -1,0 +1,11 @@
+{
+    "id": 23602,
+    "condition": "[EQ](<*VALUE(SC_Hosted_by_Honeywell)*>,)",
+    "name": "Setting_Hosted_by_Honeywell",
+    "action": "<*ASSIGNVALUE(SC_Hosted_by_Honeywell:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

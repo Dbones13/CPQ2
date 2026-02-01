@@ -1,0 +1,11 @@
+{
+    "id": 24342,
+    "condition": "[EQ](<*VALUE(Scada_Number_of_Third_Party_Interface_to_test)*>,)",
+    "name": "default_Scada_Number_of_Third_Party_Interface_to_test",
+    "action": "<*ASSIGNVALUE(Scada_Number_of_Third_Party_Interface_to_test:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

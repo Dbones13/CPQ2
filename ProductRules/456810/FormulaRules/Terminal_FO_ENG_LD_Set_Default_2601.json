@@ -1,0 +1,11 @@
+{
+    "id": 2601,
+    "condition": "[NOT](<*ATTDEF(Terminal_FO_ENG_LD)*>)",
+    "name": "Terminal_FO_ENG_LD_Set_Default",
+    "action": "<*SELECTVALUE(Terminal_FO_ENG_LD:HPS_SYS_LE1_P305)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(PM_Contract_Review_Document_Labor_Hrs:<*EVAL(14 * <*VALUE(labor_parameter_pf)*> *(1 + 0.2 * <*VALUE(labor_parameter_tc)*>) * (1 + 0.5 * <*VALUE(labor_parameter_ld)*>))*>)*>

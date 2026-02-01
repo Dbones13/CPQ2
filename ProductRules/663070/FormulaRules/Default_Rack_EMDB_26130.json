@@ -1,0 +1,11 @@
+{
+    "id": 26130,
+    "condition": "[EQ](<*VALUE(EM_DB_Ser_ver)*>,)",
+    "name": "Default_Rack_EMDB",
+    "action": "<*SELECTVALUE(EM_DB_Ser_ver:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

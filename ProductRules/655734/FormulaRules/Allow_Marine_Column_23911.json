@@ -1,0 +1,11 @@
+{
+    "id": 23911,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),<*ISSELECTED(Terminal_Mode_of_Transport.Marine loading/unloading)*>)",
+    "name": "Allow_Marine_Column",
+    "action": "<*CTX( Container(Terminal_SAP_ERP_BSI_Interface_Scope).Column(Marine).SetPermission(Editable) )*><*CTX( Container(Terminal_Workflow_Scope).Column(Marine).SetPermission(Editable) )*><*CTX( Container(Terminal_Devices_Scope).Column(Marine).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

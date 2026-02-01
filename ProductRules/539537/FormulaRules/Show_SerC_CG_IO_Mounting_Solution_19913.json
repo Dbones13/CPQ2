@@ -1,0 +1,11 @@
+{
+    "id": 19913,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "Show_SerC_CG_IO_Mounting_Solution",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_IO_Mounting_Solution)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

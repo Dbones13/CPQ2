@@ -1,0 +1,11 @@
+{
+    "id": 26366,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[NEQ](<*VALUE(Interface with TPS Required?)*>,Yes),[AND]([OR]([EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Experion Server Type)*>,Server TPS)),[EQ](<*VALUE(Server Mounting)*>,Desk)))",
+    "name": "show_dvd_desk",
+    "action": "<*ALLOWATTRIBUTES(Trackball _Server,Optional DVD_Server Disk)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

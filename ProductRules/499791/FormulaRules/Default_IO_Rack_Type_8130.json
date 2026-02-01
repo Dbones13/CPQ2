@@ -1,0 +1,11 @@
+{
+    "id": 8130,
+    "condition": "[EQ](<*VALUE(LSS_PLC_IO_Rack_Type)*>,)",
+    "name": "Default IO Rack Type",
+    "action": "<*SELECTVALUE(LSS_PLC_IO_Rack_Type:12 I/O Rack)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

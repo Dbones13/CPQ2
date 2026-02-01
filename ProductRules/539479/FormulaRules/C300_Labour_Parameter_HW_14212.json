@@ -1,0 +1,11 @@
+{
+    "id": 14212,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_HW",
+    "action": "[IF]([EQ](<*VALUE(C300_Implementation_Methodology)*>,Non-Standard Build Estimate)){<*ASSIGNVALUE(C300_Labour_Parameter_HW:<* Eval((1.1*(3+0.007*(0<*VALUE(Labor_parametre_sys)*>*20+0<*VALUE(Labor_parameter_mar)*>*(40+0<*VALUE(C300_Labor_parameter_is)*>*10))))+(0.25*1.1*(6+0.007*(0<*VALUE(Labor_parametre_sys)*>*20+0<*VALUE(Labor_parameter_mar)*>*(40+0<*VALUE(C300_Labor_parameter_is)*>*10))))) *>)*>}{<*ASSIGNVALUE(C300_Labour_Parameter_HW:<* Eval(((1.1*(3+0.007*(0<*VALUE(Labor_parametre_sys)*>*20+0<*VALUE(Labor_parameter_mar)*>*(40+0<*VALUE(C300_Labor_parameter_is)*>*10))))+(0.25*1.1*(6+0.007*(0<*VALUE(Labor_parametre_sys)*>*20+0<*VALUE(Labor_parameter_mar)*>*(40+0<*VALUE(C300_Labor_parameter_is)*>*10)))))*0.94)*>)*>}[ENDIF]",
+    "description": "CXCPQ-43536\nIf im = \"Non-Standard build\" then\nHW Hrs =(1.1 * (3 + 0.007 * (sys * 20 +mar * (40 + is*10)))) +  (0.25 * 1.1 * (6 + 0.007 * (sys * 20 +mar* (40 +is* 10) )))\nElse\nHW Hrs ={(1.1 * (3 + 0.007 * (sys * 20 +mar * (40 + is*10)))) +  (0.25 * 1.1 * (6 + 0.007 * (sys * 20 +mar* (40 +is* 10) )))}*0.94",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

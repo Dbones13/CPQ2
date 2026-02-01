@@ -1,0 +1,11 @@
+{
+    "id": 25953,
+    "condition": "[GT](<*VALUE(Point Control Scheduler(0-1))*>,0)",
+    "name": "EP-AESHED_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-AESHED)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-AESHED, <*VALUE(Point Control Scheduler(0-1))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

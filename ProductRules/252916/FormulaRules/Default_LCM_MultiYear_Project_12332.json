@@ -1,0 +1,11 @@
+{
+    "id": 12332,
+    "condition": "[EQ](<*VALUE(LCM_MultiYear_Project)*>,)",
+    "name": "Default LCM_MultiYear_Project",
+    "action": "<*SELECTVALUE(LCM_MultiYear_Project:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/03/24",
+    "modifiedBy": "Pushpita Guru"
+}

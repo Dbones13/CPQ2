@@ -1,0 +1,11 @@
+{
+    "id": 23625,
+    "condition": "[EQ](<*VALUE(HDP_Swap_MSID)*>,)",
+    "name": "set default HDP_Swap_MSID",
+    "action": "<*ASSIGNVALUE(HDP_Swap_MSID:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

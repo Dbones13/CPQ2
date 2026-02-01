@@ -1,0 +1,11 @@
+{
+    "id": 19034,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Do_you_need_SCU)*>,SCU Engineered Kit, up to   3,500 lb/hr (1,600 kg/hr)))",
+    "name": "CD_Part_9203_K3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9203-K3)*><*SETATVQTY(MX_CD_Bom_Parts:9203-K3, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

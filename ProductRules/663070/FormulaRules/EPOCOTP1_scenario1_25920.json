@@ -1,0 +1,11 @@
+{
+    "id": 25920,
+    "condition": "[AND](<*ISSELECTED(TouchScreen_FlexServerDesk.Yes)*>,<*ISSELECTED(NodeSupplier_FlexServer.Honeywell)*>)",
+    "name": "EP-OCOTP1_scenario1",
+    "action": "[IF](<*ISSELECTED(Server Redundancy Requirement?.Redundant)*>){<*ASSIGNVALUE(EP-OCOTP1_S1:2)*>}{<*ASSIGNVALUE(EP-OCOTP1_S1:1)*>}[ENDIF]",
+    "description": "CXCPQ-38928",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

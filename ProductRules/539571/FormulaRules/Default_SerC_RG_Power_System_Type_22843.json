@@ -1,0 +1,11 @@
+{
+    "id": 22843,
+    "condition": "[EQ](<*VALUE(SerC_RG_Power_System_Type)*>,)",
+    "name": "Default_SerC_RG_Power_System_Type",
+    "action": "[IF]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery)){<*SELECTVALUE(SerC_RG_Power_System_Type:Redundant 20A)*>}{<*SELECTVALUE(SerC_RG_Power_System_Type:Minimum Required Redundant)*>}[ENDIF]",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

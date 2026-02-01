@@ -1,0 +1,11 @@
+{
+    "id": 14280,
+    "condition": "[OR]([NOT](<*ATTDEF(MIQ_Are_the_GCs_redundant)*>),<* IsNull(<*VALUE(MIQ_Are_the_GCs_redundant)*>,1) *>)",
+    "name": "Set Default GCs redundant",
+    "action": "<*SELECTVALUE(MIQ_Are_the_GCs_redundant:No)*>",
+    "description": "CXCPQ-50741",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

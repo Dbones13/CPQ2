@@ -1,0 +1,11 @@
+{
+    "id": 9085,
+    "condition": "[EQ](<*CTX ( Container(CE_Project_Questions_Cont).Row(1).Column(Estimated_Project_Value_Cost).Get )*>,1)",
+    "name": "set value Estimated Project Value 1",
+    "action": "<*CTX ( Container(ExpProject_Que_Right).Row(1).Column(Estimated_Project_Value_Cost).Set(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

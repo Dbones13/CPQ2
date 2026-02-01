@@ -1,0 +1,11 @@
+{
+    "id": 19691,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Runtime System)*>,No),[GEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,56),[LEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,82))",
+    "name": "Experion HS 8000 Points Adder Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HME08K)*><*SETATVQTY(Experion_HS_PART_SUMMARY:EP-HME08K,<*VALUE(Exp HS Number of 100 point bundles)*>)*><* DoResetAtt *>",
+    "description": "Rule inactivated as part of CXCPQ-43096",
+    "rank": "6",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

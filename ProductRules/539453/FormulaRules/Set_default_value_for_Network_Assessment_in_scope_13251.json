@@ -1,0 +1,11 @@
+{
+    "id": 13251,
+    "condition": "[EQ](<*VALUE(Network Assessment in scope?)*>,)",
+    "name": "Set default value for Network Assessment in scope",
+    "action": "<*SELECTVALUE(Network Assessment in scope?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

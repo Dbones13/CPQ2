@@ -1,0 +1,11 @@
+{
+    "id": 20408,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Membrane_KB_Type)*>,)",
+    "name": "Default_SS_Orion_Console_Membrane_KB_Type",
+    "action": "<*SELECTVALUE(SS_Orion_Console_Membrane_KB_Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

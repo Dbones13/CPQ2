@@ -1,0 +1,11 @@
+{
+    "id": 15091,
+    "condition": "[EQ](<*VALUE(MXP_MXProLine_Additional_User_Station)*>,)",
+    "name": "Default_Additional_User_Station",
+    "action": "<*SELECTVALUE(MXP_MXProLine_Additional_User_Station:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

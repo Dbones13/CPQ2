@@ -1,0 +1,11 @@
+{
+    "id": 13955,
+    "condition": "[AND]([Like](<*CTX( Container(ES_Group).UniqueValues(eServer_Labor_parameter_var_8).Separator() )*>,Yes),[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR))",
+    "name": "eServer_Labor_procure_material_services",
+    "action": "<*ASSIGNVALUE(eServer_Labor_procure_material_services:8)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

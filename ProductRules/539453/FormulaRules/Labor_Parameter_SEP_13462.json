@@ -1,0 +1,11 @@
+{
+    "id": 13462,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_Parameter_SEP",
+    "action": "<*ASSIGNVALUE(SHE Engineering Plan:<*Eval((0.19*(1.1*(48+2*<*VALUE(Number of Physical Communication Links)*>+<*VALUE(Number of Console Sections with Hardwired IO)*>*(4/(<*VALUE(Number of Console Sections with Hardwired IO)*>+1)+0.5)+<*XValue(../EX_Labor_CT_Qty)*>^2+4*([IF]([EQ](<*XValue(../Labor_Unreleased_Product)*>,Yes)){1}{0}[ENDIF])+8*([IF]([EQ](<*VALUE(Use of SPI (Intools) in Scope?)*>,Yes)){1}{0}[ENDIF]))))+10*([IF]([EQ](<*VALUE(New_Expansion)*>,Expansion)){1}{0}[ENDIF]))*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

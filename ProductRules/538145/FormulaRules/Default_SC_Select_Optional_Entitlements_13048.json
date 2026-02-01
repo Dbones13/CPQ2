@@ -1,0 +1,11 @@
+{
+    "id": 13048,
+    "condition": "[EQ](<*CTX ( Container(SC_Select_Optional_Entitlements).Rows.GetCount )*>,0)",
+    "name": "Default_SC_Select_Optional_Entitlements",
+    "action": "<*CTX ( Container(SC_Select_Optional_Entitlements).Rows.Add(5) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(1).Column(Service_Product_Line_Item).Set(Trace Software Support) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(1).Column(Entitlement).Set(On-Site Support) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(2).Column(Service_Product_Line_Item).Set(Trace Software Support) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(2).Column(Entitlement).Set(Remote Field Support) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(3).Column(Service_Product_Line_Item).Set(Trace Subscription Service) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(3).Column(Entitlement).Set(Hardware Subscription) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(4).Column(Service_Product_Line_Item).Set(Trace Subscription Service) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(4).Column(Entitlement).Set(On-Site Support) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(5).Column(Service_Product_Line_Item).Set(Trace Subscription Service) )*><*CTX ( Container(SC_Select_Optional_Entitlements).Row(5).Column(Entitlement).Set(Remote Field Support) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

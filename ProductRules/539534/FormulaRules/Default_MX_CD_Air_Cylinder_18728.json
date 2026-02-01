@@ -1,0 +1,11 @@
+{
+    "id": 18728,
+    "condition": "[EQ](<*VALUE(MX_CD_Air_Cylinder)*>,)",
+    "name": "Default_MX_CD_Air_Cylinder",
+    "action": "<*SELECTVALUE(MX_CD_Air_Cylinder:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

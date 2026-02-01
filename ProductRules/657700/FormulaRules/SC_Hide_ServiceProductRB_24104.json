@@ -1,0 +1,11 @@
+{
+    "id": 24104,
+    "condition": "[NEQ](<* TABLE ( SELECT ISMULTISELALLOWED FROM CT_SC_Entitlements_Data WHERE  Product_Type = '<*CTX( Product.Attribute(SC_GN_AT_Product_Family).Value.Translated )*>' ORDER BY ISMULTISELALLOWED ASC ) *>,FALSE)",
+    "name": "SC_Hide_ServiceProductRB",
+    "action": "<*DISALLOWATTRIBUTES(SC_GN_AT_RB_Service_Products_Saas,SC_GN_AT_RB_Service_Products_Saas)*><*ALLOWATTRIBUTES(SC_GN_AT_Service_Product_Cont)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

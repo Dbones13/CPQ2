@@ -1,0 +1,11 @@
+{
+    "id": 18347,
+    "condition": "[EQ](<*VALUE(MXP_Vortex_Cooling)*>,Yes)",
+    "name": "Part_A_Q4611_20",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:Q4611-20)*><*SETATVQTY(MXP_SE_Bom_Parts:Q4611-20,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

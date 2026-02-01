@@ -1,0 +1,11 @@
+{
+    "id": 1065,
+    "condition": "[AND]([EQ](<*CTX( Container(OPM_Basic_Information).Row(1).Column(OPM_Is_this_is_a_Remote_Migration_Service_RMS).GetDisplayValue )*>,Yes),[EQ](<*CTX( Container(OPM_Basic_Information).Column(OPM_Does_the_customer_have_EBR_installed).GetPermission )*>,Hidden))",
+    "name": "Show OPM EBR installed",
+    "action": "<*CTX( Container(OPM_Basic_Information).Column(OPM_Does_the_customer_have_EBR_installed).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "24/01/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

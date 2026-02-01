@@ -1,0 +1,11 @@
+{
+    "id": 18200,
+    "condition": "[EQ](<*VALUE(MXP_Heat_Exchanger)*>,)",
+    "name": "Default_MXP_Heat_Exchanger",
+    "action": "<*SELECTVALUE(MXP_Heat_Exchanger:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

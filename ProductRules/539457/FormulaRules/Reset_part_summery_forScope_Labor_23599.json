@@ -1,0 +1,11 @@
+{
+    "id": 23599,
+    "condition": "[AND]([EQ](<* ProductName *>,Virtualization System Migration),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Reset_part_summery_forScope_Labor",
+    "action": "<*RESETATTRIBUTE(Virtualization_BOM_Parts)*> <*CTX ( Container(Virtualization_partsummary_cont).Rows.Clear )*>",
+    "description": "When Scope is Labor, HW and SW part not needed to add in Part summery. resetting attributes.",
+    "rank": "110",
+    "active": true,
+    "modifiedDate": "03/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

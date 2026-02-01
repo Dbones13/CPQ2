@@ -1,0 +1,11 @@
+{
+    "id": 23839,
+    "condition": "[EQ](<*CTX( Quote.CustomField(IsR2QRequest) )*>,Yes)",
+    "name": "R2Q_MIB_DefaultValueSet",
+    "action": "<*SELECTVALUE(MIB Configuration Required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

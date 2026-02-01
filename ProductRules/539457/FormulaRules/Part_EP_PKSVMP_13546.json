@@ -1,0 +1,11 @@
+{
+    "id": 13546,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B)),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_PKSVMP",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-PKSVMP)*><*SETATVQTY(Virtualization_BOM_Parts:EP-PKSVMP, 1)*><* DoResetAtt *>",
+    "description": "CCEECOMMBR-6879",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

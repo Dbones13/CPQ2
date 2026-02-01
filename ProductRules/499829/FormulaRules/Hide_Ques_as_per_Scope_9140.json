@@ -1,0 +1,11 @@
+{
+    "id": 9140,
+    "condition": "[EQ](<*VALUE(Trace_Software_Scope_Choices)*>,HW/SW)",
+    "name": "Hide Ques as per Scope",
+    "action": "<*DISALLOWATTRIBUTES(Trace_software_Active_Service_Contract,Trace_Software_Architecture_drawing_update,Trace_software_GES_Location,Trace_Software_Is_this_a_customized_installation,Trace_Software_Number_of_Tags)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

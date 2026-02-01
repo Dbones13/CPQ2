@@ -1,0 +1,11 @@
+{
+    "id": 25741,
+    "condition": "[AND]([EQ](<*VALUE(Experion Software Release)*>,R520),[GT](<*VALUE(ServerQuantity37544)*>,0))",
+    "name": "EP-COAS19 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-COAS19)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-COAS19,<*VALUE(ServerQuantity37544)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37544",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

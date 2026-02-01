@@ -1,0 +1,11 @@
+{
+    "id": 22840,
+    "condition": "[EQ](<*VALUE(SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet)*>,)",
+    "name": "Default_SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet",
+    "action": "[IF]([OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)){<*SELECTVALUE(SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet:Single IOTA)*>}{<*SELECTVALUE(SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet:Separate IOTA)*>}[ENDIF]",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

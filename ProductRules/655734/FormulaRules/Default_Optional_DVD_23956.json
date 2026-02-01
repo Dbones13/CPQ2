@@ -1,0 +1,11 @@
+{
+    "id": 23956,
+    "condition": "[NOT](<*ATTSEL(Terminal_Optional_DVD)*>)",
+    "name": "Default_Optional_DVD",
+    "action": "<*SELECTVALUE(Terminal_Optional_DVD:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

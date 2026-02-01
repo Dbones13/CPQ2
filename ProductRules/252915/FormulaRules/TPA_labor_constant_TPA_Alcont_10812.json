@@ -1,0 +1,11 @@
+{
+    "id": 10812,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_What_system_are_we_migrating)*>,TPA Alcont),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "TPA_labor_constant_TPA_Alcont",
+    "action": "<*ASSIGNVALUE(TPA_labor_para_cst_hhg:1.7)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_hng:1.7)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_hp:0.425)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_wptpas:40)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_whpb1:0.05)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_whpb2:0.116666667)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_gesblck:0.5)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_blckofst:0.86)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_blckonst:0.14)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_minfat_app:0.055)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_dsbmt:24)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_gdsb:24)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_hartdp:8)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_migsc:16)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_anbs:16)*>\n\n",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

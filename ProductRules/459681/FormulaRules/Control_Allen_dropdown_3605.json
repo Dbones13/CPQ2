@@ -1,0 +1,11 @@
+{
+    "id": 3605,
+    "condition": "[AND](<*ISSELECTED(Identifiers.A29)*>,[EQ](<*VALUE(Scada_chek)*>,1))",
+    "name": "Control_Allen_dropdown",
+    "action": "<*DISALLOWVALUES(Devices:Yes)*>\n<*SELECTVALUE(Devices:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

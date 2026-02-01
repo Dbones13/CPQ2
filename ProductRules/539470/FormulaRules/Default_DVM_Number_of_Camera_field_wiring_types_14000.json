@@ -1,0 +1,11 @@
+{
+    "id": 14000,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Camera_field_wiring_types)*>,)",
+    "name": "Default_DVM_Number_of_Camera_field_wiring_types",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Camera_field_wiring_types:2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

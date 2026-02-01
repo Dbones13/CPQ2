@@ -1,0 +1,11 @@
+{
+    "id": 20071,
+    "condition": "[GT](<*CTX ( Container(Document_cont_c300).Rows.GetCount )*>,0)",
+    "name": "assign_value_for document",
+    "action": "<*CTX ( Container(Document_cont_c300).Row(1).Column(Number of Profibus DP Slave devicesRed).Set(<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Red)*>) )*>\n<*CTX ( Container(Document_cont_c300).Row(1).Column(Number of Profibus DP Slave devicesNred).Set(<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Non_Red)*>) )*>\n<*CTX ( Container(Document_cont_c300).Row(1).Column(Red ControlLogix Processors).Set(<*VALUE(SerC_NO of Rock Ctrl Processors Redundant0-999NEW)*>) )*>\n<*CTX ( Container(Document_cont_c300).Row(1).Column(NonRed ControlLogix Processors).Set(<*VALUE(SerC_Number_of_Rockwell_ControlLogix_Processors)*>) )*>\n<*CTX ( Container(Document_cont_c300).Row(1).Column(Red Process Connected IO Devices).Set(<*VALUE(SerC_Nu of Proc Conn I/O Devi (Redundant ) (0-999))*>) )*>\n<*CTX ( Container(Document_cont_c300).Row(1).Column(NonRed Process Connected IO Devices).Set(<*VALUE(SerC_Number of Process Connected I/O Devices 1)*>) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

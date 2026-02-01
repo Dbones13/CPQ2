@@ -1,0 +1,11 @@
+{
+    "id": 10583,
+    "condition": "[EQ](<*VALUE(CWS_Mig_system_contain_Serial_Communication_links)*>,)",
+    "name": "CWS_Mig_Default_Serial_Communication_links",
+    "action": "<*SELECTVALUE(CWS_Mig_system_contain_Serial_Communication_links:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

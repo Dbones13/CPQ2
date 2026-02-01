@@ -1,0 +1,11 @@
+{
+    "id": 19793,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,Yes)",
+    "name": "Disallow_SerC_CG_IO_Family_Type",
+    "action": "<*DISALLOWVALUES(SerC_CG_IO_Family_Type:Series C)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

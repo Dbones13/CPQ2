@@ -1,0 +1,11 @@
+{
+    "id": 18446,
+    "condition": "[NEQ](<*VALUE(MXP_Measurement_Type)*>,IRPlus)",
+    "name": "IRPlus_dissallow",
+    "action": "<*DISALLOWVALUES(MXP_Sensor_Type:2CH IRPlus Transmission,MXP_Sensor_Type:IRPlus Transmission,MXP_Sensor_Type:IRPlus Transmission - Additional number of channels)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

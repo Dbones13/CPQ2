@@ -1,0 +1,11 @@
+{
+    "id": 13091,
+    "condition": "[EQ](<*VALUE(SESP_Training_Match_Flag)*>,1)",
+    "name": "Training_Match_Value_Assignment",
+    "action": "<*ASSIGNVALUE(SC_Training_Match_Contract_Value_SS:[IF]([GEQ](<*VALUE(SC_Training_Match_Contract_Value)*>,0)){<*VALUE(SC_Training_Match_Contract_Value)*>}{<* Eval((0<*VALUE(SC_Training_Match_Contract_Value_Percent)*>)*0.01*(0<*CTX ( Container(SC_SESP Models Hidden).Sum(Price) )*>)) *>}[ENDIF])*>",
+    "description": "Assigning value to the Scope summary Training match attributes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

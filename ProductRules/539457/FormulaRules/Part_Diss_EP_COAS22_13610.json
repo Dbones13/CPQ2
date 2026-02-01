@@ -1,0 +1,11 @@
+{
+    "id": 13610,
+    "condition": "[NOT]([GT](<*VALUE(Virtualization_Windows_Server_2022_COA_Licenses)*>,0))",
+    "name": "Part_Diss_EP_COAS22",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-COAS22)*><* DoResetAtt *>",
+    "description": "Story 8705",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

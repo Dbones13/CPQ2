@@ -1,0 +1,11 @@
+{
+    "id": 926,
+    "condition": "1",
+    "name": "PopulateSelectedProducts",
+    "action": "<*ASSIGNVALUE(MSID_Selected_Products:<* Eval(Replace(\"<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(<br>) )*>[IF]([EQ](<*CTX( Container(MSID_Product_Container_Virtualization_hidden).Rows.GetCount )*>,1)){[IF]([NEQ](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(<br>) )*>,)){<br>}{}[ENDIF]Virtualization System}{}[ENDIF][IF]([GT](<*CTX( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,0)){[IF]([NEQ](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(<br>) )*>,)){<br>}{}[ENDIF]Generic System}{}[ENDIF]\",\"<br>Project Management\",\"\")) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "20/10/23",
+    "modifiedBy": "Madhuri Sharma"
+}

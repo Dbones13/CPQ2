@@ -1,0 +1,11 @@
+{
+    "id": 10572,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Migration_performed_by_PEC_using_Honeywell)*>,)",
+    "name": "QCS_Mig_Default_Mig_performed",
+    "action": "<*SELECTVALUES(QCS_Mig_Migration_performed_by_PEC_using_Honeywell:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

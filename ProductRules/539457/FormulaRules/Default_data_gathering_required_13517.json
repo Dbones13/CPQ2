@@ -1,0 +1,11 @@
+{
+    "id": 13517,
+    "condition": "[EQ](<*VALUE(Virtualization_FEL_Data_gathering_required)*>,)",
+    "name": "Default_data_gathering_required",
+    "action": "<*SELECTVALUE(Virtualization_FEL_Data_gathering_required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

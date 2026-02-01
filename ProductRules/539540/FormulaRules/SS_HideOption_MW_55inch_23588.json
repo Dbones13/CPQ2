@@ -1,0 +1,11 @@
+{
+    "id": 23588,
+    "condition": "[EQ](<*VALUE(SS_Display_size_desk)*>,55 inch NTS)",
+    "name": "SS_HideOption_MW_55inch",
+    "action": "<*DISALLOWVALUES(SS_Desk_Multi_Window_Support_Option_Required_desk:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20206,
+    "condition": "[EQ](<*VALUE(DVM_4_Camera_Database_Server_Redundant_L)*>,)",
+    "name": "Defalt_DVM_4_Camera_Database_Server_Redundant_L",
+    "action": "<*SELECTVALUE(DVM_4_Camera_Database_Server_Redundant_L:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

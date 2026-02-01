@@ -1,0 +1,11 @@
+{
+    "id": 24044,
+    "condition": "[AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,Dell XR11),[EQ](<*VALUE(Terminal_Optional_DVD)*>,Yes))",
+    "name": "Add_MZ-PCDVD1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-PCDVD1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

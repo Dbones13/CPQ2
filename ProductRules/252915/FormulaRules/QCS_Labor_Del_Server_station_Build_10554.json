@@ -1,0 +1,11 @@
+{
+    "id": 10554,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "QCS_Labor_Del_Server_station_Build",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_Server_station_Build:<* Eval(4*(1+<*VALUE(QCS_Mig_Number_of_Operator_Stations)*>+<*VALUE(QCS_Mig_Enter_Number_of_AllianceView_Servers)*>)) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

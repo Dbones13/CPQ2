@@ -1,0 +1,11 @@
+{
+    "id": 17958,
+    "condition": "[GT](<*VALUE(PCD_Qty_of_PCD3_Additional_Connector_Type_K)*>,0)",
+    "name": "Add_440550480",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PCD_Part_Summary:440550480)*><*SETATVQTY(PCD_Part_Summary:440550480,<*VALUE(PCD_Qty_of_PCD3_Additional_Connector_Type_K)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26528,
+    "condition": "<*ISSELECTED(Power Cord Type.Argentina)*>",
+    "name": "Show_51199562_207",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51199562-207)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51199562-207, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38337",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

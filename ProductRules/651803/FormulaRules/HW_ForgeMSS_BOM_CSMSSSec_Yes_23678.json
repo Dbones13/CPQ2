@@ -1,0 +1,11 @@
+{
+    "id": 23678,
+    "condition": "1",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-Sec_Yes",
+    "action": "[IF]([EQ](<*VALUE(Secure Remote Access)*>, Yes)){[IF]([OR]([EQ](<*VALUE(Number of Network Assets)*>,), [EQ](<*VALUE(Number of Windows Assets)*>,))){<*SELECTVALUES(Secure Remote Access BOM:CS-MSS-SEC-ANL|CS-MSS-SEC-BASE)*><*SETATVQTY(Secure Remote Access BOM:CS-MSS-SEC-BASE, 0)*><*SETATVQTY(Secure Remote Access BOM:CS-MSS-SEC-ANL, 0)*>}{<*SELECTVALUES(Secure Remote Access BOM:CS-MSS-SEC-ANL|CS-MSS-SEC-BASE)*><*SETATVQTY(Secure Remote Access BOM:CS-MSS-SEC-BASE, <* Eval(Round((<*VALUE(Number of Windows Assets)*>+Round(<*VALUE(Number of Network Assets)*>/5))/200)) *>)*><*SETATVQTY(Secure Remote Access BOM:CS-MSS-SEC-ANL, <* Eval(Round((<*VALUE(Number of Windows Assets)*>+Round(<*VALUE(Number of Network Assets)*>/5))/200)) *>)*>}[ENDIF]}{}[ENDIF]",
+    "description": "",
+    "rank": "40",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

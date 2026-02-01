@@ -1,0 +1,11 @@
+{
+    "id": 14102,
+    "condition": "[EQ](<*VALUE(HS_Number_of_Experion)*>,)",
+    "name": "Set Attribute Value to 1",
+    "action": "<*SELECTVALUE(HS_Number_of_Experion:1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

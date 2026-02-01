@@ -1,0 +1,11 @@
+{
+    "id": 13095,
+    "condition": "[EQ](<*VALUE(SESP_Training_Match_Flag)*>,1)",
+    "name": "Show_Scope_Summary_Training_Match_Attribute",
+    "action": "<*ALLOWATTRIBUTES(SC_Training_Match_Contract_Value_SS)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

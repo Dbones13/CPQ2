@@ -1,0 +1,11 @@
+{
+    "id": 23581,
+    "condition": "[IF]([EQ](<*CTX ( Container(AR_HCI_LABOR_CONTAINER).Rows.GetCount )*>,0)){0}{1}[ENDIF]",
+    "name": "ALLOW_ATTRIBUTES",
+    "action": "<*ALLOWATTRIBUTES(AR_HCI_SELECTALL)*>\n<*ALLOWATTRIBUTES(AR_HCI_PRODUCT_LINE)*>\n<*ALLOWATTRIBUTES(AR_HCI_Executioncountry)*>\n<*ALLOWATTRIBUTES(AR_HCI_EXECUTION_YEAR)*>\n<*ALLOWATTRIBUTES(AR_HCI_PRODUCTIVITY)*>\n<*ALLOWATTRIBUTES(AR_APPLY)*>\n<*ALLOWATTRIBUTES(AR_HCI_GES Location)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23831,
+    "condition": "[AND]([EQ](<*VALUE(OPM_Servers_and_Stations_HW_replace_needed)*>,Yes),[OR]([EQ](<*VALUE(MSID_Future_Experion_Release)*>,R530),[EQ](<*VALUE(MSID_Future_Experion_Release)*>,R520)))",
+    "name": "Show_Dell R350XE_Other_Server",
+    "action": "<*ALLOWVALUES(OPM_Other_Servers_Hardware_Selection:DELL R360 MLK)*>",
+    "description": "Story 8702",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

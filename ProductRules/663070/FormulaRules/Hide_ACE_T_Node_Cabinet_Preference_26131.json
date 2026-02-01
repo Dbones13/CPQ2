@@ -1,0 +1,11 @@
+{
+    "id": 26131,
+    "condition": "[OR]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Interface with TPS Required?)*>,No)),[EQ](<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,0)",
+    "name": "Hide_ACE_T_Node_Cabinet_Preference",
+    "action": "<*DISALLOWATTRIBUTES(ACE-T Node in Cabinet Preference,Additional Hard Disk_ACE_T,Rack Mounting Type for ACE-T Node,Node Supplier_ACE_T,Additional Memory_ACE_T,Ent_ace_t_Cab_tpm,Hardware Design Selection)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

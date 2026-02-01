@@ -1,0 +1,11 @@
+{
+    "id": 26166,
+    "condition": "[AND]([GT]([IF]([GT](<*VALUE(Exp_Batch_Add_TCRCM010_int)*>,<*VALUE(Exp_Batch_Add_TCRCM010_qty)*>)){<*VALUE(Exp_Batch_Add_TCRCM010_qty_Plus1)*>}{<*VALUE(Exp_Batch_Add_TCRCM010_qty)*>}[ENDIF],0),[GT](<*VALUE(Exp Batch Unit/ Recipe Control Module License(0-600))*>,0))",
+    "name": "Exp_Batch_Add_TCRCM010",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TC-RCM010)*>[IF]([GT](<*VALUE(Exp_Batch_Add_TCRCM010_int)*>,<*VALUE(Exp_Batch_Add_TCRCM010_qty)*>)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-RCM010,<*VALUE(Exp_Batch_Add_TCRCM010_qty_Plus1)*>)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-RCM010,<*VALUE(Exp_Batch_Add_TCRCM010_qty)*>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "Add TC-RCM010",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

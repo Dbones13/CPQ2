@@ -1,0 +1,11 @@
+{
+    "id": 20194,
+    "condition": "[EQ](<*VALUE(DVM_Encoder_I/O_Monitoring)*>,)",
+    "name": "Default_DVM_Encoder_I/O_Monitoring",
+    "action": "<*SELECTVALUE(DVM_Encoder_I/O_Monitoring:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

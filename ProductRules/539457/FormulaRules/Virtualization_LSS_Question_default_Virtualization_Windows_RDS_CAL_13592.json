@@ -1,0 +1,11 @@
+{
+    "id": 13592,
+    "condition": "[EQ](<*VALUE(Virtualization_Windows_RDS_CAL)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_Windows_RDS_CAL",
+    "action": "<*ASSIGNVALUE(Virtualization_Windows_RDS_CAL:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

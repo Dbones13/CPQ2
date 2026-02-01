@@ -1,0 +1,11 @@
+{
+    "id": 26395,
+    "condition": "[NOT]([OR]([AND](<*ISSELECTED(Cabinet Doors.Reverse Front & Rear)*>,[EQ](<*VALUE(Cabinet Depth)*>,0.8M),[EQ](<*VALUE(CE_Site_Voltage)*>,120V),<*ISSELECTED(CE_Site_Frequency.60Hz)*>),[AND](<*ISSELECTED(Cabinet Doors.Reverse Front & Rear)*>,[EQ](<*VALUE(Cabinet Depth)*>,0.8M),[EQ](<*VALUE(CE_Site_Voltage)*>,120V),<*ISSELECTED(CE_Site_Frequency.60Hz)*>,[GT](<*VALUE(Network_Cabinet_Qty)*>,0)),[AND](<*ISSELECTED(Cabinet Doors.Reverse Front & Rear)*>,[NEQ](<*VALUE(Cabinet Depth)*>,0.8M),[EQ](<*VALUE(CE_Site_Voltage)*>,120V),<*ISSELECTED(CE_Site_Frequency.60Hz)*>,[GT](<*VALUE(Network_Cabinet_Qty)*>,0))))",
+    "name": "Remove  MP-C8LCB1-101",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-101)*><* DoResetAtt *>",
+    "description": "CXCPQ-37826",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

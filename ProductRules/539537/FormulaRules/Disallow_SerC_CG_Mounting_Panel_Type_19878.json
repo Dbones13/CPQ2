@@ -1,0 +1,11 @@
+{
+    "id": 19878,
+    "condition": "[NOT]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Mounting Panel)*>))",
+    "name": "Disallow_SerC_CG_Mounting_Panel_Type",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Mounting_Panel_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

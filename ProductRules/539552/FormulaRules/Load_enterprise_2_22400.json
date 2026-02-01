@@ -1,0 +1,11 @@
+{
+    "id": 22400,
+    "condition": "[AND]([EQ](<*VALUE(Enterprise_flag_check)*>,True),[EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes))",
+    "name": "Load_enterprise_2",
+    "action": "<*ALLOWATTRIBUTES(SM_Enterprise_Cluster_2)*>\n<*CTX( Container(SM_Enterprise_Cluster_2).LoadKeys(ListIndex).Load(select <*eval(Replace(\"'\" + Replace(\"<*VALUE(Enterprise_Groups_list)*>\",\"| \",\"' as EnterpriseGroup  UNION SELECT '\") + \"'\",\"#\",\"' as ListIndex,'\"))*> as EnterpriseGroup ))*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

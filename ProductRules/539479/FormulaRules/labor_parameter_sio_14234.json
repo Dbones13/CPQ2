@@ -1,0 +1,11 @@
+{
+    "id": 14234,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "labor_parameter_sio",
+    "action": "<*ASSIGNVALUE(Labor_parameter_sio:<* Eval(0<*VALUE(Number_of_Peer_CDA)*>+0<*VALUE(Number_of_Peer_PCDI)*>+0<*VALUE(Number_of_Peer_to_Peer_Soft_IO)*>+0<*VALUE(Number_of_Third_Party_Soft_IO_(Serial/SCADA))*>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

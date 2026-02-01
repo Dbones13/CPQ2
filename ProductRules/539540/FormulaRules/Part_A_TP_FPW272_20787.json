@@ -1,0 +1,11 @@
+{
+    "id": 20787,
+    "condition": "[GT](<*VALUE(SS_27inch_NTS_DELL)*>,0)",
+    "name": "Part_A_TP_FPW272",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:TP-FPW272)*><*SETATVQTY(Simulation_Bom_parts:TP-FPW272,<*VALUE(SS_27inch_NTS_DELL)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10950,
+    "condition": "[NOT]([AND]([GT](<*CTX( Container(HC900_Rack_Size_Quantity_Cont).Sum(Quantity) )*>,0),[EQ](<*VALUE(HC900_Power_Supply_Module_Type_&_Configuration)*>,24 VDC, 60 Watt P/S)))",
+    "name": "Reset 900P24-0601",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900P24-0601)*><* DoResetAtt *>",
+    "description": "CXCPQ-51871",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

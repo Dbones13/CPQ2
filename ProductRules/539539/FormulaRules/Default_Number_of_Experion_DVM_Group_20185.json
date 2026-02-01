@@ -1,0 +1,11 @@
+{
+    "id": 20185,
+    "condition": "[EQ](<*VALUE(Number_of_Experion_DVM_Group)*>,)",
+    "name": "Default_Number_of_Experion_DVM_Group",
+    "action": "<*ASSIGNVALUE(Number_of_Experion_DVM_Group:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

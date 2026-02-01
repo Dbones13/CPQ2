@@ -1,0 +1,11 @@
+{
+    "id": 17882,
+    "condition": "[EQ](<*CTX( Container(Modbus/OPC Interfaces).Row(6).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-OPCCLI_Hide",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-OPCCLI)*><* DoResetAtt *>",
+    "description": "Hide-EP-OPCCLI",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

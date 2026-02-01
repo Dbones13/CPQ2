@@ -1,0 +1,11 @@
+{
+    "id": 15006,
+    "condition": "[EQ](<*VALUE(LSS_PLC_Select_the_Experion_Node_to_be_installed)*>,Console Extension)",
+    "name": "BOM_PLC_UOC_EP-STACEX",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-STACEX)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-STACEX, <*VALUE(LSS_PLC_Total_number_of_Panel_PCs_required)*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

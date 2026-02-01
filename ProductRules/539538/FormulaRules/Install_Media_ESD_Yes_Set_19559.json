@@ -1,0 +1,11 @@
+{
+    "id": 19559,
+    "condition": "[AND]([EQ](<*VALUECODE(Exp HS Installation Media \u2013ESD Version only)*>,Yes),[EQ](<*VALUE(New_Expansion)*>,New))",
+    "name": "Install Media ESD Yes Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HME520-ESD)*><* DoResetAtt *>",
+    "description": "Add EP-HME520-ESD",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18235,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,MXIR Coat Weight SSIR CLAY / CACO3)",
+    "name": "Part_D_Q6406_73",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q6406-73)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

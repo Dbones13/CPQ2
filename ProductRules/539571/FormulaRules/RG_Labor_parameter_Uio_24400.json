@@ -1,0 +1,11 @@
+{
+    "id": 24400,
+    "condition": "1",
+    "name": "RG_Labor_parameter_Uio",
+    "action": "<*ASSIGNVALUE(RG_Labor_parameter_Uio:<* Eval(0<*VALUE(RG_Labor_parameter_Uio_1)*> + 0<*VALUE(RG_Labor_parameter_Uio_2)*>) *>)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Saratha  Gnanamani"
+}

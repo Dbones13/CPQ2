@@ -1,0 +1,11 @@
+{
+    "id": 20483,
+    "condition": "[LEQ](<*VALUE(SS_OTS_CAB_Developer_license)*>,0)",
+    "name": "Part_D_EP_OTU030",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-OTU030)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

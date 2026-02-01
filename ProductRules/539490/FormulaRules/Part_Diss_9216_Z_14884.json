@@ -1,0 +1,11 @@
+{
+    "id": 14884,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CDWeb_IDP_Interface_for_existing_Devronizer_ Calendizer_or_3rd_party_system)*>,CDWeb/IDP Interface Upgrade for existing Devronizer or pneumatic Calendizer),[EQ](<*VALUE(MXP_Number_of_Zones)*>,0))",
+    "name": "Part_Diss_9216_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:9216-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

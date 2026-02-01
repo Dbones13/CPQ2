@@ -1,0 +1,11 @@
+{
+    "id": 10747,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_PLC_Server_Redundancy)*>,))\n\n",
+    "name": "Default_LSS_PLC_Server_Redundancy",
+    "action": "<*SELECTVALUE(LSS_PLC_Server_Redundancy:Redundant)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

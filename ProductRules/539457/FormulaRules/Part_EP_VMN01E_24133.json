@@ -1,0 +1,11 @@
+{
+    "id": 24133,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[EQ](<*VALUE(Nutanix License Type)*>,Per VM),[GT](<* Eval(<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Sum(Number_of_Nutanix_NCIE_Per_VM_25) )*>  ) *>,0))",
+    "name": "Part_EP_VMN01E",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VMN01E)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VMN01E,<* Eval(<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Sum(Number_of_Nutanix_NCIE_Per_VM_25) )*> ) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/01/26",
+    "modifiedBy": "Abhijeet Shinde"
+}

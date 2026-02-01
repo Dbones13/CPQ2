@@ -1,0 +1,11 @@
+{
+    "id": 26354,
+    "condition": "[NOT]([AND](<*ISSELECTED(Cabinet Doors.Reverse Front & Rear)*>,[EQ](<*VALUE(Cabinet Depth)*>,1M),[EQ](<*VALUE(CE_Site_Voltage)*>,120V),<*ISSELECTED(CE_Site_Frequency.60Hz)*>,[GT](<*VALUE(exp_ent_cab_qnt)*>,0)))",
+    "name": "Remove MP-C1MCB1-101",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-101)*><* DoResetAtt *>",
+    "description": "CXCPQ-37820",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

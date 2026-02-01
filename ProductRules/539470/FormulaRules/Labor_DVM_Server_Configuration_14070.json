@@ -1,0 +1,11 @@
+{
+    "id": 14070,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_DVM_Server_Configuration",
+    "action": "<*ASSIGNVALUE(Labor_DVM_Server_Configuration:<* Eval(4*(<*VALUE(DVM_Number_of_DVM_DB_Servers)*>+<*VALUE(DVM_Number_of_DVM_CM_Servers)*>+<*VALUE(DVM_Number_of_Video_Analytic_Servers)*>+<*VALUE(Labor_Parameter_AQ)*>)) *>)*>",
+    "description": "CXCPQ-51106",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

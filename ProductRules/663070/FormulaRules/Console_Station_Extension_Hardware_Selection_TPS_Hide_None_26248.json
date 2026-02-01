@@ -1,0 +1,11 @@
+{
+    "id": 26248,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R530),<*ISSELECTED(Orion Stations required.Yes)*>,[GT](<*VALUE(Console Station Extension Qty  (0-15))*>,0))",
+    "name": "Console_Station_Extension_Hardware_Selection_TPS_Hide_None",
+    "action": "<*DISALLOWVALUES(Console Station Extension Hardware Selection:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "05/01/26",
+    "modifiedBy": "Jaskaran Singh"
+}

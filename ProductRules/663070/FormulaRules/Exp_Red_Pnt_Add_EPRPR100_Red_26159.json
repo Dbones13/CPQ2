@@ -1,0 +1,11 @@
+{
+    "id": 26159,
+    "condition": "[AND]([GT]([IF]([GT](<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_int)*>,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>)){<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty_plus1)*>}{<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>}[ENDIF],0),[GT](<*VALUE(Experion Process Points (0 - 45000))*>,0))",
+    "name": "Exp_Red_Pnt_Add_EPRPR100_Red",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR100)*>[IF]([GT](<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_int)*>,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DPR100,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty_plus1)*>)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DPR100,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "ADD EP_DPR100",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

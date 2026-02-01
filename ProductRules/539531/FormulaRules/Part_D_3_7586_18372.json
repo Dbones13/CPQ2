@@ -1,0 +1,11 @@
+{
+    "id": 18372,
+    "condition": "[NEQ](<*VALUE(MXP_Dusty_Environment_Kit)*>,Yes)",
+    "name": "Part_D_3_7586",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-7586)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

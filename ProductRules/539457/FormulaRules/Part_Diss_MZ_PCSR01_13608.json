@@ -1,0 +1,11 @@
+{
+    "id": 13608,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Virtualization_vSphere_Client_Node_Type)*>,Dell R250XE),[GT](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,0)))",
+    "name": "Part_Diss_MZ_PCSR01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCSR01)*><* DoResetAtt *>",
+    "description": "Story 8705",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

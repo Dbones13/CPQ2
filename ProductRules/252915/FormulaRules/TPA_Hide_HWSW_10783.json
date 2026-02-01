@@ -1,0 +1,11 @@
+{
+    "id": 10783,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW))",
+    "name": "TPA_Hide_HW/SW",
+    "action": "<*DISALLOWATTRIBUTES(TPA_Total_IO_Count_in_existing_system,TPA_Do_you_know_the_number_of_huge_and_normal_TPA_PMD_HMI_graphics,TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups,TPA_Count_of_huge_TPA_PMD_HMI_graphics,TPA_Count_of_normal_TPA_PMD_HMI_graphics,TPA_Count_of_popup_displays,TPA_Count_of_application_blocks_in_department,TPA_Additional_hours_to_Manage_Module_application_done_in_the_TPA,TPA_Additional_hours_for_Optimization_Application_packages_existing_in_current_TPA_system,TPA_Additional_hours_for_PMD_Localization_implementation,TPA_Amount_of_existing_FC_FCEs_that_can_will_be_reused_in_new_system_after_migration,TPA_Total_amount_of_IOC_cards_which_are_now_in_existing_system,TPA_How_many_Profibus_Profinet_busses_are_now_connected_to_existing_DP,TPA_Are_HART_used_in_Profibus_links,TPA_Include_separate_Cyber_Security_FAT_to_the_delivery,TPA_Existing_RTU_in_FC_or_existing_terminal_device_server_used_Existing_serial_links_that_remains_as_is_now,Header_31_close,Header_31_open,TPA_Requirement_for_customer_FAT,TPA_Project_lenght_in_months,TPA_How_many_face_to_face_project_meetings_in_customer_premises,TPA_Commissioning_site_support_days_required_on_top_standard_migration_activities,TPA_Include_T_L_to_Honeywell_scope,TPA_T_L_for_International_project_or_Domestic_proposal,TPA_What_kind_of_project_LSS_type_of_project_or_PAS_or_LARGE_LSS_project,TPA_Are_there_known_uncertainties_in_the_projects)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

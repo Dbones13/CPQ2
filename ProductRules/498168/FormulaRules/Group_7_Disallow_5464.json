@@ -1,0 +1,11 @@
+{
+    "id": 5464,
+    "condition": "[AND]([NEQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,0),[EQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,7))",
+    "name": "Group 7 Disallow",
+    "action": "<*DISALLOWATTRIBUTES(TL_Dummy_Attr_8,TL_Dummy_Attr_9,TL_Dummy_Attr_10,ATTCON_08_close,ATTCON_08_open,Header_09_close,Header_09_open,TL_Travel_Phase_8,TL_Inputs_8,ATTCON_09_close,ATTCON_09_open,Header_10_close,Header_10_open,TL_Travel_Phase_9,TL_Inputs_9,ATTCON_10_close,ATTCON_10_open,Header_11_close,Header_11_open,TL_Travel_Phase_10,TL_Inputs_10,TL_Expense_Calculation_Cont_8,TL_Expense_Calculation_Cont_9,TL_Expense_Calculation_Cont_10)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

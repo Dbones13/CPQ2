@@ -1,0 +1,11 @@
+{
+    "id": 3351,
+    "condition": "[AND]([GT](<*CTX( Container(CE_System_Cont).Rows.GetCount )*>,1),[NEQ](<*VALUE(CE_Selected_Products)*>,Experion HS System))",
+    "name": "Hide_System_Asset",
+    "action": "<*ALLOWATTRIBUTES(CE_General_Inputs_Cont)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

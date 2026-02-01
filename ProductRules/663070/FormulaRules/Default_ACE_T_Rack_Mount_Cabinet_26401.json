@@ -1,0 +1,11 @@
+{
+    "id": 26401,
+    "condition": "[EQ](<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,)",
+    "name": "Default ACE T Rack_Mount_Cabinet",
+    "action": "<*ASSIGNVALUE(ACE_T_Node _Rack_Mount_Cabinet:0)*>",
+    "description": "Default value for ACE T Rack_Mount_Cabinet Node",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

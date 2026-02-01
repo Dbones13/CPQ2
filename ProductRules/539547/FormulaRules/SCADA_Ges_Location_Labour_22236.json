@@ -1,0 +1,11 @@
+{
+    "id": 22236,
+    "condition": "[EQ](<*VALUE(SCADA_Ges_Location_Labour)*>,)",
+    "name": "SCADA_Ges_Location_Labour",
+    "action": "<*SELECTVALUE(SCADA_Ges_Location_Labour:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

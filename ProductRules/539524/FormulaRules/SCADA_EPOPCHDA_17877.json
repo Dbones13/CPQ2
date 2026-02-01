@@ -1,0 +1,11 @@
+{
+    "id": 17877,
+    "condition": "[GT](<*CTX( Container(OPC Application Instances).Row(4).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-OPCHDA",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-OPCHDA)*><*SETATVQTY(SCADA_BOM_Items:EP-OPCHDA,<*CTX( Container(OPC Application Instances).Row(4).Column(Nodes).Get )*>)*><* DoResetAtt *>",
+    "description": "Add-EP-OPCHDA",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

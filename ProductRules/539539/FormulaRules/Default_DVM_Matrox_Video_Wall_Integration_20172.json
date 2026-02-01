@@ -1,0 +1,11 @@
+{
+    "id": 20172,
+    "condition": "[EQ](<*VALUE(DVM_Matrox_Video_Wall_Integration)*>,)",
+    "name": "Default_DVM_Matrox_Video_Wall_Integration",
+    "action": "<*SELECTVALUE(DVM_Matrox_Video_Wall_Integration:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

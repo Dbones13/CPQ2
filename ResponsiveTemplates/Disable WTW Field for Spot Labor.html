@@ -1,0 +1,1576 @@
+@using WebSite.Models
+@using WebSite.Controllers
+@model CartItemTableViewModel
+
+<!--ko let: {
+    constcustomFields: {
+        CF_NewCurrency: $root.customFields.firstWithProperty('name', 'CF_NewCurrency')?.content(),
+        Currency: $root.customFields.firstWithProperty('name', 'Currency')?.content(),
+        quoteType: $root.customFields.firstWithProperty('name', 'Quote Type')?.content(),
+        bookingLOB: $root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content(),
+        bookingcountry: $root.customFields.firstWithProperty('name', 'Booking Country')?.content().toLowerCase(),
+        ItemTypeFilter: $root.customFields.firstWithProperty('name', 'ItemTypeFilter')?.content(),
+        SC_CF_AGREEMENT_TYPE: $root.customFields.firstWithProperty('name', 'SC_CF_AGREEMENT_TYPE')?.content(),
+        CF_Factory_Data_Applicable: $root.customFields.firstWithProperty('name', 'CF_Factory_Data_Applicable')?.content(),
+        IsWTWCostAllowed: $root.customFields.firstWithProperty('name', 'IsWTWCostAllowed')?.content(),
+        CF_QuotationTab_Multiyear: $root.customFields.firstWithProperty('name', 'CF_QuotationTab_Multiyear')?.content()
+    },
+    orderStatusName: $root.orderStatusName() } -->
+<!--ko let: {constCheks: {check1: ["Parts and Spot", "Projects"].includes(constcustomFields.quoteType) && ["PMC", "CCC"].includes(constcustomFields.bookingLOB),
+						  check2: ["Parts and Spot" ].includes(constcustomFields.quoteType) && ["LSS", "HCP", "SME"].includes(constcustomFields.bookingLOB),
+						  check3: constcustomFields.quoteType === "Projects" && ["LSS", "HCP", "SME"].includes(constcustomFields.bookingLOB),
+						  check4: constcustomFields.quoteType === "Projects" && ["LSS", "HCP", "PAS"].includes(constcustomFields.bookingLOB) && ["india"].includes(constcustomFields.bookingcountry) && ["INR","EUR","USD"].includes(constcustomFields.Currency),
+						  check5: ["Projects"].includes(constcustomFields.quoteType) && ["PAS"].includes(constcustomFields.bookingLOB),
+						  check6: ["Contract Renewal","Contract New"].includes(constcustomFields.quoteType),
+						  check7: orderStatusName === 'Preparing' && constcustomFields.CF_NewCurrency !== '' && constcustomFields.CF_NewCurrency !== constcustomFields.Currency,
+                          check8: ["Parts and Spot", "Projects"].includes(constcustomFields.quoteType) && constcustomFields.bookingLOB == 'PMC',
+						  check9: constcustomFields.quoteType === "Parts and Spot" && constcustomFields.bookingLOB === "LSS"
+                          }}-->
+
+    <div data-bind="visible: !isEmpty()">
+        <div id="no-more-tables" class="table-responsive cpq-scroll fiori3-items-table fiori3-items-table-sticky tableFixHead" data-bind="css: { 'fiori3-quote2-table': $root.useNewQuoteEngine, 'no-reorder': !$root.allowReorderingItems && !$root.useNewQuoteEngine, 'no-delete': !canDeleteAnyItems() || $root.useNewQuoteEngine, 'reorder-no-delete': $root.allowReorderingItems && !canDeleteAnyItems() && !$root.useNewQuoteEngine }">
+            <table class="fiori3-table items-table tableFixHead">
+                <thead>
+                    <tr>
+                        <!-- ko if: (constCheks.check7) -->
+                            <th tabindex="0" rowspan="2" class="search-items-sticky no-first-column-sticky no-reorder no-delete">
+                                <div class="fiori3-items-search" data-bind="css: { 'search-in-use': isSearchInputFocused() }">
+                                    <span>
+                                        @Translation.Get("docItem")
+                                    </span>
+                                    <span class="search-items add-product fiori3-input-group" data-bind="css: { 'new-quote-items-search-popover': $root.useNewQuoteEngine }">
+                                        <input id="searchInput22" type="text" class="form-control" tabindex="51" data-bind="visible: isSearchInputFocused(), value: itemsSearch.search, valueUpdate: 'afterkeydown', hasfocus: itemsSearch.hasFocus, popover: { templateId: 'ItemsSearchTemplate', moduleFactory: ItemsSearchModuleFactory, trigger: 'manual', autoClose: true, placement: 'bottom', container: '#items-section' }" />
+                                    </span>
+                                    <div class="search-input-trigger" data-bind="click: openSearchInput, css: { 'search-input-trigger-hover-state': !isSearchInputFocused() }, tooltip: { title: '@Translation.GetJS("RD.Cart.SearchItems")' }">
+                                        <span class="sap-icon">&#xe00d;</span>
+                                    </div>
+                                </div>
+                            </th>
+
+                        <!-- /ko -->
+
+                        <!-- ko ifnot: (constCheks.check7) -->
+                            <th tabindex="0" rowspan="2" class="manage-items manage-items-sticky" data-bind="visible: $root.displayFirstColumn" style="z-index: 3;">
+                                <label class="fiori3-checkbox-group" data-bind="visible: !$root.useNewQuoteEngine && diplayAddProdSection && canDeleteAnyItems, css: { 'no-drag-icon': $root.useNewQuoteEngine }">
+                                    <input type="checkbox" data-bind="checked: selectAll" />
+                                    <span></span>
+                                </label>
+                            </th>
+                            <th tabindex="0" rowspan="2" class="search-items-sticky" data-bind="css: { 'new-quote-item-column-sticky': $root.useNewQuoteEngine, 'no-first-column-sticky': !$root.displayFirstColumn(), 'no-reorder': !$root.allowReorderingItems || $root.useNewQuoteEngine, 'no-delete': !canDeleteAnyItems() || $root.useNewQuoteEngine, 'view-mode-sticky': $root.isInViewMode() }">
+                                <div class="fiori3-items-search" data-bind="css: { 'search-in-use': isSearchInputFocused() }">
+                                    <span>
+                                        @Translation.Get("docItem")
+                                    </span>
+                                    <span class="search-items add-product fiori3-input-group" data-bind="css: { 'new-quote-items-search-popover': $root.useNewQuoteEngine }">
+                                        <input id="searchInput2" type="text" class="form-control" tabindex="51" data-bind="visible: isSearchInputFocused(), value: itemsSearch.search, valueUpdate: 'afterkeydown', hasfocus: itemsSearch.hasFocus, popover: { templateId: 'ItemsSearchTemplate', moduleFactory: ItemsSearchModuleFactory, trigger: 'manual', autoClose: true, placement: 'bottom', container: '#items-section' }" />
+                                    </span>
+                                    <div class="search-input-trigger" data-bind="click: openSearchInput, css: { 'search-input-trigger-hover-state': !isSearchInputFocused() }, tooltip: { title: '@Translation.GetJS("RD.Cart.SearchItems")' }">
+                                        <span class="sap-icon">&#xe00d;</span>
+                                    </div>
+                                </div>
+                            </th>
+
+                        <!-- /ko -->
+                        @*Complex columns have 2 additional columns in next row so their rowSpan is 1 and colSpan is 2*@
+
+                        @foreach (CartItemColumnVm column in Model.Columns)
+                        {
+                            if (column.IsComplex)
+                            {
+                                <th tabindex="0" colspan="2" rowspan="1" >@column.HeaderLabel</th>
+                            }
+                            else
+                            {							  
+                                <!-- ko if: 
+                                    (
+                                    !["QI_FactoryCode", "QI_FactoryName", "QI_Year_Visibility", "QI_PMC_Add_Discount"].includes('@column.Name') || 
+                                        (
+                                            ["QI_FactoryCode","QI_FactoryName"].includes('@column.Name') && 
+                                            constcustomFields.CF_Factory_Data_Applicable === "Y"
+                                        )
+                                    ) -->
+                                
+                                    <!-- ko if: (constCheks.check1) -->
+                                        if(column.Name != "QI_MinOrderQty" && 
+										   column.Name != "LeadTime" && 
+										   column.Name != "QI_UnitWTWCost" && 
+										   column.Name != "QI_ExtendedWTWCost" && 
+										   column.Name != "QI_Customer_Requested_Date" && 
+										   column.Name != "QI_Expedite_Fees" && 
+										   column.Name != "QI_Expedite_Reason" && 
+										   column.Name != "QI_LT_Delivery_Date" && 
+										   column.Name != "QI_SC_Total_Discount_Percent" && 
+										   column.Name != "QI_SC_Total_Discount_Price" && 
+										   column.Name != "QI_SC_Escalation_Percent" && 
+										   column.Name != "QI_SC_Margin_Percent" && 
+                                           column.Name != "QI_SC_ExpectedTotalDiscountAmount" && 
+										   column.Name != "QI_SC_ListPrice" && 
+										   column.Name != "QI_SC_SellPrice" && 
+										   column.Name != "QI_SC_CostPrice" && 
+										   column.Name != "QI_SC_ItemFlag" && 
+										   column.Name != "QI_SC_Cost" && 
+										   column.Name != "QI_SC_Previous_Year_List_Price" && 
+										   column.Name != "QI_SC_Previous_Year_Sell_Price" && 
+										   column.Name != "QI_SC_Honeywell_List_Price" && 
+										   column.Name != "QI_SC_Scope_Change" && 
+										   column.Name != "QI_SC_Price_Impact" && 
+										   column.Name != "QI_SC_Scope_Impact" && 
+										   column.Name != "QI_Additional_Discount_Percent" && 
+										   column.Name != "QI_India_discounted_TP" &&
+                                           column.Name != "QI_Tariff_PCT" &&
+                                           column.Name != "QI_Tariff_Amount" &&
+                                           column.Name != "QI_Sell_Price_Inc_Tariff")
+										{                                        
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'" onmouseover="'@column.Name' == 'QI_Area' || '@column.Name' == 'QI_SalesText' || '@column.Name' == 'QI_FME' ? addResizer(this) : null"></th>
+                                        
+										}
+                                        
+                                        if (column.Name == "QI_Additional_Discount_Percent"){
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click: null , text: cpq.models.cart.items.columns.firstWithProperty('name','QI_PMC_Add_Discount') ? cpq.models.cart.items.columns.firstWithProperty('name','QI_PMC_Add_Discount').headerLabel : 'Discount on List Price %'"></th>
+
+                                        }
+                                        
+                                        <!-- ko if: 
+                                            ( 
+                                                '@column.Name' === "QI_UnitWTWCost" || 
+                                                '@column.Name' === "QI_ExtendedWTWCost" 
+                                            ) && 
+                                            constcustomFields.IsWTWCostAllowed === '1' -->
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'"></th>
+
+                                        <!-- /ko --> 
+                                        
+                                    <!-- /ko --> 
+
+                                    <!-- ko if: (constCheks.check2) -->	
+
+										if(column.Name != "QI_SC_Total_Discount_Percent" && 
+                                           column.Name != "QI_SC_Total_Discount_Price" && 
+                                           column.Name != "QI_SC_Escalation_Percent" && 
+                                           column.Name != "QI_SC_Margin_Percent" && 
+                                           column.Name != "QI_SC_ExpectedTotalDiscountAmount" && 
+                                           column.Name != "QI_SC_ListPrice" && 
+                                           column.Name != "QI_SC_SellPrice" && 
+                                           column.Name != "QI_SC_CostPrice" && 
+                                           column.Name != "QI_SC_ItemFlag" && 
+                                           column.Name != "QI_SC_Cost" && 
+                                           column.Name != "QI_SC_Previous_Year_List_Price" && 
+                                           column.Name != "QI_SC_Previous_Year_Sell_Price" && 
+                                           column.Name != "QI_SC_Honeywell_List_Price" && 
+                                           column.Name != "QI_SC_Scope_Change" && 
+                                           column.Name != "QI_SC_Price_Impact" && 
+                                           column.Name != "QI_SC_Scope_Impact" && 
+                                           column.Name != "QI_India_discounted_TP" &&
+                                           column.Name != "QI_Tariff_PCT" &&
+                                           column.Name != "QI_Tariff_Amount" &&
+                                           column.Name != "QI_Sell_Price_Inc_Tariff")
+										{
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'" onmouseover="'@column.Name' == 'QI_Area' || '@column.Name' == 'QI_SalesText' || '@column.Name' == 'QI_FME' ? addResizer(this) : null"></th>
+ 
+										}
+
+                                    <!-- /ko -->
+
+                                    <!-- ko if: (constCheks.check3) -->
+										if(column.Name != "QI_Customer_Requested_Date" && 
+                                           column.Name != "QI_Expedite_Fees" && 
+                                           column.Name != "QI_Expedite_Reason" && 
+                                           column.Name != "QI_LT_Delivery_Date" && 
+                                           column.Name != "QI_SC_Total_Discount_Percent" && 
+                                           column.Name != "QI_SC_Total_Discount_Price" && 
+                                           column.Name != "QI_SC_Escalation_Percent" && 
+                                           column.Name != "QI_SC_Margin_Percent" && 
+                                           column.Name != "QI_SC_ExpectedTotalDiscountAmount" && 
+                                           column.Name != "QI_SC_ListPrice" && 
+                                           column.Name != "QI_SC_SellPrice" && 
+                                           column.Name != "QI_SC_CostPrice" && 
+                                           column.Name != "QI_SC_ItemFlag" && 
+                                           column.Name != "QI_SC_Cost" && 
+                                           column.Name != "QI_SC_Previous_Year_List_Price" && 
+                                           column.Name != "QI_SC_Previous_Year_Sell_Price" && 
+                                           column.Name != "QI_SC_Honeywell_List_Price" && 
+                                           column.Name != "QI_SC_Scope_Change" && 
+                                           column.Name != "QI_SC_Price_Impact" && 
+                                           column.Name != "QI_SC_Scope_Impact" && 
+                                           column.Name != "QI_India_discounted_TP" &&
+                                           column.Name != "QI_Tariff_PCT" &&
+                                           column.Name != "QI_Tariff_Amount" &&
+                                           column.Name != "QI_Sell_Price_Inc_Tariff")
+										{
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'" class="222" onmouseover="'@column.Name' == 'QI_Area' || '@column.Name' == 'QI_SalesText' || '@column.Name' == 'QI_FME' ? addResizer(this) : null"></th>
+
+										}
+
+                                    <!-- /ko -->  
+
+                                    <!-- ko if: (constCheks.check4) -->
+
+                                        if (column.Name == "QI_India_discounted_TP") {
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'" class="222"></th>
+
+                                        }        
+
+                                    <!-- /ko -->
+
+                                   <!-- ko if: (constCheks.check8 || constCheks.check9) -->
+
+                                    if (column.Name == "QI_Tariff_PCT" || column.Name == "QI_Sell_Price_Inc_Tariff" || column.Name == "QI_Tariff_Amount") {
+                                        <th tabindex="0" colspan="1" rowspan="2" data-bind="attr:{'class': '@column.Name'},click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'" class="222"></th>
+
+                                    }        
+
+                                    <!-- /ko -->
+
+                                    <!-- ko if: (constCheks.check5) -->
+
+										if(column.Name != "QI_Customer_Requested_Date" && 
+                                           column.Name != "QI_Expedite_Fees" && 
+                                           column.Name != "QI_Expedite_Reason" && 
+                                           column.Name != "QI_LT_Delivery_Date" && 
+                                           column.Name != "QI_SC_Total_Discount_Percent" && 
+                                           column.Name != "QI_SC_Total_Discount_Price" && 
+                                           column.Name != "QI_SC_Escalation_Percent" && 
+                                           column.Name != "QI_SC_Margin_Percent" && 
+                                           column.Name != "QI_SC_ExpectedTotalDiscountAmount" && 
+                                           column.Name != "QI_SC_ListPrice" && 
+                                           column.Name != "QI_SC_SellPrice" && 
+                                           column.Name != "QI_SC_CostPrice" && 
+                                           column.Name != "QI_SC_ItemFlag" && 
+                                           column.Name != "QI_SC_Cost" && 
+                                           column.Name != "QI_SC_Previous_Year_List_Price" && 
+                                           column.Name != "QI_SC_Previous_Year_Sell_Price" && 
+                                           column.Name != "QI_India_discounted_TP" &&
+                                           column.Name != "QI_SC_Honeywell_List_Price" &&
+                                           column.Name != "QI_SC_Scope_Change" &&
+                                           column.Name != "QI_SC_Price_Impact" &&
+                                           column.Name != "QI_SC_Scope_Impact" &&
+                                           column.Name != "QI_Tariff_PCT" &&
+                                           column.Name != "QI_Tariff_Amount" &&
+                                           column.Name != "QI_Sell_Price_Inc_Tariff")
+										{
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' + constcustomFields.ItemTypeFilter + ')', tooltip: { title:'@column.HeaderLabel'}" onmouseover="'@column.Name' == 'QI_Area' || '@column.Name' == 'QI_SalesText' || '@column.Name' == 'QI_FME' ? addResizer(this) : null"></th>
+
+										}
+
+                                    <!-- /ko -->
+
+                                    <!-- ko if: (constCheks.check6) -->
+
+                                        if (column.Name == "Quantity") {
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'"></th>
+
+                                        }
+							
+										if(column.Name == "QI_MPA_Discount_Percent" || 
+                                           column.Name == "QI_SC_Escalation_Percent" || 
+                                           column.Name == "QI_SC_Margin_Percent" || 
+                                           column.Name == "QI_SC_ExpectedTotalDiscountAmount" || 
+                                           column.Name == "QI_SC_ListPrice" || 
+                                           column.Name == "QI_SC_SellPrice" || 
+                                           column.Name == "QI_SC_CostPrice" || 
+                                           column.Name == "QI_Additional_Discount_Percent" || 
+                                           column.Name == "QI_SC_Total_Discount_Percent" || 
+                                           column.Name == "QI_SC_Total_Discount_Price")
+										{
+
+                                            <!-- ko if:constcustomFields.SC_CF_AGREEMENT_TYPE -->
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:customHeaderLabel(constcustomFields.SC_CF_AGREEMENT_TYPE,'@column.Name')"></th>
+
+                                            <!-- /ko -->
+                                            
+										}
+
+                                    <!-- /ko -->
+
+                                    <!-- ko if: constcustomFields.quoteType === "Contract New" && constcustomFields.bookingLOB !== "HCP"-->
+
+                                        if(column.Name == "QI_SC_Scope_Impact" || 
+										   column.Name == "QI_PLSG" || 
+                                           column.Name == "QI_PLSGDesc" || 
+                                           column.Name == "QI_SC_WTWCost")
+										{
+                                            
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'"></th>
+                                        
+                                        }
+
+                                    <!-- /ko -->
+
+                                    <!-- ko if: constcustomFields.quoteType === "Contract Renewal" && constcustomFields.bookingLOB !== "HCP"-->
+                                    
+										if(column.Name == "QI_SC_Previous_Year_List_Price" || 
+                                           column.Name == "QI_SC_Previous_Year_Sell_Price" || 
+                                           column.Name == "QI_SC_Honeywell_List_Price" || 
+                                           column.Name == "QI_SC_Scope_Change" || 
+                                           column.Name == "QI_SC_Price_Impact" || 
+                                           column.Name == "QI_PLSG" || 
+                                           column.Name == "QI_PLSGDesc" || 
+                                           column.Name == "QI_SC_WTWCost")
+										{
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'"></th>
+
+										}
+
+                                    <!-- /ko -->
+                        			<!-- ko if: constcustomFields.quoteType === "Contract New" && constcustomFields.bookingLOB === "HCP"-->
+
+                                        if( column.Name == "QI_MPA_Discount_Percent" ||
+                        				    column.Name == "QI_Additional_Discount_Percent" ||
+                        				    column.Name == "QI_SC_Escalation_Percent" ||
+                        				    column.Name == "QI_SC_Margin_Percent" ||
+                                            column.Name == "QI_SC_ExpectedTotalDiscountAmount" ||
+                        					column.Name == "QI_SC_ListPrice" || 
+											column.Name == "QI_SC_Total_Discount_Percent" || 
+                        					column.Name == "QI_SC_CostPrice" ||
+                        					column.Name == "QI_SC_SellPrice" ||
+                        					column.Name == "QI_SC_Total_Discount_Price" ||
+                        				   column.Name == "QI_SC_Scope_Impact" ||
+										   column.Name == "QI_PLSG" || 
+                                           column.Name == "QI_PLSGDesc" || 
+                                           column.Name == "QI_SC_WTWCost")
+										{
+                                            
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'"></th>
+                                        
+                                        }
+                                    <!-- /ko -->
+									<!-- ko if: constcustomFields.quoteType === "Contract Renewal" && constcustomFields.bookingLOB === "HCP"-->
+										if( column.Name == "QI_MPA_Discount_Percent" ||
+                        				    column.Name == "QI_Additional_Discount_Percent" ||
+                        				    column.Name == "QI_SC_Escalation_Percent" ||
+                        				    column.Name == "QI_SC_Margin_Percent" ||
+                                            column.Name == "QI_SC_ExpectedTotalDiscountAmount" ||
+                        					column.Name == "QI_SC_ListPrice" || 
+											column.Name == "QI_SC_Total_Discount_Percent" || 
+                        					column.Name == "QI_SC_CostPrice" ||
+                        					column.Name == "QI_SC_SellPrice" ||
+                        					column.Name == "QI_SC_Total_Discount_Price" ||
+                        				   column.Name == "QI_SC_Scope_Impact" ||
+										   column.Name == "QI_PLSG" || 
+                                           column.Name == "QI_PLSGDesc" || 
+                                           column.Name == "QI_SC_WTWCost" ||
+                                           column.Name == "QI_SC_Previous_Year_List_Price" || 
+                                           column.Name == "QI_SC_Previous_Year_Sell_Price" || 
+                                           column.Name == "QI_SC_Scope_Change" || 
+                                           column.Name == "QI_SC_Price_Impact")
+										{
+
+                                            <th tabindex="0" colspan="1" rowspan="2" data-bind="click:'@column.Name' !== 'ItemType' ? null : updateFilter , text:'@column.Name' !== 'ItemType' ? '@column.HeaderLabel' : '@column.HeaderLabel' + '(' +constcustomFields.ItemTypeFilter + ')'"></th>
+
+										}
+                                    <!-- /ko -->
+
+                                <!-- /ko -->
+                            }
+                        }
+                    </tr>
+                </thead>
+
+                <!-- ko ifnot: (constCheks.check7) -->
+                    
+                    <!-- ko if : constcustomFields.ItemTypeFilter === '' -->
+
+                        <tbody data-bind="template : { name : 'itemTemplate', foreach:  items.renderingMainItems }" id="itemsTable"></tbody>
+                    
+                    <!-- /ko -->
+
+                    <!-- ko if : constcustomFields.ItemTypeFilter === 'Base' -->
+                        
+                        <tbody data-bind="template : { name : 'itemTemplate', foreach:  items.renderingMainItems.filter(value => value.itemType == 0) }" id="itemsTable"></tbody>
+                    
+                    <!-- /ko -->
+
+                    <!-- ko if : constcustomFields.ItemTypeFilter === 'Optional' -->
+                    
+                        <tbody data-bind="template : { name : 'itemTemplate', foreach:  items.renderingMainItems.filter(value => value.itemType == 3) }" id="itemsTable"></tbody>
+                    
+                    <!-- /ko -->
+                    
+                <!-- /ko -->
+                
+                <!-- ko if: (constCheks.check7) -->
+                    
+                    <tbody data-bind="template : { name : 'readOnlyItemTemplate', foreach:  items.renderingMainItems}" id="itemsTable"></tbody>
+                
+                <!-- /ko -->
+            
+            </table>
+            
+            <table id="header-fixed"></table>
+
+            <div data-bind="if: !areItemsPaged() && items.renderCount() < items.mainItems().length">
+                <div id="itemsLoadingIndicator" class="loader"></div>
+                <div class="center"><small>@Translation.Get("Controls.LoadingIndicator.Loading")</small></div>
+            </div>
+        </div>
+        
+        <!-- ko template: { name: 'EditablePagerTemplate', data : pager, if: areItemsPaged } -->
+        <!-- /ko -->
+
+        @Html.PartialWithNameAsComment("EditablePagerTemplate")
+
+    </div>
+<!--/ko-->
+<!--/ko-->
+<script type="text/html" id="itemTemplate" data-bind="">
+<!-- ko if: isHideServiceContractLineItemNumber(constcustomFields.quoteType, values) -->
+		 
+    <tr class="cart_edit_btn_outer" data-bind="visible: isVisible, css: {firstInSystem: isFirstInSystem, lastInSystem: isLastInSystem, inSystem: isInSystem, isSearchMatch: isSearchMatch}">
+        <td data-bind="css: { 'hidden-xs new-quote-manage-items-width': $root.useNewQuoteEngine, 'no-reorder-manage-items': !$root.allowReorderingItems && !$root.useNewQuoteEngine, 'view-mode-sticky-edge': $root.isInViewMode() }, visible: $root.displayFirstColumn" class="item-actions-sticky">
+            <div class="manage-items" data-bind="visible: !$root.isInViewMode()">
+                <div class="hidden-xs" style="cursor: move" data-bind="css: { handle : canBeMoved }, visible: canBeMoved && !$root.useNewQuoteEngine">
+                    <span class="sap-icon-extended drag-icon">&#xf177;</span>
+                </div>
+                <label class="fiori3-checkbox-group" data-bind="visible: !$root.useNewQuoteEngine && (nestingLevel == 0 || canBeEdited)">
+                    <input type="checkbox" data-bind="checked: isSelected" />
+                    <span></span>
+                </label>
+                <div data-bind="css: { 'no-actions-width': !hasAnyActon }" class="column-with-actions dropdown">
+                    <div class="btn-group dropdown" data-bind="visible: hasAnyActon">
+                        <div tabindex="0" data-bind=" event:{ keydown: $parent.onKeypressItemsActionsHandler },popover: { templateId: 'itemActionsTemplate', autoClose: true, placement: 'auto bottom', container: 'body', closeOnClick: true }, tooltip: { 'title' : '@Translation.Get("Admin.Controls.ContainerNavigation.Step4")' },  attr: {id: 'itemAction'+index}" class="fiori3-icon-button dropdown-toggle item-action-button-cart">
+                            <span class="sap-icon">&#xe1f2;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+
+        <td class="item-column item-column-sticky" data-bind="css: { 'new-quote-item-column-sticky': $root.useNewQuoteEngine, 'no-first-column-sticky': !$root.displayFirstColumn(), 'no-reorder': !$root.allowReorderingItems || $root.useNewQuoteEngine, 'no-delete': (!canBeDeleted && !$root.canDeleteAnyItems()) || $root.useNewQuoteEngine, 'view-mode-sticky': $root.isInViewMode() }">
+            <div class="clearfix">
+                <div class="item-number-wrapper">
+                    <div data-bind="style: { 'paddingLeft': 5 + (nestingLevel * 5) + 'px' }, css: { 'item-number-margin-right': !hasChildren }" class="fiori3-input-group">
+                        <span class="item-number" data-bind="text: itemNumber, visible: !isItemNumberEditable()"></span>
+                        <input type="text" class="item-number-input form-control" data-bind="value: itemNumber, visible: isItemNumberEditable()" />
+                        <a tabindex="0" data-bind="visible: hasChildren, click: toggleExpanded, clickBubble: false, event :{keypress: function(){window.lastActiveElementId = document.activeElement.id; $parent.clickOnEnter(event)}}, attr:{id: 'expandToggle' + id}, hasFocus: ('expandToggle' + id) == window.lastActiveElementId" class="tree-view-icons">
+                            <div class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</div>
+                            <div class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fiori3-item-wrapper">
+                    <div>
+                        <div data-bind="css: {'partnumber-input' : isPartNumberEditable }" class="item-part-number-wrapper flex">
+                            <a href="#" data-bind="visible: !isPartNumberEditable() && canBeEdited, click: function(){ TriggerEditStart();editItem();  }">
+                                <span data-bind="text: itemDescription.partNumber, tooltip: { title: itemDescription.partNumber, placement: 'auto top' }" class="tooltip-if-long item-part-number"></span>
+                            </a>
+                            <span data-bind="visible: (!isPartNumberEditable() && !canBeEdited), text: itemDescription.partNumber, tooltip: { title: itemDescription.partNumber, placement: 'auto top' }" class="tooltip-if-long item-part-number"></span>
+                            <!-- ko if : isPartNumberEditable --> @*we are using if instead of visibility to avoid typeahead initialization if its not needed*@
+                                
+                                <div class="partnumber-input-holder fiori3-input-group">
+                                    <input  type="text" autocomplete="off" class="form-control" data-bind="click: applyHigherZIndex, typeahead: { url: partNumberSuggestionUrl, value: itemDescription.partNumber }" />
+                                </div>
+                            
+                            <!-- /ko -->
+                            <span data-bind="visible: isIncomplete || (isInvalid && isSapItem), tooltip: { title: getItemTooltipMessage }" class="sap-icon">&#xe053;</span>
+                            <span data-bind="visible: isInconsistent, tooltip: { title: '@Translation.GetJS("CartItem.InconsistentFromCPS")' }" class="alert-warning warning-icon-color no-background sap-icon-extended">&#xf200;</span>
+                            <a data-bind="visible: itemDescription.comment, tooltip: { title: '@Translation.GetJS("CartItem.HasComment")' }, click: editComment" href="#"><span class="sap-icon">&#xe0b2;</span></a>
+                        </div>
+                    </div>
+                    <div class="clearfix" data-bind="visible: itemDescription.partNumber"></div>
+                    <div class="clearfix"></div>
+                    <p class="description item-description pull-left ellipsis example tooltip-if-long" data-bind="css: { 'margin-top' : isPartNumberEditable }, tooltip: { title: (constcustomFields.quoteType ==='Contract New' ||constcustomFields.quoteType ==='Contract Renewal')? itemDescription.description : itemDescription.productName, placement: 'auto top' }"><span data-bind="html:  (constcustomFields.quoteType ==='Contract New' ||	constcustomFields.quoteType ==='Contract Renewal' || itemDescription.productName()=== 'TPC_Product' )? itemDescription.description : itemDescription.productName"></span></p>
+                </div>
+                <div class="allocate-section fiori3-allocate-section" data-bind="visible: !isRestricted && $root.dealViewEnabled, dropdown: { event: 'mouseenter', menu: '.tooltip-content', position: 'fixed', isOpen: titleOpened }, css: { 'allocated': section(), 'unallocated': !section() }">
+                    <button data-toggle-button="dropdown" class="btn-tertiary" data-bind="click: $root.setItemToAllocate"></button>
+                    <div class="tooltip-content">
+                        <span data-bind="text: sectionTitle"></span>
+                    </div>
+                </div>
+                <!-- ko if: 
+                    (
+                        constcustomFields.quoteType === "Contract New" || 
+                        constcustomFields.quoteType === "Contract Renewal"
+                    ) && 
+                    showServiceContractProductInfo($data.values).length > 0 -->
+
+                    <div style="float:right;min-width:auto;width:auto;">
+                        <a href="#" aria-label="Description" data-bind="popover: { templateId: 'itemDescriptionTemplate_SC', autoClose: true, container: 'body', viewport: '#cartContainer', placement: 'auto right' }, tooltip: { title:'Description' }" class="autoClosePopover" data-original-title="">
+                            <span class="sap-icon">&#xe202;</span>
+                        </a>
+                    </div>
+                
+                <!-- /ko -->
+            </div>
+			<span data-bind="text:execdisable()"></span>
+        </td>
+
+        @for (int i = 0; i < Model.Cells.Count; i++)
+        {
+            <!-- ko if: 
+                (
+                    values[@i].column.name !== "QI_FactoryCode" && 
+                    values[@i].column.name !== "QI_FactoryName" && 
+                    values[@i].column.name !== "QI_Year" && 
+                    values[@i].column.name !== "QI_Year_Visibility" && 
+                    values[@i].column.name !== "QI_PMC_Add_Discount"
+                ) || 
+                (
+                    (values[@i].column.name === "QI_FactoryCode" || 
+                    values[@i].column.name === "QI_FactoryName") && 
+                    ($root.customFields.firstWithProperty('name', 'CF_Factory_Data_Applicable')?.content() === "Y")
+                ) -->
+           <!-- ko ifnot: values[@i].column.name === "Training_QI_Gst_KP" -->
+                <!-- ko if: (constCheks.check1) -->
+
+                    if(Model.Cells[i].ColumnName != "QI_MinOrderQty" && 
+                       Model.Cells[i].ColumnName != "LeadTime" && 
+                       Model.Cells[i].ColumnName != "LeadTime" &&
+                        Model.Cells[i].ColumnName != "QI_UnitWTWCost" && 
+                        Model.Cells[i].ColumnName != "QI_ExtendedWTWCost" && 
+                        Model.Cells[i].ColumnName != "QI_Customer_Requested_Date" && 
+                        Model.Cells[i].ColumnName != "QI_Expedite_Fees" && 
+                        Model.Cells[i].ColumnName != "QI_Expedite_Reason" && 
+                        Model.Cells[i].ColumnName != "QI_LT_Delivery_Date" && 
+                        Model.Cells[i].ColumnName != "QI_WriteinMaterial" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Percent" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Price" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Escalation_Percent" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Margin_Percent" && 
+                        Model.Cells[i].ColumnName != "QI_SC_ExpectedTotalDiscountAmount" && 
+                        Model.Cells[i].ColumnName != "QI_SC_ListPrice" && 
+                        Model.Cells[i].ColumnName != "QI_SC_SellPrice" && 
+                        Model.Cells[i].ColumnName != "QI_SC_CostPrice" && 
+                        Model.Cells[i].ColumnName != "QI_SC_ItemFlag" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Cost" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Previous_Year_List_Price" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Previous_Year_Sell_Price" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Honeywell_List_Price" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Scope_Change" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Price_Impact" && 
+                        Model.Cells[i].ColumnName != "QI_SC_Scope_Impact" && 
+                        Model.Cells[i].ColumnName != "QI_India_discounted_TP" &&
+                        Model.Cells[i].ColumnName != "QI_Tariff_PCT" &&
+                        Model.Cells[i].ColumnName != "QI_Tariff_Amount" &&
+                        Model.Cells[i].ColumnName != "QI_Sell_Price_Inc_Tariff")
+                        {
+    
+                            <td data-title="@Model.Cells[i].CellLabel">
+                                <!-- ko template : { name : values[@i].template, data: values[@i] }  -->
+                                <!-- /ko -->
+                            </td>
+                        }
+
+      				<!-- ko if: 
+                        (
+                            values[@i].column.name === "QI_UnitWTWCost" || 
+                            values[@i].column.name === "QI_ExtendedWTWCost"
+                        ) && 
+                        constcustomFields.IsWTWCostAllowed === '1' -->
+
+      					<td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko template : { name : values[@i].template, data: values[@i] }  -->
+                            <!-- /ko -->
+                        </td>
+                    
+      				<!-- /ko -->
+
+                    <!-- ko if: 
+                        values[@i].column.name === "QI_WriteinMaterial" && 
+                        itemDescription.productName() === "WriteIn" -->
+
+      					<td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko template : { name : values[@i].template, data: values[@i] }  -->
+                            <!-- /ko -->
+                        </td>
+
+      				<!-- /ko -->
+
+                    <!-- ko if: 
+                        values[@i].column.name === "QI_WriteinMaterial" && 
+                        itemDescription.productName() !== "WriteIn" -->
+
+      					<td data-title="@Model.Cells[i].CellLabel"></td>
+                    
+      				<!-- /ko -->
+                    
+                <!-- /ko -->
+
+                <!-- ko if: (constCheks.check4) -->
+
+                    <!-- ko if: (values[@i].column.name === "QI_India_discounted_TP" ) -->
+
+                        <td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko template : { name : values[@i].template, data: values[@i] }  -->
+                            <!-- /ko -->
+                        </td>
+
+                    <!-- /ko -->
+                                
+                <!-- /ko -->
+
+                <!-- ko if: (constCheks.check8 || constCheks.check9) -->
+
+                    <!-- ko if: (values[@i].column.name == "QI_Tariff_PCT" || values[@i].column.name == "QI_Sell_Price_Inc_Tariff" || values[@i].column.name == "QI_Tariff_Amount") -->
+
+                    <td data-title="@Model.Cells[i].CellLabel" data-bind="attr:{'class': values[@i].column.name }">
+                        <!-- ko template : { name : values[@i].template, data: values[@i] }  -->
+                        <!-- /ko -->
+                    </td>
+
+                <!-- /ko -->
+                            
+                <!-- /ko -->
+                
+                <!-- ko if: (constCheks.check2) -->
+
+                    if(Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Escalation_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Margin_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ExpectedTotalDiscountAmount" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ListPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_SellPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_CostPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ItemFlag" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Cost" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Previous_Year_List_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Previous_Year_Sell_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Honeywell_List_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Scope_Change" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Price_Impact" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Scope_Impact" && 
+                       Model.Cells[i].ColumnName != "QI_India_discounted_TP" &&
+                       Model.Cells[i].ColumnName != "QI_Tariff_PCT" &&
+                       Model.Cells[i].ColumnName != "QI_Tariff_Amount" &&
+                       Model.Cells[i].ColumnName != "QI_Sell_Price_Inc_Tariff")
+                    {
+                        if (Model.Cells[i].ColumnName == "QI_No_Discount_Allowed"){
+                            <td data-title="@Model.Cells[i].CellLabel">
+                                <!-- ko template : { name :'checkBoxTemplate', data: values[@i] } -->
+                                <!--/ko -->
+                            </td>
+                        }
+                        else{
+                            
+                            
+                            <td data-title="@Model.Cells[i].CellLabel">
+                                <!-- ko ifnot: 
+                                    values.filter(value => value.column.name === "QI_No_Discount_Allowed")[0]?.value() == 1 -->
+                                    <!-- ko if: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                        <!-- ko template: { 
+                                            name: ['QI_UnitWTWCost'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                            data: values[@i] } -->
+                                        <!--/ko -->
+                                    <!--/ko -->
+                                    <!-- ko ifnot: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                        <!-- ko template: { 
+                                            name: ['QI_UnitWTWCost'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                            data: values[@i] } -->
+                                        <!--/ko -->
+                                    <!--/ko -->
+
+                                <!--/ko -->
+
+                                <!-- ko if: 
+                                    values.filter(value => value.column.name === "QI_No_Discount_Allowed")[0]?.value() == 1 -->
+                                    <!-- ko if: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                        <!-- ko template: { 
+                                            name: ['QI_UnitWTWCost', 'QI_Additional_Discount_Amount', 'QI_Additional_Discount_Percent'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                            data: values[@i] } -->
+                                        <!--/ko -->
+                                    <!--/ko -->
+                                    <!-- ko ifnot: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                        <!-- ko template: { 
+                                            name: ['QI_UnitWTWCost', 'QI_Additional_Discount_Amount', 'QI_Additional_Discount_Percent'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                            data: values[@i] } -->
+                                        <!--/ko -->
+                                    <!--/ko -->
+
+                                <!--/ko -->
+                            </td>
+                        }
+					}
+
+			    <!--/ko --> 
+
+                <!-- ko if: (constCheks.check3) -->
+
+                    if(Model.Cells[i].ColumnName != "QI_Customer_Requested_Date" && 
+                       Model.Cells[i].ColumnName != "QI_Expedite_Fees" && 
+                       Model.Cells[i].ColumnName != "QI_Expedite_Reason" && 
+                       Model.Cells[i].ColumnName != "QI_LT_Delivery_Date" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Escalation_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Margin_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ExpectedTotalDiscountAmount" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ListPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_SellPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_CostPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ItemFlag" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Cost" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Previous_Year_List_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Previous_Year_Sell_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Honeywell_List_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Scope_Change" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Price_Impact" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Scope_Impact" && 
+                       Model.Cells[i].ColumnName != "QI_India_discounted_TP" &&
+                       Model.Cells[i].ColumnName != "QI_Tariff_PCT" &&
+                       Model.Cells[i].ColumnName != "QI_Tariff_Amount" &&
+                       Model.Cells[i].ColumnName != "QI_Sell_Price_Inc_Tariff")
+                    {
+                		<td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko ifnot: 
+                                values.filter(value => value.column.name === "QI_No_Discount_Allowed")[0]?.value() == 1 -->
+                                <!-- ko if: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                    <!-- ko template: { 
+                                        name: ['QI_UnitWTWCost'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                        data: values[@i] } -->
+                                    <!--/ko -->
+                                <!--/ko -->
+                                <!-- ko ifnot: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                    <!-- ko template: { 
+                                        name: ['QI_UnitWTWCost'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                        data: values[@i] } -->
+                                    <!--/ko -->
+                                <!--/ko -->
+
+                            <!--/ko -->
+
+                            <!-- ko if: 
+                                values.filter(value => value.column.name === "QI_No_Discount_Allowed")[0]?.value() == 1 -->
+                                <!-- ko if: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                    <!-- ko template: { 
+                                        name: ['QI_UnitWTWCost', 'QI_Additional_Discount_Amount', 'QI_Additional_Discount_Percent'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                        data: values[@i] } -->
+                                    <!--/ko -->
+                                <!--/ko -->
+                                <!-- ko ifnot: hasChildren == true || values.filter(value => value.column.name === "QI_FME")[0]?.value() != ""-->
+                                    <!-- ko template: { 
+                                        name: ['QI_UnitWTWCost', 'QI_Additional_Discount_Amount', 'QI_Additional_Discount_Percent'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                        data: values[@i] } -->
+                                    <!--/ko -->
+                                <!--/ko -->
+
+                            <!--/ko -->
+                		</td>
+					}
+                   
+                <!--/ko --> 
+      		 
+                <!-- ko if: (constCheks.check5) -->
+
+                    if(Model.Cells[i].ColumnName != "QI_Customer_Requested_Date" && 
+                       Model.Cells[i].ColumnName != "QI_Expedite_Fees" && 
+                       Model.Cells[i].ColumnName != "QI_Expedite_Reason" && 
+                       Model.Cells[i].ColumnName != "QI_LT_Delivery_Date" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Escalation_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Margin_Percent" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ExpectedTotalDiscountAmount" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ListPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_SellPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_CostPrice" && 
+                       Model.Cells[i].ColumnName != "QI_SC_ItemFlag" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Cost" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Previous_Year_List_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Previous_Year_Sell_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Honeywell_List_Price" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Scope_Change" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Price_Impact" && 
+                       Model.Cells[i].ColumnName != "QI_SC_Scope_Impact" && 
+                       Model.Cells[i].ColumnName != "QI_India_discounted_TP" &&
+                       Model.Cells[i].ColumnName != "QI_Tariff_PCT" &&
+                       Model.Cells[i].ColumnName != "QI_Tariff_Amount" &&
+                       Model.Cells[i].ColumnName != "QI_Sell_Price_Inc_Tariff")
+                    {
+                        <td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko ifnot: 
+                                values.filter(value => value.column.name === "QI_No_Discount_Allowed")[0]?.value() == 1 -->
+
+                                <!-- ko template:  { 
+                                    name: ['QI_UnitWTWCost'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                    data: values[@i] } -->
+                                <!-- /ko -->
+
+                            <!-- /ko -->
+
+                            <!-- ko if: 
+                                values.filter(value => value.column.name === "QI_No_Discount_Allowed")[0]?.value() == 1 -->
+
+                                <!-- ko template: { 
+                                    name: ['QI_UnitWTWCost', "QI_Additional_Discount_Amount", "QI_Additional_Discount_Percent"].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, 
+                                    data: values[@i] } -->
+                                <!-- /ko -->
+
+                            <!-- /ko -->
+                        </td>
+					}
+
+                <!--/ko -->
+						  
+				<!-- ko if: (constCheks.check6) -->
+
+                    if(Model.Cells[i].ColumnName == "Quantity" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Escalation_Percent" || 
+                       Model.Cells[i].ColumnName == "QI_MPA_Discount_Percent" || 
+                       Model.Cells[i].ColumnName == "QI_Additional_Discount_Percent" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Margin_Percent" || 
+                       Model.Cells[i].ColumnName == "QI_SC_ExpectedTotalDiscountAmount" || 
+                       Model.Cells[i].ColumnName == "QI_SC_ListPrice" || 
+                       Model.Cells[i].ColumnName == "QI_SC_SellPrice" || 
+                       Model.Cells[i].ColumnName == "QI_SC_CostPrice" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Total_Discount_Percent" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Total_Discount_Price" || 
+                       Model.Cells[i].ColumnName == "QI_SC_WTWCost" || 
+                       Model.Cells[i].ColumnName == "QI_PLSG" || 
+                       Model.Cells[i].ColumnName == "QI_PLSGDesc")
+                    {
+                        <td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko template : { name : !isEditableFields(values, @i) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                            <!--/ko -->
+                        </td>
+					}
+							  
+                <!-- /ko -->
+                <!-- /ko -->
+
+                                <!-- ko if: values[@i].column.name === "Training_QI_Gst_KP" -->
+    <td data-title="@Model.Cells[i].CellLabel">
+        <!-- ko if: 
+            values.filter(value => value.column.name === "QI_ProductCostCategory")[0]?.value() == "Honeywell Labor" &&
+            $root.customFields.firstWithProperty('name', 'Labor MPA discount to be applied Manually')?.content() === "Yes"
+        -->
+            <!-- Editable when BOTH conditions are true -->
+            <!-- ko template : { name : values[@i].template, data: values[@i] } --><!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko ifnot: 
+            values.filter(value => value.column.name === "QI_ProductCostCategory")[0]?.value() == "Honeywell Labor" &&
+            $root.customFields.firstWithProperty('name', 'Labor MPA discount to be applied Manually')?.content() === "Yes"
+        -->
+            <!-- Read-only otherwise -->
+            <!-- ko template : { name : 'readModeForMathCellTemplate', data: values[@i] } --><!-- /ko -->
+        <!-- /ko -->
+    </td>
+<!-- /ko -->
+
+
+                <!-- ko if:  constcustomFields.quoteType === "Contract New" --> 
+
+                    <!-- ko if: (values[@i].column.name === "QI_SC_Scope_Impact") -->
+
+                        <td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko template : { name : !isEditableFields(values, @i) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                            <!--/ko -->
+                        </td>
+
+                    <!-- /ko -->  
+
+                <!-- /ko -->
+
+                <!-- ko if:  constcustomFields.quoteType === "Contract Renewal" --> 
+
+                    if(Model.Cells[i].ColumnName == "QI_SC_Previous_Year_List_Price" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Previous_Year_Sell_Price" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Honeywell_List_Price" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Scope_Change" || 
+                       Model.Cells[i].ColumnName == "QI_SC_Price_Impact")
+                    {
+                        
+                        <td data-title="@Model.Cells[i].CellLabel">
+                            <!-- ko template : { name : !isEditableFields(values, @i) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                            <!--/ko -->
+                        </td>
+
+					}
+
+                <!-- /ko -->
+
+            <!--/ko -->
+
+            <!-- ko if: 
+                values[@i].column.name === "QI_Year" && 
+                constcustomFields.quoteType != "Contract New" && 
+                constcustomFields.quoteType != "Contract Renewal" -->
+
+                <td data-title="@Model.Cells[i].CellLabel">
+                    <!-- ko template : { name : (isEditableYearCheck(values, @i) && (constcustomFields.CF_QuotationTab_Multiyear ==="Yes") ) ? values[@i].template:'readModeForMathCellTemplate', data: values[@i] }  -->
+                    <!-- /ko -->
+                </td>
+
+            <!-- /ko -->																							
+
+        }
+
+        <td data-bind="if: !$root.isInViewMode() && $root.isMobileReady()" class="column-with-actions show-all fiori3-item-actions-small-screen">
+            <button class="btn btn-primary btn-sm" data-bind="tooltip: { title: '@Translation.GetJS("CartItem.MoveUpTitle")' }, click: moveUp, visible: canBeMoved"><span class="sap-icon">&#xe04b;</span></button>
+            <button class="btn btn-primary btn-sm" data-bind="tooltip: { title: '@Translation.GetJS("CartItem.MoveDownTitle")' }, click: moveDown, visible: canBeMoved"><span class="sap-icon">&#xe04e;</span></button>
+            <!-- ko foreach: actions -->
+                <button class="btn btn-sm" data-bind="tooltip: { title: name, 'class': 'itemaction' + id }, click: execute">
+                    <span class="sap-icon" data-bind="html: id == '4' ? '&#xe03d;' : id == '3' ? '&#xe245;' : id == '2' ? '&#xe038;' : id == '6' ? '&#xe065;' : id == '5' ? '&#xe010;' : id == '7' ? '&#xe04b;' : ''"></span>
+                </button>
+            <!-- /ko -->
+            <button class="btn btn-primary btn-sm" data-bind="tooltip: { title: '@Translation.GetJS("CartItem.CommentTitle")' }, click: editComment, visible: itemDescription.isCommentEditable() || itemDescription.comment()"><span class="sap-icon">&#xe0b2;</span></button>
+        </td>
+    </tr>
+
+    <!-- ko if: $root.itemToAllocate() == $data -->
+        <tr></tr>
+        <tr class="baseItem section-options">
+            <td></td>
+            <td class="item-column" style="border-right: none">
+                <div style="text-align: right">
+                    <div style="display: inline-block;">
+                        <span style="padding: 15px">@Translation.GetJS("DealStructure.AllocateTo")</span>
+                    </div>
+                    <!-- ko ifnot: $root.relocateSectionParent() -->
+                        <div class="fiori3-input-group search-input" style="position: relative; display: inline-block;width: 300px" data-bind="dropdown: { position: 'fixed', event: 'mousedown' }">
+                            <input data-toggle-button="dropdown" type="text" class="form-control" style="display:inline-block" data-bind="textInput: $root.searchNewSectionName" placeholder="@Translation.GetJS("DealStructure.SectionLabel")" />
+                            <div class="custom-dropdown-menu sections-suggestions">
+                                <table  data-bind="visible: $root.relocateSuggestions().length">
+                                    <tbody data-bind="foreach: $root.relocateSuggestions">
+                                        <tr style="cursor: pointer" data-bind="event: { mousedown: function(){ $root.relocateSectionParent($data); $root.searchNewSectionName('') } }">
+                                            <td class="section-path" data-bind="text: $root.resolveSectionSuggestionName(sectionPath() || sectionName())"></td>
+                                            <td class="hierarchy" data-bind="text: hierarchyId"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    <!-- /ko -->
+                    <!-- ko if: $root.relocateSectionParent() -->
+                        <div class="allocation-parent-section" data-bind="with: $root.relocateSectionParent">
+                            <div class="section-title">
+                                <span data-bind="text: hierarchyId"></span>
+                                <span data-bind="text: sectionName"></span>
+                            </div>
+                            <button class="btn-tertiary icon-sys-cancel pull-right" data-bind="click: $root.cancelRelocate"></button>
+                        </div>
+                    <!-- /ko -->
+                </div>
+            </td>
+            <td colspan="100%" style="border-left: none">
+                <button class="btn-tertiary fiori3-btn-tertiary" data-bind="enable: section() || $root.relocateSectionParent(), click: $root.allocateSection">@Translation.GetJS("DealStructure.Allocate")</button>
+                <button class="btn-tertiary fiori3-btn-tertiary" data-bind="click: $root.cancelAllocate">@Translation.GetJS("DealStructure.Cancel")</button>
+            </td>
+        </tr>
+    <!-- /ko -->
+
+
+        
+        <!-- ko template : { name : 'itemTemplate', foreach: childItems }  -->
+        <!-- /ko -->
+
+
+<!-- /ko -->
+</script>
+
+<script type="text/html" id="readOnlyItemTemplate" data-bind="">
+<!-- ko if: isHideServiceContractLineItemNumber(constcustomFields.quoteType, values) -->
+
+    <tr data-bind="visible: isVisible, css: {firstInSystem: isFirstInSystem, lastInSystem: isLastInSystem, inSystem: isInSystem, isSearchMatch: isSearchMatch}">
+        <td class="item-column item-column-sticky no-first-column-sticky no-reorder no-delete">
+            <div class="clearfix">
+                <div class="item-number-wrapper">
+                    <div data-bind="style: { 'paddingLeft': 5 + (nestingLevel * 5) + 'px' }, css: { 'item-number-margin-right': !hasChildren }" class="fiori3-input-group">
+                        <span class="item-number" data-bind="text: itemNumber, visible: !isItemNumberEditable()"></span>
+                        <input type="text" class="item-number-input form-control" data-bind="value: itemNumber, visible: isItemNumberEditable()" />
+                        <a tabindex="0" data-bind="visible: hasChildren, click: toggleExpanded, clickBubble: false, event :{keypress: function(){window.lastActiveElementId = document.activeElement.id; $parent.clickOnEnter(event)}}, attr:{id: 'expandToggle' + id}, hasFocus: ('expandToggle' + id) == window.lastActiveElementId" class="tree-view-icons">
+                            <div class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</div>
+                            <div class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fiori3-item-wrapper">
+                    <div>
+                        <div data-bind="css: {'partnumber-input' : isPartNumberEditable }" class="item-part-number-wrapper flex">
+                            <span data-bind="text: itemDescription.partNumber, tooltip: { title: itemDescription.partNumber, placement: 'auto top' }" class="tooltip-if-long item-part-number"></span>
+                            <span data-bind="visible: isIncomplete || (isInvalid && isSapItem), tooltip: { title: getItemTooltipMessage }" class="sap-icon">&#xe053;</span>
+                            <span data-bind="visible: isInconsistent, tooltip: { title: '@Translation.GetJS("CartItem.InconsistentFromCPS")' }" class="alert-warning warning-icon-color no-background sap-icon-extended">&#xf200;</span>
+                            <a data-bind="visible: itemDescription.comment, tooltip: { title: '@Translation.GetJS("CartItem.HasComment")' }, click: editComment" href="#"><span class="sap-icon">&#xe0b2;</span></a>
+                        </div>
+                    </div>
+                    <div class="clearfix" data-bind="visible: itemDescription.partNumber"></div>
+                    <div class="clearfix"></div>
+                   <p class="description item-description pull-left ellipsis example tooltip-if-long" data-bind="css: { 'margin-top' : isPartNumberEditable }, tooltip: { title:  (constcustomFields.quoteType ==='Contract New' ||
+									constcustomFields.quoteType ==='Contract Renewal')? itemDescription.description : itemDescription.productName, placement: 'auto top' }"><span data-bind="html:  (constcustomFields.quoteType ==='Contract New' ||
+									constcustomFields.quoteType ==='Contract Renewal')? itemDescription.description : itemDescription.productName"></span></p>
+                </div>
+                <div class="allocate-section fiori3-allocate-section" data-bind="visible: !isRestricted && $root.dealViewEnabled, dropdown: { event: 'mouseenter', menu: '.tooltip-content', position: 'fixed', isOpen: titleOpened }, css: { 'allocated': section(), 'unallocated': !section() }">
+                    <button data-toggle-button="dropdown" class="btn-tertiary" data-bind="click: $root.setItemToAllocate"></button>
+                    <div class="tooltip-content">
+                        <span data-bind="text: sectionTitle"></span>
+                    </div>
+                </div>
+                <div data-bind="visible:$parent.itemDescription && $parent.itemDescription.partNumber() == 'Hardware Warranty'">
+                    <a href="#" data-bind="popover: { templateId: 'longDiscTemplate', autoClose: true, container: 'body', viewport: '#cartContainer', placement: 'auto right',html:true }" class="autoClosePopover">
+                        <span class="sap-icon">&#xe202;</span>
+                    </a>
+                </div>
+            </div>
+        </td>
+
+        @for (int i = 0; i < Model.Cells.Count; i++)
+        { 
+            <!-- ko if: 
+                (() => {
+                    const quoteType = constcustomFields.quoteType;
+                    const bookingLOB = constcustomFields.bookingLOB;
+                    return [
+                        "Parts and Spot", "Projects"
+                    ].includes(quoteType) && [
+                        "PMC"
+                    ].includes(bookingLOB);
+                })() -->
+
+				if(Model.Cells[i].ColumnName != "QI_MinOrderQty" && 
+                   Model.Cells[i].ColumnName != "LeadTime" && 
+                   Model.Cells[i].ColumnName != "QI_UnitWTWCost" && 
+                   Model.Cells[i].ColumnName != "QI_ExtendedWTWCost" && 
+                   Model.Cells[i].ColumnName != "QI_Customer_Requested_Date" && 
+                   Model.Cells[i].ColumnName != "QI_Expedite_Fees" && 
+                   Model.Cells[i].ColumnName != "QI_Expedite_Reason" && 
+                   Model.Cells[i].ColumnName != "QI_LT_Delivery_Date" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Escalation_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Margin_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ExpectedTotalDiscountAmount" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ListPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ItemFlag" && 
+                   Model.Cells[i].ColumnName != "QI_SC_SellPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_CostPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Cost" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Previous_Year_List_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Previous_Year_Sell_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Honeywell_List_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Scope_Change" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Price_Impact" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Scope_Impact" && 
+                   Model.Cells[i].ColumnName != "QI_India_discounted_TP" &&
+                   Model.Cells[i].ColumnName != "QI_Tariff_PCT" &&
+                   Model.Cells[i].ColumnName != "QI_Tariff_Amount" &&
+                   Model.Cells[i].ColumnName != "QI_Sell_Price_Inc_Tariff")
+                {
+
+                    <td data-title="@Model.Cells[i].CellLabel">
+
+                        <!-- ko if : values[@i].column.name === 'ItemType' -->
+
+                            <span data-bind="text: values[@i].itemTypeName"></span>
+
+                        <!--/ko -->
+
+                        <!-- ko ifnot : values[@i].column.name === 'ItemType' -->
+
+                            <!-- ko template : { name : ['Quantity', 'QI_UnitWTWCost', 'QI_Additional_Discount_Amount', 'QI_Additional_Discount_Percent', 'QI_UserComments'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                            <!--/ko -->
+
+                        <!--/ko -->
+
+                    </td>
+				}
+
+                <!-- ko if: 
+                    (values[@i].column.name === "QI_UnitWTWCost" || 
+                    values[@i].column.name === "QI_ExtendedWTWCost") && 
+                    constcustomFields.IsWTWCostAllowed === '1' -->
+                    
+                    <td data-title="@Model.Cells[i].CellLabel">
+                        <!-- ko template : { name : 'readModeForMathCellTemplate', data: values[@i] }  -->
+                        <!-- /ko -->
+                    </td>
+                
+                <!-- /ko -->
+
+            <!-- /ko -->
+          
+            <!-- ko if: (constCheks.check2) -->
+ 
+                if(Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Escalation_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Margin_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ExpectedTotalDiscountAmount" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ListPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_SellPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_CostPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ItemFlag" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Cost" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Previous_Year_List_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Previous_Year_Sell_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Honeywell_List_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Scope_Change" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Price_Impact" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Scope_Impact" && 
+                   Model.Cells[i].ColumnName != "QI_India_discounted_TP" &&
+                   Model.Cells[i].ColumnName != "QI_Tariff_PCT" &&
+                   Model.Cells[i].ColumnName != "QI_Tariff_Amount" &&
+                   Model.Cells[i].ColumnName != "QI_Sell_Price_Inc_Tariff")
+                {                   
+                    <td data-title="@Model.Cells[i].CellLabel">
+
+                        <!-- ko if : values[@i].column.name === 'ItemType' -->
+
+                            <span data-bind="text: values[@i].itemTypeName"></span>
+
+                        <!--/ko -->
+
+                        <!-- ko ifnot : values[@i].column.name === 'ItemType' -->
+
+                            <!-- ko template : { name : ['Quantity', 'QI_UnitWTWCost', 'QI_Additional_Discount_Amount', 'QI_Additional_Discount_Percent', 'QI_UserComments'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                            <!--/ko -->
+
+                        <!--/ko -->
+
+                    </td>
+				}
+
+			<!--/ko -->
+      		 
+			<!-- ko if: (constCheks.check3) -->
+
+                if(Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Total_Discount_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Escalation_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Margin_Percent" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ExpectedTotalDiscountAmount" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ListPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_SellPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_CostPrice" && 
+                   Model.Cells[i].ColumnName != "QI_SC_ItemFlag" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Cost" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Previous_Year_List_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Previous_Year_Sell_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Honeywell_List_Price" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Scope_Change" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Price_Impact" && 
+                   Model.Cells[i].ColumnName != "QI_SC_Scope_Impact" && 
+                   Model.Cells[i].ColumnName != "QI_India_discounted_TP" &&
+                   Model.Cells[i].ColumnName != "QI_Tariff_PCT" &&
+                   Model.Cells[i].ColumnName != "QI_Tariff_Amount" &&
+                   Model.Cells[i].ColumnName != "QI_Sell_Price_Inc_Tariff")
+                   {                   
+                    <!-- ko if : values[@i].column.name === 'ItemType' -->
+
+                        <span data-bind="text: values[@i].itemTypeName"></span>
+
+                    <!--/ko -->
+
+                    <!-- ko ifnot : values[@i].column.name === 'ItemType' -->
+
+                        <!-- ko template : { name : ['Quantity', 'QI_UnitWTWCost', 'QI_Additional_Discount_Amount', 'QI_Additional_Discount_Percent', 'QI_UserComments'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                        <!--/ko -->
+
+                    <!--/ko -->
+				}
+
+			<!--/ko -->
+			 
+			<!-- ko if: (constCheks.check6) -->
+
+                <!-- ko if : values[@i].column.name === 'ItemType' -->
+
+                    <span data-bind="text: values[@i].itemTypeName"></span>
+
+                <!--/ko -->
+
+                <!-- ko ifnot : values[@i].column.name === 'ItemType' -->
+
+                    <!-- ko template : { name : ['Quantity', 'QI_SC_Escalation_Percent', 'ListPrice', 'ExtendedListPrice', 'QI_MPA_Discount_Percent', 'QI_MPA_Discount_Amount','QI_Additional_Discount_Percent','QI_Additional_Discount_Amount','NetPrice','EndUserExtendedAmount', 'QI_SC_Margin_Percent',QI_SC_ExpectedTotalDiscountAmount, 'QI_SC_Cost','QI_SC_ListPrice','QI_SC_SellPrice','QI_SC_CostPrice','QI_SC_Total_Discount_Price','QI_SC_WTWCost','QI_PLSG','QI_PLSGDesc'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                    <!--/ko -->
+                                           
+                <!--/ko -->
+				  
+			<!-- /ko -->
+			   
+			<!-- ko if: constcustomFields.quoteType === "Contract New" -->
+
+                <!-- ko if : values[@i].column.name === 'ItemType' -->
+
+                    <span data-bind="text: values[@i].itemTypeName"></span>
+
+                <!--/ko -->
+
+                <!-- ko ifnot : values[@i].column.name === 'ItemType' -->
+
+                    <!-- ko template : { name : ['QI_SC_Scope_Impact'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                    <!--/ko -->
+                                           
+                <!--/ko -->
+				  
+			<!-- /ko --> 
+            
+			<!-- ko if: constcustomFields.quoteType; === "Contract Renewal" -->
+
+                <!-- ko if : values[@i].column.name === 'ItemType' -->
+
+                    <span data-bind="text: values[@i].itemTypeName"></span>
+
+                <!--/ko -->
+
+                <!-- ko ifnot : values[@i].column.name === 'ItemType' -->
+
+                    <!-- ko template : { name : ['QI_SC_Previous_Year_List_Price','QI_SC_Previous_Year_Sell_Price','QI_SC_Honeywell_List_Price','QI_SC_Scope_Change','QI_SC_Price_Impact'].includes(values[@i].column.name) ? 'readModeForMathCellTemplate' : values[@i].template, data: values[@i] } -->
+                    <!--/ko -->
+                           
+                <!--/ko -->
+				  
+			<!-- /ko -->
+
+        }
+
+        <td data-bind="if: !$root.isInViewMode() && $root.isMobileReady()" class="column-with-actions show-all fiori3-item-actions-small-screen">
+            <button class="btn btn-primary btn-sm" data-bind="tooltip: { title: '@Translation.GetJS("CartItem.MoveUpTitle")' }, click: moveUp, visible: canBeMoved"><span class="sap-icon">&#xe04b;</span></button>
+            <button class="btn btn-primary btn-sm" data-bind="tooltip: { title: '@Translation.GetJS("CartItem.MoveDownTitle")' }, click: moveDown, visible: canBeMoved"><span class="sap-icon">&#xe04e;</span></button>
+            <!-- ko foreach: actions -->
+                <button class="btn btn-sm" data-bind="tooltip: { title: name, 'class': 'itemaction' + id }, click: execute">
+                    <span class="sap-icon" data-bind="html: id == '4' ? '&#xe03d;' : id == '3' ? '&#xe245;' : id == '2' ? '&#xe038;' : id == '6' ? '&#xe065;' : id == '5' ? '&#xe010;' : id == '7' ? '&#xe04b;' : ''"></span>
+                </button>
+            <!-- /ko -->
+            <button class="btn btn-primary btn-sm" data-bind="tooltip: { title: '@Translation.GetJS("CartItem.CommentTitle")' }, click: editComment, visible: itemDescription.isCommentEditable() || itemDescription.comment()"><span class="sap-icon">&#xe0b2;</span></button>
+        </td>
+    </tr>
+
+    <!-- ko if: $root.itemToAllocate() == $data -->
+        <tr></tr>
+        <tr class="baseItem section-options">
+            <td></td>
+            <td class="item-column" style="border-right: none">
+                <div style="text-align: right">
+                    <div style="display: inline-block;">
+                        <span style="padding: 15px">@Translation.GetJS("DealStructure.AllocateTo")</span>
+                    </div>
+                    <!-- ko ifnot: $root.relocateSectionParent() -->
+                        <div class="fiori3-input-group search-input" style="position: relative; display: inline-block;width: 300px" data-bind="dropdown: { position: 'fixed', event: 'mousedown' }">
+                            <input data-toggle-button="dropdown" type="text" class="form-control" style="display:inline-block" data-bind="textInput: $root.searchNewSectionName" placeholder="@Translation.GetJS("DealStructure.SectionLabel")" />
+                            <div class="custom-dropdown-menu sections-suggestions">
+                                <table  data-bind="visible: $root.relocateSuggestions().length">
+                                    <tbody data-bind="foreach: $root.relocateSuggestions">
+                                        <tr style="cursor: pointer" data-bind="event: { mousedown: function(){ $root.relocateSectionParent($data); $root.searchNewSectionName('') } }">
+                                            <td class="section-path" data-bind="text: $root.resolveSectionSuggestionName(sectionPath() || sectionName())"></td>
+                                            <td class="hierarchy" data-bind="text: hierarchyId"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    <!-- /ko -->
+
+                    <!-- ko if: $root.relocateSectionParent() -->
+                        <div class="allocation-parent-section" data-bind="with: $root.relocateSectionParent">
+                            <div class="section-title">
+                                <span data-bind="text: hierarchyId"></span>
+                                <span data-bind="text: sectionName"></span>
+                            </div>
+                            <button class="btn-tertiary icon-sys-cancel pull-right" data-bind="click: $root.cancelRelocate"></button>
+                        </div>
+                    <!-- /ko -->
+                </div>
+            </td>
+            <td colspan="100%" style="border-left: none">
+                <button class="btn-tertiary fiori3-btn-tertiary" data-bind="enable: section() || $root.relocateSectionParent(), click: $root.allocateSection">@Translation.GetJS("DealStructure.Allocate")</button>
+                <button class="btn-tertiary fiori3-btn-tertiary" data-bind="click: $root.cancelAllocate">@Translation.GetJS("DealStructure.Cancel")</button>
+            </td>
+        </tr>
+    <!-- /ko -->
+
+
+        <!-- ko template : { name : 'readOnlyItemTemplate', foreach: childItems }  -->
+        <!-- /ko -->
+
+<!-- /ko -->
+</script>
+
+<script type="text/html" id="itemCommentTemplate">
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog fiori3-modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close sap-icon" data-dismiss="modal" aria-hidden="true">&#xe03e;</button>
+                    <h3>@Translation.Get("xsltItemComment")</h3>
+                </div>
+                <div class="modal-body">
+                    <p data-bind="text: comment, visible: !isCommentEditable"></p>
+                    <textarea data-bind="value: comment, visible: isCommentEditable" class="form-control fiori3-textarea"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary fiori3-btn-primary" data-bind="click: save, visible: isCommentEditable">@Translation.Get("Msg.Save")</button>
+                    <button class="btn btn-tertiary fiori3-btn-tertiary" data-dismiss="modal" aria-hidden="true">@Translation.Get("Msg.Cancel")</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="itemActionsTemplate">
+    <ul class="dropdown-menu-cart fiori3-dropdown-menu fiori3-dropdown-icons-menu">
+        <li  tabindex="0" data-bind="visible: canBeMoved, click: moveUp">
+            <span class="sap-icon">&#xe04b;</span>
+            <span class="vertical-align" data-bind="text: '@Translation.GetJS("CartItem.MoveUpTitle")'"></span>
+        </li>
+        <li  tabindex="0" data-bind="visible: canBeMoved, click: moveDown">
+            <span class="sap-icon">&#xe04e;</span>
+            <span class="vertical-align" data-bind="text: '@Translation.GetJS("CartItem.MoveDownTitle")'"></span>
+        </li>
+
+        <!-- ko foreach: actions -->
+            <!-- ko if: $index() != 1 -->
+			  <!-- ko if: sessionStorage.getItem("R2QFlag") ==='Yes'  && cpq.models.cart.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() === 'LSS'--> 
+                <li tabindex="0" data-bind=",click:function(){ if(name=='Edit')TriggerEditStart(); execute();}" class="cart_edit_btn">
+                    <span class="sap-icon"
+                        data-bind="html: id == '4' ? '&#xe03d;' : id == '3' ? '&#xe245;' : id == '2' ? '&#xe038;' : id == '6' ? '&#xe065;' : id == '5' ? '&#xe010;' : id == '7' ? '&#xe04b;' : ''">
+                    </span>
+                    <span class="vertical-align" data-bind="text: name"></span>
+                </li>
+				<!-- /ko -->
+			 
+                <li tabindex="0" data-bind="attr: { 'class': 'cart_edit_btn_sibling click_' +name},click:function(){ if(name=='Edit')TriggerEditStart(); execute();}"  >
+                    <span class="sap-icon"
+                        data-bind="html: id == '4' ? '&#xe03d;' : id == '3' ? '&#xe245;' : id == '2' ? '&#xe038;' : id == '6' ? '&#xe065;' : id == '5' ? '&#xe010;' : id == '7' ? '&#xe04b;' : ''">
+                    </span>
+                    <span class="vertical-align" data-bind="text: name"></span>
+                </li>
+				
+            <!-- /ko -->
+        <!-- /ko -->
+        <li tabindex="0" data-bind="visible: favoritesEnabled, click: showFavoritesForProduct">
+            <span class="sap-icon">&#xe065;</span>
+            <span class="vertical-align">@Translation.GetJS("Msg.ViewFavorites")</span>
+        </li>
+        <li tabindex="0" data-bind="visible: itemDescription.isCommentEditable() || itemDescription.comment(), click: editComment">
+            <span class="sap-icon">&#xe0d3;</span>
+            <span class="vertical-align">@Translation.GetJS("CartItem.CommentTitle")</span>
+        </li>
+		@if (CartController.CustomersCommentsAreEnabled)
+		{
+			<li tabindex="0" data-bind="visible: !$root.useNewQuoteEngine, click: openCollaborationDialog, attr: { id: 'collaborationComments_' + id }">
+				<span class="sap-icon">&#xe0b2;</span>
+				<span class="vertical-align">@Translation.GetJS("CartItem.CollaborationCommentTitle")</span>
+			</li>
+		}
+        <!-- ko foreach: actions -->
+            <!-- ko if: $index() == 1 -->
+                <li tabindex="0" data-bind="click: execute">
+                    <span class="sap-icon"
+                        data-bind="html: id == '4' ? '&#xe03d;' : id == '3' ? '&#xe245;' : id == '2' ? '&#xe038;' : id == '6' ? '&#xe065;' : id == '5' ? '&#xe010;' : id == '7' ? '&#xe04b;' : ''">
+                    </span>
+                    <span class="vertical-align" data-bind="text: name"></span>
+                </li>
+            <!-- /ko -->
+        <!-- /ko -->
+    </ul>
+</script>
+<script>
+	$('table').on('click', 'tr.cart_edit_btn_outer:first', function() {
+		$(this).closest('#wrap').siblings('.popover').find('.cart_edit_btn').addClass('cart_edit_block');
+	});
+
+</script>
+<script type="text/html" id="itemDescriptionTemplate">
+    <div class="description-popover" data-bind="html: itemDescription.description">
+    </div>
+</script>
+
+<script type="text/html" id="itemDescriptionTemplate_SC">
+    <div class="description-popover" data-bind="html: showServiceContractProductInfo($data.values), attr: {id : 'SC_PopOver_' + id}">
+    </div>
+</script>
+
+<script type="text/javascript">
+function TriggerEditStart(){
+	   sessionStorage.setItem('EditTrigger', 'Triggered');
+	   cpq.server.executeScript('DTAG_OnProductEditStart', null, function (data) {});
+	} 
+ 
+	function updateFilter(){
+  
+  		x = cpq.models.cart.customFields.firstWithProperty('name','ItemTypeFilter');
+  		fieldValue = x.content()
+  		
+  		switch (fieldValue) {
+            case '':
+              	x.content('Base');
+              	break;
+            case 'Base':
+                x.content('Optional');
+                break;
+            case 'Optional':
+                x.content('');
+                break;
+        }
+  	}
+	
+    // CXCPQ-67332 : start changes by ankit for year editability
+    function isEditableYearCheck(values , valuesArray){
+        let iseditable = false;
+        try {
+            let index = values[valuesArray].id.lastIndexOf("_");
+            let str = values[valuesArray].id.substr(index+1);
+            let YearItemFieldFlag;
+            if (str.length > 0){
+                 YearItemFieldFlag = values.filter( value => value.id === "QI_Year_Visibility" + "_" + str)[0];
+            }
+            if (YearItemFieldFlag.value() !== "0"){
+                iseditable = true;
+            }
+        }
+        catch(err) {
+            iseditable = false;
+            
+        }
+
+        return iseditable;
+      }
+    // CXCPQ-67332 : End- changes by ankit for year editability
+
+	
+	function customHeaderLabel(agreementType, headerLabel) {
+ if (headerLabel === "EndUserExtendedAmount") {
+    return "Sell Price";
+  }
+   // START - CXCPQ-65849 / CXCPQ-67316 - Manthan -  Display custom header label for Service Contract
+  else if (headerLabel === "QI_SC_Escalation_Percent") {
+    return "Escalation %";
+  }
+  else if (headerLabel === "QI_SC_Margin_Percent") {
+    return "Margin %";
+  }
+  else if (headerLabel === "QI_SC_Cost") {
+    return "Cost";
+  }
+  else if (headerLabel === "QI_SC_ListPrice") {
+    return "List Price";
+  }
+  else if (headerLabel === "QI_SC_SellPrice") {
+    return "Sell Price";
+  }
+  else if (headerLabel === "QI_SC_CostPrice") {
+    return "Cost Price";
+  }
+  else if (headerLabel === "QI_Additional_Discount_Percent") {
+    return "Other Discount %";
+  }
+  else if (headerLabel === "QI_SC_Total_Discount_Percent") {
+    return "Total Discount %";
+  }
+  else if (headerLabel === "QI_SC_Total_Discount_Price") {
+    return "Total Discount Amount";
+  }
+  else if (headerLabel === "QI_SC_ExpectedTotalDiscountAmount") {
+    return "Expected Discount Amount";
+  }
+  // END - CXCPQ-65849 / CXCPQ-67316 - Manthan -  Display custom header label for Service Contract
+    let scAgreementType = (agreementType !== "" && agreementType !== "None") ? agreementType : "MPA";
+    if (headerLabel === "QI_MPA_Discount_Percent") {
+      return `${scAgreementType}/Market Discount %`;
+    }
+    if (headerLabel === "QI_MPA_Discount_Amount") {
+      return `${scAgreementType}/Market Discount Amount`;
+    }
+}
+    
+	
+function isEditableFields(values , valuesArray){
+    let iseditable = true;
+	try {
+        const QI_Fields = ["QI_SC_Escalation_Percent", "QI_MPA_Discount_Percent", "QI_Additional_Discount_Percent", "QI_SC_Margin_Percent","QI_SC_ExpectedTotalDiscountAmount"];
+		let index = values[valuesArray].id.lastIndexOf("_");
+        let fieldName = values[valuesArray].id.substr(0, index);
+		let str = values[valuesArray].id.substr(index + 1);
+        let vindex = QI_Fields.findIndex(x => x === fieldName);
+        if (vindex < 0){
+        	let cc = iseditable;
+        }
+		if (fieldName === "QI_SC_ExpectedTotalDiscountAmount"){
+        	vindex = QI_Fields.findIndex(x => x === "QI_MPA_Discount_Percent");
+        }
+		let SC_ItemFlag;
+		if (str.length > 0){
+			 SC_ItemFlag = values.filter( value => value.id === "QI_SC_ItemFlag" + "_" + str)[0];
+             if (SC_ItemFlag.value().length > 0 && SC_ItemFlag.value()[vindex] === "0"){
+				iseditable = false;
+			}
+		}
+    }
+    catch(err) {
+        iseditable = false;
+        
+    }
+
+    return iseditable;
+}
+
+function isHideServiceContractLineItemNumber(quoteType, values) {
+    var isServiceContractFlag;
+    isServiceContractFlag = true;
+    if (quoteType === "Contract New" || quoteType === "Contract Renewal") {
+        let SC_ItemFlag = values.filter(value => value?.id?.indexOf("QI_SC_ItemFlag") > -1);
+        if (SC_ItemFlag.length > 0) {
+            if (SC_ItemFlag[0].value() !== "Hidden") {
+                isServiceContractFlag = true;
+            }
+            else {
+                isServiceContractFlag = false;
+            }
+        }
+    }
+    return isServiceContractFlag;
+}
+    // START - CXCPQ-71448 - Manthan - Display info icon details for quote line items
+function showServiceContractProductInfo(values) {
+    let extendedDesc = "";
+  let infoIconDisplaydata = "";
+  let listData = "";
+  let costCategoryData = "";
+  let otherData = "";
+  let productEntitlementsDesc = values.filter(value => value?.id?.indexOf("QI_SC_Product_Entitlements") > -1);
+  let SC_extendedDesc = values.filter(value => value?.id?.indexOf("QI_ExtendedDescription") > -1);
+  if (productEntitlementsDesc.length > 0 && productEntitlementsDesc[0].value() !== "") {
+    extendedDesc = productEntitlementsDesc[0].value();
+  }
+  else if (SC_extendedDesc.length > 0 && SC_extendedDesc[0].value() !== "") {
+    extendedDesc = SC_extendedDesc[0].value();
+  }
+  if (extendedDesc.length > 0) {
+      var data = extendedDesc.split("
+");
+      if (data.length > 0) {
+        data.forEach((d) => {
+            if(!(d.includes(':')) && !(d.includes('InfoMessage-'))){
+          listData = `${listData}<li>${d}</li>`;
+            }
+            if(d.includes(':')){
+                costCategoryData = d;
+            }
+            if(d.includes('InfoMessage-')){
+                otherData = d.split('-')[1];
+            }
+        })
+      }
+      if (listData.length > 0) {
+        infoIconDisplaydata = `<h5>Entitlements</h5><ul>${listData}</ul>`;
+      }
+      if (costCategoryData.length > 0){
+          infoIconDisplaydata = `${infoIconDisplaydata}<h6>${costCategoryData}</h6>`
+      }
+      if (otherData.length > 0){
+          infoIconDisplaydata = `${infoIconDisplaydata}${otherData}`
+      }
+    }
+  return infoIconDisplaydata;
+}
+// END - CXCPQ-71448 - Manthan - Display info icon details for quote line items
+</script>
+<script type="text/html" id="checkBoxTemplate">
+                <div class="flex" style="justify-content: space-evenly;">
+                  <input type="checkbox" data-bind="checked: ko.computed({
+                                                    read: function(){
+                                                    return value() == 1;
+                                                    }, write :function(newValue){
+                                                    value(newValue.toString());
+                                                    }
+                                                    });" disabled="true"/>
+                </div>
+</script>

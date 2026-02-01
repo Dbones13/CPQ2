@@ -1,0 +1,11 @@
+{
+    "id": 24297,
+    "condition": "1",
+    "name": "RESS Configuration & Installation",
+    "action": "<*ASSIGNVALUE(RESS Configuration & Installation Group:[IF]([EQ](<*VALUE(RESS_System_Required)*>,Yes)){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

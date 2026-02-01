@@ -1,0 +1,11 @@
+{
+    "id": 23458,
+    "condition": "[GT](<*VALUE(AWL-Cb Physical Server)*>,0)",
+    "name": "HW_CSS_BOM_AWLR200_PhysicalServer",
+    "action": "<*SELECTVALUES(HW_CSS_BOM_AWLR200_PhysicalServer:MZ-PCSR06|EP-COAS22|CF-CTD001|CF-MSD000)*><*SETATVQTY(HW_CSS_BOM_AWLR200_PhysicalServer:MZ-PCSR06,<*VALUE(AWL-Cb Physical Server)*>)*><*SETATVQTY(HW_CSS_BOM_AWLR200_PhysicalServer:EP-COAS22,<*VALUE(AWL-Cb Physical Server)*>)*><*SETATVQTY(HW_CSS_BOM_AWLR200_PhysicalServer:CF-CTD001,<*VALUE(AWL-Cb Physical Server)*>)*>\n<*SETATVQTY(HW_CSS_BOM_AWLR200_PhysicalServer:CF-MSD000,1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/07/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

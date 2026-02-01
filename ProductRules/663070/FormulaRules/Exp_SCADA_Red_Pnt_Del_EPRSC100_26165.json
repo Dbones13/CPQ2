@@ -1,0 +1,11 @@
+{
+    "id": 26165,
+    "condition": "[NOT]([AND]([GT]([IF]([GT](<*VALUE(Exp_SCADA_Pnt_Add_EPDSC100_int)*>,<*VALUE(Exp_SCADA_Pnt_Add_EPDSC100_qty)*>)){<*VALUE(Exp_SCADA_Pnt_Add_EPDSC100_qty_plus1)*>}{<*VALUE(Exp_SCADA_Pnt_Add_EPDSC100_qty)*>}[ENDIF],0),[GT](<*VALUE(Experion SCADA Points (0 - 300000))*>,0),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant)))",
+    "name": "Exp_SCADA_Red_Pnt_Del_EPRSC100",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-RSC100)*><* DoResetAtt *>",
+    "description": "Delete EP-RSC100",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

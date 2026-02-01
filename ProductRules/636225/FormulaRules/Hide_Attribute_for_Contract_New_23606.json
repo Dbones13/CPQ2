@@ -1,0 +1,11 @@
+{
+    "id": 23606,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_Attribute_for_Contract_New",
+    "action": "<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(PY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(R_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(PY_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(HW_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(SR_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(SA_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(Comments).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(Honeywell_List_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(SR_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(SA_Price).SetPermission(Hidden) )*>\n<*DISALLOWATTRIBUTES(ComparisonSummary)*>\n<*DISALLOWATTRIBUTES(SC_Pricing_Escalation)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21826,
+    "condition": "[EQ](<*VALUE(FDM Audit Trail Blocks (0-16000))*>,)",
+    "name": "Default_FDM Audit Trail Blocks (0-16000)",
+    "action": "<*ASSIGNVALUE(FDM Audit Trail Blocks (0-16000):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

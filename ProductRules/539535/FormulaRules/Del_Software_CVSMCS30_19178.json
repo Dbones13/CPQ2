@@ -1,0 +1,11 @@
+{
+    "id": 19178,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_C300_Simulation_Environment)*>,0))",
+    "name": "Del_Software_CV-SMCS30",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-SMCS30)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13041,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*CTX ( Quote.CustomField(SC_CF_Parent_Quote_Number_Link) )*>,))",
+    "name": "ES_OBP_Cont_Column_Editable",
+    "action": "<*CTX ( Container(ES_PY_Asset_Details).Column(MSID).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(Servers).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(Workstations).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(Windows - Other).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(TPN Nodes).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(Controllers).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(Switches).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(List Price).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(SCADA Servers).SetPermission(Editable) )*>\n<*CTX ( Container(ES_PY_Asset_Details).Column(Safety Manager).SetPermission(Editable) )*>\n\n<*DISALLOWVALUES(OrderType_EnabledService:New)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

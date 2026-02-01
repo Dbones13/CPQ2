@@ -1,0 +1,11 @@
+{
+    "id": 12938,
+    "condition": "[EQ](<*VALUE(SC_P1P2_PartsUsageMethod)*>,List Price with Discount Applied)",
+    "name": "Calculate_LPDA_ListPrice",
+    "action": "<*ASSIGNVALUE(SC_P1P2_LPDA_CY_FinalListPrice:<* Eval([IF]([NEQ](<*VALUE(SC_P1P2_LPDA_CY_ListPrice)*>,)){<*VALUE(SC_P1P2_LPDA_CY_ListPrice)*>}{0}[ENDIF]-[IF]([NEQ](<*VALUE(SC_P1P2_LPDA_CY_DiscountPrice)*>,)){<*VALUE(SC_P1P2_LPDA_CY_DiscountPrice)*>}{0}[ENDIF]) *>)*><*ASSIGNVALUE(SC_P1P2_LPDA_CY_FinalListPrice:<* Eval(<* Round ( <*VALUE(SC_P1P2_LPDA_CY_FinalListPrice)*>, 2 ) *>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

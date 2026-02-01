@@ -1,0 +1,11 @@
+{
+    "id": 13337,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is Fieldbus Interface in Scope?)*>,Yes))",
+    "name": "SII Test Procedure -Fieldbus",
+    "action": "<*ASSIGNVALUE(SII Test Procedure -Fieldbus:<* Eval(<*VALUE(Number of Fieldbus Devices)*>*0.15) *>)*>",
+    "description": "CXCPQ-39329",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

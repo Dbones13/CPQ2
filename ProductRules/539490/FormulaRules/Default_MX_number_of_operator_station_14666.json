@@ -1,0 +1,11 @@
+{
+    "id": 14666,
+    "condition": "[EQ](<*VALUE(MX_number_of_operator_station)*>,)",
+    "name": "Default_MX_number_of_operator_station",
+    "action": "<*ASSIGNVALUE(MX_number_of_operator_station:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15191,
+    "condition": "[EQ](<*VALUE(MXP_Flat_Die_Extrusion_and_Non_Woven_Control)*>,Throughput Control/Optimization for Flat Die/Nonwovens)",
+    "name": "Part_A_3_5812_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5812-01)*><*SETATVQTY(MXP_Bom_Parts:3-5812-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

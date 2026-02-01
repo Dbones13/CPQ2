@@ -1,0 +1,11 @@
+{
+    "id": 19963,
+    "condition": "<*ISSELECTED(SerC_CG_Cabinet_Type_03.Normal Cabinet)*>",
+    "name": "Show_Cabinet_Doors_Default_Value",
+    "action": "<*ALLOWVALUES(SerC_CG_Cabinet_Doors_Default:Double,SerC_CG_Cabinet_Doors_Default:Reverse Front,SerC_CG_Cabinet_Doors_Default:Reverse Front & Rear,SerC_CG_Cabinet_Doors_Default:Reverse Rear)*>",
+    "description": "CXCPQ-47014",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

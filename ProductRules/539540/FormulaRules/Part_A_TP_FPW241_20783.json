@@ -1,0 +1,11 @@
+{
+    "id": 20783,
+    "condition": "[GT](<*VALUE(SS_24inch)*>,0)",
+    "name": "Part_A_TP_FPW241",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:TP-FPW241)*><*SETATVQTY(Simulation_Bom_parts:TP-FPW241,<*VALUE(SS_24inch)*>)*>)*><* DoResetAtt *>",
+    "description": "Rule Part_A_TP_FPW271 in QA",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

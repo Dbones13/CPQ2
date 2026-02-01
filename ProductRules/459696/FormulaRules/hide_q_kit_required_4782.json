@@ -1,0 +1,11 @@
+{
+    "id": 4782,
+    "condition": "[OR]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[NOT]([IN](<*VALUE(MX_SE_Measurement_Type)*>,Gloss,Color,Caliper,Infrarred,Ash,Moisture,Basis Weight)))",
+    "name": "hide_q_kit_required",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Is Q_Kit_required)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

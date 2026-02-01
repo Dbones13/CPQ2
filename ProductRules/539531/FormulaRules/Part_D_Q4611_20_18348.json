@@ -1,0 +1,11 @@
+{
+    "id": 18348,
+    "condition": "[NEQ](<*VALUE(MXP_Vortex_Cooling)*>,Yes)",
+    "name": "Part_D_Q4611_20",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q4611-20)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

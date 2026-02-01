@@ -1,0 +1,11 @@
+{
+    "id": 18965,
+    "condition": "[NEQ](<*VALUE(MX_CD_Control_Type)*>,Calendizer)",
+    "name": "CD_Part_Dis_9400_11",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9400-11)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

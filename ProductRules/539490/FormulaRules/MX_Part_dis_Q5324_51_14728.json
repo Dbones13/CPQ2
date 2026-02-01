@@ -1,0 +1,11 @@
+{
+    "id": 14728,
+    "condition": "[NEQ](<*VALUE(MX_RAE_OPC_DA_Client)*>,Yes)",
+    "name": "MX_Part_dis_Q5324_51",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5324-51)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

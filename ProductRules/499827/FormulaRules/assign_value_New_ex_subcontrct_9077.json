@@ -1,0 +1,11 @@
+{
+    "id": 9077,
+    "condition": "1",
+    "name": "assign value New_ex_subcontrct",
+    "action": "<*ASSIGNVALUE(New_ex_subcontrct:<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Number of Subprojects).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

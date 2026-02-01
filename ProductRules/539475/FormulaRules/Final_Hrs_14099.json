@@ -1,0 +1,11 @@
+{
+    "id": 14099,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Final Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(Experion HS Engineering Labor Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(Experion HS Additional Custom Deliverables).Total(Final Hrs) )*>) *>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

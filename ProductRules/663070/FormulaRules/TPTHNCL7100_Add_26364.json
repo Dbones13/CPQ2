@@ -1,0 +1,11 @@
+{
+    "id": 26364,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[EQ](<*VALUE(Orion Console Remote Periph Sol Type (RPS))*>,Pepperl+Fuchs BTC14),[EQ](<*VALUE(Node Supplier)*>,Honeywell))",
+    "name": "TP-THNCL7-100_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:TP-THNCL7-100)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-THNCL7-100, <* Eval((2*<*VALUE(Orion Console 2Position Base Unit (0-20))*>) +(3*<*VALUE(Orion Console 3Position Base Unit (0-20))*>)+<*VALUE(qty_405)*>)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-39485",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

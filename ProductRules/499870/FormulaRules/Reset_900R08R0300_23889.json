@@ -1,0 +1,11 @@
+{
+    "id": 23889,
+    "condition": "[NOT]([AND]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*VALUE(HC900_Redundant_I/O_Rack_Power_Supplies)*>,Yes),[GT](<*CTX( Container(HC900_Rack_Size_Quantity_Cont).Sum(Quantity) )*>,0)))",
+    "name": "Reset 900R08R-0300",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900R08R-0300)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "26/12/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

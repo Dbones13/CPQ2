@@ -1,0 +1,11 @@
+{
+    "id": 22335,
+    "condition": "[EQ](<*VALUE(ESDC_Experion_Backup_&_Restore_Release)*>,)",
+    "name": "Default_Experion_backup",
+    "action": "<*SELECTVALUE(ESDC_Experion_Backup_&_Restore_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21931,
+    "condition": "[EQ](<*VALUE(FDM Diagnostic Custom Model (0-100))*>,)",
+    "name": "Default_FDM Diagnostic Custom Model(0-100)",
+    "action": "<*ASSIGNVALUE(FDM Diagnostic Custom Model (0-100):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

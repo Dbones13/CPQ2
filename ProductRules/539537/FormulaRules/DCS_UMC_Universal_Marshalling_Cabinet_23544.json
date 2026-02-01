@@ -1,0 +1,11 @@
+{
+    "id": 23544,
+    "condition": "[GT](<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Rows.GetCount )*>,0)",
+    "name": "DCS UMC Universal Marshalling Cabinet",
+    "action": "<*ASSIGNVALUE(DCS_C300_Marshalling_UMCcabinet_count_is:<* Eval(0<*GETATVQTY(Series_C_CG_Part_Summary:MCD-PS-2P-384H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCD-PS-2I-384H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCD-PS-3I-576H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCD-ES-2P-416H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCD-ES-2I-416H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCD-ES-3I-624H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCS-PS-2P-160H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCS-PS-2I-160H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCS-PS-3I-240H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCS-ES-2P-192H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCS-ES-2I-192H)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MCS-ES-3I-288H)*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(DCS_UMCcabinet) )*>) *>)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "05/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

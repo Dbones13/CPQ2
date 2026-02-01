@@ -1,0 +1,11 @@
+{
+    "id": 4749,
+    "condition": "[OR]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[LT](<*VALUE(MX_SG_Trim_Width_in_Millimeters)*>,1),[EQ](<*VALUE(MX_SG_Trim_Width_in_Millimeters)*>,0))",
+    "name": "Part_D_Q4022_34_MM",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q4022-34-MM)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

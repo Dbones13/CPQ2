@@ -1,0 +1,11 @@
+{
+    "id": 17826,
+    "condition": "[OR]([GT](<*CTX( Container(Modbus/OPC Interfaces).Row(1).Column(Nodes).Get )*>,0),[GT](<*CTX( Container(Modbus/OPC Interfaces).Row(2).Column(Nodes).Get )*>,0),[GT](<*CTX( Container(Modbus/OPC Interfaces).Row(3).Column(Nodes).Get )*>,0))",
+    "name": "PS_MODBUS_Interface_EP-IMDBUS_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IMDBUS)*><*SELECTVALUE(SCADA_BOM_Items:EP-IMDBUS)*><*SETATVQTY(SCADA_BOM_Items:EP-IMDBUS, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

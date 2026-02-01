@@ -1,0 +1,11 @@
+{
+    "id": 15123,
+    "condition": "[EQ](<*VALUE(MXP_Preset_Controls)*>,)",
+    "name": "Default_Preset_Controls",
+    "action": "<*SELECTVALUE(MXP_Preset_Controls:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

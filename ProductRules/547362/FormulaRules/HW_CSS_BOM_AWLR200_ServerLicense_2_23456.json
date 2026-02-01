@@ -1,0 +1,11 @@
+{
+    "id": 23456,
+    "condition": "[LT](<* Eval(<*CTX ( Container(Network Level Container).Total(Number of Cyber App Control Servers) )*> + <*CTX ( Container(Network Level Container).Total(Validated Servers) )*> + <*CTX ( Container(Network Level Container).Total(Non\u2010Validated Servers) )*>) *>,1)",
+    "name": "HW_CSS_BOM_AWLR200_ServerLicense_2",
+    "action": "<*RESETATTRIBUTE(HW_CSS_BOM_AWLR200_ServerLicense)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

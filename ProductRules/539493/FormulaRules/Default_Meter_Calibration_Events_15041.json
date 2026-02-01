@@ -1,0 +1,11 @@
+{
+    "id": 15041,
+    "condition": "[EQ](<*VALUE(MSE_Number_Meter_Calibration_Events)*>,)",
+    "name": "Default_Meter_Calibration_Events",
+    "action": "<*ASSIGNVALUE(MSE_Number_Meter_Calibration_Events:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

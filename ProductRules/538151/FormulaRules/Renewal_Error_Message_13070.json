@@ -1,0 +1,11 @@
+{
+    "id": 13070,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(Error_Message)*>,))",
+    "name": "Renewal Error Message",
+    "action": "<* ExecuteScript(PS_SESPModelRenewal_Errors) *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

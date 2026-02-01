@@ -1,0 +1,11 @@
+{
+    "id": 13981,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Software_Release)*>,R710))",
+    "name": "EP-DVM710_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Part_Summary:EP-DVM710)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

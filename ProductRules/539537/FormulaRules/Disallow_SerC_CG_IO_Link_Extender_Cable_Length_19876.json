@@ -1,0 +1,11 @@
+{
+    "id": 19876,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Disallow_SerC_CG_IO_Link_Extender_Cable_Length",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_IO_Link_Extender_Cable_Length)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10953,
+    "condition": "[AND]([EQ](<*VALUE(HC900_Redundant_I/O_Rack_Power_Supplies)*>,Yes),[GT](<*GETATVQTY(HC900_PART_SUMMARY:900P24-0601)*>,0),[GT](<*Eval(<*GETATVQTY(HC900_PART_SUMMARY:900P24-0601)*>/2 -int(<*GETATVQTY(HC900_PART_SUMMARY:900P24-0601)*>/2))*>,0))",
+    "name": "Set 900PSM-0200 Case3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(HC900_PART_SUMMARY:900PSM-0200)*><*SETATVQTY(HC900_PART_SUMMARY:900PSM-0200, <*Eval(1+int(<*GETATVQTY(HC900_PART_SUMMARY:900P24-0601)*>/2))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-51871\nIf \"Redundant I/O Rack Power Supplies\" = YES \nQty of  900P01-0601 /2 or Qty of 900P24-0601/2\n\nBased on 900P24-0601 and Roundup",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

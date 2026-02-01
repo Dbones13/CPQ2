@@ -1,0 +1,11 @@
+{
+    "id": 23786,
+    "condition": "[EQ](<*VALUE(FIM_FF_IOs_with_Power_conditioner)*>,)",
+    "name": "Default_FIM_FF_IOs_with_Power_conditioner",
+    "action": "<*SELECTVALUE(FIM_FF_IOs_with_Power_conditioner:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

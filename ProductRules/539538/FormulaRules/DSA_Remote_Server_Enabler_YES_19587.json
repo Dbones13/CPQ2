@@ -1,0 +1,11 @@
+{
+    "id": 19587,
+    "condition": "[EQ](<*VALUE(Exp HS HS DSA Remote Server Enabler)*>,Yes)",
+    "name": "DSA Remote Server Enabler YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:HS-XRESR1)*><* DoResetAtt *>",
+    "description": "SET",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

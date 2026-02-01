@@ -1,0 +1,11 @@
+{
+    "id": 26469,
+    "condition": "[GT](<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,0)",
+    "name": "ShowServerLocation2_1",
+    "action": "<*ALLOWATTRIBUTES(ACE-T Node in Desk Preference,Hardware Design Selection_ACE_T_Node,Node_Supplier_ACE_T,Trusted Platform Module_TPM_ACE_T,Additional Hard Disk (ACE-T),Displays (ACE-T)(0-1),Display Size (ACE-T),Display Supplier (ACE-T),ServerLocationClusNetwork_Group desk)*>\n[IF]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes)){<*SETOPTIONAL(Additional Memory (ACE-T))*><*DISALLOWATTRIBUTES(Additional Memory (ACE-T))*>}{<*ALLOWATTRIBUTES(Additional Memory (ACE-T))*><*SETREQUIRED(Additional Memory (ACE-T))*>}[ENDIF]\n<*xDisallowallValuesExcept(ServerLocationClusNetwork_Group desk:<* LIST ( SELECT AttValue FROM \nClusterAttValues WHERE CAST (AttValueCode AS float) \n<= '<*CTX( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>' ) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

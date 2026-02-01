@@ -1,0 +1,11 @@
+{
+    "id": 13119,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_For_New_OCP",
+    "action": "<*DISALLOWATTRIBUTES(SC_WEP_Current_Score_OCP_PY,SC_WEP_Effort_Loading_OCP_PY,SC_WEP_No_of_Users_OCP_PY,SC_WEP_Skill_Assessment_Level_OCP_PY)*><*CTX ( Container(SC_WEP_Courses_OCP).Column(PY_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Courses_OCP).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Courses_OCP).Column(PY_EffortLoading).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Courses_OCP).Column(CY_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Courses_OCP).Column(CY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Courses_OCP).Column(CY_EffortLoading).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Conclusion_OCP).Column(PY_Value).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Conclusion_OCP).Column(CY_Value).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(SC_WEP_OCP_Pricing_Escalation,SC_WEP_Dummy,ATTCON_05_open,ATTCON_05_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

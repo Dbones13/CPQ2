@@ -1,0 +1,11 @@
+{
+    "id": 17834,
+    "condition": "[GT](<*CTX( Container(Flow Computer Interfaces).Row(3).Column(Nodes).Get )*>,0)",
+    "name": "PS_Flow Computer Interface_EP-IROC00_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IROC00)*><*SELECTVALUE(SCADA_BOM_Items:EP-IROC00)*><*SETATVQTY(SCADA_BOM_Items:EP-IROC00, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

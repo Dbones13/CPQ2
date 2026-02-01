@@ -1,0 +1,11 @@
+{
+    "id": 26015,
+    "condition": "[AND]([EQ](<*VALUE(MIB Configuration Required?)*>,Yes),[EQ](<*VALUE(Server Mounting)*>,Cabinet),[NEQ](<*VALUE(Interface with TPS Required?)*>,Yes))",
+    "name": "Display_server_mounting_message",
+    "action": "<*ALLOWATTRIBUTES(Server_Mounting_message)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

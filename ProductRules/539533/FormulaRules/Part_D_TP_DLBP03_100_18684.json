@@ -1,0 +1,11 @@
+{
+    "id": 18684,
+    "condition": "[OR]([NEQ](<*VALUE(ES_Printer_Required)*>,Yes),[EQ](<*VALUE(ES_LaserJet_Printer_Monochrome)*>,0),[NEQ](<*VALUE(CE_Site_Voltage)*>,120V))",
+    "name": "Part_D_TP_DLBP03_100",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:TP-DLBP03-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

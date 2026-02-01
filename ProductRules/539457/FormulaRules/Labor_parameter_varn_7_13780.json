@@ -1,0 +1,11 @@
+{
+    "id": 13780,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_varn_7",
+    "action": "<*ASSIGNVALUE(Labor_parameter_varn_7:<*VALUE(Virtualization_AV_DDS)*>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

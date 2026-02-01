@@ -1,0 +1,11 @@
+{
+    "id": 18867,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,AutoSlice),[OR]([EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60L Standard),[EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line)),[EQ](<*VALUE(MX_CD_Actuator_Housing_Autoslice)*>,Zytel))",
+    "name": "CD_Part_9141_11",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9141-11)*><*SETATVQTY(MX_CD_Bom_Parts:9141-11, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

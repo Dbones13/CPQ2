@@ -1,0 +1,11 @@
+{
+    "id": 17860,
+    "condition": "[AND]([GT](<*CTX( Container(Miscellaneous Interfaces).Row(2).Column(Nodes).Get )*>,0),[EQ](<*CTX( Container(Miscellaneous Interfaces).Row(3).Column(Devices).Get )*>,Yes))",
+    "name": "PS_Miscellaneous_Interfaces_EP-IBBREF_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IBBREF)*><*SELECTVALUE(SCADA_BOM_Items:EP-IBBREF)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IBBREF, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

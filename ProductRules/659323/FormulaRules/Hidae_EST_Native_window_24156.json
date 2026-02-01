@@ -1,0 +1,11 @@
+{
+    "id": 24156,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[NEQ](<*VALUE(ARO_System_Required)*>,Yes))",
+    "name": "Hidae_EST_Native_window",
+    "action": "<*SETOPTIONAL(EST_Native_window)*><*DISALLOWATTRIBUTES(EST_Native_window)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

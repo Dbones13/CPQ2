@@ -1,0 +1,11 @@
+{
+    "id": 18265,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,Sx15 PrecisionPlus Sr 90, 0.4\" (~10mm) gap)",
+    "name": "Part_D_3_4203_04",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-4203-04)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

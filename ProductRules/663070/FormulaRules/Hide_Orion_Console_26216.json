@@ -1,0 +1,11 @@
+{
+    "id": 26216,
+    "condition": "[EQ](<*VALUE(DMS Remote Peripheral Solution Type RPS)*>,Wyse 5070 Optiplex 3000)",
+    "name": "Hide Orion Console",
+    "action": "<*DISALLOWVALUES(DMS RPS Mounting Furniture:Orion_Console)*>",
+    "description": "7712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

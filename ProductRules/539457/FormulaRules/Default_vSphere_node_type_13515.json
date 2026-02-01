@@ -1,0 +1,11 @@
+{
+    "id": 13515,
+    "condition": "[EQ](<*VALUE(Virtualization_vSphere_Client_Node_Type)*>,)",
+    "name": "Default_vSphere_node_type",
+    "action": "<*SELECTVALUE(Virtualization_vSphere_Client_Node_Type:Dell OptiPlex XE4)*>",
+    "description": "Story 8704 & Story 8707",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

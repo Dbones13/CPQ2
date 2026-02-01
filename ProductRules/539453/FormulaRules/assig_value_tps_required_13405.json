@@ -1,0 +1,11 @@
+{
+    "id": 13405,
+    "condition": "1",
+    "name": "assig value tps required",
+    "action": "[IF]([EQ](<*CTX ( Container(Experion_Enterprise_Cont).UniqueValues(tps required).Separator(|) )*>,)){<*ASSIGNVALUE(tps required:No)*>}{<*ASSIGNVALUE(tps required:<*CTX ( Container(Experion_Enterprise_Cont).UniqueValues(tps required).Separator(|) )*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

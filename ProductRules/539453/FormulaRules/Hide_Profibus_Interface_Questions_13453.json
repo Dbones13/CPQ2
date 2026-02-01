@@ -1,0 +1,11 @@
+{
+    "id": 13453,
+    "condition": "[NEQ](<*VALUE(Is Profibus Interface in Scope?)*>,Yes)",
+    "name": "Hide Profibus Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of Profibus Interface Cards,Number of Profibus Interface Types,Number of Profibus Devices)*>",
+    "description": "Hide questions when Is Profibus Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

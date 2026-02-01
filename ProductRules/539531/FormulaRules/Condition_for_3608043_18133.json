@@ -1,0 +1,11 @@
+{
+    "id": 18133,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-43)",
+    "name": "Condition_for_3-6080-43",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Measurement_Type:6k|Non-GH Head|None)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

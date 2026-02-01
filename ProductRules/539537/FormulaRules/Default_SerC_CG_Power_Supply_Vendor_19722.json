@@ -1,0 +1,11 @@
+{
+    "id": 19722,
+    "condition": "[EQ](<*VALUE(SerC_CG_Power_Supply_Vendor)*>,)",
+    "name": "Default_SerC_CG_Power_Supply_Vendor",
+    "action": "<*SELECTVALUE(SerC_CG_Power_Supply_Vendor:Meanwell)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13953,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "eServer_Labor_parameter_var_5",
+    "action": "<*ASSIGNVALUE(eServer_Labor_parameter_var_5:<*CTX( Container(ES_Group).Sum(ES_Mobile_Server_Nodes_required_Assign) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

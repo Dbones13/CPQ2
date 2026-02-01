@@ -1,0 +1,11 @@
+{
+    "id": 13542,
+    "condition": "[EQ](<*VALUE(Virtualization_Ges_Location)*>,)",
+    "name": "Default_GES",
+    "action": "<*SELECTVALUE(Virtualization_Ges_Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10706,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Total_number_of_HC900_IO_points)*>,)",
+    "name": "CWS_Mig_default_Total_number_of_HC900_IO",
+    "action": "<*ASSIGNVALUE(CWS_Mig_Total_number_of_HC900_IO_points:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

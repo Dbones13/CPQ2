@@ -1,0 +1,11 @@
+{
+    "id": 25764,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Experion SCADA Points (0 - 300000))*>,9999),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant),[GT](<*eval(Int(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*>,0)))",
+    "name": "Exp_SCADA_Red_Pnt_Del_EPRSC10K",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-RSC10K)*><* DoResetAtt *>",
+    "description": "Del EP-RSC10K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

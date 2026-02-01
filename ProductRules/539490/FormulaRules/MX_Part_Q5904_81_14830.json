@@ -1,0 +1,11 @@
+{
+    "id": 14830,
+    "condition": "[EQ](<*VALUE(MX_MD_Dryer_Shutdown_Control)*>,Yes)",
+    "name": "MX_Part_Q5904_81",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-81)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-81, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

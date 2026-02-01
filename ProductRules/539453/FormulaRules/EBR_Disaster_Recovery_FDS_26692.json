@@ -1,0 +1,11 @@
+{
+    "id": 26692,
+    "condition": "1",
+    "name": "EBR Disaster Recovery FDS",
+    "action": "<*ASSIGNVALUE(EBR Disaster Recovery FDS:[IF]([EQ](<*VALUE(Experion_ProjectSize)*>,Small Project)){0}{[IF]([AND]([EQ](<*VALUE(Experion_ProjectSize)*>,Medium Project),[EQ](<*VALUE(Ges_Location_44925)*>,None))){[IF]([EQ](<*VALUE(Implementation Methodology)*>,Non-Standard Build Estimate)){<* Eval(16)*>}{<* Eval(16*0.75)*>}[ENDIF]}{[IF]([AND]([EQ](<*VALUE(Experion_ProjectSize)*>,Medium Project),[NEQ](<*VALUE(Ges_Location_44925)*>,None))){<* Eval(16*0.75*1.1)*>}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "60",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

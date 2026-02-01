@@ -1,0 +1,11 @@
+{
+    "id": 24037,
+    "condition": "[AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,HP DL360 G10),[EQ](<*VALUE(Terminal_Additional_Hard_Drive)*>,Yes))",
+    "name": "Add_MZ-PCEH17",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-PCEH17)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

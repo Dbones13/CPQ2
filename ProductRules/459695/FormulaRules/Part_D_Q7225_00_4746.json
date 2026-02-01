@@ -1,0 +1,11 @@
+{
+    "id": 4746,
+    "condition": "[NEQ](<*VALUE(MX_SG_Water_to_Water_Heat_Exchanger)*>,Yes)",
+    "name": "Part_D_Q7225_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q8214-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

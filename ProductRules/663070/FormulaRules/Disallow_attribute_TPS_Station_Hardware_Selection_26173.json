@@ -1,0 +1,11 @@
+{
+    "id": 26173,
+    "condition": "[LEQ](<*VALUE(TPS Station Qty (0-20))*>,0)",
+    "name": "Disallow_attribute_TPS_Station_Hardware_Selection",
+    "action": "<*DISALLOWATTRIBUTES(TPS Station Hardware Selection)*>",
+    "description": "CXDEV-8006 - CXDEV-8694",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

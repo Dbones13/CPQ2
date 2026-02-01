@@ -1,0 +1,11 @@
+{
+    "id": 13254,
+    "condition": "[EQ](<*VALUE(Number of Server Types)*>,)",
+    "name": "Set default value for Number of Server Types",
+    "action": "<*ASSIGNVALUE(Number of Server Types:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

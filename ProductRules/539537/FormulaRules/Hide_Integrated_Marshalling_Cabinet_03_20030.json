@@ -1,0 +1,11 @@
+{
+    "id": 20030,
+    "condition": "<*IFANYVALUE(SerC_CG_Cabinet_Type_03:Generic Cabinet)*>",
+    "name": "Hide_Integrated_Marshalling_Cabinet_03",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Universal_Marshalling_Cabinet,SerC_CG_Universal_Marshalling_Cabinet)*>",
+    "description": "82262",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

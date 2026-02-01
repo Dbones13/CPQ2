@@ -1,0 +1,11 @@
+{
+    "id": 2600,
+    "condition": "[AND]([NOT](<*ATTSEL(Terminal_GES_Eng)*>),<*ISSELECTED(Terminal_Ges_Location_Labour.GES China)*>)",
+    "name": "Terminal_GES_Eng_Set_Default_China",
+    "action": "<*SELECTVALUE(Terminal_GES_Eng:HPS_GES_P350B_CN)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

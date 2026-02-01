@@ -1,0 +1,11 @@
+{
+    "id": 26674,
+    "condition": "<*ISSELECTED(Default Switch.SW_L2_NRT_CISCO_48PT)*>\n",
+    "name": "Show_SI_920LN8",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:SI-920LN8)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:SI-920LN8, 2)*><* DoResetAtt *>\"\n",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

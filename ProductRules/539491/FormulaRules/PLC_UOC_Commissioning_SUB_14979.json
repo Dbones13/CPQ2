@@ -1,0 +1,11 @@
+{
+    "id": 14979,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_Commissioning_SUB",
+    "action": "<*ASSIGNVALUE(PLC_UOC_Commissioning_SUB:<* Eval(12*[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_2)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_2)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_6)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_6)*>}[ENDIF]*1.5+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_9)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_9)*>}[ENDIF]*2+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_10)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_10)*>}[ENDIF]*2+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_11)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_11)*>}[ENDIF]*2.5+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_12)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_12)*>}[ENDIF]*2.5) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

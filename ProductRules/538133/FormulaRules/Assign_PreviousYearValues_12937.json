@@ -1,0 +1,11 @@
+{
+    "id": 12937,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Assign_PreviousYearValues",
+    "action": "<*ASSIGNVALUE(SC_P1P2_LPDA_PY_ListPrice:<*VALUE(SC_P1P2_LPDA_PY_ListPrice_Hidden)*>)*><*ASSIGNVALUE(SC_P1P2_LPDA_PY_SellPrice:<*VALUE(SC_P1P2_LPDA_PY_SellPrice_Hidden)*>)*><*ASSIGNVALUE(SC_P1P2_LTYA_PY_ListPrice:<*VALUE(SC_P1P2_LTYA_PY_ListPrice_Hidden)*>)*><*ASSIGNVALUE(SC_P1P2_PY_Parts_Ext_Price:<*VALUE(SC_P1P2_PY_Parts_Ext_Price_Hidden)*>)*><*ASSIGNVALUE(SC_P1P2_PY_ListPrice:<*VALUE(SC_P1P2_PY_ListPrice_Hidden)*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

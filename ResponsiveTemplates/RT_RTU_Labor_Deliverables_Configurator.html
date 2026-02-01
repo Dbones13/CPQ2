@@ -1,0 +1,105 @@
+	<!-- RTU Labor Tab Responsive Template -->
+
+	<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+        <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+          <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+        </div>
+
+        <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+        <!-- /ko -->
+
+      <div class="row col-xs-12 swagger">
+          <div id="rtu-general">
+            <div>
+              <div class="swagger-header" onclick="toggleConfigSection(event, '#rtu-general')">
+                <span>CE RTU Engineering</span>
+                <a id="rtu-general-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+
+              <div id="rtu-general-content">
+        <div id="ce rtu engineering labor container-content">
+                <div id="ce rtu engineering labor container">
+                  <div class="col-xs-12 col-sm-12">
+                      <div class="full-width-attribute">
+                        <table class="fiori3-configuration-container-table" style="width:90%">
+                          <tbody>
+                          <tr class="full-width-attribute">
+                           <!-- ko foreach: attributes.filterByProperty('name' ,"CE RTU GES Engineer %","CE RTU Engineering Execution Country","CE RTU Engineering Execution Year","CE RTU Engineering Productivity") -->
+                          	<td style="white-space:nowrap;text-align:right;padding-right:10px">
+                              <label data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+                              <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+                           	</td>
+                            <!-- ko if: ['Productivity', 'GES %'].includes(label()) -->
+                            <td style="width:5%"><input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" data-bind="value: userInput, enable: isEnabled, css:{'error':!isValid() || hasConflict()}, attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control"></td>
+                             <!-- /ko -->
+                             <!-- ko ifnot: ['Productivity', 'GES %'].includes(label()) -->
+                             <td><select data-bind="options: values, optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control"></select></td>
+                              <!-- /ko -->
+                           <!-- /ko -->
+                          </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                      <!-- ko foreach: attributes.filterByProperty('name' , "CE RTU Engineering Labor Container") -->
+                          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                          </div>
+                    <!-- /ko -->
+                  </div>
+                </div>
+              </div>
+        <!-- end of swagger section ce-rtu-engineering -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row col-xs-12 swagger">
+          <div id="rtu-labor">
+            <div>
+              <div class="swagger-header" onclick="toggleConfigSection(event, '#rtu-labor')">
+                <span>Additional Custom Deliverables</span>
+                <a id="rtu-labor-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+
+              <div id="rtu-labor-content">
+        <div id="ce rtu engineering additional labor container-content">
+                <div id="ce rtu engineering additional labor container">
+                  <div class="col-xs-12 col-sm-12">
+                     <div class="full-width-attribute">
+                        <table class="fiori3-configuration-container-table" style="width:90%">
+                         <tbody>
+                          <tr class="full-width-attribute">
+                           <!-- ko foreach: attributes.filterByProperty('name' ,"RTU_CD_LD_GES Engineer %","RTU_CD_LaborDeliverables_Execution Country","RTU_CD_LD_Engineering_Execution Year") -->
+                          	<td style="white-space:nowrap;text-align:right; padding-right:10px">
+                              <label data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+                              <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="overflow-wrap: break-word; display: none; margin-bottom: 0px;" class="grayout"></span>
+                           	</td>
+                            <!-- ko if: ['GES %'].includes(label()) -->
+                             <td style="width:5%"><input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" data-bind="value: userInput, enable: isEnabled, css:{'error':!isValid() || hasConflict()}, attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control"></td>
+                             <!-- /ko -->
+                             <!-- ko ifnot: ['GES %'].includes(label()) -->
+                             <td><select data-bind="options: values, optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control"></select></td>
+                             <!-- /ko -->
+                           <!-- /ko -->
+                          </tr>
+                        </tbody>
+                       </table>
+                      </div>
+                      <!-- ko foreach: attributes.filterByProperty('name' , "CE RTU Additional Custom Deliverables") -->
+                      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                      </div>
+                    <!-- /ko -->
+                  </div>
+                </div>
+              </div>
+        <!-- end of swagger section ce-rtu-engineering -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

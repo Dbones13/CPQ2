@@ -1,0 +1,11 @@
+{
+    "id": 25793,
+    "condition": "[GT](<*VALUE(MZ_PCSR02 qnt)*>,0)",
+    "name": "MZ-PCSR02 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCSR02)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCSR02,<*VALUE(MZ_PCSR02 qnt)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37559",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

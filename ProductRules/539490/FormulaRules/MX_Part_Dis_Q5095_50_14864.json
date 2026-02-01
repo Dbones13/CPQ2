@@ -1,0 +1,11 @@
+{
+    "id": 14864,
+    "condition": "[LT](<*VALUE(MX_number_of_operator_station)*>,1)",
+    "name": "MX_Part_Dis_Q5095_50",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5095-50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

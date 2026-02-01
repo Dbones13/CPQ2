@@ -1,0 +1,11 @@
+{
+    "id": 26539,
+    "condition": "[EQ](<*VALUE(Hardware Selection)*>,SVR_PER_DELL_Rack_RAID5)",
+    "name": "Show_Additional_MemoryDisk_Mobile",
+    "action": "[IF]([IN](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(Additional Memory (Mobile Server))*><*DISALLOWATTRIBUTES(Additional Memory (Mobile Server))*>}{<*ALLOWVALUES(Additional Memory (Mobile Server):16GB)*>}[ENDIF]",
+    "description": "Mobile Nodes Server Configuration\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

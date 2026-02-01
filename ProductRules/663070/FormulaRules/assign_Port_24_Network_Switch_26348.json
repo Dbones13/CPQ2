@@ -1,0 +1,11 @@
+{
+    "id": 26348,
+    "condition": "1",
+    "name": "assign Port 24 Network Switch",
+    "action": "<*ASSIGNVALUE(Port 24 Network Switch:<* Eval(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SI-920LN4)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SI-930LN4)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SH-2930R4)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SH-2530N4)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SU-2750N4)*>+<*VALUE(Port 24 Network Switchcluster)*>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

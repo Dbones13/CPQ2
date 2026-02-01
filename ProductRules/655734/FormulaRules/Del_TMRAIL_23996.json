@@ -1,0 +1,11 @@
+{
+    "id": 23996,
+    "condition": "[NOT](<*ISSELECTED(Terminal_Mode_of_Transport.Rail Wagon loading/unloading)*>)",
+    "name": "Del_TM-RAIL",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-RAIL)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

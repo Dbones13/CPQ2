@@ -1,0 +1,11 @@
+{
+    "id": 15210,
+    "condition": "[NEQ](<*VALUE(MXP_Roll_Blade_Coating_Control)*>,Coat Weight Midrange Control for Roll Coating)",
+    "name": "Part_D_3_5817_11",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5817-11)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

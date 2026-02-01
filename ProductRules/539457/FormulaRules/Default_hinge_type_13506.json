@@ -1,0 +1,11 @@
+{
+    "id": 13506,
+    "condition": "[EQ](<*VALUE(Virtualization_Cabinet_Hinge_Type)*>,)",
+    "name": "Default_hinge_type",
+    "action": "<*SELECTVALUE(Virtualization_Cabinet_Hinge_Type:130 Degrees)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

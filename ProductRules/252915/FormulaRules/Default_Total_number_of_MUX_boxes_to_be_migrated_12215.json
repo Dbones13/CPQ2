@@ -1,0 +1,11 @@
+{
+    "id": 12215,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering)\n,[EQ](<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>,))",
+    "name": "Default_Total number of MUX boxes to be migrated",
+    "action": "<*ASSIGNVALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated:0)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

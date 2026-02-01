@@ -1,0 +1,11 @@
+{
+    "id": 20774,
+    "condition": "[AND]([NEQ](<*VALUE(SS_Simulation_Server_required)*>,Yes),[NEQ](<*VALUE(SS_Simulation_PC_Station_required)*>,Yes),[EQ](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0),[EQ](<*VALUE(SS_Flex_Station_Qty_Orion)*>,0))",
+    "name": "Display_Sum_0",
+    "action": "<*ASSIGNVALUE(SS_display_sum:0)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

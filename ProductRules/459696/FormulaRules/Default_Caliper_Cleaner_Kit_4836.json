@@ -1,0 +1,11 @@
+{
+    "id": 4836,
+    "condition": "[EQ](<*VALUE(MX_SE_Caliper_Cleaner_Kit)*>,)",
+    "name": "Default_Caliper_Cleaner_Kit",
+    "action": "<*SELECTVALUE(MX_SE_Caliper_Cleaner_Kit:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

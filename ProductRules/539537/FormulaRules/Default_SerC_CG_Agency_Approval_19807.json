@@ -1,0 +1,11 @@
+{
+    "id": 19807,
+    "condition": "[EQ](<*VALUE(SerC_CG_Agency_Approval)*>,)",
+    "name": "Default_SerC_CG_Agency_Approval",
+    "action": "<*SELECTVALUE(SerC_CG_Agency_Approval:No Approvals)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

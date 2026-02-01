@@ -1,0 +1,11 @@
+{
+    "id": 14692,
+    "condition": "[AND]([OR]([EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD),[EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS MD & CD)),[EQ](<*CTX( Container(MX_CD_group).Rows.GetCount )*>,0))",
+    "name": "Default_CD_group_Container",
+    "action": "<*CTX( Container(MX_CD_group).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

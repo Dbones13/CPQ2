@@ -1,0 +1,11 @@
+{
+    "id": 13000,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Make_Required_Renewal",
+    "action": "<*SETREQUIRED(SC_Pricing_Escalation)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

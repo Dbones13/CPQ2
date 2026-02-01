@@ -1,0 +1,11 @@
+{
+    "id": 19533,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Select WorkStation Grade Computer Platform Type)*>,T5820XL),[GT](<* IsNull(<*VALUE(Exp HS Quantity of Flex Station)*>,0) *>,0))",
+    "name": "Set MZ-PCWS93",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:MZ-PCWS93)*><*SETATVQTY(Experion_HS_PART_SUMMARY:MZ-PCWS93,<*VALUE(Exp HS Quantity of Flex Station)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19606,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS FLOW-X Flow Computer, EFM Export Option)*>,Yes))",
+    "name": "FLOW-X Flow Computer, EFM Export Option NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HFLXEF)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

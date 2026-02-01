@@ -1,0 +1,11 @@
+{
+    "id": 23700,
+    "condition": "[EQ](<*VALUE(AR_HCI_R2QConfig)*>,Yes)",
+    "name": "R2Q_DisallowEng",
+    "action": "<*DISALLOWALLVALUESEXCEPT(AR_HCI_No_FO_ENG:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20320,
+    "condition": "[AND]([EQ](<*VALUE(DVM_Software_Release)*>,R800),[EQ](<*VALUE(Experion DVM Integration)*>,Yes))",
+    "name": "Add_Experion DVM Integration_EP-IADDVM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-IADDVM)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-IADDVM, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

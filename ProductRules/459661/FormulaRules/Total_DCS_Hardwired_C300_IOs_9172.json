@@ -1,0 +1,11 @@
+{
+    "id": 9172,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_DCS_Hardwired_C300_IOs",
+    "action": "<*ASSIGNVALUE(Total_DCS_Hardwired_C300_IOs:<* Eval(<*CTX ( Container(CE_System_Cont).Sum(Labor_parameter_wio) )*>+<*CTX ( Container(CE_System_Cont).Sum(Total_UOC_IOs) )*>+<*CTX ( Container(CE_System_Cont).Sum(Total_RTU_IOs) )*>+<*CTX ( Container(CE_System_Cont).Sum(Total_IOs_PLC) )*>)*>)*>",
+    "description": "Labor report Task\nTotal DCS Hardwired I/Os :( AI + AO + DI + DO):: C300, UOC, PLC, RTU",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

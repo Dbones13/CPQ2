@@ -1,0 +1,11 @@
+{
+    "id": 19882,
+    "condition": "[NOT]([EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Disallow_SerC_CG_Fan_Option",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Fan_Option)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

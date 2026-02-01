@@ -1,0 +1,11 @@
+{
+    "id": 22231,
+    "condition": "[EQ](<*CTX( Container(Scada_CCR_Unit_Cont).Rows.GetCount )*>,0)",
+    "name": "Scada_Default_1_Row",
+    "action": "<*CTX( Container(Scada_CCR_Unit_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

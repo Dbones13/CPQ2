@@ -1,0 +1,11 @@
+{
+    "id": 13216,
+    "condition": "[EQ](<*VALUE(TPA_Count_of_application_blocks_in_department)*>,)",
+    "name": "TPA_Default_Count_of_application_blocks_in_department",
+    "action": "<*ASSIGNVALUE(TPA_Count_of_application_blocks_in_department:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

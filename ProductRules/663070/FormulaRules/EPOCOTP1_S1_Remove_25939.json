@@ -1,0 +1,11 @@
+{
+    "id": 25939,
+    "condition": "[NOT]([AND](<*ISSELECTED(TouchScreen_FlexServerDesk.Yes)*>,<*ISSELECTED(NodeSupplier_FlexServer.Honeywell)*>))",
+    "name": "EP-OCOTP1_S1_Remove",
+    "action": "<*ASSIGNVALUE(EP-OCOTP1_S1:0)*>",
+    "description": "CXCPQ-38928",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

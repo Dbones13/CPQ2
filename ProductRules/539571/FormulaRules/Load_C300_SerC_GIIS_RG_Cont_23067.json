@@ -1,0 +1,11 @@
+{
+    "id": 23067,
+    "condition": "[AND]([OR]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[NOT](<*ISSELECTED(SerC_IO_Mounting_Solution.Mounting Panel)*>),<*ISSELECTED(Ser_RG_Universal_Marshalling_Cabinet.No)*>),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))\n,[EQ](<*CTX ( Container(C300_SerC_GIIS_RG_Cont).Rows.GetCount )*>,0))",
+    "name": "Load C300_SerC_GIIS_RG_Cont",
+    "action": "<*CTX ( Container(C300_SerC_GIIS_RG_Cont).Load(Select IO_Type, non_red_is, red_is, future_red_is from C300_SerC_GIIS) )*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

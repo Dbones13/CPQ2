@@ -1,0 +1,11 @@
+{
+    "id": 15200,
+    "condition": "[NEQ](<*VALUE(MXP_Vynil_Control)*>,Coordinated Speed/Optimization Control for Vinyl)",
+    "name": "Part_D_3_5842_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5842-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

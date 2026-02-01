@@ -1,0 +1,11 @@
+{
+    "id": 10909,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(HC900_250_Ohm_Shunt_Resistor_Kit_(8/pkg.))*>,0) *>,0))",
+    "name": "Reset 51205995-501",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:51205995-501)*><* DoResetAtt *>",
+    "description": "CXCPQ-40189",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

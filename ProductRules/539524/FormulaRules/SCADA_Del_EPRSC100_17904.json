@@ -1,0 +1,11 @@
+{
+    "id": 17904,
+    "condition": "[NOT]([AND]([GT]([IF]([GT](<*VALUE(Scada_EP-RSC10K_int)*>,<*VALUE(Scada_EP-RSC10K_qty)*>)){<*VALUE(Scada_EP-RSC10K_qty_plus1)*>}{<*VALUE(Scada_EP-RSC10K_qty)*>}[ENDIF],0),[GT](<*VALUE(Scada_conatiner_sum)*>,99),[EQ](<*VALUE(Scada_SCADA_Server_Redundancy)*>,Yes)))",
+    "name": "SCADA_Del_EP-RSC100",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(SCADA_BOM_Items:EP-RSC100)*><* DoResetAtt *>",
+    "description": "Hide-EP-RSC100",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

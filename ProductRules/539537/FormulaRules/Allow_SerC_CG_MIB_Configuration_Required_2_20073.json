@@ -1,0 +1,11 @@
+{
+    "id": 20073,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Allow_SerC_CG_MIB_Configuration_Required_2",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_MIB_Configuration_Required)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

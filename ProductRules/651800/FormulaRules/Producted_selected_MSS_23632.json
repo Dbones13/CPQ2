@@ -1,0 +1,11 @@
+{
+    "id": 23632,
+    "condition": "[LIKE](<*CTX ( Container(Cyber Configurations).UniqueValues(Part Desc).Separator(,) )*>,MSS)",
+    "name": "Producted_selected_MSS",
+    "action": "<*DISALLOWVALUES(AR_CyberPrdChoices:MSS)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

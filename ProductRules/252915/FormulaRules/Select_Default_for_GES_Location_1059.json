@@ -1,0 +1,11 @@
+{
+    "id": 1059,
+    "condition": "[EQ](<*VALUE(MSID_GES_Location)*>,)",
+    "name": "Select Default for GES Location",
+    "action": "<*SELECTVALUE(MSID_GES_Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "24/01/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13859,
+    "condition": "[EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>,HIPPS)",
+    "name": "Total_IOs_SM_HIPPS",
+    "action": "<*ASSIGNVALUE(Total_IOs_SM_HIPPS:<* Eval(<*CTX ( Container(SM_ControlGroup_Cont).Sum(Total_IOs) )*>) *>)*>",
+    "description": "Labor Report task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

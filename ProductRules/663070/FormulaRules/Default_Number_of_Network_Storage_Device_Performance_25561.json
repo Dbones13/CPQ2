@@ -1,0 +1,11 @@
+{
+    "id": 25561,
+    "condition": "[EQ](<*VALUE(Number of Network Storage Device Performance)*>,)",
+    "name": "Default_Number_of_Network_Storage_Device_Performance",
+    "action": "<*ASSIGNVALUE(Number of Network Storage Device Performance:0)*>",
+    "description": "CXCPQ-35453",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

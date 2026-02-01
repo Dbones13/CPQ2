@@ -1,0 +1,11 @@
+{
+    "id": 22944,
+    "condition": "<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>",
+    "name": "Hide_SerC_RG_Cabinet_Type",
+    "action": "<*DISALLOWATTRIBUTES(SerC_RG_Cabinet_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

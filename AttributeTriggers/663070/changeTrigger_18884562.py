@@ -1,0 +1,1 @@
+[IF]([NEQ](<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,0)){<*SELECTVALUES(Hardware Design Selection_ACE_T_Node:SVR_STD_DELL_Tower_RAID1,Node_Supplier_ACE_T:Honeywell,Trusted Platform Module_TPM_ACE_T:Yes,Additional Memory (ACE-T):None,Additional Hard Disk (ACE-T):No,Display Size (ACE-T):27 inch NTS NEC,Display Supplier (ACE-T):Honeywell)*>}{if_false}[ENDIF]

@@ -1,0 +1,11 @@
+{
+    "id": 22854,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Doors_Default)*>,)",
+    "name": "Default_SerC_RG_Cabinet_Doors_Default",
+    "action": "<*SELECTVALUE(SerC_RG_Cabinet_Doors_Default:Standard)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

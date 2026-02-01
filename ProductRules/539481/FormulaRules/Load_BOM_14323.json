@@ -1,0 +1,11 @@
+{
+    "id": 14323,
+    "condition": "<*ATTDEF(MIQ_PART_SUMMARY)*>",
+    "name": "Load BOM",
+    "action": "<*CTX( Container(MIQ_PartSummary_Cont).LoadKeys(Partnumber).Load(select '<*Eval(Replace(\"<*VALUE(MIQ_PART_SUMMARY)*>\",\", \",\"' as Partnumber UNION SELECT '\"))*>' as Partnumber   ) )*>",
+    "description": "CXCPQ-50830",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

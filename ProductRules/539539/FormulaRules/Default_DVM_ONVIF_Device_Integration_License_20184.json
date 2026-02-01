@@ -1,0 +1,11 @@
+{
+    "id": 20184,
+    "condition": "[EQ](<*VALUE(DVM_ONVIF_Device_Integration_License)*>,)",
+    "name": "Default_DVM_ONVIF_Device_Integration_License",
+    "action": "<*SELECTVALUE(DVM_ONVIF_Device_Integration_License:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

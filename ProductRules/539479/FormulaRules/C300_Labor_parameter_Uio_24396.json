@@ -1,0 +1,11 @@
+{
+    "id": 24396,
+    "condition": "1",
+    "name": "C300_Labor_parameter_Uio",
+    "action": "<*ASSIGNVALUE(C300_Labor_parameter_Uio:[IF]([GT](0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(Uio) )*>,0)){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Saratha  Gnanamani"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22985,
+    "condition": "[OR]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE)),[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C))",
+    "name": "hide C300_RAIL_Universal_IO_cont_RG section",
+    "action": "<*CTX ( Container(C300_RAIL_Universal_io_RG_cont_2).Rows.Clear )*>\n<*CTX ( Container(C300_RAIL_Universal_IO_cont_RG_1).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(ATTCON_25_close,ATTCON_25_open,C300_RAIL_Universal_IO_cont_RG_1,C300_RAIL_Universal_io_RG_cont_2,C300Number of RAIL UIOs per Non Standard Cabinet,Header_05_close,Header_05_open,series_c_Rg_message)*>",
+    "description": "CXCPQ-40339",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

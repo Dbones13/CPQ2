@@ -1,0 +1,11 @@
+{
+    "id": 26043,
+    "condition": "1",
+    "name": "EBR (Experion Server)",
+    "action": "[IF]([OR]([EQ](<*VALUE(Experion Backup & Restore (Experion Server))*>,Yes),[EQ](<*VALUE(Experion Backup & Restore (Experion TPS Server))*>,Yes))){<*ASSIGNVALUE(Labor Experion Backup & Restore (Experion Server):<* Eval([IF]([AND]([OR]([EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Experion Server Type)*>,Server TPS),[EQ](<*VALUE(Experion Server Type)*>,Flex Server)),[OR]([EQ](<*VALUE(Server Mounting)*>,Cabinet),[EQ](<*VALUE(Server Mounting)*>,Desk)))){[IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant)){2}{1}[ENDIF]}{0}[ENDIF]+0<*VALUE(Additional Servers)*>) *>)*>}{<*ASSIGNVALUE(Labor Experion Backup & Restore (Experion Server):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

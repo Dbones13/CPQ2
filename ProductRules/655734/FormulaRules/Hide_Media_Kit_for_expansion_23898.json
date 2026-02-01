@@ -1,0 +1,11 @@
+{
+    "id": 23898,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "Hide Media Kit for expansion",
+    "action": "<*DISALLOWATTRIBUTES(Terminal_Media_kit_required)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

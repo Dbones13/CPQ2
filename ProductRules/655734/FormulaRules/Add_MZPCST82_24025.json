@@ -1,0 +1,11 @@
+{
+    "id": 24025,
+    "condition": "[AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,DELL T550 STD No TPM))",
+    "name": "Add_MZ-PCST82",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-PCST82)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26721,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[EQ] (<*VALUE(Nutanix License Type)*>, Per Core),[GT](<* Eval(<*CTX ( Container(Virtualization_Single_Node_Cluster_Conf_transpose).Sum(No_of_Nutanix_Premium_Platform_32_Core_SC) )*> * 1) *>,0)))",
+    "name": "Part_EP_VMN32S_Disallow",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VMN32S)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/01/26",
+    "modifiedBy": "Abhijeet Shinde"
+}

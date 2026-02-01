@@ -1,0 +1,11 @@
+{
+    "id": 22873,
+    "condition": "[AND]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,),[NEQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "Default_Io mounting solution",
+    "action": "<*SELECTVALUE(SerC_IO_Mounting_Solution:Cabinet)*>",
+    "description": "CXCPQ-37963",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

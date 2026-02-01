@@ -1,0 +1,11 @@
+{
+    "id": 14085,
+    "condition": "[EQ](<*VALUE(ESDC_Count)*>,)",
+    "name": "Default_ESDC_count",
+    "action": "<*ASSIGNVALUE(ESDC_Count:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

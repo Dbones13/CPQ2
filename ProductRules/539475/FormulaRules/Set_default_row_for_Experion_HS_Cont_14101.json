@@ -1,0 +1,11 @@
+{
+    "id": 14101,
+    "condition": "[EQ](<*CTX( Container(Experion_HS_Cont).Rows.GetCount )*>,0)",
+    "name": "Set default row for Experion_HS_Cont",
+    "action": "<*CTX( Container(Experion_HS_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

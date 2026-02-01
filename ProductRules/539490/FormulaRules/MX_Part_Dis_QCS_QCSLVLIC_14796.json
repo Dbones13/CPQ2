@@ -1,0 +1,11 @@
+{
+    "id": 14796,
+    "condition": "[OR]([NOT]([IN](<*VALUE(MX_What_QCS_System_is_required)*>,QCS MD,QCS CD,QCS MD & CD)),[NEQ](<*VALUE(MX_Electronic_or_physical_media)*>,Physical))",
+    "name": "MX_Part_Dis_QCS_QCS-LVLIC",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:QCS-LVLIC)*><* DoResetAtt *>",
+    "description": "Replaced QCS-LV2015 with QCS-LVLIC",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10765,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_CD_Controls)*>,))",
+    "name": "QCS_Mig_CD_Controls_Peripheral",
+    "action": "<*DISALLOWATTRIBUTES(QCS_Mig_Single_phase_or_Three_phase_power,QCS_Mig_Number_of_die_bolts,Header_22_close,Header_22_open)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

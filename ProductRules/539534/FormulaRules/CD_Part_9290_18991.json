@@ -1,0 +1,11 @@
+{
+    "id": 18991,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Non-profiling/Fourdrinier/Couch/Press))",
+    "name": "CD_Part_9290",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9290)*><*SETATVQTY(MX_CD_Bom_Parts:9290, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

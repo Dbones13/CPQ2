@@ -1,0 +1,11 @@
+{
+    "id": 20095,
+    "condition": "[NOT]([AND]([OR]([EQ](<*VALUE(Experion_PKS_Software_Release)*>,R520),[EQ](<*VALUE(Experion_PKS_Software_Release)*>,R530)),[NOT](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)))",
+    "name": "Show_ControllerType_ControllerRequired",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_C300_Controller_Module_Type)*>",
+    "description": "#CXCPQ-50260",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

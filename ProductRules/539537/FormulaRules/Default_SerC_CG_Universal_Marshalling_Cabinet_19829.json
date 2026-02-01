@@ -1,0 +1,11 @@
+{
+    "id": 19829,
+    "condition": "[EQ](<*VALUE(SerC_CG_Universal_Marshalling_Cabinet)*>,)",
+    "name": "Default_SerC_CG_Universal_Marshalling_Cabinet",
+    "action": "<*SELECTVALUE(SerC_CG_Universal_Marshalling_Cabinet:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

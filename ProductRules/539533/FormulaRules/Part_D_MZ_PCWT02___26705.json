@@ -1,0 +1,11 @@
+{
+    "id": 26705,
+    "condition": "[OR]([NEQ](<*VALUE(ES_eServer_Staton_Node)*>,STN_PER_DELL_Tower_RAID2),[NEQ](<*VALUE(ES_Node_Supplier_station)*>,Honeywell),[EQ](<*VALUE(ES_Additional_Stations_for_eServer)*>,0),[NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R520))",
+    "name": "Part_D_MZ_PCWT02  ",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:MZ-PCWT02)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Ravika Pupneja"
+}

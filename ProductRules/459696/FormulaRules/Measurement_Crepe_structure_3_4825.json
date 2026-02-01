@@ -1,0 +1,11 @@
+{
+    "id": 4825,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-10 Compact O-Frame (Standard Head)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Crepe Structure))",
+    "name": "Measurement_Crepe structure_3",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

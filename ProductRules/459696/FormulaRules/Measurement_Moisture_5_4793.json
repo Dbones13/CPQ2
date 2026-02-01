@@ -1,0 +1,11 @@
+{
+    "id": 4793,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture))",
+    "name": "Measurement_Moisture_5",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:MXIR Moisture SSIR)*>\n\n<*SELECTVALUE(MX_SE_Sensor_Type:MXIR Moisture SSIR)*>\n\n<*SETREQUIRED(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

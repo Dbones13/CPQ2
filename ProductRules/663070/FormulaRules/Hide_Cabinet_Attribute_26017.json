@@ -1,0 +1,11 @@
+{
+    "id": 26017,
+    "condition": "[EQ](<*VALUE(CMS Cabinet Mounting Stations required)*>,No)",
+    "name": "Hide_Cabinet_Attribute",
+    "action": "<*SETOPTIONAL(Cabinet_Display_size,Cabinet_IKB_or_OEP,Cabinet_Industrial_KB_Mouse,Cabinet_No_of_Displays (0-4),Cabinet_Touch_Screen_required,Cabinet_Trackball_required)*><*DISALLOWATTRIBUTES(Cabinet_Display_size,Cabinet_IKB_or_OEP,Cabinet_Industrial_KB_Mouse,Cabinet_No_of_Displays (0-4),Cabinet_Touch_Screen_required,Cabinet_Trackball_required)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

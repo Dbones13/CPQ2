@@ -1,0 +1,11 @@
+{
+    "id": 20402,
+    "condition": "[EQ](<*VALUE(SS_Node_Supplier_orion)*>,)",
+    "name": "default_SS_Node_Supplier_orion",
+    "action": "<*SELECTVALUE(SS_Node_Supplier_orion:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

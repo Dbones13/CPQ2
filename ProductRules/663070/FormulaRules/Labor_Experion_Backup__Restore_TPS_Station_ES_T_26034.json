@@ -1,0 +1,11 @@
+{
+    "id": 26034,
+    "condition": "1",
+    "name": "Labor Experion Backup & Restore (TPS Station ES T)",
+    "action": "[IF]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes)){[IF]([EQ](<*VALUE(Experion Backup & Restore (TPS Station ES-T))*>,Yes)){<*ASSIGNVALUE(Labor Experion Backup & Restore (TPS Station ES T):<* Eval(0<*VALUE(CMS TPS Station Qty 0_20)*>+0<*VALUE(DMS TPS Station Qty 0_20)*>+0<*VALUE(TPS Station Qty (0-20))*>) *>)*>}{<*ASSIGNVALUE(Labor Experion Backup & Restore (TPS Station ES T):0)*>}[ENDIF]}{<*ASSIGNVALUE(Labor Experion Backup & Restore (TPS Station ES T):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

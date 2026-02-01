@@ -1,0 +1,11 @@
+{
+    "id": 26709,
+    "condition": "[EQ](<*VALUE(PDU Power Cable Req for Switch L3)*>,)",
+    "name": "Set_PDU_PowerCable_Req_for_Switch",
+    "action": "<*SELECTVALUE(PDU Power Cable Req for Switch L3:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

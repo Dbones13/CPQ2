@@ -1,0 +1,11 @@
+{
+    "id": 18231,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,Calibration Sample Holder 6031)",
+    "name": "Part_D_Q6760_10",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q6760-10)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

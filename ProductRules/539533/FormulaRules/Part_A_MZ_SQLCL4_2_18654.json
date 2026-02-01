@@ -1,0 +1,11 @@
+{
+    "id": 18654,
+    "condition": "[AND]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes),[EQ](<*VALUE(ES_Hardware_Selection)*>,SVR_PER_DELL_Rack_RAID1_XE))",
+    "name": "Part_A_MZ_SQLCL4_2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:MZ-SQLCL4)*><*SETATVQTY(eServer_BOM_parts:MZ-SQLCL4,1)*>\n<* DoResetAtt *>",
+    "description": "7966 Story",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

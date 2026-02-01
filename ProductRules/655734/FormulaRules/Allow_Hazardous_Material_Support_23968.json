@@ -1,0 +1,11 @@
+{
+    "id": 23968,
+    "condition": "[AND](<*ISSELECTED(Terminal_Mode_of_Transport.Truck loading/unloading)*>,[EQ](<*VALUE(Hazardous_Material_Support)*>,))",
+    "name": "Allow Hazardous Material Support",
+    "action": "<*ALLOWATTRIBUTES(Hazardous_Material_Support)*><*SELECTVALUE(Hazardous_Material_Support:No)*><*SETREQUIRED(Hazardous_Material_Support)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

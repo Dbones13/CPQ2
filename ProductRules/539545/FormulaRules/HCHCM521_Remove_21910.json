@@ -1,0 +1,11 @@
+{
+    "id": 21910,
+    "condition": "[OR]([NEQ](<*VALUE(FDM_Release)*>,R521),[NEQ](<*VALUE(FDM_Base_Media_Delivery)*>,Physical Delivery))",
+    "name": "HC-HCM521_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-HCM521)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

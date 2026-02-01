@@ -1,0 +1,11 @@
+{
+    "id": 22609,
+    "condition": "[EQ](<*VALUE(LMS_GES_Location)*>,)",
+    "name": "Default_GES_Location",
+    "action": "<*SELECTVALUE(LMS_GES_Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

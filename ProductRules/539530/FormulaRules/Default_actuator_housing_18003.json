@@ -1,0 +1,11 @@
+{
+    "id": 18003,
+    "condition": "[EQ](<*VALUE(MXP_Actuator_Housing_cover)*>,)",
+    "name": "Default_actuator_housing",
+    "action": "<*SELECTVALUE(MXP_Actuator_Housing_cover:Stainless steel)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

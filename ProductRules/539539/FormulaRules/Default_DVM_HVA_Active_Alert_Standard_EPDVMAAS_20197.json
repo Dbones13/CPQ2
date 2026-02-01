@@ -1,0 +1,11 @@
+{
+    "id": 20197,
+    "condition": "[EQ](<*VALUE(DVM_HVA -Active_Alert_Standard_EP-DVMAAS)*>,)",
+    "name": "Default_DVM_HVA -Active_Alert_Standard_EP-DVMAAS",
+    "action": "<*ASSIGNVALUE(DVM_HVA -Active_Alert_Standard_EP-DVMAAS:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

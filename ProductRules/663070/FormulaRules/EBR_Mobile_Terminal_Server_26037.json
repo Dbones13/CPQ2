@@ -1,0 +1,11 @@
+{
+    "id": 26037,
+    "condition": "1",
+    "name": "EBR (Mobile Terminal Server)",
+    "action": "[IF]([EQ](<*VALUE(Experion Backup & Restore (Mobile Terminal Server))*>,Yes)){<*ASSIGNVALUE(Labor EBR (Mobile Terminal Server):0<*VALUE(Mobile Server Nodes)*>)*>}{<*ASSIGNVALUE(Labor EBR (Mobile Terminal Server):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

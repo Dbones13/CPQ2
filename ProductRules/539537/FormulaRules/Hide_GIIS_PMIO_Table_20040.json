@@ -1,0 +1,11 @@
+{
+    "id": 20040,
+    "condition": "[NOT]([EQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,Yes))",
+    "name": "Hide_GIIS_PMIO_Table",
+    "action": "<*CTX ( Container(C300_SerC_GIIS_PMIO_CG_Cont).Rows.Clear )*><*DISALLOWATTRIBUTES(C300_SerC_GIIS_PMIO_CG_Cont,Header_13_close,Header_13_open)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

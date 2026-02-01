@@ -1,0 +1,11 @@
+{
+    "id": 20513,
+    "condition": "[OR]([LEQ](<*VALUE(SS_LaserJet_Printer_Monochrome)*>,0),[NEQ](<*VALUE(CE_Site_Voltage)*>,120V))",
+    "name": "Part_D_TP_DLBP03_100",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-DLBP03-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26346,
+    "condition": "[OR]([EQ](<*VALUE(TP-OTP231_s1)*>,0),[EQ](<*VALUE(TP-OTP231_S2)*>,0),[EQ](<*VALUE(TP-OTP231_s3)*>,0),[EQ](<*VALUE(TP-OTP231_S4)*>,0))",
+    "name": "TP-OTP231_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-OTP231)*><* DoResetAtt *>",
+    "description": "CXCPQ-38909",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

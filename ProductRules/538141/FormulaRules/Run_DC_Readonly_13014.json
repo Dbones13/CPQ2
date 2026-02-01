@@ -1,0 +1,11 @@
+{
+    "id": 13014,
+    "condition": "[EQ](<*VALUE(SC_Renewal_check)*>,0)",
+    "name": "Run_DC_Readonly",
+    "action": "<* ExecuteScript(PS_SC_Machine_Price_Calc) *>\n<* ExecuteScript(PS_SC_QCS_Number of Years_Set_value) *>\n<* ExecuteScript(PS_QCS_NewtoRenewal_Values) *>",
+    "description": "CXCPQ-73059",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

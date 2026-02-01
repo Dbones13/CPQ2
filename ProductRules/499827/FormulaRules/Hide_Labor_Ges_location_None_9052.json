@@ -1,0 +1,11 @@
+{
+    "id": 9052,
+    "condition": "[OR]([EQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,None),[EQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,))",
+    "name": "Hide_Labor_Ges_location_None",
+    "action": "<*DISALLOWATTRIBUTES(Labor_GES_%)*> <*CTX( Container(Labor_Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX( Container(Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX( Container(Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX( Container(Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX( Container(Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*> <*CTX( Container(Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

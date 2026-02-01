@@ -1,0 +1,11 @@
+{
+    "id": 25616,
+    "condition": "[EQ](<*VALUE(Experion UOC Analog Points (0-61440))*>,)",
+    "name": "select_default_UOC2",
+    "action": "<*SELECTVALUE(Experion UOC Analog Points (0-61440):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

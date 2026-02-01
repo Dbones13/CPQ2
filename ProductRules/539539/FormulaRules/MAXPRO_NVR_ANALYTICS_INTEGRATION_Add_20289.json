@@ -1,0 +1,11 @@
+{
+    "id": 20289,
+    "condition": "[EQ](<*VALUE(DVM_Honeywell_Maxpro_Integratio)*>,Yes)",
+    "name": "MAXPRO NVR ANALYTICS INTEGRATION_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMMAX)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMMAX,1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45749",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

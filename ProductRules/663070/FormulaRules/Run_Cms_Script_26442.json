@@ -1,0 +1,11 @@
+{
+    "id": 26442,
+    "condition": "1",
+    "name": "Run_Cms_Script",
+    "action": "<* ExecuteScript(HIde Cluster Cabinet Mounting Station)*><* ExecuteScript(DMS HIde Cluster Cabinet Mounting Station)*>",
+    "description": "",
+    "rank": "2000",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

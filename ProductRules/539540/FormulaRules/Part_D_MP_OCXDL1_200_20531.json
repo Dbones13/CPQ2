@@ -1,0 +1,11 @@
+{
+    "id": 20531,
+    "condition": "[OR]([AND]([LEQ](<*VALUE(SS_Orion_Console_2_Position_Base_Unit_Total)*>,0),[LEQ](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,0)),[NEQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[LEQ](<*VALUE(SS_Orion_Console_Left_Extended_Auxiliary_Equipment_Unit)*>,0),[NOT]([IN](<*VALUE(SS_Orion_Console_Turret_Type)*>,Single Tier,Double Tier)),[NEQ](<*VALUE(SS_Turret_location_in_Extended_Auxiliary_Equipment_Unit)*>,Left))",
+    "name": "Part_D_MP_OCXDL1_200",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MP-OCXDL1-200)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

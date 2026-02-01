@@ -1,0 +1,11 @@
+{
+    "id": 13240,
+    "condition": "[EQ](<*VALUE(Exp_Application_Type)*>,)",
+    "name": "default Application Type",
+    "action": "<*SELECTVALUE(Exp_Application_Type:ICSS)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

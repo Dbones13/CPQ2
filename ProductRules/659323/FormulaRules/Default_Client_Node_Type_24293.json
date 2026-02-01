@@ -1,0 +1,11 @@
+{
+    "id": 24293,
+    "condition": "[EQ](<*VALUE(Client_Node_Type)*>,)",
+    "name": "Default_Client_Node_Type",
+    "action": "<*SELECTVALUE(Client_Node_Type:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

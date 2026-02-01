@@ -1,0 +1,11 @@
+{
+    "id": 25633,
+    "condition": "[EQ](<*VALUE(Default Crossover Cable)*>,)",
+    "name": "Default_Default_Cross_cable",
+    "action": "<*SELECTVALUE(Default Crossover Cable:2M)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

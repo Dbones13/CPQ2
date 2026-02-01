@@ -1,0 +1,11 @@
+{
+    "id": 22831,
+    "condition": "[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_PM_IO_Solution_required.Yes)*>,[NEQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Show_PMIO_related_Cabinet",
+    "action": "<*ALLOWATTRIBUTES(Header_14_open,Header_14_close,ATTCON_14_open,ATTCON_14_close,Combiner_Panels,FTA_Layout,FTA_Connection_Type,Lo_Den_DI_FTA_Connection_Type,IOP_Filler,AO_Non_Red_GI_IS_FTA_Fault_Detect,Conformal_Coating_Preference_PMIOs,Rear_Cover_Needed,Shield_Option,Russian_XK_Type_GI_IS_FTA,Length_of_GI_IS_FTA_PDP_Cable,Length_of_IOP_FTA_Cable,Length_of_PS_PDP_Cable,GI_PDP_Daisy_Connection_Of_Power)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

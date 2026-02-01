@@ -1,0 +1,11 @@
+{
+    "id": 14925,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_Inhouse_eng_cal_1",
+    "action": "<*ASSIGNVALUE(PLC_UOC_Inhouse_eng_cal_1:<* EVAL([IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_64)*>,No)){0}{[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_65)*>,small)){4}{[IF]([LT](<* EVAL(<*VALUE(PLC_UOC_labor_parameter_var_14)*>+<*VALUE(PLC_UOC_labor_parameter_var_13)*>) *>,5)){8}{(<*VALUE(PLC_UOC_labor_parameter_var_14)*>+<*VALUE(PLC_UOC_labor_parameter_var_13)*>)*8}[ENDIF]}[ENDIF]}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_64)*>,No)){0}{[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_65)*>,small)){0}{[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_64)*>,Basic Drawing Package)){0}{(<*VALUE(PLC_UOC_labor_parameter_var_35)*>+<*VALUE(PLC_UOC_labor_parameter_var_20)*>+<*VALUE(PLC_UOC_labor_parameter_var_36)*>+<*VALUE(PLC_UOC_labor_parameter_var_34)*>)*90/60}[ENDIF]}[ENDIF]}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_19)*>,Yes)){((<*VALUE(PLC_UOC_labor_parameter_var_54)*>+0<*VALUE(PLC_UOC_labor_parameter_var_55)*>+<*VALUE(PLC_UOC_labor_parameter_var_59)*>+<*VALUE(PLC_UOC_labor_parameter_var_60)*>)*4/60*<*VALUE(PLC_UOC_Inhouse_eng_cal_parameter_1)*>+15)*0.6}{((<*VALUE(PLC_UOC_labor_parameter_var_54)*>+0<*VALUE(PLC_UOC_labor_parameter_var_55)*>+<*VALUE(PLC_UOC_labor_parameter_var_59)*>+<*VALUE(PLC_UOC_labor_parameter_var_60)*>)*4/60*<*VALUE(PLC_UOC_Inhouse_eng_cal_parameter_1)*>+15)}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_19)*>,Yes)){((<*VALUE(PLC_UOC_labor_parameter_var_7)*>+<*VALUE(PLC_UOC_labor_parameter_var_8)*>+<*VALUE(PLC_UOC_labor_parameter_var_31)*>)*1)}{(<*VALUE(PLC_UOC_labor_parameter_var_54)*>+<*VALUE(PLC_UOC_labor_parameter_var_59)*>)*1.5/60}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

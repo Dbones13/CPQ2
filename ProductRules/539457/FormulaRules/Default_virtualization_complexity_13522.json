@@ -1,0 +1,11 @@
+{
+    "id": 13522,
+    "condition": "[EQ](<*VALUE(Virtualization_Complexity)*>,)",
+    "name": "Default_virtualization_complexity",
+    "action": "<*SELECTVALUE(Virtualization_Complexity:Simple)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

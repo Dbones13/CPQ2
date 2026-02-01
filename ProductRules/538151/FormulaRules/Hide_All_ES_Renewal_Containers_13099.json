@@ -1,0 +1,11 @@
+{
+    "id": 13099,
+    "condition": "[EQ](<*CTX ( Container(ESComparisonSummary).Rows.GetCount )*>,0)",
+    "name": "Hide All ES Renewal Containers",
+    "action": "<*DISALLOWATTRIBUTES(ESComparisonSummary)*>",
+    "description": "ES_PY_Asset_Details,ES_Asset_Summary, ESComparisonSummary",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

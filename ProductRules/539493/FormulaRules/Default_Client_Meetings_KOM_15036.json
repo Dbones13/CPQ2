@@ -1,0 +1,11 @@
+{
+    "id": 15036,
+    "condition": "[EQ](<*VALUE(MSE_Number_Client_Meetings_Site_KOM)*>,)",
+    "name": "Default_Client_Meetings_KOM",
+    "action": "<*ASSIGNVALUE(MSE_Number_Client_Meetings_Site_KOM:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

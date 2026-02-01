@@ -1,0 +1,272 @@
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex row ProductStyle" tabindex="-1" id="attributesWrapper" >
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  
+  <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-c300-General-questions')">
+   <label class="onlytext">General Questions - xPM to C300 Migration <i class='fa fa-info-circle' style='color: #106cc6' title="New C300 controller can be used for releases in the range of R310 to R432 only when having the Super Patch for proper functionality. For the rest of the releases above R432, no Super Patch is needed.
+Experion R410 is needed for UHIO. This proposal does not apply to batch processes or gasoline/diesel blenders. If any of the xPMs included in this proposal runs a batch process or controls a gasoline/diesel blender, please contact your Account Manager, so an updated proposal excluding that/those xPMs is delivered, and to review with a Technical Solution Consultant the best approach to move the batch process or the gasoline/diesel blender control to Experion environment." ></i></label>
+<a id="xpm-c300-General-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+  </div>
+  <div id="xpm-c300-General-questions-content" class=" col-md-12 clear-padding">
+		<!-- ko foreach: attributes.filterByProperty('name' , "MSID_Future_Experion_Release","MSID_Is_Switch_Configuration_in_Honeywell_Scope","xPM_C300_FTE_System_already_installed_on_Site","xPM_C300_FTE_switch","ATT_NUMADSWT","xPM_C300_Is_Honeywell_Providing_FTE_cables","xPM_C300_Average_Cable_Length","ATT_NUMXPMC300","xPM_C300_General_redundancy") -->
+			
+				<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				</div>
+			
+		<!-- /ko -->
+</div>
+		  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+		  <div style="width:100%">
+			<div class="msid-label">
+			  <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+			</div>
+		  </div>
+		  <!-- /ko -->
+		  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+		  <!-- /ko -->
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-c300-migration-configurations')">
+         <label class="onlytext">xPM to C300 Migration - Configuration</label>
+		 <a id="xpm-c300-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+           
+        </div>
+        <div id="xpm-c300-migration-configurations-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Migration_Configuration_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_xPMC300Configurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+			</div>
+		<!-- ko ifnot: localStorage.getItem("checkR2Q") === 'Yes' -->
+          <div class="col-xs-12 col-sm-12"> 
+            <div class="row col-xs-12 config_row clear-padding"> <label class="onlytext">Asset DB</label></div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_config_Asset_DB") -->
+              <!-- ko template: { name: "ContainerTemplate_AssetDB"} -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>  
+           <!-- /ko -->
+        </div>
+        
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-c300-services-questions')">
+         
+            <label class="onlytext">Services</label>
+			<a id="xpm-c300-services-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+         
+        </div>
+
+        <div id="xpm-c300-services-questions-content" class=" col-md-12 clear-padding">
+			  <div class="col-xs-12 col-sm-12">
+				<!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Which_Documentation_Required","ATT_NUMAMTOACE","ATT_NUMAMPTS","xPM_C300_Data_Gathering_required","xPM_C300_Will_Honeywell_perform_equipment_installa") -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+			  </div>
+			<div id="xpm-c300-services-questions-content">
+			  <div class="col-xs-12 col-sm-12">
+				<!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Services_Cont") -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+        </div>
+ 
+   
+        <!-- ko ifnot: localStorage.getItem("checkR2Q") === 'Yes' -->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-c300-cabinet-configuration')">
+          
+             <label class="onlytext">C300 Series C Cabinet Configuration</label>
+        
+        </div>
+        <div id="xpm-c300-cabinet-configuration-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-6"> 
+		  <div class="text-center attribute-field-headers"  >Front & Rear Access </div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Cabinet_Doors" , "xPM_C300_Cabinet_Hinge_Type", "xPM_C300_Cabinet_Light_Required", "xPM_C300_Cabinet_Thermostat_Required", "xPM_C300_Cabinet_Keylock_Type", "xPM_C300_Power_Entry", "xPM_C300_TDI_Power_Supply_Cable_Length", "xPM_C300_Cabinet_Color", "C200_C300_Fan_Voltage", "C200_C300_Cabinet_Base_Required", "Power System Vendor", "Power System Type") -->
+            
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+			</div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+		         <div class="text-center attribute-field-headers"  >Front Access Only </div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_C300_Cabinet_Doors_FAO", "ATT_xPMC300HNGTYP", "ATT_xPMC300LITREQ", "ATT_xPMC300THREQ", "ATT_xPMC300KEYTYP", "C200_C300_Power_Entry", "ATT_xPMC300TDICABLEN", "ATT_xPMC300CABCLR", "ATT_C200C300CBR", "ATT_C200C300FANV", "ATT_XPMC300PSV", "ATT_XPMC300PST") --> 
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+			</div>
+            <!-- /ko -->
+          </div>
+        </div>
+       <!-- /ko -->
+               <!-- ko if: localStorage.getItem("checkR2Q") === 'Yes' -->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#xpm-c300-cabinet-configuration')" style="display:none">
+          
+             <label class="onlytext">C300 Series C Cabinet Configuration</label>
+        
+        </div>
+        <div id="xpm-c300-cabinet-configuration-content" class=" col-md-12 clear-padding" style="display:none">
+          <div class="col-xs-12 col-sm-6"> 
+		  <div class="text-center attribute-field-headers"  >Front & Rear Access </div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Cabinet_Doors" , "xPM_C300_Cabinet_Hinge_Type", "xPM_C300_Cabinet_Light_Required", "xPM_C300_Cabinet_Thermostat_Required", "xPM_C300_Cabinet_Keylock_Type", "xPM_C300_Power_Entry", "xPM_C300_TDI_Power_Supply_Cable_Length", "xPM_C300_Cabinet_Color", "C200_C300_Fan_Voltage", "C200_C300_Cabinet_Base_Required", "Power System Vendor", "Power System Type") -->
+            
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+			</div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+		         <div class="text-center attribute-field-headers"  >Front Access Only </div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_C300_Cabinet_Doors_FAO", "ATT_xPMC300HNGTYP", "ATT_xPMC300LITREQ", "ATT_xPMC300THREQ", "ATT_xPMC300KEYTYP", "C200_C300_Power_Entry", "ATT_xPMC300TDICABLEN", "ATT_xPMC300CABCLR", "ATT_C200C300CBR", "ATT_C200C300FANV", "ATT_XPMC300PSV", "ATT_XPMC300PST") --> 
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+			</div>
+            <!-- /ko -->
+          </div>
+        </div>
+       <!-- /ko -->
+    
+</div>
+	<!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+	<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-c300-general-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-c300-general-questions')">
+          <span>General Questions - xPM to C300 Migration <i class='fa fa-info-circle' style='color: #106cc6' title="New C300 controller can be used for releases in the range of R310 to R432 only when having the Super Patch for proper functionality. For the rest of the releases above R432, no Super Patch is needed.
+Experion R410 is needed for UHIO. This proposal does not apply to batch processes or gasoline/diesel blenders. If any of the xPMs included in this proposal runs a batch process or controls a gasoline/diesel blender, please contact your Account Manager, so an updated proposal excluding that/those xPMs is delivered, and to review with a Technical Solution Consultant the best approach to move the batch process or the gasoline/diesel blender control to Experion environment." ></i></span>
+          <a id="xpm-c300-general-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-c300-general-questions-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-c300-migration-configurations">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-c300-migration-configurations')">
+          <span>xPM to C300 Migration - Configuration</span>
+          <a id="xpm-c300-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-c300-migration-configurations-content">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Migration_Configuration_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_xPMC300Configurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+			</div>
+          <div class="col-xs-12 col-sm-12">
+            <div class="row col-xs-12 swagger-header">Asset DB</div>
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_config_Asset_DB") -->
+              <!-- ko template: { name: "ContainerTemplate_AssetDB"} -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-c300-services-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-c300-services-questions')">
+          <span>Services</span>
+          <a id="xpm-c300-services-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+
+        <div id="xpm-c300-services-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Which_Documentation_Required") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+        <div id="xpm-c300-services-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Services_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="xpm-c300-cabinet-configuration">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-c300-cabinet-configuration')">
+          <span>C300 Series C Cabinet Configuration</span>
+          <a id="xpm-c300-cabinet-configuration-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="xpm-c300-cabinet-configuration-content">
+          <div class="col-xs-12 col-sm-6"> 
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Series_ C_Cabinet_Configuration") -->
+            <div class="text-center attribute-field-headers" data-bind="text:label">Front & Rear Access </div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "xPM_C300_Series_C_Cabinet_Configuration_FAOnly") -->
+            <div class="text-center attribute-field-headers" data-bind="text:label">Front Access Only </div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+		<!-- /ko -->

@@ -1,0 +1,11 @@
+{
+    "id": 14707,
+    "condition": "[EQ](<*VALUE(MX_AllianceView_Server)*>,AllianceView 3 user license)",
+    "name": "MX_Part_QCS_AVSL3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:QCS-AVSL3)*><*SETATVQTY(MX_Platform_Bom_Parts:QCS-AVSL3, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

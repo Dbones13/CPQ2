@@ -1,0 +1,11 @@
+{
+    "id": 9102,
+    "condition": "[EQ](<*CTX( Container(Labor_Report_Parameters).Rows.GetCount )*>,0)",
+    "name": "Set_Default_Row_Labor_Report",
+    "action": "<*CTX( Container(Labor_Report_Parameters).Rows.Add(1) )*>",
+    "description": "Labor Report",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

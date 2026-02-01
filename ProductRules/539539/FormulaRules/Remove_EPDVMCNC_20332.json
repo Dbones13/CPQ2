@@ -1,0 +1,11 @@
+{
+    "id": 20332,
+    "condition": "[NEQ](<*VALUE(DVM_Console_Client)*>,0)",
+    "name": "Remove_EP-DVMCNC",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMCNC)*><* DoResetAtt *>",
+    "description": "CXCPQ-45731",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

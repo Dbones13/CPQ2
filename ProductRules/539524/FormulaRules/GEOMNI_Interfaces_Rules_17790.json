@@ -1,0 +1,11 @@
+{
+    "id": 17790,
+    "condition": "[EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Rows.GetCount )*>,0)",
+    "name": "GE/OMNI Interfaces Rules",
+    "action": "<*CTX( Container(GE_OR_OMNI_Interfaces).LoadKeys(Identifiers, Default_Network_type, Default_Network_Interface).Load(SELECT Identifiers, Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'GE/OMNI Interfaces') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

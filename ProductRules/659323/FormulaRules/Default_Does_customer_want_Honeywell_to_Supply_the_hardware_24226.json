@@ -1,0 +1,11 @@
+{
+    "id": 24226,
+    "condition": "[EQ](<*VALUE(RESS_Honeywell_to_Supply_the_hardware)*>,)",
+    "name": "Default_Does customer want Honeywell to Supply the hardware",
+    "action": "<*SELECTVALUE(RESS_Honeywell_to_Supply_the_hardware:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

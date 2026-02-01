@@ -1,0 +1,11 @@
+{
+    "id": 14891,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CDWeb_IDP_Interface_for_existing_Devronizer_ Calendizer_or_3rd_party_system)*>,CDWeb/IDP Interface for Non-Honeywell Steambox (for diaphragm type pneumatic actuators only, 42-206 kPa/6-30 psig)),[EQ](<*VALUE(MXP_Number_of_Zones)*>,0)",
+    "name": "Part_Diss_9957_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:9957-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

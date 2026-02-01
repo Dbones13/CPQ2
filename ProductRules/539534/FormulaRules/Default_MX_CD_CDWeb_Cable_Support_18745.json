@@ -1,0 +1,11 @@
+{
+    "id": 18745,
+    "condition": "[EQ](<*VALUE(MX_CD_CDWeb_Cable_Support)*>,)",
+    "name": "Default_MX_CD_CDWeb_Cable_Support",
+    "action": "<*SELECTVALUE(MX_CD_CDWeb_Cable_Support:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

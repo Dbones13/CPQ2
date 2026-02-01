@@ -1,0 +1,11 @@
+{
+    "id": 13180,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "QCS_Labor_Del_Plan_Riview_KOM",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_Plan_Review_KOM:8)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

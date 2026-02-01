@@ -1,0 +1,11 @@
+{
+    "id": 26518,
+    "condition": "<*ISSELECTED(Default Crossover Cable.5m)*>",
+    "name": "Show_51305786_505",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51305786-505)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51305786-505,1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38258",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

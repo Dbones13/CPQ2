@@ -1,0 +1,11 @@
+{
+    "id": 25570,
+    "condition": "[EQ](<*VALUE(ACE OPC Extension Library)*>,)",
+    "name": "Default_ACE OPC Extension Library",
+    "action": "<*ASSIGNVALUE(ACE OPC Extension Library:0)*>",
+    "description": "CXCPQ 35419",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23482,
+    "condition": "[AND]([NOT](<*ATTSEL(PCD_GES_Eng)*>),<*ISSELECTED(PCD_Ges_Location_Labour.GES Egypt)*>)",
+    "name": "PCD_GES_Eng_Set_Default_India",
+    "action": "<*SELECTVALUE(PCD_GES_Eng:HPS_GES_P350B_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

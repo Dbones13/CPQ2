@@ -1,0 +1,11 @@
+{
+    "id": 22765,
+    "condition": "<*ISSELECTED(Default_Switch.SW_L2_NRT_MOXA_12PT)*>\n",
+    "name": "Show_SM_G512I2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Location_Cluster_Part_Summary:SM-G512I2)*><*SETATVQTY(Location_Cluster_Part_Summary:SM-G512I2, 2)*><* DoResetAtt *>",
+    "description": "35425",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18554,
+    "condition": "[EQ](<*VALUE(ES_eServer_Staton_Node)*>,)",
+    "name": "Default_eServer_Staton_Node",
+    "action": "<*SELECTVALUE(ES_eServer_Staton_Node:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

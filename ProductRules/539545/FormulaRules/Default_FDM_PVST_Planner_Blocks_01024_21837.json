@@ -1,0 +1,11 @@
+{
+    "id": 21837,
+    "condition": "[EQ](<*VALUE(FDM PVST Planner Blocks (0-1024))*>,)",
+    "name": "Default_FDM PVST Planner Blocks (0-1024)",
+    "action": "<*ASSIGNVALUE(FDM PVST Planner Blocks (0-1024):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

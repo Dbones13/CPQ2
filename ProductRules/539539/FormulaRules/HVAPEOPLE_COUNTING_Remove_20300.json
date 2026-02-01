@@ -1,0 +1,11 @@
+{
+    "id": 20300,
+    "condition": "[EQ](<*VALUE(DVM_HVA -People_Counting)*>,0)",
+    "name": "HVA-PEOPLE COUNTING_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAAC)*><* DoResetAtt *>",
+    "description": "CXCPQ-45711",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

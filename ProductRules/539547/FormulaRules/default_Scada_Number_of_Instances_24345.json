@@ -1,0 +1,11 @@
+{
+    "id": 24345,
+    "condition": "[EQ](<*VALUE(Scada_Number_of_Instances)*>,)",
+    "name": "default_Scada_Number_of_Instances",
+    "action": "<*ASSIGNVALUE(Scada_Number_of_Instances:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

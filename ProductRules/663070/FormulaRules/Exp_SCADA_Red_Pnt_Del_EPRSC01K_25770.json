@@ -1,0 +1,11 @@
+{
+    "id": 25770,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Experion SCADA Points (0 - 300000))*>,999),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant),[GT](<*eval(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-10000*INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000))-5000*INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000-(INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000)))*5000)/2000)))/1000))*>,0)))",
+    "name": "Exp_SCADA_Red_Pnt_Del_EPRSC01K",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-RSC01K)*><* DoResetAtt *>",
+    "description": "Del EP-RSC01K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

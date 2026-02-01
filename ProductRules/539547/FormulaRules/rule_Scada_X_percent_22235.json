@@ -1,0 +1,11 @@
+{
+    "id": 22235,
+    "condition": "[GT](<*VALUE(Scada_X_Percent_SCADA_Point_Spare)*>,-1)",
+    "name": "rule_Scada_X_percent",
+    "action": "<*ASSIGNVALUE(Scada_X_percent:<*VALUE(Scada_X_Percent_SCADA_Point_Spare)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

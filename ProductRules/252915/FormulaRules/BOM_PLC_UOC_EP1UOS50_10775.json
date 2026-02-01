@@ -1,0 +1,11 @@
+{
+    "id": 10775,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "BOM_PLC_UOC_EP-1UOS50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-1UOS50)*><* DoResetAtt *>[IF]([LT](<*Eval(((0<*VALUE(LSS_Total_Experion_UOC_Batch_Points)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-1BP100)*>*100))/50)*>,0)){<*SETATVQTY(PLC_UOC_BOM_Items:EP-1UOS50, 0)*>}{<*SETATVQTY(PLC_UOC_BOM_Items:EP-1UOS50, <*Eval(0-int(0-(<*Eval(((0<*VALUE(LSS_Total_Experion_UOC_Batch_Points)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-1BP100)*>*100))/50)*>)))*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

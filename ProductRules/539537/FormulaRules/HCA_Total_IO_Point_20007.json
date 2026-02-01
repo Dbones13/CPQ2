@@ -1,0 +1,11 @@
+{
+    "id": 20007,
+    "condition": "1",
+    "name": "HCA_Total_IO_Point",
+    "action": "<*ASSIGNVALUE(HCA_Total_IO_Point:<* Eval(0-Int(0-((<*VALUE(Total SeriesC CG Local Io)*>+<*VALUE(Total SeriesC RG Local Io)*>)/600))) *>)*>",
+    "description": "CXCPQ-51943",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

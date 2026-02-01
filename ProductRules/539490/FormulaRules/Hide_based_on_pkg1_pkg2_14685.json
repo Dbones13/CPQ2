@@ -1,0 +1,11 @@
+{
+    "id": 14685,
+    "condition": "[OR]([EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD),[EQ](<*VALUE(MX_What_QCS_System_is_required)*>,Standalone CD),[EQ](<*VALUE(MX_MD_Multivariable_Control_Packages)*>,MD Multivariable Control pkg1 (Includes 4CVs, -81, -82, -84)),[EQ](<*VALUE(MX_MD_Multivariable_Control_Packages)*>,MD Multivariable Control pkg2 (Includes 6CVs, -81, -82, -84, -86)))",
+    "name": "Hide_based_on_pkg1_pkg2",
+    "action": "<*DISALLOWATTRIBUTES(MX_MD_Jet_to_Wire_Control)*><*DISALLOWATTRIBUTES(MX_MD_Dry_Stock_Flow_Control)*><*DISALLOWATTRIBUTES(MX_MD_Dryer_Shutdown_Control)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

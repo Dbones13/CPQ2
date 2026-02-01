@@ -1,0 +1,11 @@
+{
+    "id": 19314,
+    "condition": "[EQ](<*VALUE(PlantCruise_eServer_Media_Kit)*>,Physical)",
+    "name": "Add_Software_Base_CV-DME520",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DME520)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

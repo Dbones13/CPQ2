@@ -1,0 +1,11 @@
+{
+    "id": 26004,
+    "condition": "[EQ](<*VALUE(Displays_server01)*>,)",
+    "name": "defualt valueDesk Mount",
+    "action": "<*SELECTVALUE(Displays_server01:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

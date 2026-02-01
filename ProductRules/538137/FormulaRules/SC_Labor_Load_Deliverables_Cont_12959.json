@@ -1,0 +1,11 @@
+{
+    "id": 12959,
+    "condition": "[EQ](<*CTX ( Container(SC_Labor_Deliverables).Rows.GetCount )*>,0)",
+    "name": "SC_Labor_Load_Deliverables_Cont",
+    "action": "<*CTX ( Container(SC_Labor_Deliverables).LoadKeys(Deliverables).Load(SELECT Labor_Deliverables as Deliverables FROM CT_SC_Labor_Deliverables where Model = 'Labor') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

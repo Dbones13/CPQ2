@@ -1,0 +1,11 @@
+{
+    "id": 24047,
+    "condition": "[GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0)",
+    "name": "Add_EP-COAS19",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:EP-COAS19)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10717,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Count_of_popup_displays)*>,))",
+    "name": "TPA_Default_Count_of_popup_displays",
+    "action": "<*ASSIGNVALUE(TPA_Count_of_popup_displays:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19067,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NEQ](<*VALUE(MX_CD_Devronizer_Manual_Control_Panel)*>,Yes),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_9206_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9206-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

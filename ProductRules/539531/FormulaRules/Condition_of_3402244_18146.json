@@ -1,0 +1,11 @@
+{
+    "id": 18146,
+    "condition": "[OR]([EQ](<*VALUE(MXP_Scanner_Type)*>,3-6056-01),[EQ](<*VALUE(MXP_Scanner_Type)*>,3-6056-02),[EQ](<*VALUE(MXP_Scanner_Type)*>,3-6056-04))",
+    "name": "Condition_of_3-4022-44",
+    "action": "<*DISALLOWVALUES(MXP_Measurement_Type:6k)*>\n<*DISALLOWVALUES(MXP_Measurement_Type:Aluminium)*>\n<*DISALLOWVALUES(MXP_Measurement_Type:Caliper)*>\n<*DISALLOWVALUES(MXP_Measurement_Type:IRPlus)*>\n<*DISALLOWVALUES(MXP_Measurement_Type:Non-GH Head)*>\n<*DISALLOWVALUES(MXP_Measurement_Type:Other)*>\n<*DISALLOWVALUES(MXP_Measurement_Type:Source 12&15 Nuclear)*>\n<*DISALLOWVALUES(MXP_Measurement_Type:X-Ray)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

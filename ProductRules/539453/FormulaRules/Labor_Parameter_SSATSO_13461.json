@@ -1,0 +1,11 @@
+{
+    "id": 13461,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Labor_Site_Activities)*>,Yes))",
+    "name": "Labor_Parameter_SSAT&SO",
+    "action": "<*ASSIGNVALUE(SHE Site Acceptance Test & Sign off:<*Eval((0.1 * 0.3 * ( 24 * 0<*VALUE(Network and Server Cabinet Count)*> + (10 + 8 * 0<*VALUE(Number of Operator Console Sections)*>) + 40 * <*VALUE(Number of Console Sections with Hardwired IO)*> + 50 * <*VALUE(Auxiliary Cabinet Count)*>)))*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

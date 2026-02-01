@@ -1,0 +1,11 @@
+{
+    "id": 24140,
+    "condition": "1",
+    "name": "ARO_Does_site_have_DMZ_New",
+    "action": "<*ASSIGNVALUE(ARO_Does_site_have_DMZ_New:[IF]([EQ](<*VALUE(ARO_Does_site_have_DMZ)*>,Yes)){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

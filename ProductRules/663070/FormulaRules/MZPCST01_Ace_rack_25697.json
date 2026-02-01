@@ -1,0 +1,11 @@
+{
+    "id": 25697,
+    "condition": "[IF]([GT](<*VALUE(ACE Node Rack Mount Cabinet)*>,0)){[AND]([EQ](<*VALUE(Hardware Design Selection_ACE Node)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Node Supplier_ACE)*>,Honeywell),[EQ](<*VALUE(Trusted Platform Module_TPM_ACE_Node)*>,Yes))}{0}[ENDIF]",
+    "name": "MZ-PCST01_Ace_rack",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCST01)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCST01,<*VALUE(ACE Node Rack Mount Cabinet)*>)*><* DoResetAtt *>",
+    "description": "MZ-PCST01_Ace_rack",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

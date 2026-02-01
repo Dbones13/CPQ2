@@ -1,0 +1,11 @@
+{
+    "id": 7409,
+    "condition": "[NEQ](<*VALUE(staging_Number_of_Stations_Console_system_group_ne)*>,<*CTX ( Container(CE_System_Cont).Sum(staging_Number_of_Stations_Console_system_level) )*>)",
+    "name": "staging_Number_of_Stations_Console_system_group_ne",
+    "action": "<*ASSIGNVALUE(staging_Number_of_Stations_Console_system_group_ne:<*CTX ( Container(CE_System_Cont).Sum(staging_Number_of_Stations_Console_system_level) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/10/23",
+    "modifiedBy": "Madhuri Sharma"
+}

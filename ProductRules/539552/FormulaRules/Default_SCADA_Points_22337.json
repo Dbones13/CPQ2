@@ -1,0 +1,11 @@
+{
+    "id": 22337,
+    "condition": "[EQ](<*VALUE(ESDC_SCADA_Points)*>,)",
+    "name": "Default_SCADA_Points",
+    "action": "<*ASSIGNVALUE(ESDC_SCADA_Points:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

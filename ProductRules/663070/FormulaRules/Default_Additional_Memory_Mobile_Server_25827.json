@@ -1,0 +1,11 @@
+{
+    "id": 25827,
+    "condition": "[EQ](<*VALUE(Additional Memory (Mobile Server))*>,)",
+    "name": "Default_Additional_Memory_Mobile_Server",
+    "action": "<*SELECTVALUE(Additional Memory (Mobile Server):None)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

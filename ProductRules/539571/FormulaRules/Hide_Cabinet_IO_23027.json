@@ -1,0 +1,11 @@
+{
+    "id": 23027,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_Cabinet_IO",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))){<*DISALLOWATTRIBUTES(ATTCON_04_close,ATTCON_04_open,Header_20_close,Header_20_open,SeriesC_RG_ACInputVoltage,SeriesC_RG_CabinetFan,SeriesC_RG_CabinetLightLED,SeriesC_RG_CabinetPower,SeriesC_RG_CabinetThermostat,SeriesC_RG_CabinetType,SeriesC_RG_IPRating,SeriesC_RG_MountingOption,SeriesC_RG_Percentage,SeriesC_RG_PowerSupplyVendor,SeriesC_RG_SICLength,SeriesC_RG_Termination,SeriesC_RG_UniversalMarshallingCabinet,SeriesC_RG_UniversalMarshallingCL,SeriesC_RG_UtilitySocket,SeriesC_RG_WiringandDucts,SerC_RG_GIIS_Analog_Inputs_Isolator_2Wire_Type,SerC_RG_Is_NAMUR_isolator_type_Required)*>}{[IF]([EQ](<*VALUE(Ser_RG_Universal_Marshalling_Cabinet)*>,Yes)){<*ALLOWATTRIBUTES(ATTCON_04_close,ATTCON_04_open,Header_20_close,Header_20_open,SeriesC_RG_ACInputVoltage,SeriesC_RG_CabinetFan,SeriesC_RG_CabinetLightLED,SeriesC_RG_CabinetPower,SeriesC_RG_CabinetThermostat,SeriesC_RG_CabinetType,SeriesC_RG_IPRating,SeriesC_RG_MountingOption,SeriesC_RG_Percentage,SeriesC_RG_PowerSupplyVendor,SeriesC_RG_SICLength,SeriesC_RG_Termination,SeriesC_RG_UniversalMarshallingCabinet,SeriesC_RG_UniversalMarshallingCL,SeriesC_RG_UtilitySocket,SeriesC_RG_WiringandDucts,SerC_RG_GIIS_Analog_Inputs_Isolator_2Wire_Type,SerC_RG_Is_NAMUR_isolator_type_Required)*>}{<*DISALLOWATTRIBUTES(ATTCON_04_close,ATTCON_04_open,Header_20_close,Header_20_open,SeriesC_RG_ACInputVoltage,SeriesC_RG_CabinetFan,SeriesC_RG_CabinetLightLED,SeriesC_RG_CabinetPower,SeriesC_RG_CabinetThermostat,SeriesC_RG_CabinetType,SeriesC_RG_IPRating,SeriesC_RG_MountingOption,SeriesC_RG_Percentage,SeriesC_RG_PowerSupplyVendor,SeriesC_RG_SICLength,SeriesC_RG_Termination,SeriesC_RG_UniversalMarshallingCabinet,SeriesC_RG_UniversalMarshallingCL,SeriesC_RG_UtilitySocket,SeriesC_RG_WiringandDucts,SerC_RG_GIIS_Analog_Inputs_Isolator_2Wire_Type,SerC_RG_Is_NAMUR_isolator_type_Required)*>}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

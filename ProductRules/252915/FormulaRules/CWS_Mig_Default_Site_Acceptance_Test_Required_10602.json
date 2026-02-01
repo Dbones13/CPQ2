@@ -1,0 +1,11 @@
+{
+    "id": 10602,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Site_Acceptance_Test_Required)*>,)",
+    "name": "CWS_Mig_Default_Site_Acceptance_Test_Required",
+    "action": "<*SELECTVALUE(CWS_Mig_Site_Acceptance_Test_Required:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

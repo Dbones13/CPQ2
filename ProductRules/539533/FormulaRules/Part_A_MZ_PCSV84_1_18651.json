@@ -1,0 +1,11 @@
+{
+    "id": 18651,
+    "condition": "[AND]([EQ](<*VALUE(ES_Server_Node_Type)*>,SVR_PER_HP_Rack_RAID5),[EQ](<*VALUE(ES_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ES_Trusted_Platform_Module)*>,Yes))",
+    "name": "Part_A_MZ_PCSV84_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:MZ-PCSV85)*><*SETATVQTY(eServer_BOM_parts:MZ-PCSV85,1)*>\n<* DoResetAtt *>",
+    "description": "7964 story",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

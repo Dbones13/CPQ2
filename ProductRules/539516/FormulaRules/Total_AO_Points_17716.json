@@ -1,0 +1,11 @@
+{
+    "id": 17716,
+    "condition": "1",
+    "name": "Total_AO_Points",
+    "action": "<*ASSIGNVALUE(Labor_parameter_ao:<*EVAL(0<*CTX( Container(SM_IO_Count_Analog_Output_Cont).Sum(Total AO Point) )*> )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Pavan Koganty"
+}

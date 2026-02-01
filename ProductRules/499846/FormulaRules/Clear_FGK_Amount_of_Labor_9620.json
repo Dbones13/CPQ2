@@ -1,0 +1,11 @@
+{
+    "id": 9620,
+    "condition": "[EQ](<*ATTSEL(PSkid FGK Percentage of Labor)*>,0)",
+    "name": "Clear FGK (Amount of Labor)",
+    "action": "<*ASSIGNVALUE(PSkid FGK Amount of Labor:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

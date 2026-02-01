@@ -1,0 +1,11 @@
+{
+    "id": 20203,
+    "condition": "[EQ](<*VALUE(DVM_Video_Motion_Detection_Premium)*>,)",
+    "name": "Default_DVM_Video_Motion_Detection_Premium",
+    "action": "<*SELECTVALUE(DVM_Video_Motion_Detection_Premium:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10710,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_How_many_flex_licenses_are_currently_licensed_in_existing_PMD)*>,))",
+    "name": "TPA_Default_How_many_flex_licenses_are_currently_licensed_in_existing_PMD",
+    "action": "<*ASSIGNVALUE(TPA_How_many_flex_licenses_are_currently_licensed_in_existing_PMD:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

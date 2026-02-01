@@ -1,0 +1,11 @@
+<*ALLOWVALUES(Hardware_Engineering_GES_Eng:HPS_GES_P350B_IN,Hardware_Engineering_GES_Eng:HPS_GES_P350F_IN,Hardware_Engineering_GES_Eng:HPS_GES_P350B_RO,Hardware_Engineering_GES_Eng:HPS_GES_P350F_RO,Hardware_Engineering_GES_Eng:HPS_GES_P350B_UZ,Hardware_Engineering_GES_Eng:HPS_GES_P350F_UZ,Hardware_Engineering_GES_Eng:HPS_GES_P350B_CN,Hardware_Engineering_GES_Eng:HPS_GES_P350F_CN,Hardware_Engineering_GES_Eng:HPS_GES_P350B_EG,Hardware_Engineering_GES_Eng:HPS_GES_P350F_EG)*>
+[IF]([EQ](<*VALUE(GES_Location)*>,IN)){<*DISALLOWALLVALUESEXCEPT(Hardware_Engineering_GES_Eng:HPS_GES_P350B_IN|HPS_GES_P350F_IN)*>
+<*SELECTVALUE(Hardware_Engineering_GES_Eng:HPS_GES_P350B_IN)*>}{[IF]([EQ](<*VALUE(GES_Location)*>,RO)){
+<*DISALLOWALLVALUESEXCEPT(Hardware_Engineering_GES_Eng:HPS_GES_P350B_RO|HPS_GES_P350F_RO)*>
+<*SELECTVALUE(Hardware_Engineering_GES_Eng:HPS_GES_P350B_RO)*>
+}{[IF]([EQ](<*VALUE(GES_Location)*>,UZ)){
+<*DISALLOWALLVALUESEXCEPT(Hardware_Engineering_GES_Eng:HPS_GES_P350B_UZ|HPS_GES_P350F_UZ)*>
+<*SELECTVALUE(Hardware_Engineering_GES_Eng:HPS_GES_P350B_UZ)*>
+}{[IF]([EQ](<*VALUE(GES_Location)*>,CN)){<*DISALLOWALLVALUESEXCEPT(Hardware_Engineering_GES_Eng:HPS_GES_P350B_CN|HPS_GES_P350F_CN)*>
+<*SELECTVALUE(Hardware_Engineering_GES_Eng:HPS_GES_P350B_CN)*>}{[IF]([EQ](<*VALUE(GES_Location)*>,EG)){<*DISALLOWALLVALUESEXCEPT(Hardware_Engineering_GES_Eng:HPS_GES_P350B_EG|HPS_GES_P350F_EG)*>
+<*SELECTVALUE(Hardware_Engineering_GES_Eng:HPS_GES_P350B_EG)*>}{}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]

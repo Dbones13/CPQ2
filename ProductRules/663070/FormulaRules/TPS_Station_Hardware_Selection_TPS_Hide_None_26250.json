@@ -1,0 +1,11 @@
+{
+    "id": 26250,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R530),<*ISSELECTED(Orion Stations required.Yes)*>,[GT](<*VALUE(TPS Station Qty (0-20))*>,0))",
+    "name": "TPS_Station_Hardware_Selection_TPS_Hide_None",
+    "action": "<*DISALLOWVALUES(TPS Station Hardware Selection:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

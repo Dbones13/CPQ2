@@ -1,0 +1,11 @@
+{
+    "id": 23724,
+    "condition": "[EQ](<*VALUE(R2QRequest)*>,Yes)",
+    "name": "HideRemoteIO",
+    "action": "<*DISALLOWATTRIBUTES(PLC_RG_Controller_Rack_Cont)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

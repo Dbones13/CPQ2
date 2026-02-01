@@ -1,0 +1,11 @@
+{
+    "id": 25989,
+    "condition": "[AND]([GT](<*VALUE(LaserJet Printer - Monochrome (0-99))*>,0),[EQ](<*VALUE(CE_Site_Voltage)*>,240V))",
+    "name": "TP-DLBP03-200_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:TP-DLBP03-200)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-DLBP03-200, <*VALUE(LaserJet Printer - Monochrome (0-99))*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

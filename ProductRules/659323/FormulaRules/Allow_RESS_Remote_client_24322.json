@@ -1,0 +1,11 @@
+{
+    "id": 24322,
+    "condition": "[EQ](<*VALUE(Remote_client_station_hardware)*>,Yes)",
+    "name": "Allow_RESS_Remote_client",
+    "action": "<*ALLOWATTRIBUTES(RESS_WorkStation,Client_Qty,Client_Node_Type,Client_Node_Supplier,Display_Supplier_RESS,Multiwindow_support,Display_Size)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

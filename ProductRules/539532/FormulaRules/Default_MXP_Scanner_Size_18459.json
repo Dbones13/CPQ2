@@ -1,0 +1,11 @@
+{
+    "id": 18459,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Size)*>,)",
+    "name": "Default_MXP_Scanner_Size",
+    "action": "<*SELECTVALUE(MXP_Scanner_Size:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

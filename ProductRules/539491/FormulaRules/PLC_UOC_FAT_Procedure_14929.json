@@ -1,0 +1,11 @@
+{
+    "id": 14929,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_FAT Procedure",
+    "action": "<*ASSIGNVALUE(PLC_UOC_FAT Procedure:<*Eval(<*Eval(8+([IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_7)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_7)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_8)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_8)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_31)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_31)*>}[ENDIF]-1)*4)*>+<*Eval([IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_53)*>,HFAT & SFAT)){[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_65)*>,small)){0}{<*Eval(8+([IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_7)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_7)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_8)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_8)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_31)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_31)*>}[ENDIF]-1)*4)*>}[ENDIF]}{[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_53)*>,HFAT & SFAT & SAT)){[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_65)*>,small)){0}{<*Eval(8+([IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_7)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_7)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_8)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_8)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_31)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_31)*>}[ENDIF]-1)*4)*>}[ENDIF]}{0}[ENDIF]}[ENDIF])*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

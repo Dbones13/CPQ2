@@ -1,0 +1,11 @@
+{
+    "id": 25681,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,No)",
+    "name": "hide_ACE Node in Desk Preference msg2",
+    "action": "<*DISALLOWATTRIBUTES(ACE Node in Desk Preference_msg)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

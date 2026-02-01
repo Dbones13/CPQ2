@@ -1,0 +1,11 @@
+{
+    "id": 13269,
+    "condition": "[EQ](<*VALUE(Number of Display Prototypes)*>,)",
+    "name": "Set default value for Number of Display Prototypes",
+    "action": "<*ASSIGNVALUE(Number of Display Prototypes:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

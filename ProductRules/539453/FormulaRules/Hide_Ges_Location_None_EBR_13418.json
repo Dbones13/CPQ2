@@ -1,0 +1,11 @@
+{
+    "id": 13418,
+    "condition": "[EQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,None)",
+    "name": "Hide_Ges_Location_None_EBR",
+    "action": "{<*DISALLOWATTRIBUTES(EBR_Engineering_Labor_GES_%)*><*CTX( Container(EBR_Engineering_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(EBR_Engineering_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>}",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

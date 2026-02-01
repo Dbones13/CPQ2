@@ -1,0 +1,11 @@
+{
+    "id": 4814,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Fiber Orientation))",
+    "name": "Measurement_Fiber Orientation_2",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Fiber Orientation Msmt both sides|Fiber Orientation Msmt Bottom|Fiber Orientation Msmt Top)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

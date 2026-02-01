@@ -1,0 +1,11 @@
+{
+    "id": 14880,
+    "condition": "[NEQ](<*VALUE(MXP_Control_switching_option_between_Honeywell_and_3rd_party_CD_Control)*>,Metso IQ Actuator  LAN Interface and Switching Software)",
+    "name": "Part_Diss_Q9000_12",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q9000-12)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

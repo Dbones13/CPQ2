@@ -1,0 +1,11 @@
+{
+    "id": 13817,
+    "condition": "[EQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(Implementation_Methodology).GetDisplayValue )*>,Non-Standard Build Estimate)",
+    "name": "SSE Software Detail Design Specification 1.1",
+    "action": "<*ASSIGNVALUE(SSE Software Detail Design Specification:43.2)*>",
+    "description": "If IM = Non-Standard Build then\n   Calculated Hrs = 48*0.9",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

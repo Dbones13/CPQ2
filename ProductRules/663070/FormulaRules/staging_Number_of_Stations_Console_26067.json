@@ -1,0 +1,11 @@
+{
+    "id": 26067,
+    "condition": "[NEQ](<*CTX( Math.Sum(<*CTX( Math.Sum(<*VALUE(DMS Flex Station Qty 0_60)*>,<*VALUE(DMS TPS Station Qty 0_20)*>,<*VALUE(DMS Console Station Qty 0_20)*>) )*>,<* Eval(3*<*VALUE(Orion Console 3Position Base Unit (0-20))*>)*>,<* Eval(2*<*VALUE(Orion Console 2Position Base Unit (0-20))*>)*>) )*>,<*VALUE(staging_Number_of_Stations_Console)*>)",
+    "name": "staging_Number_of_Stations_Console",
+    "action": "<*ASSIGNVALUE(staging_Number_of_Stations_Console:<*CTX( Math.Sum(<*CTX( Math.Sum(<*VALUE(DMS Flex Station Qty 0_60)*>,<*VALUE(DMS TPS Station Qty 0_20)*>,<*VALUE(DMS Console Station Qty 0_20)*>) )*>,<* Eval(3*<*VALUE(Orion Console 3Position Base Unit (0-20))*>)*>,<* Eval(2*<*VALUE(Orion Console 2Position Base Unit (0-20))*>)*>) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

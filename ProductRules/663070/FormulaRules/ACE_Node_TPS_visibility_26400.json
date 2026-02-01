@@ -1,0 +1,11 @@
+{
+    "id": 26400,
+    "condition": "[NEQ](<*VALUE(New_Expansion)*>,0)",
+    "name": "ACE_Node_TPS_visibility",
+    "action": "[IF]([AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(Interface with TPS Required?)*>,Yes))){<*ALLOWATTRIBUTES(ACE_T_Node _Rack_Mount_Cabinet,ACE_T_Node _Tower_Mount_Desk)*>}{<*DISALLOWATTRIBUTES(ACE_T_Node _Rack_Mount_Cabinet,ACE_T_Node _Tower_Mount_Desk)*>}[ENDIF]",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

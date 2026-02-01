@@ -1,0 +1,11 @@
+{
+    "id": 23646,
+    "condition": "[OR]([NOT](<*ISSELECTED(Include Services.Yes)*>),[AND]([LT](<*VALUE(Number of SMX System RT)*>,1),[LT](<*VALUE(Number of SMX System ST)*>,1),[LT](<*VALUE(USB Key ST Only)*>,1)))",
+    "name": "Enable Activity",
+    "action": "<*DISALLOWATTRIBUTES(Activities)*><*CTX ( Container(Activities).Rows.Clear )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

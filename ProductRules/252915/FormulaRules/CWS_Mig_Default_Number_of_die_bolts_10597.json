@@ -1,0 +1,11 @@
+{
+    "id": 10597,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Number_of_die_bolts)*>,)",
+    "name": "CWS_Mig_Default_Number_of_die_bolts",
+    "action": "<*ASSIGNVALUE(CWS_Mig_Number_of_die_bolts:1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

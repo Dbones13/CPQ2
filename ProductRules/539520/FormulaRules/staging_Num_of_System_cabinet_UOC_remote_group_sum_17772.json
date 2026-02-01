@@ -1,0 +1,11 @@
+{
+    "id": 17772,
+    "condition": "[NEQ](<*VALUE(UOC_Num_of_Sys_Cabinets_RG)*>,<*CTX ( Container(UOC_RemoteGroup_Cont).Sum(staging_Num_of_System_cabinet_UOC_remote_group) )*>)",
+    "name": "staging_Num_of_System_cabinet_UOC_remote_group_sum",
+    "action": "<*ASSIGNVALUE(UOC_Num_of_Sys_Cabinets_RG:<*CTX ( Container(UOC_RemoteGroup_Cont).Sum(staging_Num_of_System_cabinet_UOC_remote_group) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

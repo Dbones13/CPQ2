@@ -1,0 +1,11 @@
+{
+    "id": 19304,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,New),[GT](<*CTX ( Container(PlantCruise_IO_Section_of_PlantCruise_Group).Sum(IO_Point_Required) )*>,0))",
+    "name": "Add_Process_Points_CV-DPF01K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DPF01K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

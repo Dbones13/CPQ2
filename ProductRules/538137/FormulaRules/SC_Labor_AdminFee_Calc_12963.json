@@ -1,0 +1,11 @@
+{
+    "id": 12963,
+    "condition": "[NEQ](<*CTX ( Quote.CustomField(Booking Country) )*>,)",
+    "name": "SC_Labor_AdminFee_Calc",
+    "action": "<*ASSIGNVALUE(SC_Labor_Admin_Fee:<* TABLE ( SELECT Admin_Fee FROM CT_SC_Labor_Cost WHERE  Country = '<*CTX ( Quote.CustomField(Booking Country) )*>' ) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

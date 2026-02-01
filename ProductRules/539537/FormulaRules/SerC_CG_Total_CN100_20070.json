@@ -1,0 +1,11 @@
+{
+    "id": 20070,
+    "condition": "1",
+    "name": "SerC_CG_Total_CN100",
+    "action": "<*ASSIGNVALUE(SerC_CG_Total_CN100:<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(Total_CN100) )*>)*>",
+    "description": "CXCPQ-51943",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

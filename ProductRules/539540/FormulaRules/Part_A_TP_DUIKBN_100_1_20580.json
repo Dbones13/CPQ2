@@ -1,0 +1,11 @@
+{
+    "id": 20580,
+    "condition": "[AND]([GT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0),[EQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell),[EQ](<*VALUE(SS_IKB_or_OEP_desk)*>,IKB w/o Trackball))",
+    "name": "Part_A_TP_DUIKBN_100_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:TP-DUIKBN-100)*><*SETATVQTY(Simulation_Bom_parts:TP-DUIKBN-100, <*VALUE(SS_Flex_Station_Qty_Desk)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

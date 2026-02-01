@@ -1,0 +1,10 @@
+{
+    "id": 62,
+    "condition": "New_Expansion:New",
+    "name": "Hide_ServerTPS_New",
+    "action": "Disallow Experion Server Type : Server TPS",
+    "description": "",
+    "rank": "1",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

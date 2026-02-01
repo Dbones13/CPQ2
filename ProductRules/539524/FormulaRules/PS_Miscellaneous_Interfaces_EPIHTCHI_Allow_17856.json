@@ -1,0 +1,11 @@
+{
+    "id": 17856,
+    "condition": "[GT](<*CTX( Container(Miscellaneous Interfaces).Row(5).Column(Nodes).Get )*>,0)",
+    "name": "PS_Miscellaneous_Interfaces_EP-IHTCHI_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IHTCHI)*><*SELECTVALUE(SCADA_BOM_Items:EP-IHTCHI)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IHTCHI, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

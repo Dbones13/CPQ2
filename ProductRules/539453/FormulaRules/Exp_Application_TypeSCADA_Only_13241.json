@@ -1,0 +1,11 @@
+{
+    "id": 13241,
+    "condition": "<*ISSELECTED(Exp_Application_Type.SCADA Only)*>",
+    "name": "Exp_Application_Type.SCADA Only",
+    "action": "<*DISALLOWVALUES(Supervisory Network Type:FTE)*><*SELECTVALUE(Supervisory Network Type:Ethernet)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

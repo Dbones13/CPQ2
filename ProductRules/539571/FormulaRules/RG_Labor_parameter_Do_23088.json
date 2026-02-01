@@ -1,0 +1,11 @@
+{
+    "id": 23088,
+    "condition": "1",
+    "name": "RG_Labor_parameter_Do",
+    "action": "<*ASSIGNVALUE(RG_Labor_parameter_Do:<* Eval(0<*CTX ( Container(C300_C IO_RG MS3).Sum(DO) )*>+0<*CTX ( Container(C300_RAIL_Universal_io_RG_cont_2).Sum(DO) )*>+0<*CTX ( Container(C300_RG_Universal_IO_cont_2).Sum(DO) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_RG_Cont1).Sum(DO) )*>+0<*CTX ( Container(SerC_RG_Enhanced_Function_IO_Cont2).Sum(DO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_2).Sum(DO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_1).Sum(DO) )*>+0<*CTX ( Container(SerC_PMIO_CG_Group).Sum(DO) )*>+0<*CTX ( Container(C300_UPC_Labor_IO_count_RG_2).Sum(DO) )*>+0<*CTX ( Container(C300_SerC_PointCount_PMIO_RG_RlyCont).Sum(DO) )*>+0<*CTX ( Container(C300_SerC_GIIS_RG_Cont).Sum(DO) )*>) *>)*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

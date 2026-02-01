@@ -1,0 +1,11 @@
+{
+    "id": 14839,
+    "condition": "[NEQ](<*VALUE(MX_MD_Coordinated_speed_change_control)*>,Yes)",
+    "name": "MX_Part_Dis_Q5904_86",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5904-86)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

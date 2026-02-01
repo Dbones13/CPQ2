@@ -1,0 +1,11 @@
+{
+    "id": 22996,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_Power_system_attr",
+    "action": "[IF]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)){[IF]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet)){<*ALLOWATTRIBUTES(SerC_RG_Power_System_Type)*>}{<*DISALLOWATTRIBUTES(SerC_RG_Power_System_Type)*>}[ENDIF]}{[IF]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)){<*ALLOWATTRIBUTES(SerC_RG_Power_System_Type)*>}{0}[ENDIF]}[ENDIF]",
+    "description": "CXCPQ-44728",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

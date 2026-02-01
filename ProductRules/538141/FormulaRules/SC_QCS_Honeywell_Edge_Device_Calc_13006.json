@@ -1,0 +1,11 @@
+{
+    "id": 13006,
+    "condition": "[NEQ](<*VALUE(SC_QCS_Site_to_Cloud_Method)*>,)",
+    "name": "SC_QCS_Honeywell Edge Device_Calc",
+    "action": "[IF]([EQ](<*VALUE(SC_QCS_Site_to_Cloud_Method)*>,Edge Device)){[IF]([IN](<*VALUE(SC_QCS_Number of Machines)*>,1,2,3)){<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:1)*>}{}[ENDIF]\n[IF]([IN](<*VALUE(SC_QCS_Number of Machines)*>,4,5,6)){<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:2)*>}{}[ENDIF]\n[IF]([IN](<*VALUE(SC_QCS_Number of Machines)*>,7,8)){<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:3)*>}{}[ENDIF]\n}{[IF]([EQ](<*VALUE(SC_QCS_Site_to_Cloud_Method)*>,Edge Device Virtual Machine)){<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:1)*>}{<*ASSIGNVALUE(SC_QCS_Qty_Honeywell_Edge_Device:0)*>}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13679,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[NEQ](<*VALUE(Virtualization_vSphere_Client_Node_Type)*>,Dell OptiPlex XE3))",
+    "name": "Part_DISS_MZ_PCWS14",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCWS14)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

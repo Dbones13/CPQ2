@@ -1,0 +1,11 @@
+{
+    "id": 21844,
+    "condition": "[EQ](<*VALUE(FDM_Trusted Platform Module (TPM))*>,)",
+    "name": "Default_Trusted Platform Module (TPM)",
+    "action": "<*SELECTVALUE(FDM_Trusted Platform Module (TPM):Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

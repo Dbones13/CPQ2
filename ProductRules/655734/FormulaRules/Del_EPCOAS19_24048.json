@@ -1,0 +1,11 @@
+{
+    "id": 24048,
+    "condition": "[NOT]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0))",
+    "name": "Del_EP-COAS19",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:EP-COAS19)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

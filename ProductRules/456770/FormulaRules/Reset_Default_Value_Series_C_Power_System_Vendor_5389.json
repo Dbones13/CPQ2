@@ -1,0 +1,11 @@
+{
+    "id": 5389,
+    "condition": "[NOT](<*ANYSELATT(Series_C_Power_System_Vendor)*>)",
+    "name": "Reset_Default_Value_Series_C_Power_System_Vendor",
+    "action": "<*RESETATTRIBUTE(Series_C_Power_System_Vendor)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/07/23",
+    "modifiedBy": "Suresh Naidu Pendela"
+}

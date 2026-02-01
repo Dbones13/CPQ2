@@ -1,0 +1,11 @@
+{
+    "id": 13599,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*>,0),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers))",
+    "name": "Part_MZ_PCVM24",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVM24)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24,<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*>)*><* DoResetAtt *>",
+    "description": "8705 story",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9073,
+    "condition": "1",
+    "name": "Set value for Le pv",
+    "action": "<*ASSIGNVALUE(labor_parameter_Le_pv:<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Estimated_Project_Value_Cost).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

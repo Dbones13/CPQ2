@@ -1,0 +1,147 @@
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+	<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper"  >
+	  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		  <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> 
+			  @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	  </div>
+	  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+	  <div style="width:100%">
+	  <div class="msid-label">
+		<label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+	  </div>
+	  </div>
+	  <!-- /ko -->
+	  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	  <!-- /ko -->
+	  <div class="row col-xs-12 swagger">
+	  <div id="CD_Actuator_IF_Upgrade_General_Info_Cont">
+		<div>
+		  <div class="swagger-header" onclick="toggleConfigSection(event, '#CD_Actuator_IF_Upgrade_General_Info_Cont')">
+			<span>General Information - CD Actuator Interface Upgrade</span>
+			<a id="CD_Actuator_IF_Upgrade_General_Info_Cont-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="CD_Actuator_IF_Upgrade_General_Info_Cont-content">
+			<div class="col-xs-12 col-sm-9">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "CD_Actuator_IF_Upgrade_General_Info_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  </div>
+		  <div class="row col-xs-12 swagger">
+		  <div id="CD_Actuator_pricing_factory_cost">
+			<div>
+			  <div class="swagger-header" onclick="toggleConfigSection(event, '#CD_Actuator_pricing_factory_cost')">
+				<span>Pricing/Factory Cost</span>
+				<a id="CD_Actuator_pricing_factory_cost-href" href="#" class="swagger-toggle">&#xe066;</a>
+			  </div>  
+			  <div id="CD_Actuator_pricing_factory_cost-content">
+				<div class="clearfix"></div>
+				<div class="col-xs-12 col-sm-9">
+				  
+				  <!-- ko foreach: attributes.filterByProperty('name' , "CD_Actuator_pricing_factory_cost") -->
+					<!-- ko if:$data.container.columns().length !== 0 && $data.container.rows().length !== 0-->
+					  <!-- ko template: { name: "ContainerTemplate_CD_Actuator_pricing_factory_cost"} -->
+					  <!-- /ko -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="row col-xs-12 swagger">
+		  <div id="CD_Actuator_IF_Upgrade_Services_Cont">
+			<div>
+			  <div class="swagger-header" onclick="toggleConfigSection(event, '#CD_Actuator_IF_Upgrade_Services_Cont')">
+				<span>Services</span>
+				<a id="CD_Actuator_IF_Upgrade_Services_Cont-href" href="#" class="swagger-toggle">&#xe066;</a>
+			  </div>
+			  <div id="CD_Actuator_IF_Upgrade_Services_Cont-content">
+				<div class="col-xs-12 col-sm-9">
+				  <!-- ko foreach: attributes.filterByProperty('name' , "CD_Actuator_IF_Upgrade_Services_Cont") -->
+					<!-- ko if:$data.container.columns().length !== 0-->
+					  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					  <!-- /ko -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  </div>
+	  </div>
+<!-- /ko -->
+
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+	 <!-- RT_CD_Actuator_Configurator -->
+	<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+	  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		  <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> 
+			  @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	  </div>
+	  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+	  <div style="width:100%">
+	  <div class="msid-label">
+		<label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+	  </div>
+	  </div>
+	  <!-- /ko -->
+	  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	  <!-- /ko -->
+	 
+		  <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="CD_Actuator_IF_Upgrade_General_Info_Cont" onclick="toggleConfigSection(event, '#CD_Actuator_IF_Upgrade_General_Info_Cont')">
+		   <label class="onlytext">General Information - CD Actuator Interface Upgrade</label>
+			 
+		  </div>
+		  <div id="CD_Actuator_IF_Upgrade_General_Info_Cont-content" class=" col-md-12 clear-padding">
+			<div class="col-xs-12 col-sm-12">
+				 <!-- ko foreach: attributes.filterByProperty('name' , "CD_Actuator_Actuator_Type","CD_Actuator_IF_Actuator_Model","ATT_CD_ACTUATOR_NOZONES","CD_Actuator_Processor_Type","CD_Actuator_Interlocks","CD_Actuator_Will_the_current_Interlocks_be","CD_Actuator_Interlock_Voltage","ATT_CD_ACTUATOR_LINE_SINGLE_PHASE","ATT_CD_ACTUATOR_LINE_THREE_PHASE","CD_Actuator_QCS_Type","ATT_CD_IF_OTHERS_PROVIDE_INFO","CD_Actuator_Lynk_Type","CD_Actuator_For_Aquatrol_what_is_solenoid_voltage","CD_Actuator_For_Caltrol_or_Thermatrol_Is_feedback","ATT_CD_EXISTING_SETSOF_EXTRA_EDGEACTUATORS") -->
+				<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				  <!-- ko template: { name: $root.getAttributeTemplate } -->
+				  <!-- /ko -->
+				</div>
+				<!-- /ko --> 
+			</div>
+		  </div>
+	   
+			  <div class="config_row col-md-12 clear-padding pt10 flex banner_clps"  id="CD_Actuator_pricing_factory_cost" onclick="toggleConfigSection(event, '#CD_Actuator_pricing_factory_cost')">
+			   <label class="onlytext">Pricing/Factory Cost</label>
+				 
+			  </div>  
+			  <div id="CD_Actuator_pricing_factory_cost-content" class=" col-md-12 clear-padding">
+				<div class="clearfix"></div>
+				<div class="col-xs-12 col-sm-12">
+				  
+				  <!-- ko foreach: attributes.filterByProperty('name' , "CD_Actuator_pricing_factory_cost") -->
+					<!-- ko if:$data.container.columns().length !== 0 && $data.container.rows().length !== 0-->
+					  <!-- ko template: { name: "ContainerTemplate_CD_Actuator_pricing_factory_cost"} -->
+					  <!-- /ko -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				</div>
+			  </div>
+		   
+	   
+			  <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="CD_Actuator_IF_Upgrade_Services_Cont" onclick="toggleConfigSection(event, '#CD_Actuator_IF_Upgrade_Services_Cont')">
+			 <label class="onlytext">Services</label>
+				
+			  </div>
+			  <div id="CD_Actuator_IF_Upgrade_Services_Cont-content" class=" col-md-12 clear-padding">
+				<div class="col-xs-12 col-sm-12">
+				  <!-- ko foreach: attributes.filterByProperty('name',"CD_Actuator_HSE_and_Quality_Plan","CD_Actuator_Update_existing_documents","CD_Actuator_SAT_required") -->
+				<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				  <!-- ko template: { name: $root.getAttributeTemplate } -->
+				  <!-- /ko -->
+				</div>
+				<!-- /ko --> 
+				</div>
+			  </div>
+		  
+	  </div>
+<!-- /ko -->

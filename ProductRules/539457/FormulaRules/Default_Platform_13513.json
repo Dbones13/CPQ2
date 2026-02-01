@@ -1,0 +1,11 @@
+{
+    "id": 13513,
+    "condition": "[EQ](<*VALUE(Virtualization_Platform_Options)*>,)",
+    "name": "Default_Platform",
+    "action": "<*SELECTVALUE(Virtualization_Platform_Options:Essentials Platforms-Dell Servers)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

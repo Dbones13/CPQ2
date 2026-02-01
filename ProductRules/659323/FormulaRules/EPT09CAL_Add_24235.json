@@ -1,0 +1,11 @@
+{
+    "id": 24235,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[OR]([GT](<*VALUE(ARO_existing_Flex_station_license)*>,0),[GT](<*VALUE(ARO_new_Flex_Station_licenses_required)*>,0),[GT](<*VALUE(ARO_new_Console_Station_Extension_License)*>,0),[GT](<*VALUE(RESS_existing_Flex_station_license)*>,0),[GT](<*VALUE(RESS_new_Flex_Station_licenses_required)*>,0),[GT](<*VALUE(RESS_new_Console_Station_Extension_License)*>,0)))",
+    "name": "EP-T09CAL_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-T09CAL)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-T09CAL, <* Eval(0<*VALUE(ARO_existing_Flex_station_license)*>+0<*VALUE(RESS_existing_Flex_station_license)*>+0<*VALUE(ARO_new_Flex_Station_licenses_required)*>+0<*VALUE(RESS_new_Flex_Station_licenses_required)*>+0<*VALUE(ARO_new_Console_Station_Extension_License)*>+0<*VALUE(RESS_new_Console_Station_Extension_License)*>) *>.)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

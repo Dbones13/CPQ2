@@ -1,0 +1,1 @@
+[IF]([EQ](<*CTX( Container(MXP_Sensor_Group).Rows.GetCount )*>,0)){<*CTX( Container(MXP_Sensor_Group).Rows.Add(1) )*>}{}[ENDIF]

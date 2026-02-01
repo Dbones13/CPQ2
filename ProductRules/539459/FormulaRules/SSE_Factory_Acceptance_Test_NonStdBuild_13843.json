@@ -1,0 +1,11 @@
+{
+    "id": 13843,
+    "condition": "[NEQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(Implementation_Methodology).Get )*>,StandardBuildEstimate)",
+    "name": "SSE Factory Acceptance Test_NonStdBuild",
+    "action": "<*ASSIGNVALUE(SSE Factory Acceptance Test:<*Eval((0.1 * (0<*VALUE(Labor_parameter_mcab)*> * (40 + 10*0<*VALUE(Labor_parameter_is)*>))) + ((25*0<*VALUE(Labor_parameter_ctr)*> + [IF]([EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>,HIPPS)){1.2}{[IF]([EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>,BMS)){1.5}{1}[ENDIF]}[ENDIF]*0<*VALUE(Labor_parameter_io)*>*[IF]([GT](0<*VALUE(Labor_parameter_io)*>,750)){.1}{[IF]([GT](0<*VALUE(Labor_parameter_io)*>,100)){.15}{.2}[ENDIF]}[ENDIF])*1))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

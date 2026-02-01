@@ -1,0 +1,11 @@
+<*ALLOWVALUES(System_Network_Labor_GES_Eng:HPS_GES_P350B_IN,System_Network_Labor_GES_Eng:HPS_GES_P350F_IN,System_Network_Labor_GES_Eng:HPS_GES_P350B_RO,System_Network_Labor_GES_Eng:HPS_GES_P350F_RO,System_Network_Labor_GES_Eng:HPS_GES_P350B_UZ,System_Network_Labor_GES_Eng:HPS_GES_P350F_UZ,System_Network_Labor_GES_Eng:HPS_GES_P350B_CN,System_Network_Labor_GES_Eng:HPS_GES_P350F_CN,System_Network_Labor_GES_Eng:HPS_GES_P350B_EG,System_Network_Labor_GES_Eng:HPS_GES_P350F_EG)*>
+[IF]([EQ](<*VALUE(GES_Location)*>,IN)){<*DISALLOWALLVALUESEXCEPT(System_Network_Labor_GES_Eng:HPS_GES_P350B_IN|HPS_GES_P350F_IN)*>
+<*SELECTVALUE(System_Network_Labor_GES_Eng:HPS_GES_P350B_IN)*>}{[IF]([EQ](<*VALUE(GES_Location)*>,RO)){
+<*DISALLOWALLVALUESEXCEPT(System_Network_Labor_GES_Eng:HPS_GES_P350B_RO|HPS_GES_P350F_RO)*>
+<*SELECTVALUE(System_Network_Labor_GES_Eng:HPS_GES_P350B_RO)*>
+}{[IF]([EQ](<*VALUE(GES_Location)*>,UZ)){
+<*DISALLOWALLVALUESEXCEPT(System_Network_Labor_GES_Eng:HPS_GES_P350B_UZ|HPS_GES_P350F_UZ)*>
+<*SELECTVALUE(System_Network_Labor_GES_Eng:HPS_GES_P350B_UZ)*>
+}{[IF]([EQ](<*VALUE(GES_Location)*>,CN)){<*DISALLOWALLVALUESEXCEPT(System_Network_Labor_GES_Eng:HPS_GES_P350B_CN|HPS_GES_P350F_CN)*>
+<*SELECTVALUE(System_Network_Labor_GES_Eng:HPS_GES_P350B_CN)*>}{[IF]([EQ](<*VALUE(GES_Location)*>,EG)){<*DISALLOWALLVALUESEXCEPT(System_Network_Labor_GES_Eng:HPS_GES_P350B_EG|HPS_GES_P350F_EG)*>
+<*SELECTVALUE(System_Network_Labor_GES_Eng:HPS_GES_P350B_EG)*>}{}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]

@@ -1,0 +1,11 @@
+{
+    "id": 15304,
+    "condition": "[EQ](<*VALUE(MXP_Cp_CpK_Calculations)*>,Yes)",
+    "name": "Part_A_3_5720_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5720-00)*><*SETATVQTY(MXP_Bom_Parts:3-5720-00,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

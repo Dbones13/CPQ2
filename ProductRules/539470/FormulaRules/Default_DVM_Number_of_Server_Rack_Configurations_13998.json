@@ -1,0 +1,11 @@
+{
+    "id": 13998,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Server_Rack_Configurations)*>,)",
+    "name": "Default_DVM_Number_of_Server_Rack_Configurations",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Server_Rack_Configurations:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

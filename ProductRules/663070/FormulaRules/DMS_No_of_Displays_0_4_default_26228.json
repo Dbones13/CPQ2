@@ -1,0 +1,11 @@
+{
+    "id": 26228,
+    "condition": "[EQ](<*VALUE(DMS No of Displays 0_4)*>,)",
+    "name": "DMS No of Displays 0_4 default",
+    "action": "<*ASSIGNVALUE(DMS No of Displays 0_4:1)*>",
+    "description": "Changes made by RP, CCEECOMMBR-6784: Change the default value for 'No. of Displays' in Cabinet Mounting Stations & Desk Mounting Stations Configuration",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

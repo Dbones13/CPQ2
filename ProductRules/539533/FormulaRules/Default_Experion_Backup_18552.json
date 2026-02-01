@@ -1,0 +1,11 @@
+{
+    "id": 18552,
+    "condition": "[EQ](<*VALUE(ES_Experion_Backup_Restore_Mobile_Server)*>,)",
+    "name": "Default_Experion_Backup",
+    "action": "<*SELECTVALUE(ES_Experion_Backup_Restore_Mobile_Server:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

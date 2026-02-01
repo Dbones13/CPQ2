@@ -1,0 +1,11 @@
+{
+    "id": 13651,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes),[EQ](<*VALUE(Virtualization_Windows_Server_2019_COA_Licenses)*>,0))",
+    "name": "Part_DISS_EP_COAS19",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-COAS19)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

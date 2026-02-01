@@ -1,0 +1,11 @@
+{
+    "id": 18720,
+    "condition": "[EQ](<*VALUE(MX_CD_Air_Control_Unit)*>,)",
+    "name": "Default_MX_CD_Air_Control_Unit",
+    "action": "<*SELECTVALUE(MX_CD_Air_Control_Unit:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19821,
+    "condition": "[EQ](<*VALUE(SerC_CG_Cabinet_Base_Size)*>,)",
+    "name": "Defalt_SerC_CG_Cabinet_Base_Size",
+    "action": "<*SELECTVALUE(SerC_CG_Cabinet_Base_Size:100mm)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

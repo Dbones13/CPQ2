@@ -1,0 +1,11 @@
+{
+    "id": 19521,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS Select Server Grade Computer Platform Type)*>,R450))",
+    "name": "Reset MZ-PCSR02",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:MZ-PCSR02)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14076,
+    "condition": "1",
+    "name": "Preselect",
+    "action": "[IF]([EQ](<*VALUE(TPS_EX_Cabinet_Depth_Size)*>,)){<*SELECTVALUE(TPS_EX_Cabinet_Depth_Size:800 mm)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPS_EX_Cabinet_Door_Type)*>,)){<*SELECTVALUE(TPS_EX_Cabinet_Door_Type:Standard)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPS_EX_Cabinet_Keylock_Type)*>,)){<*SELECTVALUE(TPS_EX_Cabinet_Keylock_Type:Standard)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPS_EX_Cabinet_Hinge_Type)*>,)){<*SELECTVALUE(TPS_EX_Cabinet_Hinge_Type:130 Degrees)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPS_EX_Cabinet_Thermostat_Required)*>,)){<*SELECTVALUE(TPS_EX_Cabinet_Thermostat_Required:Yes)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPS_EX_Cabinet_Base_Required)*>,)){<*SELECTVALUE(TPS_EX_Cabinet_Base_Required:Yes)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPS_EX_Cabinet_Color)*>,)){<*SELECTVALUE(TPS_EX_Cabinet_Color:Gray-RAL7032)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22921,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_CabinetThermostat)*>,)",
+    "name": "Default_SeriesC_RG_Cabinet_Thermostat",
+    "action": "<*SELECTVALUE(SeriesC_RG_CabinetThermostat:No)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23006,
+    "condition": "[AND](<*IFANYVALUE(C300_RG_UPC_Controlled_IO_License_Count:2,C300_RG_UPC_Controlled_IO_License_Count:8)*>,<*IFANYVALUE(C300_RG_UPC_Fiber_Optic_Extender:None)*>)",
+    "name": "Disallow_C300_RG_UPC_CN100_IO_HIVE_Values",
+    "action": "<*DISALLOWVALUES(C300_RG_UPC_CN100_IO_HIVE:N)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

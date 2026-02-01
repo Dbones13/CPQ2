@@ -1,0 +1,11 @@
+{
+    "id": 20155,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE))",
+    "name": "SerC_CG_Type_of_Controller_Required_Hide",
+    "action": "<*DISALLOWVALUES(SerC_CG_C300_Controller_Module_Type:C300(PCNT02))*>",
+    "description": "",
+    "rank": "10002",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

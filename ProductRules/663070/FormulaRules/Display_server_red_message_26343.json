@@ -1,0 +1,11 @@
+{
+    "id": 26343,
+    "condition": "[AND]([EQ](<*VALUE(MIB Configuration Required?)*>,Yes),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant),[NEQ](<*VALUE(Interface with TPS Required?)*>,Yes))",
+    "name": "Display_server_red_message",
+    "action": "<*ALLOWATTRIBUTES(Server_Redundancy_Required_message)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

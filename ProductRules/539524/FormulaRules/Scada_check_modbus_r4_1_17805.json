@@ -1,0 +1,11 @@
+{
+    "id": 17805,
+    "condition": "[OR]([EQ](<*CTX( Container(Modbus/OPC Interfaces).Row(4).Column(Nodes).Get )*>,0),[EQ](<*CTX( Container(Modbus/OPC Interfaces).Row(4).Column(Nodes).Get )*>,))",
+    "name": "Scada_check_modbus_r4_1",
+    "action": "<*CTX( Container(Modbus/OPC Interfaces).Row(5).Column(Scada_check).Set(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

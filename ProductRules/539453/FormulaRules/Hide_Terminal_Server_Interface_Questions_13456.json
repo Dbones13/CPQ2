@@ -1,0 +1,11 @@
+{
+    "id": 13456,
+    "condition": "[NEQ](<*VALUE(Is Terminal Server Interface in Scope?)*>,Yes)",
+    "name": "Hide Terminal Server Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of Terminal Server Interface Types,Number of Terminal server Interfaces,Number of Terminal Server Devices)*>",
+    "description": "Hide questions when Is Terminal Server Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

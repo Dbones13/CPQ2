@@ -1,0 +1,11 @@
+{
+    "id": 18006,
+    "condition": "[EQ](<*VALUE(MXP_Proflow_Type)*>,)",
+    "name": "Default_proflow_type",
+    "action": "<*SELECTVALUE(MXP_Proflow_Type:Rotational)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

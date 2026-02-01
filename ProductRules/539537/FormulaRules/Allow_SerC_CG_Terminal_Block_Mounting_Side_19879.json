@@ -1,0 +1,11 @@
+{
+    "id": 19879,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Mounting Panel)",
+    "name": "Allow_SerC_CG_Terminal_Block_Mounting_Side",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Terminal_Block_Mounting_Side)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

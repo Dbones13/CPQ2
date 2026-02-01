@@ -1,0 +1,11 @@
+{
+    "id": 10457,
+    "condition": "[NEQ](<*Table(select count(*) from MPA_PRICE_PLAN_MAPPING where Honeywell_Ref = '<*CTX(Quote.CustomField(MPA Honeywell Ref))*>' and Price_Plan_Status= 'Active' and Price_Plan_Parts_Discount = 'Y' and Price_Plan_Start_Date < '<*CTX( Date.Format(MM/dd/yyyy) )*>' and Price_Plan_End_Date > '<*CTX( Date.Format(MM/dd/yyyy) )*>')*>,0)",
+    "name": "MPA Hide ServcieContract",
+    "action": "<*DISALLOWATTRIBUTES(MSID_Active_Service_Contract)*><*ASSIGNVALUE(MSID_Active_Service_Contract:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

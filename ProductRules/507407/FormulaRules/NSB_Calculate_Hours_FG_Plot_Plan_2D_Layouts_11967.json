@@ -1,0 +1,11 @@
+{
+    "id": 11967,
+    "condition": "<*ISSELECTED(FGC_Implementation_Methodology.Non-Standard Build Estimate)*>",
+    "name": "NSB Calculate Hours F&G Plot Plan (2D Layouts)",
+    "action": "<*ASSIGNVALUE(F&G Plot Plan (2D Layouts):[IF](<*ISSELECTED(FGC_2D_Fire _and_Gas_Plot_Plan_Layouts_Req.Yes)*>){<* Eval((4*<*VALUE(FGC_Number_of_Fire_and_Gas_Zones_(1-100))*>)+(<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>*<*VALUE(FGC_Number_of_Fire_and_Gas_Zones_(1-100))*>)) *>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

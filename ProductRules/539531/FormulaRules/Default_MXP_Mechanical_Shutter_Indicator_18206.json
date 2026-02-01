@@ -1,0 +1,11 @@
+{
+    "id": 18206,
+    "condition": "[EQ](<*VALUE(MXP_Mechanical_Shutter_Indicator)*>,)",
+    "name": "Default_MXP_Mechanical_Shutter_Indicator",
+    "action": "<*SELECTVALUE(MXP_Mechanical_Shutter_Indicator:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

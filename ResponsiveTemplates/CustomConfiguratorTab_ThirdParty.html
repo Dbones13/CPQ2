@@ -1,0 +1,462 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko if: $data.attributes() && $data.attributes()[3] && $data.attributes()[3].userInput() != 'Renewal'-->
+    <!-- ko if : $data.attributes()[0].userInput() == 'Training'-->
+        <!-- ko if: $data.currentTab() && $data.currentTab().displayName() == 'Scope Selection'-->
+            <div class="row col-xs-12 swagger">
+                <!-- ko foreach: attributes.filterByProperty('name' ,'SC_HWOS_Service_Product') -->
+                    <div class="col-xs-6 col-sm-6 flex" >
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                <!--/ko-->
+            </div>
+            <div class="row col-xs-12 swagger">
+                <div class="swagger-header"><span>Select Optional Entitlements</span></div>
+                <!-- ko foreach: attributes.filterByProperty('name','HWOS_Entitlement') -->
+                    <div class="col-xs-12 col-sm-6">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+            <div class="row col-xs-12 swagger">
+                <div id="sc-file-upload">
+                    <div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload')" style="background-color: white;">
+                        <span data-bind="text:$data.currentTab().displayName() == 'Scope Summary' ? 'Total Summary':'File Upload'">File Upload</span>
+                        <a id="sc-file-upload-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+                    </div>
+                    <div id="sc-file-upload-content" style = "display:none; background-color: white;" >
+                        <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+                        <!-- /ko -->
+                        <!-- ko foreach: attributes.filterByProperty('name' ,'HWOS_Model Scope_3party_Training') -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                        </div>
+                        <!-- /ko -->
+						<!-- ko foreach: attributes.filterByProperty('name' , 'Third_Party_Delete') -->
+                        <div style="float: right;">
+                            <div class="col-xs-12 col-sm-6">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                        
+                        <!-- ko foreach: attributes.filterByProperty('name' , 'HWOS_Invalid_Model Scope_3party_Training') -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                        </div>
+                        <!-- /ko -->
+						<!-- ko foreach: attributes.filterByProperty('name' , 'Invalid_Third_Party_Delete') -->
+                        <div style="float:right">
+                            <div class="col-xs-12 col-sm-6">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                        <!--/ko-->
+                    </div>
+                </div>
+            </div>
+        <!--/ko-->
+        <!-- ko if: $data.currentTab() && $data.currentTab().displayName() == 'Scope Summary'-->
+        <div class="row col-xs-12 swagger">
+            <div class="swagger-header"><span>Select Product & Entitlements</span></div>
+            <!-- ko foreach: attributes.filterByProperty('name','HWOS_3rdParty_Training_Entitlements_Summary') -->
+                <div class="col-xs-12 col-sm-6">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+            <!-- /ko -->
+        </div>
+        <div class="row col-xs-12 swagger">
+            <div class="swagger-header"><span>Summary</span></div>
+            <!-- ko foreach: attributes.filterByProperty('name','HWOS_3rdParty_Training_Summary') -->
+                <div class="col-xs-12 col-sm-6">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+            <!-- /ko -->
+        </div>
+        <!--/ko-->
+    <!-- /ko-->
+    <!-- ko ifnot: $data.attributes()[0].userInput() == 'Training'-->
+	<div class="row col-xs-12 swagger" style="display:flex;flex-direction:column">
+        <!-- ko ifnot: $data.attributes()[0].userInput() == 'Enabled Services Model'  -->
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+            <!-- ko foreach: attributes.filterByProperty('name' ,'SC_HWOS_Service_Product','SC_HWOS_Service_Product_ScopeSummary') -->
+            <div class="col-xs-6 col-sm-4 flex" >
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+        <!--/ko-->
+            <!-- ko foreach: attributes.filterByProperty('name' ,"HWOS_Entitlement") -->
+            <div style="float: left;" class="col-md-6" data-bind="visible: $data.name() == 'HWOS_Entitlement' && $data.container.rows().length > 0">
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: 'SC_ContainerTemplate_EnabledService' } -->
+                    <!-- /ko -->
+                </div>
+            </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' , "HWOS_Entitlement_Optional") -->
+    <div style="float: left;" class="col-md-6">
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+            <!-- ko template: { name: 'SC_ContainerTemplate_EnabledService' } -->
+            <!-- /ko -->
+        </div>
+    </div>
+<!-- /ko -->
+    <!-- ko if: $data.attributes()[0].userInput() == 'Enabled Services Model' -->
+    <p class="swagger-header">Service Product & Entitlement</p>
+        <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' ,'EnabledServices_servprod','EnabledService_Entitlement') -->
+                <div class="col-xs-6 col-sm-6 flex" style="display: flex;" >
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+	        <!-- /ko -->
+        </div>
+		
+    <!--/ko-->
+	</div>
+
+    <!-- ko if: $data.attributes()[0].userInput() == 'Enabled Services Model'-->
+	<div class="row col-xs-12 swagger">
+		<div class="swagger-header"><span>Contract Information</span></div>
+        <div class="col-sm-6 col-xs-6" style="display:flex;flex-direction: column;" >
+            <!-- ko foreach: attributes.filterByProperty('name','CurrentSupportContract_EnabledService','OrderType_EnabledService') -->
+            <div class="col-xs-6 col-sm-6" style="display: flex;">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+        </div>
+        <div class="col-xs-6 col-sm-6" style="display:flex;flex-direction: column;">
+            <!-- ko foreach: attributes.filterByProperty('name','ContractStartDate_EnabledService','ContractEndDate_EnabledService','DurationOfPlan_enabledServices') -->
+            <div class="col-xs-6 col-sm-6" style="display: flex;">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+        <!-- /ko -->
+        </div>
+		
+        
+	</div>
+    <div class="row col-xs-12 swagger" >
+        <div class="col-xs-12 col-sm-12" style="display:flex;flex-direction:column;">
+            <!-- ko foreach: attributes.filterByProperty('name','SC_SESP_MultiSites','SC_SESP_MultiSites_Button','SC_Select_MSID_Cont') -->
+                <div class="col-xs-12 col-sm-6">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+        <!--/ko-->
+        </div>
+	</div>
+
+    <div class="row col-xs-12 swagger"  >
+        <div class="swagger-header"><span>Assets</span></div>
+        <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name','Asset_details_ServiceProd') -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: 'SC_ContainerTemplate_EnabledService' } -->
+                        <!-- /ko -->
+                    </div>
+        <!--/ko-->
+        </div>
+        
+	</div>
+    <!--/ko-->
+
+	<div class="row col-xs-12 swagger" >
+        <!-- ko ifnot: $data.attributes()[0].userInput() == 'Hardware Warranty' ||$data.attributes()[0].userInput() == 'Hardware Refresh' || $data.currentTab().displayName() == 'Scope Summary' || $data.attributes()[0].userInput() == 'Enabled Services Model' -->
+        <div id="sc-file-upload">
+            <div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload')" style="background-color: white;">
+                <span data-bind="text:$data.currentTab().displayName() == 'Scope Summary' ? 'Total Summary':'File Upload'">File Upload</span>
+                <a id="sc-file-upload-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+            </div>
+            <div id="sc-file-upload-content" style = "display:none; background-color: white;" >
+                    <!--ko if : $data.currentTab() && $data.currentTab().displayName() == 'Scope Selection' && ($data.attributes()[0].userInput() == 'Trace' || $data.attributes()[0].userInput() == 'Third Party Services'||$data.attributes()[0].userInput() == 'Workforce Excellence Program')-->
+                        <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+                        <!-- /ko -->
+                    <!--/ko-->
+                    
+                    <!-- ko foreach: attributes.filterByProperty('name' ,'HWOS_Model Scope_3party','HWOS_Model Scope_3party_ScopeSummary') -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+					<!-- ko foreach: attributes.filterByProperty('name' , "Third_Party_Delete",'RefreshEntitlementsHWOS') -->
+                    <div style="float: right;">
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko ifnot: $data.attributes()[0].userInput() == 'Hardware Warranty' ||$data.attributes()[0].userInput() == 'Hardware Refresh' -->
+                        
+                    
+                    <!-- ko foreach: attributes.filterByProperty('name' , "HWOS_Invalid_Model Scope_3party") -->
+                    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+					<!-- ko foreach: attributes.filterByProperty('name' , "Invalid_Third_Party_Delete") -->
+                        <div style="float:right">
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                        </div>
+                        </div>
+                        <!--/ko-->
+                    <!-- /ko -->
+            </div>
+        </div>
+    <!--/ko-->
+
+
+    <!-- ko if : ($data.attributes()[0].userInput() == 'Hardware Warranty' && $data.currentTab().displayName() == 'Scope Summary' ) || ($data.attributes()[0].userInput() == 'Hardware Refresh' && $data.currentTab().displayName() == 'Scope Summary')-->
+    
+    <div id = 'sc-file-upload2'>
+        <div class="swagger-header" style="background-color: white;" onclick="toggleConfigSection(event, '#sc-file-upload2')" >
+            <span >Models</span>
+            <a id="sc-file-upload2-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+        <div id="sc-file-upload2-content">
+            <!-- ko foreach: attributes.filterByProperty('name' ,'HWOS_Model Scope_3party','HWOS_Model Scope_3party_ScopeSummary') -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: 'SC_ContainerTemplate_EnabledService' } -->
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+			<!-- ko foreach: attributes.filterByProperty('name' , "Third_Party_Delete",'RefreshEntitlementsHWOS') -->
+            <div style="float: right;">
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+        
+            
+    </div>
+    
+    <!-- /ko-->
+    <!-- ko if : ($data.attributes()[0].userInput() == 'Hardware Warranty' && $data.currentTab().displayName() == 'Scope Selection' ) || ($data.attributes()[0].userInput() == 'Hardware Refresh' && $data.currentTab().displayName() == 'Scope Selection')-->
+    
+    <div id = 'sc-file-upload2'>
+        <div class="swagger-header" style="background-color: white;" onclick="toggleConfigSection(event, '#sc-file-upload2')" >
+            <span >Models Scope</span>
+            <a id="sc-file-upload2-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+        <div id="sc-file-upload2-content">
+            <!-- ko foreach: attributes.filterByProperty('name' ,'HWOS_Model Scope_3party','HWOS_Model Scope_3party_ScopeSummary') -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: 'SC_ContainerTemplate_EnabledService' } -->
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+			<!-- ko foreach: attributes.filterByProperty('name' , "Third_Party_Delete",'RefreshEntitlementsHWOS') -->
+            <div style="float: right;">
+                <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+        
+            
+    </div>
+    
+    <!-- /ko-->
+</div>
+<!-- /ko-->
+<!--/ko-->
+
+<!-- ko if: $data.attributes() && $data.attributes()[3] && $data.attributes()[3].userInput() == 'Renewal' -->
+    <!-- ko if : $data.currentTab().displayName() == 'Scope Selection'-->
+        <div class="row col-xs-12 swagger" style="padding:5px">
+            <div id = 'service-product' >
+                <div class="col-xs-12 swagger-header" onclick="toggleConfigSection(event, '#service-product')" style="background-color: white;"  >
+                    <span>Service Product</span>
+                    <a id="service-product-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+                </div>
+                <div class="row col-xs-12" id="service-product-content" style="display: flex;">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "SC_ServiceProduct_HR_RWL") -->
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                    <!-- /ko -->
+                </div>     
+            </div>
+        </div>
+        <div class="row col-xs-12 swagger" data-bind="visible:$data.responderModule.name() != 'Hardware Warranty'" style="padding:5px" >
+            <div onclick="toggleConfigSection(event, '#HR-Entitlements')" class="row swagger-header col-xs-12">
+                <span>Entitlements</span>
+                <a id="HR-Entitlements-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+            </div>
+            <div id = 'HR-Entitlements' class="row col-md-6 swagger"  >
+                <div class="swagger-header" style="background-color: white;" >
+                    <span ></span>
+                </div>
+                <div id="HR-Entitlements-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "SC_Entitlements_HR_RWL") -->
+                            <!-- ko template: { name: 'HR_RWL_ContainerTemplate' } -->
+                            <!-- /ko -->
+                    <!-- /ko -->
+                </div>   
+            </div>
+        </div>
+      <div class="row col-xs-12 swagger">
+       <div id="HR-section" >
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#HR-section')">
+            <span >File Upload</span>
+            <a id="HR-section-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+        <div id="HR-section-content" style="display:none;">
+                <div id = 'HR-file-upload' class="row col-xs-12 swagger">
+                
+                    <div id="HR-file-upload-content">
+                        <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+                        <!-- /ko -->
+                    </div>
+                   	<div class="row col-xs-12" style="padding-top:30px;">
+                    	<!-- ko foreach: attributes.filterByProperty('name','SC_Pricing_Escalation','ContractStartDate_EnabledService','ContractEndDate_EnabledService','DurationOfPlan_enabledServices') -->
+                			<div class="row col-xs-12 price_exe flex" style="padding-left:8px;">
+							<div class="  col-xs-6 "  >
+                    			<!-- ko template: { name: $root.getAttributeTemplate } -->
+                    			<!-- /ko -->
+                			</div>
+                			</div>
+        				<!-- /ko -->
+                    </div>
+                </div>
+                <div id = 'HR-models-scope' class="row col-xs-12 swagger">
+                    <div class="swagger-header" style="background-color: white;" >
+                        <span >Models Scope</span>
+                    </div>
+                    <div id="HR-models-scope-content">
+                        <!-- ko foreach: attributes.filterByProperty('name' , "SC_ValidModels_HR_RWL") -->
+                            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        <!-- /ko -->
+						<div style="float:right">
+                            <!-- ko foreach: attributes.filterByProperty('name' , "SC_DeleteValidModels_HR_RWL") -->
+                            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        <!-- /ko -->
+                        </div>
+                        
+                        <!-- ko foreach: attributes.filterByProperty('name' , "SC_InvalidModels_HR_RWL") -->
+                            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        <!-- /ko -->
+                        <div style="float:right">
+                            <!-- ko foreach: attributes.filterByProperty('name' , "SC_DeleteInvalidModels_HR_RWL") -->
+                            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    <!-- /ko -->
+    <!-- ko if : $data.currentTab().displayName() == 'Scope Summary'-->
+    <div class="row col-xs-12 swagger" style="padding:5px">
+        <div onclick="toggleConfigSection(event, '#HR-Entitlements')" class="row swagger-header col-xs-12">
+            <span>Service Product and Entitlements</span>
+            <a id="HR-Entitlements-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+        <div id = 'HR-Entitlements' class="row col-xs-12 swagger">
+            <div id="HR-Entitlements-content">
+                <!-- ko foreach: attributes.filterByProperty('name' , "SC_ServicePrdEntSS_HR_RWL") -->
+                        <!-- ko template: { name: 'HR_RWL_ContainerTemplate' } -->
+                        <!-- /ko -->
+                <!-- /ko -->
+            </div>   
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger" id="HR-section" style="padding:5px">
+        <div class="swagger-header" id="swagger-header" onclick="toggleConfigSection(event, '#HR-section')"><span>Pricing Summary</span><a id="HR-section-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a></div>
+        <div id="HR-section-content">
+
+            <div id = 'HR-file-upload' class="row col-xs-12 swagger">
+                <div id="HR-file-upload-content">
+                    <div style="display: flex;">
+                        <!-- ko foreach: attributes.filterByProperty('name' , "SC_SearchInputSS_HR_RWL") -->
+                            <div style="display: flex;" data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        <!-- /ko -->
+                        <!-- ko foreach: attributes.filterByProperty('name' , "SC_SearchButtonSS_HR_RWL") -->
+                            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                                <!-- /ko -->
+                            </div>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+            <div id = 'HR-models-scope' class="row col-xs-12 swagger">
+
+                <div id="HR-models-scope-content">
+                    <!-- ko if: attributes.filterByProperty('name' ,'SC_Product_Type')()[0]?.userInput() ==='Renewal' -->
+                    	<!-- ko foreach: attributes.filterByProperty('name','ComparisonSummary') -->
+                			<div class="col-xs-12 col-sm-12">
+                    			<!-- ko template: { name: $root.getAttributeTemplate } -->
+                    			<!-- /ko -->
+                			</div>
+        				<!-- /ko -->
+                    <!-- /ko -->
+                    <!-- ko foreach: attributes.filterByProperty('name' , "SC_DisplaySS_HR_RWL") -->
+                        <div style="display: flex;" data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                        </div>
+                    <!-- /ko -->
+                    <!-- ko foreach: attributes.filterByProperty('name' , "SC_SelectionSS_HR_RWL") -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: 'HR_RWL_ContainerTemplate' } -->
+                            <!-- /ko -->
+                        </div>
+                    <!-- /ko -->
+                    <!-- ko foreach: attributes.filterByProperty('name' , "SC_DownloadBtnSS_HR_RWL") -->
+                        <div style="display: flex;justify-content: end;" data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                        </div>
+                     <!-- /ko -->
+                    <!-- ko foreach: attributes.filterByProperty('name' , "SC_ModelsSS_HR_RWL") -->
+                        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                        </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+<!--/ko-->
+
+</div>

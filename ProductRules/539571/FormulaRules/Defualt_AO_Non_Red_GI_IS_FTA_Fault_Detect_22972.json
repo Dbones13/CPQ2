@@ -1,0 +1,11 @@
+{
+    "id": 22972,
+    "condition": "[EQ](<*VALUE(AO_Non_Red_GI_IS_FTA_Fault_Detect)*>,)",
+    "name": "Defualt_AO_Non_Red_GI_IS_FTA_Fault_Detect",
+    "action": "<*SELECTVALUE(AO_Non_Red_GI_IS_FTA_Fault_Detect:None)*>",
+    "description": "CXCPQ-38724",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

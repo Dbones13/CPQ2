@@ -1,0 +1,11 @@
+{
+    "id": 24259,
+    "condition": "[EQ](<*VALUE(IS_This_Marine_Customer(ERG Server))*>,)",
+    "name": "Default_IS_This_Marine_Customer(ERG Server)",
+    "action": "<*SELECTVALUE(IS_This_Marine_Customer(ERG Server):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

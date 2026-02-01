@@ -1,0 +1,11 @@
+{
+    "id": 23988,
+    "condition": "[NEQ](<*VALUE(Terminal_Weighbridge_Interface_required?)*>,Yes)",
+    "name": "Del_TM-WBMOD1",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-WBMOD1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

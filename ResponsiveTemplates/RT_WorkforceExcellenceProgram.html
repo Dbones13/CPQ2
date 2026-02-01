@@ -1,0 +1,421 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko if: currentTab().name() === "Honeywell Integrated Field App" -->
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_ServiceProduct_HIF") -->
+    <div class="col-xs-12 col-sm-4 flex">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Entitlements</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Entitlement_HIF") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+    <div id="sc-file-upload-HIF">
+<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload-HIF')">
+          <span>File Upload</span>
+          <a id="sc-file-upload-HIF-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-file-upload-HIF-content" style = "display:none;"  class="row">
+    <!-- ko template: { name: 'ConfigurationImportTemplate_WEP' } -->
+    <!-- /ko -->
+    <div class="row col-xs-6 price_exe" style="padding-top:20px;">
+    	<!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_HIF_Pricing_Escalation") -->
+    	<div class="row col-xs-12 flex" style="padding-left:8px;">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    	<!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Models_Scope_HIF") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteModels_HIF") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Invalid_Models_HIF") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteInvalid_HIF") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+        </div>
+    </div>
+    </div>
+    <!-- /ko -->
+    
+    <!-- Immersive Field Simmulator -->
+    <!-- ko if: currentTab().name() === "Immersive Field Simulator" -->
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_ServiceProduct_IFS") -->
+    <div class="col-xs-12 col-sm-4 flex">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Entitlements</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Entitlement_IFS") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+    <div id="sc-file-upload-IFS">
+<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload-IFS')">
+          <span>File Upload</span>
+          <a id="sc-file-upload-IFS-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-file-upload-IFS-content" style = "display:none;" >
+    <!-- ko template: { name: 'ConfigurationImportTemplate_WEP' } -->
+    <!-- /ko -->
+    <div class="row col-xs-6 price_exe" style="padding-top:20px;">
+    	<!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_IFS_Pricing_Escalation") -->
+    	<div class="row col-xs-12 flex" style="padding-left:8px;">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    	<!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Models_Scope_IFS") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteModels_IFS") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Invalid_Models_IFS") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteInvalid_IFS") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+        </div>
+    </div>
+    </div>
+    <!-- /ko -->
+    
+    <!-- HALO OA-->
+    <!-- ko if: currentTab().name() === "HALO OA" -->
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_ServiceProduct_Halo") -->
+    <div class="col-xs-12 col-sm-4 flex">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Entitlements</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Entitlement_Halo") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+    <div id="sc-file-upload-Halo">
+<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload-Halo')">
+          <span>File Upload</span>
+          <a id="sc-file-upload-Halo-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-file-upload-Halo-content" style = "display:none;" >
+    <!-- ko template: { name: 'ConfigurationImportTemplate_WEP' } -->
+    <!-- /ko -->
+    <div class="row col-xs-6 price_exe" style="padding-top:20px;">
+    	<!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Halo_Pricing_Escalation") -->
+    	<div class="row col-xs-12 flex" style="padding-left:8px;">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    	<!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Models_Scope_Halo") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteModels_Halo") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Invalid_Models_Halo") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteInvalid_Halo") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+        </div>
+    </div>
+    </div>
+    <!-- /ko -->
+    
+    <!-- Training-->
+    <!-- ko if: currentTab().name() === "Training" -->
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_ServiceProduct_Training") -->
+    <div class="col-xs-12 col-sm-4 flex">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Entitlements</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Entitlement_Training") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+    <div id="sc-file-upload-Training">
+<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload-Training')">
+          <span>File Upload</span>
+          <a id="sc-file-upload-Training-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-file-upload-Training-content" style = "display:none;" >
+    <!-- ko template: { name: 'ConfigurationImportTemplate_WEP' } -->
+    <!-- /ko -->
+    <div class="row col-xs-6 price_exe" style="padding-top:20px;">
+    	<!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Training_Pricing_Escalation") -->
+    	<div class="row col-xs-12 flex" style="padding-left:8px;">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    	<!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Models_Scope_Training") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteModels_Training") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Invalid_Models_Training") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteInvalid_Training") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+        </div>
+    </div>
+    </div>
+	<div class="row col-xs-12 swagger">
+        <div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Configurable_Models_Training") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteConfigurableModels_Training") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    </div>
+    <!-- /ko -->
+    
+    <!-- Training Needs Assessment -->
+    <!-- ko if: currentTab().name() === "Training Needs Assessment" -->
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_ServiceProduct_TNA") -->
+    <div class="col-xs-12 col-sm-4 flex">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Entitlements</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Entitlement_TNA") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+    <div id="sc-file-upload-TNA">
+<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload-TNA')">
+          <span>File Upload</span>
+          <a id="sc-file-upload-TNA-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-file-upload-TNA-content" style = "display:none;" >
+    <!-- ko template: { name: 'ConfigurationImportTemplate_WEP' } -->
+    <!-- /ko -->
+    <div class="row col-xs-6 price_exe" style="padding-top:20px;">
+    	<!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_TNA_Pricing_Escalation") -->
+    	<div class="row col-xs-12 flex" style="padding-left:8px;">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    	<!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Models_Scope_TNA") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteModels_TNA") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_Invalid_Models_TNA") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_DeleteInvalid_TNA") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+        </div>
+    </div>
+    </div>
+    <div class="row col-xs-12 swagger">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_WEP_System_Selection_TNA") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+
+<script type="text/html" id="ConfigurationImportTemplate_WEP">
+
+	<!-- ko if: importData().AllowConfigurationImport -->
+    <div class="row fiori3-upload-configuration fileUploadInput">
+        <label class="fiori3-configurator-upload-label">@Translation.Get("Configurator.UploadConfiguration")</label>
+        @using (Html.BeginForm("UploadConfigurationTemplate", "Configurator", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <!-- ko if: importData().ShowProductConfigurationTemplate -->        
+      		<div class="btn pull-left download-template-btn">
+            <a data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, tooltip: { title: '@Translation.Get("xsltDownloadTemplate")', placement: 'top auto' }" onClick="javascript:downloadWEPTemplate()" >
+                <span class="sap-icon">&#xe03a;</span>&nbsp;
+            </a></div>   
+            <!-- /ko -->
+            <div class="form-group col-xs-12 col-sm-8 clear-padding fiori3-configuration-upload">
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <div class="input-group">
+                        <div class="form-control uneditable-input">
+                            <span class="sap-icon fileupload-exists">&#xe172;</span>
+                            <span class="fileupload-preview"></span>
+                        </div>
+                        <div class="input-group-btn" data-bind="tooltip: { title: '@Translation.GetJS("Configurator.ChooseTemplateForUpload")', placement: 'top auto' }">
+                            <input id="uploadFileConfigurationImport" type="file" name="file" class="file-input" data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, executeOnEnter: function() { openFileInput(); }" aria-label="@Translation.GetJS("Configurator.ChooseTemplateForUpload")" />
+                            <span class="btn btn-default btn-file">
+                                <a class="fileupload-new"><span class="sap-icon">&#xe12e;</span></a>
+                                <a class="fileupload-exists"><span class="sap-icon">&#xe12e;</span></a>
+                            </span>
+                        </div>
+                        <div class="input-group-btn fileupload-exists" data-bind="tooltip: { title: '@Translation.GetJS("Configurator.RemoveConfigurationTemplate")', placement: 'top auto' }">
+                            <a href="#" class="btn btn-default" data-dismiss="fileupload" aria-label="@Translation.GetJS("Configurator.RemoveConfigurationTemplate")" role="button">
+                                <span class="sap-icon">&#xe03e;</span>
+                            </a>
+                        </div>
+                        <div class="input-group-btn">
+                            <button id="applyTemplateConfigurationImport" data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, disable: importData().ConfigurationFileName.length == 0, click: applyConfigTemplate" class="btn btn-default apply-template-btn">@Translation.Get("xsltApplyTemplate")</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <br />
+    <!-- /ko -->
+</script>

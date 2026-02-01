@@ -1,0 +1,11 @@
+{
+    "id": 2590,
+    "condition": "[NOT](<*ATTDEF(PlantCruise AD Standard Deliverable)*>)",
+    "name": "Standard_Deliverable_Set_Default",
+    "action": "<*SELECTVALUE(PlantCruise AD Standard Deliverable:PEP-PQP-HSE-Org Chart-Schedule)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

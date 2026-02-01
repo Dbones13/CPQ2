@@ -1,0 +1,11 @@
+{
+    "id": 14813,
+    "condition": "[AND]([IN](<*VALUE(MX_What_QCS_System_is_required)*>,QCS MD,QCS CD,QCS MD & CD),[EQ](<*VALUE(MX_Electronic_or_physical_media)*>,Physical))",
+    "name": "MX_Part_EP_LBASEQ",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:EP-LBASEQ)*><*SETATVQTY(MX_Platform_Bom_Parts:EP-LBASEQ, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

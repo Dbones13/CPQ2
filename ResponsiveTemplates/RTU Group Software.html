@@ -1,0 +1,17 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+	<div class="col-md-6 col-sm-12 flex" style="flex-direction:column">
+      <!-- ko foreach: attributes -->
+      <div class="col-12" style="margin-bottom : 0;" data-bind="attr: { id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+      </div>
+      <!-- /ko -->
+    </div>
+</div>
+

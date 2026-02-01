@@ -1,0 +1,11 @@
+{
+    "id": 13892,
+    "condition": "1",
+    "name": "Hide_UOC_Starter_ Kit_with_Experion_License",
+    "action": "[IF]([EQ](<*CTX ( Container(UOC_Common_Questions_Cont).Row(1).Column(UOC_Starter_Kit).Get )*>,No)){<*CTX( Container(UOC_Common_Questions_Cont).Column(UOC_Starter_ Kit_with_Experion_License).SetPermission(Hidden) )*>}{<*CTX( Container(UOC_Common_Questions_Cont).Column(UOC_Starter_ Kit_with_Experion_License).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "CCEECOMMBR-7014",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

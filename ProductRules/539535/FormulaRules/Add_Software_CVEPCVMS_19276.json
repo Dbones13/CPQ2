@@ -1,0 +1,11 @@
+{
+    "id": 19276,
+    "condition": "[GT](<*VALUE(PlantCruise_PlantCruise_Virtualization_Server_CAL)*>,0)",
+    "name": "Add_Software_CV-EPCVMS",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-EPCVMS)*><*SETATVQTY(PlantCruise_Part_Summary:CV-EPCVMS,<*VALUE(PlantCruise_PlantCruise_Virtualization_Server_CAL)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

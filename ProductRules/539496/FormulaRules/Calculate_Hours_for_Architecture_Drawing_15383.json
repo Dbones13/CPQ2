@@ -1,0 +1,11 @@
+{
+    "id": 15383,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Architecture Drawing",
+    "action": "<*ASSIGNVALUE(FDA Architecture Diagrams:[IF](<*ISSELECTED(FDA Implementation Methodology.Non-Standard Build Estimate)*>){<* Eval((8*<*VALUE(FDA Number of Architecture Diagrams (1-10))*>)+(<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>*<*VALUE(FDA Number of Architecture Diagrams (1-10))*>*0.25)) *>}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,<*ISSELECTED(FDA GES Location.None)*>)){<* Eval((8*<*VALUE(FDA Number of Architecture Diagrams (1-10))*>)+(<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>*<*VALUE(FDA Number of Architecture Diagrams (1-10))*>*0.25)) *>}{<* Eval(<* Eval((8*<*VALUE(FDA Number of Architecture Diagrams (1-10))*>)+(<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>*<*VALUE(FDA Number of Architecture Diagrams (1-10))*>*0.25)) *>*1.1) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

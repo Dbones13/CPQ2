@@ -1,0 +1,11 @@
+{
+    "id": 20113,
+    "condition": "[AND]([EQ](<*CTX( Container(C300_C IO MS2).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>)",
+    "name": "Load_I/O Count2",
+    "action": "<*CTX( Container(C300_C IO MS2).LoadKeys(IO_Type).Load(SELECT IO_Type FROM FIM_FF_IO WHERE Container_Name = 'C300_C IO MS2') )*>",
+    "description": "37205",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

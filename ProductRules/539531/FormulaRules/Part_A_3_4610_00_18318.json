@@ -1,0 +1,11 @@
+{
+    "id": 18318,
+    "condition": "[EQ](<*VALUE(MXP_Remote_PMP)*>,Yes)",
+    "name": "Part_A_3_4610_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-4610-00)*><*SETATVQTY(MXP_SE_Bom_Parts:3-4610-00,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

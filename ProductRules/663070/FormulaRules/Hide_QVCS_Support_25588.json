@@ -1,0 +1,11 @@
+{
+    "id": 25588,
+    "condition": "[NEQ](<*VALUE(MIB Configuration Required?)*>,No)",
+    "name": "Hide_QVCS_Support",
+    "action": "<*SETOPTIONAL(QVCS Support)*><*DISALLOWATTRIBUTES(QVCS Support)*>",
+    "description": "If MIB = yes , then this question  will be hidden.If MIB = No, then this question will be visible to User.",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

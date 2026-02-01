@@ -1,0 +1,11 @@
+{
+    "id": 23492,
+    "condition": "[AND]([NOT](<*ATTSEL(DVM_ENG_GES)*>),<*ISSELECTED(DVM_GES_Location.GES Romania)*>)",
+    "name": "Set_Default_Romania",
+    "action": "<*SELECTVALUE(DVM_ENG_GES:HPS_GES_P350B_RO)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

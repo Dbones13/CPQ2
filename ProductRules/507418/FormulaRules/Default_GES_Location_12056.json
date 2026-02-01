@@ -1,0 +1,11 @@
+{
+    "id": 12056,
+    "condition": "[EQ](<*VALUE(PAGA_GES_Location)*>,)",
+    "name": "Default_GES_Location",
+    "action": "<*SELECTVALUE(PAGA_GES_Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

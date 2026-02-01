@@ -1,0 +1,11 @@
+{
+    "id": 13686,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_of_P&F_BTC14_Quad_Video_Thin_Client)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_TP_THNCL7_100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:TP-THNCL7-100)*><*SETATVQTY(Virtualization_BOM_Parts:TP-THNCL7-100,<*VALUE(Virtualization_of_P&F_BTC14_Quad_Video_Thin_Client)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

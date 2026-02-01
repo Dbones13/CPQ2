@@ -1,0 +1,11 @@
+{
+    "id": 17746,
+    "condition": "1",
+    "name": "RG_Qty_Marshallingitems",
+    "action": "<*ASSIGNVALUE(RG_Qty_Marshallingitems:<* Eval(<*CTX( Container(SM_RG_PartSummary_Cont).Sum(Qty_Marshallingitems) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

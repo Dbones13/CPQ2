@@ -1,0 +1,11 @@
+{
+    "id": 23081,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_UPC_Labor_IO_count_RG_2).Rows.GetCount )*>,0),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "load C300_UPC_Labor_IO_count_RG_2",
+    "action": "<*CTX( Container(C300_UPC_Labor_IO_count_RG_2).LoadKeys(IO_Type).Load(SELECT IO_Type FROM FIM_FF_IO WHERE Container_Name = 'C300_UPC_Labor_IO_count_RG_2') )*>",
+    "description": "CCEECOMMBR-6972",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

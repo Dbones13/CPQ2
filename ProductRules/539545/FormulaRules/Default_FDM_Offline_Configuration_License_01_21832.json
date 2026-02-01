@@ -1,0 +1,11 @@
+{
+    "id": 21832,
+    "condition": "[EQ](<*VALUE(FDM Offline Configuration License (0-1))*>,)",
+    "name": "Default_FDM Offline Configuration License (0-1)",
+    "action": "<*ASSIGNVALUE(FDM Offline Configuration License (0-1):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20189,
+    "condition": "[EQ](<*VALUE(DVM_Pelco_Sarix_Interface)*>,)",
+    "name": "Default_DVM_Pelco_Sarix_Interface",
+    "action": "<*SELECTVALUE(DVM_Pelco_Sarix_Interface:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14861,
+    "condition": "[NEQ](<*VALUE(MX_MD_Additional_characteristics_for_Color)*>,Brightness Fluorescence Control)",
+    "name": "MX_Part_Dis_Q5977_50",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5977-50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

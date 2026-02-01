@@ -1,0 +1,11 @@
+{
+    "id": 18879,
+    "condition": "[AND]([OR]([EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60L Standard),[EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line)),[EQ](<*VALUE(MX_CD_Slice_Lip)*>,Titanium))",
+    "name": "CD_Part_91032",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:91032)*><*SETATVQTY(MX_CD_Bom_Parts:91032, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18757,
+    "condition": "[EQ](<*VALUE(MX_CD_CalcoilPRO_Type)*>,)",
+    "name": "Default_CalcoilPRO_Type",
+    "action": "<*SELECTVALUE(MX_CD_CalcoilPRO_Type:Off Machine Power modules)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

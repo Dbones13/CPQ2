@@ -1,0 +1,11 @@
+{
+    "id": 10804,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "BOM_PLC_UOC_EP-DSC02K",
+    "action": "[IF]([AND]([GEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,3900),[LEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,4000))){<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-DSC02K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-DSC02K, 2)*>}{[IF]([AND]([GEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,1900),[LEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,2000))){<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-DSC02K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-DSC02K, 1)*>}{[IF]([LEQ](<*Eval(int(((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC10K)*>*10000)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC05K)*>*5000))/2000))*>,0)){}{<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-DSC02K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-DSC02K,<*Eval(int(((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC10K)*>*10000)-int(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC05K)*>*5000))/2000))*>)*>}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20343,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,)",
+    "name": "Default_SS_Orion_Console_3_Position_Base_Unit_Total",
+    "action": "<*ASSIGNVALUE(SS_Orion_Console_3_Position_Base_Unit_Total:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

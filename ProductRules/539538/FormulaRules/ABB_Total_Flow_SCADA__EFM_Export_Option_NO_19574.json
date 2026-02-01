@@ -1,0 +1,11 @@
+{
+    "id": 19574,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS ABB Total Flow SCADA, EFM Export Option)*>,Yes))",
+    "name": "ABB Total Flow SCADA  EFM Export Option NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HTFLEF)*><* DoResetAtt *>",
+    "description": "Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

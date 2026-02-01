@@ -1,0 +1,11 @@
+{
+    "id": 13480,
+    "condition": "1",
+    "name": "HMI Test System Setup",
+    "action": "<*ASSIGNVALUE(HMI Test System Setup:<* Eval(8 * <*VALUE(HMI_Test_System_R)*> * <*VALUE(HMI_Test_System_C)*>) *>)*>",
+    "description": "Calculated Hrs = 8 * R * C",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

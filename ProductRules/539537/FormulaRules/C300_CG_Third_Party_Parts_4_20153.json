@@ -1,0 +1,11 @@
+{
+    "id": 20153,
+    "condition": "[AND]([EQ](<*CTX ( Container(Series_c_standardart_3rd_partsummary_cont).Rows.GetCount )*>,0),[EQ](<*CTX ( Container(Series_C_Third_Party_Parts).Rows.GetCount )*>,0))",
+    "name": "C300_CG_Third_Party_Parts_4",
+    "action": "<*CTX ( Container(Series_C_CG_Part_Summary_Cont_3rd_Party).Rows.Clear )*>",
+    "description": "",
+    "rank": "10000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

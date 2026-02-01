@@ -1,0 +1,11 @@
+{
+    "id": 12759,
+    "condition": "[NEQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW)",
+    "name": "Set Default Regional_Migration_Principal_Efforts_Required",
+    "action": "[IF]([EQ](<*VALUE(Regional_Migration_Principal_Efforts_Required)*>,)){<*SELECTVALUE(Regional_Migration_Principal_Efforts_Required:No)*>}{}[ENDIF]",
+    "description": "CXCPQ-83265",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/06/24",
+    "modifiedBy": "Vijaya Kumar"
+}

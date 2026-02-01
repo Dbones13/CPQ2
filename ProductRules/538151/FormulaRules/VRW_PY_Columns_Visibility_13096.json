@@ -1,0 +1,11 @@
+{
+    "id": 13096,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "VRW PY Columns Visibility",
+    "action": "<*CTX ( Container(SC_Models_Scope_Renewal).Column(Previous Year List Price).SetPermission(Editable) )*>\n<*CTX ( Container(SC_Models_Scope_Renewal).Column(Quantity).SetPermission(Editable) )*>",
+    "description": "Previous Year List Price\nPrevious Year Quantity",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

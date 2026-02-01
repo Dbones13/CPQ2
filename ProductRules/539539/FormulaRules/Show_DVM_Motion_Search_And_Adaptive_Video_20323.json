@@ -1,0 +1,11 @@
+{
+    "id": 20323,
+    "condition": "[NEQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Show_DVM_Motion_Search_And_Adaptive_Video",
+    "action": "<*ALLOWATTRIBUTES(DVM_Adaptive Video Streaming,DVM_Motion_Search_on_Recorded_Video)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26684,
+    "condition": "[AND]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System),[LIKE](<*VALUE(CE_Selected_Products)*>,ControlEdge UOC System),[NEQ](<*VALUE(Experion Software Release)*>,R520))",
+    "name": "exp_uoc_que_hide",
+    "action": "<*DISALLOWATTRIBUTES(Experion UOC Advanced Batch Points (0-61440))*>",
+    "description": "Rule has been inactivated as per ticket CXCPQ-118445",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

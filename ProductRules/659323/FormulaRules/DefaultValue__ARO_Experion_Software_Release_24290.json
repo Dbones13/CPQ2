@@ -1,0 +1,11 @@
+{
+    "id": 24290,
+    "condition": "[EQ](<*VALUE(ARO_Experion_Software_Release)*>,)",
+    "name": "DefaultValue - ARO_Experion_Software_Release",
+    "action": "<*ASSIGNVALUE(ARO_Experion_Software_Release:R530)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17957,
+    "condition": "[GT](<*VALUE(PCD_Qty_of_Saia_PCD_uSD_Flash_memory_card_1024_MB)*>,0)",
+    "name": "Add_PCD7.R-MSD1024",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PCD_Part_Summary:PCD7.R-MSD1024)*><*SETATVQTY(PCD_Part_Summary:PCD7.R-MSD1024,<*VALUE(PCD_Qty_of_Saia_PCD_uSD_Flash_memory_card_1024_MB)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

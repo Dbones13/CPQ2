@@ -1,0 +1,11 @@
+{
+    "id": 20145,
+    "condition": "<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>",
+    "name": "turbo_ios_doc",
+    "action": "<*ASSIGNVALUE(turbo_ios:<* Eval(0<*CTX ( Container(C300_TurboM_IOM_CG_Cont).Sum(Red_IOM) )*>) *>)*>",
+    "description": "for proposal",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

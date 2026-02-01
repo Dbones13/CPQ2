@@ -1,0 +1,11 @@
+{
+    "id": 13249,
+    "condition": "[NEQ](<*CTX ( Container(Experion_Enterprise_Cont).Sum(Number of Operator Console Sections) )*>,)",
+    "name": "Set default value for Number of Operator Console Sections",
+    "action": "<*ASSIGNVALUE(Number of Operator Console Sections:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Number of Operator Console Sections) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

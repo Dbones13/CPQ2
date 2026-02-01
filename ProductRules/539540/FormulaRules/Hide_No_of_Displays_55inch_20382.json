@@ -1,0 +1,11 @@
+{
+    "id": 20382,
+    "condition": "[AND]([EQ](<*VALUE(SS_Touch_Screen_required_desk)*>,No Touch Screen),[EQ](<*VALUE(SS_Display_size_desk)*>,55 inch NTS))",
+    "name": "Hide_No of Displays_55inch",
+    "action": "<*DISALLOWVALUES(SS_No_of_Displays_desk:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/05/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

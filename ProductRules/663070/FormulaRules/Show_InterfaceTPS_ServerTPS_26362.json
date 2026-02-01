@@ -1,0 +1,11 @@
+{
+    "id": 26362,
+    "condition": "[EQ](<*VALUE(Interface with TPS Required?)*>,Yes)",
+    "name": "Show_InterfaceTPS_ServerTPS",
+    "action": "[OR](<*DISALLOWVALUES(Experion Server Type:Flex Server)*>,<*DISALLOWVALUES(Experion Server Type:Server)*>)",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

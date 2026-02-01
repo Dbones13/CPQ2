@@ -1,0 +1,11 @@
+{
+    "id": 15038,
+    "condition": "[EQ](<*VALUE(MSE_Number_Project_Specifications_Supplied)*>,)",
+    "name": "Default_Project_Specifications",
+    "action": "<*ASSIGNVALUE(MSE_Number_Project_Specifications_Supplied:10)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

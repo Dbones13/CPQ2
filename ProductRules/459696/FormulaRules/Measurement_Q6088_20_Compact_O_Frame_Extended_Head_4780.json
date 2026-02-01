@@ -1,0 +1,11 @@
+{
+    "id": 4780,
+    "condition": "[EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-20 Compact O-Frame (Extended Head))",
+    "name": "Measurement_Q6088_20_Compact_O_Frame_Extended_Head",
+    "action": "<*xDisallowallValuesExcept(MX_SE_Measurement_Type: Basis Weight | Crepe Structure | Moisture | Opacity)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

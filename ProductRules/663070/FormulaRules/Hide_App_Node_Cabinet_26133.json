@@ -1,0 +1,11 @@
+{
+    "id": 26133,
+    "condition": "[OR]([EQ](<*VALUE(Interface with TPS Required?)*>,No)),[EQ](<*VALUE(Experion APP Node - Rack Mount)*>,0)",
+    "name": "Hide_App_Node_Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(APP Node in Cabinet Preference,Hardware_Design_Selection - EAPP Node,Ent_app_cab_tpm,Node_Supplier_EAPP,Additional_Memory_EAPP,Additional_Hard_Disk_EAPP,EAPP_Mounting_Type,Display_Supplier_EAPP,ServerLocClusNetwork_Group_ACET)*>",
+    "description": "CXCPQ-35420",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

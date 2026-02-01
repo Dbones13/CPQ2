@@ -1,0 +1,11 @@
+{
+    "id": 26119,
+    "condition": "[EQ](<*VALUE(Ent_app_desk_tpm)*>,)",
+    "name": "assign default Ent_app_desk_tpm",
+    "action": "<*SELECTVALUE(Ent_app_desk_tpm:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

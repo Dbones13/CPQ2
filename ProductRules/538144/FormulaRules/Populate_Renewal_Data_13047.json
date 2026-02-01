@@ -1,0 +1,11 @@
+{
+    "id": 13047,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_Renewal_check)*>,0))",
+    "name": "Populate Renewal Data",
+    "action": "<* ExecuteScript(PS_Populate_PY_ES_Data) *>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

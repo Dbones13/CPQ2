@@ -1,0 +1,11 @@
+{
+    "id": 22450,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Experion_Backup_&_Restore_Release)*>,R520),[NEQ](<*VALUE(ESDC_EBR_base_media)*>,Physical Delivery))",
+    "name": "Part_D_EP_BRM520",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-BRM520)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

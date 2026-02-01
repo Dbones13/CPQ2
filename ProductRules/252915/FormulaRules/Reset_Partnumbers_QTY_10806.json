@@ -1,0 +1,11 @@
+{
+    "id": 10806,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "Reset_Partnumbers_QTY",
+    "action": "[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:MZ-PPCT01)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:MZ-PPCT01)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-STAT01)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-STAT01)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-STACEX)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-STACEX)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:TC-PCDX50)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:TC-PCDX50)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:TC-PCDX10)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:TC-PCDX10)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:TC-PCDX05)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:TC-PCDX05)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:TC-PCDX01)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:TC-PCDX01)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC10K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-DSC10K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC05K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-DSC05K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC02K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-DSC02K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC01K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-DSC01K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC100)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-DSC100)*><* DoResetAtt *>}{}[ENDIF]",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25729,
+    "condition": "[GT](<*VALUE(Exp Peer Control Data Interface License(0-256))*>,4)",
+    "name": "Exp_Peer_Cntrl_Add_TCPCDX05",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TC-PCDX05)*>[IF]([GT](<*eval(INT(Fix((<*VALUE(Exp Peer Control Data Interface License(0-256))*>-(INT(Fix(<*VALUE(Exp Peer Control Data Interface License(0-256))*>/50)))*50-(INT(Fix((<*VALUE(Exp Peer Control Data Interface License(0-256))*>-(INT(Fix(<*VALUE(Exp Peer Control Data Interface License(0-256))*>/50)))*50)/10)))*10)/5)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-PCDX05, <*eval(INT(Fix((<*VALUE(Exp Peer Control Data Interface License(0-256))*>-(INT(Fix(<*VALUE(Exp Peer Control Data Interface License(0-256))*>/50)))*50-(INT(Fix((<*VALUE(Exp Peer Control Data Interface License(0-256))*>-(INT(Fix(<*VALUE(Exp Peer Control Data Interface License(0-256))*>/50)))*50)/10)))*10)/5)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add TC-PCDX05",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

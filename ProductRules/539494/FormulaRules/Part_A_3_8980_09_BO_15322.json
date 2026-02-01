@@ -1,0 +1,11 @@
+{
+    "id": 15322,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Autoprofile_Control_Cabinet_Type)*>, Autoprofile Control (APC) Interface, Single Phase Floor mount Enclosure(s) with Failure detection),[GT](<*VALUE(MXP_Number_of_Bolts)*>,0))",
+    "name": "Part_A_3_8980_09_BO",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-8980-09-BO)*><*SETATVQTY(MXP_Bom_Parts:3-8980-09-BO,<*VALUE(MXP_Number_of_Bolts)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

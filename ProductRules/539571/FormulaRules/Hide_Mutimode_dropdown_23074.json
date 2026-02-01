@@ -1,0 +1,11 @@
+{
+    "id": 23074,
+    "condition": "[EQ](<*VALUE(SerC_RG_CN100/_FOE_Fiber_Type)*>,Multi Mode)",
+    "name": "Hide_Mutimode_dropdown",
+    "action": "<*DISALLOWALLVALUESEXCEPT(SerC_RG_Distance_for_SeriesC_Remote_Group:1.5 KM|3.0 KM|4.0 KM)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

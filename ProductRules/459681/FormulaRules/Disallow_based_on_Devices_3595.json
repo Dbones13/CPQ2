@@ -1,0 +1,11 @@
+{
+    "id": 3595,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A3)*>,<*ISSELECTED(Identifiers.A9)*>,<*ISSELECTED(Identifiers.A11)*>,<*ISSELECTED(Identifiers.A17)*>,\n<*ISSELECTED(Identifiers.A21)*>,<*ISSELECTED(Identifiers.A26)*>,<*ISSELECTED(Identifiers.A29)*>,<*ISSELECTED(Identifiers.A36)*>,<*ISSELECTED(Identifiers.A37)*>,<*ISSELECTED(Identifiers.A38)*>,<*ISSELECTED(Identifiers.A41)*>,<*ISSELECTED(Identifiers.A43)*>,<*ISSELECTED(Identifiers.A45)*>,<*ISSELECTED(Identifiers.A47)*>)",
+    "name": "Disallow based on Devices",
+    "action": "<*DISALLOWATTRIBUTES(SCADA Points)*><*DISALLOWATTRIBUTES(Nodes)*><*DISALLOWATTRIBUTES(Network Type)*><*DISALLOWATTRIBUTES(Network Interface)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

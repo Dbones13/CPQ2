@@ -1,0 +1,11 @@
+{
+    "id": 18094,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Large_Pass_Angle_18_65_ kit_Dirty)*>,)",
+    "name": "MXPro_Sensor_Large_Pass_Angle_18_65_ kit_Dirty",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Large_Pass_Angle_18_65_ kit_Dirty:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

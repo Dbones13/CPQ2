@@ -1,0 +1,11 @@
+{
+    "id": 15035,
+    "condition": "[EQ](<*VALUE(MSE_Number_Dedicated_Master_Check_Meters)*>,)",
+    "name": "Default_Dedicated_Master",
+    "action": "<*ASSIGNVALUE(MSE_Number_Dedicated_Master_Check_Meters:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

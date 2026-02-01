@@ -1,0 +1,11 @@
+{
+    "id": 17988,
+    "condition": "1",
+    "name": "Ethernet Switch Type 2",
+    "action": "[IF]([EQ](<*CTX( Container(PLC_CG_Controller_Rack_Cont).Row(1).Column(PLC_Ethernet_Switch_Type).GetDisplayValue )*>,Multi Mode)){[IF]([EQ](<*CTX( Container(PLC_CG_Controller_Rack_Cont).Row(1).Column(PLC_G3_Option_Ethernet_Switch).GetDisplayValue )*>,Yes)){<*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi_G3).SetPermission(Editable) )*><*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi).SetPermission(Hidden) )*>}{<*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi_G3).SetPermission(Hidden) )*><*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi).SetPermission(Editable) )*>}[ENDIF]<*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Single).SetPermission(Hidden) )*>}{<*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi).SetPermission(Hidden) )*><*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Single).SetPermission(Editable) )*><*CTX(Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi_G3).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

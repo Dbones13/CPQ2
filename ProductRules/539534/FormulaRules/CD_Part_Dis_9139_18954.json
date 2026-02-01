@@ -1,0 +1,11 @@
+{
+    "id": 18954,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,ProCoat),[NEQ](<*VALUE(MX_CD_ProCoat_Type)*>,Blade Coater),[NEQ](<*VALUE(MX_CD_Steam_Header_for_Coater_Blade_Cleaning)*>,Yes))",
+    "name": "CD_Part_Dis_9139",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9139)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

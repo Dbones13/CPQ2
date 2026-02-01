@@ -1,0 +1,11 @@
+{
+    "id": 13786,
+    "condition": "[OR]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_DISS_EP_PKSVMP",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-PKSVMP)*><* DoResetAtt *>",
+    "description": "CCEECOMMBR-6879",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

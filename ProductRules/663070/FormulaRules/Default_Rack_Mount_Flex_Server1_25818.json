@@ -1,0 +1,11 @@
+{
+    "id": 25818,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,Yes)",
+    "name": "Default_Rack_Mount_Flex_Server1",
+    "action": "<*SELECTVALUE(Flex Server Node Type:SVR_F_PER_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

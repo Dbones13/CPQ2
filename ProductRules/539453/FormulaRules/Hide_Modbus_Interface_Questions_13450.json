@@ -1,0 +1,11 @@
+{
+    "id": 13450,
+    "condition": "[NEQ](<*VALUE(Is Modbus Interface in Scope?)*>,Yes)",
+    "name": "Hide Modbus Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of Modbus Interfaces Types,Number of Modbus Interfaces)*>",
+    "description": "Hide  questions when Is Modbus Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

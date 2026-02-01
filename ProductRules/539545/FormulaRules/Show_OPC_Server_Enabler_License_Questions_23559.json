@@ -1,0 +1,11 @@
+{
+    "id": 23559,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Release)*>,R540),[EQ](<*VALUE(FDM_OPC_UA_Server_Enabler_License)*>,1))",
+    "name": "Show_OPC_Server_Enabler_License_Questions",
+    "action": "<*ALLOWATTRIBUTES(FDM_OPC_UA_AC_Profile_Enabler_License,FDM_OPC_UA_DA_Profile_Enabler_License,FDM_OPC_UA_HDA_Profile_Enabler_License)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "20/03/25",
+    "modifiedBy": "Kaousalya Adala"
+}

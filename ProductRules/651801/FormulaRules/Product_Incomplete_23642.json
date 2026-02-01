@@ -1,0 +1,11 @@
+{
+    "id": 23642,
+    "condition": "1",
+    "name": "Product Incomplete",
+    "action": "<*RESETATTRIBUTE(Required_Attribute)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+[IF](<*ISSELECTED(SC_P1P2_LPDA_AutoUpdate_Editable_Ext.&nbsp)*>){<*ASSIGNVALUE(SC_P1P2_LPDA_CY_ListPrice:<*CTX ( Container(SC_P1P2_Parts_Details).Sum(Hidden_ListPrice) )*>)*>}{0}[ENDIF]<*ASSIGNVALUE(SC_Product_Status:0)*>

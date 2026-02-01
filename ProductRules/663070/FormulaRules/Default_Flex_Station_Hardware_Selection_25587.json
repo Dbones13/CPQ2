@@ -1,0 +1,11 @@
+{
+    "id": 25587,
+    "condition": "[EQ](<*VALUE(Flex Station Hardware Selection TPS)*>,)",
+    "name": "Default Flex Station Hardware Selection",
+    "action": "<*SELECTVALUE(Flex Station Hardware Selection TPS:STN_PER_DELL_Tower_RAID1)*>",
+    "description": "CXCPQ-34882",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

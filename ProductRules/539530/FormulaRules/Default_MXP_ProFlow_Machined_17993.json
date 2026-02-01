@@ -1,0 +1,11 @@
+{
+    "id": 17993,
+    "condition": "[EQ](<*VALUE(MXP_ProFlow_Machined_Mounting_Adapter_Valve Coupling)*>,)",
+    "name": "Default_MXP_ProFlow_Machined",
+    "action": "<*SELECTVALUE(MXP_ProFlow_Machined_Mounting_Adapter_Valve Coupling:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

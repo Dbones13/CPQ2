@@ -1,0 +1,11 @@
+{
+    "id": 23611,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<* QuoteProperty (SC_CF_Parent_Quote_Number_Link) *>,))",
+    "name": "HDP_Py_Sell_Price_Total",
+    "action": "<*ASSIGNVALUE(HDP_Py_Sell_Price:<* Eval(<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Sum(PY_SellPrice) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24244,
+    "condition": "[AND]([LT](<*VALUE(ARO_Stations_require_Multiwindow_support)*>,1),[LT](<*VALUE(RESS_Stations_require_Multiwindow_support)*>,1))",
+    "name": "EP-SMWIN1_REMOVE",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:EP-SMWIN1)*><* DoResetAtt *>",
+    "description": "CXCPQ-50112",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26177,
+    "condition": "[NOT]([OR](<*ISSELECTED(Experion Backup & Restore (Experion Server).Yes)*>,<*ISSELECTED(Experion Backup & Restore (ACE).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Simulation PC).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Mobile Terminal Server).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Flex Station ES-F).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Console Station ES-C).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Console).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Experion TPS Server).Yes)*>,<*ISSELECTED(Experion Backup & Restore (ACE)1.Yes)*>,<*ISSELECTED(Experion Backup & Restore (ACE-T).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Experion APP).Yes)*>,<*ISSELECTED(Experion Backup & Restore (Simulation PC)1.Yes)*>,<*ISSELECTED(Experion Backup & Restore (Flex Station ES-F)1.Yes)*>,<*ISSELECTED(Experion Backup & Restore (TPS Station ES-T).Yes)*>,<*ISSELECTED(Experion Backup & Restore ConsoleStation Extension.Yes)*>))",
+    "name": "EBR Server Visibility disallow",
+    "action": "<*SETOPTIONAL(Additional Hard Disk Server EBR,Display Size server EBR,Display Supplier EBR,Node Supplier Server EBR,Server Location EBR,Server Node Type EBR,Trusted Platform Module TPM EBR)*><*DISALLOWATTRIBUTES(Additional Hard Disk Server EBR,Display Size server EBR,Display Supplier EBR,EBR Server,Node Supplier Server EBR,Server Location EBR,Server Node Type EBR,Trusted Platform Module TPM EBR)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

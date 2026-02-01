@@ -1,0 +1,11 @@
+{
+    "id": 20081,
+    "condition": "[AND]([EQ](<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont2).Rows.GetCount )*>,0),[OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>))",
+    "name": "Load Enhanced Functions IO2",
+    "action": "<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont2).Load(Select top 100 IO_Type, red_is, future_red_is, non_red_is, red_nis, future_red_nis, non_red_nis, red_isltr, future_red_isltr, non_red_isltr, red_rly, future_red_rly, non_red_rly, Parent_Product from Enhanced_Function_IO2 WHERE Parent_Product ='Control Group') )*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

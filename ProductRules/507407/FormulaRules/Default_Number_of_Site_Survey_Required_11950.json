@@ -1,0 +1,11 @@
+{
+    "id": 11950,
+    "condition": "[EQ](<*VALUE(FGC_Site_Survey_Required?)*>,)",
+    "name": "Default_Number of Site_Survey_Required?",
+    "action": "<*SELECTVALUE(FGC_Site_Survey_Required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

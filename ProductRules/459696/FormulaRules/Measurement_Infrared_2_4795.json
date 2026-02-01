@@ -1,0 +1,11 @@
+{
+    "id": 4795,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Infrarred))",
+    "name": "Measurement_Infrared_2",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:SSIR COAT WEIGHT MSMT CLAY/CACO3|SSIR COAT WEIGHT MSMT CLAY/LATEX)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

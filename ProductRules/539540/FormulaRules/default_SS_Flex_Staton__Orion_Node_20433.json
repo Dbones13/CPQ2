@@ -1,0 +1,11 @@
+{
+    "id": 20433,
+    "condition": "[EQ](<*VALUE(SS_Flex_Staton _Orion_Node)*>,)",
+    "name": "default_SS_Flex_Staton _Orion_Node",
+    "action": "<*SELECTVALUE(SS_Flex_Staton _Orion_Node:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

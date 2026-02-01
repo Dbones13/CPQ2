@@ -1,0 +1,11 @@
+{
+    "id": 15339,
+    "condition": "[LEQ](<*VALUE(MXP_HC_900_Digital_Outputs_120_240_VAC_8_point)*>,0)",
+    "name": "Part_D_3_8793_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-8793-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

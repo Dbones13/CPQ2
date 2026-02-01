@@ -1,0 +1,11 @@
+{
+    "id": 22379,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Display_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ESDC_Display_Size)*>,24 inch NTS DELL),[NEQ](<*VALUE(ESDC_Displays_Server)*>,0))",
+    "name": "Part_A_TP_FPW242_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:TP-FPW242)*><*SETATVQTY(ESDC_BOM_Parts:TP-FPW242, <*VALUE(ESDC_Red_nonRed_Check)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

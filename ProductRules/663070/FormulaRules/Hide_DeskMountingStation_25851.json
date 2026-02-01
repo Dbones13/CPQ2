@@ -1,0 +1,11 @@
+{
+    "id": 25851,
+    "condition": "[EQ](<*VALUE(DMS Desk Mounting Stations required)*>,No)",
+    "name": "Hide_DeskMountingStation",
+    "action": "<*DISALLOWATTRIBUTES(DMS No of Displays 0_4_2)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

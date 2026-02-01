@@ -1,0 +1,11 @@
+{
+    "id": 25634,
+    "condition": "[EQ](<*VALUE(Power Cord Type)*>,)",
+    "name": "Default_Power_Cord",
+    "action": "<*SELECTVALUE(Power Cord Type:US)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+Product.Attr('Calculation_Button').Allowed = True

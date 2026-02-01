@@ -1,0 +1,11 @@
+{
+    "id": 13619,
+    "condition": "[OR]([GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24)*>,0),[GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM25)*>,0),[GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM27)*>,0))",
+    "name": "Part_EP_VME16C",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VME16C)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VME16C,<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM25)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM27)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

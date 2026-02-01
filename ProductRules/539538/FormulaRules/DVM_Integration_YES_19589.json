@@ -1,0 +1,11 @@
+{
+    "id": 19589,
+    "condition": "[EQ](<*VALUE(Exp HS Experion HS DVM Integration)*>,Yes)",
+    "name": "DVM Integration YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:HS-IADDVM)*><* DoResetAtt *>",
+    "description": "SET",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

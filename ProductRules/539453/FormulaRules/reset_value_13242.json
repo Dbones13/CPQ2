@@ -1,0 +1,11 @@
+{
+    "id": 13242,
+    "condition": "[EQ](<*CTX( Container(Experion_Enterprise_Cont).Rows.GetCount )*>,9)",
+    "name": "reset value",
+    "action": "<*RESETATTRIBUTE(ExceededLimit)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

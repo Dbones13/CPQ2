@@ -1,0 +1,11 @@
+{
+    "id": 4790,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture))",
+    "name": "Measurement_Moisture_2",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Microwave Moisture Measurement|Microwave Moisture Msmt High Weight|MXIR FW and Moi for PrecisionPak|MXIR Moi for PrecisionPak|MXIR Moi_Med Weight_for PrecisionPak|TRIR Moisture Msmt High Weight|SSIR Moisture Msmt)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

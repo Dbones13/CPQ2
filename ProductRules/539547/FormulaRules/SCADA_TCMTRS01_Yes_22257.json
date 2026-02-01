@@ -1,0 +1,11 @@
+{
+    "id": 22257,
+    "condition": "[EQ](<*VALUE(Scada_EXPERION_METERSUITE_LIBRARY)*>,Yes)",
+    "name": "SCADA_TC-MTRS01_Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:TC-MTRS01)*><*SETATVQTY(SCADA_BOM_Items:TC-MTRS01, 1)*><* DoResetAtt *>",
+    "description": "Add-TC-MTRS01",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

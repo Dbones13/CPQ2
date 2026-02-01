@@ -1,0 +1,11 @@
+{
+    "id": 25843,
+    "condition": "[AND](<*ISSELECTED(Supervisory Network Type.Ethernet)*>,[LEQ](<*VALUE(Flex Station Qty (0-60))*>,0))",
+    "name": "Ethernet Station node's LAN Interface Card Hide",
+    "action": "<*RESETATTRIBUTE(Desk Station node's LAN Interface Card)*>",
+    "description": "CXCPQ-34882 - 7",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

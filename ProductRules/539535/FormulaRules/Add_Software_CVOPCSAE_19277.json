@@ -1,0 +1,11 @@
+{
+    "id": 19277,
+    "condition": "[GT](<*VALUE(PlantCruise_OPC_Alarm_and_Event_Server)*>,0)",
+    "name": "Add_Software_CV-OPCSAE",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-OPCSAE)*><*SETATVQTY(PlantCruise_Part_Summary:CV-OPCSAE,<*VALUE(PlantCruise_OPC_Alarm_and_Event_Server)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

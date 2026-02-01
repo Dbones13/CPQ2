@@ -1,0 +1,11 @@
+{
+    "id": 26452,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_para_var_5",
+    "action": "<*ASSIGNVALUE(Labor_para_var_5:<* Eval(0<*VALUE(Labor EBR (Flex Station ES-F))*>+0<*VALUE(Labor EBR (Console Station ES-C))*>+0<*VALUE(Labor Experion Backup & Restore (TPS Station ES T))*>+0<*VALUE(Labor EBR (Console Station Extension ES-CE))*>) *>)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

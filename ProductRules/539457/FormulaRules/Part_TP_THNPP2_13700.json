@@ -1,0 +1,11 @@
+{
+    "id": 13700,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Adapter_for_Redundant_FTE_Networks)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_TP_THNPP2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:TP-THNPP2)*><*SETATVQTY(Virtualization_BOM_Parts:TP-THNPP2,<*VALUE(Virtualization_Adapter_for_Redundant_FTE_Networks)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

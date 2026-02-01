@@ -1,0 +1,11 @@
+{
+    "id": 23000,
+    "condition": "[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_PM_IO_Solution_required.Yes)*>)",
+    "name": "Show_PMIO_PointCount_Table",
+    "action": "<*ALLOWATTRIBUTES(C300_SerC_PointCount_PMIO_RG_Cont,Header_12_close,Header_12_open,C300_SerC_PointCount_PMIO_RG_RlyCont)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

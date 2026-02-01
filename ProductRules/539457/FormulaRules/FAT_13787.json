@@ -1,0 +1,11 @@
+{
+    "id": 13787,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "FAT",
+    "action": "<*ASSIGNVALUE(FAT:[IF]([OR]([EQ](<*VALUE(Labor_parameter_var_21)*>,FAT & SAT),[EQ](<*VALUE(Labor_parameter_var_21)*>,FAT))){[IF]([LEQ](<*VALUE(Labor_parameter_varn_1)*>,12)){<* Eval(<*VALUE(Labor_parameter_varn_11)*> + <*VALUE(Labor_parameter_varn_9)*>) *>}{<* Eval(<*VALUE(Labor_parameter_varn_11)*> + (<*VALUE(Labor_parameter_varn_1)*> - 12) * 1 + <*VALUE(Labor_parameter_varn_9)*> )*> }[ENDIF]}{0}[ENDIF]\n)*>",
+    "description": "Updated the formula CCEECOMMBR-7346",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

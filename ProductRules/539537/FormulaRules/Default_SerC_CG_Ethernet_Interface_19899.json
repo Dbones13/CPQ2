@@ -1,0 +1,11 @@
+{
+    "id": 19899,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_Ethernet_Interface)*>,),[NEQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "Default_SerC_CG_Ethernet_Interface",
+    "action": "<*SELECTVALUE(SerC_CG_Ethernet_Interface:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

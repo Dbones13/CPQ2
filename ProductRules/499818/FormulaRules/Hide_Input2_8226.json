@@ -1,0 +1,11 @@
+{
+    "id": 8226,
+    "condition": "[AND]([EQ]('<*VALUE(IO_Type)*>','Series-C: DI (32) 110 VAC PROX (0-5000)'),[IN](<*VALUE(Parent_Product)*>,Control Group,Remote Group))",
+    "name": "Hide Input2",
+    "action": "<*DISALLOWATTRIBUTES(red_nis,future_red_nis)*>",
+    "description": "Red (NIS) \t\nFuture Red (NIS)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

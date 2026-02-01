@@ -1,0 +1,11 @@
+{
+    "id": 23950,
+    "condition": "[EQ](<*VALUE(Terminal_SAP_ERP_BSI_Interface_required?)*>,Yes)",
+    "name": "Show_Hardware_components_for_SAP_ERP_BSI_Interface",
+    "action": "<*ALLOWATTRIBUTES(Header_08_close,Header_08_open,Terminal_Experion_Client_PC,Terminal_FTE_Switch)*><*SETREQUIRED(Terminal_Experion_Client_PC,Terminal_FTE_Switch)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

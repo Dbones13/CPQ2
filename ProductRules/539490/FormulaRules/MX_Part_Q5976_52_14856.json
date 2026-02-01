@@ -1,0 +1,11 @@
+{
+    "id": 14856,
+    "condition": "[EQ](<*VALUE(MX_MD_Color_Controls)*>,Color Control two Color Coordinates)",
+    "name": "MX_Part_Q5976_52",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5976-52)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5976-52, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

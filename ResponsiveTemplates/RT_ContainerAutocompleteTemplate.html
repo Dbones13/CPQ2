@@ -1,0 +1,17 @@
+<script type="text/html" id="ContainerAutocompleteTemplate">
+    <select class="form-control" data-bind="
+            attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+            select2: { selectedOptions: selectedRow, ajax: getSearchResults, onSelect: onSelect, onUnselect: onUnselect, placeholder: columnsToDisplay(), allowClear: true, minimumInputLength: 0, closeOnSelect: true, language: { noResults: noResultsFunc }},
+            event: { change: function() { window.lastActiveElementId = $element.id; } },
+            hasFocus: window.lastActiveElementId == $element.id" tabindex="0" style="display: block; width: 100%;">
+    </select>
+</script>
+
+<script type="text/html" id="ContainerAutocompleteTemplate_readonly">
+    <select class="form-control" data-bind="
+            attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+            select2: { selectedOptions: selectedRow, ajax: getSearchResults, onSelect: onSelect, onUnselect: onUnselect, placeholder: columnsToDisplay(), allowClear: true, minimumInputLength: 0, closeOnSelect: true, language: { noResults: noResultsFunc }},
+            event: { change: function() { window.lastActiveElementId = $element.id; } },
+            hasFocus: window.lastActiveElementId == $element.id" tabindex="0" style="display: block; width: 100%;" disabled="true">
+    </select>
+</script>

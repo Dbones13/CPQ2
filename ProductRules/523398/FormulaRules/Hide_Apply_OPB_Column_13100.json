@@ -1,0 +1,11 @@
+{
+    "id": 13100,
+    "condition": "[OR]([EQ](<*CTX ( Quote.CustomField(Quote Type) )*>,Contract New),[AND]([EQ](<*CTX ( Quote.CustomField(Quote Type) )*>,Contract Renewal),[NEQ](<*CTX ( Quote.CustomField(SC_CF_Parent_Quote_Number_Link) )*>,)))\n",
+    "name": "Hide_Apply_OPB_Column",
+    "action": "<*CTX ( Container(Service Contract Modules).Column(Apply OPB file).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/09/24",
+    "modifiedBy": "Ishwar Chordiya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20245,
+    "condition": "[EQ](<*VALUE(DVM_Edge_Analytics_Support)*>,Yes)",
+    "name": "Add_EP-DVMEGA",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMEGA)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMEGA, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45737",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14645,
+    "condition": "[EQ](<*VALUE(MX_MD_Same_Spot_Measurement)*>,)",
+    "name": "Default_MX_MD_Same_Spot_Measurement",
+    "action": "<*SELECTVALUE(MX_MD_Same_Spot_Measurement:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

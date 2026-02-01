@@ -1,0 +1,11 @@
+{
+    "id": 9611,
+    "condition": "1",
+    "name": "Item Quantity Assignment",
+    "action": "<*ASSIGNVALUE(ItemQuantity:<*VALUE(Pskid Item Qty)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,202 @@
+<div class="attributes fiori3-attributes flex " tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+
+            <!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") -->
+               <div class="row col-xs-12 swagger">
+                <div class="Calc_btn" >
+                  <div class="col-xs-12 col-sm-12">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                      </div>
+                    </div>
+              </div>
+            <!-- /ko -->
+
+  <div class="row col-xs-12 swagger">
+    <div id="uoc-cg-cabinet">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-cg-cabinet')">
+         <!-- ko if: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Control Group')-->
+          <span>Controller and Rack Details</span>
+        <!-- /ko -->
+          <!-- ko ifnot: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Control Group')-->
+          <span>Cabinet, Controller and Rack Details</span>
+        <!-- /ko -->
+          <a id="uoc-cg-cabinet-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="uoc-cg-cabinet-content">
+         <!-- ko ifnot: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Control Group')-->
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_Cabinet_Cont") -->
+              <div class="text-center attribute-field-headers" data-bind="text:label">Cabinet Details</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <!-- /ko -->
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_Controller_Rack_Cont") -->
+              <div class="text-center attribute-field-headers" data-bind="text:label">Controller & Rack Details</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-xs-12 swagger">
+    <div id="uoc-cg-uio">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-cg-uio')">
+          <span>IO Count for Universal IO Module</span>
+          <a id="uoc-cg-uio-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="uoc-cg-uio-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_UIO_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_uio_1"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_UIO_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_uio_2"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-xs-12 swagger">
+    <div id="uoc-cg-other-io">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-cg-other-io')">
+          <span>IO Count for Individual IO Module</span>
+          <a id="uoc-cg-other-io-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="uoc-cg-other-io-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_Other_IO_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_firstHalf"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_Other_IO_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_secondHalf"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ko ifnot: ((cpq.models.configurator.actionModule.responderModule.name() === 'R2Q UOC Control Group') && localStorage.getItem("checkR2Q") ==='Yes')-->
+  <div class="row col-xs-12 swagger">
+    <div id="uoc-cg-pf-controller">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-cg-pf-controller')">
+        <!-- ko ifnot: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Control Group')-->
+          <span>IS/Isolated Universal IO Points & Additional Controller</span>
+        <!-- /ko -->
+        <!-- ko if: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Control Group')-->
+          <span>IS/Isolated Universal IO Points</span>
+        <!-- /ko -->
+          <a id="uoc-cg-pf-controller-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="uoc-cg-pf-controller-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_PF_IO_Cont") -->
+              <div class="text-center attribute-field-headers" data-bind="text:label">IS/Isolated Universal IO Points</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <!-- ko ifnot: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Control Group')-->
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "UOC_CG_Additional_Controller_Cont") -->
+              <div class="text-center attribute-field-headers" data-bind="text:label">Additional Controllers</div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+           <!-- /ko -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+
+<div class="row col-xs-12 swagger">
+    <div id="uoc-remote">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-remote')">
+          <span>UOC Remote Group</span>
+          <a id="uoc-remote-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="uoc-remote-content">
+          <div class="col-xs-12 col-sm-6">
+            
+              <!-- ko foreach: attributes.filterByProperty('name' , "Number_UOC_Remote_Groups") -->
+                <!-- ko if:$data.container.columns().length !== 0 -->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+			</div>
+	
+	
+			<!-- ko foreach: attributes.filterByProperty('name' , 'CE_Add_System_Rows') -->
+
+				<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko -->
+				</div>
+
+			<!-- /ko -->
+		
+          <div class="col-xs-12 col-sm-12">
+            
+              <!-- ko foreach: attributes.filterByProperty('name' , 'UOC_RemoteGroup_Cont') -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

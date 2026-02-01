@@ -1,0 +1,11 @@
+{
+    "id": 12931,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_P1P2_PartsUsageMethod)*>,List Price with Discount Applied),[OR]([AND]([NEQ](<*VALUE(SC_P1P2_LPDA_CY_FinalListPrice)*>,0),[NEQ](<*VALUE(SC_P1P2_LPDA_CY_FinalListPrice)*>,)),[AND]([NEQ](<*VALUE(SC_P1P2_LPDA_PY_ListPrice)*>,0),[NEQ](<*VALUE(SC_P1P2_LPDA_PY_ListPrice)*>,))))",
+    "name": "Renewal_Show_Parts_Replacement_Summary_LPDA",
+    "action": "<*ALLOWATTRIBUTES(Header_07_close,Header_07_open,SC_P1P2_Parts_Replacement_Summary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

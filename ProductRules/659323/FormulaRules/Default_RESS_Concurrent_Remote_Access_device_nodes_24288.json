@@ -1,0 +1,11 @@
+{
+    "id": 24288,
+    "condition": "[EQ](<*VALUE(RESS_Concurrent_Remote_Access_device_nodes)*>,)",
+    "name": "Default_RESS_Concurrent_Remote_Access_device_nodes",
+    "action": "<*ASSIGNVALUE(RESS_Concurrent_Remote_Access_device_nodes:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

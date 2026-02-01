@@ -1,0 +1,11 @@
+{
+    "id": 13845,
+    "condition": "1",
+    "name": "Labor_fld_hrs",
+    "action": "<*ASSIGNVALUE(Labor_calc_temp_fld_hrs:<*Eval((16*0<*VALUE(Labor_parameter_ctr)*> + 0.55*(0<*VALUE(Labor_parameter_ai)*> + 0<*VALUE(Labor_parameter_ao)*>) + 0.45*(0<*VALUE(Labor_parameter_di)*> + 0<*VALUE(Labor_parameter_do)*>) + 5*0<*VALUE(Labor_parameter_ctr)*> + 0.06*0<*VALUE(Labor_parameter_io)*> + 5*0<*VALUE(Labor_parameter_ctr)*> + 0.10*0<*VALUE(Labor_parameter_io)*>)*[IF]([EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>,HIPPS)){1.2}{[IF]([EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>,BMS)){1.5}{1}[ENDIF]}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

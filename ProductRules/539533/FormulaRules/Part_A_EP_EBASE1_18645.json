@@ -1,0 +1,11 @@
+{
+    "id": 18645,
+    "condition": "[OR]([EQ](<*VALUE(ES_Experion_PKS_Release)*>,R530),[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R520))",
+    "name": "Part_A_EP_EBASE1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:EP-EBASE1)*><*SETATVQTY(eServer_BOM_parts:EP-EBASE1,1)*>\n<* DoResetAtt *>",
+    "description": "7957 & 7958 story",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

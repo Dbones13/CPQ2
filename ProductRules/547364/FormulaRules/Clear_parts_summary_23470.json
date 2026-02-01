@@ -1,0 +1,11 @@
+{
+    "id": 23470,
+    "condition": "[NOT](<*ATTSEL(CN900_Bom_Parts)*>)",
+    "name": "Clear_parts_summary",
+    "action": "<*CTX ( Container(CN900_CG_PartSummary_Cont).Rows.Clear )*>",
+    "description": "",
+    "rank": "110",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18004,
+    "condition": "[EQ](<*VALUE(MXP_Type_of_Valve)*>,)",
+    "name": "Default_type_of_valve",
+    "action": "<*SELECTVALUE(MXP_Type_of_Valve:High Torque)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

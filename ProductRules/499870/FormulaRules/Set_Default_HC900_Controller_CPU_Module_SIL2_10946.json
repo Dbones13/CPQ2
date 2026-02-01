@@ -1,0 +1,11 @@
+{
+    "id": 10946,
+    "condition": "[NOT](<*ATTSEL(HC900_Controller_(CPU)_Module_NSIL2)*>)",
+    "name": "Set_Default_HC900_Controller_(CPU)_Module_SIL2",
+    "action": "[IF]([AND]([EQ](<*CTX( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*VALUE(R2Q_Type_of_TAS_System)*>,Red))){<*SELECTVALUE(HC900_Controller_(CPU)_Module_NSIL2:Redundant Controller C75 CPU - SIL2)*>}{<*SELECTVALUE(HC900_Controller_(CPU)_Module_NSIL2:Controller C50 CPU - SIL2)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/08/25",
+    "modifiedBy": "Hinduja Devaraj"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20018,
+    "condition": "[EQ](<*VALUE(SerC_CG_C300_Controller_Module_Type)*>,)",
+    "name": "set_defaoult_SerC_CG_C300_Controller_Module_Type",
+    "action": "<*SELECTVALUE(SerC_CG_C300_Controller_Module_Type:C300(PCNT05))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

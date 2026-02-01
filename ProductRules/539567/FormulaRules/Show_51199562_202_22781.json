@@ -1,0 +1,11 @@
+{
+    "id": 22781,
+    "condition": "<*ISSELECTED(Power_Cord_Type.UK)*>",
+    "name": "Show_51199562_202",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Location_Cluster_Part_Summary:51199562-202)*><*SETATVQTY(Location_Cluster_Part_Summary:51199562-202, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38333",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

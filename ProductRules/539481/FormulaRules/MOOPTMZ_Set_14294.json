@@ -1,0 +1,11 @@
+{
+    "id": 14294,
+    "condition": "[AND]([GT](<* IsNull(<*VALUE(MIQ_How_many_stations)*>,0)*>,0),[EQ](<*VALUE(MIQ_System_architecture)*>,Corporate))",
+    "name": "MO-OPTMZ Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:MO-OPTMZ)*>\n<*SETATVQTY(MIQ_PART_SUMMARY:MO-OPTMZ, <*VALUE(MIQ_How_many_stations)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-50830",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

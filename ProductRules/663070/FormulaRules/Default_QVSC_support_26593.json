@@ -1,0 +1,11 @@
+{
+    "id": 26593,
+    "condition": "[AND]([EQ](<*VALUE(MIB Configuration Required?)*>,No),[EQ](<*VALUE(QVCS Support)*>,))",
+    "name": "Default_QVSC_support",
+    "action": "<*SELECTVALUE(QVCS Support:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

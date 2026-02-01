@@ -1,0 +1,11 @@
+{
+    "id": 20098,
+    "condition": "[OR]([EQ](0<*VALUE(SerC_Number_of_Devices_per_Profibus_Network (0-32))*>,0),[AND]([EQ](0<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Red)*>,0),[EQ](0<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Non_Red)*>,0)),[NOT](<*IFANYVALUE(SerC_CG_IO_Family_Type:Series C,SerC_CG_IO_Family_Type:Series-C Mark II)*>))",
+    "name": "Reset_CC-IP0101_CC-TPOX01",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Series_C_CG_Part_Summary:CC-IP0101)*><*RESETVALUE(Series_C_CG_Part_Summary:CC-TPOX01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

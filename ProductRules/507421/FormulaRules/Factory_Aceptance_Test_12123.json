@@ -1,0 +1,11 @@
+{
+    "id": 12123,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Factory Aceptance Test",
+    "action": "<*ASSIGNVALUE(Factory Aceptance Test:<* Eval(0-INT(0-(<* Eval((<*VALUE(OWS_Number of Cisco Wireless LAN Controllers)*>+<*VALUE(OWS_Number of Wireless Device Managers)*>+<*VALUE(OWS_Number of Field Device Access Points (FDAPs))*>+<*VALUE(OWS_Number of Wi-Fi adapters)*>+<*VALUE(OWS_Number of Mobile Stations)*>+<*VALUE(OWS_Number of Network Switches for OneWireless)*>)/2+(<*VALUE(OWS_Number of PCAP as RAPs)*>+<*VALUE(OWS_Number of PCAP as MAPs)*>+<*VALUE(OWS_Number of FEWIO)*>)/4+(<*VALUE(OWS_Number of Transmitters)*>/10)+<*VALUE(OWS_Number of RADIUS Servers)*>+<*VALUE(OWS_Number of RESS servers)*>) *>))) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

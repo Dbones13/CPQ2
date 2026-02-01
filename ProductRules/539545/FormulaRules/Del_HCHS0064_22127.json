@@ -1,0 +1,11 @@
+{
+    "id": 22127,
+    "condition": "[NOT]([GEQ](<* Eval(<*VALUE(FDM_HP_Server_Points_2)*>) *>,64))",
+    "name": "Del_HC-HS0064",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-HS0064)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

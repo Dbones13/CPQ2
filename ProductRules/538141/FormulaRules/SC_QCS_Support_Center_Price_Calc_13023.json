@@ -1,0 +1,11 @@
+{
+    "id": 13023,
+    "condition": "[NEQ](<*VALUE(SC_QCS_No_Of_Machines)*>,)",
+    "name": "SC_QCS_Support_Center_Price_Calc",
+    "action": "<*ASSIGNVALUE(SC_QCS_Support_Center_List_Price:<* Round ( <* Eval(<*VALUE(SC_QCS_No_Of_Machines)*>*<*VALUE(SC_QCS_Per_Machine_Price)*>) *>, 2) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

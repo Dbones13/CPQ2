@@ -1,0 +1,11 @@
+{
+    "id": 14225,
+    "condition": "[EQ](<*XValue(../R2QProduct)*>,True)",
+    "name": "Check parent R2Q",
+    "action": "<*ASSIGNVALUE(IsR2Qparent:True)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

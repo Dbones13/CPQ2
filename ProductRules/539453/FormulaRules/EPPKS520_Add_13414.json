@@ -1,0 +1,11 @@
+{
+    "id": 13414,
+    "condition": "[AND]([EQ](<*VALUE(Experion Software Release)*>,R520),[EQ](<*VALUE(Experion Base Media Delivery)*>,Physical Delivery))",
+    "name": "EP-PKS520_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Sys_Part_Summary:EP-PKS520)*><*SETATVQTY(Exp_Ent_Sys_Part_Summary:EP-PKS520, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20109,
+    "condition": "1",
+    "name": "labor_parameter_ctr4",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_C300_Controller_Module_Type)*>,C300(PCNT05)))){[IF]([EQ](<*VALUE(SerC_CG_Controller_Type)*>,Redundant)){<*ASSIGNVALUE(labor_parameter_ctr4:<* Eval(0-INT(0-(<* Eval((0<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_CONTROLLER) )*>)/2) *>))) *>)*>}{<*ASSIGNVALUE(labor_parameter_ctr4:0<*CTX (Container(Series_C_CG_Part_Summary_Cont).Sum(C300_CONTROLLER) )*>)*>}[ENDIF]}{<*ASSIGNVALUE(labor_parameter_ctr4:0)*>}[ENDIF]",
+    "description": "CXCPQ-55250",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

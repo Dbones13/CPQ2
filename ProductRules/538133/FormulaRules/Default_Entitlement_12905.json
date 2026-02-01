@@ -1,0 +1,11 @@
+{
+    "id": 12905,
+    "condition": "[NOT](<*ATTDEF(SC_P1P2_Entitlement)*>)",
+    "name": "Default_Entitlement",
+    "action": "<*ASSIGNVALUE(SC_P1P2_Entitlement:Parts Replacement)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

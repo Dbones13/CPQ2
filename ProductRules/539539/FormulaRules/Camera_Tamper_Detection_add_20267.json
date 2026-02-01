@@ -1,0 +1,11 @@
+{
+    "id": 20267,
+    "condition": "[EQ](<*VALUE(DVM_Camera_Tamper_Detection)*>,Yes)",
+    "name": "Camera Tamper Detection_add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMCTD)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMCTD,1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45715",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

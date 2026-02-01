@@ -1,0 +1,11 @@
+{
+    "id": 9051,
+    "condition": "[LIKE](<*CTX( Container(CE_SystemGroup_Cont).UniqueValues(Scope).Separator(,) )*>,HWSWLABOR)",
+    "name": "assign_valueTo_survey",
+    "action": "<*xSelectValue(Is Site Survey Required:<*CTX( Container(Labor_Details_New/Expansion_Cont).Row(1).Column(Site_Survey_Required).Get)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

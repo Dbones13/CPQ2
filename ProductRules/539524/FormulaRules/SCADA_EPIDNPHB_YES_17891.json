@@ -1,0 +1,11 @@
+{
+    "id": 17891,
+    "condition": "[EQ](<*CTX( Container(IEC/DNP3 Interfaces).Row(5).Column(Devices).Get )*>,Yes)",
+    "name": "SCADA_EP-IDNPHB_YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-IDNPHB)*><*SETATVQTY(SCADA_BOM_Items:EP-IDNPHB, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

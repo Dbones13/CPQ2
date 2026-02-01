@@ -1,0 +1,11 @@
+{
+    "id": 20312,
+    "condition": "[EQ](<*VALUE(DVM_Video_Wall_Output)*>,)",
+    "name": "Default_DVM_Video_Wall_Output",
+    "action": "<*SELECTVALUE(DVM_Video_Wall_Output:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19560,
+    "condition": "[NOT]([AND]([EQ](<*VALUECODE(Exp HS Installation Media \u2013ESD Version only)*>,Yes),[EQ](<*VALUE(New_Expansion)*>,New)))",
+    "name": "Install Media ESD Yes Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HME520-ESD)*><* DoResetAtt *>",
+    "description": "Reset EP-HME520-ESD",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

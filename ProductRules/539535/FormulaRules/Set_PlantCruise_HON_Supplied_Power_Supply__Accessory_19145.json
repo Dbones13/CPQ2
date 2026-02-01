@@ -1,0 +1,11 @@
+{
+    "id": 19145,
+    "condition": "[NEQ](<*VALUE(PlantCruise_HON_Supplied_Power_Supply_&_Accessory)*>,Yes)",
+    "name": "Set_PlantCruise_HON_Supplied_Power_Supply_&_Accessory",
+    "action": "<*SELECTVALUE(PlantCruise_HON_Supplied_Power_Supply_&_Accessory:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25852,
+    "condition": "[EQ](<*VALUE(Displays_Flex Server in Desk0_2_2)*>,)",
+    "name": "Default_desk_mount_flex_DFS_2",
+    "action": "<*ASSIGNVALUE(Displays_Flex Server in Desk0_2_2:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

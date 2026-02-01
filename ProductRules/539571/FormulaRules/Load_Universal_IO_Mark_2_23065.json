@@ -1,0 +1,11 @@
+{
+    "id": 23065,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_CG_Universal_IO_Mark_2).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>)",
+    "name": "Load Universal IO Mark_2",
+    "action": "<*CTX ( Container(C300_CG_Universal_IO_Mark_2).Load(Select top 10 IO_Type, red_is, future_red_is, non_red_is, red_nis, future_red_nis, non_red_nis, red_isltr, future_red_isltr, non_red_isltr,red_rly,future_red_rly,non_red_rly from Universal_IO_Mark_2 WHERE IO_Type!='') )*>",
+    "description": "CXCPQ-37861",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

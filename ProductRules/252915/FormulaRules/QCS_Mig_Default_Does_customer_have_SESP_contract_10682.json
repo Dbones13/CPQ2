@@ -1,0 +1,11 @@
+{
+    "id": 10682,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Does_customer_have_SESP_contract)*>,)",
+    "name": "QCS_Mig_Default_Does_customer_have_SESP_contract",
+    "action": "<*SELECTVALUE(QCS_Mig_Does_customer_have_SESP_contract:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

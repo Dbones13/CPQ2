@@ -1,0 +1,11 @@
+{
+    "id": 19209,
+    "condition": "[NEQ](<*VALUE(PlantCruise_Use_S8_C300_or_ControlEdge_UOC)*>,Yes)",
+    "name": "Del_IO_Section_8C-TCNTA1",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:8C-TCNTA1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

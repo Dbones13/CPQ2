@@ -1,0 +1,11 @@
+{
+    "id": 20296,
+    "condition": "[EQ](<*VALUE(DVM_HVA -Active_Alert_Base)*>,0)",
+    "name": "HVA -Active Alert Base, per Channel 0-3000_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAAB)*><* DoResetAtt *>",
+    "description": "CXCPQ-45704",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

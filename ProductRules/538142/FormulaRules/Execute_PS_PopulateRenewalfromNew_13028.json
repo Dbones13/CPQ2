@@ -1,0 +1,11 @@
+{
+    "id": 13028,
+    "condition": "[NEQ](<*VALUE(SC_Renewal_check)*>,1)",
+    "name": "Execute_PS_PopulateRenewalfromNew",
+    "action": "<* ExecuteScript(PS_PopulateRenewalfromNew) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

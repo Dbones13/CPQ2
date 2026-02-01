@@ -1,0 +1,11 @@
+{
+    "id": 20327,
+    "condition": "[EQ](<*VALUE(RTSP_Video_Streaming_Interface)*>,No)",
+    "name": "EP-DVMRTS_Remove_G",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMRTS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

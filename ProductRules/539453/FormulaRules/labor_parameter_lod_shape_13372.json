@@ -1,0 +1,11 @@
+{
+    "id": 13372,
+    "condition": "1",
+    "name": "labor_parameter_lod_shape",
+    "action": "<*ASSIGNVALUE(labor_parameter_lod_shape:[IF](<*ISSELECTED(Level of Documentation.No Documentation)*>){0}{[IF]([OR](<*ISSELECTED(Level of Documentation.Screen Captures Only)*>,<*ISSELECTED(Level of Documentation.Powertool Report (Access))*>)){0.05}{[IF](<*ISSELECTED(Level of Documentation.Text Description & Screen Captures)*>){0.1}{[IF](<*ISSELECTED(Level of Documentation.Advanced Documentation)*>){1}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "If lod = No Documentation, LD = 0\nElse If lod = Screen Captures Only OR lod = Powertool Report, LD = 0.05\nElse If lod = Text Description & Screen Captures, LD = 0.1\nElse If lod = Advanced Documentation, LD = 1",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

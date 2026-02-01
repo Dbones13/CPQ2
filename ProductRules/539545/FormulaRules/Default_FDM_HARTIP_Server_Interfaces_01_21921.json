@@ -1,0 +1,11 @@
+{
+    "id": 21921,
+    "condition": "[EQ](<*VALUE(FDM HART-IP Server Interfaces (0-1))*>,)",
+    "name": "Default_FDM HART-IP Server Interfaces (0-1)",
+    "action": "<*ASSIGNVALUE(FDM HART-IP Server Interfaces (0-1):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20392,
+    "condition": "[AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R530),[GT](<*VALUE(SS_Flex_Station_Qty_Orion)*>,0))",
+    "name": "Show_OrionNodeOption",
+    "action": "<*ALLOWVALUES(SS_Flex_Staton _Orion_Node:STN_PER_HP_Tower_RAID1,SS_Flex_Staton _Orion_Node:STN_PER_DELL_Rack_RAID1,SS_Flex_Staton _Orion_Node:STN_PER_DELL_Tower_RAID1)*><*DISALLOWVALUES(SS_Flex_Staton _Orion_Node:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

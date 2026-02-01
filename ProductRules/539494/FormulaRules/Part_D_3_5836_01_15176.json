@@ -1,0 +1,11 @@
+{
+    "id": 15176,
+    "condition": "[NEQ](<*VALUE(MXP_Biax_Control_Software)*>,Target Adaptive Control for Biax)",
+    "name": "Part_D_3_5836_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5836-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

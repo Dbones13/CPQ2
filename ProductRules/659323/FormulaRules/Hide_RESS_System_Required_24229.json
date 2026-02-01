@@ -1,0 +1,11 @@
+{
+    "id": 24229,
+    "condition": "[NEQ](<*VALUE(RESS_System_Required)*>,Yes)",
+    "name": "Hide_RESS_System_Required",
+    "action": "<*DISALLOWATTRIBUTES(Header_03_open,ATTCON_06_open,RESS_Common_Questions,RESS_new_Flex_Station_licenses_required,Experion_server_type_at_location,Remote_client_station_hardware,RESS_new_Console_Station_Extension_License,RESS_Stations_require_Multiwindow_support,RESS_OTP_hardware_&_software_required,RESS_Qty_of_Thin_clients,RESS_Does_site_have_DMZ,RESS_Honeywell_to_Supply_the_hardware,RESS_Tower_server_preferred,RESS_server_require_Physical_hardware,ATTCON_06_close,ATTCON_09_open,RESS_WorkStation,RESS_Additional_Stations,RESS_Staton_Node,RESS_Node_Supplier,RESS_Display_size_WS,ATTCON_09_close,ATTCON_07_open,RESS_Server,RESS_Server_Node_Type,RESS_Node_Supplier_(Server),RESS_Trusted_Platform_Module,RESS_Additional_Hard_Disk,RESS_Display_Size,RESS_Display_Supplier,ATTCON_07_close,Header_03_close,Header_51_open,Header_51_close,Client_Qty,Client_Node_Type,Client_Node_Supplier,Display_Supplier_RESS,Multiwindow_support,Display_Size,RESS_Concurrent_Remote_Access_device_nodes,Experion_RESS_Node_Licenses,RESS_Experion_System_Software_Licenses,RESS_Experion_Software_Release,Native_window_accessibility_through_ARO)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

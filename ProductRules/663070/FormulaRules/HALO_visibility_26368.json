@@ -1,0 +1,11 @@
+{
+    "id": 26368,
+    "condition": "[EQ](<*VALUE(Experion HALO 0_1)*>,)",
+    "name": "HALO visibility",
+    "action": "<*ASSIGNVALUE(Experion HALO 0_1:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

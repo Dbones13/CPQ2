@@ -1,0 +1,11 @@
+{
+    "id": 13471,
+    "condition": "[EQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,None)",
+    "name": "Hide_Ges_Location_None_ACD",
+    "action": "<*DISALLOWATTRIBUTES(Additional_CustomDev_GES)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

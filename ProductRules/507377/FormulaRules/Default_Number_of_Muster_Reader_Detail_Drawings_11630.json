@@ -1,0 +1,11 @@
+{
+    "id": 11630,
+    "condition": "[EQ](<*VALUE(IS_No_of_Muster_Reader_Detail_Drawings)*>,)",
+    "name": "Default_Number of Muster Reader Detail Drawings",
+    "action": "<*ASSIGNVALUE(IS_No_of_Muster_Reader_Detail_Drawings:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

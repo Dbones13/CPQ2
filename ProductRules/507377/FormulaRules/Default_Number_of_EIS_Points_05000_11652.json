@@ -1,0 +1,11 @@
+{
+    "id": 11652,
+    "condition": "[EQ](<*VALUE(IS_No_of_EIS_Points_(0-5000))*>,)",
+    "name": "Default_Number of EIS Points (0-5000)",
+    "action": "<*ASSIGNVALUE(IS_No_of_EIS_Points_(0-5000):200)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

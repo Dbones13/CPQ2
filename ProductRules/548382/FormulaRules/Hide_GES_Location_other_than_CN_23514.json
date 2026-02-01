@@ -1,0 +1,11 @@
+{
+    "id": 23514,
+    "condition": "[OR](<*ISSELECTED(System_Network_Labor_GES_Eng.SYS GES Eng-BO-CN)*>,<*ISSELECTED(System_Network_Labor_GES_Eng.SYS GES Eng-FO-CN)*>)",
+    "name": "Hide GES Location other than CN",
+    "action": "<*DISALLOWALLVALUESEXCEPT(System_Network_Labor_GES_Eng:HPS_GES_P350B_CN|HPS_GES_P350F_CN)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

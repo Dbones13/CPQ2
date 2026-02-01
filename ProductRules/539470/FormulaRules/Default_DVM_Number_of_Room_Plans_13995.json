@@ -1,0 +1,11 @@
+{
+    "id": 13995,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Room_Plans)*>,)",
+    "name": "Default_DVM_Number_of_Room_Plans",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Room_Plans:4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

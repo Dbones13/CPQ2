@@ -1,0 +1,11 @@
+{
+    "id": 23061,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_RAIL_Universal_IO_cont_RG_1).Rows.GetCount )*>,0),[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[NEQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE)),[NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "load C300_RAIL_Universal_IO_cont_RG_1",
+    "action": "<*CTX( Container(C300_RAIL_Universal_IO_cont_RG_1).LoadKeys(IO_Type).Load(SELECT IO_Type FROM FIM_FF_IO WHERE Container_Name = 'C300_RAIL_Universal_IO_cont_RG_1') )*>",
+    "description": "CXCPQ-40339",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

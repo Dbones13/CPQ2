@@ -1,0 +1,11 @@
+{
+    "id": 4779,
+    "condition": "[EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-10 Compact O-Frame (Standard Head))",
+    "name": "Measurement_Q6088_10_Compact_O_Frame_Standard_Head",
+    "action": "<*xDisallowallValuesExcept(MX_SE_Measurement_Type: Opacity | Weight & Moisture)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

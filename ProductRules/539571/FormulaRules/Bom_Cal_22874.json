@@ -1,0 +1,11 @@
+{
+    "id": 22874,
+    "condition": "1",
+    "name": "Bom_Cal",
+    "action": "<* Eval(0 - INT(0 - ((<* Eval((0<*CTX(Container(C300_C IO_RG MS).Row(3).Column(Non_Red_NIS).Get)*>*(1+0<*VALUE(SerC_RG_Percent_Installed_Spare(0-100%))*>/100))) *>)/16))) *>",
+    "description": "39951",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

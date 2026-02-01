@@ -1,0 +1,11 @@
+{
+    "id": 23059,
+    "condition": "[OR]([NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[NEQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,Yes),[EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Hide_PMIO_PointCount_Table",
+    "action": "<*CTX ( Container(C300_SerC_PointCount_PMIO_RG_Cont).Rows.Clear )*><*CTX ( Container(C300_SerC_PointCount_PMIO_RG_RlyCont).Rows.Clear )*><*DISALLOWATTRIBUTES(C300_SerC_PointCount_PMIO_RG_Cont,Header_12_close,Header_12_open,C300_SerC_PointCount_PMIO_RG_RlyCont)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

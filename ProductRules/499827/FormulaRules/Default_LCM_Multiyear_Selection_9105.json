@@ -1,0 +1,11 @@
+{
+    "id": 9105,
+    "condition": "[EQ](<*VALUE(LCM_Multiyear_Selection)*>,)",
+    "name": "Default LCM_Multiyear_Selection",
+    "action": "<*SELECTVALUE(LCM_Multiyear_Selection:Year 1)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "05/10/24",
+    "modifiedBy": "Shiva Kumar Gurram"
+}

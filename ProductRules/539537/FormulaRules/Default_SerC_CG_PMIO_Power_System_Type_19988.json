@@ -1,0 +1,11 @@
+{
+    "id": 19988,
+    "condition": "[EQ](<*VALUE(SerC_CG_PMIO_Power_System_Type)*>,)",
+    "name": "Default_SerC_CG_PMIO_Power_System_Type",
+    "action": "<*SELECTVALUE(SerC_CG_PMIO_Power_System_Type:Redundant 20A)*>",
+    "description": "CXCPQ-52066",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14634,
+    "condition": "[EQ](<*VALUE(MX_Virtualization_options)*>,)",
+    "name": "Hide_based_on_virtualization_option",
+    "action": "<*DISALLOWATTRIBUTES(MX_Client_hardware_type,MX_Do_you_need_FTE_switches,MX_Number_of_Clients,MX_Number_of_Servers,MX_Number_of_vSphere_clients,MX_Switch_type,MXP_Production_Server_hardware_type,MXP_Management_Server_hardware_type,MXP_vSphere_Client_hardware_type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13274,
+    "condition": "[EQ](<*VALUE(Number of Profibus Devices)*>,)",
+    "name": "Set default value for Number of Profibus Devices",
+    "action": "<*ASSIGNVALUE(Number of Profibus Devices:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

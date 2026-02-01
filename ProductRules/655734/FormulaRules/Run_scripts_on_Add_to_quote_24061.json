@@ -1,0 +1,11 @@
+{
+    "id": 24061,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScripts)*>,SCRIPT_RUN)",
+    "name": "Run_scripts on Add to quote",
+    "action": "<* ExecuteScript(PS_Terminal_Engineering_Labor_Container_Populate) *><* ExecuteScript(PS_Update_CalHrs) *><* ExecuteScript(PS_Update_FinalHrs) *><* ExecuteScript(PS_CalHrs_BasedonPer) *><* ExecuteScript(PS_Labor_Part_Summary) *>",
+    "description": "CXCPQ-65919",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

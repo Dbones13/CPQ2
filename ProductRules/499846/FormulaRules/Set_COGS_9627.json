@@ -1,0 +1,11 @@
+{
+    "id": 9627,
+    "condition": "[OR]([EQ](<*ATTSEL(Pskid Total Factory Cost)*>,1),[GT](<*CTX( Container(PRODUCTIZED _SKID_BOM).Total(Net Cost) )*>,0))",
+    "name": "Set COGS",
+    "action": "<*ASSIGNVALUE(Pskid Cost of goods Sold (COGS):<* Eval(Round(<*CTX( Container(PRODUCTIZED _SKID_BOM).Total(Net Cost) )*> + <*VALUE(Pskid Total Factory Cost)*>,2))*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

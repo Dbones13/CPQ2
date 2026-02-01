@@ -1,0 +1,11 @@
+{
+    "id": 18192,
+    "condition": "[EQ](<*VALUE(MXP_Remote_Scan_off_sheet_buttons_2)*>,)",
+    "name": "Default_MXP_Remote_Scan_off_sheet_buttons_2",
+    "action": "<*SELECTVALUE(MXP_Remote_Scan_off_sheet_buttons_2:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

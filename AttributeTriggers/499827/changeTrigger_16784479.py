@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(LE Functional Design Specification:<* Eval(0.10*<*VALUE(Total_FDS_Hrs)*>) *>)*>

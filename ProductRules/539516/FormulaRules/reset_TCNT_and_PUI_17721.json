@@ -1,0 +1,11 @@
+{
+    "id": 17721,
+    "condition": "1",
+    "name": "reset TCNT and PUI",
+    "action": "<*ASSIGNVALUE(FC_TCNT:0)*><*ASSIGNVALUE(FC_TCNT:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

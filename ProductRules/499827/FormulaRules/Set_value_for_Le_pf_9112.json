@@ -1,0 +1,11 @@
+{
+    "id": 9112,
+    "condition": "1",
+    "name": "Set value for Le pf",
+    "action": "<*ASSIGNVALUE(labor_parameter_Le_pf:<*CTX( Math.Maximum(0.15, <*CTX( Math.Minimum(4, <*EVAL(1 + <*VALUE(labor_parameter_A)*> + <*VALUE(labor_parameter_Le_B)*> + <*VALUE(labor_parameter_C)*> + <*VALUE(labor_parameter_Le_D)*> + <*VALUE(labor_parameter_Le_E)*> + <*VALUE(labor_parameter_Le_F)*>)*> ) )*>))*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

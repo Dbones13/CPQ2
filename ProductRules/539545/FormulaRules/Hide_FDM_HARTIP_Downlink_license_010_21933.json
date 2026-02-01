@@ -1,0 +1,11 @@
+{
+    "id": 21933,
+    "condition": "[EQ](<*VALUE(FDM_Release)*>,R511)",
+    "name": "Hide_FDM HART-IP Downlink license (0-10)",
+    "action": "<*DISALLOWATTRIBUTES(FDM HART-IP Downlink license (0-10))*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

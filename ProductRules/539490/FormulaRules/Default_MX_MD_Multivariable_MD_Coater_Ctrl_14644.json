@@ -1,0 +1,11 @@
+{
+    "id": 14644,
+    "condition": "[EQ](<*VALUE(MX_MD_Multivariable_MD_Coater_Ctrl)*>,)",
+    "name": "Default_MX_MD_Multivariable_MD_Coater_Ctrl",
+    "action": "<*SELECTVALUE(MX_MD_Multivariable_MD_Coater_Ctrl:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22602,
+    "condition": "[EQ](<*VALUE(Gas MeterSuite Number Of Gas Analysers For FWA (0-9))*>,)",
+    "name": "Default Gas MeterSuite Number Of Gas Analysers For FWA (0-9)",
+    "action": "<*ASSIGNVALUE(Gas MeterSuite Number Of Gas Analysers For FWA (0-9):0)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

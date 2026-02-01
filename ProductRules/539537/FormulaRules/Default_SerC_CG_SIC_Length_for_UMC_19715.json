@@ -1,0 +1,11 @@
+{
+    "id": 19715,
+    "condition": "[EQ](<*VALUE(SerC_CG_SIC_Length_for_UMC)*>,)",
+    "name": "Default_SerC_CG_SIC_Length_for_UMC",
+    "action": "<*SELECTVALUE(SerC_CG_SIC_Length_for_UMC:6000MM)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

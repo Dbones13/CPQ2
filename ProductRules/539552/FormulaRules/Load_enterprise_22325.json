@@ -1,0 +1,11 @@
+{
+    "id": 22325,
+    "condition": "[EQ](<*VALUE(Enterprise_flag_check)*>,True)",
+    "name": "Load_enterprise",
+    "action": "<*CTX( Container(SM_Enterprise_Cluster).LoadKeys(ListIndex).Load(select <*eval(Replace(\"'\" + Replace(\"<*VALUE(Enterprise_Groups_list)*>\",\"| \",\"' as EnterpriseGroup  UNION SELECT '\") + \"'\",\"#\",\"' as ListIndex,'\"))*> as EnterpriseGroup ))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

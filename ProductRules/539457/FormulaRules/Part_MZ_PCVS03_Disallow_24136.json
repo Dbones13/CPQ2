@@ -1,0 +1,11 @@
+{
+    "id": 24136,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix))[GT](<* Eval(<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Sum(Number_of_28_Port_Top_of_Rack_Switch_100) )*> + <*CTX ( Container(Virtualization_Single_Node_Cluster_Conf_transpose).Sum(Number_of_28_Port_Top_of_Rack_Switch_100) )*> ) *>,0))",
+    "name": "Part_MZ_PCVS03_Disallow",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVS03)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "20/11/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

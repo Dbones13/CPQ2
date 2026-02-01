@@ -1,0 +1,11 @@
+{
+    "id": 22982,
+    "condition": "[EQ](<*XValue(../IsR2QparentCG)*>,True)",
+    "name": "Check parent R2Q",
+    "action": "<*ASSIGNVALUE(IsR2QparentRG:True)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

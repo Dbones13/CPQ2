@@ -1,0 +1,11 @@
+{
+    "id": 25803,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Center Ext Auxil Equip Unit (0-40))*>,0),<*ISSELECTED(Orion Console Turret Type.None)*>))",
+    "name": "MP-OCXCD1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCXCD1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38907",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

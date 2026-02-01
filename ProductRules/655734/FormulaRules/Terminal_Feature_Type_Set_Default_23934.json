@@ -1,0 +1,11 @@
+{
+    "id": 23934,
+    "condition": "[AND]([NEQ](<*VALUE(Terminal_Feature_Type)*>,New Features (upto 5)),[NEQ](<*VALUE(Terminal_Feature_Type)*>,New Features (more than 5)))",
+    "name": "Terminal_Feature_Type_Set_Default",
+    "action": "<*SELECTVALUE(Terminal_Feature_Type:Standard)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

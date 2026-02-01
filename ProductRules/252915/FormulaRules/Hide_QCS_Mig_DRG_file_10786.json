@@ -1,0 +1,11 @@
+{
+    "id": 10786,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[NEQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 3 or Less))\n",
+    "name": "Hide_QCS_Mig_DRG_file",
+    "action": "<*DISALLOWATTRIBUTES(QCS_Mig_Manual_translation_of_databases_required_DRG_file)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

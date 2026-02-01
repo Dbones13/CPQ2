@@ -1,0 +1,11 @@
+{
+    "id": 24245,
+    "condition": "[AND]([LT](<*VALUE(ARO_Qty_of_Thin_clients)*>,1),[LT](<*VALUE(RESS_Qty_of_Thin_clients)*>,1))",
+    "name": "TP-THNCL5-100_REMOVE",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:TP-THNCL5-100)*><* DoResetAtt *>",
+    "description": "50112",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

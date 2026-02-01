@@ -1,0 +1,11 @@
+{
+    "id": 12068,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Calculate Hours PAGA Site Support and Feasibility Report",
+    "action": "<*ASSIGNVALUE(PAGA Site Support and Feasibility Report:<* Eval(<* Eval([IF](<*ISSELECTED(PAGA_Is_Site_Study_with_Feasibility_Report_require.Yes)*>){1}{0}[ENDIF]) *>*(24+(24*<*VALUE(PAGA_Number_of_Reviews_(add Asbuilts))*>*0.25))) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

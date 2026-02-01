@@ -1,0 +1,11 @@
+{
+    "id": 13977,
+    "condition": "[EQ](<*VALUE(DVM_Software_Release)*>,)",
+    "name": "Default_DVM_Software_Release",
+    "action": "<*SELECTVALUE(DVM_Software_Release:R800)*>",
+    "description": "CXCPQ-82888",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

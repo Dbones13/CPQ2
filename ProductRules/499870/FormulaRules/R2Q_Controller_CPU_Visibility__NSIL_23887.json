@@ -1,0 +1,11 @@
+{
+    "id": 23887,
+    "condition": "[AND]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*VALUE(R2Q_Type_of_TAS_System)*>,Red),[EQ](<*VALUE(HC900_System_Type)*>,SIL2 Safety System))",
+    "name": "R2Q Controller CPU Visibility - NSIL",
+    "action": "<*SELECTVALUE(HC900_Controller_(CPU)_Module_NSIL2:Redundant Controller C75 CPU - SIL2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/08/25",
+    "modifiedBy": "Hinduja Devaraj"
+}

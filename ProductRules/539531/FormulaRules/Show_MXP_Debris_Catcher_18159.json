@@ -1,0 +1,11 @@
+{
+    "id": 18159,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Type)*>,3-5080-00)",
+    "name": "Show_MXP_Debris_Catcher",
+    "action": "<*ALLOWATTRIBUTES(MXP_Debris_Catcher)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

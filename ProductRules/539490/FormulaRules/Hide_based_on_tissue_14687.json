@@ -1,0 +1,11 @@
+{
+    "id": 14687,
+    "condition": "[OR]([EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD),[EQ](<*VALUE(MX_What_QCS_System_is_required)*>,Standalone CD),[EQ](<*VALUE(MX_MD_Multivariable_Control_Packages)*>,MD Multivariable Tissue Ctrl pkg (Includes 6CVs, -86, -87, -89)))",
+    "name": "Hide_based_on_tissue",
+    "action": "<*DISALLOWATTRIBUTES(MX_MD_Mid_range_Control)*><*DISALLOWATTRIBUTES(MX_MD_Crepe_ratio_Control)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

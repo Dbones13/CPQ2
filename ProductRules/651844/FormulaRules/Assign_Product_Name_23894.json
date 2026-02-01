@@ -1,0 +1,11 @@
+{
+    "id": 23894,
+    "condition": "[AND]([EQ](<*VALUE(R2Q_Product_Name)*>,),[EQ](<* ProductName *>,R2Q New / Expansion Project))",
+    "name": "Assign Product Name",
+    "action": "<*ASSIGNVALUE(R2Q_Product_Name:R2Q New / Expansion Project)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "04/09/25",
+    "modifiedBy": "Lahu Giri"
+}

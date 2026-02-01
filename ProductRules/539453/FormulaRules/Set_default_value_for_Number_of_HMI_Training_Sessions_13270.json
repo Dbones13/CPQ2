@@ -1,0 +1,11 @@
+{
+    "id": 13270,
+    "condition": "[EQ](<*VALUE(Number of HMI Training Sessions)*>,)",
+    "name": "Set default value for Number of HMI Training Sessions",
+    "action": "<*ASSIGNVALUE(Number of HMI Training Sessions:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

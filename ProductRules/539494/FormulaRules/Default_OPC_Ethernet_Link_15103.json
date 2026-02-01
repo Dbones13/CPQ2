@@ -1,0 +1,11 @@
+{
+    "id": 15103,
+    "condition": "[EQ](<*VALUE(MXP_OPC_Ethernet_Link)*>,)",
+    "name": "Default_OPC_Ethernet_Link",
+    "action": "<*SELECTVALUE(MXP_OPC_Ethernet_Link:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19844,
+    "condition": "[EQ](<*VALUE(SerC_Number of Redundant EIM for IEC61850)*>,)",
+    "name": "Default_SerC_Number of Redundant EIM for IEC61850",
+    "action": "<*ASSIGNVALUE(SerC_Number of Redundant EIM for IEC61850:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

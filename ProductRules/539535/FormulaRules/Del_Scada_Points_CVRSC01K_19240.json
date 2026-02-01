@@ -1,0 +1,11 @@
+{
+    "id": 19240,
+    "condition": "[NOT]([AND]([GT](<* Eval(<*VALUE(PlantCruise_Scada_Calculation)*>-(INT((<*VALUE(PlantCruise_Scada_Calculation)*>)/2000))*2000) *>,999),[EQ](<*VALUE(PlantCruise_Redundant_C300_Controller)*>,Yes)))",
+    "name": "Del_Scada_Points_CV-RSC01K",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-RSC01K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

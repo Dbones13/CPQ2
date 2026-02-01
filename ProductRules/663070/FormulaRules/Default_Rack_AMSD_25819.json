@@ -1,0 +1,11 @@
+{
+    "id": 25819,
+    "condition": "[EQ](<*VALUE(Additional_Memory_ServerDisk)*>,)",
+    "name": "Default_Rack_AMSD",
+    "action": "<*SELECTVALUE(AdditionalMemory_Server Disk:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

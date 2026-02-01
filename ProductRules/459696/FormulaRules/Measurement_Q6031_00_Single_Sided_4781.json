@@ -1,0 +1,11 @@
+{
+    "id": 4781,
+    "condition": "[EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided)",
+    "name": "Measurement_Q6031_00_Single_Sided",
+    "action": "<*xDisallowallValuesExcept(MX_SE_Measurement_Type: Infrarred | Moisture)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

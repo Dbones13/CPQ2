@@ -1,0 +1,11 @@
+{
+    "id": 20235,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_High_Availability_Client_Node)*>,Yes))",
+    "name": "EP-DVMHAC_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMHAC)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

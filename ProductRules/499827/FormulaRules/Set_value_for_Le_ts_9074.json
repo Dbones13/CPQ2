@@ -1,0 +1,11 @@
+{
+    "id": 9074,
+    "condition": "1",
+    "name": "Set value for Le ts",
+    "action": "<*ASSIGNVALUE(labor_parameter_Le_ts:<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(Project Team Size).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

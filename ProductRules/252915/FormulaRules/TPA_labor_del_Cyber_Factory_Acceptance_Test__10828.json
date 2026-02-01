@@ -1,0 +1,11 @@
+{
+    "id": 10828,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "TPA_labor_del_Cyber_Factory_Acceptance_Test_",
+    "action": "<*ASSIGNVALUE(TPA_labor_del_Cyber_Factory_Acceptance_Test_:[IF]([EQ](<*VALUE(TPA_Include_separate_Cyber_Security_FAT_to_the_delivery)*>,Yes)){64}{0}[ENDIF]\n)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

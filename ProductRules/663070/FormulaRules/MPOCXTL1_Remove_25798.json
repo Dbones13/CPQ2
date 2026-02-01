@@ -1,0 +1,11 @@
+{
+    "id": 25798,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Left Auxiliary Equipment Unit (0-40))*>,0),<*ISSELECTED(Orion Console Turret Type.None)*>,<*ISSELECTED(Node Supplier.Honeywell)*>))",
+    "name": "MP-OCXTL1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCXTL1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38784",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

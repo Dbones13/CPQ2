@@ -1,0 +1,11 @@
+{
+    "id": 24233,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[OR]([GT](<*VALUE(EST_Native_window)*>,0),[GT](<*VALUE(RESS_EST_Native_window)*>,0)))",
+    "name": "EP-RNW000_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-RNW000)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-RNW000, <*Eval(0<*VALUE(EST_Native_window)*>+0<*VALUE(RESS_EST_Native_window)*>) *>.)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

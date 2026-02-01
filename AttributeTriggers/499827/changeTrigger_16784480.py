@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(LE Detailed Design Specification:<* Eval(0.10*<*VALUE(Total_DDS_Hrs)*>) *>)*>

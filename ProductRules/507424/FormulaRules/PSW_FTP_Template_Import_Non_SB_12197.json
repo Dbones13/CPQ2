@@ -1,0 +1,11 @@
+{
+    "id": 12197,
+    "condition": "<*ISSELECTED(PSW_Implementation_Methodology.Non-Standard Build Estimate)*>",
+    "name": "PSW_FTP_Template_Import Non SB",
+    "action": "<*ASSIGNVALUE(PSW_FTP_Template_Import:[IF]([EQ](<*VALUE(PSW_FTP_Template_Import_Scope)*>,Yes)){<* Eval(8*<*VALUE(PSW_Number_of_FTP_Templates)*>) *>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

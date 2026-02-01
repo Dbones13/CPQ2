@@ -1,0 +1,11 @@
+{
+    "id": 24333,
+    "condition": "[OR]([LT](<*VALUE(EP-STAT01_part_add)*>,10),[GT](<*VALUE(EP-STAT01_part_add)*>,12))",
+    "name": "EP-STAT10_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:EP-STAT10)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

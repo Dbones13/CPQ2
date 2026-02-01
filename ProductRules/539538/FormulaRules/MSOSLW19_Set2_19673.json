@@ -1,0 +1,11 @@
+{
+    "id": 19673,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Select the OS for Experion HS Server Node)*>,Windows 10 ENT 2019),[EQ](<*VALUE(Exp HS Redundant Servers)*>,No),[NEQ](<*VALUE(Exp HS Select the OS for Exp HS Flex Station Node)*>,Windows 10 ENT 2019))",
+    "name": "MS-OSLW19 Set2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:MS-OSLW19)*>\n<*SETATVQTY(Experion_HS_PART_SUMMARY:MS-OSLW19,1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45837 Condition  : If \"Select the OS for Experion HS Server Node\"  = Windows 10 ENT 2019 AND \"Redundant Server\" = No and If \"Select the OS for Experion HS Flex Station Node\" != Windows 10 ENT 2019\nThen Qty = 1",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

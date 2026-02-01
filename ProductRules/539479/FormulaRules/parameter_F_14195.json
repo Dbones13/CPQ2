@@ -1,0 +1,11 @@
+{
+    "id": 14195,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "parameter_F",
+    "action": "<*ASSIGNVALUE(parameter_F:[IF]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma)){20.5}{13}[ENDIF])*>",
+    "description": "CXCPQ-43531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

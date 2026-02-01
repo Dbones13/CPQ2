@@ -1,0 +1,11 @@
+{
+    "id": 22894,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_CNM_Uplink_SFP_Type)*>)",
+    "name": "Reset_C300_RG_UPC_CNM_Uplink_SFP_Type",
+    "action": "<*ALLOWATTRIBUTES(C300_RG_UPC_CNM_Uplink_SFP_Type)*>;<*RESETATTRIBUTE(C300_RG_UPC_CNM_Uplink_SFP_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

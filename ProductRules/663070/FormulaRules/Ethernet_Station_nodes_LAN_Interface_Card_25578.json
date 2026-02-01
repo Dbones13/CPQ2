@@ -1,0 +1,11 @@
+{
+    "id": 25578,
+    "condition": "[AND]([LIKE](<*VALUE(Supervisory Network Type)*>,Ethernet),[GT](<*VALUE(Flex Station Qty (0-60))*>,0))",
+    "name": "Ethernet Station node's LAN Interface Card",
+    "action": "<*SELECTVALUE(Desk Station node's LAN Interface Card:Ethernet)*>",
+    "description": "CXCPQ-34882 - 7",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

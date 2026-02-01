@@ -1,0 +1,316 @@
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+  <div class="row col-xs-12 swagger">
+    <div id="FSC_to_SM_IO-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#FSC_to_SM_IO-questions')">
+          <span>General Information -  Series 1 & 2 Fail Safe Controller (FSC) IO migration to Safety Manager (SM) IO</span>
+          <a id="FSC_to_SM_IO-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="FSC_to_SM_IO-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Migration_General_Information") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_fsctoSMIO"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row col-xs-12 swagger">
+    <div id="FSC_to_SM_IO-station-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#FSC_to_SM_IO-station-questions')">
+          <span>Series 1 & 2 FSC IO configurations</span>
+          <a id="FSC_to_SM_IO-station-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        
+        <div id="FSC_to_SM_IO-station-questions-content">
+          <div class="col-xs-12 col-sm-12">
+            
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Series_1_&_2_FSC_IO_configurations") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_FSCtoSMIOConfig"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Is_the_series_2_FTA_and_SIC_cable_reu") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_SM_IO_Total_ Calculated_SIC_cables") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_SM_IO_SIC_Cable") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>    
+        </div>
+      </div>
+    </div>
+</div>
+ 
+  <div class="row col-xs-12 swagger">
+    <div id="FSC_to_SM_IO_3rdParty-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#FSC_to_SM_IO_3rdParty-questions')">
+          <span>3rd Party items</span>
+          <a id="FSC_to_SM_IO_3rdParty-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="FSC_to_SM_IO_3rdParty-questions-content">
+          <div class="col-xs-12 col-sm-8">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Migration_General_Information2") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_FSCtoSMIO3rdPartyQuestion"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </div> 
+  <div class="row col-xs-12 swagger">
+    <div id="FSC_to_SM_IO-services">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#FSC_to_SM_IO-services')">
+          <span>Services</span>
+          <a id="FSC_to_SM_IO-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="FSC_to_SM_IO-services-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Services") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        <div class="col-xs-6 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Services2") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+   <div class="row col-xs-12 swagger">
+    <div id="FSC_to_SM_IO-services-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#FSC_to_SM_IO-services-questions')">
+          <span>New SM Cabinet Configuration</span>
+          <a id="FSC_to_SM_IO-services-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+
+        <div id="FSC_to_SM_IO-services-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_New_SM_Cabinet_Configuration") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+<!-- /ko -->
+
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<!-- RT_FSC_to_SM_IO --> 
+<div class="attributes fiori3-attributes flex ProductStyle RT_FSC_to_SM_IO " tabindex="-1" id="attributesWrapper"  >
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+    <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="FSC_to_SM_IO-questions" onclick="toggleConfigSection(event, '#FSC_to_SM_IO-questions')">
+          <label class="onlytext">General Information -  Series 1 & 2 Fail Safe Controller (FSC) IO migration to Safety Manager (SM) IO</label>
+			<a id="FSC_to_SM_IO-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		<!-- /ko -->
+		<!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="FSC_to_SM_IO-questions" >
+          <label class="onlytext">General Information -  Series 1 & 2 Fail Safe Controller (FSC) IO migration to Safety Manager (SM) IO</label>
+        </div>
+		<!-- /ko -->
+        <div id="FSC_to_SM_IO-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+             <!-- ko foreach: attributes.filterByProperty('name' , "ATT_FSCtoSMIOMigrationTotalFSC","FSC_to_SM_IO_Migration_Where_will_IO_be_installed") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+        </div>
+        
+  <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps"  onclick="toggleConfigSection(event, '#FSC_to_SM_IO-station-questions')">
+          <label class="onlytext">Series 1 & 2 FSC IO configurations</label>
+			<a id="FSC_to_SM_IO-station-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+         <!-- /ko -->
+		 <!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps">
+          <label class="onlytext">Series 1 & 2 FSC IO configurations</label>
+        </div>
+         <!-- /ko -->
+        <div id="FSC_to_SM_IO-station-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Series_1_&_2_FSC_IO_configurations") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_FSCtoSMIOConfig"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Is_the_series_2_FTA_and_SIC_cable_reu") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-12 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_SM_IO_Total_ Calculated_SIC_cables") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_SM_IO_SIC_Cable") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>    
+        </div>
+      
+ 
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="FSC_to_SM_IO_3rdParty-questions" onclick="toggleConfigSection(event, '#FSC_to_SM_IO_3rdParty-questions')">
+           <label class="onlytext">3rd Party items</label>
+<!--           <a id="FSC_to_SM_IO_3rdParty-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+ -->        </div>
+        <div id="FSC_to_SM_IO_3rdParty-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Migration_General_Information2") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_FSCtoSMIO3rdPartyQuestion"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+  
+  <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="FSC_to_SM_IO-services" onclick="toggleConfigSection(event, '#FSC_to_SM_IO-services')">
+           <label class="onlytext">Services</label>
+          <a id="FSC_to_SM_IO-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		 <!-- /ko -->
+		 <!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="FSC_to_SM_IO-services">
+           <label class="onlytext">Services</label>
+        </div>
+		 <!-- /ko -->
+        <div id="FSC_to_SM_IO-services-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+             <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Is_Honeywell_executing_the_field_cros","FSC_to_SM_IO_Software_Factory_Acceptance_Test_Requ","FSC_to_SM_IO_Has_the_FSC_IO_Audit_been_performed","ATT_FSC_to_SM_IO_In_Office_Eng_hours","ATT_FSC_to_SM_IO_On_Site_Eng_hours") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+        <div class="col-xs-6 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "FSC_to_SM_IO_Services2") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+        
+  
+ <!-- ko if: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="FSC_to_SM_IO-services-questions" onclick="toggleConfigSection(event, '#FSC_to_SM_IO-services-questions')">
+           <label class="onlytext">New SM Cabinet Configuration</label>
+           <a id="FSC_to_SM_IO-services-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+       </div>
+ <!-- /ko -->
+ <!-- ko ifnot: (cpq.models.configurator.actionModule.responderModule.name() === 'FSC to SM IO Migration' && localStorage.getItem("checkR2Q") ==='Yes')-->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="FSC_to_SM_IO-services-questions">
+           <label class="onlytext">New SM Cabinet Configuration</label>
+       </div>
+ <!-- /ko -->
+        <div id="FSC_to_SM_IO-services-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+             <!-- ko foreach: attributes.filterByProperty('name', "FSC_to_SM_IO_Cabinet_Access","FSC_to_SM_IO_Cabinet_IP_Rating","FSC_to_SM_IO_Cabinet_Depth","FSC_to_SM_IO_Cabinet_Base_Plinth ","FSC_to_SM_IO_Cabinet_Front_Door","FSC_to_SM_IO_Cabinet_Rear_Door","FSC_to_SM_IO_Swing_Frame","FSC_to_SM_IO_Cabinet_Light") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt' : ' col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+        </div>
+       
+  </div>
+<!-- /ko -->

@@ -1,0 +1,11 @@
+{
+    "id": 13355,
+    "condition": "1",
+    "name": "HMI_Internal_Test_and_SignOff",
+    "action": "<*ASSIGNVALUE(HMI_Internal_Test_and_SignOff:[IF]([EQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,None)){<* Eval((<*VALUE(labor_parameter_HMI_D)*>+<*VALUE(labor_parameter_HMI_S)*>+<*VALUE(labor_parameter_HMI_F)*>+<*VALUE(Number of Custom Context Menus)*>+4*<*VALUE(labor_parameter_HMIInternal_SVF)*>+2*<*VALUE(Labor_Parameter_Sta_System)*>+4*<*VALUE(labor_parameter_HMI_ag)*>)*1.1) *>}{<* Eval((<*VALUE(labor_parameter_HMI_D)*>+<*VALUE(labor_parameter_HMI_S)*>+<*VALUE(labor_parameter_HMI_F)*>+<*VALUE(Number of Custom Context Menus)*>+4*<*VALUE(labor_parameter_HMIInternal_SVF)*>+2*<*VALUE(Labor_Parameter_Sta_System)*>+4*<*VALUE(labor_parameter_HMI_ag)*>)*1.1) *>}[ENDIF])*>",
+    "description": "CXCPQ-39010",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

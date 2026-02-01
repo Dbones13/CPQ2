@@ -1,0 +1,11 @@
+{
+    "id": 14869,
+    "condition": "[NEQ](<*VALUE(MX_Number_of_Thin_Clients)*>,0)",
+    "name": "MX_Part_Dis_QCS_RSVL0",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:QCS-RSVL0)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

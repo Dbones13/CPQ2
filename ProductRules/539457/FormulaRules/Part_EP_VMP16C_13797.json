@@ -1,0 +1,11 @@
+{
+    "id": 13797,
+    "condition": "[GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX02)*>,0)",
+    "name": "Part_EP_VMP16C",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VMP16C)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VMP16C,<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX02)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

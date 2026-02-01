@@ -1,0 +1,11 @@
+{
+    "id": 25679,
+    "condition": "[EQ](<*VALUE(Orion Console Membrane KB Type)*>,)",
+    "name": "Default Orion Console Membrane",
+    "action": "<*SELECTVALUES(Orion Console Membrane KB Type:None)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

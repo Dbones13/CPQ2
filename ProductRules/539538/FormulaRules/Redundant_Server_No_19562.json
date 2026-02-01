@@ -1,0 +1,11 @@
+{
+    "id": 19562,
+    "condition": "[NOT]([AND]([EQ](<*VALUECODE(Exp HS Redundant Servers)*>,Yes),[EQ](<*VALUE(New_Expansion)*>,New)))",
+    "name": "Redundant Server No",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HMRBAS)*><* DoResetAtt *>",
+    "description": "Reset EP-HMRBAS",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

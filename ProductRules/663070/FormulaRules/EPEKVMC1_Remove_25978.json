@@ -1,0 +1,11 @@
+{
+    "id": 25978,
+    "condition": "[EQ](<*VALUE(Experion Raritan KVM Client License(0-100))*>,0)",
+    "name": "EP-EKVMC1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-EKVMC1)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

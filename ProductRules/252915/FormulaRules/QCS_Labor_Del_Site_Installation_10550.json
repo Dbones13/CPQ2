@@ -1,0 +1,11 @@
+{
+    "id": 10550,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "QCS_Labor_Del_Site_Installation",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_Site_Installation:<* Eval(40+[IF]([OR]([EQ](<*VALUE(QCS_Mig_What_type_of_Machine_Direction_Controls)*>,MDMV),[EQ](<*VALUE(QCS_Mig_CD_Controls)*>,CDMV),[EQ](<*VALUE(QCS_Mig_CD_Controls)*>,CD Traditional with Intellimap))){40}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Upgrade_Scenario)*>,Virtualization only)){24}{0}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

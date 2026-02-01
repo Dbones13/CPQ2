@@ -1,0 +1,11 @@
+{
+    "id": 14793,
+    "condition": "[GT](<*VALUE(MX_HC_Pulse_Freq_Quad_4_Channel_1_Quad)*>,0)",
+    "name": "MX_Part_Q8798_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8798-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8798-50, <*VALUE(MX_HC_Pulse_Freq_Quad_4_Channel_1_Quad)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

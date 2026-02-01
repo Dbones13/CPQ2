@@ -1,0 +1,11 @@
+{
+    "id": 13040,
+    "condition": "[OR]([EQ](<*CTX ( Quote.CustomField(Quote Type).AttrValue )*>,Contract New),[EQ](<*VALUE(SC_Product_Type)*>,New))",
+    "name": "Hide ES Renewal Containers",
+    "action": "<*DISALLOWATTRIBUTES(ES_PY_Asset_Details,ES_Asset_Summary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

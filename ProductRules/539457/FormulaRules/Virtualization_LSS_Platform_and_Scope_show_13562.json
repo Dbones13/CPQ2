@@ -1,0 +1,11 @@
+{
+    "id": 13562,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW)))",
+    "name": "Virtualization_LSS_Platform_and_Scope_show",
+    "action": "<*ALLOWATTRIBUTES(Virtualization_Enter_the_starting_Cluster_Number)*>\n[IF]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes)){<*ALLOWATTRIBUTES(Virtualization_Warranty_Extension)*>}{<*DISALLOWATTRIBUTES(Virtualization_Warranty_Extension)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

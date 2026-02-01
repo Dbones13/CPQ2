@@ -1,0 +1,1 @@
+<*CTX( Container(Exp_Ent_Sys_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace("<*VALUE(Exp_Ent_Sys_Part_Summary)*>",", ","' as PartNumber UNION SELECT '"))*>' as PartNumber   ) )*>

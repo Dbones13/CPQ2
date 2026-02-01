@@ -1,0 +1,11 @@
+{
+    "id": 4716,
+    "condition": "[EQ](<*VALUE(MX_SG_Universal_PMP_I_O_Expansion_Kit)*>,)",
+    "name": "Default_MX_SG_Universal_PMP_I_O_Expansion_Kit",
+    "action": "<*SELECTVALUE(MX_SG_Universal_PMP_I_O_Expansion_Kit:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

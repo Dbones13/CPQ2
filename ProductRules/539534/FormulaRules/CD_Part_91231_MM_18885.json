@@ -1,0 +1,11 @@
+{
+    "id": 18885,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line),[EQ](<*VALUE(MX_CD_Profile_Bar)*>,Stainless Steel),[GEQ](<*VALUE(MX_CD_Number_of_zones)*>,1))",
+    "name": "CD_Part_91231_MM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:91231-MM)*><*SETATVQTY(MX_CD_Bom_Parts:91231-MM, <*VALUE(MX_CD_Zone_Width)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

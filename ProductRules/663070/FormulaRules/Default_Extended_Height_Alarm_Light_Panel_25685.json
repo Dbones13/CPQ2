@@ -1,0 +1,11 @@
+{
+    "id": 25685,
+    "condition": "[EQ](<*VALUE(Extended Height Alarm Light Panel)*>,)",
+    "name": "Default Extended Height Alarm Light Panel",
+    "action": "<*SELECTVALUE(Extended Height Alarm Light Panel:No)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14129,
+    "condition": "[EQ](<*CTX( Container(HC900_Cont).Rows.GetCount )*>,0)",
+    "name": "Set default row for HC900_Cont",
+    "action": "<*CTX( Container(HC900_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

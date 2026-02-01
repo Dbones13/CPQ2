@@ -1,0 +1,11 @@
+{
+    "id": 20322,
+    "condition": "[NEQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Hide_Advanced Video Evidence Pack",
+    "action": "<*DISALLOWATTRIBUTES(Advanced Video Evidence Pack)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

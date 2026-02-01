@@ -1,0 +1,11 @@
+{
+    "id": 4784,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Basis Weight))",
+    "name": "Measurement_basic_weights",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Basis Weight Msmt|Basis Weight Msmt Kr85 Ash <5%|Basis Weight Msmt Kr85 Ash >20%|Basis Weight Msmt Kr85 Ash 2%<20%|Basis Weight Msmt Sr90)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(DVM System Group List:<*CTX( Container(DVM_System_Group_Cont).UniqueValues(DVM_System_Group_Name).Separator(,) )*>)*>

@@ -1,0 +1,11 @@
+{
+    "id": 24281,
+    "condition": "[EQ](<*VALUE(RESS_System_Required)*>,No)",
+    "name": "RESS_System_Display_Qty",
+    "action": "<*DISALLOWATTRIBUTES(Display_Qty,Display_Qty_4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

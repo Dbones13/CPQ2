@@ -1,0 +1,11 @@
+{
+    "id": 17956,
+    "condition": "[NOT]([GT](<*VALUE(PCD_Qty_PCD3_IO_Simulation_unit_8DI_8DO_4 AI)*>,0))",
+    "name": "Del_PCD3.S100",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PCD_Part_Summary:PCD3.S100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

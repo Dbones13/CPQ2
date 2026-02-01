@@ -1,0 +1,11 @@
+{
+    "id": 23553,
+    "condition": "[EQ](<*VALUE(FDM_OPC_UA_Server_Enabler_License)*>,)",
+    "name": "Default_FDM_OPC_Server_Enabler_Licence",
+    "action": "<*ASSIGNVALUE(FDM_OPC_UA_Server_Enabler_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

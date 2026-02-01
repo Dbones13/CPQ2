@@ -1,0 +1,11 @@
+{
+    "id": 17917,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Scada_conatiner_sum)*>,4999),[GT](<*eval(INT(Fix((<*VALUE(Scada_conatiner_sum)*>-(INT(Fix(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000)))*>,0)))",
+    "name": "SCADA_EP-DSC05K_point_hide",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(SCADA_BOM_Items:EP-DSC05K)*><* DoResetAtt *>",
+    "description": "Hide EP-DSC05K",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

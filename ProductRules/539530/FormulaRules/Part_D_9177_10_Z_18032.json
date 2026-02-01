@@ -1,0 +1,11 @@
+{
+    "id": 18032,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow),[EQ](<*VALUE(MXP_Proflow_Type)*>,Rotational),[EQ](<*VALUE(MXP_Type_of_Valve)*>,Standard Torque (20Nm) Andritz Y),[EQ](<*VALUE(MXP_Actuator_Housing_cover)*>,Zytel),[GT](<*VALUE(MXP_Number_of_Zones)*>,0)))",
+    "name": "Part_D_9177_10_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_CD_Bom_Parts:9177-10-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19809,
+    "condition": "[EQ](<*VALUE(SerC_CG_Amps_Value)*>,)",
+    "name": "Default_SerC_CG_Amps_Value",
+    "action": "<*ASSIGNVALUE(SerC_CG_Amps_Value:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22229,
+    "condition": "<*ATTDEF(FDM_Part_Summary)*>",
+    "name": "Execute_FDM_BOM",
+    "action": "<* ExecuteScript(FDM_BOM) *>",
+    "description": "",
+    "rank": "95",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

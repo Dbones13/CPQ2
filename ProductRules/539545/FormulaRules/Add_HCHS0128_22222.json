@@ -1,0 +1,11 @@
+{
+    "id": 22222,
+    "condition": "[GEQ](<* Eval(<*VALUE(FDM_HP_Server_Points)*> - (INT((<*VALUE(FDM_HP_Server_Points)*>)/256))*256)*>,128)",
+    "name": "Add_HC-HS0128",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-HS0128)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

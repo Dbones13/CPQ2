@@ -1,0 +1,11 @@
+{
+    "id": 12219,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering)\n,[EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,))",
+    "name": "Default_Type of Experion System Connection Planned",
+    "action": "<*SELECTVALUE(ELEPIU_Type_of_Experion_System_Connection_Planned:Experion SCADA)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

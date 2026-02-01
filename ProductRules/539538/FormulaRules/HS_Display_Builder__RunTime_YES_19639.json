@@ -1,0 +1,11 @@
+{
+    "id": 19639,
+    "condition": "[NOT]([AND]([EQ](<*VALUECODE(Exp HS Runtime System)*>,No),[GT](<* IsNull(<*VALUE(Exp HS Display Builder - Enter License Quantity)*>,0)*>,0)))",
+    "name": "HS Display Builder - RunTime YES",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HSDSBD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

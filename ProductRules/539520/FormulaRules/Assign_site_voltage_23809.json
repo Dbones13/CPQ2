@@ -1,0 +1,11 @@
+{
+    "id": 23809,
+    "condition": "[AND]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*CTX ( Product.RootProduct.PartNumber )*>,PRJT))",
+    "name": "Assign_site_voltage",
+    "action": "<*ASSIGNVALUE(CE_Site_Voltage:120V)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

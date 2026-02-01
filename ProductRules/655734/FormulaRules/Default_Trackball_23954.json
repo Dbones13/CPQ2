@@ -1,0 +1,11 @@
+{
+    "id": 23954,
+    "condition": "[NOT](<*ATTSEL(Terminal_Trackball)*>)",
+    "name": "Default_Trackball",
+    "action": "<*SELECTVALUE(Terminal_Trackball:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

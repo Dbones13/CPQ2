@@ -1,0 +1,11 @@
+{
+    "id": 14775,
+    "condition": "[GT](<*VALUE(MX_HC_Digital_Input contact type 16 channel)*>,0)",
+    "name": "MX_Part_Q8788_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8788-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8788-50, <*VALUE(MX_HC_Digital_Input contact type 16 channel)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

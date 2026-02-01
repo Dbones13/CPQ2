@@ -1,0 +1,11 @@
+{
+    "id": 23660,
+    "condition": "[AND](<*ISSELECTED(Secure Remote Access.Yes)*>,[EQ](<*VALUE(Repository Server Required)*>,))",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-RSIB_No",
+    "action": "<*SETATVQTY(Repository Server Required BOM:CS-MSS-RSIB,0)*><*SETATVQTY(Repository Server Required BOM:CS-MSS-RSI-ANL,0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

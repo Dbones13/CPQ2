@@ -1,0 +1,11 @@
+{
+    "id": 14577,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Different_Types_of_Analysers_(1-10))*>,)",
+    "name": "Default Number of Different Types of Analysers (1-10)",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Different_Types_of_Analysers_(1-10):1)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

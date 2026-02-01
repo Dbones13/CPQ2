@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(SC_MES_ServiceProduct:<*VALUE(SC_MES_Service_Product)*>)*><*ASSIGNVALUE(SC_Product_Status:0)*><* ExecuteScript(PS_Handling_Model_Scope) *><* ExecuteScript(PS_SetEntitlements) *><* ExecuteScript(PS_MES_ErrorMessage) *>

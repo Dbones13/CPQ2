@@ -1,0 +1,11 @@
+{
+    "id": 26701,
+    "condition": "[GT](<*CTX ( Container(SerC_CG_FIM_FF_IO_Cont).Rows.GetCount )*>,0)",
+    "name": "Assign_Value_Sum_FFIO_AI",
+    "action": "<*ASSIGNVALUE(SUM_FFIO_AI:<*CTX( Container(SerC_CG_FIM_FF_IO_Cont).Sum(AI) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Payal Gupta"
+}

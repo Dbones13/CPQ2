@@ -1,0 +1,11 @@
+{
+    "id": 20082,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_SerC_GIIS_PMIO_CG_Cont).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[EQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,Yes))",
+    "name": "Load_GIIS_PMIO_Table",
+    "action": "<*CTX ( Container(C300_SerC_GIIS_PMIO_CG_Cont).Load(Select top 17 IO_Type, red_is, future_red_is, non_red_is from GIIS_PMIO_C300 WHERE IO_Type!='') )*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

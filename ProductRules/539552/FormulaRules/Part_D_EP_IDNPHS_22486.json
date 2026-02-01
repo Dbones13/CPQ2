@@ -1,0 +1,11 @@
+{
+    "id": 22486,
+    "condition": "[EQ](<*VALUE(ESDC_DNP3_History_Backfill_Interface)*>,0)",
+    "name": "Part_D_EP_IDNPHS",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-IDNPHS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

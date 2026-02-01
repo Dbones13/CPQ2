@@ -1,0 +1,11 @@
+{
+    "id": 21908,
+    "condition": "[EQ](<*VALUE(FDM Client Stations required)*>,Yes)",
+    "name": "Allow attributes on FDM Client Stations required",
+    "action": "<*ALLOWATTRIBUTES(FDM Client Station Qty (0-10),FDM Display Supplier(Client Station),FDM_Client_Station Node Type,FDM_Display size (i)(Client Station),FDM_Node Supplier(Client Station))*><*SETREQUIRED(FDM Client Station Qty (0-10),FDM Display Supplier(Client Station),FDM_Client_Station Node Type,FDM_Display size (i)(Client Station),FDM_Node Supplier(Client Station))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

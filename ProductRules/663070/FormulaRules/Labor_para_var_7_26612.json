@@ -1,0 +1,11 @@
+{
+    "id": 26612,
+    "condition": "1",
+    "name": "Labor_para_var_7",
+    "action": "<*ASSIGNVALUE(Labor_para_var_7:[IF]([OR]([EQ](<*VALUE(Node Supplier (Flex Server))*>,Honeywell),[EQ](<*VALUE(CMS Node Supplier)*>,Honeywell),[EQ](<*VALUE(DMS Node Supplier)*>,Honeywell),[EQ](<*VALUE(Node Supplier)*>,Honeywell),[EQ](<*VALUE(Node Supplier (Additional Station))*>,Honeywell),[EQ](<*VALUE(Node Supplier (Sim PC))*>,Honeywell),[EQ](<*VALUE(Node Supplier (Sim PC)1)*>,Honeywell),[EQ](<*VALUE(Node Supplier Server)*>,Honeywell),[EQ](<*VALUE(Node Supplier Server EBR)*>,Honeywell),[EQ](<*VALUE(Node Supplier Server1)*>,Honeywell),[EQ](<*VALUE(Node Supplier_ACE)*>,Honeywell),[EQ](<*VALUE(Node Supplier_ACE_T)*>,Honeywell),[EQ](<*VALUE(Node Supplier_ACE1)*>,Honeywell),[EQ](<*VALUE(Node Supplier_EAPP)*>,Honeywell),[EQ](<*VALUE(Node Supplier_server)*>,Honeywell),[EQ](<*VALUE(Node_Supplier_ACE_T)*>,Honeywell),[EQ](<*VALUE(Node_Supplier_EAPP)*>,Honeywell),[EQ](<*VALUE(Node_Supplier_Server)*>,Honeywell))){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14892,
+    "condition": "[IN](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD,QCS MD & CD,QCS MD)",
+    "name": "MX_Part_EP_T09CAL",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:EP-T09CAL)*><*SETATVQTY(MX_Platform_Bom_Parts:EP-T09CAL, 1)*><* DoResetAtt *>",
+    "description": "CCEECOMMBR-7629",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

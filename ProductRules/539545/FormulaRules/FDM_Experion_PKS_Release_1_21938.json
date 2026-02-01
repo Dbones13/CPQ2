@@ -1,0 +1,11 @@
+{
+    "id": 21938,
+    "condition": "[IN](<*VALUE(FDM_Release)*>,R530,R540)",
+    "name": "FDM_Experion_PKS_Release_1",
+    "action": "<*ALLOWVALUES(FDM_Experion_PKS_Release:R530,FDM_Experion_PKS_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

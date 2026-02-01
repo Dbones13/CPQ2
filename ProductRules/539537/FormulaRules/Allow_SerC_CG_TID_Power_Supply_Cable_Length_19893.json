@@ -1,0 +1,11 @@
+{
+    "id": 19893,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Cabinet),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II))",
+    "name": "Allow_SerC_CG_TID_Power_Supply_Cable_Length",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_TID_Power_Supply_Cable_Length)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

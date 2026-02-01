@@ -1,0 +1,11 @@
+{
+    "id": 23554,
+    "condition": "[EQ](<*VALUE(FDM_OPC_UA_Server_Device_Blocks)*>,)",
+    "name": "Default_FDM_OPC_Server_Device_Blocks",
+    "action": "<*ASSIGNVALUE(FDM_OPC_UA_Server_Device_Blocks:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

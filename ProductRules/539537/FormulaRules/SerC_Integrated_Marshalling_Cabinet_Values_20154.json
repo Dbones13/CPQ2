@@ -1,0 +1,11 @@
+{
+    "id": 20154,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(Dummy_CG_IO_Mounting_Solution)*>,Cabinet),[NEQ](<*VALUE(SerC_CG_Cabinet_Type_03)*>,Generic Cabinet))",
+    "name": "SerC_Integrated_Marshalling_Cabinet_Values",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_Cabinet_Access)*>,Single Access),[EQ](<*VALUE(SerC_CG_Integrated_Marshalling_Cabinet)*>,Yes))){<*DISALLOWVALUES(SerC_Integrated_Marshalling_Cabinet:Front To Back)*>}{<*ALLOWVALUES(SerC_Integrated_Marshalling_Cabinet:Front To Back,SerC_Integrated_Marshalling_Cabinet:Top To Bottom)*>}[ENDIF]",
+    "description": "",
+    "rank": "10001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

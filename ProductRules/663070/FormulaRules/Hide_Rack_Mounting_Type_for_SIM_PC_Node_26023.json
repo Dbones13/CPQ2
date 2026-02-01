@@ -1,0 +1,11 @@
+{
+    "id": 26023,
+    "condition": "[AND]([NEQ](<*VALUE(Hardware Design Selection - Sim PC Node)*>,SVR_STD_DELL_Tower_RAID1),[NEQ](<*VALUE(Hardware Design Selection - Sim PC Node)*>,SVR_PER_DELL_Tower_RAID1))",
+    "name": "Hide_Rack_Mounting_Type_for_SIM_PC_Node",
+    "action": "<*DISALLOWATTRIBUTES(Rack Mounting Type for SIM PC Node)*>",
+    "description": "CXCPQ-45303",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

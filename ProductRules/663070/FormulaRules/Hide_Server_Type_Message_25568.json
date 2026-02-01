@@ -1,0 +1,11 @@
+{
+    "id": 25568,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,No)",
+    "name": "Hide_Server_Type_Message",
+    "action": "<*DISALLOWATTRIBUTES(Server_Type_Message)*>",
+    "description": "CXCPQ-35454",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

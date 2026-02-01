@@ -1,0 +1,11 @@
+{
+    "id": 17715,
+    "condition": "1",
+    "name": "Total_AI_Points",
+    "action": "<*ASSIGNVALUE(Labor_parameter_ai:<*EVAL(0<*CTX( Container(SM_IO_Count_Analog_Input_Cont).Sum(Total AI Point) )*> )*>)*>",
+    "description": "Labor Report task",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Pavan Koganty"
+}

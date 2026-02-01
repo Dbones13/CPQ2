@@ -1,0 +1,11 @@
+{
+    "id": 20436,
+    "condition": "[EQ](<*VALUE(SS_Server_Redundancy_Requirement)*>,)",
+    "name": "Default_SS_Server_Redundancy_Requirement",
+    "action": "<*SELECTVALUE(SS_Server_Redundancy_Requirement:Non Redundant)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

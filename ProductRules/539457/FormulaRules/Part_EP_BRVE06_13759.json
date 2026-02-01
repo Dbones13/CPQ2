@@ -1,0 +1,11 @@
+{
+    "id": 13759,
+    "condition": "[AND]([GT](<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM25)*> +<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM26)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN01)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN02)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM27)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX05)*>+ <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>) *>,0),[EQ](<*VALUE(Virtualization_Virtual_EBR_license_needs)*>,Yes),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_BRVE06",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-BRVE06)*><*SETATVQTY(Virtualization_BOM_Parts:EP-BRVE06,<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM25)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM26)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM27)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX05)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN01)*> +<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN02)*> +<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>) *>)*><* DoResetAtt *>",
+    "description": "Story 8705\nModified CXCPQ-108554",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

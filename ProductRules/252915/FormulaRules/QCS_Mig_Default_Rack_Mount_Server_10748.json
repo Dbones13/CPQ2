@@ -1,0 +1,11 @@
+{
+    "id": 10748,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Rack_Mount_Server)*>,)",
+    "name": "QCS_Mig_Default_Rack_Mount_Server",
+    "action": "<*SELECTVALUE(QCS_Mig_Rack_Mount_Server:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

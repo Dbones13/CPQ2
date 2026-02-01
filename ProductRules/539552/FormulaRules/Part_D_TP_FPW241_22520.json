@@ -1,0 +1,11 @@
+{
+    "id": 22520,
+    "condition": "[AND]([NOT]([AND]([EQ](<*VALUE(ESDC_Display_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ESDC_Display_Size)*>,24 inch NTS NEC),[NEQ](<*VALUE(ESDC_Displays_Server)*>,0))),[NOT]([AND]([EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[EQ](<*VALUE(ESDC_Display_Supplier)*>,Honeywell),[EQ](<*VALUE(ESDC_Display_size_I)*>,24 inch NTS NEC),[NEQ](<*VALUE(ESDC_Client_Station_Qty)*>,0))))",
+    "name": "Part_D_TP_FPW241",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:TP-FPW241)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

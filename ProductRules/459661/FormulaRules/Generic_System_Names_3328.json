@@ -1,0 +1,11 @@
+{
+    "id": 3328,
+    "condition": "[GEQ](<*CTX( Container(PMC_Generic_System_Cont).Rows.GetCount )*>,1)",
+    "name": "Generic System Names",
+    "action": "<*ASSIGNVALUE(Generic_System_Names:<*CTX( Container(PMC_Generic_System_Cont).UniqueValues(Generic System Name).Separator(<br>) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

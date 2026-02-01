@@ -1,0 +1,11 @@
+{
+    "id": 25676,
+    "condition": "[EQ](<*VALUE(Orion Console Display Devices (0-4))*>,)",
+    "name": "Default Orion Console Display Devices",
+    "action": "<*ASSIGNVALUE(Orion Console Display Devices (0-4):1)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

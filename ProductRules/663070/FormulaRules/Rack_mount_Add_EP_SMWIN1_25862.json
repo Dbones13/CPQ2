@@ -1,0 +1,11 @@
+{
+    "id": 25862,
+    "condition": "[IF]([AND]([EQ](<*VALUE(Experion Server Type)*>,Flex Server),[EQ](<*VALUE(Server Mounting)*>,Rack (Cabinet)))){[EQ](<*VALUE(Multi Window Support (Flex Server))*>,Yes)}{0}[ENDIF]",
+    "name": "Rack_mount_Add_EP_SMWIN1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-SMWIN1)*>[IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-SMWIN1, 2)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-SMWIN1, 1)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "Add part on Rack mount and Flex Server.",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

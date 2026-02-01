@@ -1,0 +1,11 @@
+{
+    "id": 12075,
+    "condition": "[EQ](<*VALUE(PAGA_Implementation_Methodology)*>,)",
+    "name": "Default_PAGA_Implementation_Methodology",
+    "action": "<*SELECTVALUE(PAGA_Implementation_Methodology:Standard Build Estimate)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

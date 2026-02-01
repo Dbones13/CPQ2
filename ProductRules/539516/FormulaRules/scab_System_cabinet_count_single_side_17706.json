@@ -1,0 +1,11 @@
+{
+    "id": 17706,
+    "condition": "[NEQ](<*CTX( Container(SM_CG_Cabinet_Details_Cont_Left).Row(1).Column(Cabinet_Access).Get )*>,Dual_Access)",
+    "name": "scab_System_cabinet_count_single_side",
+    "action": "<*ASSIGNVALUE(CG_scab_System_cabinet_count:<* Eval(0-INT(0-(<*CTX( Container(SM_CG_PartSummary_Cont).Sum(scab_System_cabinet_count_single_side) )*>/2))) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22855,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Base_Size)*>,)",
+    "name": "Default_SerC_RG_Cabinet_Base_Size",
+    "action": "<*SELECTVALUE(SerC_RG_Cabinet_Base_Size:100mm)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

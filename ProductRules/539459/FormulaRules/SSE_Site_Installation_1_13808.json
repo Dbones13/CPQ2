@@ -1,0 +1,11 @@
+{
+    "id": 13808,
+    "condition": "1",
+    "name": "SSE Site Installation 1",
+    "action": "<*ASSIGNVALUE(SSE Site Installation 1:<* Eval(6) *>)*>",
+    "description": "For Safety System Base deliverable\n\nCalculated hours = 6 hours",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

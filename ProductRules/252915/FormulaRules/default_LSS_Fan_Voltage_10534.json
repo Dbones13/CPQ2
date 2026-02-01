@@ -1,0 +1,11 @@
+{
+    "id": 10534,
+    "condition": "[EQ](<*VALUE(LSS_Fan_Voltage)*>,)",
+    "name": "default_LSS_Fan_Voltage",
+    "action": "<*SELECTVALUE(LSS_Fan_Voltage:115 VAC)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

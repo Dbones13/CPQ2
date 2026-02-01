@@ -1,0 +1,11 @@
+{
+    "id": 26265,
+    "condition": "[OR]([NEQ](<*CTX ( Quote.CustomField(Booking LOB) )*>,PAS),[IN](<*VALUE(Experion Software Release)*>,R510,R511))",
+    "name": "Hide Experion Python Exe-Ser & Web API",
+    "action": "<*DISALLOWATTRIBUTES(Experion Python Execution Service and Web API0_100)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

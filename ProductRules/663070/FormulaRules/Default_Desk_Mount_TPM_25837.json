@@ -1,0 +1,11 @@
+{
+    "id": 25837,
+    "condition": "[EQ](<*VALUE(TrustedPlatform_ModuleTPM)*>,)",
+    "name": "Default_Desk_Mount_TPM",
+    "action": "<*SELECTVALUE(TrustedPlatform_ModuleTPM:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

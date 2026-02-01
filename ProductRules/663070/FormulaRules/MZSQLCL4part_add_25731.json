@@ -1,0 +1,11 @@
+{
+    "id": 25731,
+    "condition": "[GT](<*VALUE(exp_ent_Quantity37198)*>,0)",
+    "name": "MZ-SQLCL4part add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-SQLCL4)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-SQLCL4,<*VALUE(exp_ent_Quantity37198)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37198",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

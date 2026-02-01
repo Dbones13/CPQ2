@@ -1,0 +1,11 @@
+{
+    "id": 13805,
+    "condition": "1",
+    "name": "Labor_parameter_mcab",
+    "action": "<*ASSIGNVALUE(Labor_parameter_mcab:<* Eval(<*CTX( Container(SM_Labor_Cont).Row(1).Column(Marshalling_cabinet_count).Get )*>+<*CTX( Container(SM_ControlGroup_Cont).Sum(CG_Qty_Marshallingitems) )*>) *>)*>",
+    "description": "AttributeValue(\"Marshalling cabinet count (0-500)\")\n+ Sum Qty_Marshallingitems(SM_System_PartSummary_Cont)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

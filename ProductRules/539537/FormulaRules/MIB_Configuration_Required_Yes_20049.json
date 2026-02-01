@@ -1,0 +1,11 @@
+{
+    "id": 20049,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,),[EQ](<*VALUE(MIB Configuration Required?)*>,Yes))",
+    "name": "MIB Configuration Required?_Yes",
+    "action": "<*SELECTVALUE(SerC_CG_IO_Family_Type:Series-C Mark II)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

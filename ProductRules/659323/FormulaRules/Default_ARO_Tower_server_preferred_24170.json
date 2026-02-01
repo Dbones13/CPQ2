@@ -1,0 +1,11 @@
+{
+    "id": 24170,
+    "condition": "[EQ](<*VALUE(ARO_Tower_server_preferred)*>,)",
+    "name": "Default_ARO_Tower_server_preferred",
+    "action": "<*SELECTVALUE(ARO_Tower_server_preferred:Tower)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20288,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Flare_Snapshot_Manager)*>,Yes))",
+    "name": "DVM Flare Snapshot Managwe_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMFLR)*><* DoResetAtt *>",
+    "description": "CXCPQ-45741",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

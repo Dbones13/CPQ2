@@ -1,0 +1,11 @@
+{
+    "id": 10858,
+    "condition": "[EQ](<*VALUE(HC900_System_Type)*>,None)",
+    "name": "Controller Module Visibility_3",
+    "action": "<*SETOPTIONAL(HC900_Controller_(CPU)_Module,HC900_Controller_(CPU)_Module_NSIL2)*><*DISALLOWATTRIBUTES(HC900_Controller_(CPU)_Module)*><*DISALLOWATTRIBUTES(HC900_Controller_(CPU)_Module_NSIL2)*>\n<*DISALLOWATTRIBUTES(HC900_IO_Details_of_Non-SIL)*>\n<*DISALLOWATTRIBUTES(HC900_IO_Details_of_SIL2)*>\n<*DISALLOWATTRIBUTES(HC900_Additional_IO_Details_of_SIL2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15241,
+    "condition": "[EQ](<*VALUE(MXP_Profile_Control)*>,Profile Control S/W for Extrusion Coat)",
+    "name": "Part_A_5850_51",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5850-51)*><*SETATVQTY(MXP_Bom_Parts:3-5850-51,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

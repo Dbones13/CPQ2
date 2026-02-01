@@ -1,0 +1,11 @@
+{
+    "id": 18346,
+    "condition": "[NEQ](<*VALUE(MXP_Fan_Cooling)*>,Yes)",
+    "name": "Part_D_Q4611_10",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q4611-10)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15106,
+    "condition": "[EQ](<*VALUE(MXP_Rack_Mount_Chassis)*>,)",
+    "name": "Default_Rack_Mount_Chassis",
+    "action": "<*SELECTVALUE(MXP_Rack_Mount_Chassis:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

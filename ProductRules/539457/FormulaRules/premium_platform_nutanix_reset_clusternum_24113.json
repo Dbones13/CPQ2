@@ -1,0 +1,11 @@
+{
+    "id": 24113,
+    "condition": "[AND]([EQ](<*VALUE(Enter the starting Nutanix Platform Cluster Number)*>,),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix))",
+    "name": "premium_platform_nutanix_reset_clusternum",
+    "action": "<*RESETATTRIBUTE(Enter the starting Nutanix Platform Cluster Number)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20041,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Mounting Panel),[EQ](<*VALUE(SerC_CG_Cabinet_Type_03)*>,))",
+    "name": "Defalt_SerC_CG_Cabinet_Type_03",
+    "action": "<*SELECTVALUE(SerC_CG_Cabinet_Type_03:Normal Cabinet)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

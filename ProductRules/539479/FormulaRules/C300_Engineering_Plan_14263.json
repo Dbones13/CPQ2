@@ -1,0 +1,11 @@
+{
+    "id": 14263,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300 Engineering Plan",
+    "action": "<*ASSIGNVALUE(C300 Engineering Plan:<* Eval((0.19 * (1.1 * (0<*VALUE(Labor_parameter_wio)*>/ 200 + 20*<*VALUE(C300_Labor_parameter_ffb)*>/(<*VALUE(C300_Labor_parameter_ffb)*>+1) + 12*0<*VALUE(C300_Labor_parameter_is)*>/(0<*VALUE(C300_Labor_parameter_is)*> + 1) + 2 * <*VALUE(C300_Labor_parameter_A)*>/ (<*VALUE(C300_Labor_parameter_A)*> + 1) + (<*VALUE(C300_Labor_parameter_iof)*> + 3 * <*VALUE(Labor_parameter_mdb)*>)*(<*VALUE(C300_Labor_parameter_iof)*> + 3 * 0<*VALUE(Labor_parameter_mdb)*>)))) + 0<*VALUE(43529_Base)*> )*>)*>",
+    "description": "CXCPQ-43529",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

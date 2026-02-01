@@ -1,0 +1,1 @@
+Product.Attr('SC_MES_ServiceProduct').Access = AttributeAccess.ReadOnly

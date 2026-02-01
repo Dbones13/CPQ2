@@ -1,0 +1,11 @@
+{
+    "id": 23981,
+    "condition": "[GT](<*VALUE(Terminal_Number_of_loading/unloading_bays)*>,0)",
+    "name": "Add_TM-TBAYS3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:TM-TBAYS3)*>[IF]([NEQ](<* Eval(<*VALUE(Terminal_Number_of_loading/unloading_bays)*>/3) *>,<* Eval(INT(<*VALUE(Terminal_Number_of_loading/unloading_bays)*>/3)) *>)){<*SETATVQTY(Terminal_Part_Summary:TM-TBAYS3,<* Eval(INT(<*VALUE(Terminal_Number_of_loading/unloading_bays)*>/3)+1) *>)*>}{<*SETATVQTY(Terminal_Part_Summary:TM-TBAYS3,<* Eval(<*VALUE(Terminal_Number_of_loading/unloading_bays)*>/3) *>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

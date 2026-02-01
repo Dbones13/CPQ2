@@ -1,0 +1,11 @@
+{
+    "id": 25579,
+    "condition": "[OR]([EQ](<*VALUE(Additional Stations)*>,0),[EQ](<*VALUE(Station Type)*>,STN_STD_DELL_Tower_NonRAID),[EQ](<*VALUE(Station Type)*>,STN_PER_HP_Tower_RAID1),[EQ](<*VALUE(Station Type)*>,STN_PER_DELL_Tower_RAID1))",
+    "name": "Hide_Hardware_message",
+    "action": "<*DISALLOWATTRIBUTES(Message_Hardware_Selection)*>",
+    "description": "CXCPQ-35454",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

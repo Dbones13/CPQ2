@@ -1,0 +1,11 @@
+{
+    "id": 19315,
+    "condition": "[EQ](<*VALUE(PlantCruise_eServer_Media_Kit)*>,ESD)",
+    "name": "Add_Software_Base_CV-DME520-ESD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DME520-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

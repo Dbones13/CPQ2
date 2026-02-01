@@ -1,0 +1,11 @@
+{
+    "id": 15069,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Client Interface Remote Site KOM",
+    "action": "<*ASSIGNVALUE(Client Interface Remote Site KOM:<* Eval(2*(16+8*[IF]([EQ](<*VALUE(Unique_quantity_factor_total_scope)*>,0)){0}{<* Eval(INT((<* Eval(1.2+(0<*VALUE(Unique_quantity_factor_total_scope)*>*0.2)) *>))) *>}[ENDIF])) *>)*>",
+    "description": "2*(16+8*ROUNDDOWN(1.2+(QFU*0.2),0))",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

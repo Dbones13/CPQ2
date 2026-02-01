@@ -1,0 +1,11 @@
+{
+    "id": 20409,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Display_Supplier)*>,)",
+    "name": "Default_SS_Orion_Console_Display_Supplier",
+    "action": "<*SELECTVALUE(SS_Orion_Console_Display_Supplier:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

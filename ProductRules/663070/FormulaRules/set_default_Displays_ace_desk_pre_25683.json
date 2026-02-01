@@ -1,0 +1,11 @@
+{
+    "id": 25683,
+    "condition": "[EQ](<*VALUE(Displays_ace_desk_pre)*>,)",
+    "name": "set default Displays_ace_desk_pre",
+    "action": "<*SELECTVALUE(Displays_ace_desk_pre:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18545,
+    "condition": "[EQ](<*VALUE(ES_Hardware_Selection)*>,)",
+    "name": "Default_Hardware_Selection",
+    "action": "<*SELECTVALUE(ES_Hardware_Selection:SVR_STD_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

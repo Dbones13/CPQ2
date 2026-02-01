@@ -1,0 +1,11 @@
+{
+    "id": 26293,
+    "condition": "[EQ](<*VALUE(TrustedPlatform_Module_TPM)*>,)",
+    "name": "Default_Rack_Mount_TrustedTPM",
+    "action": "<*SELECTVALUE(TrustedPlatform_Module_TPM:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

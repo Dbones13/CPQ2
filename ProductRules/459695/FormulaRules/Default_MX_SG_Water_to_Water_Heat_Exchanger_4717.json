@@ -1,0 +1,11 @@
+{
+    "id": 4717,
+    "condition": "[EQ](<*VALUE(MX_SG_Water_to_Water_Heat_Exchanger)*>,)",
+    "name": "Default_MX_SG_Water_to_Water_Heat_Exchanger",
+    "action": "<*SELECTVALUE(MX_SG_Water_to_Water_Heat_Exchanger:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

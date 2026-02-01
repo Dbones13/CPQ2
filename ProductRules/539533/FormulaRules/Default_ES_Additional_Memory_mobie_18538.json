@@ -1,0 +1,11 @@
+{
+    "id": 18538,
+    "condition": "[EQ](<*VALUE(ES_Additional_Memory_Mobile_Server)*>,)",
+    "name": "Default_ES_Additional_Memory_mobie",
+    "action": "<*SELECTVALUE(ES_Additional_Memory_Mobile_Server:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

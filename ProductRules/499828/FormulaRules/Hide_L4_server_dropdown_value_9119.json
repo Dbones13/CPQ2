@@ -1,0 +1,11 @@
+{
+    "id": 9119,
+    "condition": "[AND]\n(\n[EQ](<*VALUE(Trace_Software_Business_Level_Access)*>,No)\n,[NEQ](<*CTX( Quote.CustomField(IsR2QRequest).AttrValue )*>,Yes)\n)",
+    "name": "Hide L4 server dropdown value",
+    "action": "<*DISALLOWVALUES(Trace_Software_L4_Trace_Server_Option:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

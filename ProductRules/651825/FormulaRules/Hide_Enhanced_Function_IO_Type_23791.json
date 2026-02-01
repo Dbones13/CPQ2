@@ -1,0 +1,11 @@
+{
+    "id": 23791,
+    "condition": "[NOT]([OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>))",
+    "name": "Hide Enhanced Function IO Type",
+    "action": "<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Rows.Clear )*>\n<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont2).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(Header_04_close,Header_04_open,SerC_CG_Enhanced_Function_IO_Cont,SerC_CG_Enhanced_Function_IO_Cont2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23788,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "Hide_FIM_FF_IOs_with_Power_conditioner",
+    "action": "<*DISALLOWATTRIBUTES(FIM_FF_IOs_with_Power_conditioner,FIM_Power_Conditioner_Scope)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

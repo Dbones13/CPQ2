@@ -1,0 +1,11 @@
+{
+    "id": 13904,
+    "condition": "1",
+    "name": "GES Location",
+    "action": "[IF]([EQ](<*CTX( Container(UOC_Labor_Details).Row(1).Column(UOC_Ges_Location_Labour).GetDisplayValue )*>,None)){<*DISALLOWATTRIBUTES(CE UOC GES Engineer %)*> <*CTX( Container(CE UOC Engineering Labor Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(CE UOC Engineering Labor Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>}{<*ALLOWATTRIBUTES(CE UOC GES Engineer %)*> <*CTX( Container(CE UOC Engineering Labor Container).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(CE UOC Engineering Labor Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(CE UOC Engineering Labor Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

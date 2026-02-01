@@ -1,0 +1,11 @@
+{
+    "id": 10859,
+    "condition": "[AND]([NEQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Controller C30 CPU),[NEQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Controller C50 CPU),[NEQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Controller C70 CPU),[NEQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Redundant Controller C75 CPU))",
+    "name": "Default Values for Controller Module",
+    "action": "<*SELECTVALUE(HC900_Controller_(CPU)_Module:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

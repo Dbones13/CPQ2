@@ -1,0 +1,11 @@
+{
+    "id": 18209,
+    "condition": "[EQ](<*VALUE(MXP_Tachometor)*>,)",
+    "name": "Default_MXP_Tachometor",
+    "action": "<*SELECTVALUE(MXP_Tachometor:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

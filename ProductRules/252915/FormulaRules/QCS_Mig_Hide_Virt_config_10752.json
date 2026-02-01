@@ -1,0 +1,11 @@
+{
+    "id": 10752,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_Upgrade_Scenario)*>,Physical hardware only))\n",
+    "name": "QCS_Mig_Hide_Virt_config",
+    "action": "<*DISALLOWATTRIBUTES(QCS_Mig_Virtualization_Config)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

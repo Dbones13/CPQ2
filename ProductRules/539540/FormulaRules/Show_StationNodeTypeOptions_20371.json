@@ -1,0 +1,11 @@
+{
+    "id": 20371,
+    "condition": "[EQ](<*VALUE(SS_Simulation_PC_Station_required)*>,Yes)",
+    "name": "Show_StationNodeTypeOptions",
+    "action": "<*ALLOWVALUES(SS_Server_Node_Type_Workstation:SVR_PER_DELL_Rack_RAID1_XE)*>\n<*ALLOWVALUES(SS_Server_Node_Type_Workstation:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14159,
+    "condition": "[EQ](<*VALUE(Number_of_Peer_to_Peer_Soft_IO)*>,)",
+    "name": "Default_Number_of_Peer_to_Peer_Soft_IO",
+    "action": "<*ASSIGNVALUE(Number_of_Peer_to_Peer_Soft_IO:0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

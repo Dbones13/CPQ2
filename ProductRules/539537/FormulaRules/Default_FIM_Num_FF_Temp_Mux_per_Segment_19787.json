@@ -1,0 +1,11 @@
+{
+    "id": 19787,
+    "condition": "[EQ](<*VALUE(FIM_Num_FF_Temp_Mux_per_Segment)*>,)",
+    "name": "Default_FIM_Num_FF_Temp_Mux_per_Segment",
+    "action": "<*ASSIGNVALUE(FIM_Num_FF_Temp_Mux_per_Segment:8)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18190,
+    "condition": "[EQ](<*VALUE(MXP_Radiation_lamp_BW_X_Ray)*>,)",
+    "name": "Default_MXP_Radiation_lamp_BW_X_Ray",
+    "action": "<*SELECTVALUE(MXP_Radiation_lamp_BW_X_Ray:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

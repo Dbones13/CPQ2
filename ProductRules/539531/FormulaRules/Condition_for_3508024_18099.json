@@ -1,0 +1,11 @@
+{
+    "id": 18099,
+    "condition": "[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-5080-24)",
+    "name": "Condition_for_3-5080-24",
+    "action": "<*ALLOWALLVALUESEXCEPT(MXP_Measurement_Type:X-Ray|None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

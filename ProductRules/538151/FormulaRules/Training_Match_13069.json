@@ -1,0 +1,11 @@
+{
+    "id": 13069,
+    "condition": "[NEQ](<*VALUE(Training_Match_Test)*>,Test)",
+    "name": "Training_Match",
+    "action": "<* ExecuteScript(Training)*>",
+    "description": "It will control visibilty of Training_Match",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11683,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS Plan Drawings",
+    "action": "<*ASSIGNVALUE(IS Plan Drawings:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval(((14 * (<*VALUE(IS_No_of_Overall_Site_Plans_(0-20))*> + <*VALUE(IS_No_of_Enlarged_Site_Plans_(0-100))*> + <*VALUE(IS_No_of_Building_Plans_(0-100))*> + <*VALUE(IS_No_of_Room_Plans_(0-100))*>)) + (<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> * (<*VALUE(IS_No_of_Overall_Site_Plans_(0-20))*> + <*VALUE(IS_No_of_Enlarged_Site_Plans_(0-100))*> + <*VALUE(IS_No_of_Building_Plans_(0-100))*> + <*VALUE(IS_No_of_Room_Plans_(0-100))*>) * 0.25))) *>}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){<* Eval((((14 * (<*VALUE(IS_No_of_Overall_Site_Plans_(0-20))*> + <*VALUE(IS_No_of_Enlarged_Site_Plans_(0-100))*> + <*VALUE(IS_No_of_Building_Plans_(0-100))*> + <*VALUE(IS_No_of_Room_Plans_(0-100))*>)) + (<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> * (<*VALUE(IS_No_of_Overall_Site_Plans_(0-20))*> + <*VALUE(IS_No_of_Enlarged_Site_Plans_(0-100))*> + <*VALUE(IS_No_of_Building_Plans_(0-100))*> + <*VALUE(IS_No_of_Room_Plans_(0-100))*>) * 0.25)))) *>}{<* Eval(((((14 * (<*VALUE(IS_No_of_Overall_Site_Plans_(0-20))*> + <*VALUE(IS_No_of_Enlarged_Site_Plans_(0-100))*> + <*VALUE(IS_No_of_Building_Plans_(0-100))*> + <*VALUE(IS_No_of_Room_Plans_(0-100))*>)) + (<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> * (<*VALUE(IS_No_of_Overall_Site_Plans_(0-20))*> + <*VALUE(IS_No_of_Enlarged_Site_Plans_(0-100))*> + <*VALUE(IS_No_of_Building_Plans_(0-100))*> + <*VALUE(IS_No_of_Room_Plans_(0-100))*>) * 0.25)))) *1.1) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

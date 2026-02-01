@@ -1,0 +1,11 @@
+{
+    "id": 21816,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "ELEPIU_labor_del_Site_Acceptance_Test",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_Site_Acceptance_Test:<* Eval([IF]([EQ](<*VALUE(ELEPIU_SAT required?)*>,Yes)){<* Eval(8+2.5*(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>-1)) *>}{0}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

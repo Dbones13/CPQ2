@@ -1,0 +1,11 @@
+{
+    "id": 15128,
+    "condition": "[NEQ](<*VALUE(MXP_Virtualization_options)*>,Multiple virtualization system with continuous backup and restore)",
+    "name": "Show_management",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Number_of_Servers_Management)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

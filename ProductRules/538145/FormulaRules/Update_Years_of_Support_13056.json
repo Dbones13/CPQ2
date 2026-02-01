@@ -1,0 +1,11 @@
+{
+    "id": 13056,
+    "condition": "[EQ](<*VALUE(SC_Renewal_check)*>,1)",
+    "name": "Update_Years_of_Support",
+    "action": "<* ExecuteScript(PS_Disallow_license_period_values) *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

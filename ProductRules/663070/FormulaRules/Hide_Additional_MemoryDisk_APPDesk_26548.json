@@ -1,0 +1,11 @@
+{
+    "id": 26548,
+    "condition": "[NEQ](<*VALUE(Hardware Design Selection - EAPP Node)*>,)",
+    "name": "Hide_Additional_MemoryDisk_APPDesk",
+    "action": "<*DISALLOWVALUES(Additional Hard Disk_EAPP:Yes,Additional Memory_EAPP:16GB)*>",
+    "description": "APP Node in Desk Preference\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

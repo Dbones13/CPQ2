@@ -1,0 +1,11 @@
+{
+    "id": 14061,
+    "condition": "1",
+    "name": "DVM Riser Diagrams",
+    "action": "<*ASSIGNVALUE(DVM Riser Diagrams:[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Non-Standard Build Estimate)){<* Eval((4*0<*VALUE(DVM_Number_of_Riser)*>)+((0<*VALUE(DVM_Number_of_Reviews)*>*0<*VALUE(DVM_Number_of_Riser)*>)*.25)) *>}{[IF]([EQ](<*VALUE(DVM_GES_Location)*>,None)){<* Eval((4*0<*VALUE(DVM_Number_of_Riser)*>)+((0<*VALUE(DVM_Number_of_Reviews)*>*0<*VALUE(DVM_Number_of_Riser)*>)*.25*1)) *>}{<* Eval(((4*0<*VALUE(DVM_Number_of_Riser)*>)+(0<*VALUE(DVM_Number_of_Reviews)*>*0<*VALUE(DVM_Number_of_Riser)*>)*.25*1)*1.1) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

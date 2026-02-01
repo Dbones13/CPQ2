@@ -1,0 +1,722 @@
+<style>
+    .colmn_hide td[data-title ='PROS Guidance Recommended Price'],.colmn_hide td[data-title ='Guidance Discount %'],.colmn_hide td[data-title ='Guidance Status']{
+    display:none;
+    }
+  </style>
+  <style>
+    .resizer {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: ew-resize;
+    }
+  </style>
+    <script type="text/html" id="quoteTableTemplate">
+    <!-- START - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added condition to continue with quote tables on other tabs except renewal summary tab -->
+    <!-- ko ifnot: ['RENEWAL SUMMARY'].includes($parent.tabsData.currentTabName()) -->
+    <!-- END - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added condition to continue with quote tables on other tabs except renewal summary tab -->
+        <div class="cart-table-container">
+    
+            <!-- ko if: allowExcelUpload -->
+            <!-- ko if: reportFilePath() === "" -->
+            <div class="fiori3-alert fiori3-alert-info">
+                <span class="sap-icon-extended">&#xf200;</span>
+                @Translation.Get("Admin.TablesOnQuotes.SuccessfulUpload")
+            </div>
+            <!-- /ko -->
+            <!-- ko if: reportFilePath -->
+            <div class="fiori3-alert fiori3-alert-danger">
+                <span class="sap-icon">&#xe1ec;</span>
+                @Translation.Get("Admin.TablesOnQuotes.DownloadExcelErrorFileMsg")<br/>
+                <a data-bind="attr: { href: reportFilePath }">@Translation.Get("Admin.TablesOnQuotes.DownloadExcelErrorFile")</a>
+            </div>
+            <!-- /ko -->
+            <!-- /ko -->
+    
+            <!-- ko if: (label == 'Project Milestone' && ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal")) -->
+                <label class="cart-table-name">Service contract Milestone</label>
+            <!-- /ko -->
+    
+            <!-- ko if: hasValidationsFailed() -->
+            <div class="fiori3-alert fiori3-alert-warning">
+                <span class="sap-icon">&#xe053;</span>
+                @Translation.Get("Admin.TablesOnQuotes.HasValidationsFailed")
+            </div>
+            <!-- /ko -->
+            <!-- ko if: $root.tabsData.currentTabName() === "BOOKING INFO" -->
+    <div data-bind = "foreach: $parent.customFleldsModel.customFields.filterByProperty('name','SC_CF_QT_BookingInfo_Msg')">
+            <!-- ko ifnot: content() === "" -->
+                <div class="fiori3-alert fiori3-alert-warning">
+                    <span class="sap-icon">&#xe053;</span>
+                    <span data-bind ="text:content()"></span>
+                </div>
+             <!-- /ko -->
+            </div>
+    <!-- /ko -->
+    <!-- ko if: ["PSC INFO"].includes($root.tabsData.currentTabName())-->
+    <div data-bind = "foreach: $parent.customFields.filterByProperty('name','SC_CF_QT_BookingInfo_Msg')">
+            <!-- ko ifnot: content() === "" -->
+                <div class="fiori3-alert fiori3-alert-warning">
+                    <span class="sap-icon">&#xe053;</span>
+                    <span data-bind ="text:content()"></span>
+                </div>
+             <!-- /ko -->
+            </div>
+    <!-- /ko -->
+         <!-- ko if: $root.tabsData.currentTabName() === "OPPORTUNITY INFO" -->
+    <div data-bind = "foreach: $parent.customFields.filterByProperty('name','SC_CF_Error_Msg')">
+                <!-- ko if: content() !== '' -->
+                <!-- ko let: { errorMsg: JSON.parse(content()) } -->
+                <!-- ko if: errorMsg.hasOwnProperty('Team_Details') -->
+                <!-- ko foreach: errorMsg.Team_Details -->
+                     <div data-bind = "css: {'fiori3-alert fiori3-alert-danger': (Type === 'Error'),'fiori3-alert fiori3-alert-warning' : (Type === 'Warning'),'fiori3-alert fiori3-alert-info' : (Type === 'Info')}">
+                         <!-- ko if: Type === 'Error' -->
+                             <span class="sap-icon">&#xe1ec;</span>
+                         <!--/ko -->
+                         <!-- ko if: Type === 'Warning' -->
+                             <span class="sap-icon">&#xe053;</span>
+                         <!--/ko -->
+                         <!-- ko if: Type === 'Info' -->
+                             <span class="sap-icon-extended">&#xf200;</span>
+                         <!--/ko -->
+                            <span data-bind="text:Text"></span>
+                     </div>
+                <!--/ko -->
+                <!--/ko -->
+                <!--/ko -->
+                <!--/ko -->
+    </div>
+    <!-- /ko -->
+    <div class="cart-table-banner flex"  >
+            <!-- ko if: label == 'Invalid Parts' -->
+            <label data-bind="html: label,visible:rows().length > 0" class="cart-table-name " ></label>
+            <!-- /ko -->
+            <!-- ko ifnot: label == 'Invalid Parts' -->
+            <!-- ko ifnot: ( label == 'Project Milestone' && ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal")) -->
+        
+                <label data-bind="html: label" class="cart-table-name " ></label>
+            <!-- /ko -->
+            <!-- /ko -->
+    
+    
+            <div class="cart-table-button-add" data-bind="visible: !$parent.isInViewMode()">
+                <button class="phpbtn" data-bind="attr: { id: name + '_addButton' }, visible: canAddRow, click: addRow"><span class="sap-icon">&#xe058;</span> <span data-bind="textOrNbsp: addRowTranslation"></span></button>
+                <!-- ko foreach: customActions -->
+                <button class="phpbtn" data-bind="attr: {id: 'executeAction_' + id }, click: $parent.executeCustomAction, css: className"><span data-bind="textOrNbsp: name"></span></button>
+                <!-- /ko -->
+                <!-- ko if: allowExcelUpload -->
+                <div style="display: inline-block" class="custom-dropdown noselect" data-bind="dropdown:{}">
+                    <button data-bind="attr: {'id': name + '_downloadExcelTemplateBtn'}" data-toggle-button="dropdown" class="btn btn-default fiori3-btn-default">@Translation.Get("Admin.TablesOnQuotes.DownloadExcelFile")<i class="fa fa-caret-down"></i></button>
+                    <div class="custom-dropdown-menu">
+                        <span class="revision-option" data-bind="event: { keyup: function(){ downloadOnEnter(event, true); }}, click: function(){ downloadExcelTemplate(true); }" tabindex="0">@Translation.Get("Admin.TablesOnQuotes.UpdateExistingEntries")</span>
+                        <span class="revision-option" data-bind="event: { keyup: function(){ downloadOnEnter(event, false); }}, click: function(){ downloadExcelTemplate(false); }" tabindex="0">@Translation.Get("Admin.TablesOnQuotes.AddNewEntries")</span>
+                    </div>
+                </div>
+    
+                <div class="fileUploadInput" style="display: inline-block">
+                 @using (Html.BeginForm("ImportQuoteTable", "Cart", new { enctype = "multipart/form-data" }, FormMethod.Post))
+                 {
+                     @Html.AntiForgeryToken()   
+                     <input type="hidden" data-bind="value: name" name="quoteTableName"/>
+    
+                     <div class="fileupload fileupload-new" data-provides="fileupload" data-bind="executeOnEnter: function(){ uploadFileOnEnter() }, tooltip: { title: '@Translation.GetJS("CartTableTemplate.UploadExcel")', autoClose: true, closeOnClick: true, placement: 'top auto', trigger: 'hover focus', container: 'body' }" tabindex="0">
+                         <span class="btn btn-default btn-file fiori3-btn-default">
+                             <input type="file" accept=".xls,.xlsx,.xltx,.xlt" single name="file" class="file-input" data-bind="fileUpload: { onFileUpload: importExcel }" tabindex="-1"/>
+                             <a class="fileupload-new"><i class="fa fa-upload"></i></a>
+                             <a class="fileupload-exists"><i class="fa fa-upload"></i></a>
+                         </span>
+                     </div>
+                }
+                </div>
+                <!-- /ko -->
+    
+                </div>        
+            </div>
+                  
+                <div class="row">
+                    <div class="table-overflow cpq-scroll">					
+                        <!-- ko if: name == 'FME_Invalid_Parts' -->
+                        <table class="table table-bordered cart-table fiori3-table no-border-custom-table fiori3-responsive-table fiori3-custom-table cpq-scroll" data-bind="visible:rows().length != 0,css: name, attr: { id: 'table' + '_' + id }">
+                            <thead data-bind="css: { 'search-in-columns-disabled' : !isSearchEnabled() }">
+                                <!-- ko if: hasColumnGroups -->
+                                <tr>
+                                    <!-- ko if: hasRowActions() || isSearchEnabled() -->
+                                    <th style="background-color:white;border:none;"></th>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: columnGroupLevels -->
+                                    <th class="column-group-levels cart-table-column" data-bind="style:{verticalAlign:$data.isInHeader?'middle':'', textAlign:$data.Name?'center':'', border:!$data.Name?'none':'', backgroundColor:!$data.Name?'white':''},attr:{'colspan':$data.Colspan, 'rowspan':$data.rowspan},textOrNbsp:$data.Label"></th>
+                                    <!-- /ko -->
+                                </tr>
+                                <!-- /ko -->
+                                <tr>
+                                    <!-- ko if: hasRowActions() || isSearchEnabled() -->
+                                    <th class="column-with-actions-header">
+                                        <!-- ko if: isSearchEnabled() -->
+                                        <button type="button" class="btn btn-secondary fiori3-btn-secondary" data-bind="attr:{ id: id + '_searchButton'}, click: applyFilters">@Translation.Get("Admin.TablesOnQuotes.Search")</button>
+                                        <!-- /ko -->
+                                    </th>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: columns -->
+                                    <!-- ko ifnot: $data.isInHeader -->
+                                    <th class="cart-table-column" data-bind="css: className,attr:{'name':name}">
+                                        <span class="visible-small" data-bind="visible: dataType === 0 || dataType === 1 || dataType === 2|| dataType === 3 || dataType === 6">@Translation.Get("CustomTable.FilterBy")&nbsp;</span><span class="visible-small" data-bind="textOrNbsp: label,attr: { title: label }"></span>
+                                        <!-- ko if: $parent.isSearchEnabled() -->
+                                        <!-- ko if: dataType === 4 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <select class="form-control" data-bind="value: searchTerm, event:{ change: $parent.addFilterDataDropdown }, attr: { id: 'filterDropdown_' + id }">
+                                                <option value=""></option>
+                                                <option value="false">@Translation.Get("QuoteTables.NotSelected")</option>
+                                                <option value="true">@Translation.Get("QuoteTables.Selected")</option>
+                                            </select>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 2 -->
+                                        <div class="quote-table-filter-container">
+                                            <div class="input-group date-field fiori3-input-group">
+                                                <input data-bind="textInput: searchTerm,  event:{ blur: $parent.addFilter }, executeOnEnter: $parent.addFilterAndApply, attr: { id: label + '_' + id }" class="form-control" />
+                                                <a tabindex="-1" class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="datepicker: searchTerm, event: { changeDate: $parent.addFilter }"><i class="fa fa-calendar"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 0 || dataType === 1 || dataType === 3 || dataType === 6 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <input type="text" class="form-control" placeholder="@Translation.Get("Admin.TablesOnQuotes.Search")" data-bind="textInput: searchTerm, event: { blur: $parent.addFilter }, executeOnEnter: $parent.addFilterAndApply, attr: { id: label + '_' + id }" />
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 5 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <select class="form-control" data-bind="options: values, optionsText: 'displayValue', optionsValue: 'attributeValue', value: searchTerm, event: { change: $parent.addFilterDataDropdown }, attr: { id: 'filterDropdown_' + id }"></select>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <span class="visible-large" data-bind="textOrNbsp: label,attr: { title: label }"></span>
+                                    </th>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- ko foreach: rows -->
+                                <tr>
+                                    <!-- ko if: $parent.hasRowActions() || $parent.isSearchEnabled() -->
+                                    <td class="actions-column">
+                                        <!-- ko if: $parent.canDeleteRow ||  $parent.canCopyRow  -->
+                                        <div class="dropdown">
+                                            <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                            </a>    
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <!-- ko if: $parent.canDeleteRow -->
+                                                <li class="dropdown-item" href="#" data-bind="attr: {'id': 'deleteRow_' + $parent.name + id}, executeOnEnter: function() { $parent.deleteRow($data) }, click: $parent.deleteRow"> 
+                                                    Delete 
+                                                </li>
+                                        <!-- /ko -->
+                                        <!-- ko if: $parent.canCopyRow -->
+                                                <li class="dropdown-item" href="#" data-bind="attr: {'id': 'copyRow_' + id}, executeOnEnter: function() { $parent.copyRow($data) }, click: $parent.copyRow">
+                                                    Copy 
+                                                </li>
+                                                <!-- /ko -->
+                                            </ul>
+                                        </div>
+                                        <!-- /ko -->
+                                    </td>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: cells -->
+                                    <td style="vertical-align: top!important" class="fiori3-input-group">
+                                        <ul style="padding: 0; list-style-type: none; text-align: left; margin-bottom: 0;" data-bind="visible: !isHidden" class="clearfix">
+                                            <li class="visible-small column-label-in-row">
+                                                <span data-bind="text: column.label"></span>
+                                            </li>
+                                                <!-- ko template: { name: template  } -->
+                                                <!-- /ko -->
+                                            <!-- ko if: systemValidationMessage -->
+                                                <li>
+                                                    <div class="validationMessage" data-bind="text: systemValidationMessage"></div>
+                                                </li>
+                                            <!-- /ko -->
+                                            <!-- ko foreach: validationMessages-->
+                                            <li>
+                                                <div class="validationMessage" data-bind="text: $data"></div>
+                                            </li>
+                                            <!-- /ko -->
+                                        </ul>
+                                    </td>
+                                    <!-- /ko -->
+                                </tr>
+                                <!-- /ko -->
+                            </tbody>
+                        </table>
+                        <!-- /ko -->
+                    <!-- ko if: name != 'FME_Invalid_Parts' -->
+                        <table class="table table-bordered cart-table fiori3-table no-border-custom-table fiori3-responsive-table fiori3-custom-table cpq-scroll" data-bind="css: name, attr: { id: 'table' + '_' + id }">
+                            <thead data-bind="css: { 'search-in-columns-disabled' : !isSearchEnabled() }">
+                                <!-- ko if: hasColumnGroups -->
+                                <tr>
+                                    <!-- ko if: hasRowActions() || isSearchEnabled() -->
+                                    <th style="background-color:white;border:none;"></th>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: columnGroupLevels -->
+                                    <th class="column-group-levels cart-table-column" data-bind="style:{verticalAlign:$data.isInHeader?'middle':'', textAlign:$data.Name?'center':'', border:!$data.Name?'none':'', backgroundColor:!$data.Name?'white':''},attr:{'colspan':$data.Colspan, 'rowspan':$data.rowspan},textOrNbsp:$data.Label"></th>
+                                    <!-- /ko -->
+                                </tr>
+                                <!-- /ko -->
+                                <tr>
+                                    <!-- ko if: hasRowActions() || isSearchEnabled() -->
+                                    <th class="column-with-actions-header">
+                                        <!-- ko if: isSearchEnabled() -->
+                                        <button type="button" class="btn btn-secondary fiori3-btn-secondary" data-bind="attr:{ id: id + '_searchButton'}, click: applyFilters">@Translation.Get("Admin.TablesOnQuotes.Search")</button>
+                                        <!-- /ko -->
+                                    </th>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: columns -->
+                                    <!-- ko ifnot: $data.isInHeader -->
+                                    <!-- ko if: ($data.name != 'India_Discounted_TP' && $data.name != 'Total_Tariff_Amount' && $data.name != 'Quote_Sell_Price_Incl_Tariff') || ($data.name == 'India_Discounted_TP' && cpq.models.cart.customFields.filterByProperty('name','Quote Type')()[0]?.content() == 'Projects' && cpq.models.cart.customFields.filterByProperty('name','Booking Country')()[0]?.content().toLowerCase() == 'india' && ['PAS','LSS'].includes(cpq.models.cart.customFields.filterByProperty('name','Quote Tab Booking LOB')()[0]?.content())) || (($data.name != 'Total_Tariff_Amount' || $data.name != 'Quote_Sell_Price_Incl_Tariff') && ['Projects','Parts and Spot'].includes(cpq.models.cart.customFields.filterByProperty('name','Quote Type')()[0]?.content()) && cpq.models.cart.customFields.filterByProperty('name','Quote Tab Booking LOB')()[0]?.content() =='PMC' || (($data.name != 'Total_Tariff_Amount' || $data.name != 'Quote_Sell_Price_Incl_Tariff') && (cpq.models.cart.customFields.filterByProperty('name','Quote Type')()[0]?.content() == 'Parts and Spot')))-->
+                                    <th class="cart-table-column" data-bind="css: className,attr:{'name':name}" style="position: relative;" onmouseover="name == 'Shipment_Description' || name == 'Cost' ? triggerResize() : null">
+                                        <span class="visible-small" data-bind="visible: dataType === 0 || dataType === 1 || dataType === 2|| dataType === 3 || dataType === 6">@Translation.Get("CustomTable.FilterBy")&nbsp;</span><span class="visible-small" data-bind="textOrNbsp: label,attr: { title: label }"></span>
+                                        <!-- ko if: $parent.isSearchEnabled() -->
+                                        <!-- ko if: dataType === 4 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <select class="form-control" data-bind="value: searchTerm, event:{ change: $parent.addFilterDataDropdown }, attr: { id: 'filterDropdown_' + id }">
+                                                <option value=""></option>
+                                                <option value="false">@Translation.Get("QuoteTables.NotSelected")</option>
+                                                <option value="true">@Translation.Get("QuoteTables.Selected")</option>
+                                            </select>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 2 -->
+                                        <div class="quote-table-filter-container">
+                                            <div class="input-group date-field fiori3-input-group">
+                                                <input data-bind="textInput: searchTerm,  event:{ blur: $parent.addFilter }, executeOnEnter: $parent.addFilterAndApply, attr: { id: label + '_' + id }" class="form-control" />
+                                                <a tabindex="-1" class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="datepicker: searchTerm, event: { changeDate: $parent.addFilter }"><i class="fa fa-calendar"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 0 || dataType === 1 || dataType === 3 || dataType === 6 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <input type="text" class="form-control" placeholder="@Translation.Get("Admin.TablesOnQuotes.Search")" data-bind="textInput: searchTerm, event: { blur: $parent.addFilter }, executeOnEnter: $parent.addFilterAndApply, attr: { id: label + '_' + id }" />
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 5 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <select class="form-control" data-bind="options: values, optionsText: 'displayValue', optionsValue: 'attributeValue', value: searchTerm, event: { change: $parent.addFilterDataDropdown }, attr: { id: 'filterDropdown_' + id }"></select>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <span class="visible-large" data-bind="textOrNbsp: label,attr: { title: label }"></span>
+                                        <!-- ko if: $data.name == 'Shipment_Description' || $data.name == 'Cost' -->
+                                        <span class="resizer"></span>
+                                        <!-- /ko -->
+                                    </th>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- ko foreach: rows -->
+                                <tr>
+                                    <!-- ko if: $parent.hasRowActions() || $parent.isSearchEnabled() -->
+                                    <td class="actions-column">
+                                        <!-- ko if: $parent.canDeleteRow ||  $parent.canCopyRow  -->
+                                        <div class="dropdown">
+                                            <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                            </a>    
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <!-- ko if: $parent.canDeleteRow -->
+                                                <li class="dropdown-item" href="#" data-bind="attr: {'id': 'deleteRow_' + $parent.name + id}, executeOnEnter: function() { $parent.deleteRow($data) }, click: $parent.deleteRow"> 
+                                                    Delete 
+                                                </li>
+                                        <!-- /ko -->
+                                        <!-- ko if: $parent.canCopyRow -->
+                                                <li class="dropdown-item" href="#" data-bind="attr: {'id': 'copyRow_' + id}, executeOnEnter: function() { $parent.copyRow($data) }, click: $parent.copyRow">
+                                                    Copy 
+                                                </li>
+                                                <!-- /ko -->
+                                            </ul>
+                                        </div>
+                                        <!-- /ko -->
+                                    </td>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: cells -->
+                                    <!-- ko if: (column.name != 'India_Discounted_TP' && column.name != 'Total_Tariff_Amount' && column.name != 'Quote_Sell_Price_Incl_Tariff') || (column.name == 'India_Discounted_TP' && cpq.models.cart.customFields.filterByProperty('name','Quote Type')()[0]?.content() == 'Projects' && cpq.models.cart.customFields.filterByProperty('name','Booking Country')()[0]?.content().toLowerCase() == 'india' && ['PAS','LSS'].includes(cpq.models.cart.customFields.filterByProperty('name','Quote Tab Booking LOB')()[0]?.content())) || ((column.name != 'Total_Tariff_Amount' || column.name != 'Quote_Sell_Price_Incl_Tariff') && ['Projects','Parts and Spot'].includes(cpq.models.cart.customFields.filterByProperty('name','Quote Type')()[0]?.content()) && cpq.models.cart.customFields.filterByProperty('name','Quote Tab Booking LOB')()[0]?.content() =='PMC'  || ((column.name != 'Total_Tariff_Amount' || column.name != 'Quote_Sell_Price_Incl_Tariff') && (cpq.models.cart.customFields.filterByProperty('name','Quote Type')()[0]?.content() == 'Parts and Spot') && (cpq.models.cart.customFields.filterByProperty('name','Quote Tab Booking LOB')()[0]?.content() =='LSS')))-->
+                                    <td style="vertical-align: top!important" class="" data-bind="attr:{'class':'fiori3-input-group '+ column.name }">
+                                        <ul style="padding: 0; list-style-type: none; text-align: left; margin-bottom: 0;" data-bind="visible: !isHidden" class="clearfix">
+                                            <li class="visible-small column-label-in-row">
+                                                <span data-bind="text: column.label"></span>
+                                            </li>
+                                                <!-- ko template: { name: template  } -->
+                                                <!-- /ko -->
+                                            <!-- ko if: systemValidationMessage -->
+                                                <li>
+                                                    <div class="validationMessage" data-bind="text: systemValidationMessage"></div>
+                                                </li>
+                                            <!-- /ko -->
+                                            <!-- ko foreach: validationMessages-->
+                                            <li>
+                                                <div class="validationMessage" data-bind="text: $data"></div>
+                                            </li>
+                                            <!-- /ko -->
+                                        </ul>
+                                    </td>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </tr>
+                                <!-- /ko -->
+                            </tbody>
+                        </table>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <!-- ko template: { name: 'EditablePagerTemplate', data : pager, if: pager.totalItemCount() > 9} -->
+                <!-- /ko -->
+            </div>
+            <!-- START - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added condition to continue with quote tables on other tabs except renewal summary tab -->
+            <!-- /ko -->
+            <!-- END - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added condition to continue with quote tables on other tabs except renewal summary tab -->
+            <!-- START - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added condition to load quote tables for renewal summary tab -->
+    <!-- ko if: ['RENEWAL SUMMARY'].includes($parent.tabsData.currentTabName()) -->
+                                 
+                                                                                                                                                                                                                                                                                                     
+                
+    <!-- ko if: $index() > 0 -->
+        <div class="col-xs-12" tabindex="-1" style="background-color:#edeff0;margin:0px!important;display:flex;padding-top:12px;"></div>
+    <!-- /ko -->
+    <div data-bind = "attr: { id: name + '_' + id }" class="col-xs-12">
+        <div class="swagger-header" data-bind="click:toggleConfigSection.bind($data,event,'#' + name + '_' + id)">
+            <span data-bind="html: label"></span>
+            <a data-bind = "attr: { id: name + '_' + id + '-href' }" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div data-bind = "attr: { id: name + '_' + id + '-content' }" style="display:none;">
+        <div class="cart-table-container">
+            <!-- ko if: allowExcelUpload -->
+            <!-- ko if: reportFilePath() === "" -->
+            <div class="fiori3-alert fiori3-alert-info">
+                <span class="sap-icon-extended">&#xf200;</span>
+                @Translation.Get("Admin.TablesOnQuotes.SuccessfulUpload")
+            </div>
+            <!-- /ko -->
+            <!-- ko if: reportFilePath -->
+            <div class="fiori3-alert fiori3-alert-danger">
+                <span class="sap-icon">&#xe1ec;</span>
+                @Translation.Get("Admin.TablesOnQuotes.DownloadExcelErrorFileMsg")<br/>
+                <a data-bind="attr: { href: reportFilePath }">@Translation.Get("Admin.TablesOnQuotes.DownloadExcelErrorFile")</a>
+            </div>
+            <!-- /ko -->
+            <!-- /ko -->
+     
+            <!-- ko if: hasValidationsFailed() -->
+            <div class="fiori3-alert fiori3-alert-warning">
+                <span class="sap-icon">&#xe053;</span>
+                @Translation.Get("Admin.TablesOnQuotes.HasValidationsFailed")
+            </div>
+            <!-- /ko -->
+            <div class="cart-table-button-add" data-bind="visible: !$parent.isInViewMode()">
+                <button class="btn btn-secondary fiori3-btn-secondary" data-bind="attr: { id: name + '_addButton' }, visible: canAddRow, click: addRow"><span class="sap-icon">&#xe058;</span> <span data-bind="textOrNbsp: addRowTranslation"></span></button>
+                <!-- ko foreach: customActions -->
+                <button class="btn btn-secondary fiori3-btn-secondary" data-bind="attr: {id: 'executeAction_' + id }, click: $parent.executeCustomAction, css: className"><span data-bind="textOrNbsp: name"></span></button>
+                <!-- /ko -->
+                <button class="btn btn-secondary fiori3-btn-secondary" data-bind="attr: {id: name + '_' + id }, click: downloadTemplate.bind($data,name)"><span data-bind="textOrNbsp: 'Download'"></span></button>
+                <!-- ko if: allowExcelUpload -->
+                <div style="display: inline-block" class="custom-dropdown noselect" data-bind="dropdown:{}">
+                    <button data-bind="attr: {'id': name + '_downloadExcelTemplateBtn'}" data-toggle-button="dropdown" class="btn btn-default fiori3-btn-default">@Translation.Get("Admin.TablesOnQuotes.DownloadExcelFile")<i class="fa fa-caret-down"></i></button>
+                    <div class="custom-dropdown-menu">
+                        <span class="revision-option" data-bind="event: { keyup: function(){ downloadOnEnter(event, true); }}, click: function(){ downloadExcelTemplate(true); }" tabindex="0">@Translation.Get("Admin.TablesOnQuotes.UpdateExistingEntries")</span>
+                        <span class="revision-option" data-bind="event: { keyup: function(){ downloadOnEnter(event, false); }}, click: function(){ downloadExcelTemplate(false); }" tabindex="0">@Translation.Get("Admin.TablesOnQuotes.AddNewEntries")</span>
+                    </div>
+                </div>
+    
+                <div class="fileUploadInput" style="display: inline-block">
+                 @using (Html.BeginForm("ImportQuoteTable", "Cart", new { enctype = "multipart/form-data" }, FormMethod.Post))
+                 {
+                     @Html.AntiForgeryToken()   
+                     <input type="hidden" data-bind="value: name" name="quoteTableName"/>
+    
+                     <div class="fileupload fileupload-new" data-provides="fileupload" data-bind="executeOnEnter: function(){ uploadFileOnEnter() }, tooltip: { title: '@Translation.GetJS("CartTableTemplate.UploadExcel")', autoClose: true, closeOnClick: true, placement: 'top auto', trigger: 'hover focus', container: 'body' }" tabindex="0">
+                         <span class="btn btn-default btn-file fiori3-btn-default">
+                             <input type="file" accept=".xls,.xlsx,.xltx,.xlt" single name="file" class="file-input" data-bind="fileUpload: { onFileUpload: importExcel }" tabindex="-1"/>
+                             <a class="fileupload-new"><i class="fa fa-upload"></i></a>
+                             <a class="fileupload-exists"><i class="fa fa-upload"></i></a>
+                         </span>
+                     </div>
+                }
+                </div>
+                <!-- /ko -->
+    
+            </div>
+                <div class="row">
+                    <div class="table-overflow cpq-scroll">
+                        <table class="table table-bordered cart-table fiori3-table no-border-custom-table fiori3-responsive-table fiori3-custom-table cpq-scroll" data-bind="css: name, attr: { id: 'table' + '_' + id }">
+                            <thead data-bind="css: { 'search-in-columns-disabled' : !isSearchEnabled() }">
+                                <!-- ko if: hasColumnGroups -->
+                                <tr>
+                                    <!-- ko if: hasRowActions() || isSearchEnabled() -->
+                                    <th style="background-color:white;border:none;"></th>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: columnGroupLevels -->
+                                    <th class="column-group-levels cart-table-column" data-bind="style:{verticalAlign:$data.isInHeader?'middle':'', textAlign:$data.Name?'center':'', border:!$data.Name?'none':'', backgroundColor:!$data.Name?'white':''},attr:{'colspan':$data.Colspan, 'rowspan':$data.rowspan},textOrNbsp:$data.Label"></th>
+                                    <!-- /ko -->
+                                </tr>
+                                <!-- /ko -->
+                                <tr>
+                                    <!-- ko if: hasRowActions() || isSearchEnabled() -->
+                                    <th class="column-with-actions-header">
+                                        <!-- ko if: isSearchEnabled() -->
+                                        <button type="button" class="btn btn-secondary fiori3-btn-secondary" data-bind="attr:{ id: id + '_searchButton'}, click: applyFilters">@Translation.Get("Admin.TablesOnQuotes.Search")</button>
+                                        <!-- /ko -->
+                                    </th>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: columns -->
+                                    <!-- ko ifnot: $data.isInHeader -->
+                                    <th class="cart-table-column" data-bind="css: className,attr:{'name':name}">
+                                        <span class="visible-small" data-bind="visible: dataType === 0 || dataType === 1 || dataType === 2|| dataType === 3 || dataType === 6">@Translation.Get("CustomTable.FilterBy")&nbsp;</span><span class="visible-small" data-bind="textOrNbsp: label,attr: { title: label }"></span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                        <!-- ko if: $parent.isSearchEnabled() -->
+                                        <!-- ko if: dataType === 4 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <select class="form-control" data-bind="value: searchTerm, event:{ change: $parent.addFilterDataDropdown }, attr: { id: 'filterDropdown_' + id }">
+                                                <option value=""></option>
+                                                <option value="false">@Translation.Get("QuoteTables.NotSelected")</option>
+                                                <option value="true">@Translation.Get("QuoteTables.Selected")</option>
+                                            </select>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 2 -->
+                                        <div class="quote-table-filter-container">
+                                            <div class="input-group date-field fiori3-input-group">
+                                                <input data-bind="textInput: searchTerm,  event:{ blur: $parent.addFilter }, executeOnEnter: $parent.addFilterAndApply, attr: { id: label + '_' + id }" class="form-control" />
+                                                <a tabindex="-1" class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="datepicker: searchTerm, event: { changeDate: $parent.addFilter }"><i class="fa fa-calendar"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 0 || dataType === 1 || dataType === 3 || dataType === 6 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <input type="text" class="form-control" placeholder="@Translation.Get("Admin.TablesOnQuotes.Search")" data-bind="textInput: searchTerm, event: { blur: $parent.addFilter }, executeOnEnter: $parent.addFilterAndApply, attr: { id: label + '_' + id }" />
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: dataType === 5 -->
+                                        <div class="quote-table-filter-container fiori3-input-group">
+                                            <select class="form-control" data-bind="options: values, optionsText: 'displayValue', optionsValue: 'attributeValue', value: searchTerm, event: { change: $parent.addFilterDataDropdown }, attr: { id: 'filterDropdown_' + id }"></select>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <span class="visible-large" data-bind="textOrNbsp: label,attr: { title: label }"></span>
+                                    </th>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- ko foreach: rows -->
+                                <tr>
+                                    <!-- ko if: $parent.hasRowActions() || $parent.isSearchEnabled() -->
+            
+                                    <td class="actions-column">
+                                        <!-- ko if: $parent.canDeleteRow ||  $parent.canCopyRow  -->
+                                        <div class="dropdown">
+                                            <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                            </a>    
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <!-- ko if: $parent.canDeleteRow -->
+                                                <li class="dropdown-item" href="#" data-bind="attr: {'id': 'deleteRow_' + $parent.name + id}, executeOnEnter: function() { $parent.deleteRow($data) }, click: $parent.deleteRow"> 
+                                                    Delete 
+                                                </li>
+                                        <!-- /ko -->
+                                        <!-- ko if: $parent.canCopyRow -->
+                                                <li class="dropdown-item" href="#" data-bind="attr: {'id': 'copyRow_' + id}, executeOnEnter: function() { $parent.copyRow($data) }, click: $parent.copyRow">
+                                                    Copy 
+                                                </li>
+                                                <!-- /ko -->
+                                            </ul>
+                                        </div>
+                                        <!-- /ko -->
+                                    </td>
+                                    <!-- /ko -->
+                                    <!-- ko foreach: cells -->
+                                    <td style="vertical-align: top!important" class="fiori3-input-group">
+                                        <ul style="padding: 0; list-style-type: none; text-align: left; margin-bottom: 0;" data-bind="visible: !isHidden" class="clearfix">
+                                            <li class="visible-small column-label-in-row">
+                                                <span data-bind="text: column.label"></span>
+                                            </li>
+                                                <!-- ko template: { name: template  } -->
+                                                <!-- /ko -->
+                                            <!-- ko if: systemValidationMessage -->
+                                                <li>
+                                                    <div class="validationMessage" data-bind="text: systemValidationMessage"></div>
+                                                </li>
+                                            <!-- /ko -->
+                                            <!-- ko foreach: validationMessages-->
+                                            <li>
+                                                <div class="validationMessage" data-bind="text: $data"></div>
+                                            </li>
+                                            <!-- /ko -->
+                                        </ul>
+                                    </td>
+                                    <!-- /ko -->
+                                </tr>
+                                <!-- /ko -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ko template: { name: 'EditablePagerTemplate', data : pager, if: pager.totalItemCount() > 9} -->
+                <!-- /ko -->
+            </div>
+           </div>
+          </div>
+            <!-- /ko -->
+            <!-- END - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added condition to load quote tables for renewal summary tab -->
+    </script>
+    <script>
+    
+    
+    cpq.events.sub('API:cart:updated',function(data){
+                                    
+                                      
+                                                       
+        x=cpq.models.cart.customFields.firstWithProperty('name','Quote Type').serverContent
+        y=cpq.models.cart.customFields.firstWithProperty('name','Quote Tab Booking LOB')?.serverContent
+        z=cpq.models.cart.customFields.firstWithProperty('name','MPA')
+        if (z==undefined){z=''}else{z=z.serverContent}	
+        
+            if ((y =='LSS' || y =='PAS' || y =='HCP' || y=='PMC' ) && (x =='Products' || x =='Parts and Spot' || x == 'Projects') && (z ==''))
+            {
+                            
+                $('table.fiori3-table.items-table thead tr th').each(function(index){
+                    var txt = $(this).text();
+                    if(txt == 'PROS Guidance Recommended Price' || txt == 'Guidance Discount %' || txt == 'Guidance Status')
+                    {
+                        $(this).css('display','table-cell');
+                    }
+                    
+                });
+     
+                $('table.fiori3-table.items-table tbody tr td').each(function(index){
+                    var txt = $(this).attr('data-title');
+                    if(txt == 'PROS Guidance Recommended Price' || txt == 'Guidance Discount %' || txt == 'Guidance Status')
+                    {
+                        $(this).css('display','table-cell');
+                    }
+                    
+                });
+       
+                $('table.fiori3-table.items-table thead tr th').each(function(index){
+                    var txt = $(this).text();
+                    if(txt == 'Floor Discount' || txt == 'Target Discount' || txt == 'Expert Discount')
+                    {
+                        $( this ).hide();
+                    }
+                    
+                });
+                
+                const dataTitles = ['Floor Discount', 'Target Discount', 'Expert Discount'];
+                for (idx in dataTitles){
+                    const tdsToHide = document.querySelectorAll(`td[data-title="${dataTitles[idx]}"]`);
+
+                    tdsToHide.forEach(function(td) {
+                        $(td).hide(); 
+                        console.log($(td));
+                    });
+                }
+    
+    
+            }
+            
+            else
+            {
+                
+                $('table.fiori3-table.items-table thead tr th').each(function(index){
+                    var txt = $(this).text();
+                    if(txt == 'PROS Guidance Recommended Price' || txt == 'Guidance Discount %' || txt == 'Guidance Status')
+                    {
+                        $(this).css('display','none');
+         
+                    }
+                    
+                });
+       
+                  setTimeout(function () { 
+                $('table.fiori3-table.items-table tbody tr td').each(function(index){
+                    var txt = $(this).attr('data-title');
+                    if(txt == 'PROS Guidance Recommended Price' || txt == 'Guidance Discount %' || txt == 'Guidance Status')
+                    {
+                        $(this).css('display','none');
+                        $('#itemsTable').addClass('colmn_hide');
+                         
+                    }
+                    
+                });
+                   }, 500)
+                $('table.fiori3-table.items-table thead tr th').each(function(index){
+                    var txt = $(this).text();
+                    if(txt == 'Floor Discount' || txt == 'Target Discount' || txt == 'Expert Discount')
+                    {
+                        $( this ).hide();
+                    }
+                    
+                });
+                const dataTitles = ['Floor Discount', 'Target Discount', 'Expert Discount'];
+                for (idx in dataTitles){
+                    const tdsToHide = document.querySelectorAll(`td[data-title="${dataTitles[idx]}"]`);
+
+                    tdsToHide.forEach(function(td) {
+                        $(td).hide(); 
+                        console.log($(td));
+                    });
+                }
+        
+    
+            }
+      
+                  
+                $('table.fiori3-table.items-table thead tr th').each(function(index){
+                    var txt = $(this).text();
+                    if(txt == 'Floor Discount' || txt == 'Target Discount' || txt == 'Expert Discount')
+                    {
+                        $( this ).hide();
+                    }
+                    
+                });
+
+                const dataTitles = ['Floor Discount', 'Target Discount', 'Expert Discount'];
+                for (idx in dataTitles){
+                    const tdsToHide = document.querySelectorAll(`td[data-title="${dataTitles[idx]}"]`);
+
+                    tdsToHide.forEach(function(td) {
+                        $(td).hide(); 
+                        console.log($(td));
+                    });
+                }                                                                                     
+                                                                                                                                                    
+                                     
+    
+        $('table.FME_Invalid_Parts').each(function() {
+            var hasRows = $(this).find('tbody tr').length === 0;
+            $(this).closest('div.cart-table-container').toggle(!hasRows);
+        });										   
+    
+        
+    });
+        
+    
+    </script>
+    <!-- START - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added download functionality for quote tables on renewal summary tab -->
+    <script type = "text/javascript">
+        function downloadTemplate(quoteTableName) {
+                                              
+                                              
+                                 
+                                             
+             
+            cpq.server.executeScript('GS_SC_Export_Summary', {name:quoteTableName}, function (data) { window.location.href = data.href; });
+                                    
+                                               
+                                                                                                                                    
+        }
+     
+    </script>
+    <!-- END - CXCPQ-75189 - Manthan Rajguru - 01/23/2024 - Added download functionality for quote tables on renewal summary tab -->

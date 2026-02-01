@@ -1,0 +1,11 @@
+{
+    "id": 13530,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Plan review & Kick off Meetings",
+    "action": "<*ASSIGNVALUE(Plan review & Kick off Meetings:<*VALUE(Labor_parameter_varn_3)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

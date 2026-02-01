@@ -1,0 +1,11 @@
+{
+    "id": 13883,
+    "condition": "1",
+    "name": "SM_Marshlling_Parts",
+    "action": "<*ASSIGNVALUE(SM_Marshlling_Parts:<* Eval(0<*VALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc)*>) *>)*>",
+    "description": "Labor Report task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

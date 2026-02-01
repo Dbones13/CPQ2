@@ -1,0 +1,11 @@
+{
+    "id": 20135,
+    "condition": "<*ATTSEL(Series_C_CG_Third_Party_Part_Summary)*>",
+    "name": "Load_Series_C_CG_Standard_Third_Party_Parts",
+    "action": "<*CTX( Container(Series_c_standardart_3rd_partsummary_cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(Series_C_CG_Third_Party_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "",
+    "rank": "1001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

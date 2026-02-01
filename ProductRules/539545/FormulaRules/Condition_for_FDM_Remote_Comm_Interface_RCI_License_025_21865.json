@@ -1,0 +1,11 @@
+{
+    "id": 21865,
+    "condition": "[OR]([GT](<*VALUE(FDM MAX Server Network Interface License (0-1))*>,0),[GT](<*VALUE(FDM Remote Comm Interface (RCI) License (0-25))*>,0))",
+    "name": "Condition for FDM Remote Comm Interface (RCI) License (0-25)",
+    "action": "<*ASSIGNVALUE(FDM MAX Remote Comm Interface (RCI) License (0-1):0)*>",
+    "description": "CXCPQ-48543",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19874,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Disallow_SerC_CG_Current_required_for_each_DO",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Current_required_for_each_DO)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

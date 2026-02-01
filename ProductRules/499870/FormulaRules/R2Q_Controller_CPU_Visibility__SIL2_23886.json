@@ -1,0 +1,11 @@
+{
+    "id": 23886,
+    "condition": "[EQ](<*VALUE(HC900_System_Type)*>,Non-SIL HC900 System) <*ISSELECTED(HC900_Controller_(CPU)_Module.None)*>",
+    "name": "R2Q Controller CPU Visibility - SIL2",
+    "action": "<*SELECTVALUE(HC900_Controller_(CPU)_Module:Redundant Controller C75 CPU)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "08/08/25",
+    "modifiedBy": "Hinduja Devaraj"
+}

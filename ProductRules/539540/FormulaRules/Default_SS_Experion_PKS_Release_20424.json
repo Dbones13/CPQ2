@@ -1,0 +1,11 @@
+{
+    "id": 20424,
+    "condition": "[EQ](<*VALUE(SS_Experion_PKS_Release)*>,)",
+    "name": "Default_SS_Experion_PKS_Release",
+    "action": "<*SELECTVALUE(SS_Experion_PKS_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13213,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "TPA_labor_del_HMI_Engineering_finalhr",
+    "action": "<*ASSIGNVALUE(TPA_labor_del_HMI_Engineering_finalhr:<* Eval(<* Round (<* Eval([IF]([GT](<*VALUE(TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups)*>,0)){<* Eval(0.05*(<*VALUE(TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups)*>*(<*VALUE(TPA_labor_para_cst_hhg)*>+<*VALUE(TPA_labor_para_cst_rhhg)*>))+0.25*(<*VALUE(TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups)*>*(<*VALUE(TPA_labor_para_cst_hng)*>+<*VALUE(TPA_labor_para_cst_rhng)*>))+0.7*(<*VALUE(TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups)*>*(<*VALUE(TPA_labor_para_cst_hp)*>+<*VALUE(TPA_labor_para_cst_rhp)*>)))*>}{<* Eval(0.05*(<*VALUE(TPA_Count_of_huge_TPA_PMD_HMI_graphics)*>*(<*VALUE(TPA_labor_para_cst_hhg)*>+<*VALUE(TPA_labor_para_cst_rhhg)*>))+0.25*(<*VALUE(TPA_Count_of_normal_TPA_PMD_HMI_graphics)*>*(<*VALUE(TPA_labor_para_cst_hng)*>+<*VALUE(TPA_labor_para_cst_rhng)*>))+0.7*(<*VALUE(TPA_Count_of_popup_displays)*>*(<*VALUE(TPA_labor_para_cst_hp)*>+<*VALUE(TPA_labor_para_cst_rhp)*>)))*>}[ENDIF]+[IF]([NEQ](<*CTX( Math.Sum(<* Eval(<*VALUE(TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups)*>,<*VALUE(TPA_Count_of_huge_TPA_PMD_HMI_graphics)*>,<*VALUE(TPA_Count_of_normal_TPA_PMD_HMI_graphics)*>,<*VALUE(TPA_Count_of_popup_displays)*>) *>) )*>,0)){8}{0}[ENDIF]) *>,2) *>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

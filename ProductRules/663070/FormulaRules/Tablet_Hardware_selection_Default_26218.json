@@ -1,0 +1,11 @@
+{
+    "id": 26218,
+    "condition": "[EQ](<*VALUE(Tablet Hardware selection)*>,)",
+    "name": "Tablet Hardware selection Default",
+    "action": "<*SELECTVALUE(Tablet Hardware selection:STN_TAB_DELL_RUG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

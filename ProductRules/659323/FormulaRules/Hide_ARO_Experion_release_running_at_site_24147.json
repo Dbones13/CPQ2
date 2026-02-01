@@ -1,0 +1,11 @@
+{
+    "id": 24147,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[NEQ](<*VALUE(ARO_System_Required)*>,Yes))",
+    "name": "Hide_ARO_Experion_release_running_at_site",
+    "action": "<*SETOPTIONAL(ARO_Experion_release_running_at_site)*><*DISALLOWATTRIBUTES(ARO_Experion_release_running_at_site)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

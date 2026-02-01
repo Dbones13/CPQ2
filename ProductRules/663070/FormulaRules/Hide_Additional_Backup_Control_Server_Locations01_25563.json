@@ -1,0 +1,11 @@
+{
+    "id": 25563,
+    "condition": "[OR]([NEQ](<*VALUE(Interface with TPS Required?)*>,No),[NEQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant),[NOT]([LIKE](<*VALUE(Supervisory Network Type)*>,Ethernet)),[NEQ](<*VALUE(Experion Server Type)*>,Server))",
+    "name": "Hide_Additional_Backup_Control_Server_Locations(0-1)",
+    "action": "<*DISALLOWATTRIBUTES(Additional Backup Control Server Locations (0-1))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

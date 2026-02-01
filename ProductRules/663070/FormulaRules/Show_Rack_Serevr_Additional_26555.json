@@ -1,0 +1,11 @@
+{
+    "id": 26555,
+    "condition": "[EQ](<*VALUE(Server_NodeType)*>,SVR_PER_DELL_Rack_RAID5)",
+    "name": "Show_Rack_Serevr_Additional",
+    "action": "[IF]([IN](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(AdditionalMemory_Server Disk)*><*DISALLOWATTRIBUTES(AdditionalMemory_Server Disk)*>}{<*ALLOWVALUES(AdditionalMemory_Server Disk:16GB)*>}[ENDIF]",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

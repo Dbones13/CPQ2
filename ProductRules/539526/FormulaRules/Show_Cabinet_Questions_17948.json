@@ -1,0 +1,11 @@
+{
+    "id": 17948,
+    "condition": "[AND]([EQ](<*VALUE(PLC_Cabinet_Required_Racks_Mounting)*>,Yes),[EQ](<*CTX ( Quote.CustomField(R2QFlag))*>,Yes))",
+    "name": "Show Cabinet Questions",
+    "action": "<*ALLOWVALUES(PLC_RG_Cabinet_Cont:1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "26/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

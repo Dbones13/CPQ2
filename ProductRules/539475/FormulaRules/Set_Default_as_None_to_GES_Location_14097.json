@@ -1,0 +1,11 @@
+{
+    "id": 14097,
+    "condition": "[NOT](<*ATTSEL(Experion_HS_Ges_Location_Labour)*>)",
+    "name": "Set Default as None to GES Location",
+    "action": "<*SELECTVALUE(Experion_HS_Ges_Location_Labour:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

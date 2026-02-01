@@ -1,0 +1,11 @@
+{
+    "id": 15301,
+    "condition": "[NEQ](<*VALUE(MXP_Strip_Patch_Coating_Software)*>,Yes)",
+    "name": "Part_D_3_5740_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5740-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

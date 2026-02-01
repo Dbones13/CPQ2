@@ -1,0 +1,11 @@
+{
+    "id": 14591,
+    "condition": "[EQ](<*VALUE(MSC GES Location)*>,)",
+    "name": "Default_Ges_Location",
+    "action": "<*SELECTVALUE(MSC GES Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

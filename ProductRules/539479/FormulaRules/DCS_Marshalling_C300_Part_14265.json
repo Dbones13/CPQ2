@@ -1,0 +1,11 @@
+{
+    "id": 14265,
+    "condition": "1",
+    "name": "DCS_Marshalling_C300_Part",
+    "action": "<*ASSIGNVALUE(DCS_Marshalling_C300_Part:<*VALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc)*>)*>\n<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntmarsh:<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(C300_Exp_Labor_Uni_qntmarsh) )*>)*>\n<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntCG:<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(C300_Exp_Labor_Uni_qntCG) )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4755,
+    "condition": "[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-10 Compact O-Frame (Standard Head))",
+    "name": "Part_D_Q6088_10",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q6088-10)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

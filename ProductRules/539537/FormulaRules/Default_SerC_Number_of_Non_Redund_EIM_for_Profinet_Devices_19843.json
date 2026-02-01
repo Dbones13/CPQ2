@@ -1,0 +1,11 @@
+{
+    "id": 19843,
+    "condition": "[EQ](<*VALUE(SerC_Number of Non Redund EIM for Profinet Devices)*>,)",
+    "name": "Default_SerC_Number of Non Redund EIM for Profinet Devices",
+    "action": "<*ASSIGNVALUE(SerC_Number of Non Redund EIM for Profinet Devices:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

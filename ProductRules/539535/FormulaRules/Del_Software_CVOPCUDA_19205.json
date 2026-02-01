@@ -1,0 +1,11 @@
+{
+    "id": 19205,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_OPC_UA_DA_Server_Client_Instance)*>,0))",
+    "name": "Del_Software_CV-OPCUDA",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-OPCUDA)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

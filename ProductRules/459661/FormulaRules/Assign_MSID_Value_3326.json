@@ -1,0 +1,11 @@
+{
+    "id": 3326,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "Assign MSID Value",
+    "action": "[IF]([GT](<*CTX( Container(CE_System_Cont).Rows.GetCount )*>,1)){<*ASSIGNVALUE(Experion_MSID_Choices:<*CTX( Container(CE_General_Inputs_Cont).Row(1).Column(CE_System_Asset).Get)*>)*>}{<*ASSIGNVALUE(Experion_MSID_Choices:<*VALUE(Experion_HS_MSID_Choices)*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

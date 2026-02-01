@@ -1,0 +1,11 @@
+{
+    "id": 19618,
+    "condition": "[EQ](<*VALUE(Exp HS HS IEC-61850 Protocol SCADA Interface)*>,Yes)",
+    "name": "IEC-61850 Protocol SCADA Interface YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:HS-I61850)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

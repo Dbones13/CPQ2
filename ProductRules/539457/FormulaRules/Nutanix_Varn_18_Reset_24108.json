@@ -1,0 +1,11 @@
+{
+    "id": 24108,
+    "condition": "[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix)",
+    "name": "Nutanix_Varn_18_Reset",
+    "action": "<*ASSIGNVALUE(Labor_parameter_varn_18:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

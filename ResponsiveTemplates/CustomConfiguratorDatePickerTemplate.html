@@ -1,0 +1,73 @@
+<script type="text/html" id="DatePickerTemplate">
+
+        <!-- ko template: { name: 'LabelTemplate' } -->
+        <!-- /ko -->
+        <div class="input-group fiori3-input-group date-field">
+        <input autocomplete="off" placeholder="@Environment.DateFormatString" type="text" data-bind="
+               validateAttribute: userInput,
+               value: userInput,
+               enable: isEnabled(),
+               css: { 'validation-error': hasConflict() || (userInput.isValid && !userInput.isValid()), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+               attr: { id: stdAttrCode(), required: required },
+               event: { focusin: function(){ window.lastActiveElementId = $element.id; } },
+               hasFocus: window.lastActiveElementId == $element.id"
+               class="form-control">
+        <!-- ko if: isEnabled -->
+        <span class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="
+              attr: { id: 'datePickerDisabled_' + stdAttrCode() },
+              datepicker: userInput,
+              tooltip: { title: '@Translation.Get("QuoteList.Calendar")', placement: 'auto top' },
+              event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+              hasFocus: window.lastActiveElementId == $element.id"
+              aria-label="@Translation.GetJS("QuoteList.Calendar")">
+            <span class="sap-icon">&#xe0ae;</span>
+        </span>
+        <!-- /ko -->
+        <!-- ko ifnot: isEnabled -->
+        <span class="input-group-addon disabled" data-bind="
+              attr: { id: 'datePickerDisabled_' + stdAttrCode() },
+              event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+              hasFocus: window.lastActiveElementId == $element.id">
+            <span class="sap-icon">&#xe0ae;</span>
+        </span>
+        <!-- /ko -->
+    </div>
+</script>
+<script type="text/html" id="HW_DatePickerTemplate">
+		<td class="col-xs-8">
+            <!-- ko template: { name: 'LabelTemplate' } -->
+            <!-- /ko -->
+        </td>
+        <td  class="col-xs-4" data-bind="attr : { 'data-title' : label}">
+        <div class="input-group fiori3-input-group date-field">
+        <input autocomplete="off" placeholder="@Environment.DateFormatString" type="text" data-bind="
+               validateAttribute: userInput,
+               value: userInput,
+               enable: isEnabled(),
+               css: { 'validation-error': hasConflict() || (userInput.isValid && !userInput.isValid()), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+               attr: { id: stdAttrCode(), required: required },
+               event: { focusin: function(){ window.lastActiveElementId = $element.id; } },
+               hasFocus: window.lastActiveElementId == $element.id"
+               class="form-control">
+        <!-- ko if: isEnabled -->
+        <span class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="
+              attr: { id: 'datePickerDisabled_' + stdAttrCode() },
+              datepicker: userInput,
+              tooltip: { title: '@Translation.Get("QuoteList.Calendar")', placement: 'auto top' },
+              event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+              hasFocus: window.lastActiveElementId == $element.id"
+              aria-label="@Translation.GetJS("QuoteList.Calendar")">
+            <span class="sap-icon">&#xe0ae;</span>
+        </span>
+        <!-- /ko -->
+        <!-- ko ifnot: isEnabled -->
+        <span class="input-group-addon disabled" data-bind="
+              attr: { id: 'datePickerDisabled_' + stdAttrCode() },
+              event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+              hasFocus: window.lastActiveElementId == $element.id">
+            <span class="sap-icon">&#xe0ae;</span>
+        </span>
+        <!-- /ko -->
+    </div>
+    </td>
+</script>

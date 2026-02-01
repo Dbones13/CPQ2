@@ -1,0 +1,1 @@
+[IF]([NOT](<*ISSELECTED(MIgration_Scope_Choices.HW/SW)*>)){<*ALLOWATTRIBUTES(FSC_to_SM_Which_documentation_is_required)*><*SELECTVALUES(FSC_to_SM_Which_documentation_is_required:Factory Acceptance Test document (FAT)|Functional Design Specification (FDS)|Software Detailed Design Specification (SDDS))*>}{<*DISALLOWATTRIBUTES(FSC_to_SM_Which_documentation_is_required)*>}[ENDIF]

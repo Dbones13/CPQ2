@@ -1,0 +1,11 @@
+{
+    "id": 3590,
+    "condition": "1",
+    "name": "Quantity Data",
+    "action": "[IF]([AND]([GEQ](<*VALUE(Quantity)*>,0),[LEQ](<*VALUE(Quantity)*>,50))){1}{<*RESETATTRIBUTE(Quantity)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 3594,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A18)*>,\n<*ISSELECTED(Identifiers.A19)*>,<*ISSELECTED(Identifiers.A22)*>,<*ISSELECTED(Identifiers.A27)*>,<*ISSELECTED(Identifiers.A28)*>,<*ISSELECTED(Identifiers.A30)*>)",
+    "name": "Disallow RS485/RS232",
+    "action": "<*DISALLOWVALUES(Network Type:RS232,Network Type:RS485)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

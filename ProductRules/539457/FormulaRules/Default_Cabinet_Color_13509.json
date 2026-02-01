@@ -1,0 +1,11 @@
+{
+    "id": 13509,
+    "condition": "[EQ](<*VALUE(Virtualization_Cabinet_Color)*>,)",
+    "name": "Default_Cabinet_Color",
+    "action": "<*SELECTVALUE(Virtualization_Cabinet_Color:Gray-RAL7035)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

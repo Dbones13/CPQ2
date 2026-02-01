@@ -1,0 +1,11 @@
+{
+    "id": 24211,
+    "condition": "[EQ](<*VALUE(RESS_EST_Native_window)*>,)",
+    "name": "Default_RESS_EST_Native_window",
+    "action": "<*ASSIGNVALUE(RESS_EST_Native_window:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

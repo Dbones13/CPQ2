@@ -1,0 +1,11 @@
+{
+    "id": 23565,
+    "condition": "1",
+    "name": "SC_OverAll_Labor_Block_Discount_Calculate",
+    "action": "[IF]([AND]([GEQ](<*CTX (Container(SC_Labor_Summary_Container).Sum(Deliverable_Hours))*>,0),[LEQ](<*CTX (Container(SC_Labor_Summary_Container).Sum(Deliverable_Hours))*>,80))){<*ASSIGNVALUE(SC_OverAll_Labor_Block_Discount:0.00)*>}{[IF]([AND]([GEQ](<*CTX (Container(SC_Labor_Summary_Container).Sum(Deliverable_Hours))*>,81),[LEQ](<*CTX (Container(SC_Labor_Summary_Container).Sum(Deliverable_Hours))*>,200))){<*ASSIGNVALUE(SC_OverAll_Labor_Block_Discount:10.00)*>}{[IF]([AND]([GEQ](<*CTX (Container(SC_Labor_Summary_Container).Sum(Deliverable_Hours))*>,201),[LEQ](<*CTX (Container(SC_Labor_Summary_Container).Sum(Deliverable_Hours))*>,800))){<*ASSIGNVALUE(SC_OverAll_Labor_Block_Discount:15.00)*>)*>}{[IF]([GEQ](<*CTX (Container(SC_Labor_Summary_Container).Sum(Deliverable_Hours))*>,801)){<*ASSIGNVALUE(SC_OverAll_Labor_Block_Discount:20.00)*>)*>}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "20/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

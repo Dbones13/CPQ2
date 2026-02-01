@@ -1,0 +1,11 @@
+{
+    "id": 19625,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS HS OPC Alarm and Event Server)*>,Yes))",
+    "name": "OPC Alarm and Event Server NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:HS-OPCSAE)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,225 @@
+@using WebSite.Controllers
+<header>
+	@*don't show header if user doesn't want menu (e.g. user came from mobile)*@
+	<div id="headerContainer" class="row cald_header_bar hidden" data-bind="css: {'hidden': shouldHideMenu, 'wrap-when-landing-C4C': !landedFromC4C }">
+		<div class="row sap_header_bar flex flex-between">
+			<div class="cald_header_section">
+				<h1 class="cald_logo">@Translation.Get("MainMenu.MainHeading")</h1>
+			</div>
+			<div class="cald_header_section-right sap_header_section-right">
+				<nav class="shellbar-navigation">
+						<div class="nav hidden" role="navigation" data-bind="css: { hidden : isGuestUserLoggedIn || isElectronicallyGuestLoggedIn || shouldHideOptions }">
+		<ul class="nav flex">
+			<li style="padding-top:12px;padding-right:10px;"><span id="quoteCurrency" data-bind="text : getQuoteCurrency()"></span></li>
+			<li class="side-menu-main-icon clearfix full-width" data-bind="css: { active: document.location.pathname == '/quotation/LoadQuote.aspx' || document.location.pathname == '/QuoteList' }">
+				<a id="sideMenuLoadQuoteLink" href="/quotation/LoadQuote.aspx" class="sap-icon full-width" aria-label="@Translation.Get("quotation.ProposalMain.Existing")" data-bind="click: clearSessionStorageOnButtonClick, tooltip: { title: '@Translation.Get("quotation.ProposalMain.Existing")', placement: 'right', viewport: '#sideMenuContainer' }">
+					&#xe0c0;
+					<span class="left slide-out-section side-menu-expanded-section">
+						<span class="expanded-sidemenu-item" data-bind="visible: isSideMenuExpanded()">@Translation.Get("quotation.ProposalMain.Existing")</span>
+					</span>
+				</a>
+			</li>
+			<li class="side-menu-main-icon clearfix full-width bulk-validation-side-menu-main-icon hidden" data-bind="css: { active: document.location.pathname == '/quotation/BulkValidation.aspx', 'hidden' : !bulkValidationShow || useNewQuoteEngine }">
+				<a href="/quotation/BulkValidation.aspx" class="sap-icon full-width" aria-label="@Translation.Get("BulkValidation.Title")" data-bind="tooltip: { title: '@Translation.Get("BulkValidation.Title")', placement: 'right', viewport: '#sideMenuContainer' }">
+					&#xe059;
+					<span class="left slide-out-section side-menu-expanded-section">
+						<span class="expanded-sidemenu-item bulk-validation-list-header" data-bind="visible: isSideMenuExpanded()">@Translation.Get("BulkValidation.Title")</span>
+					</span>
+				</a>
+			</li>
+			@if (AssetsController.HasVisibleColumns())
+			{
+				<!-- ko if: !useNewQuoteEngine -->
+					<li class="side-menu-main-icon clearfix full-width" data-bind="css: { active: document.location.pathname == '/Assets' }">
+						<a href="/Assets" class="sap-icon full-width" aria-label="@Translation.Get("quotation.Assets")" data-bind="tooltip: { title: '@Translation.Get("quotation.Assets")', placement: 'right', viewport: '#sideMenuContainer' }">
+							&#xe124;
+							<span class="left slide-out-section side-menu-expanded-section">
+								<span class="expanded-sidemenu-item" data-bind="visible: isSideMenuExpanded()">@Translation.Get("quotation.Assets")</span>
+							</span>
+						</a>
+					</li>
+				<!-- /ko -->
+			}
+			<li class="side-menu-main-icon clearfix full-width @(@ViewBag.CurrentPage == "Catalog" ? "active" : "")">
+				<a id="CatalogId" href="/Catalogue/CategoryTree.aspx" class="sap-icon full-width" aria-label="@Translation.Get("View.ResponsiveLayout.Catalog")" data-bind="tooltip: { title: '@Translation.Get("View.ResponsiveLayout.Catalog")', placement: 'right', viewport: '#sideMenuContainer' }">
+					&#xe011;
+					<span class="left slide-out-section side-menu-expanded-section">
+						<span class="expanded-sidemenu-item" data-bind="visible: isSideMenuExpanded()">@Translation.Get("View.ResponsiveLayout.Catalog")</span>
+					</span>
+				</a>
+			</li>
+			@if (@ApprovalsController.GetParsedCPQTagValue(ApproveQuotesVisibilityCondition))
+			{
+				<li class="side-menu-main-icon clearfix full-width @(@ViewBag.CurrentPage == "Approvals" ? "active" : "")">
+					<a id="sideMenuLoadQuoteForApprovalsLink" href="/quotation/LoadQuote.aspx?tab=2" class="sap-icon full-width" aria-label="@Translation.Get("View.ResponsiveLayout.Approvals")" data-bind="click: clearSessionStorageOnButtonClick, tooltip: { title: '@Translation.Get("View.ResponsiveLayout.Approvals")', placement: 'right', viewport: '#sideMenuContainer' }">
+						&#xe04f;
+						<span class="left slide-out-section side-menu-expanded-section">
+							<span class="expanded-sidemenu-item" data-bind="visible: isSideMenuExpanded()">@Translation.Get("View.ResponsiveLayout.Approvals")</span>
+						</span>
+					</a>
+				</li>
+			}
+			<!-- ko if: setupLinksVisibility.isSetupLinkVisible() ||
+						setupLinksVisibility.isDevelopConsoleLinkVisible() ||
+						setupLinksVisibility.isScriptWorkbenchLinkVisible() ||
+						setupLinksVisibility.isEventLogLinkVisible() -->
+			<li id="setupMenu" class="side-menu-main-icon hidden" data-bind="css: { hidden : !tryIsAdmin }">
+				<a id="setupMenuDropdownTrigger" href="#" class="dropdown-toggle sap-icon" data-toggle="dropdown" aria-label="@Translation.Get("Menu.Setup")" data-bind="tooltip: { title: '@Translation.Get("Menu.Setup")', placement: 'right', viewport: '#sideMenuContainer' }, attr: { tabindex: isSideMenuExpanded() ? '-1' : '0'}">&#xe00c;</a>
+				<ul id="setupMenuDropdownContainer" class="left slide-out-section dropdown-menu slide-in-from-left side-menu-expanded-section" role="menu">
+					<li class="list-header dropdown-menu-list-header">
+						@Translation.Get("Menu.Setup")
+						<span tabindex="0" aria-label="@Translation.GetJS("MainMenu.ToggleSetup")" data-bind="click: toggleSetupMenuItems, executeOnEnter: toggleSetupMenuItems, visible: isSideMenuExpanded(), tooltip: { title: '@Translation.GetJS("MainMenu.ToggleSetup")', placement: 'auto top' }" class="sap-icon setup-menu-items-toggle">&#xe1e1;</span>
+					</li>
+					<li data-bind="if: setupLinksVisibility.isSetupLinkVisible(), css: { 'rolled-up-menu-item': areSetupMenuItemsRolledUp() }" role="menuitem">
+						<a href="/admin/AdminTransfer.aspx?Log=1" data-bind="click: clearSessionStorageOnButtonClick">
+							<span class="invisible-when-menu-expanded">&#xe00c;</span>&nbsp;@Translation.Get("Menu.Setup")
+						</a>
+					</li>
+					<li data-bind="if: setupLinksVisibility.isDevelopConsoleLinkVisible(), css: { 'rolled-up-menu-item': areSetupMenuItemsRolledUp() }" role="menuitem">
+						<a href="/DeveloperConsole" target="_blank">
+							<span class="invisible-when-menu-expanded">&#xe22c;</span>&nbsp;@Translation.Get("Menu.DeveloperConsole")
+						</a>
+					</li>
+					<li data-bind="if: setupLinksVisibility.isScriptWorkbenchLinkVisible(), css: { 'rolled-up-menu-item': areSetupMenuItemsRolledUp() }" role="menuitem">
+						<a href="/ScriptWorkbench" target="_blank">
+							<span class="invisible-when-menu-expanded">&#xe22d;</span>&nbsp;@Translation.Get("Menu.ScriptWorkbench")
+						</a>
+					</li>
+					<li data-bind="if: setupLinksVisibility.isEventLogLinkVisible(), css: { 'rolled-up-menu-item': areSetupMenuItemsRolledUp() }" role="menuitem">
+						<a href="/SetupSpa/developer-tools/event-log" target="_blank">
+							<span class="invisible-when-menu-expanded">&#xe1a9;</span>&nbsp;@Translation.Get("xmlEventLog")
+						</a>
+					</li>
+				</ul>
+			</li>
+			<!-- /ko -->
+			<li id="setupMenu" class="side-menu-main-icon hidden" data-bind="css: { hidden : !tryIsImpersonated || tryIsAdmin }">
+				<a id="setupMenuDropdownTrigger" class="dropdown-toggle sap-icon" data-toggle="dropdown" href="#" aria-label="@Translation.Get("Menu.Setup")" title="@Translation.Get("Menu.Setup")">&#xe00c;</a>
+				<ul id="setupMenuDropdownContainer" class="left slide-out-section dropdown-menu slide-in-from-left side-menu-expanded-section" role="menu">
+					<li class="list-header dropdown-menu-list-header">
+						@Translation.Get("Menu.Setup")
+						<span data-bind="click: toggleSetupMenuItems, visible: isSideMenuExpanded()" class="sap-icon setup-menu-items-toggle">&#xe1e1;</span>
+					</li>
+					<li data-bind="if: setupLinksVisibility.isDevelopConsoleLinkVisible(), css: { 'rolled-up-menu-item': areSetupMenuItemsRolledUp() }" role="menuitem">
+						<a href="/DeveloperConsole" target="_blank">
+							<span class="invisible-when-menu-expanded">&#xe22c;</span>&nbsp;@Translation.Get("Menu.DeveloperConsole")
+						</a>
+					</li>
+				</ul>
+			</li>
+			  <li class="shellbar-navigation-item hidden" data-bind="css: { hidden : isElectronicallyGuestLoggedIn }"><a aria-label="@Translation.GetJS("quotation.ProposalMain.NewProject")" href="#" data-bind="click: createNewCart, tooltip: { title: '@Translation.GetJS("quotation.ProposalMain.NewProject")', placement: 'left', viewport: 'header' }" class="fiori3-create-new-quote-icon create-new-quote-icon nav-menu-icon">&#xe12b;</a></li>
+						@Html.PartialWithNameAsComment("RecentlyVisitedObjects")
+						@Html.PartialWithNameAsComment("CartSummary", true)
+						<li id="cpq-companion" data-bind="css: { hidden : !isEnabledSapCompanionFunctionality }"><a aria-label="@Translation.GetJS("Header.Companion.Notifications")" href="#" data-bind="tooltip: { title: '@Translation.GetJS("Header.Companion.Notifications")', placement: 'left', viewport: 'header' }" class="nav-menu-icon cpq-notifications-icon-style">&#xe239;</a></li>
+						@*show user menu*@
+						@*Show user menu only if user is not guest user nor electronically signed guest user*@
+						@Html.PartialWithNameAsComment("UserMenu")
+		</ul>
+	</div>
+				   <!--  <ul class="nav flex">
+					
+					  
+					</ul> -->
+				</nav>
+			</div>
+		</div>
+		<div>
+			<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse1">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="visible-xs logo-container">
+			<div class="cald_logo no-margin"></div>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<div id="topMenuC4C" class="hidden" data-bind="css: { hidden : !landedFromC4C }">
+		<ul>
+			<li class="main-list-item hidden @(@ViewBag.CurrentPage == "Catalog" ? "active" : "")" data-bind="css: {'hidden': landedFromC4C && !isQuoteLoaded}">
+				<a href="/Catalogue/CategoryTree.aspx" class="sap-icon full-width" data-bind="tooltip: { title: '@Translation.GetJS("View.ResponsiveLayout.Catalog")', placement: 'left', viewport: 'header' }">
+					&#xe011;
+				</a>
+			</li>
+			<li class="main-list-item" data-bind="css: { active: document.location.pathname == '/quotation/BulkValidation.aspx', 'hidden': !bulkValidationShow || useNewQuoteEngine }">
+				<a href="/quotation/BulkValidation.aspx" class="sap-icon full-width" data-bind="tooltip: { title: '@Translation.GetJS("BulkValidation.Title")', placement: 'left', viewport: 'header' }">
+					&#xe059;
+				</a>
+			</li>
+			<!-- ko if: isQuoteEnvironmentExists()-->
+			@Html.PartialWithNameAsComment("CartSummary", false) @*don't show user menu*@
+			<!-- /ko -->
+			<li class="main-list-item">
+				<a class="dropdown-toggle sap-icon full-width" data-toggle="dropdown" href="#" data-bind="tooltip: { title: '@Translation.GetJS("Menu.Setup")', placement: 'left', viewport: 'header' }">&#xe00c;</a>
+				<ul class="left slide-out-section dropdown-menu slide-down side-menu-expanded-section setup-menu-dropdown-c4c" role="menu">
+					<li class="hidden" data-bind="if: setupLinksVisibility.isSetupLinkVisible(), css: { hidden : !tryIsAdmin }">
+						<a href="/admin/AdminTransfer.aspx?Log=1">
+							@Translation.Get("Menu.Setup")
+						</a>
+					</li>
+					<li class="hidden" data-bind="if: setupLinksVisibility.isDevelopConsoleLinkVisible(), css: { hidden : !tryIsAdmin }">
+						<a href="/DeveloperConsole" target="_blank">
+							@Translation.Get("Menu.DeveloperConsole")
+						</a>
+					</li>
+					<li class="hidden" data-bind="click: clearSessionStorageOnButtonClick, css: { hidden : !tryIsAdmin }"><a href="/multiusers/UserPersonalizationPage.aspx">@Translation.Get("Default.master.UserPage")</a></li>
+					<li class="hidden" data-bind="css: { hidden : !tryIsAdmin }"><a href="/multiusers/QuoteLayout.aspx">@Translation.Get("multiusers.QuoteLayout")</a></li>
+					<li class="hidden" data-bind="if: setupLinksVisibility.isEventLogLinkVisible(), css: { hidden : !tryIsAdmin }">
+						<a href="/SetupSpa/developer-tools/event-log" target="_blank">@Translation.Get("xmlEventLog")</a>
+					</li>
+					<li class="hidden" data-bind="click: clearSessionStorageOnButtonClick, css: { hidden : tryIsAdmin }"><a href="/multiusers/UserPersonalizationPage.aspx">@Translation.Get("Default.master.UserPage")</a></li>
+					<li class="hidden" data-bind="css: { hidden : tryIsAdmin }"><a href="/multiusers/QuoteLayout.aspx">@Translation.Get("multiusers.QuoteLayout")</a></li>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+</header>
+<!-- <div id="sideMenuContainer" data-bind="visible: isInitialized, css: (!landedFromC4C ? '' : 'd-none')" style="display: none">
+	@*Show standard menu only if user is not guest user nor electronically signed guest user*@
+
+	<a href="#" class="side-menu-toggle rotated-side-menu-toggle" aria-label="@Translation.GetJS("MainMenu.ToggleMenu")" data-bind="click: toggleSideMenu, tooltip: { title: '@Translation.GetJS("MainMenu.ToggleMenu")', placement: 'auto left' }">&#xe1c5;</a>
+</div> -->
+<script>
+	$('.side-menu-toggle').click(function () {
+		$("#wrap").toggleClass("side-menu-expanded");
+		$('.side-menu-toggle').toggleClass('rotated-side-menu-toggle');
+
+		// trigger tabdrop update on expanding/collapsing menu on quote pages
+		if (document.location.pathname.indexOf('/quotation/') !== -1) {
+			// timeout because of sidemenu animation
+			setTimeout(function () {
+				$(window).resize();
+			}, 550)
+		}
+	});
+
+	$('.list-header .sap-icon').click(function (event) {
+		event.target.classList.toggle('rotated');
+	});
+
+	$('.list-header .sap-icon').on('keydown', function (event) {
+		if (event.keyCode === 13) {
+			event.target.classList.toggle('rotated');
+		};
+	});
+
+		function getQuoteCurrency() {
+  const quoteType = localStorage.getItem('setQuoteType');
+  const currentPage = location.origin + '/quotation/LoadQuote.aspx';
+
+  if (location.href !== currentPage && ['Contract New', 'Contract Renewal'].includes(quoteType)) {
+    if (location.href.endsWith('quotation/Cart.aspx')) {
+      cpq.server.executeScript("GS_SC_GetQuoteCurrency", {}, function (data) {
+        $("#quoteCurrency").text(data);
+        localStorage.setItem('quoteCurrencyCode', data);
+      });
+    }
+  }
+  else {
+    localStorage.removeItem('quoteCurrencyCode');
+  }
+  return localStorage.getItem('quoteCurrencyCode');
+}
+</script>

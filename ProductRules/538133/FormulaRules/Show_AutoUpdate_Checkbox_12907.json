@@ -1,0 +1,11 @@
+{
+    "id": 12907,
+    "condition": "[NEQ](<*CTX ( Container(SC_P1P2_Parts_Details).Rows.GetCount )*>,0)",
+    "name": "Show_AutoUpdate_Checkbox",
+    "action": "<*ALLOWATTRIBUTES(SC_P1P2_AutoUpdate_Editable_Ext)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

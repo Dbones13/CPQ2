@@ -1,0 +1,11 @@
+{
+    "id": 14185,
+    "condition": "1",
+    "name": "Assign_MIB_Value",
+    "action": "<*ASSIGNVALUE(MIB:<*VALUE(MIB Configuration Required?)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

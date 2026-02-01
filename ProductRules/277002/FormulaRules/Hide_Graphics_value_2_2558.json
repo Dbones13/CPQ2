@@ -1,0 +1,11 @@
+{
+    "id": 2558,
+    "condition": "[NEQ](<*VALUE(Graphics_Migration_Have_process_module_point)*>,No)",
+    "name": "Hide Graphics value 2",
+    "action": "<*DISALLOWVALUES(Graphics_Migration_Require_an_HMI_interface_for_AM:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "03/05/23",
+    "modifiedBy": "Madhuri Sharma"
+}

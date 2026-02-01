@@ -1,0 +1,11 @@
+{
+    "id": 14127,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Remove_Labor_Cost",
+    "action": "<*CTX ( Container(Labor_PriceCost_Cont).Rows.Clear )*>\n<*CTX ( Container(PlantCruise Engineering Labor Container).Rows.Clear )*>\n<*CTX ( Container(PlantCruise Additional Custom Deliverables).Rows.Clear )*>\n<*RESETATTRIBUTE(ErrorMessage)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "10/12/24",
+    "modifiedBy": "YashwanthKumar Boya"
+}

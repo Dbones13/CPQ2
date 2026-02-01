@@ -1,0 +1,68 @@
+<style>
+    #mainResponderContainer{ display: none !important ; }
+</style>
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+  
+    <!-- ko foreach: attributes -->
+  
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+	<span style="display:none" data-bind="text:updateWidth()"></span>
+</div>
+
+<script type="text/html" id="ConfigurationImportTemplate">
+
+	<!-- ko if: importData().AllowConfigurationImport -->
+    <div class="fiori3-upload-configuration fileUploadInput">
+        <label class="fiori3-configurator-upload-label">@Translation.Get("Configurator.UploadConfiguration")</label>
+        @using (Html.BeginForm("UploadConfigurationTemplate", "Configurator", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <!-- ko if: importData().ShowProductConfigurationTemplate -->        
+      		<div class="btn pull-left download-template-btn">
+            <a data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, tooltip: { title: '@Translation.Get("xsltDownloadTemplate")', placement: 'top auto' } " onClick="javascript:DownloadCCCTemplate()" >
+                <span class="sap-icon">&#xe03a;</span>&nbsp;
+            </a></div>   
+            <!-- /ko -->
+            <div class="form-group col-xs-12 col-sm-8 clear-padding fiori3-configuration-upload">
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <div class="input-group">
+                        <div class="form-control uneditable-input">
+                            <span class="sap-icon fileupload-exists">&#xe172;</span>
+                            <span class="fileupload-preview"></span>
+                        </div>
+                        <div class="input-group-btn" data-bind="tooltip: { title: '@Translation.GetJS("Configurator.ChooseTemplateForUpload")', placement: 'top auto' }">
+                            <input id="uploadFileConfigurationImport" type="file" name="file" class="file-input" data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, executeOnEnter: function() { openFileInput(); }" aria-label="@Translation.GetJS("Configurator.ChooseTemplateForUpload")" />
+                            <span class="btn btn-default btn-file">
+                                <a class="fileupload-new"><span class="sap-icon">&#xe12e;</span></a>
+                                <a class="fileupload-exists"><span class="sap-icon">&#xe12e;</span></a>
+                            </span>
+                        </div>
+                        <div class="input-group-btn fileupload-exists" data-bind="tooltip: { title: '@Translation.GetJS("Configurator.RemoveConfigurationTemplate")', placement: 'top auto' }">
+                            <a href="#" class="btn btn-default" data-dismiss="fileupload" aria-label="@Translation.GetJS("Configurator.RemoveConfigurationTemplate")" role="button">
+                                <span class="sap-icon">&#xe03e;</span>
+                            </a>
+                        </div>
+                        <div class="input-group-btn">
+                            <button id="applyTemplateConfigurationImport" data-bind="event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, disable: importData().ConfigurationFileName.length == 0, click: applyConfigTemplate" class="btn btn-default apply-template-btn">@Translation.Get("xsltApplyTemplate")</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <br />
+    <!-- /ko -->
+</script>
+<script type="text/javascript">
+	function updateWidth(){ $("#config-container").removeClass('col-md-8').addClass('col-md-12'); }
+</script>

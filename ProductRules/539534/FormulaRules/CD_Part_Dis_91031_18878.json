@@ -1,0 +1,11 @@
+{
+    "id": 18878,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60L Standard),[NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line)),[NEQ](<*VALUE(MX_CD_Slice_Lip)*>,Stainless Steel))",
+    "name": "CD_Part_Dis_91031",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:91031)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20368,
+    "condition": "[NOT]([IN](<*VALUE(SS_Server_Node_Type_Workstation)*>,SVR_PER_DELL_Rack_RAID5))",
+    "name": "condition_for_additional_disk",
+    "action": "<*DISALLOWALLVALUESEXCEPT(SS_Additional_Hard Disk_Station:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

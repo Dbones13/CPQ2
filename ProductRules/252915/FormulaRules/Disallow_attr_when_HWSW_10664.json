@@ -1,0 +1,11 @@
+{
+    "id": 10664,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW))",
+    "name": "Disallow_attr_when_HW/SW",
+    "action": "<*DISALLOWATTRIBUTES(LSS_PLC_How_many_existing_Cabinets_will_be_used)*>\n[IF]([EQ](<*VALUE(LSS_PLC_Base_Media_Delivery)*>,)){<*SELECTVALUE(LSS_PLC_Base_Media_Delivery:Electronic Download)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

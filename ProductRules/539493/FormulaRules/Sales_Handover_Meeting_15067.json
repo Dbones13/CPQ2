@@ -1,0 +1,11 @@
+{
+    "id": 15067,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Sales Handover Meeting",
+    "action": "<*ASSIGNVALUE(Sales Handover Meeting:<* Eval(2*(1+(0<*VALUE(Total_Quantity_Factor_for_Scope)*>*0.5)+(0<*VALUE(MSE_Number_Project_Specifications_Supplied)*>*0.25))) *>)*>",
+    "description": "2*(1+(QF*0.5)+(QS*0.25))",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

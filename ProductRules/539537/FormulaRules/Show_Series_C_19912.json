@@ -1,0 +1,11 @@
+{
+    "id": 19912,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,No)",
+    "name": "Show_Series_C",
+    "action": "<*ALLOWVALUES(SerC_CG_IO_Family_Type:Series C)*>\n[IF]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,)){<*SELECTVALUE(SerC_CG_IO_Family_Type:Series C)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

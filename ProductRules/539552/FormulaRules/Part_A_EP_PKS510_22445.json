@@ -1,0 +1,11 @@
+{
+    "id": 22445,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Experion_PKS_Release)*>,R510),[EQ](<*VALUE(ESDC_base_media)*>,Physical Delivery))",
+    "name": "Part_A_EP_PKS510",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:EP-PKS510)*><*SETATVQTY(ESDC_BOM_Parts:EP-PKS510, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,37 @@
+
+
+<div class="row">
+    <div class="fiori3-alert fiori3-alert-danger" data-bind="visible: approval.errorMessage, html: approval.errorMessage"></div>
+    <div class="fiori3-alert fiori3-alert-warning" data-bind="visible: messageTitle() || approval.conditions().length > 0 || cartUsage().length > 0 || landingMessages().length > 0 || errorMessage()" style="background:#ff6023;">
+        <sap class="sap-icon" style="color:white;">&#xe053;</sap>
+        <div style="padding: 20px; background: white;">
+            <div class="cart-warning-group" data-bind="style : { display: landingMessageTitle() ? 'block' : 'none' }">
+                <p data-bind="html: landingMessageTitle"></p>
+                <ul data-bind="foreach: landingMessages">
+                    <li><span data-bind="text: title"></span><span data-bind="if: description">: </span><span data-bind="text: description"></span></li>
+                </ul>
+            </div>
+            <div class="cart-warning-group" data-bind="style : { display: messageTitle() ? 'block' : 'none' }">
+                <p data-bind="html: messageTitle"></p>
+                <ul data-bind="foreach: messageItems">
+                    <li><span data-bind="text: title"></span>: <span data-bind="    text: description"></span></li>
+                </ul>
+            </div>
+            <div class="cart-warning-group" data-bind="style : { display: errorMessage() ? 'block' : 'none' }">
+                <span data-bind="html: errorMessage"></span><br />
+            </div>
+            <div class="cart-warning-group" data-bind="style : { display: approval.conditions().length > 0 ? 'block' : 'none' }">
+                <!-- ko template: { name: 'ApprovalTemplate', data: approval }  -->
+                <!--/ko -->
+            </div>
+            <div class="cart-warning-group" data-bind="style : { display: cartUsage().length > 0 ? 'block' : 'none' }">
+                <p>@Translation.Get("Cart.RecentlyOpened")</p>
+                <ul data-bind="foreach: cartUsage">
+                    <li><span data-bind="text: user"></span>(<span data-bind="    text: openedMinutesAgo"></span>)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.PartialWithNameAsComment("Templates/ApprovalTemplate")

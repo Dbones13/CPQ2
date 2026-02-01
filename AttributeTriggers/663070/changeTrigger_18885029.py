@@ -1,0 +1,11 @@
+ScriptExecutor.Execute('GS_SetL3SwitchDefaults')
+attr_val = Product.Attr('L3 Switch Required').GetValue()
+if attr_val == 'No':
+	Product.Attr('Tree A 2m cable (0-1000) L3').AssignValue('0')
+	Product.Attr('Tree A 5m cable (0-1000) L3').AssignValue('0')
+	Product.Attr('Tree A 10m cable (0-1000) L3').AssignValue('0')
+	Product.Attr('Tree A 20m cable (0-1000) L3').AssignValue('0')
+	Product.Attr('Tree B 10m cable (0-1000) L3').AssignValue('0')
+	Product.Attr('Tree B 20m cable (0-1000) L3').AssignValue('0')
+	Product.Attr('Tree B 2m cable (0-1000) L3').AssignValue('0')
+	Product.Attr('Tree B 5m cable (0-1000) L3').AssignValue('0')

@@ -1,0 +1,11 @@
+{
+    "id": 20413,
+    "condition": "[EQ](<*VALUE(SS_Simulation_Server_required)*>,)",
+    "name": "Default_SS_Simulation_Server_required",
+    "action": "<*SELECTVALUE(SS_Simulation_Server_required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

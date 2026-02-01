@@ -1,0 +1,11 @@
+{
+    "id": 10585,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Analog_Input_Modules_8_point)*>,)",
+    "name": "CWS_Mig_Default_Input_Modules_8_point",
+    "action": "<*ASSIGNVALUE(CWS_Mig_Analog_Input_Modules_8_point:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

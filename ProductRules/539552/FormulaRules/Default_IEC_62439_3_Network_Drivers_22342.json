@@ -1,0 +1,11 @@
+{
+    "id": 22342,
+    "condition": "[EQ](<*VALUE(ESDC_IEC_Network_Drivers)*>,)",
+    "name": "Default_IEC_62439_3_Network_Drivers",
+    "action": "<*ASSIGNVALUE(ESDC_IEC_Network_Drivers:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

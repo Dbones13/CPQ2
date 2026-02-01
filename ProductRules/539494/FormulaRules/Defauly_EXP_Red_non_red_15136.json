@@ -1,0 +1,11 @@
+{
+    "id": 15136,
+    "condition": "[EQ](<*VALUE(EXP_Red_non_red)*>,)",
+    "name": "Defauly_EXP_Red_non_red",
+    "action": "<*SELECTVALUE(EXP_Red_non_red:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

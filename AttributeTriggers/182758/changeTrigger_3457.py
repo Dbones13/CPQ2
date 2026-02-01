@@ -1,0 +1,1 @@
+ScriptExecutor.ExecuteGlobal('GS_SelectAllUploadedProducts')

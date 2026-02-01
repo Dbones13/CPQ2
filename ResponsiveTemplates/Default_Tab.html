@@ -1,0 +1,189 @@
+<!-- # Note from CX-CPQ Team (for PLC, UOC, PMD, Safety Manager): I have removed 
+the [Default] status for this customized code. Writing code in the Default_Tab Responsive Template 
+forces your objects to show on EVERY Configurable Product within CPQ. 
+This is severely hindering other team's work. Please adhere to SAP's Best Practices for CPQ.  
+Also, Responsive Templates are not the proper place to create attributes and tables for configuration.  
+Please create Regular attributes for single fields & Container attributes for tables. 
+Thank you. BFJ - User: H491230 -->
+<style>
+.required label {
+    font-weight: bold;
+}
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+</style>
+
+
+
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper">
+
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+
+    <!-- ko foreach: attributes -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+<div class="clearfix">&nbsp;</div>
+    <div class="col-md-6 col-sm-6 col-xs-12 y_ace_quote" style="display: none" >
+      <div class="fiori3-container-label flex col-md-8"  style="z-index:99;" >
+        <span class="label-range-hint-wrapper flex">
+          <label style="display: inline-block" >Yearly / ACE quote no</label>
+        </span>
+      </div>
+      <div class="fiori3-input-group col-md-4" id = "y_ace">
+        <input type="text" id="y_ace_quote_text" value="" onchange="y_ace()">
+      </div>
+
+      <div class="fiori3-container-label flex col-md-8"  style="z-index:99;" >
+        <span class="label-range-hint-wrapper flex">
+          <label style="display: inline-block" >Description</label>
+        </span>
+      </div>
+      <div class="fiori3-input-group col-md-4" id = "y_desc">
+        <input type="text" id="y_desc_text" onchange="y_ace()">
+      </div>
+      
+      <div class="fiori3-container-label fiori3-chckqty-wrapper col-md-8">
+		<label>Adder LP</label>
+        <ul class="chckqty" role="radiogroup" id="y_adder" aria-label="y_adder">
+             <li class="vertical-align">
+				<input type="radio" value="" name="y_adder" id="y_adder_text" onchange="y_ace()">&nbsp;<span>Adder</span>&nbsp;
+				<input type="radio" value="" name="y_adder" id="y_total_text" onchange="y_ace()">&nbsp;<span >Total LP<span>&nbsp;
+            </li>
+        </ul>
+    </div>
+       <div class="col-md-6 fiori3-chckqty-wrapper" style="display: none">
+            <label>Adder LP</label>
+            <ul class="chckqty" role="radiogroup">
+                <li><input type="radio" id="AdderLP" name="fav_language" value="Adder">Adder</li>
+                <li><input type="radio" id="TotalLP" name="fav_language" value="Total LP">Total LP</li>
+            </ul>
+    	</div> 
+
+      <div class="fiori3-container-label flex col-md-8"  style="z-index:99;" >
+        <span class="label-range-hint-wrapper flex">
+          <label style="display: inline-block" >List Price</label>
+        </span>
+        </div>
+      <div class="fiori3-input-group col-md-4" id = "y_listprice">
+        <input type="number" min="0.00" max="10000.00" step="0.01" onkeydown="if(event.key==='e'||event.key==='E')event.preventDefault();" id="y_listprice_text" onchange="y_ace()">
+      </div>
+
+      <div class="fiori3-container-label flex col-md-8"  style="z-index:99;" >
+        <span class="label-range-hint-wrapper flex">
+          <label style="display: inline-block" >Cost</label>
+        </span>
+        </div>
+      <div class="fiori3-input-group col-md-4" id = "y_cost">
+        <input type="number" min="0.00" max="10000.00" step="0.01" onkeydown="if(event.key==='e'||event.key==='E')event.preventDefault();" id="y_cost_text" onchange="y_ace()">
+      </div>
+    </div>
+        
+        <div class="col-md-6 col-sm-6 col-xs-12 yrlyspec" style="display: none" >
+          
+                <div class="fiori3-container-label flex col-md-6"  style="z-index:99;" >
+                    <span class="label-range-hint-wrapper flex">
+                        <label style="display: inline-block" >Choose Yspec Quote</label>
+                    </span>
+
+                </div>
+                 <div class="fiori3-input-group col-md-6" id = "sampletest">
+
+                 </div>
+            
+        </div>
+<div class="clearfix">&nbsp;</div>
+   <div class="col-xs-6" >
+      <div id = "suboptn" class="yrlyspec" style="display: none" >      
+      </div>
+    </div>
+
+
+  <div id = "addyspec" class="col-xl-3 col-md-6 col-sm-6 col-xs-12 " style="display: none" > 
+    <button class="btn btn-primary fiori3-btn-primary" onclick = "addyspecgrid()">Add YSPEC</button>
+  </div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="col-md-6 col-sm-6 col-xs-12" id="etoref" style="display: none">
+    	<div class="col-xl-6 col-md-6 col-sm-6 col-xs-6 " >
+        		<span class="label-range-hint-wrapper flex">
+                        <label style="display: inline-block" id="choose_ref_no">Choose ETO Ref no.</label>
+            	</span>
+        </div>
+        <div id = "eto_refno" class="col-xl-6 col-md-6 col-sm-6 col-xs-6 "  ></div>
+	</div>
+    
+    <div id = "addeto" class="col-xl-12 col-md-12 col-sm-12 col-xs-12 " style="display: none" > 
+        
+    <button id="addeto_btn" class="btn btn-primary fiori3-btn-primary" onclick = "addeto()">Add ETO</button>
+  </div>
+</div>
+<div class = "config-container cpq-scroll yrlyspec yrlyspectab" style="display: none">
+    
+  <table class = "table table-bordered fiori3-table fiori3-configuration-container-table" id="yspec-table">
+         <thead>
+  			<tr>
+              <th>Delete</th>
+              <th>Yearly Yspec Quote Ref</th>
+              <th>Yspec Short Description</th>
+              <th>Yspec Specifications</th>
+              <th>Yspec Price</th>
+              <th>Yspec SampleModel</th>
+              <th>Yspec Cost Price</th>
+            </tr>
+             <tr>
+              <th></th>
+              <th><input type="text" id="yspecial_quote" onfocus="clearval('yspecial_quote')" onkeyup="checkinput('1','yspecial_quote','yspec-table')"></th>
+              <th><input type="text" id="yspecial_description" onfocus="clearval('yspecial_description')" onkeyup="checkinput('2','yspecial_description','yspec-table')"></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+  		 </thead>
+    	 <tbody id = "yspec_grid">
+         </tbody>
+    </table>
+  </div>
+
+<div id="etotable" class = "config-container cpq-scroll etotab" style="display: none" >
+    <button class="btn btn-primary fiori3-btn-primary" onclick="addNewRow()">Add New Row</button>
+  <table id="ETO-table" class = "table table-bordered fiori3-table fiori3-configuration-container-table">
+         <thead>					
+  			<tr>
+              <th id="eto_ref_no">ETO Ref No</th>
+              <th id="proposal_notes">Proposal Notes</th>
+              <th id="production_notes">Production Notes</th>
+              <th id="manufacturing_notes">Manufacturing Notes</th>
+              <th id="eto_price">ETO Price</th>
+              <th id="eto_cost">ETO Cost</th>
+              <th>Action</th>
+            </tr>
+             <tr>
+              <th><input type="text" id="ref_no" onkeyup="checkinput('0','ref_no','ETO-table')"></th>
+              <th><input type="text" id="proposalnotes" onkeyup="checkinput('1','proposalnotes','ETO-table')"></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+  		 </thead>
+    	 <tbody id = "eto_grid">
+         </tbody>
+    </table>
+  
+
+</div>
+

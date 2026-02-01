@@ -1,0 +1,11 @@
+{
+    "id": 18271,
+    "condition": "[EQ](<*VALUE(MXP_Sensor_Type)*>,IRPlus Transmission)",
+    "name": "Part_A_3_4624_XX",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-4624-XX)*><*SETATVQTY(MXP_SE_Bom_Parts:3-4624-XX,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19837,
+    "condition": "[EQ](<*VALUE(SerC_Number of Rockwell Control Processors(NON))*>,)",
+    "name": "Default_SerC_Number of Rockwell Control Processors(NON)",
+    "action": "<*ASSIGNVALUE(SerC_Number of Rockwell Control Processors(NON):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

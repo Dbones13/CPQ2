@@ -1,0 +1,11 @@
+{
+    "id": 26058,
+    "condition": "[EQ](<*VALUE(Experion Backup & Restore (Simulation PC)1)*>,)",
+    "name": "EBR_default12",
+    "action": "<*SELECTVALUE(Experion Backup & Restore (Simulation PC)1:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

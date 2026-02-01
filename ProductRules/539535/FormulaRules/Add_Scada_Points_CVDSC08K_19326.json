@@ -1,0 +1,11 @@
+{
+    "id": 19326,
+    "condition": "[GT](<* Eval(<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000)/10000))*10000) *>,7999)",
+    "name": "Add_Scada_Points_CV-DSC08K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DSC08K)*><*SETATVQTY(PlantCruise_Part_Summary:CV-DSC08K,<* Eval(INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000 - (INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000))*25000)/10000))*10000)/8000)) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

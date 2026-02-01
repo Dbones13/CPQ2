@@ -1,0 +1,1 @@
+<*CTX( Container(DVM_Sys_Grp_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace("<*VALUE(DVM_Sys_Grp_Part_Summary)*>",", ","' as PartNumber UNION SELECT '"))*>' as PartNumber   ) )*>

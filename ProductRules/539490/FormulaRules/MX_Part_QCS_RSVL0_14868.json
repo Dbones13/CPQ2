@@ -1,0 +1,11 @@
+{
+    "id": 14868,
+    "condition": "[EQ](<*VALUE(MX_Number_of_Thin_Clients)*>,0)",
+    "name": "MX_Part_QCS_RSVL0",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:QCS-RSVL0)*><*SETATVQTY(MX_Platform_Bom_Parts:QCS-RSVL0, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

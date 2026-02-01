@@ -1,0 +1,11 @@
+{
+    "id": 17863,
+    "condition": "[EQ](<*CTX( Container(IEC/DNP3 Interfaces).Row(5).Column(Devices).Get )*>,No)",
+    "name": "SCADA_EP-IDNPHB_NO",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-IDNPHB)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

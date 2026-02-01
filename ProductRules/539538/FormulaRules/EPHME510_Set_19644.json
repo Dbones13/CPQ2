@@ -1,0 +1,11 @@
+{
+    "id": 19644,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(Exp HS Installation Media \u2013ESD Version only)*>,No),[EQ](<*VALUE(HS_Existing_System_Release)*>,Experion HS R510))",
+    "name": "EP-HME510 Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HME510)*><* DoResetAtt *>",
+    "description": "Experion HS Media Kit - Physical Delivery R510",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

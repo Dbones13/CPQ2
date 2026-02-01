@@ -1,0 +1,11 @@
+{
+    "id": 12233,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "ELEPIU_labor_del_Migration_DDS",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_Migration_DDS:<* Eval([IF]([EQ](<*VALUE(ELEPIU_Documentation_required?)*>,Yes)){<* Eval(14+0.1*(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>-1)+[IF]([GT](<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>,16)){<* Eval(0.1*(<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>-16)) *>}{0}[ENDIF]) *>}{0}[ENDIF]) *>)*>",
+    "description": "CXCPQ-60183",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

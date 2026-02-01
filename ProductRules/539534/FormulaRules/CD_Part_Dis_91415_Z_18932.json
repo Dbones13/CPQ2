@@ -1,0 +1,11 @@
+{
+    "id": 18932,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line),[NEQ](<*VALUE(MX_CD_CDW_Mounting_Adapter)*>,Yes),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_91415_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:91415-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

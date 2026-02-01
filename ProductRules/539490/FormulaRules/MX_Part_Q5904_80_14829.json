@@ -1,0 +1,11 @@
+{
+    "id": 14829,
+    "condition": "[EQ](<*VALUE(MX_MD_Automatic_Grade_Change)*>,Yes)",
+    "name": "MX_Part_Q5904_80",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-80)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-80, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

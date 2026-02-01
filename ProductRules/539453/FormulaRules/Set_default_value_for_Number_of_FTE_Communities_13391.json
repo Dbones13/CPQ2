@@ -1,0 +1,11 @@
+{
+    "id": 13391,
+    "condition": "[EQ](<*VALUE(Number of FTE Communities)*>,)",
+    "name": "Set default value for Number of FTE Communities",
+    "action": "<*ASSIGNVALUE(Number of FTE Communities:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

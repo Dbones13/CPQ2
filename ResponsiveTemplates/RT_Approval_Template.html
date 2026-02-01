@@ -1,0 +1,328 @@
+<div class="cart-content fiori3-cart-content clearfix" style="margin: 0;">
+    <div id="cartSectionsWrapper" class="cart-sections-wrapper">
+  <!-- ko let: { opppportunityCategory: $root.customFields.firstWithProperty('name', 'CF_ApprovalTabOpportunityCategory')?.content(), bookingLOB: $root.customFields.firstWithProperty('name', 'CF_ApprovalTabBookingLOB')?.content(), Quote_type:$root.customFields.firstWithProperty('name', 'Quote Type')?.content()} -->
+  <!-- START - CXCPQ-64865 - 21/09/2023 - Manthan Rajguru - Added condition to not show approval matrix section for service contract -->
+  <!-- changes by ankit : added one OR condition for Quote Type- Projects and booking Lob - PMC  in line #6 -->
+      <!-- ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") || ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Projects" && bookingLOB == 'PMC') -->
+  <!-- END - CXCPQ-64865 - 21/09/2023 - Manthan Rajguru - Added condition to not show approval matrix section for service contract -->
+    <!-- ko if: (bookingLOB == 'LSS' && Quote_type == 'Parts and Spot') -->
+      <div class="row">
+        <div class="col-md-12 col-sm-6 col-xs-12">
+          <div class="custom-field-headers" style="margin:1em 0;"><h2>Approval Matrix</h2></div>
+            <div class="custom-fields" id="approval-matrix-c" data-bind="renderApprovalMatrix: opppportunityCategory"></div>
+          </div>
+      </div>
+    <!-- /ko -->
+    <!-- START - CXCPQ-64865 - 21/09/2023 - Manthan Rajguru - Added condition to not show approval matrix section for service contract -->
+    <!-- /ko -->
+    <!-- END - CXCPQ-64865 - 21/09/2023 - Manthan Rajguru - Added condition to not show approval matrix section for service contract -->
+    <!-- ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") -->
+    <!-- ko ifnot: (bookingLOB == 'LSS' && Quote_type == 'Parts and Spot') -->
+      <div class="row">
+        <div id="approval-level-section" class="fiori3-cart-section clearfix section-toggled"> 
+          <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#approval-level-section')">
+            <span>Approval Levels</span>
+            <a id="approval-level-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+          </div>
+          <div id="approval-level-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="text-center custom-field-headers" style="margin:1em 0;">Approval Matrix</div>
+              <!-- CXCPQ-65792 and CXCPQ-64449 : start - changes by ankit for PMC Approval for hiding existing Approval matrix and showing saperate table for projects and parts and spot -->
+              <!-- ko let: { Qtype:$root.customFields.firstWithProperty('name', 'Quote Type')?.content() } -->
+  
+              <!-- ko ifnot: ((Qtype === "Projects"|| Qtype === "Parts and Spot") && bookingLOB == 'PMC') -->
+              <!-- CXCPQ-65792 and CXCPQ-64449 : End - changes by ankit for PMC Approval for hiding existing Approval matrix and showing saperate table for projects and parts and spot -->
+              <div class="custom-fields" id="approval-matrix"></div>
+              <!-- CXCPQ-65792 and CXCPQ-64449 : start - changes by ankit for PMC Approval for hiding existing Approval matrix and showing saperate table for projects and parts and spot -->
+              <!-- /ko -->
+              <!-- ko if: ((Qtype === "Projects"|| Qtype === "Parts and Spot") && bookingLOB == 'PMC') -->
+              <div class="custom-fields" id="approval-matrix-PMC" data-bind="renderApprovalMatrixPMC: ''"></div>
+              <!-- /ko -->
+              <!-- /ko -->
+              <!-- CXCPQ-65792 and CXCPQ-64449 : End - changes by ankit for PMC Approval for hiding existing Approval matrix and showing saperate table for projects and parts and spot -->
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="text-center custom-field-headers" style="margin:1em 0;">Approval Levels</div>
+              <div id="customFieldsContainer" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                  <!-- ko if: (((bookingLOB == 'LSS' || bookingLOB == 'PAS' ) && $root.customFields.firstWithProperty('name', 'Quote Type')?.content() != "Projects")) -->
+                  <div data-bind="foreach: customFields.filterByProperty('name','Is_Quote_Approval_Exempted','EGAP_Highest_Approval_Level_for_the_Quote','EGAP_Highest_Price_Margin_Approval_Level','EGAP_Highest_Cash_Risk_Approval_Level','EGAP_Approval_Level_when_Cash_Flow_negative_position_GT_100k','EGAP_Approval_Level_when_Price_Discount_Exceeds_Threshold_Discount')" class="quote-custom-fields" >
+                    <!-- ko template: template + "_RightAlign_Quote" --> 
+                     <!--/ko -->
+                  </div>
+                  <!--/ko -->
+                <!-- ko if: (bookingLOB == 'HCP' && $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Parts and Spot") -->
+                <div data-bind="foreach: customFields.filterByProperty('name','Is_Quote_Approval_Exempted','Is_Quote_Approval_Exempted_due_to_MPA','EGAP_Highest_Approval_Level_for_the_Quote','EGAP_Highest_Price_Margin_Approval_Level','EGAP_Highest_Cash_Risk_Approval_Level','EGAP_Approval_Level_when_Cash_Flow_negative_position_GT_100k','EGAP_Approval_Level_when_Price_Discount_Exceeds_Threshold_Discount','Petrofac Opportunity Approval Escalation')" class="quote-custom-fields" >
+                  <!-- ko template: template + "_RightAlign_Quote" --> 
+                   <!--/ko -->
+                </div>
+                <!--/ko -->
+                <!-- ko if: ((bookingLOB == 'LSS' || bookingLOB == 'PAS' || bookingLOB == 'HCP' ) && $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Projects") -->
+                <div data-bind="foreach: customFields.filterByProperty('name','Is_Quote_Approval_Exempted','Is_Quote_Approval_Exempted_due_to_MPA','EGAP_Highest_Approval_Level_for_the_Quote','EGAP_Highest_Price_Margin_Approval_Level','EGAP_Highest_Cash_Risk_Approval_Level','EGAP_Approval_Level_when_Cash_Flow_negative_position_GT_100k','EGAP_Approval_Level_when_Price_Discount_Exceeds_Threshold_Discount','Petrofac Opportunity Approval Escalation')" class="quote-custom-fields" >
+                  <!-- ko if: name == "Is_Quote_Approval_Exempted_due_to_MPA" && ((bookingLOB == 'LSS' && (['Projects','Contract New','Contract Renewal']).includes($root.customFields.firstWithProperty('name', 'Quote Type')?.content())) || (bookingLOB == 'PAS' && (['Projects']).includes($root.customFields.firstWithProperty('name', 'Quote Type')?.content()))) -->
+                    <!-- ko template: template + "_RightAlign_Quote" -->
+                     <!--/ko -->
+                  <!--/ko -->
+                  <!-- ko ifnot: name == "Is_Quote_Approval_Exempted_due_to_MPA" -->
+                    <!-- ko template: template + "_RightAlign_Quote" -->
+                     <!--/ko -->
+                  <!--/ko -->
+                  </div>
+                <!--/ko -->
+                  <!-- ko ifnot: (bookingLOB == 'LSS' || bookingLOB == 'PAS'|| bookingLOB == 'HCP') -->
+                  <div data-bind="foreach: customFields.filterByProperty('name','EGAP_Highest_Approval_Level_for_the_Quote','EGAP_Highest_Price_Margin_Approval_Level','EGAP_Highest_Cash_Risk_Approval_Level','EGAP_Approval_Level_when_Cash_Flow_negative_position_GT_100k','EGAP_Approval_Level_when_Price_Discount_Exceeds_Threshold_Discount')" class="quote-custom-fields" >
+                    <!-- ko template: template + "_RightAlign_Quote" --> 
+                     <!--/ko -->
+                </div>
+                  <!--/ko -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  CXCPQ-65793 - Start : changes by ankit for PMC Approval for parts and spot , hiding Approvers and financial summary section -->
+        <!-- ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Parts and Spot" && bookingLOB == 'PMC') -->
+      <!--  CXCPQ-65793 - end : changes by ankit for PMC Approval for parts and spot , hiding Approvers and financial summary section -->
+      
+      <!--  CXCPQ-65789 - Start : changes by ankit for PMC Approval for Projects , hiding Approvers section -->
+        <!-- ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Projects" && bookingLOB == 'PMC') -->
+      <!--  CXCPQ-65789 - End : changes by ankit for PMC Approval for Projects , hiding Approvers section -->
+      <div class="row">
+        <div id="approvers-section" class="fiori3-cart-section clearfix section-toggled">
+          <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#approvers-section')">
+            <span>Approvers</span>
+            <a id="approvers-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+          </div>
+          <div id="approvers-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+            <!-- ko if: ($root.customFields.firstWithProperty('name', 'EGAP_Highest_Approval_Level_for_the_Quote')?.content() === "No Approval" && ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Projects" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Parts and Spot") && $root.customFields.firstWithProperty('name', 'CF_ApprovalEGAPProposalType')?.content() != "Booking" && (bookingLOB == 'LSS' || bookingLOB == 'PAS'|| bookingLOB == 'HCP')) -->
+              <span>Quote does not require approval</span>
+              <!--/ko-->
+              <!-- ko if: ($root.customFields.firstWithProperty('name', 'EGAP_Highest_Approval_Level_for_the_Quote')?.content() != "No Approval" || $root.customFields.firstWithProperty('name', 'CF_ApprovalEGAPProposalType')?.content() === "Booking" ||( $root.customFields.firstWithProperty('name', 'EGAP_Highest_Approval_Level_for_the_Quote')?.content() === "No Approval" && $root.customFields.firstWithProperty('name', 'EGAP_Highest_Price_Margin_Approval_Level')?.content() === "Functional Approvals Only" && $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Parts and Spot" && bookingLOB == 'CCC')) -->
+            <div class="custom-fields">
+              <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Approvers') -->
+                <!-- ko template: template --> <!--/ko -->
+              <!--/ko -->
+            </div>
+              <!--/ko-->
+          </div>
+        </div>
+      </div>
+      <!--  CXCPQ-65789 - Start : changes by ankit for PMC Approval for Projects , hiding Approvers section -->
+        <!-- /ko -->
+      <!--  CXCPQ-65789 - End : changes by ankit for PMC Approval for Projects , hiding Approvers section -->
+      <div class="row">
+        <div id="financial-summary-section" class="fiori3-cart-section clearfix section-toggled">
+  <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#financial-summary-section')">
+            <span>Financial Summary</span>
+            <a id="financial-summary-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+          </div>
+          <div id="financial-summary-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div data-bind="foreach: customFields.filterByProperty('name','EGAP_Cash_Flow_Quality','EGAP_Lowest_Cum_CF_in_any_Single_Month_USD','EGAP_Months_Negative_Cumulative_Cash_Flows')" class="quote-custom-fields" >
+                  <!-- ko template: template + "_RightAlign_Quote" --> <!--/ko -->
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div data-bind="foreach: customFields.filterByProperty('name','EGAP_Max_Consec_Months_Neg_Cum_Cash_Flows', 'EGAP_Revenue_Impact_Change_in_Currency_USD','EGAP_Cashflow_Health')" class="quote-custom-fields" >
+                  <!-- ko template: template + "_RightAlign_Quote" --> <!--/ko -->
+                </div>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="custom-fields" data-bind="renderRevenueAndMargin: ''"></div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="quote-custom-fields">
+                    <!-- ko if: ((Quote_type === "Projects"|| Quote_type === "Parts and Spot") && bookingLOB == 'CCC') -->
+                        <!-- ko foreach: quoteTables.filterByProperty('name', 'EGAP_Third_Party_Content','QT_FinancialSummary_LOBContent') -->
+                            <!-- ko template: template --> <!--/ko -->
+                        <!--/ko -->
+                    <!--/ko -->
+                    <!-- ko ifnot: bookingLOB == 'CCC' -->
+                        <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Labor_and_Engineering_Service', 'EGAP_Third_Party_Content','QT_FinancialSummary_LOBContent') -->
+                            <!-- ko template: template --> <!--/ko -->
+                        <!--/ko -->
+                    <!--/ko -->
+                  </div>
+                </div>
+              </div>
+            <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Net_Cash_Balance', 'EGAP_CFQ_Baseline', 'EGAP_CFQ') -->
+            <div class="row table-overflow cpq-scroll">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                  <!-- ko template: template --> <!--/ko -->
+              </div>
+            </div>
+            <!--/ko -->
+          </div>
+        </div>
+      </div>
+      <!--  CXCPQ-65793 - Start : changes by ankit for PMC Approval for parts and spot , hiding Approvers and financial summary section -->
+        <!-- /ko -->
+      <!--  CXCPQ-65793 - end : changes by ankit for PMC Approval for parts and spot , hiding Approvers and financial summary section -->
+      <!-- ko if: $root.customFields.firstWithProperty('name', 'EGAP_IS_Booking_Check_Visible')?.content() == 'Yes' -->
+      <div class="row">
+        <div id="booking-check-section" class="fiori3-cart-section clearfix section-toggled">
+          <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#booking-check-section')">
+            <span>Booking Check</span>
+            <a id="booking-check-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+          </div>
+          <div id="booking-check-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+            <div class="row">
+              <div class="col-md-10 col-sm-10 col-xs-12">
+                <span>Rule: A booking quote will NOT require all new approvals (will require only Booking Gatekeeper) 
+                  if deviation from Approved Firm quote is due to change in the Foreign Exchange Rate or import of new transfer price and all of the following are true.<br/><br/></span>
+                <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Booking_Check') -->
+                  <!-- ko template: template --> <!--/ko -->
+                <!--/ko -->
+                Booking Quote Approval Requirement: <span data-bind="text: $root.customFields.firstWithProperty('name', 'EGAP_Booking_Quote_Approval_Requirement')?.content()"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- START - CXCPQ-64865 - 21/09/2023 - Manthan Rajguru - Make Approval level & Approvers section visible for service contract-->
+      <!-- ko if: (bookingLOB == 'LSS' && ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() == "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() == "Contract Renewal")) -->
+      <div class="row">
+        <div id="approval-level-section" class="fiori3-cart-section clearfix section-toggled">
+          <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#approval-level-section')">
+            <span>Approval Levels</span>
+            <a id="approval-level-section-href" href="#"
+              class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+          </div>
+          <div id="approval-level-section-content"
+            class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container"
+            style="display:none;">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="text-center custom-field-headers" style="margin:1em 0;">Approval Matrix</div>
+              <div class="custom-fields" id="approval-matrix"></div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="text-center custom-field-headers" style="margin:1em 0;">Approval Levels</div>
+              <div id="customFieldsContainer"
+                class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                  <!-- ko if: (bookingLOB == 'LSS' || bookingLOB == 'PAS'|| bookingLOB == 'HCP') -->
+                <div
+                  data-bind="foreach: customFields.filterByProperty('name','EGAP_Highest_Approval_Level_for_the_Quote', 'Is_Quote_Approval_Exempted', 'EGAP_Highest_Price_Margin_Approval_Level','EGAP_Highest_Cash_Risk_Approval_Level','EGAP_Approval_Level_when_Cash_Flow_negative_position_GT_100k','EGAP_Approval_Level_when_Price_Discount_Exceeds_Threshold_Discount')"
+                  class="quote-custom-fields" style="padding-left:20px">
+                    <!-- ko template: template + "_RightAlign_Quote" -->
+                     <!--/ko -->
+                  </div>
+                  <!--/ko -->
+                  <!-- ko ifnot: (bookingLOB == 'LSS' || bookingLOB == 'PAS'|| bookingLOB == 'HCP') -->
+                  <div
+                    data-bind="foreach: customFields.filterByProperty('name','EGAP_Highest_Approval_Level_for_the_Quote','EGAP_Highest_Price_Margin_Approval_Level','EGAP_Highest_Cash_Risk_Approval_Level','EGAP_Approval_Level_when_Cash_Flow_negative_position_GT_100k','EGAP_Approval_Level_when_Price_Discount_Exceeds_Threshold_Discount')"
+                    class="quote-custom-fields" style="padding-left:20px">
+                    <!-- ko template: template + "_RightAlign_Quote" -->
+                     <!--/ko -->
+                </div>
+                  <!--/ko -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="approvers-section" class="fiori3-cart-section clearfix section-toggled">
+          <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#approvers-section')">
+            <span>Approvers</span>
+            <a id="approvers-section-href" href="#"
+              class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+          </div>
+          <div id="approvers-section-content"
+            class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container"
+            style="display:none;">
+            <!-- ko if: ($root.customFields.firstWithProperty('name', 'EGAP_Highest_Approval_Level_for_the_Quote')?.content() === "No Approval" ) -->
+            <span>Quote does not require approval</span>
+            <!--/ko-->
+            <div class="custom-fields">
+              <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Approvers') -->
+              <!-- ko template: template --> <!--/ko -->
+              <!--/ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+        <div id="financial-summary-section" class="fiori3-cart-section clearfix section-toggled">
+          <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#financial-summary-section')">
+            <span>Financial Summary</span>
+            <a id="financial-summary-section-href" href="#"
+              class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+          </div>
+          <div id="financial-summary-section-content"
+            class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container"
+            style="display:none;">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div
+                  data-bind="foreach: customFields.filterByProperty('name','EGAP_Cash_Flow_Quality','EGAP_Lowest_Cum_CF_in_any_Single_Month_USD','EGAP_Months_Negative_Cumulative_Cash_Flows')"
+                  class="quote-custom-fields">
+                  <!-- ko template: template + "_RightAlign_Quote" --> <!--/ko -->
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div
+                  data-bind="foreach: customFields.filterByProperty('name','EGAP_Max_Consec_Months_Neg_Cum_Cash_Flows', 'EGAP_Revenue_Impact_Change_in_Currency_USD','EGAP_Cashflow_Health')"
+                  class="quote-custom-fields">
+                  <!-- ko template: template + "_RightAlign_Quote" --> <!--/ko -->
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="custom-fields" data-bind="renderRevenueAndMargin: ''"></div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="quote-custom-fields">
+                  <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Labor_and_Engineering_Service', 'EGAP_Third_Party_Content','QT_FinancialSummary_LOBContent','QT_Merged_PricingSummary','Quote_Level_Labor_Type','Sys_Grp_Level_labor_type','Service_Material_Labor_Type','Sys_Grp_Service_Material_Labor') -->
+                  <!-- ko template: template --> <!--/ko -->
+                  <!--/ko -->
+                </div>
+              </div>
+            </div>
+            <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Net_Cash_Balance', 'EGAP_CFQ_Baseline', 'EGAP_CFQ') -->
+            <div class="row table-overflow cpq-scroll">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <!-- ko template: template --> <!--/ko -->
+              </div>
+            </div>
+            <!--/ko -->
+          </div>
+        </div>
+      </div>
+        <!-- ko if: $root.customFields.firstWithProperty('name', 'EGAP_IS_Booking_Check_Visible')?.content() == 'Yes' -->
+        <div class="row">
+          <div id="booking-check-section" class="fiori3-cart-section clearfix section-toggled">
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#booking-check-section')">
+              <span>Booking Check</span>
+              <a id="booking-check-section-href" href="#"
+                class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="booking-check-section-content"
+              class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container"
+              style="display:none;">
+              <div class="row">
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                  <span>Rule: A booking quote will NOT require all new approvals (will require only Booking Gatekeeper)
+                    if deviation from Approved Firm quote is due to change in the Foreign Exchange Rate or import of new
+                    transfer price and all of the following are true.<br /><br /></span>
+                  <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Booking_Check') -->
+                  <!-- ko template: template --> <!--/ko -->
+                  <!--/ko -->
+                  Booking Quote Approval Requirement: <span
+                    data-bind="text: $root.customFields.firstWithProperty('name', 'EGAP_Booking_Quote_Approval_Requirement')?.content()"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /ko -->
+      <!-- /ko -->
+      <!-- END - CXCPQ-64865 - 21/09/2023 - Manthan Rajguru - Make Approval level & Approvers section visible for service contract-->
+  <!-- /ko -->
+    </div>
+  </div>

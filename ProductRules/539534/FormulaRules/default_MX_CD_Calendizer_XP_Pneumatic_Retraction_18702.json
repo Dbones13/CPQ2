@@ -1,0 +1,11 @@
+{
+    "id": 18702,
+    "condition": "[EQ](<*VALUE(MX_CD_Calendizer_XP_Pneumatic_Retraction)*>,)",
+    "name": "default_MX_CD_Calendizer_XP_Pneumatic_Retraction",
+    "action": "<*SELECTVALUE(MX_CD_Calendizer_XP_Pneumatic_Retraction:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

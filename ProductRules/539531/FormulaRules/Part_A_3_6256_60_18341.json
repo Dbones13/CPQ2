@@ -1,0 +1,11 @@
+{
+    "id": 18341,
+    "condition": "[EQ](<*VALUE(MXP_Air_gap_compensation)*>,Yes)",
+    "name": "Part_A_3_6256_60",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-6256-60)*><*SETATVQTY(MXP_SE_Bom_Parts:3-6256-60,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

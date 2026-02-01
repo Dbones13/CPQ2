@@ -1,0 +1,11 @@
+{
+    "id": 26149,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Off_Process_Base_Additional_License)*>,49),[GT](<*eval(Int(Fix(<*VALUE(Off_Process_Base_Additional_License)*>/50)))*>,0)))",
+    "name": "EP_ETSU50_Remove_OffAdd",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-ETSU50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

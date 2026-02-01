@@ -1,0 +1,11 @@
+{
+    "id": 19791,
+    "condition": "[EQ](<*VALUE(FIM_FF_IOs_with_Power_conditioner)*>,)",
+    "name": "Default_FIM_FF_IOs_with_Power_conditioner",
+    "action": "<*SELECTVALUE(FIM_FF_IOs_with_Power_conditioner:No)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

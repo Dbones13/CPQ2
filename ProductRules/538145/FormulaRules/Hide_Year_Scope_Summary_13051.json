@@ -1,0 +1,11 @@
+{
+    "id": 13051,
+    "condition": "[EQ](<*VALUE(SC_License_type)*>,Perpetual)",
+    "name": "Hide_Year_Scope_Summary",
+    "action": "<*CTX ( Container(SC_Trace_Summary).Column(Year).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18677,
+    "condition": "[OR]([GT](<*VALUE(ES_Premium_Access_License)*>,0),[GT](<*VALUE(ES_Mobile_Standard_Premium_Access_License)*>,0),[GT](<*VALUE(ES_Mobile_Station_Premium_Access_License)*>,0))",
+    "name": "Part_A_EP_ETPREM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:EP-ETPREM)*><*SETATVQTY(eServer_BOM_parts:EP-ETPREM,<* Eval(0<*VALUE(ES_Premium_Access_License)*>+0<*VALUE(ES_Mobile_Standard_Premium_Access_License)*> + 0<*VALUE(ES_Mobile_Station_Premium_Access_License)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

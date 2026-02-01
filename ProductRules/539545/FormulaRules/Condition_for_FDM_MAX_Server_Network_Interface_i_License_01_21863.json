@@ -1,0 +1,11 @@
+{
+    "id": 21863,
+    "condition": "[GT](<*VALUE(FDM Server Network Interface License (0-24))*>,0)",
+    "name": "Condition for FDM MAX Server Network Interface (i) License (0-1)",
+    "action": "<*ASSIGNVALUE(FDM MAX Server Network Interface License (0-1):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

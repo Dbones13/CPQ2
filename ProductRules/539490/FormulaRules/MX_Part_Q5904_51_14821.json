@@ -1,0 +1,11 @@
+{
+    "id": 14821,
+    "condition": "[EQ](<*VALUE(MX_MD_Multivariable_Control_Packages)*>,MD Multivariable Control pkg1 (Includes 4CVs, -81, -82, -84))",
+    "name": "MX_Part_Q5904_51",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-51)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-51, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

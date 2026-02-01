@@ -1,0 +1,11 @@
+{
+    "id": 4707,
+    "condition": "[EQ](<*VALUE(MX_SG_Calibration_Sample_Holder)*>,)",
+    "name": "Default_MX_SG_Calibration_Sample_Holder",
+    "action": "<*SELECTVALUE(MX_SG_Calibration_Sample_Holder:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23859,
+    "condition": "1",
+    "name": "Total_DO_Points",
+    "action": "<*ASSIGNVALUE(Labor_parameter_do:<*Eval(0<*CTX( Container(SM_RG_IO_Count_Digital_Output_Cont).Sum(Total_DO_Points) )*> + 0<*CTX( Container(SM_RG_IO_Count_Digital_Input_1.3_Cabinet_Cont).Sum(Total_DO_Points) )*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

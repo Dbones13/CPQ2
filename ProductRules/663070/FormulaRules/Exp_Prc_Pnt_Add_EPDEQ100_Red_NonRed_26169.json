@@ -1,0 +1,11 @@
+{
+    "id": 26169,
+    "condition": "[GT](<*VALUE(Number of Equipment Points (0 - 1000))*>,0)",
+    "name": "Exp_Prc_Pnt_Add_EPDEQ100_Red_NonRed",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-DEQ100)*>[IF]([NEQ](<* Eval(<*VALUE(Number of Equipment Points (0 - 1000))*>/100) *>,<* Eval(INT(<*VALUE(Number of Equipment Points (0 - 1000))*>/100)) *>)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DEQ100,<* Eval(INT(<*VALUE(Number of Equipment Points (0 - 1000))*>/100)+1) *>)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DEQ100,<* Eval(INT(<*VALUE(Number of Equipment Points (0 - 1000))*>/100)) *>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP_DEQ100",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

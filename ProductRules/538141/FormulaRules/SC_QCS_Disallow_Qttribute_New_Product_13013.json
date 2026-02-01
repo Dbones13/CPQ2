@@ -1,0 +1,11 @@
+{
+    "id": 13013,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "SC_QCS_Disallow_Qttribute_New_Product",
+    "action": "<*DISALLOWATTRIBUTES(SC_QCS_Scope_Button,SC_QCS_Scope_Summary_2nd_Table)*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(Section).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(PY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(Renewal_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(PY_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(HW_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(SR_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(SA_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(Comments).SetPermission(Hidden) )*><*CTX ( Container(SC_QCS_Pricing_Details_Cont).Column(HW_ListPrice).SetPermission(Hidden) )*>",
+    "description": "CXCPQ-75112",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

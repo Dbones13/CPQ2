@@ -1,0 +1,11 @@
+{
+    "id": 23933,
+    "condition": "[AND]([NEQ](<*VALUE(Terminal_TM_System_Complexity)*>,Moderate),[NEQ](<*VALUE(Terminal_TM_System_Complexity)*>,Complex))",
+    "name": "Terminal_TM_System_Complexity_Set_Default",
+    "action": "<*SELECTVALUE(Terminal_TM_System_Complexity:Simple)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

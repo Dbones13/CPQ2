@@ -1,0 +1,11 @@
+{
+    "id": 12956,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "CBM_Py_List_Price_Total",
+    "action": "<*ASSIGNVALUE(CBM_Py_List_Price:<* Eval(<*CTX ( Container(CBM_Pricing_Container\n).Sum(PY_ListPrice) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

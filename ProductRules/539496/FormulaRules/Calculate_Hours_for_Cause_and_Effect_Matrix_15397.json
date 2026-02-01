@@ -1,0 +1,11 @@
+{
+    "id": 15397,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Cause and Effect Matrix",
+    "action": "<*ASSIGNVALUE(FDA Cause and Effect Matrix:[IF](<*ISSELECTED(FDA Implementation Methodology.Non-Standard Build Estimate)*>){<* Eval((8*<*VALUE(FDA Number of XLS Panels)*>)+((<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>*(<*VALUE(FDA Number of XLS Panels)*>))*0.25)) *>}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,<*ISSELECTED(FDA GES Location.None)*>)){<* Eval(((8*<*VALUE(FDA Number of XLS Panels)*>)+((<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>*(<*VALUE(FDA Number of XLS Panels)*>))*0.25))*0.5) *>}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(FDA GES Location)*>,None))){<* Eval((((8*<*VALUE(FDA Number of XLS Panels)*>)+((<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>*(<*VALUE(FDA Number of XLS Panels)*>))*0.25))*0.5)*1.1) *>}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

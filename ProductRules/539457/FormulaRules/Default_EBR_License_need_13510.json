@@ -1,0 +1,11 @@
+{
+    "id": 13510,
+    "condition": "[EQ](<*VALUE(Virtualization_Virtual_EBR_license_needs)*>,)",
+    "name": "Default_EBR_License_need",
+    "action": "<*SELECTVALUE(Virtualization_Virtual_EBR_license_needs:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14671,
+    "condition": "[OR]([EQ](<*VALUE(MX_What_QCS_System_is_required)*>,QCS MD),[EQ](<*VALUE(MX_What_QCS_System_is_required)*>,Standalone CD))",
+    "name": "Hide_based_on_CD",
+    "action": "<*CTX( Container(MX_CD_group).Rows.Clear )*><*DISALLOWATTRIBUTES(MX_CD_group)*><*DISALLOWATTRIBUTES(MX_CD_Group_Count)*><*DISALLOWATTRIBUTES(Header_07_open)*><*DISALLOWATTRIBUTES(Header_07_close)*><*DISALLOWATTRIBUTES(CE_Add_System_Rows_cd)*>\n\n<*DISALLOWATTRIBUTES(Header_04_open)*><*DISALLOWATTRIBUTES(Header_04_close)*><*DISALLOWATTRIBUTES(MX_CD_Stand_Alone_CD_Control_Link_Interface)*><*DISALLOWATTRIBUTES(MX_CD_Stand_Alone_CD_Control_Link)*>\n<*DISALLOWATTRIBUTES(MX_CD_Software_Extensions_add_ons_for_existing)*><*DISALLOWATTRIBUTES(MX_CD_Media_and_License)*><*DISALLOWATTRIBUTES(MX_CD_Experion_MX_Optimizers)*>\n<*DISALLOWATTRIBUTES(MX_CD_Communication_Links)*><*DISALLOWATTRIBUTES(MX_CD_Communication_Link_to_Non_Honeywell_QCS)*>\n<*DISALLOWATTRIBUTES(MX_CD_CDWeb_Manager_Profile_Manager)*>\n<*DISALLOWATTRIBUTES(MXP_Software_Extensionsadd_ons_for_existing)*>\n<*DISALLOWATTRIBUTES(MXP_Control_switching_option_between_Honeywell_and_3rd_party_CD_Control)*>\n<*DISALLOWATTRIBUTES(MXP_CDWeb_IDP_Interface_for_existing_Devronizer_ Calendizer_or_3rd_party_system)*>\n<*DISALLOWATTRIBUTES(MXP_Number_of_Zones)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

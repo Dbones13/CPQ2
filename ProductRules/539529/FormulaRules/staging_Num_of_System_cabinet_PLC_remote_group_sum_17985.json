@@ -1,0 +1,11 @@
+{
+    "id": 17985,
+    "condition": "[NEQ](<*VALUE(PLC_Num_of_Sys_Cabinets_RG)*>,<*CTX ( Container(PLC_RemoteGroup_Cont).Sum(staging_Num_of_System_cabinet_PLC_remote_group) )*>)",
+    "name": "staging_Num_of_System_cabinet_PLC_remote_group_sum",
+    "action": "<*ASSIGNVALUE(PLC_Num_of_Sys_Cabinets_RG:<*CTX ( Container(PLC_RemoteGroup_Cont).Sum(staging_Num_of_System_cabinet_PLC_remote_group) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

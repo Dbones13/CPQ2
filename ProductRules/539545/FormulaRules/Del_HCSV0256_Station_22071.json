@@ -1,0 +1,11 @@
+{
+    "id": 22071,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Workstation),[GEQ](<* Eval(<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> + 15)/2048))*2048 - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> + 15)/2048))*2048 + 15)/1024))*1024 - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> + 15)/2048))*2048 - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> - (INT((<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*> + 15)/2048))*2048 + 15)/1024))*1024 + 15)/512))*512 + 15) *>,256)))",
+    "name": "Del_HC-SV0256_Station",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-SV0256)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

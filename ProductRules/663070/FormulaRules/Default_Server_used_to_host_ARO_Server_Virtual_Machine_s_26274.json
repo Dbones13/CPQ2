@@ -1,0 +1,11 @@
+{
+    "id": 26274,
+    "condition": "[EQ](<*VALUE(Server used to host ARO Server Virtual Machine (s))*>,)",
+    "name": "Default_Server_used_to_host_ARO_Server_Virtual_Machine_(s)",
+    "action": "<*SELECTVALUE(Server used to host ARO Server Virtual Machine (s):No)*>",
+    "description": "Server used to host ARO Server Virtual Machine (s)",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

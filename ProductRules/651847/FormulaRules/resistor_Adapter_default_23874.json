@@ -1,0 +1,11 @@
+{
+    "id": 23874,
+    "condition": "1",
+    "name": "resistor_Adapter_default",
+    "action": "<*ExecuteScript(PS_SM_IO_Cnt_Cabinet_1.3)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

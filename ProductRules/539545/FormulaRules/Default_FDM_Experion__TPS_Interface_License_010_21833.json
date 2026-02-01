@@ -1,0 +1,11 @@
+{
+    "id": 21833,
+    "condition": "[EQ](<*VALUE(FDM Experion / TPS Interface License (0-10))*>,)",
+    "name": "Default_FDM Experion / TPS Interface License (0-10)",
+    "action": "<*ASSIGNVALUE(FDM Experion / TPS Interface License (0-10):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

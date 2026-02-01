@@ -1,0 +1,11 @@
+{
+    "id": 23066,
+    "condition": "[AND]([EQ](<*CTX ( Container(SerC_PMIO_CG_Group).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[EQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,Yes))",
+    "name": "Load_PMIO_CG_Group",
+    "action": "<*CTX ( Container(SerC_PMIO_CG_Group).Load(Select top 17 IO_Type, red_is, future_red_is, non_red_is from PMIO_CG_Group WHERE IO_Type!='') )*>",
+    "description": "CXCPQ-37874",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

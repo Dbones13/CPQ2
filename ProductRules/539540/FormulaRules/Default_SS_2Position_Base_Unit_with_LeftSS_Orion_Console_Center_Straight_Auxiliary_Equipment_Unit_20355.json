@@ -1,0 +1,11 @@
+{
+    "id": 20355,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Center_Straight_Auxiliary_Equipment_Unit)*>,)",
+    "name": "Default_SS_2Position_Base_Unit_with_LeftSS_Orion_Console_Center_Straight_Auxiliary_Equipment_Unit",
+    "action": "<*ASSIGNVALUE(SS_Orion_Console_Center_Straight_Auxiliary_Equipment_Unit:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25960,
+    "condition": "[EQ](<*VALUE(Dynamic Alarm Suppression(0-1))*>,0)",
+    "name": "EP-DASENB_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DASENB)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

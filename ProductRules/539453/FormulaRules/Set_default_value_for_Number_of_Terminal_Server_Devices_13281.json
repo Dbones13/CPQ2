@@ -1,0 +1,11 @@
+{
+    "id": 13281,
+    "condition": "[EQ](<*VALUE(Number of Terminal Server Devices)*>,)",
+    "name": "Set default value for Number of Terminal Server Devices",
+    "action": "<*ASSIGNVALUE(Number of Terminal Server Devices:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

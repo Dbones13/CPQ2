@@ -1,0 +1,11 @@
+{
+    "id": 24227,
+    "condition": "[EQ](<*VALUE(RESS_Tower_server_preferred)*>,)",
+    "name": "Default_RESS_Tower_server_preferred",
+    "action": "<*SELECTVALUE(RESS_Tower_server_preferred:Tower)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

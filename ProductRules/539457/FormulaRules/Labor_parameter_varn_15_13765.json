@@ -1,0 +1,11 @@
+{
+    "id": 13765,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_varn_15",
+    "action": "<*ASSIGNVALUE(Labor_parameter_varn_15:<* Eval(<*CTX ( Container(Virtualization_cluster_transpose).Sum(Virtualization_of_24_Port_Top_of_Rack_Switch) )*>+<*CTX ( Container(Virtualization_cluster_transpose).Sum(Virtualization_of_48_Port_Top_of_Rack_Switch) )*>+<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Sum(Number_of_28_Port_Top_of_Rack_Switch_100) )*>+<*CTX ( Container(Virtualization_Single_Node_Cluster_Conf_transpose).Sum(Number_of_28_Port_Top_of_Rack_Switch_100) )*>) *>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "13/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18704,
+    "condition": "[EQ](<*VALUE(MX_CD_Quick_Disconnect_Assembly_devronizer)*>,)",
+    "name": "Default_MX_CD_Quick_Disconnect_Assembly",
+    "action": "<*SELECTVALUE(MX_CD_Quick_Disconnect_Assembly_devronizer:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

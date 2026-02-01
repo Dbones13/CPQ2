@@ -1,0 +1,11 @@
+{
+    "id": 15351,
+    "condition": "[NEQ](<*VALUE(MXP_Number_of_Thin_Clients)*>,1)",
+    "name": "Part_D_3_5096_61",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5096-61)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

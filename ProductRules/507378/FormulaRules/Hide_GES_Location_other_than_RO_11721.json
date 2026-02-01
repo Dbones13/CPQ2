@@ -1,0 +1,11 @@
+{
+    "id": 11721,
+    "condition": "[OR](<*ISSELECTED(IS_Addi_Labor_GES_Eng.SYS GES Eng-BO-RO)*>,<*ISSELECTED(IS_Addi_Labor_GES_Eng.SYS GES Eng-FO-RO)*>,<*ISSELECTED(IS_Addi_Labor_GES_Eng.SYS GES HMI Eng-BO-RO)*>,<*ISSELECTED(IS_Addi_Labor_GES_Eng.SYS GES HMI Eng-FO-RO)*>)",
+    "name": "Hide GES Location other than RO",
+    "action": "<*DISALLOWALLVALUESEXCEPT(IS_Addi_Labor_GES_Eng:HPS_GES_P335F_RO|HPS_GES_P335B_RO|HPS_GES_P350F_RO|HPS_GES_P350B_RO)*>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "27/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

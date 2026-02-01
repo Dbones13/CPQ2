@@ -1,0 +1,11 @@
+{
+    "id": 10798,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_PLC_Total_number_of_Panel_PCs_required)*>,0))",
+    "name": "Hide_LSS_PLC_Select_the_Experion_Node_to_be_installed",
+    "action": "<*DISALLOWATTRIBUTES(LSS_PLC_Select_the_Experion_Node_to_be_installed)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

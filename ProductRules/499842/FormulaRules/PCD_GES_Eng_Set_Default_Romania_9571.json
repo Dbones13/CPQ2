@@ -1,0 +1,11 @@
+{
+    "id": 9571,
+    "condition": "[AND]([NOT](<*ATTSEL(PCD_GES_Eng)*>),<*ISSELECTED(PCD_Ges_Location_Labour.GES Romania)*>)",
+    "name": "PCD_GES_Eng_Set_Default_Romania",
+    "action": "<*SELECTVALUE(PCD_GES_Eng:HPS_GES_P350B_RO)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

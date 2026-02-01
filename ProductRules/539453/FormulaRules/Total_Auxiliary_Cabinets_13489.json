@@ -1,0 +1,11 @@
+{
+    "id": 13489,
+    "condition": "1",
+    "name": "Total_Auxiliary_Cabinets",
+    "action": "<*ASSIGNVALUE(Total_Auxiliary_Cabinets:<*VALUE(Auxiliary Cabinet Count)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

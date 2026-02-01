@@ -1,0 +1,11 @@
+{
+    "id": 23960,
+    "condition": "[NOT](<*ATTSEL(Terminal_Experion_Server_(ESV)_Type)*>)",
+    "name": "Default_Experion_Server_(ESV)_Type",
+    "action": "<*SELECTVALUE(Terminal_Experion_Server_(ESV)_Type:Desk)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

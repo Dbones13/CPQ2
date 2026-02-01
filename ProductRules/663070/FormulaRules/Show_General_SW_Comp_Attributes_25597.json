@@ -1,0 +1,11 @@
+{
+    "id": 25597,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,New)",
+    "name": "Show_General_SW_Comp_Attributes",
+    "action": "<*ALLOWATTRIBUTES(Exp HS Redundant Servers,Exp HS Is Windows Server 2019 OS Required?,Exp HS Installation Media \u2013ESD Version only)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

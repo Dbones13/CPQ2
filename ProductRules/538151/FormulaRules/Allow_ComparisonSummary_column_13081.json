@@ -1,0 +1,11 @@
+{
+    "id": 13081,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Allow_ComparisonSummary_column",
+    "action": "<*CTX ( Container(ComparisonSummary).Column(PY_Coverage).SetPermission(ReadOnly) )*>\n<*CTX ( Container(ComparisonSummary).Column(PY_Training_Match_SFDC).SetPermission(ReadOnly) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

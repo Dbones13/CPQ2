@@ -1,0 +1,11 @@
+{
+    "id": 942,
+    "condition": "1",
+    "name": "PopulateSelectedProducts",
+    "action": "<*ASSIGNVALUE(MSID_Selected_Products:<*CTX( Container(Migration_MSID_Selection_Container).UniqueValues(Selected_Products).Separator(<br>) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

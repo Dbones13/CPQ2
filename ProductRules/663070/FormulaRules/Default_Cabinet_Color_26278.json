@@ -1,0 +1,11 @@
+{
+    "id": 26278,
+    "condition": "[EQ](<*VALUE(Cabinet Color)*>,)",
+    "name": "Default_Cabinet_Color",
+    "action": "<*SELECTVALUE(Cabinet Color:GrayRAL7032)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

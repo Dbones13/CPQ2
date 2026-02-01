@@ -1,0 +1,11 @@
+{
+    "id": 13791,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "HW SW order to factory",
+    "action": "<*ASSIGNVALUE(HW/SW order to factory:[IF]([IN](<*VALUE(Labor_parameter_var_1)*>,Premium Platforms Gen 3 - Performance A/B,Premium Platforms Gen 3 - 2 node cluster,Premium Platform for Nutanix)){4}{2}[ENDIF])*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

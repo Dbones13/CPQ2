@@ -1,0 +1,11 @@
+{
+    "id": 14581,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Unique_Enclosures_with_Air_Conditioning)*>,)",
+    "name": "Default Number of Unique Enclosures with Air Conditioning",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Unique_Enclosures_with_Air_Conditioning:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

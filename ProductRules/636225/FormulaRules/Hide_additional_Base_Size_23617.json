@@ -1,0 +1,11 @@
+{
+    "id": 23617,
+    "condition": "[LT](<*VALUE(HDP TPS Only)*>,1)",
+    "name": "Hide additional Base Size",
+    "action": "<*DISALLOWATTRIBUTES(HDP_System_additional_Size)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

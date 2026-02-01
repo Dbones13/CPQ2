@@ -1,0 +1,11 @@
+{
+    "id": 25744,
+    "condition": "[AND]([NEQ](<*VALUE(Default Crossover Cable)*>,2M),[OR]([EQ](<*VALUE(station_37200)*>,0),[NEQ](<*VALUE(Supervisory Network Type)*>,FTE)))",
+    "name": "51305786-502_delete",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51305786-502)*><* DoResetAtt *>",
+    "description": "CXCPQ-37200",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

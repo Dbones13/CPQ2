@@ -1,0 +1,11 @@
+{
+    "id": 18752,
+    "condition": "[EQ](<*VALUE(MX_CD_Type_of_Valve_proflow)*>,)",
+    "name": "Default_type_of_valve",
+    "action": "<*SELECTVALUE(MX_CD_Type_of_Valve_proflow:Extended stroke length)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

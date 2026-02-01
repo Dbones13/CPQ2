@@ -1,0 +1,11 @@
+{
+    "id": 13258,
+    "condition": "[EQ](<*VALUE(Number of Modbus Interfaces)*>,)",
+    "name": "Set default value for Number of Modbus Interfaces",
+    "action": "<*ASSIGNVALUE(Number of Modbus Interfaces:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4703,
+    "condition": "[IN](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4052-00 Color C-Frame,Q6031-00 Single-Sided)",
+    "name": "Outboard hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_SG_Outboard_Edge_Detect)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

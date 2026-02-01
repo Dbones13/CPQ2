@@ -1,0 +1,11 @@
+{
+    "id": 23603,
+    "condition": "[IF]([EQ](<*VALUE(SC_Product_Type)*>,New)){1}{if_false}[ENDIF]",
+    "name": "Hide_Scope_Selection",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_07_close,ATTCON_07_open,Header_08_close,Header_08_open,SC_HDP_RC_Selection)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

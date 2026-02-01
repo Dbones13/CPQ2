@@ -1,0 +1,11 @@
+{
+    "id": 15186,
+    "condition": "[NEQ](<*VALUE(MXP_Extruction_Coating_Software)*>, Target Adaptive Control for Single Extrusion Coat Weight)",
+    "name": "Part_D_3_5820_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5820-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

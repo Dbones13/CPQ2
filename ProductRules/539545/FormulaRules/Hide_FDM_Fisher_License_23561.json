@@ -1,0 +1,11 @@
+{
+    "id": 23561,
+    "condition": "[OR]([NEQ](<*VALUE(FDM_Release)*>,R540),[NEQ](<*VALUE(FDM_FF_Connector_Interface_License)*>,1))",
+    "name": "Hide_FDM_Fisher_License",
+    "action": "<*DISALLOWATTRIBUTES(FDM_FF_Connector_Interface_Licence_Fisher)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26554,
+    "condition": "[NEQ](<*VALUE(Server_NodeType)*>,)",
+    "name": "Hide_Rack_Server_Additional",
+    "action": "<*DISALLOWVALUES(AdditionalMemory_Server Disk:16GB)*><*DISALLOWVALUES(AdditionalHard_Disk:Yes)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

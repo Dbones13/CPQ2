@@ -1,0 +1,11 @@
+{
+    "id": 13697,
+    "condition": "[EQ](<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:TP-THNR01-100)*> + <*GETATVQTY(Virtualization_BOM_Parts:TP-THNR02-100)*> + <*GETATVQTY(Virtualization_BOM_Parts:TP-THNCL9-110)*>) *>,0)\n[AND]([GT](<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:TP-THNR01-100)*> + <*GETATVQTY(Virtualization_BOM_Parts:TP-THNR02-100)*> + <*GETATVQTY(Virtualization_BOM_Parts:TP-THNCL9-110)*>) *>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_DISS_EP_T09CAL",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-T09CAL)*><*SETATVQTY(Virtualization_BOM_Parts:EP-T09CAL,<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:TP-THNR01-100)*> + <*GETATVQTY(Virtualization_BOM_Parts:TP-THNR02-100)*> + <*GETATVQTY(Virtualization_BOM_Parts:TP-THNCL9-110)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

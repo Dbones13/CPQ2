@@ -1,0 +1,11 @@
+{
+    "id": 20608,
+    "condition": "[AND]([IN](<*VALUE(SS_Flex Staton  Desk Node_desk)*>,STN_PER_DELL_Tower_RAID1,STN_PER_DELL_Rack_RAID1,STN_PER_HP_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell),\n[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R520))",
+    "name": "Part_A_EP_COAW19_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:EP-COAW19)*><*SETATVQTY(Simulation_Bom_parts:EP-COAW19, <*VALUE(SS_Flex_Station_Qty_Desk)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

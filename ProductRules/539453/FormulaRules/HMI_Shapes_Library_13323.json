@@ -1,0 +1,11 @@
+{
+    "id": 13323,
+    "condition": "[NEQ](<*VALUE(Implementation Methodology)*>,)",
+    "name": "HMI Shapes Library",
+    "action": "<*ASSIGNVALUE(HMI Shapes Library:<*Eval([IF]([EQ](<*VALUE(Implementation Methodology)*>,)){0<*VALUE(labor_parameter_ss)*>*2 + 0<*VALUE(labor_parameter_ms)*>*6 + 0<*VALUE(labor_parameter_cs)*>*10 + 0<*VALUE(labor_parameter_vcs)*>*16 + 0<*VALUE(labor_parameter_rs)*>*0.5}{(2*0<*VALUE(labor_parameter_ss)*> + 6*0<*VALUE(labor_parameter_ms)*> + 0<*VALUE(labor_parameter_cs)*>*10 + 16*0<*VALUE(labor_parameter_vcs)*> + 0.5*0<*VALUE(labor_parameter_rs)*>)*0.7*1.05}[ENDIF])*>)*>",
+    "description": "IF im=Non Standard then\n Calculated Hrs = 2 * ss + 6 * ms + 10 * cs + 16 * vcs + 0.5 * rs\nElse If im= Standard build and GES=None then\n Calculated Hrs = (2 * ss + 6 * ms + 10 * cs + 16 * vcs + 0.5 * rs) * 0.7\nElse If GES!=None and im= Standard build  then\nCalculated Hrs = (2 * ss + 6 * ms + 10 * cs + 16 * vcs + 0.5 * rs) * 0.7 * 1.2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

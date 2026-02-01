@@ -1,0 +1,11 @@
+{
+    "id": 18376,
+    "condition": "[NEQ](<*VALUE(MXP_Optional_cable_75_feet)*>,Yes)",
+    "name": "Part_D_3_75F_HR",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-75F-HR)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

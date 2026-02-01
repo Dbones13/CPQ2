@@ -1,0 +1,11 @@
+{
+    "id": 22967,
+    "condition": "1",
+    "name": "Total_CN100",
+    "action": "<*ASSIGNVALUE(Total_CN100:<*CTX ( Container(Series_C_RG_Part_Summary_Cont).Sum(51943_Total_Part_Sum) )*>)*>",
+    "description": "CXCPQ-51943",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "09/01/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13807,
+    "condition": "1",
+    "name": "RemoteGroupCount",
+    "action": "<*ASSIGNVALUE(Labor_parameter_rg:<*CTX( Container(SM_ControlGroup_Cont).Sum(RemoteGroupCount) )*>)*>",
+    "description": "Number of Remote Groups\nSum qty_remotgroups(\u201cSM_ControlGroup_Cont\")",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25963,
+    "condition": "[EQ](<*VALUE(Electronic Signature Option)*>,Yes)",
+    "name": "EP-ESIG01_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-ESIG01)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ESIG01, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

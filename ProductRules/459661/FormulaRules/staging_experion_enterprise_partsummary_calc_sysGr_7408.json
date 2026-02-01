@@ -1,0 +1,11 @@
+{
+    "id": 7408,
+    "condition": "[NEQ](<*VALUE(staging_experion_enterprise_partsummary_calc_sysGr)*>,<*CTX ( Container(CE_System_Cont).Sum(staging_experion_enterprise_partsummary_calc_entrp) )*>)",
+    "name": "staging_experion_enterprise_partsummary_calc_sysGr",
+    "action": "<*ASSIGNVALUE(staging_experion_enterprise_partsummary_calc_sysGr:<*CTX ( Container(CE_System_Cont).Sum(staging_experion_enterprise_partsummary_calc_entrp) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/10/23",
+    "modifiedBy": "Madhuri Sharma"
+}

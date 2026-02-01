@@ -1,0 +1,11 @@
+{
+    "id": 19301,
+    "condition": "[EQ](<*VALUE(PlantCruise_Use_S8_C300_or_ControlEdge_UOC)*>,C300)",
+    "name": "Add_IO_Section_8C-TCNTA1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:8C-TCNTA1)*>[IF]([EQ](<*VALUE(PlantCruise_Redundant_C300_Controller)*>,Yes)){<*SETATVQTY(PlantCruise_Part_Summary:8C-TCNTA1,2)*>}{<*SETATVQTY(PlantCruise_Part_Summary:8C-TCNTA1,1)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

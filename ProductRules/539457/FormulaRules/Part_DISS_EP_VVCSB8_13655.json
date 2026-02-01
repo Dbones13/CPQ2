@@ -1,0 +1,11 @@
+{
+    "id": 13655,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_VMWare_vCenter_Standard_Licenses)*>,0))",
+    "name": "Part_DISS_EP_VVCSB8",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VVCSB8)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

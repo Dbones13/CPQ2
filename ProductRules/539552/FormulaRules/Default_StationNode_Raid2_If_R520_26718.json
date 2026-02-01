@@ -1,0 +1,11 @@
+{
+    "id": 26718,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Software_Release)*>,R520),[EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes))\n",
+    "name": "Default_StationNode_Raid2_If_R520",
+    "action": "<*SELECTVALUE(ESDC_Station_Node_Type:STN_PER_DELL_Tower_RAID2)*>",
+    "description": "Default_StationNode_Raid2_If_R520",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Vignesh Narayanasamy"
+}

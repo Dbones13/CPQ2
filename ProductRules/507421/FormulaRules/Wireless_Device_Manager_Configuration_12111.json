@@ -1,0 +1,11 @@
+{
+    "id": 12111,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Wireless Device Manager Configuration",
+    "action": "<*ASSIGNVALUE(Wireless Device Manager Configuration:<* Eval(4*<*VALUE(OWS_Number of Wireless Device Managers)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

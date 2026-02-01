@@ -1,0 +1,11 @@
+{
+    "id": 19499,
+    "condition": "[AND]([AND]([NEQ](<*VALUE(Exp HS Redundant Servers)*>,Yes),[NEQ](<*VALUE(Exp HS Installation Media \u2013ESD Version only)*>,Yes))",
+    "name": "Assign_Attribute_Values",
+    "action": "<*SELECTVALUE(Exp HS Installation Media \u2013ESD Version only:No)*><*SELECTVALUE(Exp HS Redundant Servers:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

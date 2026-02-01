@@ -1,0 +1,11 @@
+{
+    "id": 13457,
+    "condition": "[NEQ](<*VALUE(Is Devicenet Interface in Scope?)*>,Yes)",
+    "name": "Hide Devicenet Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of DeviceNet Interface Types)*>",
+    "description": "Hide questions when Is  Devicenet Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

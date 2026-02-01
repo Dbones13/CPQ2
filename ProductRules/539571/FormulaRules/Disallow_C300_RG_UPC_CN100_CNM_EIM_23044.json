@@ -1,0 +1,11 @@
+{
+    "id": 23044,
+    "condition": "[IN](<*VALUE(Experion_PKS_Software_Release)*>,R510,R511)",
+    "name": "Disallow_C300_RG_UPC_CN100_CNM_EIM",
+    "action": "<*DISALLOWATTRIBUTES(C300_RG_UPC_CN100_IO_HIVE)*>\n<*DISALLOWATTRIBUTES(C300_RG_UPC_Controlled_IO_License_Count)*>\n<*DISALLOWATTRIBUTES(C300_RG_UPC_CNM)*>\n<*DISALLOWATTRIBUTES(C300_RG_UPC_CNM_Exp_Module)*><*DISALLOWATTRIBUTES(C300_RG_UPC_CNM_Uplink_SFP_Type)*><*DISALLOWATTRIBUTES(C300_RG_UPC_EIM)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

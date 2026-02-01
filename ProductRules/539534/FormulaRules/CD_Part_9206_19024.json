@@ -1,0 +1,11 @@
+{
+    "id": 19024,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Devronizer_Manual_Control_Panel)*>,Yes))",
+    "name": "CD_Part_9206",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9206)*><*SETATVQTY(MX_CD_Bom_Parts:9206, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

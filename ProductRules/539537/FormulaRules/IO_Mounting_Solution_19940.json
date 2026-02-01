@@ -1,0 +1,11 @@
+{
+    "id": 19940,
+    "condition": "<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Mounting Panel)*>",
+    "name": "IO_Mounting_Solution",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Universal_Marshalling_Cabinet,SerC_CG_Complexing)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

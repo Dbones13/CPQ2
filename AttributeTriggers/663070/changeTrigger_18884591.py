@@ -1,0 +1,1 @@
+[IF]([LT](<*VALUE(DMS No of Displays 0_4)*>,2)){<*SELECTVALUE(DMS Multi Window Support Option Required?:No)*>}{if_false}[ENDIF]

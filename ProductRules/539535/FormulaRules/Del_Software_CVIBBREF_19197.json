@@ -1,0 +1,11 @@
+{
+    "id": 19197,
+    "condition": "[NEQ](<*VALUE(PlantCruise_BB_Open_BSI_EFM_Export_Option)*>,Yes)",
+    "name": "Del_Software_CV-IBBREF",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-IBBREF)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

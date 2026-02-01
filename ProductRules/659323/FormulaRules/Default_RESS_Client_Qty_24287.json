@@ -1,0 +1,11 @@
+{
+    "id": 24287,
+    "condition": "[EQ](<*VALUE(Client_Qty)*>,)",
+    "name": "Default_RESS_Client_Qty",
+    "action": "<*ASSIGNVALUE(Client_Qty:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

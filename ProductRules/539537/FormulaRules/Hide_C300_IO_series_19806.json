@@ -1,0 +1,11 @@
+{
+    "id": 19806,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "Hide_C300 IO series",
+    "action": "<*CTX ( Container(C300_C IO MS).Rows.Clear )*><*DISALLOWATTRIBUTES(Header_05_close,Header_05_open,C300_C IO MS)*>",
+    "description": "CXCPQ-37204",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

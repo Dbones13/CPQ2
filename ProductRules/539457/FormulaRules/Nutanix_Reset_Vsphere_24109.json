@@ -1,0 +1,11 @@
+{
+    "id": 24109,
+    "condition": "[AND]([NEQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[EQ](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,))",
+    "name": "Nutanix_Reset_Vsphere",
+    "action": "<*RESETATTRIBUTE(Virtualization_Number_of_vSphere_Client_Node)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22339,
+    "condition": "[EQ](<*VALUE(ESDC_DNP3_Protocol_Interface)*>,)",
+    "name": "Default_DNP3_Protocol_Interface",
+    "action": "<*ASSIGNVALUE(ESDC_DNP3_Protocol_Interface:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

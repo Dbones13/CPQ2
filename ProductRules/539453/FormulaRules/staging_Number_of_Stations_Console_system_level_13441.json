@@ -1,0 +1,11 @@
+{
+    "id": 13441,
+    "condition": "[NEQ](<*CTX ( Container(Experion_Enterprise_Cont).Sum(staging_Number_of_Stations_Console) )*>,<*VALUE(staging_Number_of_Stations_Console_system_level)*>)",
+    "name": "staging_Number_of_Stations_Console_system_level",
+    "action": "<*ASSIGNVALUE(staging_Number_of_Stations_Console_system_level:<*CTX ( Container(Experion_Enterprise_Cont).Sum(staging_Number_of_Stations_Console) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

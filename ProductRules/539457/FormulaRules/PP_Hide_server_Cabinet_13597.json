@@ -1,0 +1,11 @@
+{
+    "id": 13597,
+    "condition": "[OR]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster), [EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix))",
+    "name": "PP_Hide_server_Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(Header_05_close,Header_05_open,Virtualization_Cabinet_Base_Required,Virtualization_Cabinet_Color,Virtualization_Cabinet_Depth_Size,Virtualization_Cabinet_Door_Type,Virtualization_Cabinet_Hinge_Type,Virtualization_Cabinet_Keylock_Type,Virtualization_Cabinet_Thermostat_Required,Virtualization_Power_Supply_Voltage)*>\n\n<*ALLOWATTRIBUTES(Virtualization_OnSite_Activities_hours)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

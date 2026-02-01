@@ -1,0 +1,11 @@
+{
+    "id": 10553,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "QCS_Labor_Del_Inhouse_Engineering_MD_CD",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_Inhouse_Engineering_MD_CD:<* Eval([IF]([EQ](<*VALUE(QCS_Mig_What_type_of_Machine_Direction_Controls)*>,MDMV)){[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R70x.x)){40}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R61x.x)){60}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R60x.x)){60}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 5)){64}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 4)){68}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 3 or Less)){80}{0}[ENDIF]}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_CD_Controls)*>,)){0}{[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R70x.x)){8}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R61x.x)){12}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R60x.x)){12}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 5)){12.8}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 4)){13.6}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 3 or Less)){16}{0}[ENDIF]}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

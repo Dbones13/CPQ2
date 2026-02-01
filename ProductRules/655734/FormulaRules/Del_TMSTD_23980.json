@@ -1,0 +1,11 @@
+{
+    "id": 23980,
+    "condition": "[NEQ](<*VALUE(New_Expansion)*>,New)",
+    "name": "Del_TM-STD",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-STD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

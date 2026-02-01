@@ -1,0 +1,11 @@
+{
+    "id": 22863,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Color_Default)*>,)",
+    "name": "Default_SerC_RG_Cabinet_Color_Default",
+    "action": "<*SELECTVALUE(SerC_RG_Cabinet_Color_Default:Gray-RAL 7035)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

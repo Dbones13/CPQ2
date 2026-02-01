@@ -1,0 +1,11 @@
+{
+    "id": 25850,
+    "condition": "[NEQ](<*VALUE(Experion Server Type)*>, Flex Server)",
+    "name": "Hide_DeskMountFlexServer",
+    "action": "<*DISALLOWATTRIBUTES(Displays_Flex Server in Desk0_2_2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

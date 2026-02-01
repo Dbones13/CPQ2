@@ -1,0 +1,11 @@
+{
+    "id": 19087,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Stainless_Steel_Walkway)*>,Yes),[GEQ](<*VALUE(MX_CD_Zone_Width)*>,1))",
+    "name": "CD_Part_9207_MM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9207-MM)*><*SETATVQTY(MX_CD_Bom_Parts:9207-MM, <*VALUE(MX_CD_Zone_Width)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

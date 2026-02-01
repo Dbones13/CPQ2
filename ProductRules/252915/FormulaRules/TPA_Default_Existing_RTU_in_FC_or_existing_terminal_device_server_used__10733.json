@@ -1,0 +1,11 @@
+{
+    "id": 10733,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Existing_RTU_in_FC_or_existing_terminal_device_server_used_Existing_serial_links_that_remains_as_is_now)*>,))",
+    "name": "TPA_Default_Existing_RTU_in_FC_or_existing_terminal_device_server_used_",
+    "action": "<*ASSIGNVALUE(TPA_Existing_RTU_in_FC_or_existing_terminal_device_server_used_Existing_serial_links_that_remains_as_is_now:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

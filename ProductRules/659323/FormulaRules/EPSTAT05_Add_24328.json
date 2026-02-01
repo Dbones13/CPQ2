@@ -1,0 +1,11 @@
+{
+    "id": 24328,
+    "condition": "[AND]([GT](<*VALUE(EP-STAT01_part_add)*>,4),[LT](<*VALUE(EP-STAT01_part_add)*>,10))",
+    "name": "EP-STAT05_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-STAT05)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-STAT05, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

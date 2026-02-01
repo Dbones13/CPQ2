@@ -1,0 +1,11 @@
+{
+    "id": 21866,
+    "condition": "[EQ](<*VALUE(FDM_ FDM_Gateway_required)*>,)",
+    "name": "Default_FDM_ FDM_Gateway_required",
+    "action": "<*SELECTVALUE(FDM_ FDM_Gateway_required:No)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

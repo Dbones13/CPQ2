@@ -1,0 +1,11 @@
+{
+    "id": 10676,
+    "condition": "[EQ](<*VALUE(QCS_Mig_AllianceView_Servers_monitor_screen_type)*>,)",
+    "name": "QCS_Mig_Default_AllianceView_Servers_monitor",
+    "action": "<*SELECTVALUE(QCS_Mig_AllianceView_Servers_monitor_screen_type:Monitor not required)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

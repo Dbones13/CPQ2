@@ -1,0 +1,11 @@
+{
+    "id": 13276,
+    "condition": "[EQ](<*VALUE(Number of EtherNet IP Interface Types)*>,)",
+    "name": "Set default value for Number of EtherNet IP Interface Types",
+    "action": "<*ASSIGNVALUE(Number of EtherNet IP Interface Types:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

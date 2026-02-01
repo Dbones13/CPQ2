@@ -1,0 +1,11 @@
+{
+    "id": 13939,
+    "condition": "1",
+    "name": "Assign Product Line Sub Group",
+    "action": "<*ASSIGNVALUE(Product line sub group:<* TABLE ( SELECT ProductLineSubGroup FROM WriteInProducts WHERE Product = '<*VALUE(Selected_WriteIn)*>' ) *>)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "18/10/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

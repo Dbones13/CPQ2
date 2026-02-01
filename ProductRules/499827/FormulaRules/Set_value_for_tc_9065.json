@@ -1,0 +1,11 @@
+{
+    "id": 9065,
+    "condition": "1",
+    "name": "Set value for tc",
+    "action": "[IF]([EQ](<*CTX( Container(ExpProject_Que_Right).Row(1).Column(NonStandard TC_Used).Get )*>,Yes)){<*ASSIGNVALUE(labor_parameter_tc: 1)*>}{<*ASSIGNVALUE(labor_parameter_tc: 0)*>}[ENDIF]",
+    "description": "Non-Standard T&C Used?",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

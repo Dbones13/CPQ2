@@ -1,0 +1,11 @@
+{
+    "id": 19011,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Press),[EQ](<*VALUE(MX_CD_Air_Cylinder)*>,Yes))",
+    "name": "CD_Part_92022_P",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:92022-P)*><*SETATVQTY(MX_CD_Bom_Parts:92022-P, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

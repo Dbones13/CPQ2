@@ -1,0 +1,11 @@
+{
+    "id": 20215,
+    "condition": "[EQ](<*VALUE(DVM_Edge_Device_Video_Storage_Support)*>,Yes)",
+    "name": "EP-DVMEGS_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMEGS)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMEGS,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

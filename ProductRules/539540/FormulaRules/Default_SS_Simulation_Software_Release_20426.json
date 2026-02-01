@@ -1,0 +1,11 @@
+{
+    "id": 20426,
+    "condition": "[EQ](<*VALUE(SS_Simulation_Software_Release)*>,)",
+    "name": "Default_SS_Simulation_Software_Release",
+    "action": "<*SELECTVALUE(SS_Simulation_Software_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

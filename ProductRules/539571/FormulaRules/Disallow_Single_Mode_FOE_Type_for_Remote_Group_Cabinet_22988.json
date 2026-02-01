@@ -1,0 +1,11 @@
+{
+    "id": 22988,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Disallow_Single Mode FOE Type for Remote Group Cabinet",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_Control_Networking_Module_Required)*>,No),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))){<*DISALLOWATTRIBUTES(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt,SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet)*>}{[IF]([EQ](<*VALUE(SerC_CG_Control_Networking_Module_Required)*>,No)){<*ALLOWATTRIBUTES(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt,SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet)*>}{<*DISALLOWATTRIBUTES(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt,SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet)*>}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

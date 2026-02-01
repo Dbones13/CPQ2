@@ -1,0 +1,11 @@
+{
+    "id": 25713,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Exp Batch Unit/ Recipe Control Module License(0-600))*>,299),[GT](<*eval(Int(Fix(<*VALUE(Exp Batch Unit/ Recipe Control Module License(0-600))*>/300)))*>,0)))",
+    "name": "Exp_Batch_Del_TCRCM300",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TC-RCM300)*><* DoResetAtt *>",
+    "description": "Delete TC-RCM300",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

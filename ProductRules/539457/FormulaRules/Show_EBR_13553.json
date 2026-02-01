@@ -1,0 +1,11 @@
+{
+    "id": 13553,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Virtual_EBR_license_needs)*>,Yes),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Show_EBR",
+    "action": "<*ALLOWATTRIBUTES(Virtualization_EBR_Media_kit_type,Virtualization_EBR_Release)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

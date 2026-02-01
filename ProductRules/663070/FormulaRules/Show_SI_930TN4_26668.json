@@ -1,0 +1,11 @@
+{
+    "id": 26668,
+    "condition": "<*ISSELECTED(Default Switch.SW_BB_RT_CISCO_24PT_RJ45)*>",
+    "name": "Show_SI_930TN4",
+    "action": "\"<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:SI-930TN4)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:SI-930TN4, 2)*><* DoResetAtt *>\"",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

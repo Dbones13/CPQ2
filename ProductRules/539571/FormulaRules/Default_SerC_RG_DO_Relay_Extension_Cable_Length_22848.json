@@ -1,0 +1,11 @@
+{
+    "id": 22848,
+    "condition": "[EQ](<*VALUE(SerC_RG_DO_Relay_Extension_Cable_Length)*>,)",
+    "name": "Default_SerC_RG_DO_Relay_Extension_Cable_Length",
+    "action": "<*SELECTVALUE(SerC_RG_DO_Relay_Extension_Cable_Length:0.5M)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

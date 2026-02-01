@@ -1,0 +1,11 @@
+{
+    "id": 18733,
+    "condition": "[EQ](<*VALUE(MX_CD_Screen_plate_upgrade)*>,)",
+    "name": "Deafult_MX_CD_Screen_plate_upgrade",
+    "action": "<*SELECTVALUE(MX_CD_Screen_plate_upgrade:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23763,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE),[OR]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,),[EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,)))",
+    "name": "Default_Io mounting solution",
+    "action": "<*SELECTVALUE(SerC_IO_Mounting_Solution:Cabinet)*>\n<*SELECTVALUE(Dummy_RG_IO_Mounting_Solution:Cabinet)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

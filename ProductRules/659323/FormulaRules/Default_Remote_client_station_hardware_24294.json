@@ -1,0 +1,11 @@
+{
+    "id": 24294,
+    "condition": "[EQ](<*VALUE(Remote_client_station_hardware)*>,)",
+    "name": "Default_Remote_client_station_hardware",
+    "action": "<*SELECTVALUE(Remote_client_station_hardware:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

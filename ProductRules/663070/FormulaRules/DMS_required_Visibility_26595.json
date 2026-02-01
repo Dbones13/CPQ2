@@ -1,0 +1,11 @@
+{
+    "id": 26595,
+    "condition": "[EQ](<*VALUE(DMS Desk Mounting Stations required)*>,No)",
+    "name": "DMS required Visibility",
+    "action": "<*SETOPTIONAL(DMS Console Station Extension Hardware Selection,DMS Console Station Extension Qty 0_15,DMS Console Station Hardware Selection,DMS Console Station Qty 0_20,DMS Desk Station Location Cluster Network Group,DMS Display size,DMS Display Supplier,DMS Flex Station Hardware Selection,DMS Flex Station Qty 0_60,DMS IKB or OEP,DMS Industrial KB Mouse,DMS Multi Window Support Option Required?,DMS No of Displays 0_4,DMS Node Supplier,DMS Remote Peripheral Solution Type RPS,DMS RPS Mounting Furniture,DMS Station nodes LAN Interface Card,DMS Touch Screen required?,DMS TPS Station Hardware Selection,DMS TPS Station Qty 0_20,DMS Trackball required?)*><*DISALLOWATTRIBUTES(DMS Console Station Extension Hardware Selection,DMS Console Station Extension Qty 0_15,DMS Console Station Hardware Selection,DMS Console Station Qty 0_20,DMS Desk Station Location Cluster Network Group,DMS Display size,DMS Display Supplier,DMS Flex Station Hardware Selection,DMS Flex Station Qty 0_60,DMS IKB or OEP,DMS Industrial KB Mouse,DMS Multi Window Support Option Required?,DMS No of Displays 0_4,DMS Node Supplier,DMS Remote Peripheral Solution Type RPS,DMS RPS Mounting Furniture,DMS Station nodes LAN Interface Card,DMS Touch Screen required?,DMS TPS Station Hardware Selection,DMS TPS Station Qty 0_20,DMS Trackball required?,DMS Message 1,DMS Message 2,DMS Message 3,DMS Message 4,DMS Message 5,DMS Message 6,DMS Message 7,DMS Message 8)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

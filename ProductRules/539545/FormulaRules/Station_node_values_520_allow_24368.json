@@ -1,0 +1,11 @@
+{
+    "id": 24368,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Experion_PKS_Release)*>,R520),[EQ](<*VALUE(FDM Client Stations required)*>,Yes))",
+    "name": "Station_node_values_520_allow",
+    "action": "<*ALLOWVALUES(FDM_Client_Station Node Type:STN_PER_DELL_Tower_RAID2)*>\n<*DISALLOWVALUES(FDM_Client_Station Node Type:None)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

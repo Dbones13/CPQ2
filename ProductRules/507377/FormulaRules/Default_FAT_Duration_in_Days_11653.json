@@ -1,0 +1,11 @@
+{
+    "id": 11653,
+    "condition": "[EQ](<*VALUE(IS_FAT_Duration_in_Days)*>,)",
+    "name": "Default_FAT Duration in Days",
+    "action": "<*ASSIGNVALUE(IS_FAT_Duration_in_Days:8)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

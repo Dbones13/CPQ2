@@ -1,0 +1,216 @@
+<!-- RT_EBR_Configurator --> 
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+    <div style="width:100%">
+      <div class="msid-label">
+        <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+      </div>
+    </div>
+    <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+  
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="ebr-questions" onclick="toggleConfigSection(event, '#ebr-questions')">
+            <label class="onlytext">Basic Information - Experion Backup and Restore (EBR)</label>
+        </div>
+        <div id="ebr-questions-content"  class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_Basic_Information") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+     
+   
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="ebr-upgrade-questions" onclick="toggleConfigSection(event, '#ebr-upgrade-questions')">
+           <label class="onlytext">EBR Upgrade</label>
+        </div>
+        <div id="ebr-upgrade-questions-content"  class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_Upgrade") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+       
+   
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="ebr-Additional" onclick="toggleConfigSection(event, '#ebr-Additional')">
+            <label class="onlytext">New / Additional EBR</label>
+        </div>
+        <div id="ebr-Additional-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "Attr_New/AdditionalServer","Attr_NewAddWorkstation","Attr_NewAddVirtual_Node") -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+              <!-- ko template: { name: $root.getAttributeTemplate } -->
+              <!-- /ko -->
+            </div>
+            <!-- /ko --> 
+          </div>
+        </div>
+  
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="ebr-Hardware" onclick="toggleConfigSection(event, '#ebr-Hardware')">
+          <label class="onlytext">Hardware to Host EBR (Physical Node Only)</label>
+        </div>
+        <div id="ebr-Hardware-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12"> 
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_If_hardware_desired_select_host_type","EBR_Additional_Hard_Drive_required","EBR_Additional_Network_Storage_Device_NAS_required") -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+              <!-- ko template: { name: $root.getAttributeTemplate } -->
+              <!-- /ko -->
+            </div>
+            <!-- /ko --> 
+          </div>
+        </div>
+     
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps"  id="ebr-Services" onclick="toggleConfigSection(event, '#ebr-Services')">
+           <label class="onlytext">Services</label>
+        </div>
+        <div id="ebr-Services-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+             <!-- ko foreach: attributes.filterByProperty('name' , "EBR_Site_Acceptance_Test_required") -->
+            <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+              <!-- ko template: { name: $root.getAttributeTemplate } -->
+              <!-- /ko -->
+            </div>
+            <!-- /ko --> 
+          </div>
+        </div> 
+</div>
+<!-- /ko --> 
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+    <div style="width:100%">
+      <div class="msid-label">
+        <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+      </div>
+    </div>
+    <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+  <div class="row col-xs-12 swagger">
+    <div id="ebr-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ebr-questions')">
+          <span>Basic Information - Experion Backup and Restore (EBR)</span>
+          <a id="ebr-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ebr-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_Basic_Information") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="ebr-upgrade-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ebr-upgrade-questions')">
+          <span>EBR Upgrade</span>
+          <a id="ebr-upgrade-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ebr-upgrade-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_Upgrade") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="ebr-Additional">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ebr-Additional')">
+          <span>New / Additional EBR</span>
+          <a id="ebr-Additional-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ebr-Additional-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_New_Additional_EBR") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="ebr-Hardware">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ebr-Hardware')">
+          <span>Hardware to Host EBR (Physical Node Only)</span>
+          <a id="ebr-Hardware-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ebr-Hardware-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_Hardware_to_Host_EBR_Physical_Node_Only") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="ebr-Services">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ebr-Services')">
+          <span>Services</span>
+          <a id="ebr-Services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ebr-Services-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EBR_Services") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- /ko --> 

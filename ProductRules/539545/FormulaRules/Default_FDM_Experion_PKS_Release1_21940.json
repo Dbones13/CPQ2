@@ -1,0 +1,11 @@
+{
+    "id": 21940,
+    "condition": "[AND]([IN](<*VALUE(FDM_Release)*>,R520,R511),[EQ](<*VALUE(FDM_Experion_PKS_Release)*>,))",
+    "name": "Default_FDM_Experion_PKS_Release1",
+    "action": "<*SELECTVALUE(FDM_Experion_PKS_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

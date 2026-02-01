@@ -1,0 +1,11 @@
+{
+    "id": 18608,
+    "condition": "[AND]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes),[OR]([EQ](<*VALUE(ES_Hardware_Selection)*>,SVR_PER_HP_Rack_RAID5),[EQ](<*VALUE(ES_Hardware_Selection)*>,SVR_PER_DELL_Rack_RAID5)))",
+    "name": "Control_Additional_Mobile_1",
+    "action": "<*ALLOWVALUES(ES_Additional_Memory_Mobile_Server:16GB,ES_Additional_Memory_Mobile_Server:None)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

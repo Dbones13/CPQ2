@@ -1,0 +1,11 @@
+{
+    "id": 24006,
+    "condition": "[NEQ](<*VALUE(Terminal_Media_kit_required)*>,Physical)",
+    "name": "Del_TM-MK701S_Add_TM-MK701S-ESD",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-MK701S)*><*SELECTVALUE(Terminal_Part_Summary:TM-MK701S-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

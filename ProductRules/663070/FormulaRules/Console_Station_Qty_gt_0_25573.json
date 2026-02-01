@@ -1,0 +1,11 @@
+{
+    "id": 25573,
+    "condition": "[LEQ](<*VALUE(Console Station Qty (0-20))*>,0)",
+    "name": "Console Station Qty gt 0",
+    "action": "<*DISALLOWATTRIBUTES(Console Station Hardware Selection)*>",
+    "description": "CXCPQ-34882 - 4",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

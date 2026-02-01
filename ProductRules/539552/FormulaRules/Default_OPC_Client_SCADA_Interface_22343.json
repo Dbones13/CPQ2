@@ -1,0 +1,11 @@
+{
+    "id": 22343,
+    "condition": "[EQ](<*VALUE(ESDC_OPC_Client_SCADA_Interface)*>,)",
+    "name": "Default_OPC_Client_SCADA_Interface",
+    "action": "<*ASSIGNVALUE(ESDC_OPC_Client_SCADA_Interface:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

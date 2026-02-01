@@ -1,0 +1,11 @@
+{
+    "id": 9170,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Number_of_Server_Types_ExperionSys",
+    "action": "<*ASSIGNVALUE(Number_of_Server_Types_ExperionSys:<*CTX ( Container(CE_System_Cont).Sum(Number_of_Server_Types) )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13285,
+    "condition": "[EQ](<*VALUE(Is Profibus Interface in Scope?)*>,Yes)",
+    "name": "Show Profibus Interface Questions",
+    "action": "<*ALLOWATTRIBUTES(Number of Profibus Interface Cards,Number of Profibus Interface Types,Number of Profibus Devices)*>",
+    "description": "Display questions when Is Profibus Interface in Scope? = Yes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19796,
+    "condition": "[NOT](<*ISSELECTED(SerC_CG_Foundation_Fieldbus_Interface_required.Yes)*>)",
+    "name": "Hide_FIM_Table",
+    "action": "<*CTX ( Container(SerC_CG_FIM_FF_IO_Cont).Rows.Clear )*>\n<*CTX ( Container(SerC_CG_FIM_FF_Tot_Seg_transpose).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(FIM_Type,FIM_Percent_Installed_Spare_Fieldbus_IO,FIM_Num_Devices_Open_Loop,FIM_Num_Devices_Close_Loop,FIM_Num_Close_Loop_per_Segment,FIM_Num_FF_Temp_Mux_per_Segment,FIM_Num_of_MOVs_per_Segment,FIM_need_separate_segment_for_MOVs,FIM_Ctrl_Firewall_to_FIM_Cable_Len,FIM_FF_IOs_with_Power_conditioner,FIM_Power_Conditioner_Scope,FIM_power_source_FIM_Power_Conditioner,FIM_xFIM_Current_per_link_mA,FIM_Segment_Calc_PC_Questions,SerC_CG_FIM_FF_IO_Cont,FIM_FIM4_Not_Recommended,SerC_CG_FIM_FF_Tot_Seg_transpose)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

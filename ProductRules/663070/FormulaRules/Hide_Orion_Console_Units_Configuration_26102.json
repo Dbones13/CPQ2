@@ -1,0 +1,11 @@
+{
+    "id": 26102,
+    "condition": "[EQ](<*VALUE(Orion Stations required)*>,No)",
+    "name": "Hide Orion Console Units Configuration",
+    "action": "<*DISALLOWATTRIBUTES(Orion_Console_Units_Config,Custom Logo on Alarm Panel,Extended Height Alarm Light Panel,Orion Cons Annunc Rly Cont Box Required (IKB/OEP),Orion Console 2Position Base Unit (0-20),Orion Console 3Position Base Unit (0-20),Orion Console Alarm Soundbar,Orion Console Alarm Soundbar,Orion Console Center Curv Auxil Equip Unit (0-40),Orion Console Center Ext Auxil Equip Unit (0-40),Orion Console Center Joining Unit (0-40),Orion Console Center Str Auxil Equip Unit (0-40),Orion Console Display Devices (0-4),Orion Console Display Size,Orion Console Display Supplier,Orion Console Left Auxiliary Equipment Unit (0-40),Orion Console Left Extend Auxil Equip Unit (0-40),Orion Console Lift Jack System,Orion Console Membrane KB Type,Orion Console Remote Periph Sol Type (RPS),Orion Console Right Auxil Equip Unit (0-40),Orion Console Right Extend Auxil Equip Unit (0-40),Orion Console Turret Type,Turret location in Extended Auxil Equip Unit,Orion_2P_Base_Unit_Left,Orion_2P_Base_Unit_Left_Right,Orion_2P_Base_Unit_No_Left_Right,Orion_2P_Base_Unit_Right,Orion_3P_Base_Unit_Left,Orion_3P_Base_Unit_Left_Right,Orion_3P_Base_Unit_No_Left_Right,Orion_3P_Base_Unit_Right)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13673,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[OR]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[EQ](<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*>,0)))",
+    "name": "Part_DISS_MZ_PCVMM5",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVMM5)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

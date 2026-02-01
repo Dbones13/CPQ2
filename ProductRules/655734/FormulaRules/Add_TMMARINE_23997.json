@@ -1,0 +1,11 @@
+{
+    "id": 23997,
+    "condition": "<*ISSELECTED(Terminal_Mode_of_Transport.Marine loading/unloading)*>",
+    "name": "Add_TM-MARINE",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:TM-MARINE)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25557,
+    "condition": "[AND]([AND]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System),[LIKE](<*VALUE(CE_Selected_Products)*>,ControlEdge UOC System)),[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(Interface with TPS Required?)*>,Yes)))",
+    "name": "hideheading_desk_mount2",
+    "action": "<*ALLOWATTRIBUTES(Experion UOC Point Licenses for Exp TPS Group)*>,<*DISALLOWATTRIBUTES(Point Licenses for Enterprise Group)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

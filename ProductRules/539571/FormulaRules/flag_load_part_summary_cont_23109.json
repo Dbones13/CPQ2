@@ -1,0 +1,11 @@
+{
+    "id": 23109,
+    "condition": "1",
+    "name": "flag load part summary cont",
+    "action": "<*ASSIGNVALUE(flag_load_parts_cont:<*VALUE(Series_C_RG_Part_Summary)*>)*>",
+    "description": "",
+    "rank": "1200",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

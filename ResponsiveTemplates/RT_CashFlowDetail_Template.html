@@ -1,0 +1,259 @@
+<!-- Start - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+    <!-- ko let: { bookingLOB:$root.customFields.firstWithProperty('name', 'CF_CashFlowDetailsTab_BookingLOB')?.content() } -->
+<!-- End - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+<style>
+.calcbtn {
+    justify-content: end;
+    display: flex;}
+</style>
+<div class="cart-content fiori3-cart-content clearfix">
+    <script>
+        function showAlert() {
+			cpq.server.executeScript("GS_CashFlowTotalCalculation", {}, function (data){
+            	//$('ul#cartTabsContainer li.active a').click();
+                cpq.models.customFields.save();
+            })
+        }
+    </script>
+    <!-- Button with JavaScript Event -->
+	<div class="calcbtn">
+    <button class="phpbtn" onclick="showAlert()">Calculate</button>
+	</div>
+    <div id="cartSectionsWrapper" class="cart-sections-wrapper">
+    <!-- Start - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+    <!--  ko ifnot: (bookingLOB==="PMC")-->
+    <!-- End - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+      <div class="row">
+        <div id="cost-break-up-input-section" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#cost-break-up-input-section')">
+              <span>Cost Break-up Input</span>
+              <a id="cost-break-up-input-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="cost-break-up-input-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+              <div class="custom-fields">
+                <div class="row">
+                 <!-- ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal") -->
+                  <div class="col-md-7 col-sm-7 col-xs-12">
+                    <table class="table table-bordered">
+                      <thead class="search-in-columns-disabled">
+                        <tr>
+                          <th class="col-sm-4 text-center">Cost Category Type</th>
+                          <th class="col-md-6 text-center">Question</th>
+                          <th class="col-sm-2 text-center">Selected Choice</th>
+                        </tr>
+                      </thead>
+                      <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_Ques_Manul_Cost_Entry','EGAP_Ques_CBTPQ1','EGAP_Ques_CBTPQ2','EGAP_Ques_Manul_Cost_Entry1','EGAP_Ques_Manul_Cost_Entry2')">
+                        <tr>
+                          <td data-bind="text: $data.label.split('#Q#')[0]" class="col-sm-4 text-center"></td>
+                          <td data-bind="text: $data.label.split('#Q#')[1]" class="col-sm-6 text-center"></td>
+                          <td class="col-sm-2 text-center">
+                            <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                            <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable:!$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /ko -->
+                  <div class="col-md-5 col-sm-5 col-xs-12">
+                    <table class="table table-bordered">
+                      <thead class="search-in-columns-disabled">
+                        <tr>
+                          <th class="col-sm-7 text-center">Material Type</th>
+                          <th class="col-md-5 text-center">No of Shipment</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-bind="foreach: customFields.filterByProperty('name','EGAP_Material_Type','EGAP_No_of_Shipment')">
+                          <!-- ko if: (template == 'CartCustomFieldAutocompleteTemplate'  || template == 'CartCustomFieldHtmlTemplate') && $data.name == 'EGAP_Material_Type' -->
+                          <td class="col-sm-7 text-center">
+                            <select class="form-control" data-bind="select2: { selectedOptions: $data.selectedRow, ajax: $data.getSearchResults, onSelect: $data.onSelect, onUnselect: $data.onUnselect, placeholder: $data.placeholder, allowClear: true, minimumInputLength: 0, closeOnSelect: true, disabled: !$data.editable }, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}" style="width: 90%;" role="combobox"></select>
+                          </td>
+                          <!-- /ko -->
+                          <!-- ko if: (template == 'CartCustomFieldFreeFormTemplate' || template == 'CartCustomFieldHtmlTemplate') && $data.name == 'EGAP_No_of_Shipment' -->
+                          <td class="col-sm-5 text-center">
+                            <input data-bind="numericValue:$data.content, valueUpdatedOnEnter: $data.content, enable: $data.editable, 'aria-required': $data.isRequiredIndicatorVisible, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" class="form-control numberCell"/>
+                          </td>
+                          <!-- /ko -->
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="row table-overflow cpq-scroll">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <!-- ko if: $root.customFields.firstWithProperty('name', 'EGAP_QT_CashOutflow_Warning')?.content() != '' -->
+                      <!-- ko foreach: $root.customFields.firstWithProperty('name', 'EGAP_QT_CashOutflow_Warning')?.content().split(',') -->
+                        <div class="fiori3-alert fiori3-alert-warning">
+                          <span class="sap-icon">&#xe053;</span>
+                          <span data-bind="text: $data"></span>
+                        </div>
+                      <!-- /ko -->
+                    <!-- /ko -->
+                    <!-- ko foreach: quoteTables.filterByProperty('name','Cash_Outflow') -->
+                      <!-- ko template: template --> <!--/ko -->
+                    <!--/ko -->
+                  </div>
+                </div>
+                <!-- ko if: $root.customFields.firstWithProperty('name', 'EGAP_Ques_Manul_Cost_Entry')?.content()== 'No' || $root.customFields.firstWithProperty('name', 'EGAP_Ques_Manul_Cost_Entry1')?.content() == 'No' -->
+                <div class="row table-overflow cpq-scroll">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Honeywell_Labor_Cost_Curve') -->
+                    <!-- ko template: template --> 
+              <!--/ko -->
+                      <!--/ko -->
+                    </div>
+                  </div>
+                  <!--/ko -->
+				  <!-- ko if: $root.customFields.firstWithProperty('name', 'EGAP_Ques_Manul_Cost_Entry2')?.content() == 'No' -->
+					  <div class="row table-overflow cpq-scroll">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+						<!-- ko foreach: quoteTables.filterByProperty('name','Honeywell_HCI_Labor_BGP_PLSG') -->
+							<!-- ko template: template --> 
+							<!--/ko -->
+						<!--/ko -->
+						<!-- ko foreach: quoteTables.filterByProperty('name','Honeywell_HCI_Labor_BGP_Cost_Curve') -->
+                      <!-- ko template: template --> 
+                      <!--/ko -->
+                    <!--/ko -->
+                  </div>
+                </div>
+                <!--/ko -->
+                <div class="row table-overflow cpq-scroll">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Cash_Outflow_Calculations') -->
+                      <!-- ko template: template --> <!--/ko -->
+                    <!--/ko -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="milestone-billing-question-section" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#milestone-billing-question-section')">
+              <span>Milestone Billing Questions</span>
+              <a id="milestone-billing-question-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="milestone-billing-question-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+              <div class="custom-fields">
+                <div class="row">
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <table class="table table-bordered">
+                      <thead class="search-in-columns-disabled">
+                        <tr>
+                          <th class="col-sm-7 text-center">Milestone Billing Questions</th>
+                          <th class="col-md-2 text-center">Answer</th>
+                          <th class="col-sm-3 text-center">Sell Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- ko foreach: customFields.filterByProperty('name','EGAP_Subscription_SW_Milestone_Billing_Ques','EGAP_Project_Labor_Milestone_Billing_Ques','EGAP_Honeywell_Software_Milestone_Billing_Ques','EGAP_Third_Party_Goods_Milestone_Billing_Ques','EGAP_Other_Goods_Milestone_Billing_Ques','EGAP_HCI_Labor_Milestone_Billing_Ques','EGAP_HCI_SW_Milestone_Billing_Ques','EGAP_Advance_Payment_Milestone_Billing_Ques','EGAP_Reason_For_Deviation_Milestone_Billing_Ques','do_proposed_milestones_deviate_negatively') -->
+                        <tr>
+                          <td data-bind="text: $data.label" class="col-sm-7"></td>
+                          <td class="col-sm-2 text-center">
+                            <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                            <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable:!$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                          </td>
+                          <!-- ko ifnot: $data.name.split('_')[1] == 'Third' -->
+                            <td class="col-sm-3 text-center" data-bind="html: $root.customFields.firstWithProperty('name', 'EGAP_Total_Sell_Price_of_'+$data.name.split('_')[1]+'_'+$data.name.split('_')[2])?.content()"></td>
+                            <!-- /ko -->
+                          <!-- ko if: $data.name.split('_')[1] == 'Third' -->
+                              <td class="col-sm-3 text-center" data-bind="html: $root.customFields.firstWithProperty('name', 'EGAP_Total_Sell_Price_of_'+$data.name.split('_')[1]+'_'+$data.name.split('_')[2]+'_'+$data.name.split('_')[3])?.content()"></td>
+                            <!-- /ko -->
+                        </tr>
+                        <!--/ko -->
+                        <tr>
+                          <td class="col-sm-7 text-center">Non Milestone Billing Total</td>
+                          <td class="col-sm-2 text-center">&nbsp;</td>
+                          <td class="col-sm-3 text-center" data-bind="html: $root.customFields.firstWithProperty('name', 'EGAP_Non_Milestone_Billing_Total_Sell_Price')?.content()"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Start - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+        <!-- /ko -->
+    <!-- End - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+      <div class="row">
+        <div id="milestone-input-section" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#milestone-input-section')">
+              <span>Milestone Input</span>
+              <a id="milestone-input-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="milestone-input-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+              <div>
+                <div class="row">
+                  <div data-bind="foreach: customFields.filterByProperty('name','EGAP_Milestone_Project_Duration_Months','EGAP_Milestone_Project_Duration_Weeks')">
+                    <div class="quote-custom-fields" >
+                      <!-- ko template: template --> <!--/ko -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <!-- ko if: $root.customFields.firstWithProperty('name', 'EGAP_QT_ProjectMilestone_Warning')?.content() != '' -->
+                      <!-- ko foreach: $root.customFields.firstWithProperty('name', 'EGAP_QT_ProjectMilestone_Warning')?.content().split(',') -->
+                        <div class="fiori3-alert fiori3-alert-warning">
+                          <span class="sap-icon">&#xe053;</span>
+                          <span data-bind="text: $data"></span>
+                        </div>
+                      <!-- /ko -->
+                    <!-- /ko -->
+                  <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Project_Milestone') -->
+                    <!-- ko template: template --> <!--/ko -->
+                  <!--/ko -->
+                </div>
+                <div class="row">
+                  <!-- ko foreach: quoteTables.filterByProperty('name','EGAP_Cash_Inflow_Calculations') -->
+                    <!-- ko template: template --> <!--/ko -->
+                  <!--/ko -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Start - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+    <!--  ko ifnot: (bookingLOB==="PMC")-->
+    <!-- End - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+      <div class="row">
+        <div id="cash-flow-quality-section" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#cash-flow-quality-section')">
+              <span>Cash Flow Quality</span>
+              <a id="cash-flow-quality-section-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="cash-flow-quality-section-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+                <div class="row">
+                  <div data-bind="foreach: customFields.filterByProperty('name','EGAP_CFD_Cash_Flow_Quality','EGAP_CFD_Cashflow_Health')">
+                    <div class="quote-custom-fields">
+                      <!-- ko template: template --> <!--/ko -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Start - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+        <!-- /ko -->
+    <!-- End - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+    </div>
+  </div>
+<!-- Start - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->
+        <!-- /ko -->
+<!-- End - CXCPQ-69302 : Changes By Ankit(H539499) for Projects - PMC  -->

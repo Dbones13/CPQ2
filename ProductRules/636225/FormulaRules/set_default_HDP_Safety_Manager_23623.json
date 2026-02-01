@@ -1,0 +1,11 @@
+{
+    "id": 23623,
+    "condition": "[EQ](<*VALUE(HDP Safety Manager)*>,)",
+    "name": "set default HDP Safety Manager",
+    "action": "<*ASSIGNVALUE(HDP Safety Manager:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

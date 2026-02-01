@@ -1,0 +1,11 @@
+{
+    "id": 25636,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,Yes)",
+    "name": "Show_Server_NonRedundant",
+    "action": "<*SETREQUIRED(Server Redundancy Requirement?)*><*ALLOWATTRIBUTES(Server Redundancy Requirement?)*>",
+    "description": "If MIB Configuration Required? is selected as Yes, then display option Non Redundant as default value for question Server Redundancy Requirement?",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

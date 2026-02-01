@@ -1,0 +1,11 @@
+{
+    "id": 20012,
+    "condition": "[LT](<*CTX ( Container(Document_cont_c300).Rows.GetCount )*>,1)",
+    "name": "document_Table_add_new_row",
+    "action": "<*CTX ( Container(Document_cont_c300).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

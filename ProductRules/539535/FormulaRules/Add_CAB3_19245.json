@@ -1,0 +1,11 @@
+{
+    "id": 19245,
+    "condition": "[AND]([EQ](<*VALUE(PlantCruise_Use_S8_C300_or_ControlEdge_UOC)*>,C300),[EQ](<*VALUE(PlantCruise_HON_Supplied_Cabinet_and_Accessories)*>,Yes),[EQ](<*VALUE(PlantCruise_HON_Supplied_Power_Supply_&_Accessory)*>,Yes),[EQ](<*VALUE(PlantCruise_Default_Cabinet_Type)*>,Option #3(Single Cabinet)))",
+    "name": "Add_CAB3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(PlantCruise_Part_Summary:51202942-200|51202960-100|51202974-100|51305980-836|51307039-100|51454416-600|51454460-100|8U-PWSP04)*><*SETATVQTY(PlantCruise_Part_Summary:51202960-100,2)*><*SETATVQTY(PlantCruise_Part_Summary:8U-PWSP04,2)*><*SETATVQTY(PlantCruise_Part_Summary:51454460-100,2)*><*SETATVQTY(PlantCruise_Part_Summary:51202974-100,6)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

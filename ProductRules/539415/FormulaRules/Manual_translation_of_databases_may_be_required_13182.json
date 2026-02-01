@@ -1,0 +1,11 @@
+{
+    "id": 13182,
+    "condition": "[NEQ](<*CTX ( Product.RootProduct.SystemId )*>,Migration2_cpq)",
+    "name": "Manual_translation_of_databases_may_be_required",
+    "action": "<*SETOPTIONAL(QCS_Mig_Manual_translation_of_databases_required_DRG_file)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

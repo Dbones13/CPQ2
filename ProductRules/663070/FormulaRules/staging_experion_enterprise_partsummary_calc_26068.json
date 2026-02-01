@@ -1,0 +1,11 @@
+{
+    "id": 26068,
+    "condition": "[NEQ](<*CTX( Math.Sum(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-100)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-103)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-102)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-101)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-200)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-203)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-202)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-201)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-100)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-103)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-102)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-101)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-200)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-203)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-202)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-201)*>) )*>,<*VALUE(staging_experion_enterprise_partsummary_calc)*>)",
+    "name": "staging_experion_enterprise_partsummary_calc",
+    "action": "<*ASSIGNVALUE(staging_experion_enterprise_partsummary_calc:<*CTX( Math.Sum(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-100)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-103)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-102)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-101)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-200)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-203)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-202)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-201)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-100)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-103)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-102)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-101)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-200)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-203)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-202)*>,<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-201)*>) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4744,
+    "condition": "[NEQ](<*VALUE(MX_SG_Closed_Loop_Water_Chiller)*>,Yes)",
+    "name": "Part_D_Q7225_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q7225-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

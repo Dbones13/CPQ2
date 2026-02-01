@@ -1,0 +1,251 @@
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+	<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper">
+	  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		<div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+		  @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	  </div>
+	  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+	  <div style="width:100%">
+		<div class="msid-label">
+		  <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+		</div>
+	  </div>
+	  <!-- /ko -->
+	  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	  <!-- /ko -->
+	  <div class="row col-xs-12 swagger">
+		<div id="fdm-questions">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#fdm-questions')">
+			  <span>General questions - Field Device Manager (FDM) Upgrade</span>
+			  <a id="fdm-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="fdm-questions-content">
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "FDM_Upgrade_General_questions","FDM_Upgrade_2_General_questions","FDM_Upgrade_3_General_questions") -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	 <div class="row col-xs-12 swagger">
+		<div id="fdm-configuration">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#fdm-configuration')">
+			  <span>FDM Upgrade - Configuration</span>
+			  <a id="fdm-configuration-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="fdm-configuration-content">
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "FDM_Upgrade_Configuration","FDM_Upgrade_2_Configuration","FDM_Upgrade_3_Configuration") -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row col-xs-12 swagger">
+			<div id="fdm-additionalconfiguration">
+			  <div>
+				<div class="swagger-header" onclick="toggleConfigSection(event, '#fdm-additionalconfiguration')">
+				  <span>FDM Additional - Configuration</span>
+				  <a id="fdm-additionalconfiguration-href" href="#" class="swagger-toggle">&#xe066;</a>
+				</div>
+				<div id="fdm-additionalconfiguration-content">
+				  <div class="col-xs-12 col-sm-6">
+					<!-- ko foreach: attributes.filterByProperty('name' , "FDM_Upgrade_3_Additional_Configuration","FDM_Upgrade_Additional_Configuration","FDM_Upgrade_2_Additional_Configuration")-->
+					  <!-- ko if:$data.container.columns().length !== 0 && $data.container.rows().length !== 0 -->
+						<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+						<!-- /ko -->
+
+					  <!-- /ko -->
+					<!-- /ko -->
+				  </div>        
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  <div class="row col-xs-12 swagger">
+		<div id="fdm-hardware-questions">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#fdm-hardware-questions')">
+			  <span>Hardware to host FDM Server, FDM Client Stations and RCI PCs</span>
+			  <a id="fdm-hardware-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="fdm-hardware-questions-content">
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "FDM_Upgrade_Hardware_to_host_FDM_Server","FDM_Upgrade_2_Hardware_to_host_FDM_Server","FDM_Upgrade_3_Hardware_to_host_FDM_Server") -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>        
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row col-xs-12 swagger">
+		<div id="fdm-Services">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#fdm-Services')">
+			  <span>Services</span>
+			  <a id="fdm-Services-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="fdm-Services-content">
+			  <div class="col-xs-12 col-sm-6">
+				<!-- ko foreach: attributes.filterByProperty('name' , "FDM_Upgrade_Services","FDM_Upgrade_2_Services","FDM_Upgrade_3_Services") -->
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+<!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+	<!-- RT_FDM_Configurator --> 
+	<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper">
+	  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		<div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+		  @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	  </div>
+	  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+	  <div style="width:100%">
+		<div class="msid-label">
+		  <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+		</div>
+	  </div>
+	  <!-- /ko -->
+	  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	  <!-- /ko -->
+	 
+	 <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-questions" onclick="toggleConfigSection(event, '#fdm-questions')">
+			 <label class="onlytext">General questions - Field Device Manager (FDM) Upgrade</label>
+			 <a id="fdm-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+	<!-- /ko -->
+	 <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-questions" onclick="toggleConfigSection(event, '#fdm-questions')">
+			 <label class="onlytext">General questions - Field Device Manager (FDM) Upgrade</label>
+			  
+			</div>
+	<!-- /ko -->
+			<div id="fdm-questions-content" class=" col-md-12 clear-padding">
+			  <div class="col-xs-12 col-sm-12">
+				<!-- ko foreach: attributes.filterByProperty('name',"FDM_Upgrade_What_is_the_current_release","FDM_Upgrade_Select_desired_FDM_release","FDM_Upgrade_FDM_Media_Delivery","Attr_FDM_Upg_FDMsUpgraded","FDM_Upgrade_Additional_Components") -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+			  </div>
+			</div>  
+			
+			<!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-configuration" onclick="toggleConfigSection(event, '#fdm-configuration')">
+			 <label class="onlytext">FDM Upgrade - Configuration</label>
+			 <a id="fdm-configuration-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<!-- /ko -->
+			<!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-configuration" onclick="toggleConfigSection(event, '#fdm-configuration')">
+			  <label class="onlytext">FDM Upgrade - Configuration</label>
+			 
+			</div>
+			<!-- /ko -->
+			<div id="fdm-configuration-content" class=" col-md-12 clear-padding">
+			  <div class="col-xs-12 col-sm-12">
+				 <!-- ko foreach: attributes.filterByProperty('name',"FDM_Upgrade_Do_you_want_to_upgrade_this_FDM","Attr_FDM_Upg1ServerDevicePoints","Attr_FDMUpg1_AuditTrailDev","Attr_FDMUpg1_RCIs_excExperion","Attr_FDMUpg1_RCIs_incExperion","Attr_FDM_Upg1_TotalFDMClients","Attr_FDM_Upg_HdwareMultiplexer","Attr_FDM_Upg_Multiplexer","Attr_FDM_Upg_Dummy") -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+			  </div>
+			</div> 
+			<!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+				<div class="config_row col-md-12 clear-padding pt10 flex banner_clps"   onclick="toggleConfigSection(event, '#fdm-additionalconfiguration')">
+					<label class="onlytext">FDM Additional - Configuration</label>
+					<a id="fdm-additionalconfiguration-href" href="#" class="swagger-toggle">&#xe066;</a>
+				</div>
+			<!-- /ko -->
+			<!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+				<div class="config_row col-md-12 clear-padding pt10 flex banner_clps"   onclick="toggleConfigSection(event, '#fdm-additionalconfiguration')">
+					<label class="onlytext">FDM Additional - Configuration</label>
+	
+				</div>
+			<!-- /ko -->
+				<div id="fdm-additionalconfiguration-content" class=" col-md-12 clear-padding">
+				  <div class="col-xs-12 col-sm-12">
+					 <!-- ko foreach: attributes.filterByProperty('name',"Attr_FDM_Upg_devmanaged","FDM_Upgrade_Audit_trail_file_required","Attr_FDM_Upg_AuditTrailDev","Attr_FDM_Upg_HARTdevvendors","Attr_FDMUpg_FDMClients","Attr_Experion/TPS_Servers_FDMInt","FDM_Upgrade_HART_Devices_Offline_Configuration_req","Attr_ServerNetInterfaceLic","Attr_HWMUX_Net_MonitoringLic","FDM_Upgrade_Is_Experion_Server_redundant_for_FDM","Attr_ExpServer_processI/Opoint","Attr_remPCs_FDMServerviaLAN","Attr_PVST_HARTESD","FDM_Upgrade_Asset_Sentinel_integration_required","FDM_Upgrade_Are_additional_components_required","FDM HART IP DOWNLINK LICENSE","FDM_HART_IP_Server_License","FDM_HART_IP_Server_DevicePoint_License","FDM_Report_Licenses","FDM_NAMUR_Diagnostic_Custom_Model_Licenses","FDM_Instrument_Alert_Monitoring_License","FDM_OPC_UA_Server_Enabler_Read-Only","FDM_OPC_UA_DA_Profile_Enabler_Read-Only","FDM_OPC_UA_HDA_Profile_Enabler_Read-Only","FDM_OPC_UA_AC_Profile_Enabler_Read-Only","FDM_OPC_UA_Server_Tag_read-only_Licenses","FDM_FF_Connector_Interface_Licenses","FDM_Devices_for_FF_Connector_Interface_License","FDM_FF_Conn_Interface_License_Fisher_Valvelink_SW" ) -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+				  </div>        
+				</div>
+			 
+	 <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-hardware-questions" onclick="toggleConfigSection(event, '#fdm-hardware-questions')">
+			  <label class="onlytext">Hardware to host FDM Server, FDM Client Stations and RCI PCs</label>
+			 <a id="fdm-hardware-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<!-- /ko -->
+	 <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-hardware-questions" onclick="toggleConfigSection(event, '#fdm-hardware-questions')">
+			  <label class="onlytext">Hardware to host FDM Server, FDM Client Stations and RCI PCs</label>
+			 
+			</div>
+			<!-- /ko -->
+			<div id="fdm-hardware-questions-content" class=" col-md-12 clear-padding">
+			  <div class="col-xs-12 col-sm-12"> 
+				  <!-- ko foreach: attributes.filterByProperty('name',"FDM_Upgrade_Is_HW_required_for_this_FDM","FDM_Upgrade_Will_Honeywell_provide_the_FDM_server","Attr_FDMClientStation","Attr_FDMRCIPCs","Attr_FDMGatewayPCs","FDM_Upgrade_FDM_Gateway_PC_Hardware_Selection") -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+			  </div>        
+			</div>
+		 
+	 <!-- ko if: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-Services" onclick="toggleConfigSection(event, '#fdm-Services')">
+			  <label class="onlytext">Services</label>
+			  <a id="fdm-Services-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<!-- /ko -->
+	 <!-- ko ifnot: localStorage.getItem("checkR2Q") ==='Yes'-->
+			<div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="fdm-Services" onclick="toggleConfigSection(event, '#fdm-Services')">
+			  <label class="onlytext">Services</label>
+			  
+			</div>
+			<!-- /ko -->
+			<div id="fdm-Services-content" class=" col-md-12 clear-padding">
+			  <div class="col-xs-12 col-sm-12">  
+				 <!-- ko foreach: attributes.filterByProperty('name',"Attr_Experion/TPSSer","Attr_FDMGateways","Attr_NetworkInterf_Lic","Attr_ExpStationsFDM","FDM_Upgrade_Site_Acceptance_Test","Attr_DMPVST_Planner") -->
+				  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				  </div>
+				<!-- /ko -->
+			  </div>
+			</div>
+		 
+	</div>
+<!-- /ko -->

@@ -1,0 +1,11 @@
+{
+    "id": 18935,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,AutoSlice),[EQ](<*VALUE(MX_CD_CDWeb_Cable_Support)*>,Yes),[GEQ](<*VALUE(MX_CD_Zone_Width)*>,1))",
+    "name": "CD_Part_91412_MM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:91412-MM)*><*SETATVQTY(MX_CD_Bom_Parts:91412-MM, \n<*VALUE(MX_CD_Zone_Width)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

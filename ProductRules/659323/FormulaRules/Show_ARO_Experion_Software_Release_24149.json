@@ -1,0 +1,11 @@
+{
+    "id": 24149,
+    "condition": "[EQ](<*VALUE(ARO_System_Required)*>,Yes)",
+    "name": "Show_ARO_Experion_Software_Release",
+    "action": "<*ALLOWATTRIBUTES(ARO_Experion_Software_Release)*><*SETREQUIRED(ARO_Experion_Software_Release)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

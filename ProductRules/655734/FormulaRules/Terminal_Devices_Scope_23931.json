@@ -1,0 +1,11 @@
+{
+    "id": 23931,
+    "condition": "[EQ](<*CTX ( Container(Terminal_Devices_Scope).Rows.GetCount )*>,0)",
+    "name": "Terminal_Devices_Scope",
+    "action": "<*CTX ( Container(Terminal_Devices_Scope).LoadKeys(Element).Load(select Element,'Simple' as Complexity,'Standard' as Type from Terminal_Manager_Scope where Scope = 'Devices') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

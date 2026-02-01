@@ -1,0 +1,11 @@
+{
+    "id": 14162,
+    "condition": "[EQ](<*VALUE(Number_of_SCADA_Node_Types_for_C300)*>,)",
+    "name": "Default_Number_of_SCADA_Node_Types_for_C300",
+    "action": "<*ASSIGNVALUE(Number_of_SCADA_Node_Types_for_C300:0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

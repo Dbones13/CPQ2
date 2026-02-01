@@ -1,0 +1,11 @@
+{
+    "id": 26521,
+    "condition": "[NOT](<*ISSELECTED(Default Crossover Cable.20m)*>)",
+    "name": "Hide_51305786_520",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51305786-520)*><* DoResetAtt *>",
+    "description": "38329",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(labor_parameter_bf:<*CTX( Math.Maximum(0.15, <*CTX( Math.Minimum(1.6, <*EVAL(1 + <*VALUE(labor_parameter_B)*> +<*VALUE(labor_parameter_F)*>)*>))*>))*>)*>

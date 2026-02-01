@@ -1,0 +1,11 @@
+{
+    "id": 22998,
+    "condition": "[EQ](<*VALUE(SerC_RG_Distance_for_SeriesC_Remote_Group)*>,10.0 KM)",
+    "name": "Hide_Dropdown_Distance",
+    "action": "<*DISALLOWVALUES(SerC_RG_CN100/_FOE_Fiber_Type:Multi Mode)*>",
+    "description": "CXCPQ-44728",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

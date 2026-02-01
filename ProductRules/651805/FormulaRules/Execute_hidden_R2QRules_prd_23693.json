@@ -1,0 +1,11 @@
+{
+    "id": 23693,
+    "condition": "[EQ](<*VALUE(Trigger_r2q_rules)*>,True)",
+    "name": "Execute_hidden_R2QRules_prd",
+    "action": "<* ExecuteScript(GS_PHD_GenralTabLoad) *>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

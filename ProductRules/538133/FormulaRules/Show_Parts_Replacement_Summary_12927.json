@@ -1,0 +1,11 @@
+{
+    "id": 12927,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,New),[NEQ](<*VALUE(SC_P1P2_Parts_Ext_Price)*>,),[NEQ](<*VALUE(SC_P1P2_Parts_Ext_Price)*>,0))",
+    "name": "Show_Parts_Replacement_Summary",
+    "action": "<*ALLOWATTRIBUTES(Header_07_close,Header_07_open,SC_P1P2_Parts_Replacement_Summary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

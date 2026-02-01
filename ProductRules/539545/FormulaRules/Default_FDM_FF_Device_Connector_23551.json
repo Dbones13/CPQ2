@@ -1,0 +1,11 @@
+{
+    "id": 23551,
+    "condition": "[EQ](<*VALUE(FDM_FF_Custom_Connector)*>,)",
+    "name": "Default_FDM_FF_Device_Connector",
+    "action": "<*ASSIGNVALUE(FDM_FF_Custom_Connector:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

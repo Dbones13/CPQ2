@@ -1,0 +1,678 @@
+<script type='text/javascript' >
+
+    function setCookie(cname, cvalue, exdays) {
+      const d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      let expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/; SameSite=None; Secure";
+    }
+
+    function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    cpq.events.sub("configurator:updated", function (data, event) {
+
+      const contentPanels = document.getElementsByClassName("newtoggle");
+
+      for (let i = 0; i < contentPanels.length; i++) {
+        var panelId = contentPanels[i].id;
+        var section = panelId.substring(0,panelId.length - 8);
+
+         if (getCookie('currentToggle' + section) === '') {
+             setCookie('currentToggle' + section, 'visible', 120) ;
+           }
+        if (getCookie('currentToggle' + section) === 'visible' && $('#' + section + '-content:visible').length === 0) {
+
+       $('#' + section + '-content').show();
+        }
+
+        if (getCookie('currentToggle' + section) === 'hidden' && $('#' + section + '-content:visible').length === 1) {
+
+     $('#' + section + '-content').hide();
+            $('#' + section + '-href').toggleClass('swagger-toggle-rotated');
+        }
+      }});
+
+    function togglePanel(e,section,panel, button, toggleSpeed) {
+        e.preventDefault();
+        var panelPreviousStateVisible = panel.is(':visible');
+        // Toggle the div
+        if (toggleSpeed > 0 || toggleSpeed === 'slow' || toggleSpeed === 'fast') {
+            panel.slideToggle(toggleSpeed, function() {
+        		$('#' + section + '-href').toggleClass('swagger-toggle-rotated');
+      		});
+        } else {
+            panel.toggle("slow", function() {
+         		$('#' + section + '-href').toggleClass('swagger-toggle swagger-toggle');
+      		});
+        }
+
+        // Once toggled, set the cookie
+        if (!panelPreviousStateVisible ) { 
+            setCookie('currentToggle' + section, 'visible', 120) ;
+        } else {
+          setCookie('currentToggle' + section, 'hidden', 120) ;
+        }
+    }
+
+    var tpl = '';
+    function toggleSection(e, section){
+        e.preventDefault();
+        var href_id    = section + '-href';
+        var content_id = section + '-content';
+        $(content_id).toggle();
+        $(section).toggleClass('section-toggled');
+        $(href_id).toggleClass('fiori3-rotated-quote-section-toggle')
+        if(section == '#approval-level-section'){
+        	loadApprovalMatrix();
+        }
+    }
+  
+    function toggleConfigSection(e, section){
+        e.preventDefault();
+        var href_id    = section + '-href';
+        var content_id = section + '-content';
+        $(content_id).toggle();
+        $(section).toggleClass('section-toggled');
+        $(href_id).toggleClass('swagger-toggle-rotated')
+    }
+	
+	//OTU Search functionality
+    cpq.events.sub('configurator:updated',function(data,event){
+     
+        var searchText_array = data.model && data.model.attributes().filter(function(i){if(i.name() == 'SearchBoxMsid_OTU_SESP'){return i}})
+        var con = document.getElementById('OTU_MSID')
+        if (con){
+            var tds = con.getElementsByTagName('td')
+            for  (let i of tds){
+                if (i.getAttribute('data-title') == 'MSIDs'){
+                    
+                    if (i.innerText.toUpperCase().includes(searchText_array[0].userInput().toUpperCase()) || i.innerText.toUpperCase() == searchText_array[0].userInput().toUpperCase() ){
+                       
+                    }else{
+              
+                        i.parentElement.style.display = 'None'
+                    }
+                }
+
+            }
+        }
+
+    })
+    function searchMsidForOTU(parent,parents,data){
+    
+        var searchText_array = parents[0] && parents[0].attributes && parents[0].attributes().filter(function(i){if(i.name() == 'SearchBoxMsid_OTU_SESP'){return i}})
+ 
+        var con = document.getElementById('OTU_MSID')
+        if (con){
+        	var tds = con.getElementsByTagName('td')
+        }
+        if (tds){
+        	for (let i of tds){
+                if (i.getAttribute('data-title') == 'MSIDs'){
+                   
+                    if (i.innerText.toUpperCase().includes(searchText_array[0].userInput().toUpperCase()) || i.innerText.toUpperCase() == searchText_array[0].userInput().toUpperCase()){
+                        
+                    }else{
+                    	 
+                        i.parentElement.style.display = 'None'
+                    }
+                }
+        	}
+        }
+    }
+
+    requirejs(['knockout', 'KnockoutCustomBindings'], function (ko) {
+		ko.bindingHandlers.confirmRowDeleteClick = {
+            init: function(element, valueAccessor, allBindings, viewModel) {
+                var value = valueAccessor();
+                var message = ko.unwrap(value.message);
+                var click = value.click;
+                ko.applyBindingsToNode(element, { click: function () {
+                    if (confirm(message))
+                        return click.apply(this, Array.prototype.slice.apply(arguments));
+                    }}, viewModel);
+                }
+        }
+      	ko.bindingHandlers.renderApprovalMatrix = {
+          update: function(element, ValueAccessor){
+		      $.ajax({
+                url: location.origin + "/customapi/executescript?scriptname=GS_ApprovalTabContent",
+				headers: {
+                    "X-CSRF-Token": csrfToken
+				},
+                  success: function(data) {
+                    tpl = `<div class="table-overflow cpq-scroll">
+							<table class="table table-bordered cart-table cpq-scroll">
+								<thead class="search-in-columns-disabled">
+                                  <tr>
+                                    <td>LSS</td>
+                                    <td colspan="4">Discretionary Discount From List Price</td>
+                                  </tr>`;
+					for (i=0; i<data.columns.length; i++){
+						textAlign = (i < 1 ) ? "text-align:left;" : "text-align:center;";
+						tpl += '<th class="cart-table-column" style="'+ textAlign +' color: #fff;background-color: #212529;border-color: #32383e;"><span class="visible-small">'+data.columns[i]+'</span>';
+						tpl += '</th>';
+					}
+					tpl += `</thead>
+						<tbody>`;
+					if (data.values.length > 0){
+						for (i=0; i<data.values.length; i++){
+							Discount25 = (data.values[i].Discount25 == 0) ? 'None' : data.values[i].Discount25;
+							Discount10_25 = (data.values[i].Discount10_25 == 0) ? 'None' : data.values[i].Discount10_25;
+							Discount5_10 = (data.values[i].Discount5_10 == 0) ? 'None' : data.values[i].Discount5_10;
+							Discount5 = (data.values[i].Discount5 == 0) ? 'None' : data.values[i].Discount5;
+							tpl += `<tr>
+							<td style="vertical-align: top!important" class="fiori3-input-group">
+							  <ul style="padding: 0; list-style-type: none; text-align: left; margin-bottom: 0;" class="clearfix">
+								<li class="visible-small column-label-in-row">
+								  <span>`+ data.values[i].SellPriceRange +`</span>
+								</li>
+							  </ul>
+							</td>`;
+							tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+							<ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+							  <li class="visible-small column-label-in-row">
+								<span>`+ Discount25 +`</span>
+							  </li>
+							</ul>
+							</td>`;
+							tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+							<ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+							  <li class="visible-small column-label-in-row">
+								<span>`+ Discount10_25 +`</span>
+							  </li>
+							</ul>
+							</td>`;
+							tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+							<ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+							  <li class="visible-small column-label-in-row">
+								<span>`+ Discount5_10 +`</span>
+							  </li>
+							</ul>
+							</td>`;
+							tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+							<ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+							  <li class="visible-small column-label-in-row">
+								<span>`+ Discount5 +`</span>
+							  </li>
+							</ul>
+							</td>
+							</tr>`;						
+						}
+					} else {
+						tpl += '<tr><td colspan="5">There are no items</td></tr>';
+					}
+					tpl +=`</tbody>
+							</table>
+						</div>`;  
+					$(element).html(tpl);
+                  }
+  			  });
+          }
+       },
+       ko.bindingHandlers.renderApprovalMatrix = {
+            update: function(element, ValueAccessor){
+                $.ajax({
+                    url: location.origin + "/customapi/executescript?scriptname=GS_ApprovalTabContent",
+                    headers: {
+                        "X-CSRF-Token": csrfToken
+                    },
+                    success: function(data) {
+                        tpl = `<div class="table-overflow cpq-scroll">
+                                <table class="table table-bordered cart-table cpq-scroll">
+                                    <thead class="search-in-columns-disabled">
+                                    <tr>
+                                        <td>LSS</td>
+                                        <td colspan="4">Discretionary Discount From List Price</td>
+                                    </tr>`;
+                        for (i=0; i<data.columns.length; i++){
+                            textAlign = (i < 1 ) ? "text-align:left;" : "text-align:center;";
+                            tpl += '<th class="cart-table-column" style="'+ textAlign +' color: #fff;background-color: #212529;border-color: #32383e;"><span class="visible-small">'+data.columns[i]+'</span>';
+                            tpl += '</th>';
+                        }
+                        tpl += `</thead>
+                            <tbody>`;
+                        if (data.values.length > 0){
+                            for (i=0; i<data.values.length; i++){
+                                Discount25 = (data.values[i].Discount25 == 0) ? 'None' : data.values[i].Discount25;
+                                Discount10_25 = (data.values[i].Discount10_25 == 0) ? 'None' : data.values[i].Discount10_25;
+                                Discount5_10 = (data.values[i].Discount5_10 == 0) ? 'None' : data.values[i].Discount5_10;
+                                Discount5 = (data.values[i].Discount5 == 0) ? 'None' : data.values[i].Discount5;
+                                tpl += `<tr>
+                                <td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: left; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">
+                                    <span>`+ data.values[i].SellPriceRange +`</span>
+                                    </li>
+                                </ul>
+                                </td>`;
+                                tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                <li class="visible-small column-label-in-row">
+                                    <span>`+ Discount25 +`</span>
+                                </li>
+                                </ul>
+                                </td>`;
+                                tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                <li class="visible-small column-label-in-row">
+                                    <span>`+ Discount10_25 +`</span>
+                                </li>
+                                </ul>
+                                </td>`;
+                                tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                <li class="visible-small column-label-in-row">
+                                    <span>`+ Discount5_10 +`</span>
+                                </li>
+                                </ul>
+                                </td>`;
+                                tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                <li class="visible-small column-label-in-row">
+                                    <span>`+ Discount5 +`</span>
+                                </li>
+                                </ul>
+                                </td>
+                                </tr>`;						
+                            }
+                        } else {
+                            tpl += '<tr><td colspan="5">There are no items</td></tr>';
+                        }
+                        tpl +=`</tbody>
+                                </table>
+                            </div>`;  
+                        $(element).html(tpl);
+                    }
+                    });
+            }
+        },
+        ko.bindingHandlers.renderApprovalMatrixPMC = {
+                update: function (element, ValueAccessor) {
+                $.ajax({
+                    url: location.origin + "/customapi/executescript?scriptname=GS_ApprovalTabContent",
+                    headers: {
+                    "X-CSRF-Token": csrfToken
+                    },
+                    success: function (data) {
+                    var tpl = ''
+                    if (data != undefined) {
+                
+                        tpl = `<div class="table-overflow cpq-scroll">
+                            <table class="table table-bordered cart-table cpq-scroll">
+                                <thead class="search-in-columns-disabled" style="background-color: rgb(237, 239, 240);"}>
+                                    <tr>
+                                    <td>${data.PMCApprovalMatrixName}</td>
+                                    <td style="text-align:center;" colspan="${(data.columns.length > 1) ? data.columns.length - 1 : 1}">Discretionary Discount From List Price</td>
+                                    </tr>`;
+                        for (i = 0; i < data.columns.length; i++) {
+                        textAlign = (i < 1) ? "text-align:left;" : "text-align:center;";
+                        tpl += '<th class="cart-table-column" style="' + textAlign + ' color: black;"><span class="visible-small">' + data.columns[i] + '</span>';
+                        tpl += '</th>';
+                        }
+                        tpl += `</thead>
+                        <tbody>`;
+                        if (data.values.length > 0) {
+                        data.values.forEach(row => {
+                            tpl += `<tr>`
+                            data.columns.forEach(columnName => {
+                            tpl += `<td style="text-align:${(columnName == "Sell Price(USD)") ? 'left' : 'center'}">${row[columnName]}</td>`;
+
+                            });
+                            tpl += '</tr>'
+                        });
+                        } else {
+                        tpl += '<tr><td colspan="5">There are no items</td></tr>';
+                        }
+                        tpl += `</tbody>
+                            </table>
+                        </div>`;
+                    }
+                    else {
+                        tpl += `<span>No response</span>`
+                    }
+                    $(element).html(tpl);
+                    }
+                });
+                }
+            },
+       ko.bindingHandlers.renderRevenueAndMargin = {
+            update: function(element, ValueAccessor){
+		      $.ajax({
+                type: "POST",
+                url: location.origin + "/customapi/executescript?scriptname=GS_GetTableData",
+				headers: {
+                    "X-CSRF-Token": csrfToken
+                },
+                data: "Param=" + JSON.stringify({"tableName":"EGAP_Revenue_Margin", "isQuoteTable":"True","condition":""}),
+                success: function(data) {
+                    tpl = `<div class="table-overflow cpq-scroll">
+							<table class="table table-bordered cart-table cpq-scroll">
+								<thead class="search-in-columns-disabled">`;
+					for (i=0; i<data.headers.length; i++){
+						tpl += '<th class="cart-table-column" style="text-align:left"><span class="visible-small">'+data.headers[i]+'</span>';
+						tpl += '</th>';
+					}
+					tpl += `</thead>
+						<tbody>`;
+					if (data.rows.length > 0){
+						for (i=0; i<data.rows.length; i++){
+							fieldName = data.rows[i].EGAP_Field_Details;
+							quoteCurrency = data.rows[i].EGAP_Quote_Currency;
+							USDCurrency = data.rows[i].EGAP_USD_Currency;
+							tpl += `<tr>
+							<td style="vertical-align: top!important" class="fiori3-input-group">
+							  <ul style="padding: 0; list-style-type: none; text-align: left; margin-bottom: 0;" class="clearfix">
+								<li class="visible-small column-label-in-row">
+								  <span>`+fieldName +`</span>
+								</li>
+							  </ul>
+							</td>`;
+							tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+							<ul style="padding: 0; list-style-type: none; text-align: right; margin-bottom: 0;" class="clearfix">
+							  <li class="visible-small column-label-in-row">
+								<span>`+ quoteCurrency +`</span>
+							  </li>
+							</ul>
+							</td>`;
+							tpl += `<td style="vertical-align: top!important" class="fiori3-input-group" >
+							<ul style="padding: 0; list-style-type: none; text-align: right; margin-bottom: 0;" class="clearfix">
+							  <li class="visible-small column-label-in-row">
+								<span>`+ USDCurrency +`</span>
+							  </li>
+							</ul>
+							</td>
+							</tr>`;						
+						}
+					} else {
+						tpl += '<tr><td colspan="3">There are no items</td></tr>';
+					}
+					tpl +=`</tbody>
+							</table>
+						</div>`;  
+					$(element).html(tpl);
+                  }
+  			    });
+            }
+        }
+    });  
+  
+
+    $(function(){
+      tabArray = ['?TabId=49', '?TabId=54', '?TabId=55'];
+      if ( window.location.pathname == '/quotation/QuoteProperty.aspx') {
+          if (tabArray.includes(window.location.search)){
+              $('#cartContainer').css("background-color", "#edeff0");
+          } 
+      }
+  
+    });
+  
+    function loadApprovalMatrix(){
+        $("#approval-matrix").html('Loading..');
+        $.ajax({
+            url: location.origin + "/customapi/executescript?scriptname=GS_ApprovalTabContent",
+			headers: {
+                "X-CSRF-Token": csrfToken
+            },
+            success: function( data ) {
+                tpl = `<div class="table-overflow cpq-scroll">
+                <table class="table table-bordered cart-table cpq-scroll">
+                <thead class="search-in-columns-disabled">`;
+                var col_count = data.columns.length;
+				if (data.ProposalType != '' && data.LimitType != '' ) {
+					tpl += '<tr><th class="cart-table-column" style="text-align:left"><span class="visible-small">'+data.ProposalType+'</span></th>';
+					tpl += '<th class="cart-table-column" style="text-align:center" colspan="'+(col_count-1)+'"><span class="visible-small">'+data.LimitType+'</span></th></tr>';
+				}
+				tpl += '<tr>';                  
+                for (i=0; i<data.columns.length; i++){
+                    textAlign = (i < 1 ) ? "text-align:left" : "text-align:center";
+                    tpl += '<th class="cart-table-column" style="'+ textAlign +'"><span class="visible-small">'+data.columns[i]+'</span>';
+                    tpl += '</th>';
+                }
+                tpl += `</thead>
+                    <tbody>`;
+                if (data.values.length > 0){
+                    var col = data.ColumnIndex;
+                    var row = data.RowIndex;
+                    var col_style1, col_style2, col_style2, col_style4, col_style5, col_style6;
+                    for (i=0; i<data.values.length; i++){
+                        col_style1 = col_style2 = col_style3 = col_style4 = col_style5 = col_style6 = '';
+                        if ((i+1) == row && data.ItemCount > 0){
+                        	switch (col){
+                            	case 1:
+                                	col_style1 = 'style="font-weight:bold;"';
+                                    break;
+                            	case 2:
+                                	col_style2 = 'style="font-weight:bold;"';
+                                    break;
+                            	case 3:
+                                	col_style3 = 'style="font-weight:bold;"';
+                                    break;
+                            	case 4:
+                                	col_style4 = 'style="font-weight:bold;"';
+                                    break;
+                            	case 5:
+                                	col_style5 = 'style="font-weight:bold;"';
+                                    break;
+                                case 6:
+                                    col_style6 = 'style="font-weight:bold;"';
+                                    break;
+                            }
+                        }
+						Discount0 = (data.values[i].Discount0 == 0) ? 'None' : data.values[i].Discount0;
+						Discount1_25 = (data.values[i].Discount1_25 == 0) ? 'None' : data.values[i].Discount1_25;
+						Discount26_45 = (data.values[i].Discount26_45 == 0) ? 'None' : data.values[i].Discount26_45;
+						Discount46_54 = (data.values[i].Discount46_54 == 0) ? 'None' : data.values[i].Discount46_54;
+						Discount55 = (data.values[i].Discount55 == 0) ? 'None' : data.values[i].Discount55;
+                        if (col_count == 7){
+                            Discount66 = (data.values[i].Discount66 == 0) ? 'None' : data.values[i].Discount66;
+                        }
+                        tpl += `<tr>
+                            <td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: left; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">
+                                        <span>`+ data.values[i].SellPriceRange +`</span>
+                                    </li>
+                                </ul>
+                            </td>`;
+                        tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">`;
+                                tpl += '<span '+ col_style1 +'>' + Discount0 + '</span>';
+                                tpl += `</li>
+                                </ul>
+                                </td>`;
+                        tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">`;
+                                tpl += '<span '+ col_style2 +'>' + Discount1_25 + '</span>';
+                                tpl += `</li>
+                                </ul>
+                                </td>`;
+                        tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">`;
+                                tpl += '<span '+ col_style3 +'>' + Discount26_45 + '</span>';
+                                tpl += `</li>
+                                </ul>
+                                </td>`;
+                        tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">`;
+                                tpl += '<span '+ col_style4 +'>' + Discount46_54 + '</span>';
+                                tpl += `</li>
+                                </ul>
+                                </td>`;
+                        tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">`;
+                                tpl += '<span '+ col_style5 +'>' + Discount55 + '</span>';
+                                tpl += `</li>
+                                </ul>
+                                </td>`;
+                        if (col_count == 7){
+                            tpl += `<td style="vertical-align: top!important" class="fiori3-input-group">
+                                <ul style="padding: 0; list-style-type: none; text-align: center; margin-bottom: 0;" class="clearfix">
+                                    <li class="visible-small column-label-in-row">`;
+                            tpl += '<span '+ col_style6 +'>' + Discount66 + '</span>';
+                            tpl += `</li>
+                                  </ul>
+                                </td>`;
+                        }
+                        tpl += `</tr>`;
+                    }
+                } else {
+                    tpl += '<tr><td colspan="5">There are no items</td></tr>';
+                }
+                tpl +=`</tbody>
+                    </table>
+                </div>`;
+                $("#approval-matrix").html(tpl);
+            }
+      });
+    }
+    function getCountryOfOriginDropdown(values , plsg , cellId){
+        cpq.server.executeScript("API_ContryOfOriginForPLSG",{searchValue : plsg} , function(data){
+			 data = new Set(data)
+	 
+			 select = document.getElementById(cellId)
+			 opts = select.options
+			 toBeDeleted = []
+             for(opt of opts){
+				 if(data.has(opt.text)){
+					 
+				 } else {
+					 
+				 	toBeDeleted.push(opt.index)
+				 }
+			 }
+             counter = 0
+    		 for(index of toBeDeleted){
+			 	opts.remove(index - counter);
+				counter += 1
+			 }
+		});
+        return values;
+    }
+	function getMilestoneDescriptionDropdown(values , milestone , cellId){
+        cpq.server.executeScript("API_Milestone_Description",{searchValue : milestone} , function(data){
+			 data = new Set(data)
+			 
+			 select = document.getElementById(cellId)
+			 opts = select.options
+			 toBeDeleted = []
+             for(opt of opts){
+				 if(data.has(opt.text)){
+					 
+				 } else {
+			 
+				 	toBeDeleted.push(opt.index)
+				 }
+			 }
+             counter = 0
+    		 for(index of toBeDeleted){
+			 	opts.remove(index - counter);
+				counter += 1
+			 }
+		});
+        return values;
+    }
+</script>
+
+<script type="text/html" id="HW_AutoCompleteInputTemplate">
+<td class="col-xs-8">    
+    <!-- ko template: { name: 'HW_LabelTemplate' } -->
+    <!-- /ko -->
+</td>
+<td class="col-xs-4" data-bind="attr : { 'data-title' : label}" >
+<select tabindex="0" class="form-control"
+        data-bind="select2: { selectedOptions: selectedRow, ajax: getSearchResults, onSelect: onSelect, onUnselect: onUnselect, placeholder: columnsToDisplay(), allowClear: true, minimumInputLength: 0, closeOnSelect: true, language: { noResults: noResultsFunc } },
+            validateInput: { val: selectedValue, event: 'change blur' },
+            event: { change: function() { window.lastActiveElementId = $element.id; } },
+            hasFocus: window.lastActiveElementId == $element.id,
+            css: { 'validation-error': selectedValue.isValid && !selectedValue.isValid(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+            enable: isEnabled,
+            attr: { name: name, id: stdAttrCode(), 'aria-label': name, required: required }" style="display: block; width: 100%;"></select>
+    <div align="left" style="line-height: 1.1em;">
+        <span class="validationMessage" data-bind="html: attributeValidationMessage"></span>
+    </div></td>
+
+    
+</script>
+<span id='IsSAPProduct' style="display: none;"></span>
+<script type="text/javascript">
+
+if(location.href == location.origin + "/Configurator.aspx")
+        {
+$.ajax({
+url: location.origin + "/api/rd/v1/Configurator/GetModel",
+
+success: function(data) {
+ 
+    $('#IsSAPProduct').text(data.IsSapConfigurableProduct);
+}})
+		};
+</script>
+
+<script>
+    //CXCPQ-100929: Resizing column widths
+    let currentResizer;
+    let startX, startWidth;
+    let originalUserSelect;
+
+    function triggerResize() {
+        document.querySelectorAll('.resizer').forEach(resizer => {
+ 
+            resizer.addEventListener('mousedown', initResize);
+        });
+    }
+
+    function initResize(e) {
+ 
+        currentResizer = e.target;
+        startX = e.clientX;
+        startWidth = currentResizer.parentElement.offsetWidth;
+        originalUserSelect = document.body.style.userSelect;
+        document.body.style.userSelect = 'none';
+        document.addEventListener('mousemove', handleResize);
+        document.addEventListener('mouseup', stopResize);
+    }
+
+    function handleResize(e) {
+ 
+        const dx = e.clientX - startX;
+        currentResizer.parentElement.style.minWidth = (startWidth + dx) + 'px';
+    }
+
+    function stopResize() {
+ 
+        document.body.style.userSelect = originalUserSelect;
+        document.removeEventListener('mousemove', handleResize);
+        document.removeEventListener('mouseup', stopResize);
+    }
+
+    function addResizer(element) {
+        if (!element.querySelector('.resizer')) {
+   
+            var resizer = document.createElement('span');
+            resizer.className = 'resizer';
+            element.appendChild(resizer);
+            triggerResize();
+        }
+    }
+</script>

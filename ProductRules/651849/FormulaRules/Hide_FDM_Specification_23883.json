@@ -1,0 +1,11 @@
+{
+    "id": 23883,
+    "condition": "1",
+    "name": "Hide FDM Specification",
+    "action": "<* ExecuteScript(PS_Hide_NonR2Q_Attributes) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

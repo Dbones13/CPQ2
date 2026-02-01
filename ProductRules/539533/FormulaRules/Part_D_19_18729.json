@@ -1,0 +1,11 @@
+{
+    "id": 18729,
+    "condition": "[AND]([NOT]([AND]([EQ](<*VALUE(ES_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R520))),[NOT]([AND]([EQ](<*VALUE(ES_Experion_PKS_Release)*>,R520),[EQ](<*VALUE(ES_Node_Supplier_Mobile_Server)*>,Honeywell),[EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes))))",
+    "name": "Part_D_19",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:EP-COAS19)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "31/12/25",
+    "modifiedBy": "Ravika Pupneja"
+}

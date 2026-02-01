@@ -1,0 +1,11 @@
+{
+    "id": 17861,
+    "condition": "[NOT]([AND]([GT](<*CTX( Container(Miscellaneous Interfaces).Row(2).Column(Nodes).Get )*>,0),[EQ](<*CTX( Container(Miscellaneous Interfaces).Row(3).Column(Devices).Get )*>,Yes)))",
+    "name": "PS_Miscellaneous_Interfaces_EP-IBBREF _Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-IBBREF)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

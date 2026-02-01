@@ -1,0 +1,11 @@
+{
+    "id": 20314,
+    "condition": "[IN](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Show_RTSP_Video_Streaming_Interface",
+    "action": "<*ALLOWATTRIBUTES(RTSP_Video_Streaming_Interface)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

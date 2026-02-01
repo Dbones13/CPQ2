@@ -1,0 +1,11 @@
+{
+    "id": 10551,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "QCS_Labor_Del_SAT",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_SAT:[IF]([EQ](<*VALUE(QCS_Mig_Site_Acceptance_Test_Req)*>,Yes)){8}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

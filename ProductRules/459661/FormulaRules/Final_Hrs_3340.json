@@ -1,0 +1,11 @@
+{
+    "id": 3340,
+    "condition": "1",
+    "name": "Final_Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs: <*CTX( Container(CE_System_Cont).Sum(Final_Hrs) )*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

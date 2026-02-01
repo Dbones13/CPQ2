@@ -1,0 +1,11 @@
+{
+    "id": 20105,
+    "condition": "1",
+    "name": "CG_Labor_parameter_AO",
+    "action": "<*ASSIGNVALUE(CG_Labor_parameter_Ao:<* Eval(0<*CTX ( Container(C300_C IO MS).Sum(AO) )*>+0<*CTX ( Container(C300_C IO MS2).Sum(AO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_1).Sum(AO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_cont_1).Sum(AO) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).Sum(AO) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Sum(AO) )*>+0<*CTX ( Container(C300_SerC_GIIS_CG_Cont).Sum(AO) )*>+0<*CTX ( Container(C300_SerC_GIIS_PMIO_CG_Cont).Sum(AO) )*>+0<*CTX ( Container(C300_SerC_PointCount_PMIO_CG_Cont).Sum(AO) )*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(AO) )*>) *>)*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

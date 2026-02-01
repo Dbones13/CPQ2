@@ -1,0 +1,11 @@
+{
+    "id": 5458,
+    "condition": "[AND]([NEQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,0),[EQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,8))",
+    "name": "Group 8 Allow",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_01_close,ATTCON_01_open,Header_02_close,Header_02_open,TL_Travel_Phase_1,TL_Inputs_1,TL_Expense_Calculation_Cont_1)*>\n<*ALLOWATTRIBUTES(ATTCON_02_close,ATTCON_02_open,Header_03_close,Header_03_open,TL_Travel_Phase_2,TL_Inputs_2,TL_Expense_Calculation_Cont_2)*>\n<*ALLOWATTRIBUTES(ATTCON_03_close,ATTCON_03_open,Header_04_close,Header_04_open,TL_Travel_Phase_3,TL_Inputs_3,TL_Expense_Calculation_Cont_3)*>\n<*ALLOWATTRIBUTES(ATTCON_04_close,ATTCON_04_open,Header_05_close,Header_05_open,TL_Travel_Phase_4,TL_Inputs_4,TL_Expense_Calculation_Cont_4)*>\n<*ALLOWATTRIBUTES(ATTCON_05_close,ATTCON_05_open,Header_06_close,Header_06_open,TL_Travel_Phase_5,TL_Inputs_5,TL_Expense_Calculation_Cont_5)*>\n<*ALLOWATTRIBUTES(ATTCON_06_close,ATTCON_06_open,Header_07_close,Header_07_open,TL_Travel_Phase_6,TL_Inputs_6,TL_Expense_Calculation_Cont_6)*>\n<*ALLOWATTRIBUTES(ATTCON_07_close,ATTCON_07_open,Header_08_close,Header_08_open,TL_Travel_Phase_7,TL_Inputs_7,TL_Expense_Calculation_Cont_7)*>\n<*ALLOWATTRIBUTES(ATTCON_08_close,ATTCON_08_open,Header_09_close,Header_09_open,TL_Travel_Phase_8,TL_Inputs_8,TL_Expense_Calculation_Cont_8)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

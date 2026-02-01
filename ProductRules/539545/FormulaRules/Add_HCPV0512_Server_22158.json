@@ -1,0 +1,11 @@
+{
+    "id": 22158,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Server),[GEQ](<* Eval(<*VALUE(FDM PVST Planner Blocks (0-1024))*> - (INT((<*VALUE(FDM PVST Planner Blocks (0-1024))*> + 31)/1024))*1024 + 31) *>,512))",
+    "name": "Add_HC-PV0512_Server",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-PV0512)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

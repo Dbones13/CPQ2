@@ -1,0 +1,11 @@
+{
+    "id": 19824,
+    "condition": "[EQ](<*VALUE(SerC_CG_Cabinet_Light_Default)*>,)",
+    "name": "Default_SerC_CG_Cabinet_Light_Default",
+    "action": "<*SELECTVALUE(SerC_CG_Cabinet_Light_Default:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

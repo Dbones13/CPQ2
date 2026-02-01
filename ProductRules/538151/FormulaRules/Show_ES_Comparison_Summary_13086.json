@@ -1,0 +1,11 @@
+{
+    "id": 13086,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Show ES Comparison Summary",
+    "action": "<*ALLOWATTRIBUTES(ESComparisonSummary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

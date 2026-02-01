@@ -1,0 +1,11 @@
+{
+    "id": 2584,
+    "condition": "[NOT](<*ATTDEF(Generic AD Standard Deliverable)*>)",
+    "name": "Standard_Deliverable_Set_Default",
+    "action": "<*SELECTVALUE(Generic AD Standard Deliverable:PEP-PQP-HSE-Org Chart-Schedule)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+[IF](<*ISSELECTED(FDM_RCI_PC_required.Yes)*>){<*SELECTVALUES(FDM_RCI_PC_Display_size:24 inch NTS DELL,FDM_RCI_PC_Display_Supplier:Honeywell,FDM_RCI_PC_Node_Supplier:Honeywell,FDM_RCI_PC_Station_Node_Type:STN_STD_DELL_Tower_NonRAID)*>}{if_false}[ENDIF]

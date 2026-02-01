@@ -1,0 +1,11 @@
+{
+    "id": 25574,
+    "condition": "[EQ](<*VALUE(Interface with TPS Required?)*>,Yes)",
+    "name": "Hide_Rapid_Restart_License",
+    "action": "<*DISALLOWATTRIBUTES(ACE Rapid Restart License)*>",
+    "description": "For TPS Yes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

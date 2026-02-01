@@ -1,0 +1,11 @@
+{
+    "id": 14009,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Thermal_PTZ_cameras)*>,)",
+    "name": "Default_DVM_Number_of_Thermal_PTZ_cameras",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Thermal_PTZ_cameras:2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9107,
+    "condition": "1",
+    "name": "PopulateSelectedProducts",
+    "action": "<*ASSIGNVALUE(CE_Selected_Products:<*CTX( Container(CE_SystemGroup_Cont).UniqueValues(Selected_Products).Separator(<br>) )*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

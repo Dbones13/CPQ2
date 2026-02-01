@@ -1,0 +1,11 @@
+{
+    "id": 14226,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Paramter_IPR",
+    "action": "<*ASSIGNVALUE(C300_Labour_Paramter_IPR:<* Eval((1-[IF]([GT](<*VALUE(C300_Exp_Labor_Uni_qntCG)*>,0)){1}{0}[ENDIF]*0.05)*(0.5*0<*VALUE(Labor_parametre_sys)*>+2*0<*VALUE(Labor_parametre_sys)*>/(0<*VALUE(Labor_parametre_sys)*>+1)+0.5*0<*VALUE(C300_Labor_parameter_A)*>+2*<*VALUE(C300_Labor_parameter_iof)*>)*1.05) *>)*>",
+    "description": "CXCPQ-43533\nIPR Hrs = (0.5 * sys + 2 * sys / (sys + 1) + 0.5 * A + 2 * (1+1) + 4 * unP)",
+    "rank": "17",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26044,
+    "condition": "[NEQ](<*VALUE(Additional Stations)*>,0)",
+    "name": "Show_Additional_station",
+    "action": "<*ALLOWATTRIBUTES(Station Type)*>",
+    "description": "CXCPQ-35454",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

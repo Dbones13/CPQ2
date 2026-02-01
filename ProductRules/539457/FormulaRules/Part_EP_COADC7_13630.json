@@ -1,0 +1,11 @@
+{
+    "id": 13630,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[GT](<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM25)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM26)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM27)*>) *>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_COADC7",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-COADC7)*><*SETATVQTY(Virtualization_BOM_Parts:EP-COADC7,<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM25)*> + (2*<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM26)*>) + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM27)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

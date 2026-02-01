@@ -1,0 +1,11 @@
+{
+    "id": 14550,
+    "condition": "[EQ](<*VALUE(PRMS Number of Unique Metering Package Designs)*>,)",
+    "name": "Default Number of Unique Metering Package Designs",
+    "action": "<*ASSIGNVALUE(PRMS Number of Unique Metering Package Designs:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

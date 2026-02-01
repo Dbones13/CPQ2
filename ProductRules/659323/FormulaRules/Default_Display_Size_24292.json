@@ -1,0 +1,11 @@
+{
+    "id": 24292,
+    "condition": "[EQ](<*VALUE(Display_Size)*>,)",
+    "name": "Default_Display_Size",
+    "action": "<*SELECTVALUE(Display_Size:27 inch NTS NEC)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

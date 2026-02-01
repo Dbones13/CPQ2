@@ -1,0 +1,11 @@
+{
+    "id": 20164,
+    "condition": "[EQ](<*VALUE(DVM_Video_Recording_Encryption)*>,)",
+    "name": "Default_DVM_Video_Recording_Encryption",
+    "action": "<*SELECTVALUE(DVM_Video_Recording_Encryption:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

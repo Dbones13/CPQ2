@@ -1,0 +1,11 @@
+{
+    "id": 12137,
+    "condition": "[EQ](<*VALUE(PSW_Number_of_Documents_Sent_by_Customer)*>,)",
+    "name": "Default value of PSW_Number_of_Documents_Sent_by_Customer",
+    "action": "<*ASSIGNVALUE(PSW_Number_of_Documents_Sent_by_Customer:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

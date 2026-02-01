@@ -1,0 +1,11 @@
+{
+    "id": 23969,
+    "condition": "[EQ](<*CTX ( Container(Terminal Additional Custom Deliverables).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Additional Custom Deliverable",
+    "action": "<*CTX ( Container(Terminal Additional Custom Deliverables).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

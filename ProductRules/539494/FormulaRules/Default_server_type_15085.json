@@ -1,0 +1,11 @@
+{
+    "id": 15085,
+    "condition": "[EQ](<*VALUE(MXP_Server_Type)*>,)",
+    "name": "Default_server_type",
+    "action": "<*SELECTVALUE(MXP_Server_Type:Tower)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

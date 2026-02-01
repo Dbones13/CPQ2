@@ -1,0 +1,11 @@
+{
+    "id": 13864,
+    "condition": "[EQ](<*CTX( Container(SM_Common_Questions).Row(1).Column(Experion Software Release).Get )*>,R520)",
+    "name": "Disallow_SimCont_StationType",
+    "action": "<*CTX(Container(SM_Hardware_Simulation_Station_Cont).Column(Station_Type).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

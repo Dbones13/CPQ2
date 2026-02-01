@@ -1,0 +1,11 @@
+{
+    "id": 19308,
+    "condition": "[GT](<*VALUE(PlantCruise_Process_Points)*>,1999)",
+    "name": "Add_Process_Points_CV-DPR02K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DPR02K)*><*SETATVQTY(PlantCruise_Part_Summary:CV-DPR02K,<* Eval(INT(<*VALUE(PlantCruise_Process_Points)*>/2000)) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

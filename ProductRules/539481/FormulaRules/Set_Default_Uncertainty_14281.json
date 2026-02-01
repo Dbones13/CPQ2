@@ -1,0 +1,11 @@
+{
+    "id": 14281,
+    "condition": "[OR]([NOT](<*ATTDEF(MIQ_Do_we_require_Uncertainty)*>),<* IsNull(<*VALUE(MIQ_Do_we_require_Uncertainty)*>,1) *>)",
+    "name": "Set Default Uncertainty",
+    "action": "<*SELECTVALUE(MIQ_Do_we_require_Uncertainty:No)*>",
+    "description": "CXCPQ-50741",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

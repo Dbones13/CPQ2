@@ -1,0 +1,11 @@
+{
+    "id": 26041,
+    "condition": "1",
+    "name": "EBR (ACE)",
+    "action": "[IF]([OR]([EQ](<*VALUE(Experion Backup & Restore (ACE))*>,Yes),[EQ](<*VALUE(Experion Backup & Restore (ACE)1)*>,Yes))){<*ASSIGNVALUE(Labor Experion Backup & Restore (ACE):<* Eval(0<*VALUE(ACE Node Rack Mount Cabinet)*>+0<*VALUE(ACE Node Tower Mount Desk)*>) *>)*>}{<*ASSIGNVALUE(Labor Experion Backup & Restore (ACE):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24253,
+    "condition": "[NEQ](<*VALUE(Experion Remote Gateway (ERG) System Required)*>,Yes)",
+    "name": "Hide_Experion Remote Gateway System",
+    "action": "<*DISALLOWATTRIBUTES(Header_04_open,ATTCON_10_open,ERG_Common_Questions,ERG_Software_Release,ERG_Experion_Base_Media_Delivery,ERG_Experion_Backup_and_Restore_Release,ERG_Experion_Backup_and_Restore_Media_Delivery,ATTCON_10_close,Header_04_close,Header_07_open,ATTCON_11_open,ERG Read-Only Station Client Licenses (1-40),Number of Users/ Devices requiring access (0- 500),RDS CAL type,ATTCON_11_close,Header_07_close,Header_08_open,ATTCON_13_open,ERG CB Server Redundancy,ERG CB Server Node Type,Node Supplier (ERG CB Server),Trusted Platform Module (TPM),EMDB Server (ERG CB Server),Displays (ERG CB Server) (0-1),Display Size (ERG CB Server),Display Supplier (ERG CB Server),Trackball (ERG CB Server),SM_Enterprise_Cluster_2,SM_Enterprise_Cluster_Sub_2,ATTCON_13_close,Header_08_close,Header_05_open,ATTCON_12_open,Display_Message_ERG_Server,ERG_Server_Redundancy,ERG_Server_Node_Type,Node_Suplier(ERG Server),Trusted_Platform_Module(TPM),EMDB_Server,Displays(ERG Server)(0-1),Display_Size(ERG Server),Display_Supplier(ERG Server),Trackball(ERG Server),IS_This_Marine_Customer(ERG Server),SM_Enterprise_Cluster,SM_Enterprise_Cluster_Sub,ATTCON_12_close,Header_05_close,Header_06_open,ATTCON_14_open,EBR_Required_ERG(CB Server),EBR_Required_ERG(Server),ATTCON_14_close,Header_06_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

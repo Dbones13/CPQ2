@@ -1,0 +1,11 @@
+{
+    "id": 12962,
+    "condition": "[NEQ](<*CTX ( Quote.CustomField(Booking Country) )*>,)",
+    "name": "SC_Labor_AOP_Calc",
+    "action": "<*ASSIGNVALUE(SC_Labor_Country_Labor_AOP:<* TABLE ( SELECT AOP FROM CT_SC_Labor_Cost WHERE  Country = '<*CTX ( Quote.CustomField(Booking Country) )*>' ) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 2577,
+    "condition": "[EQ](<*VALUE(HC900_Ges_Location_Labour)*>,GES Uzbekistan)",
+    "name": "GES_Location_Values_Uzbekistan",
+    "action": "<*DISALLOWVALUES(HC900_GES_Eng:HPS_GES_P350B_CN,HC900_GES_Eng:HPS_GES_P350B_IN,HC900_GES_Eng:HPS_GES_P350B_RO,HC900_GES_Eng:HPS_GES_P350F_CN,HC900_GES_Eng:HPS_GES_P350F_IN,HC900_GES_Eng:HPS_GES_P350F_RO)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

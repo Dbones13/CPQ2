@@ -1,0 +1,11 @@
+{
+    "id": 23787,
+    "condition": "1",
+    "name": "Total_Profibus_Red_NonRed_IOs",
+    "action": "<*ASSIGNVALUE(Total_Profibus_Red_NonRed_IOs:<* Eval((0<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Non_Red)*>+0<*VALUE(SerC_Number_of_Profibus_DP_Slave_devices - Red)*>)*2) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

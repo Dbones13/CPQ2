@@ -1,0 +1,11 @@
+{
+    "id": 23039,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Show_Hide_Single_Remote_Control_Grp_Cab",
+    "action": "[IF]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M)){<*DISALLOWATTRIBUTES(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt,SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet)*>}{<*ALLOWATTRIBUTES(SerC_RG_Single_Mod_FOE_Type_for_Control_Grp_Cabt,SerC_RG_Single_Mod_FOE_Type_for_Remote_Grp_Cabinet)*>}[ENDIF]",
+    "description": "This rule is used to disallow attr \"Single Mode FOE Type for Remote Group Cabinet\" & \"Single Mode FOE Type for Control Group Cabinet.\"  when \"IO Mounting Solution\" as 'Universal Process Cab - 1.3M'",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

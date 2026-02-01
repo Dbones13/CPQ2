@@ -1,0 +1,11 @@
+{
+    "id": 20338,
+    "condition": "[LT](<*VALUE(SS_Flex_Station_Qty_Orion)*>,1)",
+    "name": "Test Hide Orion Console Units Configuration",
+    "action": "<*DISALLOWATTRIBUTES(SS_Orion_Console_2_Position_Base_Unit_Total,SS_2Position_Base_Unit_with_Left,SS_2Position_Base_Unit_with_Left_Right,SS_2Position_Base_Unit_with_no_Left_Right,SS_2Position_Base_Unit_with_Right,SS_3Position_Base_Unit_with_Left,SS_3Position_Base_Unit_with_Left_Right,SS_3Position_Base_Unit_with_no_Left_Right,SS_3Position_Base_Unit_with_Right,SS_Orion_Console_Left_Auxiliary_Equipment_Unit,SS_Orion_Console_Left_Extended_Auxiliary_Equipment_Unit,SS_Orion_Console_Right_Auxiliary_Equipment_Unit,SS_Orion_Console_Right_Extended_Auxiliary_Equipment_Unit,SS_Orion_Console_Center_Straight_Auxiliary_Equipment_Unit,SS_Orion_Console_Center_Curved_Auxiliary_Equipment_Unit,SS_Orion_Console_Center_Extended_Auxiliary_Equipment_Unit,SS_Orion_Console_Center_Joining_Unit,SS_Orion_Console_Turret_Type,SS_Turret_location_in_Extended_Auxiliary_Equipment_Unit,SS_Orion_Console_Display_Size,SS_Orion_Console_Display_Devices,SS_Orion_Console_Display_Supplier,SS_Orion_Console_Membrane_KB_Type,SS_Orion_Console_Annunciator_Relay_Contact_Box_Required,SS_Custom_Logo_on_Alarm_Panel,SS_Extended_Height_Alarm_Light_Panel,SS_Orion_Console_Alarm _Soundbar,SS_Orion_Console_Lift_Jack_System,SS_Orion_Console _Remote_Peripheral_Solution_Type,SS_Orion_Console_3_Position_Base_Unit_Total,simulation_heading_orion_group_name)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

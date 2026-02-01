@@ -1,0 +1,11 @@
+{
+    "id": 14187,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_parameter_bpd",
+    "action": "<*ASSIGNVALUE(Labor_parameter_bpd:[IF]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma)){<*VALUE(Project Duration (in weeks))*>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

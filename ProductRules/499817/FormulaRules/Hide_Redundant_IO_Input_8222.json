@@ -1,0 +1,11 @@
+{
+    "id": 8222,
+    "condition": "[IN]('<*VALUE(IO_Type)*>','Series-C: LLAI (1) Mux RTD (0-5000)', 'Series-C: LLAI (1) Mux TC (0-5000)', 'Series-C: LLAI (1) Mux TC Remote CJR (0-5000)')",
+    "name": "Hide Redundant IO Input",
+    "action": "<*DISALLOWATTRIBUTES(future_red_is,future_red_isltr,future_red_nis,red_is,red_isltr,red_nis)*>",
+    "description": "Red_IS, Future_Red_IS, Red_NIS, Future_Red_NIS, Red_ISLTR, Future_Red_ISLTR",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

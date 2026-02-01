@@ -1,0 +1,11 @@
+{
+    "id": 17758,
+    "condition": "1",
+    "name": "doc_parameter_umc",
+    "action": "<*ASSIGNVALUE(doc_parameter_umc:<*CTX ( Container(SM_RG_PartSummary_Cont).Sum(umc_qty) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

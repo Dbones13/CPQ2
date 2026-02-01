@@ -1,0 +1,11 @@
+{
+    "id": 18468,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Size)*>,Large)",
+    "name": "Condition_for_Large",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Scanner_Type:3-4022-44|3-4022-54|3-4022-64|3-6022-54|3-6022-64)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

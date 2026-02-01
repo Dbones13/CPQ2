@@ -1,0 +1,11 @@
+{
+    "id": 25696,
+    "condition": "[IF]([GT](<*VALUE(ACE Node Tower Mount Desk)*>,0)){[AND]([EQ](<*VALUE(Hardware Design Selection_ ACE_Node)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Node Supplier_ACE1)*>,Honeywell),[EQ](<*VALUE(Trusted Platform Module_TPM_ACE_desk)*>,Yes))}{0}[ENDIF]",
+    "name": "MZ-PCST01_Ace_desk",
+    "action": "<*ASSIGNVALUE(MZ-PCST01_value:<*VALUE(ACE Node Tower Mount Desk)*>)*>",
+    "description": "MZ-PCST01_Ace_desk",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

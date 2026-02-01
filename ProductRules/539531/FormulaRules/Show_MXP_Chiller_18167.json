@@ -1,0 +1,11 @@
+{
+    "id": 18167,
+    "condition": "[IN](<*VALUE(MXP_Scanner_Type)*>,3-4022-54,3-6022-54,3-4022-64,3-6022-64,3-4022-44)",
+    "name": "Show_MXP_Chiller",
+    "action": "<*ALLOWATTRIBUTES(MXP_Chiller)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

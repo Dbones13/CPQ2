@@ -1,0 +1,11 @@
+{
+    "id": 10635,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Existing_Cabinet_Drawing_available_dimensions)*>,))",
+    "name": "default_LSS_Existing_Cabinet_Drawing_available_dimensions",
+    "action": "<*SELECTVALUE(LSS_Existing_Cabinet_Drawing_available_dimensions:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

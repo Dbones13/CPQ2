@@ -1,0 +1,11 @@
+{
+    "id": 17909,
+    "condition": "[NOT]([AND]([GT]([IF]([GT](<*VALUE(Scada_EP-RSC10K_int)*>,<*VALUE(Scada_EP-RSC10K_qty)*>)){<*VALUE(Scada_EP-RSC10K_qty_plus1)*>}{<*VALUE(Scada_EP-RSC10K_qty)*>}[ENDIF],0),[GT](<*VALUE(Scada_conatiner_sum)*>,99)))",
+    "name": "SCADA_Del_EP-DSC100",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(SCADA_BOM_Items:EP-DSC100)*><* DoResetAtt *>",
+    "description": "Hide-EP-DSC100",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

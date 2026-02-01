@@ -1,0 +1,1671 @@
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+    <div style="width:100%">
+        <div class="msid-label">
+            <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row col-xs-12 swagger">
+        <div id="third-Party-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#third-Party-parts');ManageLDsec('#third-Party-parts');">
+                    <span>Third Party Parts</span>
+                    <a id="third-Party-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#third-Party-parts')  }) != null -->
+                <div id="third-Party-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Third_Party_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('OPM')">
+        <div id="opm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#opm-parts');ManageLDsec('#opm-parts');">
+                    <span>OPM Parts Summary</span>
+                    <a id="opm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#opm-parts')  }) != null -->
+                <div id="opm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_OPM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('3rd Party PLC to ControlEdge PLC/UOC')">
+        <div id="plcuoc-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#plcuoc-parts');ManageLDsec('#plcuoc-parts');">
+                    <span>3rd Party PLC to ControlEdge PLC/UOC Parts Summary</span>
+                    <a id="plcuoc-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#plcuoc-parts')  }) != null -->
+                <div id="plcuoc-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Third_Party_PLC_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('CWS RAE Upgrade')">
+        <div id="cwsrae-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#cwsrae-parts');ManageLDsec('#cwsrae-parts');">
+                    <span>CWS RAE Upgrade Parts Summary</span>
+                    <a id="cwsrae-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#cwsrae-parts')  }) != null -->
+                <div id="cwsrae-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_CWS_RAE_Upgrade_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('QCS RAE Upgrade')">
+        <div id="qcsrae-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#qcsrae-parts');ManageLDsec('#qcsrae-parts');">
+                    <span>QCS RAE Upgrade Parts Summary</span>
+                    <a id="qcsrae-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#qcsrae-parts')  }) != null -->
+                <div id="qcsrae-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_QCS_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('LCN One Time Upgrade')">
+        <div id="lcn-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#lcn-parts');ManageLDsec('#lcn-parts');">
+                    <span>LCN One Time Upgrade Parts Summary</span>
+                    <a id="lcn-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#lcn-parts')  }) != null -->
+                <div id="lcn-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_LCN_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Non-SESP Exp Upgrade')">
+        <div id="nonsesp-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#nonsesp-parts');ManageLDsec('#nonsesp-parts');">
+                    <span>NON SESP Experion Upgrade Parts Summary</span>
+                    <a id="nonsesp-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#nonsesp-parts')  }) != null -->
+                <div id="nonsesp-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_NON_SESP_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('EBR')">
+        <div id="ebr-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#ebr-parts');ManageLDsec('#ebr-parts');">
+                    <span>EBR Parts Summary</span>
+                    <a id="ebr-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#ebr-parts')  }) != null -->
+                <div id="ebr-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_EBR_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FDM Upgrade 1')">
+        <div id="fdmupgrade-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fdmupgrade-parts');ManageLDsec('#fdmupgrade-parts');">
+                    <span>FDM Upgrade 1 Parts Summary</span>
+                    <a id="fdmupgrade-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#fdmupgrade-parts')  }) != null -->
+                <div id="fdmupgrade-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FDM_Upgrade_1_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+        <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FDM Upgrade 2')">
+        <div id="fdmupgrade2-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fdmupgrade2-parts');ManageLDsec('#fdmupgrade2-parts');">
+                    <span>FDM Upgrade 2 Parts Summary</span>
+                    <a id="fdmupgrade2parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#fdmupgrade2-parts')  }) != null -->
+                <div id="fdmupgrade2-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FDM_Upgrade_2_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+        <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FDM Upgrade 3')">
+        <div id="fdmupgrade3-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fdmupgrade3-parts');ManageLDsec('#fdmupgrade3-parts');">
+                    <span>FDM Upgrade 3 Parts Summary</span>
+                    <a id="fdmupgrade3-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#fdmupgrade3-parts')  }) != null -->
+                <div id="fdmupgrade3-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FDM_Upgrade_3_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('ELCN')">
+        <div id="elcn-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#elcn-parts');ManageLDsec('#elcn-parts');">
+                    <span>ELCN Parts Summary</span>
+                    <a id="elcn-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#elcn-parts')  }) != null -->
+                <div id="elcn-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_ELCN_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Orion Console')">
+        <div id="orion-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#orion-parts');ManageLDsec('#orion-parts');">
+                    <span>Orion Console Parts Summary</span>
+                    <a id="orion-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#orion-parts')  }) != null -->
+                <div id="orion-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Orion_Console_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('EHPM/EHPMX/ C300PM')">
+        <div id="ehm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#ehm-parts');ManageLDsec('#ehm-parts');">
+                    <span>EHPM/EHPMX/ C300PM Parts Summary</span>
+                    <a id="ehm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#ehm-parts')  }) != null -->
+                <div id="ehm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_EHPM_C300PM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('C200 Migration')">
+        <div id="c200-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-parts');ManageLDsec('#c200-parts');">
+                    <span>C200 Migration Parts Summary</span>
+                    <a id="c200-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#c200-parts')  }) != null -->
+                <div id="c200-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_C200_Migration_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('xPM to C300 Migration')">
+        <div id="xpm-c300-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-c300-parts');ManageLDsec('#xpm-c300-parts');">
+                    <span>xPM to C300 Migration Parts Summary</span>
+                    <a id="xpm-c300-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#xpm-c300-parts')  }) != null -->
+                <div id="xpm-c300-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_xPM_C300_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('C300 V2 to V5 Migration')">
+        <div id="xpm-c300-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-c300v2tov5-parts');ManageLDsec('#xpm-c300v2tov5-parts');">
+                    <span>C300 V2 to V5 Migration Parts Summary</span>
+                    <a id="xpm-c300-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#xpm-c300v2tov5-parts')  }) != null -->
+                <div id="xpm-c300-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_C300_V2_to_V5_Migration_Added_Parts_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('TPS to Experion')">
+        <div id="tps-exp-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-exp-parts');ManageLDsec('#tps-exp-parts');">
+                    <span>TPS to Experion Parts Summary</span>
+                    <a id="tps-exp-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#tps-exp-parts')  }) != null -->
+                <div id="tps-exp-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_TPS_EXP_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+    data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Virtualization System Migration')">
+    <div id="Virtualization-parts">
+        <div>
+            <div class="swagger-header" onclick="toggleConfigSection(event, '#Virtualization-parts');ManageLDsec('#Virtualization-parts');">
+                <span>Virtualization System Parts Summary</span>
+                <a id="Virtualization-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+			<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#Virtualization-parts')  }) != null -->
+            <div id="Virtualization-parts-content">
+                <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Virtualization_Added_Parts_Common_Container") -->
+                <div
+                    data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+            </div>
+			<!-- /ko -->
+        </div>
+    </div>
+    </div>
+<div class="row col-xs-12 swagger"
+data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Graphics Migration')">
+<div id="Graphics-parts">
+    <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#Graphics-parts');ManageLDsec('#Graphics-parts');">
+            <span>Graphics Migration Parts Summary</span>
+            <a id="Graphics-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+		<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#Graphics-parts')  }) != null -->
+        <div id="Graphics-parts-content">
+            <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Graphics_Added_Parts_Common_Container") -->
+            <div
+                data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+        </div>
+		<!-- /ko -->
+    </div>
+</div>
+</div>
+
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('TCMI')">
+        <div id="tcmi-exp-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#tcmi-exp-parts');ManageLDsec('#tcmi-exp-parts');">
+                    <span>TCMI Parts Summary</span>
+                    <a id="tcmi-exp-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#tcmi-exp-parts')  }) != null -->
+                <div id="tcmi-exp-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_TCMI_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('LM to ELMM ControlEdge PLC')">
+        <div id="lm-to-elmm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#lm-to-elmm-parts');ManageLDsec('#lm-to-elmm-parts');">
+                    <span>LM to ELMM ControlEdge PLC Parts Summary</span>
+                    <a id="lm-to-elmm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#lm-to-elmm-parts')  }) != null -->
+                <div id="lm-to-elmm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_LM_TO_ELMM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM')">
+        <div id="fsctosm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fsctosm-parts');ManageLDsec('#fsctosm-parts');">
+                    <span>FSC to SM Parts Summary</span>
+                    <a id="fsctosm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#fsctosm-parts')  }) != null -->
+                <div id="fsctosm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FSC_to_SM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM')">
+        <div id="fsctosmaudit-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fsctosmaudit-parts');ManageLDsec('#fsctosmaudit-parts');">
+                    <span>FSC to SM Audit Parts Summary</span>
+                    <a id="fsctosmaudit-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#fsctosmaudit-parts')  }) != null -->
+                <div id="fsctosmaudit-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FSC_to_SM_audit_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM IO Migration')">
+        <div id="fscsmio-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fscsmio-parts');ManageLDsec('#fscsmio-parts');">
+                    <span>FSC to SM IO Migration Parts Summary</span>
+                    <a id="fscsmio-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#fscsmio-parts')  }) != null -->
+                <div id="fscsmio-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FSCtoSM_IO_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM IO Migration')">
+        <div id="fscsmio-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fscsmio-parts');ManageLDsec('#fscsmio-parts');">
+                    <span>FSC to SM IO Migration Audit Parts Summary</span>
+                    <a id="fscsmio-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#fscsmio-parts')  }) != null -->
+                <div id="fscsmio-parts-content">
+                  <!-- ko foreach: attributes.filterByProperty('name',"MSID_FSCtoSM_IO_audit_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Generic System 1')">
+        <div id="generic-system-1">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-1');ManageLDsec('#generic-system-1');">
+                    <span>Generic System 1</span>
+                    <a id="generic-system-1-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#generic-system-1')  }) != null -->
+                <div id="generic-system-1-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS1_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Generic System 2')">
+        <div id="generic-system-2">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-2');ManageLDsec('#generic-system-2');">
+                    <span>Generic System 2</span>
+                    <a id="generic-system-2-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#generic-system-2')  }) != null -->
+                <div id="generic-system-2-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS2_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Generic System 3')">
+        <div id="generic-system-3">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-3');ManageLDsec('#generic-system-3');">
+                    <span>Generic System 3</span>
+                    <a id="generic-system-3-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#generic-system-3')  }) != null -->
+                <div id="generic-system-3-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS3_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Generic System 4')">
+        <div id="generic-system-4">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-4');ManageLDsec('#generic-system-4');">
+                    <span>Generic System 4</span>
+                    <a id="generic-system-4-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#generic-system-4')  }) != null -->
+                <div id="generic-system-4-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS4_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Generic System 5')">
+        <div id="generic-system-5">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-5');ManageLDsec('#generic-system-5');">
+                    <span>Generic System 5</span>
+                    <a id="generic-system-5-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#generic-system-5')  }) != null -->
+                <div id="generic-system-5-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS5_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Spare Parts')">
+        <div id="spare-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#spare-parts');ManageLDsec('#spare-parts');">
+                    <span>Spare Parts Summary</span>
+                    <a id="spare-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#spare-parts')  }) != null -->
+                <div id="spare-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Spare_Parts_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('CB-EC Upgrade to C300-UHIO')">
+        <div id="cbec-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#cbec-parts');ManageLDsec('#cbec-parts');">
+                    <span>CB-EC Upgrade to C300-UHIO Parts Summary</span>
+                    <a id="cbec-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#cbec-parts')  }) != null -->
+                <div id="cbec-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_CB_EC_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('EHPM HART IO')">
+        <div id="ehpmhart-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#ehpmhart-parts');ManageLDsec('#ehpmhart-parts');">
+                    <span>EHPM HART IO Parts Summary</span>
+                    <a id="ehpmhart-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#ehpmhart-parts')  }) != null -->
+                <div id="ehpmhart-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_EHPM_HART_IO_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('XP10 Actuator Upgrade')">
+        <div id="xp10-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#xp10-parts');ManageLDsec('#xp10-parts');">
+                    <span>XP10 Actuator Upgrade Parts Summary</span>
+                    <a id="xp10-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#xp10-parts')  }) != null -->
+                <div id="xp10-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_XP10_Actuator_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('CD Actuator I-F Upgrade')">
+        <div id="CDActuator-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#CDActuator-parts');ManageLDsec('#CDActuator-parts');">
+                    <span>CD Actuator I-F Upgrade Parts Summary</span>
+                    <a id="CDActuator-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#CDActuator-parts')  }) != null -->
+                <div id="CDActuator-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_CD_Actuator_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+    data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('TPA/PMD Migration')">
+        <div id="tpapmd-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#tpapmd-parts');ManageLDsec('#tpapmd-parts');">
+                    <span>TPA/PMD Migration Parts Summary</span>
+                    <a id="tpapmd-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#tpapmd-parts')  }) != null -->
+                <div id="tpapmd-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_TPA_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('ELEPIU ControlEdge RTU Migration Engineering')">
+        <div id="elepiu-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#elepiu-parts');ManageLDsec('#elepiu-parts');">
+                    <span>ELEPIU ControlEdge RTU Migration Parts Summary</span>
+                    <a id="elepiu-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#elepiu-parts')  }) != null -->
+                <div id="elepiu-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_ELEPIU_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: cpq.models.configurator.tabs.filterByProperty('name','Labor Deliverables')().length === 1">
+        <div id="pm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#pm-parts');ManageLDsec('#pm-parts');">
+                    <span>Project Management Parts Summary</span>
+                    <a id="pm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+				<!-- ko if : attributes.first((elem) => {return elem.name() === 'ATTR_ LBORHIDSHW' && (elem.userInput()).includes('#pm-parts')  }) != null -->
+                <div id="pm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_PM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+				<!-- /ko -->
+            </div>
+        </div>
+    </div>
+    	<div class="row col-xs-12 swagger">
+			<div id="Trace-soft">
+				<div>
+					<div class="swagger-header" onclick="toggleConfigSection(event, '#Trace-soft')">
+						<span>Trace Software</span>
+						<a id="Trace-soft-href" href="#" class="swagger-toggle">&#xe066;</a>
+					</div> 
+					<div id="Trace-soft-content">
+						<!-- ko foreach: attributes.filterByProperty('name' , "Trace_Software_Added_Parts_Common_Container") -->
+						<div
+							data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+							<!-- ko template: { name: $root.getAttributeTemplate } -->
+							<!-- /ko -->
+						</div>
+						<!-- /ko -->
+					</div>
+				</div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+    <div style="width:100%">
+        <div class="msid-label">
+            <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row col-xs-12 swagger">
+        <div id="third-Party-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#third-Party-parts')">
+                    <span>Third Party Parts</span>
+                    <a id="third-Party-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="third-Party-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Third_Party_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('OPM')">
+        <div id="opm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#opm-parts')">
+                    <span>OPM Parts Summary</span>
+                    <a id="opm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="opm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_OPM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('3rd Party PLC to ControlEdge PLC/UOC')">
+        <div id="plcuoc-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#plcuoc-parts')">
+                    <span>3rd Party PLC to ControlEdge PLC/UOC Parts Summary</span>
+                    <a id="plcuoc-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="plcuoc-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Third_Party_PLC_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('CWS RAE Upgrade')">
+        <div id="cwsrae-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#cwsrae-parts')">
+                    <span>CWS RAE Upgrade Parts Summary</span>
+                    <a id="cwsrae-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="cwsrae-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_CWS_RAE_Upgrade_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('QCS RAE Upgrade')">
+        <div id="qcsrae-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#qcsrae-parts')">
+                    <span>QCS RAE Upgrade Parts Summary</span>
+                    <a id="qcsrae-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="qcsrae-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_QCS_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('LCN One Time Upgrade')">
+        <div id="lcn-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#lcn-parts')">
+                    <span>LCN One Time Upgrade Parts Summary</span>
+                    <a id="lcn-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="lcn-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_LCN_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Non-SESP Exp Upgrade')">
+        <div id="nonsesp-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#nonsesp-parts')">
+                    <span>NON SESP Experion Upgrade Parts Summary</span>
+                    <a id="nonsesp-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="nonsesp-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_NON_SESP_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('EBR')">
+        <div id="ebr-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#ebr-parts')">
+                    <span>EBR Parts Summary</span>
+                    <a id="ebr-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="ebr-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_EBR_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FDM Upgrade 1')">
+        <div id="fdmupgrade-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fdmupgrade-parts')">
+                    <span>FDM Upgrade 1 Parts Summary</span>
+                    <a id="fdmupgrade-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="fdmupgrade-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FDM_Upgrade_1_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FDM Upgrade 2')">
+        <div id="fdmupgrade2-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fdmupgrade2-parts')">
+                    <span>FDM Upgrade 2 Parts Summary</span>
+                    <a id="fdmupgrade2parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="fdmupgrade2-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FDM_Upgrade_2_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FDM Upgrade 3')">
+        <div id="fdmupgrade3-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fdmupgrade3-parts')">
+                    <span>FDM Upgrade 3 Parts Summary</span>
+                    <a id="fdmupgrade3-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="fdmupgrade3-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FDM_Upgrade_3_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('ELCN')">
+        <div id="elcn-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#elcn-parts')">
+                    <span>ELCN Parts Summary</span>
+                    <a id="elcn-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="elcn-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_ELCN_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Orion Console')">
+        <div id="orion-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#orion-parts')">
+                    <span>Orion Console Parts Summary</span>
+                    <a id="orion-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="orion-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Orion_Console_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('EHPM/EHPMX/ C300PM')">
+        <div id="ehm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#ehm-parts')">
+                    <span>EHPM/EHPMX/ C300PM Parts Summary</span>
+                    <a id="ehm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="ehm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_EHPM_C300PM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('C200 Migration')">
+        <div id="c200-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-parts-parts')">
+                    <span>C200 Migration Parts Summary</span>
+                    <a id="c200-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="c200-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_C200_Migration_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('xPM to C300 Migration')">
+        <div id="xpm-c300-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#xpm-c300-parts')">
+                    <span>xPM to C300 Migration Parts Summary</span>
+                    <a id="xpm-c300-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="xpm-c300-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_xPM_C300_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('TPS to Experion')">
+        <div id="tps-exp-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#tps-exp-parts')">
+                    <span>TPS to Experion Parts Summary</span>
+                    <a id="tps-exp-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="tps-exp-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_TPS_EXP_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+    data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Virtualization System')">
+    <div id="Virtualization-parts">
+        <div>
+            <div class="swagger-header" onclick="toggleConfigSection(event, '#Virtualization-parts')">
+                <span>Virtualization System Parts Summary</span>
+                <a id="Virtualization-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+            </div>
+            <div id="Virtualization-parts-content">
+                <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Virtualization_Added_Parts_Common_Container") -->
+                <div
+                    data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+    </div>
+<div class="row col-xs-12 swagger"
+data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Graphics Migration')">
+<div id="Graphics-parts">
+    <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#Graphics-parts')">
+            <span>Graphics Migration Parts Summary</span>
+            <a id="Graphics-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="Graphics-parts-content">
+            <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Graphics_Added_Parts_Common_Container") -->
+            <div
+                data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+</div>
+
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('TCMI')">
+        <div id="tcmi-exp-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#tcmi-exp-parts')">
+                    <span>TCMI Parts Summary</span>
+                    <a id="tcmi-exp-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="tcmi-exp-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_TCMI_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('LM to ELMM ControlEdge PLC')">
+        <div id="lm-to-elmm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#lm-to-elmm-parts')">
+                    <span>LM to ELMM ControlEdge PLC Parts Summary</span>
+                    <a id="lm-to-elmm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="lm-to-elmm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_LM_TO_ELMM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM')">
+        <div id="fsctosm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fsctosm-parts')">
+                    <span>FSC to SM Parts Summary</span>
+                    <a id="fsctosm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="fsctosm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FSC_to_SM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM')">
+        <div id="fsctosmaudit-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fsctosmaudit-parts')">
+                    <span>FSC to SM Audit Parts Summary</span>
+                    <a id="fsctosmaudit-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="fsctosmaudit-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FSC_to_SM_audit_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM IO Migration')">
+        <div id="fscsmio-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fscsmio-parts')">
+                    <span>FSC to SM IO Migration Parts Summary</span>
+                    <a id="fscsmio-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="fscsmio-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_FSCtoSM_IO_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('FSC to SM IO Migration')">
+        <div id="fscsmio-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#fscsmio-parts')">
+                    <span>FSC to SM IO Migration Audit Parts Summary</span>
+                    <a id="fscsmio-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="fscsmio-parts-content">
+                  <!-- ko foreach: attributes.filterByProperty('name',"MSID_FSCtoSM_IO_audit_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Generic_System_Products_Count'})?.userInput().split('<br>').includes('Generic System 1')">
+        <div id="generic-system-1">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-1')">
+                    <span>Generic System 1</span>
+                    <a id="generic-system-1-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="generic-system-1-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS1_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Generic_System_Products_Count'})?.userInput().split('<br>').includes('Generic System 2')">
+        <div id="generic-system-2">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-2')">
+                    <span>Generic System 2</span>
+                    <a id="generic-system-2-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="generic-system-2-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS2_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Generic_System_Products_Count'})?.userInput().split('<br>').includes('Generic System 3')">
+        <div id="generic-system-3">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-3')">
+                    <span>Generic System 3</span>
+                    <a id="generic-system-3-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="generic-system-3-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS3_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Generic_System_Products_Count'})?.userInput().split('<br>').includes('Generic System 4')">
+        <div id="generic-system-4">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-4')">
+                    <span>Generic System 4</span>
+                    <a id="generic-system-4-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="generic-system-4-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS4_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Generic_System_Products_Count'})?.userInput().split('<br>').includes('Generic System 5')">
+        <div id="generic-system-5">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#generic-system-5')">
+                    <span>Generic System 5</span>
+                    <a id="generic-system-5-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="generic-system-5-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_GS5_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('Spare Parts')">
+        <div id="spare-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#spare-parts')">
+                    <span>Spare Parts Summary</span>
+                    <a id="spare-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="spare-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_Spare_Parts_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('CB-EC Upgrade to C300-UHIO')">
+        <div id="cbec-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#cbec-parts')">
+                    <span>CB-EC Upgrade to C300-UHIO Parts Summary</span>
+                    <a id="cbec-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="cbec-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_CB_EC_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('EHPM HART IO')">
+        <div id="ehpmhart-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#ehpmhart-parts')">
+                    <span>EHPM HART IO Parts Summary</span>
+                    <a id="ehpmhart-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="ehpmhart-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_EHPM_HART_IO_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('XP10 Actuator Upgrade')">
+        <div id="xp10-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#xp10-parts')">
+                    <span>XP10 Actuator Upgrade Parts Summary</span>
+                    <a id="xp10-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="xp10-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_XP10_Actuator_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('CD Actuator I-F Upgrade')">
+        <div id="CDActuator-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#CDActuator-parts')">
+                    <span>CD Actuator I-F Upgrade Parts Summary</span>
+                    <a id="CDActuator-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="CDActuator-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_CD_Actuator_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+    data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('TPA/PMD Migration')">
+        <div id="tpapmd-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#tpapmd-parts')">
+                    <span>TPA/PMD Migration Parts Summary</span>
+                    <a id="tpapmd-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="tpapmd-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_TPA_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: attributes.first((elem) => {return elem.name() === 'MSID_Selected_Products'})?.userInput().split('<br>').includes('ELEPIU ControlEdge RTU Migration Engineering')">
+        <div id="elepiu-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#elepiu-parts')">
+                    <span>ELEPIU ControlEdge RTU Migration Parts Summary</span>
+                    <a id="elepiu-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="elepiu-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_ELEPIU_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger"
+        data-bind="visible: cpq.models.configurator.tabs.filterByProperty('name','Labor Deliverables')().length === 1">
+        <div id="pm-parts">
+            <div>
+                <div class="swagger-header" onclick="toggleConfigSection(event, '#pm-parts')">
+                    <span>Project Management Parts Summary</span>
+                    <a id="pm-parts-href" href="#" class="swagger-toggle">&#xe066;</a>
+                </div>
+                <div id="pm-parts-content">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "MSID_PM_Added_Parts_Common_Container") -->
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

@@ -1,0 +1,11 @@
+{
+    "id": 19185,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_OPC_Alarm_and_Event_Server)*>,0))",
+    "name": "Del_Software_CV-OPCSAE",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-OPCSAE)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

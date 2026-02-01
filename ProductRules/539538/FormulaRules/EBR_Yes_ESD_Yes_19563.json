@@ -1,0 +1,11 @@
+{
+    "id": 19563,
+    "condition": "[AND]([EQ](<*VALUECODE(Exp HS Installation Media \u2013ESD Version only)*>,Yes),[EQ](<*VALUECODE(Exp HS Need Experion Backup and Restore (EBR))*>,Yes))",
+    "name": "EBR Yes ESD Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-BRM520-ESD)*><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-BRM520)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

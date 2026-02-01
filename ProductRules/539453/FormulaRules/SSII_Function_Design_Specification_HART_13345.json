@@ -1,0 +1,11 @@
+{
+    "id": 13345,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is HART Interface in Scope?)*>,Yes))",
+    "name": "SSII Function Design Specification_HART",
+    "action": "<*ASSIGNVALUE(SSII Function Design Specification_HART:<* Eval(16*0.9) *>)*>",
+    "description": "39405",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

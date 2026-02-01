@@ -1,0 +1,11 @@
+{
+    "id": 18047,
+    "condition": "[AND]([EQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow),[EQ](<*VALUE(MXP_Proflow_Type)*>,Rotational),[IN](<*VALUE(MXP_Type_of_Valve)*>,Standard Torque (20Nm) Andritz N,High Torque),[EQ](<*VALUE(MXP_Stop_Disc)*>,Yes))",
+    "name": "Part_A_9177_ST_SD_Z",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_CD_Bom_Parts:9177-ST-SD-Z)*><*SETATVQTY(MXP_CD_Bom_Parts:9177-ST-SD-Z,<*VALUE(MXP_Number_of_Zones)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

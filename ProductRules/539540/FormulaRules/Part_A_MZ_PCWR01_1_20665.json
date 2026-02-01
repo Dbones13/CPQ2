@@ -1,0 +1,11 @@
+{
+    "id": 20665,
+    "condition": "[IF](<*IFANYVALUE(SS_Experion_PKS_Release:R530)*>){[AND]([EQ](<*VALUE(SS_Flex Staton  Desk Node_desk)*>,STN_PER_DELL_Rack_RAID1),[EQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell))}{}[ENDIF]",
+    "name": "Part_A_MZ_PCWR01_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCWR01)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCWR01, <*VALUE(SS_Flex_Station_Qty_Desk)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

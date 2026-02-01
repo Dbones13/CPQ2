@@ -1,0 +1,11 @@
+{
+    "id": 14063,
+    "condition": "[EQ](<*CTX ( Container(DVM_System_Group_Cont).Rows.GetCount )*>,0)",
+    "name": "Add Default row to Digital Video Manager Group Container",
+    "action": "<*CTX ( Container(DVM_System_Group_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

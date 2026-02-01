@@ -1,0 +1,11 @@
+{
+    "id": 15411,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Functional Design Specification",
+    "action": "<*ASSIGNVALUE(FDA Functional Design Specification:[IF](<*ISSELECTED(FDA Implementation Methodology.Non-Standard Build Estimate)*>){[IF]([EQ](<*VALUE(FDA Functional Description Required)*>,Yes)){<* Eval(((40)+((<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>)*0.5))) *>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,<*ISSELECTED(FDA GES Location.None)*>)){[IF]([EQ](<*VALUE(FDA Functional Description Required)*>,Yes)){<* Eval((((40)+((<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>)*0.5)))*0.25) *>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(FDA GES Location)*>,None))){[IF]([EQ](<*VALUE(FDA Functional Description Required)*>,Yes)){<* Eval((((40)+((<*VALUE(FDA Number of Reviews (add Asbuilts) (2-5))*>)*0.5)))*0.25*1.1) *>}{0}[ENDIF]}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

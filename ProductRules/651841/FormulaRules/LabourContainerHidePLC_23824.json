@@ -1,0 +1,11 @@
+{
+    "id": 23824,
+    "condition": "1",
+    "name": "LabourContainerHidePLC",
+    "action": "[IF]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)){<*CTX( Container(PLC_Labour_Details).Column(PLC_Process_Type).SetPermission(Hidden) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Ges_Location).SetPermission(Hidden) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Marshalling_Cabinet_Cont).SetPermission(Hidden) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Enter_Total_Cont).SetPermission(Hidden) )*>}{<*CTX( Container(PLC_Labour_Details).Column(PLC_Process_Type).SetPermission(Editable) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Ges_Location).SetPermission(Editable) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Marshalling_Cabinet_Cont).SetPermission(Editable) )*>\n<*CTX( Container(PLC_Labour_Details).Column(PLC_Enter_Total_Cont).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17951,
+    "condition": "[NOT]([GT](<*VALUE(PCD_Qty_of_PCD3_Additional_Connector_Type_K)*>,0))",
+    "name": "Del_440550480",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PCD_Part_Summary:440550480)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

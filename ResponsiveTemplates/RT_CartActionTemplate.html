@@ -1,0 +1,72 @@
+<script type="text/html" id="actionsTemplate">
+    <!-- ko foreach: $data-->
+	<!-- ko if: name !== "Salesforce Quote" && name !== "Request for Approval" && name !== "History" && name !== "Reprice"-->
+    <li class="action-row">
+        <a href="#" data-bind="click: execute">
+            <!-- ko if : $root.displayImagesForCartActions -->
+            <img data-bind="attr: { src: imageUrl }, visible: imageUrl, tooltip: { title: name, placement: 'right' }" />
+            <!-- /ko -->
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+	<!-- /ko -->
+	<!-- ko if: name == "Reprice"-->
+	<li class="action-row" style = "display:none;">
+        <a href="#" data-bind="click: execute">
+            <!-- ko if : $root.displayImagesForCartActions -->
+            <img data-bind="attr: { src: imageUrl }, visible: imageUrl, tooltip: { title: name, placement: 'right' }" />
+            <!-- /ko -->
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+	<!-- /ko -->
+  	<!-- ko if: name === "Salesforce Quote" -->
+    <li class="action-row">
+        <a href="#" data-bind="click: closeIframe">
+            <!-- ko if : $root.displayImagesForCartActions -->
+            <img data-bind="attr: { src: imageUrl }, visible: imageUrl, tooltip: { title: name, placement: 'right' }" />
+            <!-- /ko -->
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+  	<!-- /ko -->
+    <!-- ko if: name === "History" -->
+    <li class="action-row">
+        <a data-bind="attr:{href:'https://honeywellinternational.cpq.cloud.sap/quotation/CartHistory.aspx?rc='+$root.cartIdCrypted()+'&ro='+$root.ownerIdCrypted()}">
+            <!-- ko if : $root.displayImagesForCartActions -->
+            <img data-bind="attr: { src: imageUrl }, visible: imageUrl, tooltip: { title: name, placement: 'right' }" />
+            <!-- /ko -->
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+  	<!-- /ko -->
+  	<!-- ko if: name === "Request for Approval" -->
+    <li class="action-row">
+        <a href="#" data-bind="click: function(){ execute(); closeIframe();}">
+            <!-- ko if : $root.displayImagesForCartActions -->
+            <img data-bind="attr: { src: imageUrl }, visible: imageUrl, tooltip: { title: name, placement: 'right' }" />
+            <!-- /ko -->
+            <span data-bind="text: name"></span>
+        </a>
+    </li>
+  	<!-- /ko -->
+    <!-- /ko -->
+</script>
+<script type="text/javascript">
+  function closeIframe(){
+	if ($(".overlay:visible").length == 0 || cpq.models.cart.orderStatusName() == 'Ready for Approval'){
+		cpq.server.executeScript("validateReadyForApproval" , {} , function(response){
+				<!-- if (response.valid && cpq.models.cart.quoteMessages().length == 0){ -->
+            	console.log(response)
+				if (response.valid){
+                    var Qnumber=cpq.models.cart.cartCompositeNumber()
+                   	var Rnumber=cpq.models.cart.revisionNumber()
+                    console.log('CloseIFrame|'+Qnumber+'|'+Rnumber)
+					setTimeout(function () {
+						window.parent.postMessage('CloseIFrame|'+Qnumber+'|'+Rnumber, '*'); // Additional processing
+					}, 10000); // 10 seconds delay
+				}
+			});
+		}
+	}
+</script>

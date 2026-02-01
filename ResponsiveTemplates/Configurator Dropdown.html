@@ -1,0 +1,82 @@
+<script type="text/html" id="ContainerDropDownTemplate">
+<!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes' )-->
+<!-- ko if: cpq.models.configurator.breadcrumbsModule.breadcrumbs() && cpq.models.configurator.breadcrumbsModule.breadcrumbs().some(function(item) { return item.name === '3rd Party PLC to ControlEdge PLC/UOC'   }) -->  
+    <div class="fiori3-input-group fiori3-select-group"> 
+      <select data-bind="
+                attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                hasFocus: window.lastActiveElementId == $element.id, options: dropdow_value(options()), optionsText: 'displayValue', optionsValue: 'id',value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+    </div>
+<!-- /ko -->
+
+<!-- ko if:["MSID_New","Virtualization System Migration","Virtualization System","C200 Migration","EHPM HART IO","CB-EC Upgrade to C300-UHIO",].includes(cpq.models.configurator.responderModule.name()) -->
+	<div class="fiori3-input-group fiori3-select-group">
+        <select data-bind="
+                attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                hasFocus: window.lastActiveElementId == $element.id, options: options, optionsText: 'displayValue', optionsValue: 'id',
+                value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+    </div>
+<!-- /ko -->
+<!-- ko ifnot: cpq.models.configurator.breadcrumbsModule.breadcrumbs() && cpq.models.configurator.breadcrumbsModule.breadcrumbs().some(function(item) { return item.name === '3rd Party PLC to ControlEdge PLC/UOC' || item.name === "Virtualization System Migration" || item.name === "Virtualization System"  || item.name === "C200 Migration" || item.name === "EHPM HART IO" || item.name === "CB-EC Upgrade to C300-UHIO" || item.name === "HCI Labor Upload" || item.name === 'R2Q SM Remote Group' }) -->
+<!-- ko ifnot:(options().length == 1 && options()[0].displayValue === '- none -') -->
+    <div class="fiori3-input-group fiori3-select-group">
+        <select data-bind="attr: { id: $parents[2].id() + '' + $parent.columnId + '' + $parents[1].rowIndex , title: value() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, options:options.filter(option => option.displayValue !== '- none -'), optionsText: 'displayValue', optionsValue: 'id', value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+    </div>
+<!-- /ko -->
+<!-- /ko -->
+
+<!-- ko if: cpq.models.configurator.breadcrumbsModule.breadcrumbs() && cpq.models.configurator.breadcrumbsModule.breadcrumbs().some(function(item) { return item.name === 'R2Q SM Remote Group' }) -->
+    <!-- ko ifnot:(options().length == 1 && options()[0].displayValue === '- none -') -->
+        <div class="fiori3-input-group fiori3-select-group">
+            <select data-bind="attr: { id: $parents[2].id() + '' + $parent.columnId + '' + $parents[1].rowIndex , title: value() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, options:options.filter(option => option.displayValue !== 'Hardware Marshalling with Other' && option.displayValue !== '- none -'), optionsText: 'displayValue', optionsValue: 'id', value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+        </div>
+    <!-- /ko -->
+<!-- /ko -->
+
+<!-- ko if:["HCI Labor Upload"].includes(cpq.models.configurator.responderModule.name()) -->
+
+    <div class="fiori3-input-group fiori3-select-group">
+        <select data-bind="
+                attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                hasFocus: window.lastActiveElementId == $element.id, options: options, optionsText: 'displayValue', optionsValue: 'id',
+                value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+    </div>
+<!-- /ko -->
+<!-- /ko -->
+<!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+<!-- ko if:["MSID_New"].includes(cpq.models.configurator.responderModule.name()) -->
+	<div class="fiori3-input-group fiori3-select-group">
+        <select data-bind="
+                attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                hasFocus: window.lastActiveElementId == $element.id, options: options, optionsText: 'displayValue', optionsValue: 'id',
+                value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+    </div>
+<!-- /ko -->
+<!-- ko ifnot:["MSID_New","HCI Labor Upload"].includes(cpq.models.configurator.responderModule.name()) -->
+<!-- ko ifnot:(options().length == 1 && options()[0].displayValue === '- none -') -->
+    <div class="fiori3-input-group fiori3-select-group">
+        <select data-bind="attr: { id: $parents[2].id() + '' + $parent.columnId + '' + $parents[1].rowIndex , title: value() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, options:options.filter(option => option.displayValue !== '- none -'), optionsText: 'displayValue', optionsValue: 'id', value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+    </div>
+<!-- /ko -->
+<!-- /ko -->
+<!-- ko if:["HCI Labor Upload"].includes(cpq.models.configurator.responderModule.name()) -->
+
+    <div class="fiori3-input-group fiori3-select-group">
+        <select data-bind="
+                attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex, required: $parent.required },
+                event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                hasFocus: window.lastActiveElementId == $element.id, options: options, optionsText: 'displayValue', optionsValue: 'id',
+                value: selectedOptionId, enable: $parents[2].isEnabled" class="form-control"></select>
+    </div>
+<!-- /ko -->
+<!-- /ko -->
+</script>
+
+<script type="text/html" id="ContainerDropDownTemplate_readonly">
+    <div class="fiori3-input-group fiori3-select-group">
+        <select data-bind="attr: { id: $parents[2].id() + '_' + $parent.columnId + '_' + $parents[1].rowIndex }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id, options: options.filter(function(option){return option.displayValue !== '- none -'}), optionsText: 'displayValue', optionsValue: 'id', value: selectedOptionId" class="form-control" disabled="disabled"></select>
+    </div>
+</script>

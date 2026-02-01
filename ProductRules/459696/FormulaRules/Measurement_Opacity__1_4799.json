@@ -1,0 +1,11 @@
+{
+    "id": 4799,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Opacity))",
+    "name": "Measurement_Opacity _1",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:MXIR Opacity Msmt-Requires Q4405-xx sensor)*>\n\n<*SELECTVALUE(MX_SE_Sensor_Type:MXIR Opacity Msmt-Requires Q4405-xx sensor)*>\n\n<*SETREQUIRED(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

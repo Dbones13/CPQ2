@@ -1,0 +1,11 @@
+{
+    "id": 25602,
+    "condition": "[EQ](<*VALUE(Enhanced Bulk Configuration Tool(0-12))*>,)",
+    "name": "Default Enhanced Bulk Configuration Tool",
+    "action": "<*ASSIGNVALUE(Enhanced Bulk Configuration Tool(0-12):0)*>",
+    "description": "Default Enhanced Bulk Configuration Tool",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

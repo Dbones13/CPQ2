@@ -1,0 +1,11 @@
+{
+    "id": 26142,
+    "condition": "[GT](<*VALUE(E_Sig_Electronic_Signature_Option)*>,0)",
+    "name": "EPESIG01_Add_ESig",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-ESIG01)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ESIG01, <*VALUE(E_Sig_Electronic_Signature_Option)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45609",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

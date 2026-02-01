@@ -1,0 +1,11 @@
+{
+    "id": 25645,
+    "condition": "[EQ](<*VALUE(Rack Mounting Type for SIM PC Node)*>,)",
+    "name": "Default_Rack_Mounting_Type_for_SIM_PC_Node",
+    "action": "<*SELECTVALUE(Rack Mounting Type for SIM PC Node:None)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

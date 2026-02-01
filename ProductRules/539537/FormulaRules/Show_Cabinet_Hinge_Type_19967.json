@@ -1,0 +1,11 @@
+{
+    "id": 19967,
+    "condition": "<*ISSELECTED(SerC_CG_Cabinet_Type_03.Normal Cabinet)*>",
+    "name": "Show_Cabinet_Hinge_Type",
+    "action": "<*ALLOWVALUES(SerC_CG_Cabinet_Hinge_Type:180 Degree)*>",
+    "description": "CXCPQ-47014",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

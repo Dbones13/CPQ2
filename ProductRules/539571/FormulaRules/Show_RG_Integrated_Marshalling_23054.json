@@ -1,0 +1,11 @@
+{
+    "id": 23054,
+    "condition": "[NEQ](<*VALUE(SerC_RG_Cabinet_Type)*>,Generic Cabinet)",
+    "name": "Show_RG_Integrated_Marshalling",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_Integrated_Marshalling_Cabinet,SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

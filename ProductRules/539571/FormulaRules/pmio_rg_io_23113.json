@@ -1,0 +1,11 @@
+{
+    "id": 23113,
+    "condition": "<*ISSELECTED(SerC_CG_PM_IO_Solution_required.Yes)*>",
+    "name": "pmio_rg_io",
+    "action": "<*ASSIGNVALUE(pmio_ioss:<* Eval(0<*CTX ( Container(SerC_PMIO_CG_Group).Sum(AI) )*>0+<*CTX ( Container(SerC_PMIO_CG_Group).Sum(AO) )*>0+<*CTX ( Container(SerC_PMIO_CG_Group).Sum(DI) )*>+0<*CTX ( Container(SerC_PMIO_CG_Group).Sum(DO) )*>+0<*CTX ( Container(SerC_PMIO_CG_Group).Sum(AI) )*>+0<*CTX ( Container(C300_SerC_PointCount_PMIO_RG_Cont).Sum(AI) )*>+0<*CTX ( Container(C300_SerC_PointCount_PMIO_RG_Cont).Sum(AO) )*>+0<*CTX ( Container(C300_SerC_PointCount_PMIO_RG_RlyCont).Sum(DI) )*>+0<*CTX ( Container(C300_SerC_PointCount_PMIO_RG_RlyCont).Sum(DO) )*>) *>)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

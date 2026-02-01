@@ -1,0 +1,11 @@
+{
+    "id": 13025,
+    "condition": "[IN](<*VALUE(SC_ScopeRemoval)*>,QCS 4.0)",
+    "name": "Scope_Removal_QCS_4_0",
+    "action": "<*SELECTVALUE(SC_QCS_Number of Machines:0)*>",
+    "description": "",
+    "rank": "100",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

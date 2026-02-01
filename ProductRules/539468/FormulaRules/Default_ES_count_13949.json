@@ -1,0 +1,11 @@
+{
+    "id": 13949,
+    "condition": "[EQ](<*VALUE(ES_Count)*>,)",
+    "name": "Default_ES_count",
+    "action": "<*ASSIGNVALUE(ES_Count:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

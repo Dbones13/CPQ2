@@ -1,0 +1,11 @@
+{
+    "id": 17725,
+    "condition": "1",
+    "name": "SM_System_Cabinet_Part_RGCG",
+    "action": "<*ASSIGNVALUE(SM_System_Cabinet_Part_RGCG:<* Eval(0<*VALUE(SM_Sys_Cabinets)*>+0<*CTX ( Container(SM_RemoteGroup_Cont).Sum(SM_Cabinet_System_Parts) )*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

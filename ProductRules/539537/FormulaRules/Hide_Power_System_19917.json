@@ -1,0 +1,11 @@
+{
+    "id": 19917,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Mounting Panel)",
+    "name": "Hide_Power_System",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Power_System_Type,SerC_CG_Power_System_Vendor)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

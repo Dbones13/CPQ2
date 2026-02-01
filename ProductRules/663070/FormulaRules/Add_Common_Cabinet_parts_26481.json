@@ -1,0 +1,11 @@
+{
+    "id": 26481,
+    "condition": "[AND]([GT](<*CTX( Container(Exp_Ent_Grp_Part_Summary_Cont).Sum(Is_Cabinet_Part) )*>,0),[OR]([GT](<*VALUE(exp_ent_cab_qnt)*>,0),[GT](<*VALUE(Network_Cabinet_Qty)*>,0)))",
+    "name": "Add Common Cabinet parts",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51196958-400|51306194-300|TP-KVMAD1-100|TP-SPCMF1-101|TP-KVMAD2-100)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:51196958-400,  <* Eval(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>) *>)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:51306194-300,  <* Eval(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>) *>)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-KVMAD1-100, <* Eval(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>) *>)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-SPCMF1-101, <* Eval(2*(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>)) *>)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-KVMAD2-100, <* Eval(2*(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>)) *>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37834",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "11/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

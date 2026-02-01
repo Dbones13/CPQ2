@@ -1,0 +1,11 @@
+{
+    "id": 18458,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Size)*>,None)",
+    "name": "Show_sensor_type",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Scanner_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

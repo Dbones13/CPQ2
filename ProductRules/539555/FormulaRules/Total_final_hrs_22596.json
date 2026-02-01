@@ -1,0 +1,11 @@
+{
+    "id": 22596,
+    "condition": "1",
+    "name": "Total final hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(Gas_MeterSuite_Engineering_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(Gas_MeterSuite_Additional_Labor_Container).Total(Final Hrs) )*>) *>) *>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

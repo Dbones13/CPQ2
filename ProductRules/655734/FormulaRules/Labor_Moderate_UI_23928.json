@@ -1,0 +1,11 @@
+{
+    "id": 23928,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*>,))",
+    "name": "Labor_Moderate_UI",
+    "action": "<*ASSIGNVALUE(Terminal_Number_of_Moderate_Screens_for_new_UI:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13473,
+    "condition": "[EQ](<*VALUE(Number of HART Devices)*>,)",
+    "name": "Set default value for Number of HART Devices",
+    "action": "<*ASSIGNVALUE(Number of HART Devices:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

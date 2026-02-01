@@ -1,0 +1,11 @@
+{
+    "id": 4809,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Ash))",
+    "name": "Measurement_Ash_2",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Total Ash Msmt CaCO3/Clay 900c|Total Ash Msmt TiO2/Clay 900c|Total Ash Msmt TiO2/Clay/CaCO3 525c|Total Ash Msmt TiO2/Clay/CaCO3 900c pair)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10674,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Operator_Station_monitor_screen_type)*>,)",
+    "name": "QCS_Mig_Default_OS_Monitor_Screen_type",
+    "action": "<*SELECTVALUE(QCS_Mig_Operator_Station_monitor_screen_type:Monitor not required)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

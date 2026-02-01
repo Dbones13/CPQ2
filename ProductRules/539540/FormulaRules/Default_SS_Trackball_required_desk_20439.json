@@ -1,0 +1,11 @@
+{
+    "id": 20439,
+    "condition": "[EQ](<*VALUE(SS_Trackball_required_desk)*>,)",
+    "name": "Default_SS_Trackball_required_desk",
+    "action": "<*SELECTVALUE(SS_Trackball_required_desk:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

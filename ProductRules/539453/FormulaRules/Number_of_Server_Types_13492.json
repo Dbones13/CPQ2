@@ -1,0 +1,11 @@
+{
+    "id": 13492,
+    "condition": "1",
+    "name": "Number_of_Server_Types",
+    "action": "<*ASSIGNVALUE(Labor_Number_of_Server_Types:<*VALUE(staging_Number_of_Experion_Servers_exp_ent_sys)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

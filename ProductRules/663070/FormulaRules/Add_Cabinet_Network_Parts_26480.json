@@ -1,0 +1,11 @@
+{
+    "id": 26480,
+    "condition": "[AND]([GT](<*CTX( Container(Exp_Ent_Grp_Part_Summary_Cont).Sum(Is_Cabinet_Part) )*>,0),[GT](<*VALUE(exp_ent_cab_qnt)*>,0))",
+    "name": "Add_Cabinet_Network_Parts",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51196958-400|51306194-300|TP-KVMAD1-100|TP-KVMAD2-100|51305482-503)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51196958-400,<* Eval(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>) *>)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51306194-300, <* Eval(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>)*>)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-KVMAD1-100,<* Eval(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>)*>)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51305482-503,<* Eval(2*(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>))*>)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-KVMAD2-100,<* Eval(2*(<*VALUE(exp_ent_cab_qnt)*>+<*VALUE(Network_Cabinet_Qty)*>))*>)*>\n<* DoResetAtt *>",
+    "description": "CXCPQ-45057",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "11/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

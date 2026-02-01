@@ -1,0 +1,11 @@
+{
+    "id": 19262,
+    "condition": "[EQ](<*VALUE(PlantCruise_Power_Function_Blocks)*>,Yes)",
+    "name": "Add_Software_CV-SVPWFB",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-SVPWFB)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

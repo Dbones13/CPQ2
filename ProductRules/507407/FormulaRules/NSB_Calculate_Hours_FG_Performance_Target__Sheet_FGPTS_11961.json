@@ -1,0 +1,11 @@
+{
+    "id": 11961,
+    "condition": "<*ISSELECTED(FGC_Implementation_Methodology.Non-Standard Build Estimate)*>",
+    "name": "NSB Calculate Hours F&G Performance Target  Sheet (FGPTS)",
+    "action": "<*ASSIGNVALUE(F&G Performance Target  Sheet (FGPTS):<* Eval((2*<*VALUE(FGC_Number_of_Fire_and_Gas_Zones_(1-100))*>)+(<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>*<*VALUE(FGC_Number_of_Fire_and_Gas_Zones_(1-100))*>*0.05)) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

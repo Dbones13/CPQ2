@@ -1,0 +1,11 @@
+{
+    "id": 19697,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Exp HS Redundant Servers)*>,Yes),[EQ](<*VALUE(Exp HS Runtime System)*>,No),[GEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,83),[LEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,160))",
+    "name": "Experion HS 16000 Pt Redundancy Adder Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HMR16K)*><*SETATVQTY(Experion_HS_PART_SUMMARY:EP-HMR16K,<*VALUE(Exp HS Number of 100 point bundles)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37955;Rule inactivated as part of CXCPQ-43096",
+    "rank": "6",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14307,
+    "condition": "[EQ](<*VALUE(MIQ_System_architecture)*>,Corporate)",
+    "name": "EP-HSVALG Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:EP-HSVALG)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

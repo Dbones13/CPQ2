@@ -1,0 +1,11 @@
+{
+    "id": 20091,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Experion_PKS_Software_Release)*>,R520),[EQ](<*VALUE(Experion_PKS_Software_Release)*>,R530)),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C))",
+    "name": "Show_SerC_CG_Type_of_Controller_Required",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Type_of_Controller_Required)*>",
+    "description": "CXCPQ-51941 - Requirement 1",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26176,
+    "condition": "[EQ](<*VALUE(CMS TPS Station Hardware Selection)*>,)",
+    "name": "CMS TPS Station Hardware Selection def",
+    "action": "<*SELECTVALUE(CMS TPS Station Hardware Selection:STN_PER_DELL_Rack_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

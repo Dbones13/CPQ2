@@ -1,0 +1,11 @@
+{
+    "id": 3591,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A13)*>,<*ISSELECTED(Identifiers.A14)*>,<*ISSELECTED(Identifiers.A15)*>,<*ISSELECTED(Identifiers.A16)*>)",
+    "name": "Disallow Switch_Port",
+    "action": "<*DISALLOWATTRIBUTES(Switch_Port)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21819,
+    "condition": "1",
+    "name": "Preselect",
+    "action": "[IF]([EQ](<*VALUE(ELEPIU_Total_numberof_Scada_points_for_controllers)*>,)){<*SELECTVALUE(ELEPIU_Total_numberof_Scada_points_for_controllers:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELEPIU_Total_number_of_Process_points_controllers)*>,)){<*SELECTVALUE(ELEPIU_Total_number_of_Process_points_controllers:0)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "04/10/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

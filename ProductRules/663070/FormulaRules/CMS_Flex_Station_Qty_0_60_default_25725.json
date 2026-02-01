@@ -1,0 +1,11 @@
+{
+    "id": 25725,
+    "condition": "[EQ](<*VALUE(CMS Flex Station Qty 0_60)*>,)",
+    "name": "CMS Flex Station Qty 0_60 default",
+    "action": "<*ASSIGNVALUE(CMS Flex Station Qty 0_60:0)*>",
+    "description": "CXCPQ-34623",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

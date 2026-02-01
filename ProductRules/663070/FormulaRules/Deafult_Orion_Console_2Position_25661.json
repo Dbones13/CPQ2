@@ -1,0 +1,11 @@
+{
+    "id": 25661,
+    "condition": "[EQ](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,)",
+    "name": "Deafult Orion Console 2Position",
+    "action": "<*ASSIGNVALUE(Orion Console 2Position Base Unit (0-20):0)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

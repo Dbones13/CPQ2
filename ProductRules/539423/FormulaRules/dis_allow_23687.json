@@ -1,0 +1,11 @@
+{
+    "id": 23687,
+    "condition": "1",
+    "name": "dis_allow",
+    "action": "[IF]([EQ](<*CTX( Quote.CustomField(IsR2QRequest).AttrValue )*>,Yes)){<*DISALLOWATTRIBUTES(Attr_DMPVST_Planner)*>}{0}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/07/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

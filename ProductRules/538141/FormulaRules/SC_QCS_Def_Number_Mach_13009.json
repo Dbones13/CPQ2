@@ -1,0 +1,11 @@
+{
+    "id": 13009,
+    "condition": "[EQ](<*VALUE(SC_QCS_Number of Machines)*>,)",
+    "name": "SC_QCS_Def_Number_Mach",
+    "action": "<*SELECTVALUE(SC_QCS_Number of Machines:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

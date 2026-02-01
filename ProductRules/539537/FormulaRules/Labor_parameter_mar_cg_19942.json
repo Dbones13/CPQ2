@@ -1,0 +1,11 @@
+{
+    "id": 19942,
+    "condition": "1",
+    "name": "Labor_parameter_mar_cg",
+    "action": "<*ASSIGNVALUE(Labor_parameter_mar_cg:<* Eval(<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_mar_parts) )*>+<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(C300_mar_parts) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

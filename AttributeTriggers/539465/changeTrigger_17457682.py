@@ -1,0 +1,1 @@
+<*CTX( Container(RTU_Software_Labor_Container2).Row(1).Column(RTU_GES_Location).Set(<*VALUECODE(Default_Ges_Location)*>) )*>

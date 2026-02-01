@@ -1,0 +1,11 @@
+{
+    "id": 22949,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE))",
+    "name": "Disallow_Dummy_RG_IO_Mounting",
+    "action": "<*DISALLOWATTRIBUTES(Dummy_RG_IO_Mounting_Solution)*>",
+    "description": "51884",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

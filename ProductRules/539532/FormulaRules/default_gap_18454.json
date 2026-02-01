@@ -1,0 +1,11 @@
+{
+    "id": 18454,
+    "condition": "[EQ](<*VALUE(MXP_Gap)*>,)",
+    "name": "default_gap",
+    "action": "<*SELECTVALUE(MXP_Gap:10\")*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

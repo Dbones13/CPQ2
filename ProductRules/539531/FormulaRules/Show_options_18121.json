@@ -1,0 +1,11 @@
+{
+    "id": 18121,
+    "condition": "[NEQ](<*VALUE(MXP_Scanner_Type)*>,)",
+    "name": "Show_options",
+    "action": "<*ALLOWATTRIBUTES(Header_02_close,Header_02_open)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

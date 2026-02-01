@@ -1,0 +1,11 @@
+{
+    "id": 15330,
+    "condition": "[LEQ](<*VALUE(MXP_HC_900_Digital_Inputs_Contact_type_16_point)*>,0)",
+    "name": "Part_D_3_8788_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-8788-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

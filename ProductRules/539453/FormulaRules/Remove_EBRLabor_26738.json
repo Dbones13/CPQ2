@@ -1,0 +1,11 @@
+{
+    "id": 26738,
+    "condition": "[EQ](<*VALUE(EBR_Software_Required)*>,No)",
+    "name": "Remove_EBRLabor",
+    "action": "<*CTX ( Container(EBR_Engineering_Labor_Container).Rows.Clear )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/01/26",
+    "modifiedBy": "Ramesh Kumar"
+}

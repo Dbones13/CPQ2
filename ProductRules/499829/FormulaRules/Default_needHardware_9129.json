@@ -1,0 +1,11 @@
+{
+    "id": 9129,
+    "condition": "[EQ](<*VALUE(Trace_Software_Do_you_need_hardware)*>,)",
+    "name": "Default_needHardware",
+    "action": "<*SELECTVALUE(Trace_Software_Do_you_need_hardware:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22372,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[NEQ](<*VALUE(ESDC_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(ESDC_Client_Station_Qty)*>,0),[NEQ](<*VALUE(ESDC_Station_Node_Type)*>,STN_PER_DELL_Rack_RAID1),[NEQ](<*VALUE(ESDC_Software_Release)*>,R530))",
+    "name": "Part_D_MZ_PCWR01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-PCWR01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

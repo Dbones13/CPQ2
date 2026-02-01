@@ -1,0 +1,11 @@
+{
+    "id": 20478,
+    "condition": "[GT](<*VALUE(SS_OTS_Server_TPS _Enabler_License)*>,0)",
+    "name": "Part_A_EP_OTU010",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:EP-OTU010)*><*SETATVQTY(Simulation_Bom_parts:EP-OTU010,<*VALUE(SS_OTS_Server_TPS _Enabler_License)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13286,
+    "condition": "[EQ](<*VALUE(Is EtherNet IP Interface in Scope?)*>,Yes)",
+    "name": "Show EtherNet IP Interface Questions",
+    "action": "<*ALLOWATTRIBUTES(Number of EtherNet IP Interface Cards,Number of EtherNet IP Interface Types,Number of EtherNet IP Devices)*>",
+    "description": "Display questions when Is EtherNet IP Interface in Scope? = Yes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

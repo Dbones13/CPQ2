@@ -1,0 +1,11 @@
+{
+    "id": 20088,
+    "condition": "1",
+    "name": "CG_SYSTEM_CABINET_COUNT",
+    "action": "<*ASSIGNVALUE(CG_SYSTEM_CABINET_COUNT:<* Eval(0-INT(0-((((<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_System_cabinet_count) )*>)/2+(<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Sum(C300_System_cabinet_count_2) )*>)+<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(RG_SYSTEM_CABINET_COUNT) )*>))))) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

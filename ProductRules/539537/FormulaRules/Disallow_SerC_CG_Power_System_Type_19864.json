@@ -1,0 +1,11 @@
+{
+    "id": 19864,
+    "condition": "[NOT]([EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Mounting Panel))",
+    "name": "Disallow_SerC_CG_Power_System_Type",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Power_System_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

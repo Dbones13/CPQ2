@@ -1,0 +1,11 @@
+{
+    "id": 12989,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "New_Column_Sumary",
+    "action": "<*CTX ( Container(SC_BGP_Models_Cont).Column(Model_Number).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Description).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(PY_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Renewal_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Previous_Year_List_Price).SetPermission(Hidden) )*>\n\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Honeywell_List_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Scope Reduction Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Comments).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Scope Addition Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Asset_No).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(ProductCode).SetPermission(Hidden) )*>\n\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Previous_Year_Cost_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Scope Reduction Price).SetPermission(Hidden) )*>\n\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Current_Year_Cost_Price).SetPermission(Hidden) )*>\n\n\n<*CTX ( Container(SC_BGP_Models_Cont).Column(Scope Addition Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

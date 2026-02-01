@@ -1,0 +1,11 @@
+{
+    "id": 3355,
+    "condition": "[AND]([GEQ](<*CTX( Container(CE_System_Cont).Rows.GetCount )*>,1), [OR]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System),[LIKE](<*VALUE(CE_Selected_Products)*>,C300 System)), [EQ](<*VALUE(MIB Configuration Required?)*>,))",
+    "name": "Assign Default MIB Configuration",
+    "action": "<*SELECTVALUE(MIB Configuration Required?:Yes)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

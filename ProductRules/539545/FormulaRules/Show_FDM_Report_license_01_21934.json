@@ -1,0 +1,11 @@
+{
+    "id": 21934,
+    "condition": "[IN](<*VALUE(FDM_Release)*>,R530,R540)",
+    "name": "Show_FDM Report license (0-1)",
+    "action": "<*ALLOWATTRIBUTES(FDM Report license (0-1))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

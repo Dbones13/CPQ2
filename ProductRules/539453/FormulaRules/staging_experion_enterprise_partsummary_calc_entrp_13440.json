@@ -1,0 +1,11 @@
+{
+    "id": 13440,
+    "condition": "[NEQ](<*CTX ( Container(Experion_Enterprise_Cont).Sum(staging_experion_enterprise_partsummary_calc) )*>,<*VALUE(staging_experion_enterprise_partsummary_calc_entrp)*>)",
+    "name": "staging_experion_enterprise_partsummary_calc_entrp",
+    "action": "<*ASSIGNVALUE(staging_experion_enterprise_partsummary_calc_entrp:<*CTX ( Container(Experion_Enterprise_Cont).Sum(staging_experion_enterprise_partsummary_calc) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

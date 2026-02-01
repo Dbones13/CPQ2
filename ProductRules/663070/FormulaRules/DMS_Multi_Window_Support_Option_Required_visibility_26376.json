@@ -1,0 +1,11 @@
+{
+    "id": 26376,
+    "condition": "[GT](<*VALUE(DMS No of Displays 0_4)*>,1)",
+    "name": "DMS Multi Window Support Option Required? visibility",
+    "action": "<*DISALLOWATTRIBUTES(DMS Multi Window Support Option Required?)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15253,
+    "condition": "[EQ](<*VALUE(MXP_AllianceView_License)*>,AllianceView 5 user license)",
+    "name": "Part_A_3_5085_75",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5085-75)*><*SETATVQTY(MXP_Bom_Parts:3-5085-75,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

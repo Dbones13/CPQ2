@@ -1,0 +1,11 @@
+{
+    "id": 18575,
+    "condition": "[OR]([EQ](<*VALUE(ES_Node_Supplier_Mobile_Server)*>,Honeywell),[EQ](<*VALUE(ES_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ES_Node_Supplier_station)*>,Honeywell))",
+    "name": "eServer_Labor_parameter_Is_Node_Supplier_Honeywell_yes",
+    "action": "<*ASSIGNVALUE(eServer_Labor_parameter_Is_Node_Supplier_Honeywell:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25808,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Center Curv Auxil Equip Unit (0-40))*>,0),<*ISSELECTED(Orion Console Turret Type.None)*>,<*ISSELECTED(Node Supplier.Honeywell)*>)\n)",
+    "name": "MP-OCXCC1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCXCC1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38904",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

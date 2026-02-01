@@ -1,0 +1,11 @@
+{
+    "id": 23955,
+    "condition": "[NOT](<*ATTSEL(Terminal_Display_Required)*>)",
+    "name": "Default_Display_Required",
+    "action": "<*SELECTVALUE(Terminal_Display_Required:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

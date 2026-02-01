@@ -1,0 +1,11 @@
+{
+    "id": 18631,
+    "condition": "[AND]([EQ](<*VALUE(ES_eServer_Staton_Node)*>,STN_STD_DELL_Tower_NonRAID),[EQ](<*VALUE(ES_Node_Supplier_station)*>,Honeywell),[GT](<*VALUE(ES_Additional_Stations_for_eServer)*>,0),[EQ](<*VALUE(ES_Experion_eServer_Release)*>,R520))",
+    "name": "Part_A_MZ_PCWS14",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:MZ-PCWS14)*><*SETATVQTY(eServer_BOM_parts:MZ-PCWS14,<*VALUE(ES_Additional_Stations_for_eServer)*>)*>\n<* DoResetAtt *>",
+    "description": "Story 7961",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

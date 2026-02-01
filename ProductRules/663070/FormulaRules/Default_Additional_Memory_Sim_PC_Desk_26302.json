@@ -1,0 +1,11 @@
+{
+    "id": 26302,
+    "condition": "[EQ](<*VALUE(Additional Memory (Sim PC Desk))*>,)",
+    "name": "Default_Additional_Memory_(Sim PC Desk)",
+    "action": "<*SELECTVALUE(Additional Memory (Sim PC Desk):None)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

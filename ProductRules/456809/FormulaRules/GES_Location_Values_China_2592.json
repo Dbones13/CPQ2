@@ -1,0 +1,11 @@
+{
+    "id": 2592,
+    "condition": "[EQ](<*VALUE(PlantCruise_Ges_Location_Labour)*>,GES China)",
+    "name": "GES_Location_Values_China",
+    "action": "<*DISALLOWVALUES(PlantCruise_GES_Eng:HPS_GES_P350B_IN,PlantCruise_GES_Eng:HPS_GES_P350B_RO,PlantCruise_GES_Eng:HPS_GES_P350B_UZ,PlantCruise_GES_Eng:HPS_GES_P350F_IN,PlantCruise_GES_Eng:HPS_GES_P350F_RO,PlantCruise_GES_Eng:HPS_GES_P350F_UZ,PlantCruise_GES_Eng:HPS_GES_P350B_EG,PlantCruise_GES_Eng:HPS_GES_P350F_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

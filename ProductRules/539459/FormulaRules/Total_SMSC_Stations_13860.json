@@ -1,0 +1,11 @@
+{
+    "id": 13860,
+    "condition": "1",
+    "name": "Total_SMSC_Stations",
+    "action": "<*ASSIGNVALUE(Total_SMSC_Stations:<* Eval(0<*VALUE(Labor_parameter_stn)*>+0<*VALUE(SMSC_Total_Number_of_Stations)*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

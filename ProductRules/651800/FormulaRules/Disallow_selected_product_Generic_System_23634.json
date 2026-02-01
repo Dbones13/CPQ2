@@ -1,0 +1,11 @@
+{
+    "id": 23634,
+    "condition": "[LIKE](<*CTX ( Container(Cyber Configurations).UniqueValues(Part Desc).Separator(,) )*>,Cyber Generic System)",
+    "name": "Disallow_selected_product_Generic System",
+    "action": "<*DISALLOWVALUES(AR_CyberPrdChoices:Cyber Generic System)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10738,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Are_HMI_and_DxM_LCD_displays_in_Honeywell_scope_of_supply)*>,))",
+    "name": "TPA_Default_Are_HMI_and_DxM_LCD_displays_in_Honeywell_scope_of_supply",
+    "action": "<*SELECTVALUE(TPA_Are_HMI_and_DxM_LCD_displays_in_Honeywell_scope_of_supply:Yes)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

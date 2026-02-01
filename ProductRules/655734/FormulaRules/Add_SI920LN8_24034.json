@@ -1,0 +1,11 @@
+{
+    "id": 24034,
+    "condition": "[AND]([EQ](<*VALUE(Terminal_SAP_ERP_BSI_Interface_required?)*>,Yes),[EQ](<*VALUE(Terminal_FTE_Switch)*>,SW_L2_NRT_CISCO_48PT))",
+    "name": "Add_SI-920LN8",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:SI-920LN8)*><*SETATVQTY(Terminal_Part_Summary:SI-920LN8,2)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

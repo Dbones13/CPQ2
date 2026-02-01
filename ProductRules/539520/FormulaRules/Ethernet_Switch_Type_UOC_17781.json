@@ -1,0 +1,11 @@
+{
+    "id": 17781,
+    "condition": "1",
+    "name": "Ethernet Switch Type UOC",
+    "action": "[IF]([EQ](<*CTX( Container(UOC_CG_Controller_Rack_Cont).Row(1).Column(UOC_Ethernet_Switch_Type).GetDisplayValue )*>,Multi Mode)){<*CTX( Container(UOC_CG_Additional_Controller_Cont).Column(UOC_Fiber_Optic_Converter_Multi).SetPermission(Editable) )*>}{<*CTX( Container(UOC_CG_Additional_Controller_Cont).Column(UOC_Fiber_Optic_Converter_Multi).SetPermission(Hidden) )*>}[ENDIF]\n\n[IF]([EQ](<*CTX( Container(UOC_CG_Controller_Rack_Cont).Row(1).Column(UOC_Ethernet_Switch_Type).GetDisplayValue )*>,Single Mode)){<*CTX( Container(UOC_CG_Additional_Controller_Cont).Column(UOC_Fiber_Optic_Converter_Single).SetPermission(Editable) )*>}{<*CTX( Container(UOC_CG_Additional_Controller_Cont).Column(UOC_Fiber_Optic_Converter_Single).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13566,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[AND]([EQ](<*VALUE(Virtualization_Enter_the_starting_Cluster_Number)*>,),[EQ](<*VALUE(Virtualization_Number_of_Clusters_in_the_network)*>,)))",
+    "name": "Set_default_cluster_starts",
+    "action": "<*ASSIGNVALUE(Virtualization_Number_of_Clusters_in_the_network:0)*><*ASSIGNVALUE(Virtualization_Enter_the_starting_Cluster_Number:1)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22370,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Software_Release)*>,R530),[NEQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[NEQ](<*VALUE(ESDC_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(ESDC_Client_Station_Qty)*>,0),[NEQ](<*VALUE(ESDC_Station_Node_Type)*>,STN_PER_DELL_Tower_RAID1))",
+    "name": "Part_D_MZ_PCWT01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-PCWT01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

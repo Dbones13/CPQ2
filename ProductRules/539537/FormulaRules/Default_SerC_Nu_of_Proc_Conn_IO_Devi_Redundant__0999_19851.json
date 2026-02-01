@@ -1,0 +1,11 @@
+{
+    "id": 19851,
+    "condition": "[EQ](<*VALUE(SerC_Nu of Proc Conn I/O Devi (Redundant ) (0-999))*>,)",
+    "name": "Default_SerC_Nu of Proc Conn I/O Devi (Redundant ) (0-999)",
+    "action": "<*ASSIGNVALUE(SerC_Nu of Proc Conn I/O Devi (Redundant ) (0-999):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23475,
+    "condition": "[AND]([NOT](<*ATTSEL(Experion_HS_GES_Eng)*>),<*ISSELECTED(Experion_HS_Ges_Location_Labour.GES Egypt)*>)",
+    "name": "Experion_HS_GES_Eng_Set_Default_Egypt",
+    "action": "<*SELECTVALUE(Experion_HS_GES_Eng:HPS_GES_P350B_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

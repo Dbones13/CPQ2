@@ -1,0 +1,11 @@
+{
+    "id": 9131,
+    "condition": "[EQ](<*VALUE(Trace_Software_Architecture_drawing_update)*>,)",
+    "name": "Default_drawing_update",
+    "action": "<*SELECTVALUE(Trace_Software_Architecture_drawing_update:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

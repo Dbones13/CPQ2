@@ -1,0 +1,11 @@
+{
+    "id": 17936,
+    "condition": "[EQ](<*CTX ( Container(CCR_Third_Party_Parts).Rows.GetCount )*>,0)",
+    "name": "CCR_Third_Party_Parts_NewRow_Add",
+    "action": "<*CTX ( Container(CCR_Third_Party_Parts).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

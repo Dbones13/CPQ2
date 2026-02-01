@@ -1,0 +1,11 @@
+{
+    "id": 22121,
+    "condition": "[NOT]([OR]([GT](<*VALUE(FDM_Server_MZ_PCEH15)*>,0),[GT](<*VALUE(FDM_Gateway_PC_MZ_PCEH15)*>,0)))",
+    "name": "Del_MZ-PCEH15",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:MZ-PCEH15)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

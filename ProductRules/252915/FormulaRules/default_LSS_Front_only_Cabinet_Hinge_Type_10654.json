@@ -1,0 +1,11 @@
+{
+    "id": 10654,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Front_only_Cabinet Hinge Type)*>,))",
+    "name": "default_LSS_Front_only_Cabinet Hinge Type",
+    "action": "<*SELECTVALUE(LSS_Front_only_Cabinet Hinge Type:130 Degrees)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

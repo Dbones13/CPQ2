@@ -1,0 +1,11 @@
+{
+    "id": 13244,
+    "condition": "[EQ](<*VALUE(Implementation Methodology)*>,)",
+    "name": "Set default value for Implementation Methodology",
+    "action": "<*SELECTVALUE(Implementation Methodology:Standard Build Estimate)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

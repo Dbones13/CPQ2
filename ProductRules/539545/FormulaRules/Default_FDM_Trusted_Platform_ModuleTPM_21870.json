@@ -1,0 +1,11 @@
+{
+    "id": 21870,
+    "condition": "[EQ](<*VALUE(FDM_Trusted_Platform_Module(TPM))*>,)",
+    "name": "Default_FDM_Trusted_Platform_Module(TPM)",
+    "action": "<*SELECTVALUE(FDM_Trusted_Platform_Module(TPM):Yes)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

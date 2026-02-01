@@ -1,0 +1,11 @@
+{
+    "id": 17782,
+    "condition": "1",
+    "name": "DCS_UOC_System_Cabinet",
+    "action": "<*ASSIGNVALUE(DCS_UOC_System_Cabinet:<* Eval(0<*VALUE(UOC_Num_of_Sys_Cabinets_RG)*>+0<*VALUE(UOC_Num_of_Sys_Cabinets)*>)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "1000",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

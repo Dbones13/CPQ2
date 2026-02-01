@@ -1,0 +1,11 @@
+{
+    "id": 12107,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Site Survey and Report",
+    "action": "<*ASSIGNVALUE(Site Survey and Report:[IF]([GT](<*VALUE(OWS_EstimatedNo ofAccessPoints for Site SurveyArea)*>,30)){<* Eval(32+24+8+8+12+<* Eval(0-INT(0-(<*VALUE(OWS_EstimatedNo ofAccessPoints for Site SurveyArea)*>/4*10))) *>*2+(<*VALUE(OWS_Estimated No of Field InstrumentsTested Survey)*>/2)+40+<* Eval(0-INT(0-(<*VALUE(OWS_EstimatedNo ofAccessPoints for Site SurveyArea)*>/2))) *>+16) *>}{<* Eval(32+24+8+8+12+<* Eval(0-INT(0-(<*VALUE(OWS_EstimatedNo ofAccessPoints for Site SurveyArea)*>/4*10))) *>*2+(<*VALUE(OWS_Estimated No of Field InstrumentsTested Survey)*>/2)+40+16) *>}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

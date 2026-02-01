@@ -1,0 +1,11 @@
+{
+    "id": 2567,
+    "condition": "[NOT](<*ATTDEF(Experion HS AD Standard Deliverable)*>)",
+    "name": "Standard_Deliverable_Set_Default",
+    "action": "<*SELECTVALUE(Experion HS AD Standard Deliverable:PEP-PQP-HSE-Org Chart-Schedule)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

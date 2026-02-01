@@ -1,0 +1,11 @@
+{
+    "id": 9117,
+    "condition": "1",
+    "name": "LE Factory Acceptance Test and Sign Off",
+    "action": "<*ASSIGNVALUE(LE Factory Acceptance Test and Sign Off:<*EVAL(25*<*VALUE(labor_parameter_fd)*>*(1+<*VALUE(Labor_parameter_tf)*>)*0.8)*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

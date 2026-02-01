@@ -1,0 +1,11 @@
+{
+    "id": 19591,
+    "condition": "[EQ](<*VALUE(Exp HS HS Dynamic Alarm Suppression)*>,Yes)",
+    "name": "Dynamic Alarm Suppression YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:HS-DASENB)*><* DoResetAtt *>",
+    "description": "SET",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

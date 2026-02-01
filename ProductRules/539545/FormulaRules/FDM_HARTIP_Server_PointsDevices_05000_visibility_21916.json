@@ -1,0 +1,11 @@
+{
+    "id": 21916,
+    "condition": "[AND]([EQ](<*CTX ( Quote.CustomField(Booking LOB) )*>,PAS),[IN](<*VALUE(FDM_Release)*>,R530,R521,R520))",
+    "name": "FDM HART-IP Server Points/Devices (0-5000) visibility",
+    "action": "<*ALLOWATTRIBUTES(FDM HART-IP Server Points/Devices (0-5000))*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12986,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "CanDeleteRow",
+    "action": "<* ExecuteScript(PS_CanDeleteRow) *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20321,
+    "condition": "[EQ](<*VALUE(Advanced Video Evidence Pack)*>,)",
+    "name": "Default_Advanced Video Evidence Pack",
+    "action": "<*SELECTVALUE(Advanced Video Evidence Pack:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

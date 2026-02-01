@@ -1,0 +1,11 @@
+{
+    "id": 20307,
+    "condition": "[AND]([LT](<*VALUE(DVM_Console_Client)*>,1),[NEQ](<*VALUE(DVM_Motion_Search_on_Recorded_Video)*>,Yes))",
+    "name": "EP-DVMCNC_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMCNC)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13011,
+    "condition": "[EQ](<*VALUE(SC_QCS_Subscription Tier)*>,)",
+    "name": "SC_QCS_Tier_Default",
+    "action": "<*SELECTVALUE(SC_QCS_Subscription Tier:Observe)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

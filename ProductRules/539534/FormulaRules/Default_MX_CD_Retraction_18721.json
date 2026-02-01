@@ -1,0 +1,11 @@
+{
+    "id": 18721,
+    "condition": "[EQ](<*VALUE(MX_CD_Retraction)*>,)",
+    "name": "Default_MX_CD_Retraction",
+    "action": "<*SELECTVALUE(MX_CD_Retraction:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19310,
+    "condition": "[AND]([GT](<*VALUE(PlantCruise_Process_Points)*>,1999),[EQ](<*VALUE(PlantCruise_Redundant_C300_Controller)*>,Yes))",
+    "name": "Add_Process_Points_CV-RPR02K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-RPR02K)*><*SETATVQTY(PlantCruise_Part_Summary:CV-RPR02K,<* Eval(INT(<*VALUE(PlantCruise_Process_Points)*>/2000)) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

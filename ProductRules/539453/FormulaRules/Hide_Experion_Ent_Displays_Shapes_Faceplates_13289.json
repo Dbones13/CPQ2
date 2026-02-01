@@ -1,0 +1,11 @@
+{
+    "id": 13289,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW),[EQ](<*VALUE(Is HMI Engineering in Scope?)*>,No))",
+    "name": "Hide_Experion_Ent_Displays_Shapes_Faceplates",
+    "action": "<*DISALLOWATTRIBUTES(Experion_Ent_Displays_Shapes_Faceplates)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

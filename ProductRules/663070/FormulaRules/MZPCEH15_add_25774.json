@@ -1,0 +1,11 @@
+{
+    "id": 25774,
+    "condition": "[GT](<*VALUE(svr_hardt37547qnt)*>,0)",
+    "name": "MZ-PCEH15 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCEH15)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCEH15,<*VALUE(svr_hardt37547qnt)*>)*><* DoResetAtt *>",
+    "description": "#37547",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

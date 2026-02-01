@@ -1,0 +1,11 @@
+{
+    "id": 19133,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,AquaTrol),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_9550_1_Z",
+    "action": "<* DoNotResetAtt *>\n<*DISALLOWVALUES(MX_CD_Bom_Parts:9550-1-Z)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

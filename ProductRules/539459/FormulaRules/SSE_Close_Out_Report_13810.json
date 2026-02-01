@@ -1,0 +1,11 @@
+{
+    "id": 13810,
+    "condition": "1",
+    "name": "SSE Close Out Report",
+    "action": "<*ASSIGNVALUE(SSE Close Out Report:<* Eval((0.4*(6 + 0.007 * (<*VALUE(Labor_parameter_mcab)*>*40)))+ 8) *>)*>",
+    "description": "1.) For Safety System - ESD/FGS/BMS/HIPPS\n\nCalculated hours = HW hrs + CP\nHW hrs= 0.4*(6 + 0.007 * (mcab*40))\nCP= 8",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

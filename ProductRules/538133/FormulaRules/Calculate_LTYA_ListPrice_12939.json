@@ -1,0 +1,11 @@
+{
+    "id": 12939,
+    "condition": "[EQ](<*VALUE(SC_P1P2_PartsUsageMethod)*>,Last 3 Year Average)",
+    "name": "Calculate_LTYA_ListPrice",
+    "action": "<*ASSIGNVALUE(SC_P1P2_LTYA_CY_FinalListPrice:<* Eval(([IF]([NEQ](<*VALUE(SC_P1P2_LTYA_PY1_ListPrice)*>,)){<*VALUE(SC_P1P2_LTYA_PY1_ListPrice)*>}{0}[ENDIF]+[IF]([NEQ](<*VALUE(SC_P1P2_LTYA_PY2_ListPrice)*>,)){<*VALUE(SC_P1P2_LTYA_PY2_ListPrice)*>}{0}[ENDIF]+[IF]([NEQ](<*VALUE(SC_P1P2_LTYA_PY_ListPrice)*>,)){<*VALUE(SC_P1P2_LTYA_PY_ListPrice)*>}{0}[ENDIF])/3) *>)*><*ASSIGNVALUE(SC_P1P2_LTYA_CY_FinalListPrice:<* Eval(<* Round ( <*VALUE(SC_P1P2_LTYA_CY_FinalListPrice)*>,2) *>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

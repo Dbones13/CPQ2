@@ -1,0 +1,11 @@
+{
+    "id": 14694,
+    "condition": "[OR]([EQ](<*VALUE(MX_Number_of_Thin_Clients)*>,),[EQ](<*VALUE(MX_Number_of_Thin_Clients)*>,0))",
+    "name": "Hide_thin_client_cont",
+    "action": "<*DISALLOWATTRIBUTES(MX_RAE_Thinclient_transpose)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

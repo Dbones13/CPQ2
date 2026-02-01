@@ -1,0 +1,11 @@
+{
+    "id": 13339,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is Profibus Interface in Scope?)*>,Yes))",
+    "name": "SII Detail Design Specification -Profibus",
+    "action": "<*ASSIGNVALUE(SII Detail Design Specification -Profibus:<* Eval(<*VALUE(Number of Profibus Interface Types)*>*0.25*0.9) *>)*>",
+    "description": "CXCPQ-39340",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24168,
+    "condition": "[EQ](<*VALUE(ARO_Does_site_have_DMZ)*>,)",
+    "name": "Default_ARO_Does_site_have_DMZ",
+    "action": "<*SELECTVALUE(ARO_Does_site_have_DMZ:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

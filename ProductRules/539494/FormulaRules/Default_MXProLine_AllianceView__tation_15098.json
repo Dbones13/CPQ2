@@ -1,0 +1,11 @@
+{
+    "id": 15098,
+    "condition": "[EQ](<*VALUE(MXP_MXProLine_AllianceView_Station)*>,)",
+    "name": "Default_MXProLine_AllianceView _tation",
+    "action": "<*SELECTVALUE(MXP_MXProLine_AllianceView_Station:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

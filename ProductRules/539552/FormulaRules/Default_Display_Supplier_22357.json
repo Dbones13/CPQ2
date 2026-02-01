@@ -1,0 +1,11 @@
+{
+    "id": 22357,
+    "condition": "[EQ](<*VALUE(ESDC_Display_Supplier)*>,)",
+    "name": "Default_Display_Supplier",
+    "action": "<*SELECTVALUE(ESDC_Display_Supplier:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

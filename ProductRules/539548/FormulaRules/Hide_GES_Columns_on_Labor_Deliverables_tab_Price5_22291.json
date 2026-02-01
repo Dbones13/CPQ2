@@ -1,0 +1,11 @@
+{
+    "id": 22291,
+    "condition": "[EQ](<*VALUE(MSID_GES_Location)*>,None)",
+    "name": "Hide GES Columns on Labor Deliverables tab Price5",
+    "action": "<*CTX(Container(MSID_Labor_ELEPIU_con).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n<*CTX(Container(MSID_Labor_ELEPIU_con).Column(GES_Regional_Cost).SetPermission(Hidden) )*>\n<*CTX(Container(MSID_Labor_ELEPIU_con).Column(GES_ListPrice).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20450,
+    "condition": "[EQ](<*VALUE(SS_Flex Staton  Desk Node_desk)*>,STN_STD_DELL_Tower_NonRAID)",
+    "name": "Disallow_Display_size",
+    "action": "<*DISALLOWVALUES(SS_Display_size_desk:24 inch NTS DELL)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

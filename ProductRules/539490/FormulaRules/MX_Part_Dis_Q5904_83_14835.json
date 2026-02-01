@@ -1,0 +1,11 @@
+{
+    "id": 14835,
+    "condition": "[NEQ](<*VALUE(MX_MD_Production_Economic_Optimization)*>,Yes)",
+    "name": "MX_Part_Dis_Q5904_83",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5904-83)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

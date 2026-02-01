@@ -1,0 +1,11 @@
+{
+    "id": 26691,
+    "condition": "1",
+    "name": "EBR Disaster Recovery DDS",
+    "action": "<*ASSIGNVALUE(EBR Disaster Recovery DDS:[IF]([IN](<*VALUE(Experion_ProjectSize)*>,Small Project,Large Project)){0}{[IF]([AND]([EQ](<*VALUE(Experion_ProjectSize)*>,Medium Project),[EQ](<*VALUE(EBR_Software_Required)*>,Yes))){[IF]([EQ](<*VALUE(Ges_Location_44925)*>,None)){<* Eval(20*0.75)*>}{<* Eval(20*0.75*1.1)*>}[ENDIF]}{0}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "60",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

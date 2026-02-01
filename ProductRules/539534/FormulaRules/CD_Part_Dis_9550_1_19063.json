@@ -1,0 +1,11 @@
+{
+    "id": 19063,
+    "condition": "[NEQ](<*VALUE(MX_CD_Control_Type)*>,AquaTrol)",
+    "name": "CD_Part_Dis_9550_1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9550-1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

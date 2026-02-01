@@ -1,0 +1,11 @@
+{
+    "id": 23885,
+    "condition": "[AND]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*VALUE(R2Q_Type_of_TAS_System)*>,Non-Red))",
+    "name": "R2Q Controller CPU Hiding",
+    "action": "<*SELECTVALUE(HC900_Controller_(CPU)_Module:None,HC900_Controller_(CPU)_Module_NSIL2:None)*><*DISALLOWATTRIBUTES(HC900_Controller_(CPU)_Module,HC900_Controller_(CPU)_Module_NSIL2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/08/25",
+    "modifiedBy": "Hinduja Devaraj"
+}

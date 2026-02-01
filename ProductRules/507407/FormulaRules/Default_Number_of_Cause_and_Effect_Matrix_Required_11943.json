@@ -1,0 +1,11 @@
+{
+    "id": 11943,
+    "condition": "[EQ](<*VALUE(FGC_Cause_and_Effect_Matrix_Required?)*>,)",
+    "name": "Default_Number of Cause_and_Effect_Matrix_Required?",
+    "action": "<*SELECTVALUE(FGC_Cause_and_Effect_Matrix_Required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

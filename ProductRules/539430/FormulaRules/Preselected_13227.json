@@ -1,0 +1,11 @@
+{
+    "id": 13227,
+    "condition": "1",
+    "name": "Preselected",
+    "action": "[IF]([EQ](<*VALUE(FSC_to_SM_IO_Cabinet_Access)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Cabinet_Access)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FSC_to_SM_IO_Cabinet_Base_Plinth)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Cabinet_Base_Plinth)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FSC_to_SM_IO_Cabinet_Depth)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Cabinet_Depth)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FSC_to_SM_IO_Cabinet_Front_Door)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Cabinet_Front_Door)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FSC_to_SM_IO_Cabinet_IP_Rating)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Cabinet_IP_Rating)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FSC_to_SM_IO_Cabinet_Light)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Cabinet_Light)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FSC_to_SM_IO_Cabinet_Rear_Door)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Cabinet_Rear_Door)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FSC_to_SM_IO_Swing_Frame)*>,)){<*RESETATTRIBUTE(FSC_to_SM_IO_Swing_Frame)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

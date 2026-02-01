@@ -1,0 +1,11 @@
+{
+    "id": 22238,
+    "condition": "[NOT](<*ATTDEF(Scada_Number_of_New_Medium_Equipment_Templates)*>)",
+    "name": "Setting_medium_percent",
+    "action": "<*ASSIGNVALUE(Scada_Number_of_New_Medium_Equipment_Templates:30)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

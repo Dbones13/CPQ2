@@ -1,0 +1,11 @@
+{
+    "id": 22938,
+    "condition": "[AND]([EQ](<*VALUE(SerC_RG_CN100_I/O_HOVE)*>,),[NEQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "Default_SerC_RG_CN100_I/O_HOVE",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 I/O HIVE - C300 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual)))){<*SELECTVALUE(SerC_RG_CN100_I/O_HOVE:Redundant)*>}{<*SELECTVALUE(SerC_RG_CN100_I/O_HOVE:None)*>}[ENDIF]",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

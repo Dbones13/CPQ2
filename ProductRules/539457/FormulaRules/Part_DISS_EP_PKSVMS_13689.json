@@ -1,0 +1,11 @@
+{
+    "id": 13689,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_Experion_Virtualization_Server_CAL)*>,0))",
+    "name": "Part_DISS_EP_PKSVMS",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-PKSVMS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

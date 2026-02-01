@@ -1,0 +1,11 @@
+{
+    "id": 25807,
+    "condition": "[AND]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[EQ](<*VALUE(Custom Logo on Alarm Panel)*>,Yes),[EQ](<*VALUE(Node Supplier)*>,Honeywell))",
+    "name": "MP-OCCLG3_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-OCCLG3)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCCLG3, <*VALUE(Orion Console 2Position Base Unit (0-20))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-39018",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

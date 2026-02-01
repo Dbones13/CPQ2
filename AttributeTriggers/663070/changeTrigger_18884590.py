@@ -1,0 +1,1 @@
+[IF]([LT](<*VALUE(Cabinet_No_of_Displays (0-4))*>,2)){<*SELECTVALUE(CMS Multi Window Support Option Required?:No)*>}{if_false}[ENDIF]

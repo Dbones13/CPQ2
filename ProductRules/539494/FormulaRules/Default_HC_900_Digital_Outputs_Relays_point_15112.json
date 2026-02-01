@@ -1,0 +1,11 @@
+{
+    "id": 15112,
+    "condition": "[EQ](<*VALUE(MXP_HC_900_Digital_Outputs_Relays_8_point)*>,)",
+    "name": "Default_HC_900_Digital_Outputs,_Relays_point",
+    "action": "<*ASSIGNVALUE(MXP_HC_900_Digital_Outputs_Relays_8_point:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

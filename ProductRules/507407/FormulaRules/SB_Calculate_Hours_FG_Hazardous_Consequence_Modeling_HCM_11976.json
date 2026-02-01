@@ -1,0 +1,11 @@
+{
+    "id": 11976,
+    "condition": "<*ISSELECTED(FGC_Implementation_Methodology.Standard Build Estimate)*>",
+    "name": "SB Calculate Hours F&G Hazardous Consequence Modeling (HCM)",
+    "action": "<*ASSIGNVALUE(F&G Hazardous Consequence Modeling (HCM):<* Eval([IF](<*ISSELECTED(FGC_Gas_Dispersion_Modeling_Required?.Yes)*>){<* Eval(<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>+(<*VALUE(FGC_Number_of_Fire_and_Gas_Zones_(1-100))*>*<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>*4*0.5)) *>}{0}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

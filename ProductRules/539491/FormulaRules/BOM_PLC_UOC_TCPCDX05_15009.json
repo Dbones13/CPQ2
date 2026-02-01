@@ -1,0 +1,11 @@
+{
+    "id": 15009,
+    "condition": "[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR)",
+    "name": "BOM_PLC_UOC_TC-PCDX05",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:TC-PCDX05)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:TC-PCDX05, <*Eval(int(((0<*VALUE(LSS_PLC_Total_Number_of_new_PCDI_License)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:TC-PCDX50)*>*50)-(0<*GETATVQTY(PLC_UOC_BOM_Items:TC-PCDX10)*>*10))/5)) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

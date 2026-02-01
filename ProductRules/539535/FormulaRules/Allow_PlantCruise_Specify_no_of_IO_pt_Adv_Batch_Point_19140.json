@@ -1,0 +1,11 @@
+{
+    "id": 19140,
+    "condition": "[EQ](<*VALUE(PlantCruise_Need_Advance_Batch_Points)*>,Yes)",
+    "name": "Allow_PlantCruise_Specify_no_of_IO_pt_Adv_Batch_Point",
+    "action": "<*ALLOWATTRIBUTES(PlantCruise_Specify_no_of_IO_pt_Adv_Batch_Point)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

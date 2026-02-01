@@ -1,0 +1,11 @@
+{
+    "id": 4863,
+    "condition": "[OR]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Basis Weight),[NEQ](<*VALUE(MX_SE_Dynamic_Air_Gap_Temperature)*>,Yes))",
+    "name": "Part_D_Q2256_10",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q2256-10)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

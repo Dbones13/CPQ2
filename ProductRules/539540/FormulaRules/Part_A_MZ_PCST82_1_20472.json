@@ -1,0 +1,11 @@
+{
+    "id": 20472,
+    "condition": "[AND]([EQ](<*VALUE(SS_Server_Node_Type)*>,SVR_PER_DELL_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module)*>,No))",
+    "name": "Part_A_MZ_PCST82_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCST82)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCST82, <*VALUE(Simulation_red_non_red_Check)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

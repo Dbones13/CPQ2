@@ -1,0 +1,11 @@
+{
+    "id": 4824,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Crepe Structure))",
+    "name": "Measurement_Crepe structure_2",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Crepe Structure Msmt)*>\n\n<*SELECTVALUE(MX_SE_Sensor_Type:Crepe Structure Msmt)*>\n\n<*SETREQUIRED(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

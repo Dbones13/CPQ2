@@ -1,0 +1,11 @@
+{
+    "id": 18210,
+    "condition": "[EQ](<*VALUE(MXP_Horizontal_Retract)*>,)",
+    "name": "Default_MXP_Horizontal_Retract",
+    "action": "<*SELECTVALUE(MXP_Horizontal_Retract:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

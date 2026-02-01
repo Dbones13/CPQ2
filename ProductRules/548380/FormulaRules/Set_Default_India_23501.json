@@ -1,0 +1,11 @@
+{
+    "id": 23501,
+    "condition": "[AND]([NOT](<*ATTSEL(DVM_Additional_Project_GES_Deliverables)*>),<*ISSELECTED(DVM_GES_Location.GES India)*>)",
+    "name": "Set_Default_India",
+    "action": "<*SELECTVALUE(DVM_Additional_Project_GES_Deliverables:HPS_GES_P350B_IN)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

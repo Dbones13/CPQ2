@@ -1,0 +1,11 @@
+{
+    "id": 18674,
+    "condition": "[AND]([NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R530),[NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R520))",
+    "name": "Part_D_EP_EBASE1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:EP-EBASE1)*><* DoResetAtt *>",
+    "description": "7957 & 7958 Story",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

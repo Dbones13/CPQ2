@@ -1,0 +1,11 @@
+{
+    "id": 19138,
+    "condition": "<*ATTDEF(MX_CD_Bom_Parts)*>",
+    "name": "Load_part_summary_cont",
+    "action": "<*CTX( Container(MX_CD_partsummary_cont).LoadKeys(partnumber).Load(select '<*eval(Replace(\"<*VALUE(MX_CD_Bom_Parts)*>\",\", \",\"' as partnumber UNION SELECT '\"))*>' as partnumber   ) )*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

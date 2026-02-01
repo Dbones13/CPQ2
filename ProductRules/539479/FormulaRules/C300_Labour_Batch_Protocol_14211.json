@@ -1,0 +1,11 @@
+{
+    "id": 14211,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Batch_Protocol",
+    "action": "[IF]([OR]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma),[EQ](<*VALUE(C300_Process_Type)*>,Batch-Chemical))){<*ASSIGNVALUE(C300_Labour_Batch_Protocol:<* Eval(0<*VALUE(Number_of_Product(Master Recipes)  (0-100))*>*12+0<*VALUE(No_of_Product_on_Copy_Unit)*>*6) *>)*>}{if_false}[ENDIF]",
+    "description": "CXCPQ-43537\nFor Process Type = Batch-Pharma or Batch-Chemical\nCalculated Hours = bmr*12 + bpr*6",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

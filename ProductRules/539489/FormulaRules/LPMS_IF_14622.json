@@ -1,0 +1,11 @@
+{
+    "id": 14622,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "LPMS_IF",
+    "action": "<*ASSIGNVALUE(LPMS_IF:[IF]([EQ](<*VALUE(MSC_Total_Number_Of_Liquid_Pay_Meter_Streams)*>,1)){0}{<* Eval((0.5*0<*VALUE(MSC_Number_Of_Liquid_Metering_Systems)*>)+(2*0<*VALUE(MSC_Number_Of_Different_Liquid_Meter_Types)*>)) *>}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

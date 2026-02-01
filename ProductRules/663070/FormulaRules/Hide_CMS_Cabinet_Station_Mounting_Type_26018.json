@@ -1,0 +1,11 @@
+{
+    "id": 26018,
+    "condition": "[OR]([EQ](<*VALUE(CMS Flex Station Hardware Selection)*>,STN_PER_DELL_Rack_RAID1),[EQ](<*VALUE(CMS TPS Station Hardware Selection)*>,STN_PER_DELL_Rack_RAID1),[EQ](<*ISSELECTED(CMS Console Station Hardware Selection.STN_PER_DELL_Rack_RAID1)*>,STN_PER_DELL_Rack_RAID1),[EQ](<*ISSELECTED(CMS Console Station Extension Hardware Selection.STN_PER_DELL_Rack_RAID1)*>,STN_PER_DELL_Rack_RAID1))",
+    "name": "Hide_CMS Cabinet Station Mounting Type",
+    "action": "<*DISALLOWATTRIBUTES(CMS Cabinet Station Mounting Type)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

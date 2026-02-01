@@ -1,0 +1,11 @@
+{
+    "id": 15222,
+    "condition": "[EQ](<*VALUE(MXP_Tire_Calendar_Control)*>,3-Zone Controls (gap, cross-axis or roll bending) for 1 Gap.)",
+    "name": "Part_A_3_3212_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-3212-01)*><*SETATVQTY(MXP_Bom_Parts:3-3212-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

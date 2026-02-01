@@ -1,0 +1,11 @@
+{
+    "id": 19143,
+    "condition": "[AND]([NEQ](<*VALUE(PlantCruise_Default_Cabinet_Type)*>,Option #2(Single Cabinet)),[NEQ](<*VALUE(PlantCruise_Default_Cabinet_Type)*>,Option #3(Single Cabinet)),[NEQ](<*VALUE(PlantCruise_Default_Cabinet_Type)*>,Option #4(Single Cabinet)))",
+    "name": "Set_PlantCruise_Default_Cabinet_Type",
+    "action": "<*SELECTVALUE(PlantCruise_Default_Cabinet_Type:Option #1(Complex Cabinet))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

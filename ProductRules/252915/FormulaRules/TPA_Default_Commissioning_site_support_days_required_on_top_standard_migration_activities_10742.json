@@ -1,0 +1,11 @@
+{
+    "id": 10742,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Commissioning_site_support_days_required_on_top_standard_migration_activities)*>,))",
+    "name": "TPA_Default_Commissioning_site_support_days_required_on_top_standard_migration_activities",
+    "action": "<*ASSIGNVALUE(TPA_Commissioning_site_support_days_required_on_top_standard_migration_activities:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

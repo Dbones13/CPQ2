@@ -1,0 +1,2 @@
+<*CTX( Container(Series_C_RG_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace("<*VALUE(Series_C_RG_Part_Summary)*>",", ","' as PartNumber UNION SELECT '"))*>' as PartNumber   ) )*>
+<*ASSIGNVALUE(flag_load_parts_cont:<*VALUE(Series_C_RG_Part_Summary)*>)*>

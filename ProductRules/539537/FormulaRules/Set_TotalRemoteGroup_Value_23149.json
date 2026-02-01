@@ -1,0 +1,11 @@
+{
+    "id": 23149,
+    "condition": "[NEQ](<*VALUE(TotalRemoteGroup)*>,<*CTX ( Container(Series_C_Remote_Groups_Cont).Rows.GetCount )*>)",
+    "name": "Set TotalRemoteGroup Value",
+    "action": "<*ASSIGNVALUE(TotalRemoteGroup:<*CTX ( Container(Series_C_Remote_Groups_Cont).Rows.GetCount )*>)*>",
+    "description": "Should run after RemoteGroupCheck rule",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "12/11/24",
+    "modifiedBy": "Ashritha Row"
+}

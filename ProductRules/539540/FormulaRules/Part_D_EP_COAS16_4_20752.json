@@ -1,0 +1,11 @@
+{
+    "id": 20752,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[NEQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell))))",
+    "name": "Part_D_EP_COAS16_4",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Simulation_Bom_parts:EP-COAS16)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

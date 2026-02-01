@@ -1,0 +1,11 @@
+{
+    "id": 17896,
+    "condition": "[EQ](<*CTX( Container(Leak Detection System Interfaces).Row(2).Column(Devices).Get )*>,Yes)",
+    "name": "SCADA-EP-APLD25_Yes",
+    "action": "<*DoNotResetAtt*><*SELECTVALUE(SCADA_BOM_Items:EP-APLD25)*><*SETATVQTY(SCADA_BOM_Items:EP-APLD25,<* Round ( <* Eval(<*CTX( Container(Leak Detection System Interfaces).Row(1).Column(Nodes).Get )*> / 25) *>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "27/11/24",
+    "modifiedBy": "Ashritha Row"
+}

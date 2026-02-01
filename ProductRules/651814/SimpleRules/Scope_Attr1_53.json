@@ -1,0 +1,10 @@
+{
+    "id": 53,
+    "condition": "HCI_PHD_Scope:New Implementation",
+    "name": "Scope Attr1",
+    "action": "Disallow HCI_PHD_OrderType : Non-Support Upgrade, Disallow HCI_PHD_OrderType : Maintenance Support Upgrade/Update (No Charge/ BGP Active), Disallow HCI_PHD_OrderType : Modify Existing Std Commercial License Options",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

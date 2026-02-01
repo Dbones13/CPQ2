@@ -1,0 +1,11 @@
+{
+    "id": 22925,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_Termination)*>,)",
+    "name": "Default_SeriesC_RG_Termination",
+    "action": "<*SELECTVALUE(SeriesC_RG_Termination:Not terminated)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

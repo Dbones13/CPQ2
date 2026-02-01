@@ -1,0 +1,11 @@
+{
+    "id": 14083,
+    "condition": "[EQ](<*CTX( Container(ESDC_Labor_Additional_Cust_Deliverables_con).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Addl Custom Deliverable",
+    "action": "<*CTX( Container(ESDC_Labor_Additional_Cust_Deliverables_con).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

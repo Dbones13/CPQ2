@@ -1,0 +1,11 @@
+{
+    "id": 14088,
+    "condition": "[EQ](<*VALUE(SS_Count)*>,)",
+    "name": "Default_SS_count",
+    "action": "<*ASSIGNVALUE(SS_Count:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20336,
+    "condition": "[EQ](<*VALUE(SS_Flex_Station_Qty_Orion)*>,)",
+    "name": "Default_SS_Flex_Station_Qty_Orion",
+    "action": "<*ASSIGNVALUE(SS_Flex_Station_Qty_Orion:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

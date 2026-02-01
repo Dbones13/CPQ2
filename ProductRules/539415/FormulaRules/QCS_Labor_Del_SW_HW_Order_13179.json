@@ -1,0 +1,11 @@
+{
+    "id": 13179,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "QCS_Labor_Del_SW_HW_Order",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_SW_HW_Order:12)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

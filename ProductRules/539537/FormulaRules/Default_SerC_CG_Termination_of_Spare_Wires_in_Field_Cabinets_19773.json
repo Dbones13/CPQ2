@@ -1,0 +1,11 @@
+{
+    "id": 19773,
+    "condition": "[EQ](<*VALUE(SerC_CG_Termination_of_Spare_Wires_in_Field_Cabin)*>,)",
+    "name": "Default_SerC_CG_Termination of Spare Wires in Field Cabinets",
+    "action": "<*SELECTVALUE(SerC_CG_Termination_of_Spare_Wires_in_Field_Cabin:Not Terminated)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

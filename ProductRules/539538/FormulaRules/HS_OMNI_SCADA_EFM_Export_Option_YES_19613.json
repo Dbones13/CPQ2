@@ -1,0 +1,11 @@
+{
+    "id": 19613,
+    "condition": "[EQ](<*VALUE(Exp HS HS Omni SCADA, EFM Export Option)*>,Yes)",
+    "name": "HS OMNI SCADA, EFM Export Option YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HOMNEF)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

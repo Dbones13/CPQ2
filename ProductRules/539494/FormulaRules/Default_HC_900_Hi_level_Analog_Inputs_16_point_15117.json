@@ -1,0 +1,11 @@
+{
+    "id": 15117,
+    "condition": "[EQ](<*VALUE(MXP_HC_900_Hi_level_Analog_Inputs_16_point)*>,0)",
+    "name": "Default_HC_900_Hi_level_Analog_Inputs_16_point",
+    "action": "<*ASSIGNVALUE(MXP_HC_900_Hi_level_Analog_Inputs_16_point:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

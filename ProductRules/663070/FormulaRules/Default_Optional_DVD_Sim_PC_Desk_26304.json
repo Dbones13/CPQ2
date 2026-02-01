@@ -1,0 +1,11 @@
+{
+    "id": 26304,
+    "condition": "[EQ](<*VALUE(Optional DVD (Sim PC Desk))*>,)",
+    "name": "Default_Optional_DVD_(Sim PC Desk)",
+    "action": "<*SELECTVALUE(Optional DVD (Sim PC Desk):No)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

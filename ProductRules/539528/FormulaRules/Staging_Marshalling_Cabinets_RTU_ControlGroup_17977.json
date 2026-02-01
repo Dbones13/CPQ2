@@ -1,0 +1,11 @@
+{
+    "id": 17977,
+    "condition": "[NEQ](<*CTX( Container(RTU_CG_Labor_Cont).Row(1).Column(Marshalling_Cabinet_Count).Get )*>,<*VALUE(Staging_Marshalling_Cabinets_RTU_ControlGroup)*>)",
+    "name": "Staging_Marshalling_Cabinets_RTU_ControlGroup",
+    "action": "<*ASSIGNVALUE(Staging_Marshalling_Cabinets_RTU_ControlGroup:<*CTX( Container(RTU_CG_Labor_Cont).Row(1).Column(Marshalling_Cabinet_Count).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

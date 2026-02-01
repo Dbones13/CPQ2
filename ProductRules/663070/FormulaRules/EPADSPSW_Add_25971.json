@@ -1,0 +1,11 @@
+{
+    "id": 25971,
+    "condition": "[GT](<*VALUE(Addon Advanced Solution  Pack(0-1))*>,0)",
+    "name": "EP-ADSPSW_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-ADSPSW)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ADSPSW, <*VALUE(Addon Advanced Solution  Pack(0-1))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

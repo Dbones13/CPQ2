@@ -1,0 +1,11 @@
+{
+    "id": 10796,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,CWS RAE Upgrade),[AND]([NEQ](<*VALUE(CWS_Mig_Physical_configuration)*>,QCS Standard Edition),[NEQ](<*VALUE(CWS_Mig_Virtualization_Configuration)*>,QCS Standard Edition)))",
+    "name": "CWS_Mig_Hide_Will_customer_provide_HW",
+    "action": "<*DISALLOWATTRIBUTES(CWS_Mig_Will_customer_provide_HW_for_QCS_Standard)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

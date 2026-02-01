@@ -1,0 +1,11 @@
+{
+    "id": 18540,
+    "condition": "[NEQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes)",
+    "name": "Condition_for_Mobile_Server_Nodes_required",
+    "action": "<*DISALLOWATTRIBUTES(ES_Mobile_Nodes_Server_Configuration)*>\n<*DISALLOWATTRIBUTES(ES_Hardware_Selection)*>\n<*DISALLOWATTRIBUTES(ES_Additional_Memory_Mobile_Server)*>\n<*DISALLOWATTRIBUTES(ES_Additional_Hard_Disk_Mobile_Server)*>\n<*DISALLOWATTRIBUTES(ES_Display_Size_Mobile_Server)*>\n<*DISALLOWATTRIBUTES(ES_Display_Supplier_Mobile_Server)*>\n<*DISALLOWATTRIBUTES(ES_Mobile_Station_Premium_Access_License)*>\n<*DISALLOWATTRIBUTES(ES_Mobile_Standard_Premium_Access_License)*>\n<*DISALLOWATTRIBUTES(ES_Experion_Backup_Restore_Mobile_Server)*>\n<*DISALLOWATTRIBUTES(ES_Node_Supplier_Mobile_Server)*>\n<*DISALLOWATTRIBUTES(ES_Software_for_Mobile_Station_License_Headings)*>\n<*DISALLOWATTRIBUTES(ES_Trusted_Platform_Module_Mobile_Server)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

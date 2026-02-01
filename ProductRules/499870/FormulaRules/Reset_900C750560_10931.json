@@ -1,0 +1,11 @@
+{
+    "id": 10931,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Redundant Controller C75 CPU),[EQ](<*VALUE(HC900_System_Type)*>,Non-SIL HC900 System)))",
+    "name": "Reset 900C75-0560",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900C75-0560)*><* DoResetAtt *>",
+    "description": "CXCPQ-40185",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

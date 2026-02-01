@@ -1,0 +1,11 @@
+{
+    "id": 26526,
+    "condition": "<*ISSELECTED(Power Cord Type.US)*>",
+    "name": "Show_51199562_200",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51199562-200)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:51199562-200, 1)*><* DoResetAtt *>",
+    "description": "38330",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Bharadwaj Siddela"
+}

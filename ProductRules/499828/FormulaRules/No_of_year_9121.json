@@ -1,0 +1,11 @@
+{
+    "id": 9121,
+    "condition": "[EQ](<*VALUE(Trace_software_support_gray)*>,2)",
+    "name": "No of year",
+    "action": "<*DISALLOWATTRIBUTES(Trace_no_of_year)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

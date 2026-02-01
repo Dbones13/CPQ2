@@ -1,0 +1,11 @@
+{
+    "id": 10740,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Project_lenght_in_months)*>,))",
+    "name": "TPA_Default_Project_lenght_in_months",
+    "action": "<*ASSIGNVALUE(TPA_Project_lenght_in_months:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

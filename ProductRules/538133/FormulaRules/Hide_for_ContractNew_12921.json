@@ -1,0 +1,11 @@
+{
+    "id": 12921,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_for_ContractNew",
+    "action": "<*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(PY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(PY_ExtPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(PY_ExtHoldingPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(CY_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(CY_ExtPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(CY_ExtHoldingPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(PY_ContigencyCost).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(CY_ContigencyCost).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(PY_TotalCost).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(CY_TotalCost).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(Comments).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(Pricing_Method).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(PY_ExtPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(CY_ExtPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(CY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(Scope_Change).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(Comments).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

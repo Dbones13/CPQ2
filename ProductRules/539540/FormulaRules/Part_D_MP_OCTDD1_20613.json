@@ -1,0 +1,11 @@
+{
+    "id": 20613,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(SS_Orion_Console_2_Position_Base_Unit_Total)*>,0),[GT](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,0)),[OR]([GT](<*VALUE(SS_Orion_Console_Right_Extended_Auxiliary_Equipment_Unit)*>,0),[GT](<*VALUE(SS_Orion_Console_Left_Extended_Auxiliary_Equipment_Unit)*>,0),[GT](<*VALUE(SS_Orion_Console_Center_Extended_Auxiliary_Equipment_Unit)*>,0)),[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[EQ](<*VALUE(SS_Orion_Console_Turret_Type)*>,Double Tier)))",
+    "name": "Part_D_MP_OCTDD1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MP-OCTDD1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26009,
+    "condition": "[NEQ](<*VALUE(Simulation PC Furniture)*>,Cabinet)",
+    "name": "Hide_SIM_PC_Cabinet_Configuration",
+    "action": "<*DISALLOWATTRIBUTES(SIM PC Cabinet Configuration,Hardware Design Selection - Sim PC Node,Node Supplier (Sim PC)1,Rack Mounting Type for SIM PC Node,Additional Memory (Sim PC Cab),Additional Hard Disk (Sim PC Cab),Optional DVD (Sim PC Cab),Ent_sim_cab_tpm,Sim PC Cluster1)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

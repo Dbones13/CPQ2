@@ -1,0 +1,11 @@
+{
+    "id": 18978,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,ProFlow),[EQ](<*VALUE(MX_CD_Proflow_type)*>,Rotational),[EQ](<*VALUE(MX_CD_Type_of_Valve_torque)*>,Standard Torque (20Nm) Andritz N),[EQ](<*VALUE(MX_CD_Machine_Mounting_Adapter)*>,Yes))",
+    "name": "CD_Part_91711_Z",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:91711-Z)*><*SETATVQTY(MX_CD_Bom_Parts:91711, 1-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

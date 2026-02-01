@@ -1,0 +1,11 @@
+{
+    "id": 26025,
+    "condition": "[EQ](<*VALUE(CMS Cabinet Mounting Stations required)*>,No)",
+    "name": "Hide_CMS Message",
+    "action": "<*DISALLOWATTRIBUTES(CMS Message 8)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

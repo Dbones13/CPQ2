@@ -1,0 +1,11 @@
+{
+    "id": 15228,
+    "condition": "[NEQ](<*VALUE(MXP_Tire_Calendar_Control)*>,Growth Ratio Control (requires wind-up width measurement - Scan-A-Line or other))",
+    "name": "Part_D_3_3215_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-3215-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

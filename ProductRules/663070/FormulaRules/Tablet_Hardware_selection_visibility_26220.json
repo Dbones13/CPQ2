@@ -1,0 +1,11 @@
+{
+    "id": 26220,
+    "condition": "[GEQ](<*VALUE(Tablet Quantity (0-5))*>,1)",
+    "name": "Tablet Hardware selection visibility",
+    "action": "<*ALLOWATTRIBUTES(Tablet Hardware selection)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13500,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Show_services",
+    "action": "<*ALLOWATTRIBUTES(Header_07_close,Header_07_open,Virtualization_Acceptance_Test_requested,Virtualization_Complexity,Virtualization_Documentation_required,Virtualization_Does_the_customer_want_Honeywell,Virtualization_FEL_Data_gathering_required,Virtualization_Will_Honeywell_perform_equipment,Virtualization_Ges_Location)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

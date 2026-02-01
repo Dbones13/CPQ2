@@ -1,0 +1,11 @@
+{
+    "id": 13432,
+    "condition": "[EQ](<*VALUE(EBR_Software_Required)*>,No)",
+    "name": "Hide_EBR_QUESTION",
+    "action": "<*DISALLOWATTRIBUTES(Experion Backup Restore Media Delivery,Experion Backup Restore Software Release)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

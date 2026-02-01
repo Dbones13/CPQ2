@@ -1,0 +1,11 @@
+{
+    "id": 13351,
+    "condition": "1",
+    "name": "labor_paramter_HMI_F",
+    "action": "<*ASSIGNVALUE(labor_parameter_HMI_F:<* Eval(<*VALUE(labor_parameter_sf)*>+<*VALUE(labor_parameter_mf)*>*2+<*VALUE(labor_parameter_cf)*>*4+<*VALUE(labor_parameter_vcf)*>*8+<*VALUE(labor_parameter_rf)*>) *>)*>",
+    "description": "CXCPQ-39010\nF = sf + mf * 2 + cf * 4 + vcf * 8 + rf",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

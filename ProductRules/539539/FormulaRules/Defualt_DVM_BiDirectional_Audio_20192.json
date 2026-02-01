@@ -1,0 +1,11 @@
+{
+    "id": 20192,
+    "condition": "[EQ](<*VALUE(DVM_Bi-Directional_Audio)*>,)",
+    "name": "Defualt_DVM_Bi-Directional_Audio",
+    "action": "<*SELECTVALUE(DVM_Bi-Directional_Audio:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

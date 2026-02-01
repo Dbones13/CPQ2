@@ -1,0 +1,11 @@
+{
+    "id": 15002,
+    "condition": "1",
+    "name": "LSS_Show_Hide_Gen_Info_UOC_Questions_ATTR",
+    "action": "[IF]([AND]([NEQ](<*VALUE(Scope)*>,LABOR),[AND]([OR]([NEQ](<*VALUE(LSS_PLC_Number_of_ControlEdge_UOC_vUOC_confi_req)*>,0),[AND]([NEQ](<*VALUE(LSS_PLC_Number_of_ControlEdge_PLC_UOC_vUOC_confi)*>,0),[OR]([LIKE](<*CTX( Container(LSS_Configuration_for_Rockwell_transpose).UniqueValues(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Separator(,) )*>,UOC),[LIKE](<*CTX( Container(LSS_Configuration_for_Rockwell_transpose).UniqueValues(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Separator(,) )*>,vUOC))))))){<*ALLOWATTRIBUTES(LSS_Experion_UOC_PROFINET_Usage_Licenses,LSS_Experion_UOC_Regulatory_Compliance_Points,LSS_Total_Experion_UOC_Advanced_Batch_Points,LSS_Total_Experion_UOC_Batch_Points)*>}{<*DISALLOWATTRIBUTES(LSS_Experion_UOC_PROFINET_Usage_Licenses,LSS_Experion_UOC_Regulatory_Compliance_Points,LSS_Total_Experion_UOC_Advanced_Batch_Points,LSS_Total_Experion_UOC_Batch_Points)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

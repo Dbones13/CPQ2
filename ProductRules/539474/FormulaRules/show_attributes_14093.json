@@ -1,0 +1,11 @@
+{
+    "id": 14093,
+    "condition": "[NEQ](<*VALUE(C300_GES_Location)*>,)",
+    "name": "show_attributes",
+    "action": "<*ALLOWATTRIBUTES(Simulation_Labor_GES_percent_adc)*> <*CTX( Container(Simulation_Labor_Additional_Cust_Deliverables_con).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(Simulation_Labor_Additional_Cust_Deliverables_con).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(Simulation_Labor_Additional_Cust_Deliverables_con).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Simulation_Labor_Additional_Cust_Deliverables_con).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Simulation_Labor_Additional_Cust_Deliverables_con).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(Simulation_Labor_Additional_Cust_Deliverables_con).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(Simulation_Labor_Additional_Cust_Deliverables_con).Column(GES_MPA_Price).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9136,
+    "condition": "[EQ](<*VALUE(Trace_software_GES_Location)*>,)",
+    "name": "Default_Ges_Location",
+    "action": "<*SELECTVALUE(Trace_software_GES_Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

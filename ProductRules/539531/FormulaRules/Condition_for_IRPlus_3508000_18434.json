@@ -1,0 +1,11 @@
+{
+    "id": 18434,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Scanner_Type)*>,3-5080-00),[EQ](<*VALUE(MXP_Measurement_Type)*>,IRPlus))",
+    "name": "Condition_for_IRPlus_3-5080-00",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Sensor_Type:2CH IRPlus Transmission|IRPlus Transmission|IRPlus Transmission - Additional number of channels)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

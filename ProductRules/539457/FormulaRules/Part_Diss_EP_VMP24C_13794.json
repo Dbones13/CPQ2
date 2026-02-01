@@ -1,0 +1,11 @@
+{
+    "id": 13794,
+    "condition": "[NOT]([OR]([GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX01)*>,0),[GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX03)*>,0))))",
+    "name": "Part_Diss_EP_VMP24C",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VMP24C)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26324,
+    "condition": "[NOT]([IF]([EQ](<*VALUE(Server Mounting)*>,Tower (Desk))){[AND]([EQ](<*VALUE(Server Node Type_desk)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Node Supplier_server)*>,Honeywell),[EQ](<*VALUE(Trusted Platform Module1)*>,Yes))}{0}[ENDIF])",
+    "name": "MZ-PCST01DeskMountServer_PartDelete",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCST01)*><* DoResetAtt *>",
+    "description": "MZ-PCST01",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

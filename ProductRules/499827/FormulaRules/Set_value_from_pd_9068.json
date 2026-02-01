@@ -1,0 +1,11 @@
+{
+    "id": 9068,
+    "condition": "1",
+    "name": "Set value from pd",
+    "action": "<*ASSIGNVALUE(labor_parameter_pd:<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Project Duration in weeks).Get )*>)*>",
+    "description": "Project Duration (in weeks)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

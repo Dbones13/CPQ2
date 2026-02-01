@@ -1,0 +1,11 @@
+{
+    "id": 19508,
+    "condition": "[OR]([NOT](<*ATTDEF(Exp HS Select LAN Type)*>),<* IsNull(<*VALUE(Exp HS Select LAN Type)*>,1) *>)",
+    "name": "Set Default for  LAN Type",
+    "action": "<*SELECTVALUE(Exp HS Select LAN Type:Single_LAN)*>",
+    "description": "CXCPQ-42953",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25724,
+    "condition": "[GT](<*VALUE(Exp Peer Control Data Interface License(0-256))*>,49)",
+    "name": "Exp_Peer_Cntrl_Add_TCPCDX50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TC-PCDX50)*>[IF]([GT](<*eval(Int(Fix(<*VALUE(Exp Peer Control Data Interface License(0-256))*>/50)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-PCDX50, <*eval(Int(Fix(<*VALUE(Exp Peer Control Data Interface License(0-256))*>/50)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add TC-PCDX50",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

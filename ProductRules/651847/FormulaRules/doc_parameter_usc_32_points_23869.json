@@ -1,0 +1,11 @@
+{
+    "id": 23869,
+    "condition": "[AND]([EQ](<*CTX( Container(SM_RG_ATEX Compliance_and_Enclosure_Type_Cont).Row(1).Column(Enclosure_Type).Get )*>,Universal Safety Cab-1.3M),[OR]([AND]([NEQ](<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Row(1).Column(Specify_Identifier_Modifier_for_SM_SC_Universal_Safety_Cabinet).Get )*>,Yes),[IN](<*CTX( Container(SM_SC_Universal_Safety_Cab_1_3M_Details_cont).Row(1).Column(PUIO_Count).Get )*><*CTX( Container(SM_SC_Universal_Safety_Cab_1_3M_Details_cont).Row(1).Column(PDIO_Count).Get )*>,AX,XA)),[AND]([EQ](<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Row(1).Column(Specify_Identifier_Modifier_for_SM_SC_Universal_Safety_Cabinet).Get )*>,Yes),[IN](<*Eval(Mid(\"<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Row(1).Column(Identifier_Modifier_for_SM_SC_Universal_Safety_Cabinet).Get )*>\",11,3))*>,A-X,X-A))))",
+    "name": "doc_parameter_usc_32_points",
+    "action": "<*ASSIGNVALUE(doc_parameter_usc_32_points:<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Row(1).Column(Number_of_SM_SC_1.3M_Universal_Safety_Cabinets_(0-63)).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

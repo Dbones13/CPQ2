@@ -1,0 +1,11 @@
+{
+    "id": 20602,
+    "condition": "[AND]([EQ](<*VALUE(SS_Experion_Backup_&_Restore_Release)*>,R520),[EQ](<*VALUE(SS_Experion_Base_Media_Delivery)*>,Physical Delivery))",
+    "name": "Part_A_EP_BRM520",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:EP-BRM520)*><*SETATVQTY(Simulation_Bom_parts:EP-BRM520,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15050,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Client Interface Home Site",
+    "action": "<*ASSIGNVALUE(Client Interface Home Site:<* Eval(0<*VALUE(MSE_Number_Client_Meetings_Home_Site_Online)*>*2) *>)*>",
+    "description": "MH*2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

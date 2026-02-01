@@ -1,0 +1,11 @@
+{
+    "id": 20217,
+    "condition": "[GT](<*VALUE(DVM_Mobile_Client_Connections)*>,0)",
+    "name": "EP-DVMMOB_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMMOB)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMMOB, <*VALUE(DVM_Mobile_Client_Connections)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

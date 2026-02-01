@@ -1,0 +1,11 @@
+{
+    "id": 10743,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Include_T_L_to_Honeywell_scope)*>,))",
+    "name": "TPA_Default_Include_T_L_to_Honeywell_scope",
+    "action": "<*SELECTVALUE(TPA_Include_T_L_to_Honeywell_scope:Meetings and on-site activities)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

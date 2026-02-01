@@ -1,0 +1,11 @@
+{
+    "id": 26298,
+    "condition": "[EQ](<*VALUE(Remote Peripheral Solution Type (RPS) - (Flex Server -Cabinet))*>,)",
+    "name": "Default_Rack_Mount_Remote",
+    "action": "<*SELECTVALUE(Remote Peripheral Solution Type (RPS) - (Flex Server -Cabinet):None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

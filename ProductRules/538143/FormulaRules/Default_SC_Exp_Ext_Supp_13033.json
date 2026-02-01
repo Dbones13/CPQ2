@@ -1,0 +1,11 @@
+{
+    "id": 13033,
+    "condition": "[EQ](<*VALUE(SC_Experion_Extended_Support_RQUP)*>,)",
+    "name": "Default_SC_Exp_Ext_Supp",
+    "action": "<*ASSIGNVALUE(SC_Experion_Extended_Support_RQUP:Experion Extended Support - RQUP only)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

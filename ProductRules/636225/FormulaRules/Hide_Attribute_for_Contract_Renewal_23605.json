@@ -1,0 +1,11 @@
+{
+    "id": 23605,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_Attribute_for_Contract_Renewal",
+    "action": "<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(Unit Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(List Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

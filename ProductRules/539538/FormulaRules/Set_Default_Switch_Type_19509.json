@@ -1,0 +1,11 @@
+{
+    "id": 19509,
+    "condition": "[OR]([NOT](<*ATTDEF(Exp HS Select Honeywell supplied switch type)*>),<* IsNull(<*VALUE(Exp HS Select Honeywell supplied switch type)*>,1) *>)",
+    "name": "Set Default Switch Type",
+    "action": "<*SELECTVALUE(Exp HS Select Honeywell supplied switch type:C9200_NoRouter)*>",
+    "description": "CXCPQ-42953",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

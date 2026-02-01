@@ -1,0 +1,11 @@
+{
+    "id": 18967,
+    "condition": "[NEQ](<*VALUE(MX_CD_Calendizer_XP_Pneumatic_Retraction)*>,Yes)",
+    "name": "CD_Part_Dis_94022",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:94022)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26294,
+    "condition": "[EQ](<*VALUE(Display_Supplier)*>,)",
+    "name": "Default_Desk_Mount_DisplaySupplier",
+    "action": "<*SELECTVALUE(Display_Supplier:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

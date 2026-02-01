@@ -1,0 +1,11 @@
+{
+    "id": 18173,
+    "condition": "[IN](<*VALUE(MXP_Scanner_Type)*>,3-5080-00,3-5080-23,3-5080-24,3-5080-43)",
+    "name": "Show_MXP_Radiation_lamp_Basis_Weight|Radiation_lamp_BW_X_Ray",
+    "action": "<*ALLOWATTRIBUTES(MXP_Radiation_lamp_Basis_Weight,MXP_Radiation_lamp_BW_X_Ray)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

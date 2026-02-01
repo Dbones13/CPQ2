@@ -1,0 +1,11 @@
+{
+    "id": 17845,
+    "condition": "[NOT]([GT](<*CTX( Container(Allen-Bradley/Siemens Interfaces).Row(1).Column(Nodes).Get )*>,0))",
+    "name": "PS_Allen Bradley Interface_EP-IABRI1_Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-IABRI1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9063,
+    "condition": "1",
+    "name": "Set value for sc",
+    "action": "<*ASSIGNVALUE(labor_parameter_sc:<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Number of Subcontracts).Get )*>)*>",
+    "description": "Number of Subcontracts",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26505,
+    "condition": "1",
+    "name": "Show_51305482-202",
+    "action": "[IF]([GT](<*VALUE(Tree B 2m cable (0-1000))*>,0)){<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51305482-202)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:51305482-202,<*VALUE(Tree B 2m cable (0-1000))*>)*><* DoResetAtt *>}[ENDIF]",
+    "description": "CXCPQ-38367",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

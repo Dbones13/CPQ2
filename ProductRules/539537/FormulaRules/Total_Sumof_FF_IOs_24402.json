@@ -1,0 +1,11 @@
+{
+    "id": 24402,
+    "condition": "1",
+    "name": "Total_Sumof_FF_IOs",
+    "action": "<*ASSIGNVALUE(Total_Numof_FF_Segments:<* Eval(0<*CTX ( Container(SerC_CG_FIM_FF_IO_Cont).Sum(AI) )*>+0<*CTX ( Container(SerC_CG_FIM_FF_IO_Cont).Sum(AO) )*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Saratha  Gnanamani"
+}

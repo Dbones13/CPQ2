@@ -1,0 +1,11 @@
+{
+    "id": 21834,
+    "condition": "[EQ](<*VALUE(FDM Remote Comm Interface (RCI) License (0-25))*>,)",
+    "name": "Default_FDM Remote Communication Interface (RCI) License (0-25)",
+    "action": "<*ASSIGNVALUE(FDM Remote Comm Interface (RCI) License (0-25):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

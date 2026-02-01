@@ -1,0 +1,11 @@
+{
+    "id": 14719,
+    "condition": "[EQ](<*VALUE(MX_SI_Q5000_server)*>,Yes)",
+    "name": "MX_Part_Q8620_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8620-00)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8620-00, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

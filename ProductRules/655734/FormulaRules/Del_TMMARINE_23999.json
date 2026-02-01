@@ -1,0 +1,11 @@
+{
+    "id": 23999,
+    "condition": "[NOT](<*ISSELECTED(Terminal_Mode_of_Transport.Marine loading/unloading)*>)",
+    "name": "Del_TM-MARINE",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-MARINE)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

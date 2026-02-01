@@ -1,0 +1,11 @@
+{
+    "id": 26115,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),<*ISSELECTED(Orion Console Membrane KB Type.IKB non USB)*>,<*ISSELECTED(Node Supplier.Honeywell)*>))",
+    "name": "TP-DIKBNA-100_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-DIKBNA-100)*><* DoResetAtt *>",
+    "description": "CXCPQ-38914",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25846,
+    "condition": "[EQ](<*VALUE(DMS Console Station Qty 0_20)*>,)",
+    "name": "DMS Console Station Qty 0_20 default",
+    "action": "<*ASSIGNVALUE(DMS Console Station Qty 0_20:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9144,
+    "condition": "[NEQ](<*VALUE(Trace_Software_What_is_the_scope)*>,New License)",
+    "name": "Hide_Order_Type",
+    "action": "<*DISALLOWATTRIBUTES(Trace_Software_Order_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26282,
+    "condition": "[EQ](<*VALUE(Additional Flex Station Licenses)*>,)",
+    "name": "Default_Additional_Flex_Station_Licenses",
+    "action": "<*ASSIGNVALUE(Additional Flex Station Licenses:0)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

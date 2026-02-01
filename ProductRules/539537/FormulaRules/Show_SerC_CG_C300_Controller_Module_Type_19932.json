@@ -1,0 +1,11 @@
+{
+    "id": 19932,
+    "condition": "[IN](<*VALUE(Experion_PKS_Software_Release)*>,R530,R520)",
+    "name": "Show_SerC_CG_C300_Controller_Module_Type",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_C300_Controller_Module_Type)*>",
+    "description": "#CXCPQ-44672\n#CXCPQ-110799: Merged R530 from other rules",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

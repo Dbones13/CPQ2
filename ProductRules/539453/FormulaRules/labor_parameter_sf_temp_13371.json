@@ -1,0 +1,11 @@
+{
+    "id": 13371,
+    "condition": "1",
+    "name": "labor_parameter_sf_temp",
+    "action": "<*ASSIGNVALUE(labor_parameter_sf_temp:[IF](<*ISSELECTED(SafeView Factor (Max quanity of Monitors in One Station).Single)*>){0.5}{[IF](<*ISSELECTED(SafeView Factor (Max quanity of Monitors in One Station).Dual)*>){1}{2}[ENDIF]}[ENDIF])*>",
+    "description": "f svf = Single, SF = 0.5,\nelse if svf = Dual, SF = 1\nelse SF = 2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

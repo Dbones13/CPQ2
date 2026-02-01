@@ -1,0 +1,136 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info">
+      <span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")
+    </div>
+  </div>
+
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+  <!-- ko foreach: attributes.filterByProperty('name', 
+    "AR_HCI_PRODUCTIVITY", 
+    "HCI_PHD_Execution_Year", 
+    "AR_HCI_FO_ENG_Executioncountry", 
+    "HCI_PHD_GES_Location", 
+    "HCI_PHD_FO_GES_Eng_Roles", 
+    "HCI_ReCalculate",
+	"HCI_LoadLabor",
+    "AR_HCI_Delete_Button", 
+    "AR_HCI_SELECTALL") -->
+
+  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3" data-bind="attr: { id: id }, css: {
+    'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container',
+    'full-width-attribute': isWholeRow() && dataType() !== 'Container'
+  }">
+    <!-- ko template: { name: $root.getAttributeTemplate } -->
+    <!-- /ko -->
+  </div>
+
+  <!-- /ko -->
+
+  <!-- Section: PHD - Engineering -->
+  <!-- ko if: attributes().some(attr => [ "HCI_PHD_EngineeringLabour"].includes(attr.name())) -->
+  <div class="row col-xs-12 swagger">
+    <div id="phd-eng">
+      <div class="swagger-header" onclick="toggleConfigSection(event, '#phd-eng')">
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'Uniformance Insight Labor' -->
+        <a href="#">Uniformance Insight Labor - Engineering</a>
+				<!-- /ko -->
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'PHD Labor' -->
+        <a href="#">PHD - Engineering</a>
+				<!-- /ko -->
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'AFM Labor' -->
+        <a href="#">AFM - Engineering</a>
+				<!-- /ko -->
+        <a id="phd-eng-href" href="#" class="swagger-toggle">&#xe066;</a>
+      </div>
+      <div id="phd-eng-content">
+        <!-- ko foreach: attributes.filterByProperty('name', "PHD - Engineering", "HCI_PHD_EngineeringLabour") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+        </div>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+
+  <!-- Section: Project Lead Engineering + HCI_PHD_ProjectManagement2 + HCI_PHD_Calc_PM_LE -->
+  <!-- ko if: attributes().some(attr => ["HCI_PHD_Calc_PM_LE", "HCI_PHD_ProjectManagement2"].includes(attr.name())) -->
+  <div class="row col-xs-12 swagger">
+    <div id="phd-pm-lead">
+      <div class="swagger-header" onclick="toggleConfigSection(event, '#phd-pm-lead')">
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'PHD Labor' -->
+        <a href="#">PHD - Project Lead Engineering</a>
+				<!-- /ko -->
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'Uniformance Insight Labor' -->
+        <a href="#">Uniformance Insight Labor - Project Lead Engineering</a>
+				<!-- /ko -->
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'AFM Labor' -->
+        <a href="#">AFM - Project Lead Engineering</a>
+				<!-- /ko -->
+        <a id="phd-pm-lead-href" href="#" class="swagger-toggle">&#xe066;</a>
+      </div>
+      <div id="phd-pm-lead-content">
+        <!-- ko foreach: attributes.filterByProperty('name', "HCI_PHD_Calc_PM_LE", "HCI_PHD_ProjectManagement2") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+        </div>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+
+  <!-- Section: PHD - Project Management -->
+  <!-- ko if: attributes().some(attr => ["HCI_PHD_ProjectManagement"].includes(attr.name())) -->
+  <div class="row col-xs-12 swagger">
+    <div id="phd-pm">
+      <div class="swagger-header" onclick="toggleConfigSection(event, '#phd-pm')">
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'PHD Labor' -->
+        <a href="#">PHD - Project Management</a>
+				<!-- /ko -->
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'Uniformance Insight Labor' -->
+        <a href="#">Uniformance Insight Labor - Project Management</a>
+				<!-- /ko -->
+				<!-- ko if:cpq.models.configurator.responderModule.name() == 'AFM Labor' -->
+        <a href="#">AFM - Project Management</a>
+				<!-- /ko -->
+        <a id="phd-pm-href" href="#" class="swagger-toggle">&#xe066;</a>
+      </div>
+      <div id="phd-pm-content">
+        <!-- ko foreach: attributes.filterByProperty('name', "HCI_PHD_ProjectManagement") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+        </div>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+
+  <!-- Section: Additional Custom Deliverables -->
+  <!-- ko if: attributes().some(attr => ["HCI_PHD_AdditionalDeliverables"].includes(attr.name())) -->
+  <div class="row col-xs-12 swagger">
+    <div id="phd-additional">
+      <div class="swagger-header" onclick="toggleConfigSection(event, '#phd-additional')">
+        <a href="#">Additional Custom Deliverables</a>
+        <a id="phd-additional-href" href="#" class="swagger-toggle">&#xe066;</a>
+      </div>
+      <div id="phd-additional-content">
+        <!-- ko foreach: attributes.filterByProperty('name', "HCI_PHD_AdditionalDeliverables") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+          <!-- ko template: { name: $root.getAttributeTemplate } -->
+          <!-- /ko -->
+        </div>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+</div>

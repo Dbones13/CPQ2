@@ -1,0 +1,11 @@
+{
+    "id": 14743,
+    "condition": "[AND]([EQ](<*VALUE(MX_Switch_type)*>,SWITCH, HP2930, ROUTING, 24PORT),[NEQ](<*VALUE(MX_Do_you_need_FTE_switches)*>,No))",
+    "name": "MX_Part_SH_2930R4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:SH-2930R4)*><*SETATVQTY(MX_Platform_Bom_Parts:SH-2930R4,<*VALUE(MX_Do_you_need_FTE_switches)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

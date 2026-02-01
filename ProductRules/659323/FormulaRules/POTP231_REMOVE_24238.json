@@ -1,0 +1,11 @@
+{
+    "id": 24238,
+    "condition": "[OR]([NEQ](<*VALUE(ARO_Honeywell_to_Supply_the_hardware)*>,Yes),[NEQ](<*VALUE(RESS_Honeywell_to_Supply_the_hardware)*>,Yes),[AND]([LT](<*VALUE(ARO_OTP_hardware_&_software_required)*>,1),[LT](<*VALUE(RESS_OTP_hardware_&_software_required)*>,1)))",
+    "name": "P-OTP231_REMOVE",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:TP-OTP231)*><* DoResetAtt *>",
+    "description": "CXCPQ-50112",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

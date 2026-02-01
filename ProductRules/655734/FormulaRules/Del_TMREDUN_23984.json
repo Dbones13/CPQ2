@@ -1,0 +1,11 @@
+{
+    "id": 23984,
+    "condition": "[NEQ](<*VALUE(Terminal_Manager_redundancy?)*>,Redundant)",
+    "name": "Del_TM-REDUN",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-REDUN)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

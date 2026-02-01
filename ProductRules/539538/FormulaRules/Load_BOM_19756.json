@@ -1,0 +1,11 @@
+{
+    "id": 19756,
+    "condition": "<*ATTDEF(Experion_HS_PART_SUMMARY)*>",
+    "name": "Load BOM",
+    "action": "<*CTX( Container(Experion_HS_PartSummary_Cont).LoadKeys(Partnumber).Load(select '<*Eval(Replace(\"<*VALUE(Experion_HS_PART_SUMMARY)*>\",\", \",\"' as Partnumber UNION SELECT '\"))*>' as Partnumber   ) )*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

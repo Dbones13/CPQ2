@@ -1,0 +1,11 @@
+{
+    "id": 13228,
+    "condition": "1",
+    "name": "Preselected",
+    "action": "[IF]([EQ](<*VALUE(ELCN_Services_for_NG_Switch_Configuration)*>,)){<*RESETATTRIBUTE(ELCN_Services_for_NG_Switch_Configuration)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Select_Switch_configuration_required)*>,)){<*SELECTVALUE(ELCN_Select_Switch_configuration_required:None required from Honeywell)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Cabinet_Depth_Size)*>,)){<*SELECTVALUE(ELCN_Cabinet_Depth_Size:800 cm)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Cabinet_Door_Type)*>,)){<*SELECTVALUE(ELCN_Cabinet_Door_Type:Standard)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Cabinet_Keylock_Type)*>,)){<*SELECTVALUE(ELCN_Cabinet_Keylock_Type:Standard)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Cabinet_Hinge_Type)*>,)){<*SELECTVALUE(ELCN_Cabinet_Hinge_Type:130 Degrees)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Cabinet_Thermostat_Required)*>,)){<*SELECTVALUE(ELCN_Cabinet_Thermostat_Required:No)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Cabinet_Base_Required)*>,)){<*SELECTVALUE(ELCN_Cabinet_Base_Required:No)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ELCN_Cabinet_Color)*>,)){<*SELECTVALUE(ELCN_Cabinet_Color:Gray-RAL7035)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

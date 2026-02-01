@@ -1,0 +1,11 @@
+{
+    "id": 26490,
+    "condition": "[AND]([GT](<*VALUE(Displays_Flex Server in Desk0_2_2)*>,0),[EQ](<*VALUE(Display_Size_FlexServer)*>,55 inch NTS))",
+    "name": "hide_flex_server",
+    "action": "<*DISALLOWVALUES(Multi_WindowSupportFlex_Server:Yes)*>",
+    "description": "hide yes value for multi window support flex server",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

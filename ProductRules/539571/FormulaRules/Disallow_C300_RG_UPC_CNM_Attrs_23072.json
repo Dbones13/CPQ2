@@ -1,0 +1,11 @@
+{
+    "id": 23072,
+    "condition": "[OR]([NOT](<*ATTSEL(SerC_IO_Mounting_Solution)*>),<*IFANYVALUE(C300_RG_UPC_Specify_Id_Modifier:YES,SerC_IO_Mounting_Solution:Cabinet,SerC_IO_Mounting_Solution:Mounting Panel,C300_RG_UPC_CN100_IO_HIVE:N)*>)",
+    "name": "Disallow_C300_RG_UPC_CNM_Attrs",
+    "action": "<*DISALLOWATTRIBUTES(C300_RG_UPC_Controlled_IO_License_Count,C300_RG_UPC_CNM,C300_RG_UPC_CNM_Exp_Module,C300_RG_UPC_CNM_Uplink_SFP_Type)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

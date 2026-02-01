@@ -1,0 +1,11 @@
+{
+    "id": 13822,
+    "condition": "[AND]([EQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(Implementation_Methodology).GetDisplayValue )*>,Standard Build Estimate),[NEQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,None))",
+    "name": "SSE Software Detail Design Specification 2.3",
+    "action": "<*ASSIGNVALUE(SSE Software Detail Design Specification 2.0:23.76)*>",
+    "description": "If IM selection is Standard Build and GES Location =!None we use 24*0.9*1.1",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

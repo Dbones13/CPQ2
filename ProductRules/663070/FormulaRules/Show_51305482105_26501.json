@@ -1,0 +1,11 @@
+{
+    "id": 26501,
+    "condition": "1",
+    "name": "Show_51305482-105",
+    "action": "[IF]([GT](<*VALUE(Tree A 5m cable (0-1000))*>,0)){<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51305482-105)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:51305482-105,<*VALUE(Tree A 5m cable (0-1000))*>)*><* DoResetAtt *>}[ENDIF]",
+    "description": "CXCPQ-38340",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26461,
+    "condition": "[OR]([GT](<*CTX ( Container(Exp_Ent_Grp_Part_Summary_Cont).Rows.GetCount )*>,0),[GT](<*VALUE(Network_Cabinet_Qty)*>,0))",
+    "name": "Labor qty Network and Server Cabinet Count",
+    "action": "<*ASSIGNVALUE(Network and Server Cabinet Count:<*EVAL(0<*VALUE(Network_Cabinet_Qty)*>+0<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-100)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-200)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-100)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-200)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-103)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-203)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-103)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-203)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-102)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-202)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-102)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-202)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-101)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-201)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-101)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C8LCB1-201)*>)*>)*>",
+    "description": "",
+    "rank": "2001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12973,
+    "condition": "[EQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,)",
+    "name": "SC_Labor_ResetBlock",
+    "action": "<*RESETATTRIBUTE(SC_Labor_Block_Discount)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "20/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19979,
+    "condition": "<*ISSELECTED(SerC_CG_C300_Controller_Module_Type.C300(PCNT02))*>",
+    "name": "Hide Controller Required values",
+    "action": "<*DISALLOWVALUES(SerC_CG_Type_of_Controller_Required:Control HIVE - Physical,SerC_CG_Type_of_Controller_Required:Control HIVE - Virtual)*>",
+    "description": "#CXCPQ-50260",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13217,
+    "condition": "[AND]([EQ](<*CTX ( Container(TPA_Third_Party_Items_Cont).Rows.GetCount )*>,0),[NEQ](<*VALUE(Scope)*>,LABOR))",
+    "name": "LOADTPCONT",
+    "action": "<*CTX( Container(TPA_Third_Party_Items_Cont).Load(SELECT UI_Name as WriteIn ,Unit_Price,Unit_Cost,Custom_Cal as Calculated_Qty, WriteIn_Type FROM TPA_THIRD_PARTY_ITEMS_2 ) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13523,
+    "condition": "[EQ](<*CTX( Container(Virtualization_Third_party_items).Rows.GetCount )*>,0)",
+    "name": "Third_Party_Rows",
+    "action": "<*CTX( Container(Virtualization_Third_party_items).Rows.Add(2) )*>\n\n<*CTX( Container(Virtualization_Third_party_items).Row(1).Column(third party).Set(Thin Client cable and adapters <i class='fa fa-info-circle' style='color: #106cc6' title=\"This must be procured locally through sourcing department - quote currency\" ></i>) )*>\n\n<*CTX( Container(Virtualization_Third_party_items).Row(2).Column(third party).Set(Additional transceivers or transceivers for fiber media <i class='fa fa-info-circle' style='color: #106cc6' title=\"This must be procured locally through sourcing department - quote currency\" ></i>) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

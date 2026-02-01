@@ -1,0 +1,11 @@
+{
+    "id": 25575,
+    "condition": "[LEQ](<*VALUE(Console Station Extension Qty  (0-15))*>,0)",
+    "name": "Console Station Extension Qty gt 0",
+    "action": "<*DISALLOWATTRIBUTES(Console Station Extension Hardware Selection)*>",
+    "description": "CXCPQ-34882 - 5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

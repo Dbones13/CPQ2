@@ -1,0 +1,11 @@
+{
+    "id": 3334,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "assign value system number",
+    "action": "<*ASSIGNVALUE(Exp_MSID_System_Number:<*CTX ( Container(CE_General_Inputs_Cont).Row(1).Column(CE_System_Number).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

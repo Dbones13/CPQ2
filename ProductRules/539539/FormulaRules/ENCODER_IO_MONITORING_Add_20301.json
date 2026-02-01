@@ -1,0 +1,11 @@
+{
+    "id": 20301,
+    "condition": "[EQ](<*VALUE(DVM_Encoder_I/O_Monitoring)*>,Yes)",
+    "name": "ENCODER I/O MONITORING_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMEIO)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMEIO,1)*><* DoResetAtt *",
+    "description": "CXCPQ-45714",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

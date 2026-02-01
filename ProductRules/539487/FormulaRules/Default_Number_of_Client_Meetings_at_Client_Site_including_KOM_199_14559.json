@@ -1,0 +1,11 @@
+{
+    "id": 14559,
+    "condition": "[EQ](<*VALUE(PRMS Number of Client Meetings at Client Site)*>,)",
+    "name": "Default Number of Client Meetings at Client Site (including KOM) (1-99)",
+    "action": "<*ASSIGNVALUE(PRMS Number of Client Meetings at Client Site:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

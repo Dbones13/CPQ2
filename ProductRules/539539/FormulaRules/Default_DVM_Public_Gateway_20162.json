@@ -1,0 +1,11 @@
+{
+    "id": 20162,
+    "condition": "[EQ](<*VALUE(DVM_Public_Gateway)*>,)",
+    "name": "Default_DVM_Public_Gateway",
+    "action": "<*SELECTVALUE(DVM_Public_Gateway:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

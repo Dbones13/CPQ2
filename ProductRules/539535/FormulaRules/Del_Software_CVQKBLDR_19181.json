@@ -1,0 +1,11 @@
+{
+    "id": 19181,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_Quick_Builder)*>,0))",
+    "name": "Del_Software_CV-QKBLDR",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-QKBLDR)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23589,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Display_Size)*>,55 inch NTS)",
+    "name": "SS_HideOption_MW_55inch_Orion",
+    "action": "<*DISALLOWVALUES(SS_Multi_Window_Support_Option_Required_orion:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

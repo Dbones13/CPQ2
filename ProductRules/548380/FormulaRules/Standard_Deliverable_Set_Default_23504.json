@@ -1,0 +1,11 @@
+{
+    "id": 23504,
+    "condition": "[NOT](<*ATTDEF(DVM_Additional_Project_Deliverables)*>)",
+    "name": "Standard_Deliverable_Set_Default",
+    "action": "<*SELECTVALUE(DVM_Additional_Project_Deliverables:PEP-PQP-HSE-Org Chart-Schedule)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

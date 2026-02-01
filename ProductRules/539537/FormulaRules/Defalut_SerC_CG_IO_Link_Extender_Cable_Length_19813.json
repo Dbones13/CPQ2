@@ -1,0 +1,11 @@
+{
+    "id": 19813,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Link_Extender_Cable_Length)*>,)",
+    "name": "Defalut_SerC_CG_IO_Link_Extender_Cable_Length",
+    "action": "<*SELECTVALUE(SerC_CG_IO_Link_Extender_Cable_Length:25 in)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

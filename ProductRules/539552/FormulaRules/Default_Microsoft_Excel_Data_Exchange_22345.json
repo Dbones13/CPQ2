@@ -1,0 +1,11 @@
+{
+    "id": 22345,
+    "condition": "[EQ](<*VALUE(ESDC_Microsoft_Excel_Data_Exchange)*>,)",
+    "name": "Default_Microsoft_Excel_Data_Exchange",
+    "action": "<*ASSIGNVALUE(ESDC_Microsoft_Excel_Data_Exchange:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

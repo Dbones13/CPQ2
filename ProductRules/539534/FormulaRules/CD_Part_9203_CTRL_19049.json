@@ -1,0 +1,11 @@
+{
+    "id": 19049,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Stand-Alone_Controller_Pressure_Temperature_Flow_display)*>,Yes))",
+    "name": "CD_Part_9203_CTRL",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9203-CTRL)*><*SETATVQTY(MX_CD_Bom_Parts:9203-CTRL, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

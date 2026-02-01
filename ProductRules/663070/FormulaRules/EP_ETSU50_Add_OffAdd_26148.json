@@ -1,0 +1,11 @@
+{
+    "id": 26148,
+    "condition": "[GT](<*VALUE(Off_Process_Base_Additional_License)*>,49)",
+    "name": "EP_ETSU50_Add_OffAdd",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-ETSU50)*>[IF]([GT](<*eval(Int(Fix(<*VALUE(Off_Process_Base_Additional_License)*>/50)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ETSU50, <*eval(Int(Fix(<*VALUE(Off_Process_Base_Additional_License)*>/50)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP-ETSU50",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

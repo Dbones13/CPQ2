@@ -1,0 +1,11 @@
+{
+    "id": 10675,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Select_Thin_Client_monitor_type)*>,)",
+    "name": "QCS_Mig_Default_Thin_Client_monitor_type",
+    "action": "<*SELECTVALUE(QCS_Mig_Select_Thin_Client_monitor_type:Monitor not required)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

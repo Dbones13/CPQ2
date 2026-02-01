@@ -1,0 +1,11 @@
+{
+    "id": 18927,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60L Standard),[EQ](<*VALUE(MX_CD_Clamping_Assembly)*>,Yes),[GEQ](<*VALUE(MX_CD_Number_of_zones)*>,1))",
+    "name": "CD_Part_9107_Z",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9107-Z)*><*SETATVQTY(MX_CD_Bom_Parts:9107-Z, <*VALUE(MX_CD_Number_of_zones)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

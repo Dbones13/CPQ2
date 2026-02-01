@@ -1,0 +1,11 @@
+{
+    "id": 11945,
+    "condition": "[EQ](<*VALUE(FGC_ISA_Type_Datasheets_Required_?)*>,)",
+    "name": "Default_Number of ISA_Type_Datasheets_Required_?",
+    "action": "<*SELECTVALUE(FGC_ISA_Type_Datasheets_Required_?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

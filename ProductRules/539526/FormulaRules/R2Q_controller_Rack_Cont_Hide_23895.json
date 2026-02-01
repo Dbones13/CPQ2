@@ -1,0 +1,11 @@
+{
+    "id": 23895,
+    "condition": "[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes)",
+    "name": "R2Q controller Rack Cont Hide",
+    "action": "<*DISALLOWATTRIBUTES(PLC_RG_Controller_Rack_Cont)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "10/09/25",
+    "modifiedBy": "Lahu Giri"
+}

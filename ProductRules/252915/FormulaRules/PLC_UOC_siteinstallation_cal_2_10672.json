@@ -1,0 +1,11 @@
+{
+    "id": 10672,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "PLC_UOC_siteinstallation_cal_2",
+    "action": "<*ASSIGNVALUE(PLC_UOC_siteinstallation_cal_2:<*Eval([IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_16)*>,Yes)){(((0<*VALUE(PLC_UOC_labor_parameter_var_7)*>+0<*VALUE(PLC_UOC_labor_parameter_var_8)*>+0<*VALUE(PLC_UOC_labor_parameter_var_31)*>)*5.1)+(0<*VALUE(PLC_UOC_labor_parameter_var_13)*>*9.5)+4)+[IF]([GT](0<*VALUE(PLC_UOC_labor_parameter_var_14)*>,0)){((0<*VALUE(PLC_UOC_labor_parameter_var_7)*>*1.5)+(<*VALUE(PLC_UOC_labor_parameter_var_8)*>*2))}{0}[ENDIF]+[IF]([GT](0<*VALUE(PLC_UOC_labor_parameter_var_14)*>,0)){0<*VALUE(PLC_UOC_labor_parameter_var_20)*>*0.2+(0<*VALUE(PLC_UOC_labor_parameter_var_35)*>+0<*VALUE(PLC_UOC_labor_parameter_var_34)*>)*0.1+0<*VALUE(PLC_UOC_labor_parameter_var_36)*>*0.2+0<*VALUE(PLC_UOC_labor_parameter_var_15)*>*2}{0}[ENDIF]+(0<*VALUE(PLC_UOC_labor_parameter_var_34)*>*0.5)+0<*VALUE(PLC_UOC_labor_parameter_var_35)*>+((0<*VALUE(PLC_UOC_labor_parameter_var_39)*>*0.1)+(0<*VALUE(PLC_UOC_labor_parameter_var_40)*>*0.15)+(0<*VALUE(PLC_UOC_labor_parameter_var_41)*>*0.1)+(0<*VALUE(PLC_UOC_labor_parameter_var_42)*>*0.15)+(0<*VALUE(PLC_UOC_labor_parameter_var_43)*>*0.2))+0<*VALUE(PLC_UOC_labor_parameter_var_36)*>+0<*VALUE(PLC_UOC_labor_parameter_var_37)*>}{8}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

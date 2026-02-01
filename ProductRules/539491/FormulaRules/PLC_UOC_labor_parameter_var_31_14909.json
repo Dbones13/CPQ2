@@ -1,0 +1,11 @@
+{
+    "id": 14909,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_31",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_31:<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(PLC_UOC_Labor_var_31_validation) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

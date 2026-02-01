@@ -1,0 +1,183 @@
+<script type="text/html" id="DropDownTemplate">
+	<!-- ko template: { name: 'LabelTemplate' } -->
+	<!-- /ko -->
+	<div class="fiori3-input-group fiori3-select-group DropdownField" data-bind="style: { width: ['SC_Pricing_Escalation','SC_Parts_Replacement_Pricing_Escalation','SC_WEP_HIF_Pricing_Escalation','SC_WEP_IFS_Pricing_Escalation','SC_WEP_Halo_Pricing_Escalation','SC_WEP_Training_Pricing_Escalation','SC_WEP_TNA_Pricing_Escalation','SC_WEP_OM_Pricing_Escalation','SC_WEP_OCP_Pricing_Escalation','SC_Is_Scope_Change'].includes(name()) ? '40%' : '50%'}">
+			<!-- ko if: $('#IsSAPProduct').text() == 'true' -->
+					<select
+					data-bind="options: values, optionsText:function(item) { if(item.valueCode && item.valueCode != item.displayValue ) { return '[' + item.valueCode + '] '+ item.displayValueWithPrices } else {return item.displayValueWithPrices}} , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"
+					class="form-control" ></select>
+			  					  
+			<!-- /ko -->
+			<!-- ko if: $('#IsSAPProduct').text() != 'true' -->
+					<!-- ko if: name() == 'New_Expansion_Project_Category' -->
+					<select
+							data-bind="options: values.filter(function(option){return typeof option.valueCode !== 'undefined'}), optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"
+							class="form-control"></select>
+					<!-- /ko -->
+					<!-- ko ifnot: name() == 'New_Expansion_Project_Category' -->
+							<!-- ko if: ["MSID_GES_Location"].includes(name()) -->
+									<select data-bind="options: values.filter(function(option){return typeof option.valueCode !== 'undefined'}), optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control" ></select>
+							<!-- /ko -->
+							<!-- ko if: ["Sell Price Strategy"].includes(name()) -->
+								<select data-bind="options: values.filter(function(option){return typeof option.valueCode !== 'undefined'}), optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control" ></select>
+							<!-- /ko -->
+
+			
+							<!-- ko ifnot: ["MSID_GES_Location", "Sell Price Strategy"].includes(name()) -->
+									<select  data-bind="options: (['MIgration_Scope_Choices','CYBER_Scope_Choices','AR_CyberPrdChoices','R2Q_PRJT_Proposal Language','MSID_Crate_Type','SC_Pricing_Escalation','SC_Parts_Replacement_Pricing_Escalation','SC_WEP_HIF_Pricing_Escalation','SC_WEP_IFS_Pricing_Escalation','SC_WEP_Halo_Pricing_Escalation','SC_WEP_Training_Pricing_Escalation','SC_WEP_TNA_Pricing_Escalation','SC_WEP_OM_Pricing_Escalation','SC_WEP_OCP_Pricing_Escalation','xPM_C300_Cabinet_Doors','xPM_C300_Cabinet_Hinge_Type','xPM_C300_Cabinet_Light_Required','xPM_C300_Cabinet_Thermostat_Required','xPM_C300_Cabinet_Keylock_Type','xPM_C300_Average_Cable_Length','xPM_C300_TDI_Power_Supply_Cable_Length','xPM_C300_Cabinet_Color','xPM_Select_the_migration_scenario','xPM_Customer_requires_Fiber_Communication','xPM_C300_General_redundancy','C200_C300_Cabinet_Base_Required','C200_C300_Cabinet_Doors','C200_C300_Cabinet_Hinge_Type','C200_C300_Cabinet_Keylock_Type','C200_C300_TDI_Power_Supply_Cable_Length','C200_C300_Cabinet_Color','ATT_C200C300CABHTYP','ATT_C200C300CABKEYTYP','ATT_C200C300TDIPWRCAB','ATT_C200C300CABCLR','ATT_C200C300FANVOLT','Power System Vendor','Power System Type', 'C200_C300_Cabinet_Doors_FAO', 'ATT_xPMC300HNGTYP', 'ATT_xPMC300LITREQ', 'ATT_xPMC300THREQ', 'ATT_xPMC300KEYTYP','ATT_xPMC300TDICABLEN', 'ATT_xPMC300CABCLR', 'ATT_C200C300CBR', 'ATT_C200C300FANV', 'ATT_XPMC300PSV','ATT_C200C300PSV','ATT_C200C300PST', 'Graphics_Migration_Alarm_groups_configured?', 'ATT_XPMC300PST','MSID_Crate_Design','Regional_Migration_Principal_Efforts_Required','SC_Is_Scope_Change', 'ELEPIU_Type_of_Experion_System_Connection_Planned',  'ELEPIU_Will_Honeywell_equipment_installation', 'ELEPIU_FEL/Data_gatheringrequired?', 'ELEPIU_Documentation_required?', 'ELEPIU_FAT required?', 'ELEPIU_SAT required?','OPM_is_system_required_Domain_controller_upgrade','OPM_Acceptance_Test_Required','EBR_Additional_Hard_Drive_required','EBR_Additional_Network_Storage_Device_NAS_required','EBR_Site_Acceptance_Test_required','ELCN_Off_Process_Setup_Validation_Required','ELCN_Will_OPM_or_TPS_to_Experion_be_performed','ELCN_Services_for_NG_Switch_Configuration','Graphics_Migration_FAT_required?','Graphics_Migration_Does_the_customer_require_SAT?','Graphics_Migration_Does_require_Operator_Training?','Graphics_Migration_FDS_Required?','Graphics_Migration_DDS_Required?','Graphics_Migration_Gap_Analysis_done?','Graphics_Migration_Select_Vertical_Market','Graphics_Migration_For_GAP_Analysis_project_com','Graphics_Migration_Type_of_Existing_Displays','Graphics_Migration_DCA_IRA_done?','xPM_Factory_Acceptance_Test_Required','MSID_Will_Honeywell_perform_equipment_installation','Orion_Is_Graphics_Scaling_needed','ATT_IS_Migration_Part_Of_ELCN_Migration','TPS_EX_Non_Reduntant_Conversion_ESVT','TPS_EX_Redundant_Conversion_ESVT','TPS_EX_Additional_Server_Stations_Required','TPS_EX_ESVT_Redundant','TPS_EX_Additional_Hard_Drives','TPS_EX_Will_System_be_migrated_virtual_system','TPS_Will_Honeywell_perform_equipment_installation','TPS_EX_Setup_FTE_Network_Infrastructure','TPS_EX_FTE_Switch_Type','FTE_Switch_Type','TPS_EX_Media_Kit_Type','TPS_EX_ESVT_Server_Hardware','TPS_EX_Bundle_Conversion_Existing_Node','TPS_EX_Bundle_Conversion_ESVT_Server_Hardware','TPS_EX_Bundle_Conversion_EST_Station_Mounting_Furn','TCMI_Is_Triconex_SMM_being_migrated_with_xPM_in','C200_Factory_Acceptance_Test_Required','C200_Will_Honeywell_perform_equipment_installation','C200_Data_Gathering_Required','C200_Documentation_Required','C200_C300_Cabinet_Light_Required','C200_C300_Cabinet_Thermostat_Required','C200_C300_Cabinet_Base_Required','ATT_C200C300CABLITREQ','ATT_C200C300CABTHREQ','ATT_C200C300CABBSREQ','EHPM_HART_IO_Commissioning_required?','EHPM_HART_IO_Wiring_termination_type','EHPM_HART_IO_Will_Honeywell_equipment_activities','CB_EC_Is_CB/EC_interfacing_with_DHEB_on_the_system','CB_EC_Does_the_customer_have_all_updated_ILDs','CB_EC_Does_the_Customer_validate_ILDs_by_Honeywell','CB_EC_Does_the_Customer_validate_ILDs_by_Honeywell','CB_EC_Do_u_know_no.of_AI_AO_Regulatory','CB_EC_IsCommonPVsharingtwoormorethantwoCB/EC','CB_EC_Detailed_DDS_required','CB_EC_Is_HotCutover_required','CB_ECWillHoneywellperforminstallationactivities','CB_EC_Data_Gathering_required','FSC_to_SM_ACAD','FSC_to_SM_Factory_Acceptance_Test_required','FSC_to_SM_Has_the_System_Audit_been_performed','FSC_to_SM_IO_Is_Honeywell_executing_the_field_cros','FSC_to_SM_IO_Software_Factory_Acceptance_Test_Requ','FSC_to_SM_IO_Migration_Where_will_IO_be_installed','FSC_to_SM_IO_Has_the_FSC_IO_Audit_been_performed','xPM_C300_FTE_System_already_installed_on_Site','xPM_C300_Is_Honeywell_Providing_FTE_cables','xPM_C300_Data_Gathering_required','xPM_C300_Will_Honeywell_perform_equipment_installa','FDM_Upgrade_Additional_Components','FDM_Upgrade_Do_you_want_to_upgrade_this_FDM','FDM_Upgrade_Is_HW_required_for_this_FDM','FDM_Upgrade_Site_Acceptance_Test','FDM_Upgrade_What_is_the_current_release','FDM_Upgrade_Select_desired_FDM_release','FDM_Upgrade_FDM_Media_Delivery','FDM_Upgrade_FDM_Gateway_PC_Hardware_Selection','FDM_Upgrade_Are_additional_components_required','FDM_Upgrade_Audit_trail_file_required','FDM_Upgrade_HART_Devices_Offline_Configuration_req','FDM_Upgrade_Is_Experion_Server_redundant_for_FDM','FDM_Upgrade_Asset_Sentinel_integration_required','FDM HART IP DOWNLINK LICENSE','ATT_LM_ELMM_DOES_THE_CUSTOMERTPN_RELEASE','ATT_LM_ELMM_HONEYWELL_PROVIDE_FTE','AT_LM_ELMM_FELDATA_REQUIRED','ATT_LM_ELMM_FACTORY_ACCEPTANCE','ATT_LT_ELMM_HONEYWELL_INSTALLATION','LM_to_ELMM_Experion_Release','LM_to_ELMM_ControlEdge_PLC_Operating_temperature','XP10_Actuator_Will_a_seat_removal_tool_be_needed','XP10_Actuator_XP10_seat_adapter_tool_be_needed','XP10_Actuator_XP10_adapter_tool_be_needed','CWS_Mig_Touch_Screen_monitor_for_the_Operator_Station','CWS_Mig_system_contain_Serial_Communication_links','CWS_Mig_Machine_Cross_Direction_controls_upgraded_peripheral_hardware_licensing','CWS_Mig_Cross_Direction_controls_upgraded_peripheral_hardware_licensing','CWS_Mig_Communication_Links_with_3rd_party_PLCs','CWS_Mig_HSE_and_Quality_Plan','CWS_Mig_Update_existing_documents','CWS_Mig_Site_Acceptance_Test_Required','CWS_Mig_Is_the_DRG_file_16_DRG_or_earlier','CWS_Mig_Is_there_existing_Machine_Direction_Contro','CWS_Mig_Is_there_existing_Cross_Directional_Contro','QCS_Mig_Rack_Mount_Server','QCS_Mig_Is_this_a_Standalone_CD_node','QCS_Mig_system_contain_Serial_Communication_links','QCS_Mig_Does_customer_have_SESP_contract','QCS_Mig_Will_QCS_be_added','QCS_Mig_HSE_and_Quality_Plan','QCS_Mig_Update_existing_documents','QCS_Mig_Site_Acceptance_Test_Req','QCS_Mig_Upgrade_Scenario','QCS_Mig_Current_Release_on_System','QCS_Mig_Server_Grade_QCS_as_Server_or_Workstation','QCS_Mig_Operator_Station_monitor_screen_type','QCS_Mig_Select_Thin_Client_monitor_type','QCS_Mig_AllianceView_Servers_monitor_screen_type','QCS_Mig_Select_AllianceView_Thin_Client_monitor','QCS_Mig_switches_be_included_for_Measurement','CD_Actuator_Will_the_current_Interlocks_be','CWS_Mig_Upgrade_Scenario','CWS_Mig_Physical_configuration','CWS_Mig_Current_Release_on_System','CWS_Mig_For_MD_CD_work_are_we_doing_installation','CD_Actuator_HSE_and_Quality_Plan','CD_Actuator_Update_existing_documents','CD_Actuator_SAT_required','CD_Actuator_Actuator_Type','CD_Actuator_IF_Actuator_Model','CD_Actuator_Processor_Type','CD_Actuator_Interlock_Voltage','ATT_CD_ACTUATOR_LINE_SINGLE_PHASE','CD_Actuator_QCS_Type','CD_Actuator_Lynk_Type','TPA_Do_you_know_the_number_of_huge_and_normal_TPA_PMD_HMI_graphics','TPA_Are_HART_used_in_Profibus_links','TPA_Include_and_deliver_new_separate_Firewall_for_ICSS','TPA_Include_and_deliver_new_GPS_clock','TPA_Include_new_AV_client_licenses_to_delvery','TPA_Include_EBR_and_NAS','TPA_Include_separate_Cyber_Security_FAT_to_the_delivery','TPA_DCS_Alarm_&_Event_information_link_required','TPA_Are_HMI_and_DxM_LCD_displays_in_Honeywell_scope_of_supply','TPA_Redundant_power_supplies_required','TPA_Requirement_for_customer_FAT','TPA_What_system_are_we_migrating','TPA_Is_this_the_main_MSID_system','TPA_Non-virtualized_or_virtualized_PMD_system','TPA_PMD_server_type_required','TPA_Select_the_type_of_fiber_optic_converters_GBICs_required','TPA_CE900_connection_method_to_FCE','TPA_Use_only_single_CE900_rack_in_KIT_assembly','TPA_Include_T_L_to_Honeywell_scope','TPA_T_L_for_International_project_or_Domestic_proposal','CD_Actuator_For_Caltrol_or_Thermatrol_Is_feedback','TPA_What_kind_of_project_LSS_type_of_project_or_PAS_or_LARGE_LSS_project','TPA_Are_there_known_uncertainties_in_the_projects','VS_Platform_Options','VS_Use_Own_OS_License','VS_Essential_Host_Type','VS_FTT_Level','VS_Distribute_Multi_Clusters','Virtualization DDS','Virtualization_EBR_DDS','Virtualization_Update existing drawing package','Virtualization_Acceptance_Test_requested','Virtualization_Does_the_customer_want_Honeywell','Virtualization FDS','Virtualization_AV_DDS','Virtualization_New_drawing_package','Virtualization_Will Honeywell provide the HW/SW?','Virtualization_Will_Honeywell_perform_equipment','TPS_EX_Bundle_Conversion_EST_Station_Hardware','Project_Execution_Year','CE_Scope_Choices','FDM_HART_IP_Server_License','FDM_FF_Conn_Interface_License_Fisher_Valvelink_SW','FDM_FF_Connector_Interface_Licenses','FDM_OPC_UA_AC_Profile_Enabler_Read-Only','FDM_OPC_UA_HDA_Profile_Enabler_Read-Only','FDM_OPC_UA_DA_Profile_Enabler_Read-Only','FDM_OPC_UA_Server_Enabler_Read-Only','FDM_Instrument_Alert_Monitoring_License','FDM_Report_Licenses'].includes(name())) ? values.filter(function(option){return option.displayValue !== 'None'}) : values, optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control" ></select>
+							<!-- /ko -->
+							
+					<!-- /ko -->
+			<!-- /ko -->
+			
+  
+	</div>
+<!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+<!-- /ko -->
+</script>
+
+<script type="text/html" id="HW_DropDownTemplate">
+	<td class="col-xs-8">
+			<!-- ko template: { name: 'HW_LabelTemplate' } -->
+
+			<!-- /ko -->
+	</td>
+	<td class="col-xs-4" data-bind="attr : { 'data-title' : label}">
+			<div class="fiori3-input-group fiori3-select-group">
+
+					<!-- ko if: required() == true && values !== 'undefined'-->
+
+					<!-- ko if: ["Server LocationClusterNetwork_desk mount  server1","Cluster_Name_Backbone","Sim PC Cluster","Sim PC Cluster1","Mobile Nodes Cluster","Server_Location/Cluster/Network Group_desk1","ServerLocation_Cluster/Network_Group","ServerLocation_Cluster_Network_Group","CMS Server Location Cluster Network Group","DMS Desk Station Location Cluster Network Group","Orion Station Location/Cluster/Network Group","Server Location EBR"].includes(name()) -->
+				 
+		<!-- ko if: values !== 'undefined'-->          
+				<select data-bind="
+							options: values.filter(function(option){return typeof option.valueCode !== 'undefined'}),
+							optionsText:  function(item) {
+									return cpq.models.configurator.attributes.filterByProperty('name' , 'List of Locations/Clusters/Network Groups')()[0].container.rows()[values().indexOf(item)-1]?.values()[0].value() ;},
+
+								 
+
+
+						
+							value: selectedValue,
+							validateAttribute: selectedValue,
+							enable: isEnabled,
+							css: { 'error': hasConflict(), 'validation-error': selectedValue.isValid && !selectedValue.isValid(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+							attr: { name: name, id: stdAttrCode() , 'aria-label': name, required: required },
+							event: { change: function() { window.lastActiveElementId = $element.id; } },
+							hasFocus: window.lastActiveElementId == $element.id" class="form-control"></select>
+<!-- /ko -->
+					<!-- /ko -->
+					<!-- ko ifnot: ["Server LocationClusterNetwork_desk mount  server1","Cluster_Name_Backbone","Sim PC Cluster","Sim PC Cluster1","Mobile Nodes Cluster","Server_Location/Cluster/Network Group_desk1","ServerLocation_Cluster/Network_Group","ServerLocation_Cluster_Network_Group","CMS Server Location Cluster Network Group","DMS Desk Station Location Cluster Network Group","Orion Station Location/Cluster/Network Group","Server Location EBR","AR_HCI_SCOPE"].includes(name())  -->
+					<select data-bind="
+									options: values.filter(function(option){return typeof option.valueCode !== 'undefined'}),
+									optionsText: 'displayValueWithPrices',
+									value: selectedValue,
+									validateAttribute: selectedValue,
+									enable: isEnabled,
+									css: { 'error': hasConflict(), 'validation-error': selectedValue.isValid && !selectedValue.isValid(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+									attr: { name: name, id: stdAttrCode() , 'aria-label': name, required: required, title: selectedValue().displayValue },
+									event: { change: function() { window.lastActiveElementId = $element.id; } },
+									hasFocus: window.lastActiveElementId == $element.id" class="form-control"></select>
+					<!-- /ko -->
+					<!-- ko if: ["AR_HCI_SCOPE"].includes(name())  -->
+					<select  data-bind="options: (['SC_Pricing_Escalation','SC_WEP_OM_Pricing_Escalation','SC_WEP_OCP_Pricing_Escalation','SC_Number_of_Concurrent_Users_PY','SC_Select_desired_Release_PY','SC_Central_Managed_SQL_PY','SC_Business_Level_Access_PY','SC_L4_Trace_Server_Option_PY','SC_WEP_Current_Score_OCP_PY','OrderType_EnabledService','LSS_Is_IO_details_database_available?','LSS_Is_Input/Output_Loop_diagram_available','LSS_Existing_Cabinet_Drawing_available_dimensions','LSS_Will_Honeywell_perform_equipment_installation','LSS_Does_the_customer_want_Honeywell','LSS_FEL/Data_gathering_required?','LSS_Hardware_Drawings_Required?','LSS_Acceptance_Test_Required?','LSS_PLC_Base_Media_Delivery','LSS_Is_PLC_Program_backup/Pdf_report_available?','LSS_SCADA_Controntroller_Configuration','LSS_Documentation_required?','LSS_PLC_Select_the_Experion_Node_to_be_installed','CMS Flex Station Hardware Selection','LSS_PLC_EPKS_Software_Release','LSS_Are_you_using_existing_PLC_logicmigration_tool','LSS_PLC_Server_Redundancy','LSS_Cabinet_Doors','LSS_Front_only_Cabinet Doors','LSS_Cabinet_Hinge_Type','LSS_Front_only_Cabinet Hinge Type','LSS_Cabinet_Keylock_Type','LSS_Front_only_Cabinet_Keylock_Type','LSS_Cabinet_Color?','LSS_Cabinet_Color_Front_Access','LSS_Cabinet_Light_Required?','LSS_Front_Only_Cabinet_Light_Required?','LSS_Cabinet_Thermostat_Required?','LSS_Front_only_Cabinet_Thermostat_Required?','LSS_Power_Entry','LSS_Front_only_Power_Entry','LSS_Front_only_TDI_Power_Supply_Cable_Length','LSS_TDI_Power_Supply_Cable_Length','LSS_Fan_Voltage','LSS_Front_Only_Fan_Voltage','LSS_Cabinet_Base_Required?','LSS_Front_only_Cabinet_Base_Required?','SM_Station_Type','SM_Hardware_Simulation_Station_Cont','AR_HCI_SCOPE'].includes(name())) ? values.filter(function(option){return option.displayValue !== 'None'}) : values, optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" class="form-control"  id="r2qscope" oninput="scopechange()" ></select>
+					<!-- /ko -->
+					<!-- /ko -->
+					<!-- ko ifnot: required() == true -->
+					<select data-bind="
+					options: (['SC_Pricing_Escalation','SC_WEP_OM_Pricing_Escalation','SC_WEP_OCP_Pricing_Escalation','SC_Number_of_Concurrent_Users_PY','SC_Select_desired_Release_PY','SC_Central_Managed_SQL_PY','SC_Business_Level_Access_PY','SC_L4_Trace_Server_Option_PY','SC_WEP_Current_Score_OCP_PY','OrderType_EnabledService','LSS_Is_IO_details_database_available?','LSS_Is_Input/Output_Loop_diagram_available','LSS_Existing_Cabinet_Drawing_available_dimensions','LSS_Will_Honeywell_perform_equipment_installation','LSS_Does_the_customer_want_Honeywell','LSS_FEL/Data_gathering_required?','LSS_Hardware_Drawings_Required?','LSS_Acceptance_Test_Required?','LSS_PLC_Base_Media_Delivery','LSS_Is_PLC_Program_backup/Pdf_report_available?','LSS_SCADA_Controntroller_Configuration','LSS_Documentation_required?','LSS_PLC_Select_the_Experion_Node_to_be_installed','CMS Flex Station Hardware Selection','LSS_PLC_EPKS_Software_Release','LSS_Are_you_using_existing_PLC_logicmigration_tool','LSS_PLC_Server_Redundancy','LSS_Cabinet_Doors','LSS_Front_only_Cabinet Doors','LSS_Cabinet_Hinge_Type','LSS_Front_only_Cabinet Hinge Type','LSS_Cabinet_Keylock_Type','LSS_Front_only_Cabinet_Keylock_Type','LSS_Cabinet_Color?','LSS_Cabinet_Color_Front_Access','LSS_Cabinet_Light_Required?','LSS_Front_Only_Cabinet_Light_Required?','LSS_Cabinet_Thermostat_Required?','LSS_Front_only_Cabinet_Thermostat_Required?','LSS_Power_Entry','LSS_Front_only_Power_Entry','LSS_Front_only_TDI_Power_Supply_Cable_Length','LSS_TDI_Power_Supply_Cable_Length','LSS_Fan_Voltage','LSS_Front_Only_Fan_Voltage','LSS_Cabinet_Base_Required?','LSS_Front_only_Cabinet_Base_Required?','Flex Station Hardware Selection TPS','L2 Switch Required','C300_RG_UPC_Universal_IO_Count','C300_RG_UPC_UIO2_Redundancy','PAGA_Required','FDM_Station Node Type','AR_HCI_GES Location','Project_Execution_Year','Nutanix License Type','QVCS Support','L3 Switch Required','Firewall Required','Default Crossover Cable L3','Power Cord Type L3','PDU Power Cable Req for Switch L3'].includes(name())) ? values.filter(function(option){return option.displayValue !== 'None' && option.displayValue !== 'No option selected'}) : values,
+					optionsText: 'displayValueWithPrices',
+					value: selectedValue,
+					validateAttribute: selectedValue,
+					enable: isEnabled,
+					css: { 'error': hasConflict(), 'validation-error': selectedValue.isValid && !selectedValue.isValid(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+					attr: { name: name, id: stdAttrCode() , 'aria-label': name, required: required },title: selectedValue().displayValue,
+					event: { change: function() { window.lastActiveElementId = $element.id; } },
+					hasFocus: window.lastActiveElementId == $element.id" class="form-control"></select>
+			<!-- /ko -->
+			</div>
+	</td>
+	<!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+	<!-- /ko -->
+</script>
+<script type="text/html" id="CBM_DropDownTemplate">
+	<td class="col-xs-6">
+			<!-- ko template: { name: 'HW_LabelTemplate' } -->
+			<!-- /ko -->
+	</td>
+	<td class="col-xs-6" data-bind="attr : { 'data-title' : label}">
+			<div class="fiori3-input-group fiori3-select-group">
+					<!-- ko if: required() == true && values !== 'undefined'-->
+					<select data-bind="
+									options: values.filter(function(option){return typeof option.valueCode !== 'undefined'}),
+									optionsText: 'displayValueWithPrices',
+									value: selectedValue,
+									validateAttribute: selectedValue,
+									enable: isEnabled,
+									css: { 'error': hasConflict(), 'validation-error': selectedValue.isValid && !selectedValue.isValid(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+									attr: { name: name, id: stdAttrCode() , 'aria-label': name, required: required },
+									event: { change: function() { window.lastActiveElementId = $element.id; } },
+									hasFocus: window.lastActiveElementId == $element.id" class="form-control"></select>
+					<!-- /ko -->
+					<!-- ko ifnot: required() == true -->
+					<select data-bind="
+									options: values,
+									optionsText: 'displayValueWithPrices',
+									value: selectedValue,
+									validateAttribute: selectedValue,
+									enable: isEnabled,
+									css: { 'error': hasConflict(), 'validation-error': selectedValue.isValid && !selectedValue.isValid(), 'validation-initial': !document.dirtyList.has(stdAttrCode() + '') },
+									attr: { name: name, id: stdAttrCode() , 'aria-label': name, required: required },
+									event: { change: function() { window.lastActiveElementId = $element.id; } },
+									hasFocus: window.lastActiveElementId == $element.id" class="form-control"></select>
+					<!-- /ko -->
+			</div>
+	</td>
+	<!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+	<!-- /ko -->
+</script>
+<script>
+function scopechange(){
+	//console.log('opt---')
+	cpq.server.executeScript("GS_R2Q_DEL_SELECTED_PRD", {"action":"change"}, function (data) {
+		console.log("bind the popup1--",data)
+		if (data == 1){
+			//bind the popup
+			//console.log("bind the if--")
+			//var scopeModel = document.getElementById("scope_model");
+			//scopeModel.style.display = "block";
+			$('#scope_model').show()
+			}
+		else{
+			//console.log("bind the else--")
+			$('#scope_model').hide()
+		}
+		}
+	);
+}
+
+function scopeCancel(){
+	//console.log("Scope-cancel-")
+	cpq.server.executeScript("GS_R2Q_DEL_SELECTED_PRD", {"action":"cancel"}, function () {
+		$('#scope_model,.leftbackdrop').hide();
+		cpq.models.configurator.applyConfigTemplate();
+		//location.reload();
+	});
+	setTimeout(function () {
+		$('#toast-container').hide()
+	}, 1000);
+
+}
+function scopeOk(){
+	//it will delete the products of selected product container since it is overriding the scope selection
+	cpq.server.executeScript("GS_R2Q_DEL_SELECTED_PRD", {"action":"ok"}, function () {
+		$('#scope_model,.leftbackdrop').hide();
+		cpq.models.configurator.applyConfigTemplate();
+		//location.reload();
+	});
+	setTimeout(function () {
+		$('#toast-container').hide()
+	}, 1000);
+}
+</script>

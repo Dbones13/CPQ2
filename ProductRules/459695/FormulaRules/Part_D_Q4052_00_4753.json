@@ -1,0 +1,11 @@
+{
+    "id": 4753,
+    "condition": "[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4052-00 Color C-Frame)",
+    "name": "Part_D_Q4052_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q4052-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

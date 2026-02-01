@@ -1,0 +1,11 @@
+{
+    "id": 4778,
+    "condition": "[EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame)",
+    "name": "Measurement_Q4022-34-I-Beam-O-Frame",
+    "action": "<*xDisallowallValuesExcept(MX_SE_Measurement_Type:Basis Weight|Moisture|Opacity|Caliper|Ash|Color|Gloss|Surface Topography|Formation|Fiber Orientation|Porosity|Crepe Structure|Infrarred)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

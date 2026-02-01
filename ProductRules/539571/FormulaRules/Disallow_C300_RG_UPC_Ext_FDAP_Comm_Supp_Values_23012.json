@@ -1,0 +1,11 @@
+{
+    "id": 23012,
+    "condition": "[GT](<*VALUE(C300_RG_UPC_LLAI_Count)*>,2)",
+    "name": "Disallow_C300_RG_UPC_Ext_FDAP_Comm_Supp_Values",
+    "action": "<*DISALLOWALLVALUESEXCEPT(C300_RG_UPC_Ext_FDAP_Comm_Supp:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

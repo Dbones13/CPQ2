@@ -1,0 +1,11 @@
+{
+    "id": 22822,
+    "condition": "[EQ](<*VALUE(Conformal_Coating_Preference_PMIOs)*>,)",
+    "name": "Default_Conformal_Coating_Preference_PMIOs",
+    "action": "<*SELECTVALUE(Conformal_Coating_Preference_PMIOs:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

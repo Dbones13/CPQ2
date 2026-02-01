@@ -1,0 +1,1 @@
+[IF]([IN](<*VALUE(C300_RG_UPC_GI_Bases_Universal_Marshalling_Count)*>,0,2,4,6)){<* SetGI(C300_RG_UPC_GI_Bases_Universal_Marshalling_Count_Prev_Value,<*VALUE(C300_RG_UPC_GI_Bases_Universal_Marshalling_Count)*>) *>}{<*ASSIGNVALUE(C300_RG_UPC_GI_Bases_Universal_Marshalling_Count:0<* GI(C300_RG_UPC_GI_Bases_Universal_Marshalling_Count_Prev_Value) *>)*>}[ENDIF]

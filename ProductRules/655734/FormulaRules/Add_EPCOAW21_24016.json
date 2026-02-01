@@ -1,0 +1,11 @@
+{
+    "id": 24016,
+    "condition": "[OR](<*ISSELECTED(Terminal_Part_Summary.MZ-PCWT01)*>,<*ISSELECTED(Terminal_Part_Summary.MZ-PCWR01)*>)",
+    "name": "Add_EP-COAW21",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:EP-COAW21)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

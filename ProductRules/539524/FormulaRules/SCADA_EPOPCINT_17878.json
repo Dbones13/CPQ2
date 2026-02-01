@@ -1,0 +1,11 @@
+{
+    "id": 17878,
+    "condition": "[GT](<*CTX( Container(OPC Application Instances).Row(5).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-OPCINT",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-OPCINT)*><*SETATVQTY(SCADA_BOM_Items:EP-OPCINT,<*CTX( Container(OPC Application Instances).Row(5).Column(Nodes).Get )*>)*><* DoResetAtt *>",
+    "description": "Add-EP-OPCINT",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

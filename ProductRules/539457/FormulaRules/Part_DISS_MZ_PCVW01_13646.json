@@ -1,0 +1,11 @@
+{
+    "id": 13646,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[NEQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B),[EQ](<*CTX( Container(Virtualization_cluster_transpose).Sum(Virtualization_Number_of_A_VxRail_E660_Servers) )*>,0),[NEQ](<*VALUE(Virtualization_Warranty_Extension)*>,7 Years))",
+    "name": "Part_DISS_MZ_PCVW01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVW01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

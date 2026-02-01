@@ -1,0 +1,11 @@
+{
+    "id": 19726,
+    "condition": "[EQ](<*VALUE(SerC_CG_AC_Input_Voltage)*>,)",
+    "name": "Default_SerC_CG_AC_Input_Voltage",
+    "action": "<*SELECTVALUE(SerC_CG_AC_Input_Voltage:230VAC)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

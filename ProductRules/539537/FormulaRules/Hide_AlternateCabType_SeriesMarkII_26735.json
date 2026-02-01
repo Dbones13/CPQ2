@@ -1,0 +1,11 @@
+{
+    "id": 26735,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>, Series C)",
+    "name": "Hide_AlternateCabType_SeriesMarkII",
+    "action": "<*DISALLOWVALUES(SerC_CG_Cabinet_Type_03:Alternate Cabinet)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

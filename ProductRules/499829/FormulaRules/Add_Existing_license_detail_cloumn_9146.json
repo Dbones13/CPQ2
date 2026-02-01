@@ -1,0 +1,11 @@
+{
+    "id": 9146,
+    "condition": "[AND]([EQ](<*VALUE(Trace_Software_What_is_the_scope)*>,Changes to Existing License (Expansions)),[EQ](<*CTX( Container(Trace_Software_License_Configuration_transpose).Rows.GetCount )*>,1))",
+    "name": "Add Existing license detail cloumn",
+    "action": "<*CTX( Container(Trace_Software_License_Configuration_transpose).Rows.Add(1) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_Software_Class_0_Systems).Set(Existing Class 0 Systems) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_Software_Class_1_Systems).Set(Existing Class 1 Systems) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_Software_Class_2_Systems).Set(Existing Class 2 Systems) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_Software_Class_3_Systems).Set(Existing Class 3 Systems) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_software_header).Set(<b>Existing License Details</b>) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_Software_Business_Level_Access).Set(No) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_Software_L4_Trace_Server_Option).Set(No) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

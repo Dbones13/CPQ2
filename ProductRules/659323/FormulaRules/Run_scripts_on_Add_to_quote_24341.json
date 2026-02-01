@@ -1,0 +1,11 @@
+{
+    "id": 24341,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScripts)*>,SCRIPT_RUN)",
+    "name": "Run_scripts on Add to quote",
+    "action": "<* ExecuteScript(PS_ARO_RESS_PartSummary)*><* ExecuteScript(PS_ScriptOnAddtoQuote)*><*CTX( Container(ARO_Sys_Grp_Part_Summery_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(ARO_Sys_Grp_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber ) )*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26527,
+    "condition": "[NOT](<*ISSELECTED(Power Cord Type.US)*>)",
+    "name": "Hide_51199562_200",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51199562-200)*><* DoResetAtt *>",
+    "description": "38330",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Bharadwaj Siddela"
+}

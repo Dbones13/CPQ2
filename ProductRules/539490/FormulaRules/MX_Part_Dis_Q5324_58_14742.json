@@ -1,0 +1,11 @@
+{
+    "id": 14742,
+    "condition": "[NEQ](<*VALUE(MX_ODX_Server_Ethernet_based)*>,Yes)",
+    "name": "MX_Part_Dis_Q5324_58",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5324-58)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

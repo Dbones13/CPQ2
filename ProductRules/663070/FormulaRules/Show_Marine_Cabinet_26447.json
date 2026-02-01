@@ -1,0 +1,11 @@
+{
+    "id": 26447,
+    "condition": "[AND]([OR](<*ISSELECTED(Experion Server Type.Server)*>,<*ISSELECTED(Experion Server Type.Server TPS)*>),<*ISSELECTED(Server Mounting.Cabinet)*>,<*ISSELECTED(Server_NodeType.SVR_PER_DELL_Rack_RAID1_RUG)*>)",
+    "name": "Show_Marine_Cabinet",
+    "action": "<*ALLOWATTRIBUTES(Marine_Requirement_Cabinet)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

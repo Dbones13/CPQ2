@@ -1,0 +1,11 @@
+{
+    "id": 25810,
+    "condition": "[IF]([GT](<*VALUE(Additional Servers)*>,0)){[AND]([EQ](<*VALUE(Server Type1)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Node Supplier Server)*>,Honeywell),[EQ](<*VALUE(Trusted Platform Module_TPM)*>,Yes))}{0}[ENDIF]",
+    "name": "MZ-PCST01_Additional_server",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCST01)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCST01,<*VALUE(Additional Servers)*>)*><* DoResetAtt *>",
+    "description": "Additional_server",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

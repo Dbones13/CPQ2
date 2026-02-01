@@ -1,0 +1,11 @@
+{
+    "id": 13569,
+    "condition": "[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR)",
+    "name": "Virtualization_LSS_Question_hide_labor",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_Windows_Server_2022_COA_Licenses,Virtualization_vSphere_Client_Node_Type,Virtualization_vSphere_Client_Node_OS_Type,Virtualization_Adapter_for_Redundant_FTE_Networks,Header_04_open,Virtualization_VMWare_Essentials_Plus_Licenses,Virtualization_vSphere_Single_Socket_Host_Licenses,Virtualization_VSAN_Single_Socket_Host_Licenses,Virtualization_VMWare_vSphere_Plus_Single_Socket,Virtualization_VMWare_vSphere_Dual_Socket,Virtualization_VMWare_VSAN_Dual_Socket_Host,Virtualization_vSphere_ENT_Plus_Dual_Socket_Host,Virtualization_VMWare_vSphere_Foundation_Licenses,Virtualization_VMWare_vCenter_Standard_Licenses,Virtualization_Windows_Server_2016_COA_Licenses,Virtualization_Windows_Server_2019_COA_Licenses,Virtualization_Windowsr_2022_COA_Licenses_16,Virtualization_Windows_2022_COA_Licenses_24,Virtualization_Experion_Virtualization_Server_CAL,Virtualization_Experion_Virtualization_Client_CAL,Virtualization_FDM_Virtualization_Server_CAL,Virtualization_FDM_Virtualization_Client_CAL,Virtualization_Windows_RDS_CAL,Virtualization_Microsoft_SQL_Client_Access_Lic,Header_04_close,ATTCON_03_open,ATTCON_03_close,Header_06_open,Virtualization_Third_party_items,Header_06_close,Virtualization_EBR_Release,Virtualization_EBR_Media_kit_type)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

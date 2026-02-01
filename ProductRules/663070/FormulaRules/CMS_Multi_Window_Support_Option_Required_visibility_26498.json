@@ -1,0 +1,11 @@
+{
+    "id": 26498,
+    "condition": "[GT](<*VALUE(Cabinet_No_of_Displays (0-4))*>,1)",
+    "name": "CMS Multi Window Support Option Required? visibility",
+    "action": "<*DISALLOWATTRIBUTES(CMS Multi Window Support Option Required?)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

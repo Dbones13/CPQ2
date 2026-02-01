@@ -1,0 +1,11 @@
+{
+    "id": 13508,
+    "condition": "[EQ](<*VALUE(Virtualization_Cabinet_Base_Required)*>,)",
+    "name": "Default_Base_required",
+    "action": "<*SELECTVALUE(Virtualization_Cabinet_Base_Required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

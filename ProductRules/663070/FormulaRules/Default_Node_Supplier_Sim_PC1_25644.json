@@ -1,0 +1,11 @@
+{
+    "id": 25644,
+    "condition": "[EQ](<*VALUE(Node Supplier (Sim PC)1)*>,)",
+    "name": "Default_Node_Supplier_(Sim PC)1",
+    "action": "<*SELECTVALUE(Node Supplier (Sim PC)1:Honeywell)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

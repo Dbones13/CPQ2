@@ -1,0 +1,11 @@
+{
+    "id": 25946,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[EQ](<*VALUE(Orion Console Remote Periph Sol Type (RPS))*>,Wyse 5070 for 5+Displays),[EQ](<*VALUE(Node Supplier)*>,Honeywell)))",
+    "name": "TP-THNCL5-900_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-THNCL5-900)*><* DoResetAtt *>",
+    "description": "CXCPQ-39498",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

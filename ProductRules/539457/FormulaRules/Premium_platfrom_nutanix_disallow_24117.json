@@ -1,0 +1,11 @@
+{
+    "id": 24117,
+    "condition": "[NEQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix)",
+    "name": "Premium_platfrom_nutanix_disallow",
+    "action": "<*DISALLOWATTRIBUTES(Enter the starting Nutanix Platform Cluster Number,No of Nutanix Single Node Clusters in the network,Nutanix License Type,Nutanix License Type,Number of Nutanix Standard Clusters in the network)*>",
+    "description": "To disallow the attributes If Premium Platform for Nutanix is not selected",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

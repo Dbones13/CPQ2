@@ -1,0 +1,2 @@
+<*RESETATTRIBUTE(SC_Labor_Entitlement)*>
+<*ASSIGNVALUE(SC_Service_ProductCode:<* TABLE ( SELECT ProductCode FROM CT_SC_Entitlements_Data WHERE Product_Type = 'Labor' AND ServiceProduct = '<*VALUE(SC_Labor_Service_Product)*>' ) *>)*>

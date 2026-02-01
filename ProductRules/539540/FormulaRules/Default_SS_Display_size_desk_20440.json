@@ -1,0 +1,11 @@
+{
+    "id": 20440,
+    "condition": "[EQ](<*VALUE(SS_Display_size_desk)*>,)",
+    "name": "Default_SS_Display_size_desk",
+    "action": "<*SELECTVALUE(SS_Display_size_desk:24 inch NTS DELL)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

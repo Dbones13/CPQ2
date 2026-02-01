@@ -1,0 +1,11 @@
+{
+    "id": 13656,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_VMWare_vSphere_Foundation_Licenses)*>,0))",
+    "name": "Part_DISS_EP_VFNDB8",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VFNDB8)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

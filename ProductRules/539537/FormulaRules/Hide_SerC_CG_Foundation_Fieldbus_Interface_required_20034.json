@@ -1,0 +1,11 @@
+{
+    "id": 20034,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>, Series C),[NEQ](<*CTX(Quote.CustomField(R2QFlag))*>, Yes),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>, CN100 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>, CN100 I/O HIVE - C300 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>, Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>, Control HIVE - Virtual)))",
+    "name": "Hide_SerC_CG_Foundation_Fieldbus_Interface_required",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Ethernet_Interface,SerC_CG_Foundation_Fieldbus_Interface_required,SerC_GC_Profibus_Gateway_Interface)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "11/08/25",
+    "modifiedBy": "Ramesh Kumar"
+}

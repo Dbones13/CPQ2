@@ -1,0 +1,11 @@
+{
+    "id": 22771,
+    "condition": "<*ISSELECTED(Default_Switch.SW_L2_RT_ARUBA_24PT)*>\n",
+    "name": "Show_SH_2930R4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Location_Cluster_Part_Summary:SH-2930R4)*><*SETATVQTY(Location_Cluster_Part_Summary:SH-2930R4, 2)*><* DoResetAtt *>\n",
+    "description": "35431",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

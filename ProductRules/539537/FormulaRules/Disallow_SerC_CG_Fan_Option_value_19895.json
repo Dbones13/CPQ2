@@ -1,0 +1,11 @@
+{
+    "id": 19895,
+    "condition": "[NOT]([EQ](<*VALUE(SerC_CG_Power_System_Vendor)*>,TDI))",
+    "name": "Disallow_SerC_CG_Fan_Option_value",
+    "action": "<*DISALLOWVALUES(SerC_CG_Fan_Option:24V Assembly)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

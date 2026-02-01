@@ -1,0 +1,11 @@
+{
+    "id": 4815,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-10 Compact O-Frame (Standard Head)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Fiber Orientation))",
+    "name": "Measurement_Fiber Orientation_3",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

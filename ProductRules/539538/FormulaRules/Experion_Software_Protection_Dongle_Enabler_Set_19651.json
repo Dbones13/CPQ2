@@ -1,0 +1,11 @@
+{
+    "id": 19651,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,New),[IF]([EQ](<*Eval(LCASE(\"<* TABLE ( SELECT Booking_Country FROM PMC_Exp_HS_Dongle_Product_BookingCountry \nWHERE Booking_Country = '<*Eval(LCASE(\"<*CTX( Quote.CustomField(Booking Country) )*>\"))*>' ) *>\"))*>,<*Eval(LCASE(\"<*CTX( Quote.CustomField(Booking Country) )*>\"))*>)){1}{0}[ENDIF])",
+    "name": "Experion Software Protection Dongle Enabler Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-DONENB)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

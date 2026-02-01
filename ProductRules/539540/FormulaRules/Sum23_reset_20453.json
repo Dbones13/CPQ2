@@ -1,0 +1,11 @@
+{
+    "id": 20453,
+    "condition": "1",
+    "name": "Sum23_reset",
+    "action": "<*ASSIGNVALUE(SS_23_inch_NTS:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

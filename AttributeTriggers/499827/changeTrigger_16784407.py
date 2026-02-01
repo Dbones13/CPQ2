@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(PM_Internal_Procurement_Plan_Labor_Hrs:<*EVAL(16*<*VALUE(labor_parameter_bf)*> + 2*<*VALUE(labor_parameter_sc)*>)*>)*>

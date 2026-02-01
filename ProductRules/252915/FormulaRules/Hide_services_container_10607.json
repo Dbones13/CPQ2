@@ -1,0 +1,11 @@
+{
+    "id": 10607,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW))",
+    "name": "Hide services container",
+    "action": "<*DISALLOWATTRIBUTES(LSS_Acceptance_Test_Required?,LSS_Are_you_using_existing_PLC_logicmigration_tool,LSS_Documentation_required?,LSS_Does_the_customer_want_Honeywell,LSS_Existing_Cabinet_Drawing_available_dimensions,LSS_FEL/Data_gathering_required?,LSS_Hardware_Drawings_Required?,LSS_Is_Input/Output_Loop_diagram_available,LSS_Is_IO_details_database_available?,LSS_Is_PLC_Program_backup/Pdf_report_available?,LSS_Number_of_Comm_IO_for_P2P,LSS_Number_of_Complex_Close_Loop_Programming,LSS_Number_of_hard_wired_Analog_Input_for_CE_PLC,LSS_Number_of_hard_wired_Analog_Input_for_CE_UOC,LSS_Number_of_hard_wired_Analog_Output_for_CE_PLC,LSS_Number_of_hard_wired_Analog_Output_for_CE_UOC,LSS_Number_of_hard_wired_Digital_Input_for_CE_PLC,LSS_Number_of_hard_wired_Digital_Input_for_CE_UOC,LSS_Number_of_hard_wired_Digital_Output_for_CE_PLC,LSS_Number_of_hard_wired_Digital_Output_for_CE_UOC,LSS_Number_of_Miscellaneous_Logic,LSS_Number_of_Sequence_Programming,LSS_Number_of_Simple_Close_Loop_Programming,LSS_Number_of_Soft_IO_for_CE_PLC,LSS_SCADA_Controntroller_Configuration,LSS_Will_Honeywell_perform_equipment_installation)*>",
+    "description": "This will hide the attributes on the basis of selected choice of MSID scope",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

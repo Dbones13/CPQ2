@@ -1,0 +1,11 @@
+{
+    "id": 13535,
+    "condition": "[EQ](<*VALUE(Virtualization_for_Hosts_and_Switches)*>,)",
+    "name": "Default_Virtualization_for_Hosts_and_Switches",
+    "action": "<*SELECTVALUE(Virtualization_for_Hosts_and_Switches:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

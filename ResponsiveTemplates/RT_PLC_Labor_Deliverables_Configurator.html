@@ -1,0 +1,81 @@
+	<!-- PLC Labor Tab Responsive Template -->
+
+	<div class="attributes fiori3-attributes flex " tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+	  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		<div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+		  @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	  </div>
+
+	  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	  <!-- /ko -->
+
+	<div class="row col-xs-12 swagger">
+		<div id="plc-general">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#plc-general')">
+			  <span>CE PLC Engineering</span>
+			  <a id="plc-general-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+
+			<div id="plc-general-content">
+	  <div id="ce plc engineering labor container-content">
+			  <div id="ce plc engineering labor container">
+				<div class="col-xs-12 col-sm-12">
+                  <!-- ko foreach: attributes.filterByProperty('name' ,  "Check All","CE PLC GES Engineer %","CE PLC Engineering Productivity","CE PLC Engineering Execution Country","CE PLC Engineering Execution Year") -->
+
+                      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-3 col-xs-3', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                      <!-- ko template: { name: $root.getAttributeTemplate } -->
+                      <!-- /ko -->
+                      </div>
+
+                  <!-- /ko -->
+				  <!-- ko foreach: attributes.filterByProperty('name' , "CE PLC Engineering Labor Container") -->
+					<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					  <!-- ko template: { name: $root.getAttributeTemplate } -->
+					  <!-- /ko -->
+					</div>
+				  <!-- /ko -->
+				</div>
+			  </div>
+			</div>
+	  <!-- end of swagger section ce-pmd-engineering -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+      <div class="row col-xs-12 swagger">
+		<div id="plc-labor">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#plc-labor')">
+			  <span>Additional Custom Deliverables</span>
+			  <a id="plc-labor-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+
+			<div id="plc-labor-content">
+	  <div id="ce plc engineering additional labor container-content">
+			  <div id="ce plc engineering additional labor container">
+				<div class="col-xs-12 col-sm-12">
+                  <!-- ko foreach: attributes.filterByProperty('name' , "Check All Additional", "CE LD GES Engineer %","PLC_CD_LaborDeliverables_Execution Country","PLC_CD_LD_Engineering_Execution_Year") -->
+
+                      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-3 col-xs-3', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                         <!-- ko template: { name: $root.getAttributeTemplate } -->
+                         <!-- /ko -->
+                      </div>
+
+                  <!-- /ko -->
+				  <!-- ko foreach: attributes.filterByProperty('name' , "CE PLC Additional Custom Deliverables") -->
+					<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+					  <!-- ko template: { name: $root.getAttributeTemplate } -->
+					  <!-- /ko -->
+					</div>
+				  <!-- /ko -->
+				</div>
+			  </div>
+			</div>
+	  <!-- end of swagger section ce-pmd-engineering -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>

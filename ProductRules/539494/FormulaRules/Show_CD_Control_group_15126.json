@@ -1,0 +1,11 @@
+{
+    "id": 15126,
+    "condition": "[OR]([EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,Standalone CD),[EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,QCS MD))",
+    "name": "Show_CD_Control_group",
+    "action": "<*CTX( Container(MXP_CD_group).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(Header_09_close)*>\n<*DISALLOWATTRIBUTES(Header_09_open)*>\n<*DISALLOWATTRIBUTES(Header_09_open,MXP_Software_Extensionsadd_ons_for_existing)*>\n<*DISALLOWATTRIBUTES(Header_10_close)*>\n<*DISALLOWATTRIBUTES(Header_10_open)*>\n<*DISALLOWATTRIBUTES(MXP_CD_group)*>\n<*DISALLOWATTRIBUTES(MXP_CD_Group_Count)*>\n<*DISALLOWATTRIBUTES(CE_Add_System_Rows_cd)*>\n<*DISALLOWATTRIBUTES(MXP_Autoprofile_Control_Cabinet_Type)*>\n<*DISALLOWATTRIBUTES(MXP_Number_of_Bolts)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

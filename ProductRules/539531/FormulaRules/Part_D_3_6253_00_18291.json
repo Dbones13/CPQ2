@@ -1,0 +1,11 @@
+{
+    "id": 18291,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(MXPro_Sensor_X_CD_Sensor)*>,Yes),[EQ](<*VALUE(MXP_Measurement_Type)*>,6k)))",
+    "name": "Part_D_3_6253_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-6253-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

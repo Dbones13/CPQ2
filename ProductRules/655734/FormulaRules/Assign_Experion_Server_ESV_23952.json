@@ -1,0 +1,11 @@
+{
+    "id": 23952,
+    "condition": "[NEQ](<*VALUE(Terminal_Blank_Experion_Server_(ESV))*>,Experion Server (ESV))",
+    "name": "Assign Experion Server (ESV)",
+    "action": "<*ASSIGNVALUE(Terminal_Blank_Experion_Server_(ESV):Experion Server (ESV))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

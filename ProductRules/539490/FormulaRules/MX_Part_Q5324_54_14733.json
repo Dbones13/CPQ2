@@ -1,0 +1,11 @@
+{
+    "id": 14733,
+    "condition": "[EQ](<*VALUE(MX_Allen_Bradley_PLC_Serial_Link_RSLinx)*>,Yes)",
+    "name": "MX_Part_Q5324_54",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5324-54)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5324-54, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

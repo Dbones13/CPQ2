@@ -1,0 +1,11 @@
+{
+    "id": 3603,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A31)*>,<*ISSELECTED(Identifiers.A32)*>,<*ISSELECTED(Identifiers.A33)*>,<*ISSELECTED(Identifiers.A34)*>,<*ISSELECTED(Identifiers.A35)*>,<*ISSELECTED(Identifiers.A36)*>,<*ISSELECTED(Identifiers.A37)*>,<*ISSELECTED(Identifiers.A38)*>,<*ISSELECTED(Identifiers.A39)*>)",
+    "name": "OPC Application Instances Disallow",
+    "action": "<*DISALLOWATTRIBUTES(SCADA Points)*><*DISALLOWATTRIBUTES(Network Type)*><*DISALLOWATTRIBUTES(Network Interface)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

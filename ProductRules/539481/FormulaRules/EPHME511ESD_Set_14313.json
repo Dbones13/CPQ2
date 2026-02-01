@@ -1,0 +1,11 @@
+{
+    "id": 14313,
+    "condition": "[EQ](<*VALUE(MIQ_Base_Media_Delivery)*>,Electronic Download)",
+    "name": "EP-HME511-ESD Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:EP-HME511-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

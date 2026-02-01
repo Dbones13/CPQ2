@@ -1,0 +1,11 @@
+{
+    "id": 13397,
+    "condition": "1",
+    "name": "Experion_SCADA_Points",
+    "action": "<*ASSIGNVALUE(Experion_SCADA_Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Experion_SCADA_Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14023,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Network_Switches)*>,)",
+    "name": "Default_DVM_Number_of_Network_Switches",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Network_Switches:4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

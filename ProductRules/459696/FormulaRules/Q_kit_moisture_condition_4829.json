@@ -1,0 +1,11 @@
+{
+    "id": 4829,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture))",
+    "name": "Q_kit_moisture_condition",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Is Q_Kit_required:High|Low|Medium|No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

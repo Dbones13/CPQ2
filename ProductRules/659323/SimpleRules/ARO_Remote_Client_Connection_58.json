@@ -1,0 +1,10 @@
+{
+    "id": 58,
+    "condition": "ARO_Does_site_have_DMZ:No",
+    "name": "ARO_Remote_Client_Connection",
+    "action": "Disallow ARO_Remote_Client_Connection : Microsoft Remote Desktop client",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

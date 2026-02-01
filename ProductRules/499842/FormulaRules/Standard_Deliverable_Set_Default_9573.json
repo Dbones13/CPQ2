@@ -1,0 +1,11 @@
+{
+    "id": 9573,
+    "condition": "[NOT](<*ATTDEF(PCD AD Standard Deliverable)*>)",
+    "name": "Standard_Deliverable_Set_Default",
+    "action": "<*SELECTVALUE(PCD AD Standard Deliverable:PEP-PQP-HSE-Org Chart-Schedule)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

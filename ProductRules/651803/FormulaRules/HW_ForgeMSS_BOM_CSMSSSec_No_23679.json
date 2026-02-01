@@ -1,0 +1,11 @@
+{
+    "id": 23679,
+    "condition": "[EQ](<*VALUE(Secure Remote Access)*>, )",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-Sec_No",
+    "action": "<*SETATVQTY(Secure Remote Access BOM:CS-MSS-SEC-ANL,1)*><*SETATVQTY(Secure Remote Access BOM:CS-MSS-SEC-BASE,1)*>",
+    "description": "",
+    "rank": "40",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

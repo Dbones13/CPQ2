@@ -1,0 +1,11 @@
+{
+    "id": 26542,
+    "condition": "[NEQ](<*VALUE(Hardware Design Selection_ACE_T_Node)*>,)",
+    "name": "Hide_Additional_MemoryDisk_ACETDesk",
+    "action": "<*DISALLOWVALUES(Additional Hard Disk (ACE-T):Yes,Additional Memory (ACE-T):16GB)*>",
+    "description": "ACE-T Node in Desk Preference\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

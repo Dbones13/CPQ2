@@ -1,0 +1,11 @@
+{
+    "id": 10808,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,CWS RAE Upgrade),[EQ](<*VALUE(CWS_Mig_Communication_Links_with_3rd_party_PLCs)*>,No))",
+    "name": "CWS_Mig_Hide_Type_of_Communication_Links",
+    "action": "<*DISALLOWATTRIBUTES(CWS_Mig_Type_of_Communication_Links_with_3rd_party)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

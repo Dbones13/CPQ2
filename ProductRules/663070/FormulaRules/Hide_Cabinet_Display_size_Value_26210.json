@@ -1,0 +1,11 @@
+{
+    "id": 26210,
+    "condition": "[EQ](<*VALUE(Cabinet_Touch_Screen_required)*>,No Touch Screen)",
+    "name": "Hide_Cabinet_Display_size_Value",
+    "action": "<*ALLOWVALUES(Cabinet_Display_size:21.33 inch NTS,Cabinet_Display_size:23 inch NTS,Cabinet_Display_size:24 inch NTS NEC,Cabinet_Display_size:24 inch NTS DELL,Cabinet_Display_size:27 inch NTS NEC,Cabinet_Display_size:27 inch NTS DELL,Cabinet_Display_size:55 inch NTS)*>\n<*DISALLOWVALUES(Cabinet_Display_size:21.33 inch Touch,Cabinet_Display_size:24 inch Touch HP,Cabinet_Display_size:24 inch Touch Dell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

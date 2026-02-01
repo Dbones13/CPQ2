@@ -1,0 +1,11 @@
+{
+    "id": 22259,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScripts)*>,SCRIPT_RUN)",
+    "name": "Run_labor_scripts on Add to quote",
+    "action": "<* ExecuteScript(Labor_deliverables_Populate)*>\n<* ExecuteScript(PS_labor_calculated_script)*>\n<* ExecuteScript(final_hr)*>\n<* ExecuteScript(PS_Populate_Prices)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

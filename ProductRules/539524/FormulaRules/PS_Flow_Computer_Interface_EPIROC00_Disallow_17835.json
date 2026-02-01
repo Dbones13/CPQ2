@@ -1,0 +1,11 @@
+{
+    "id": 17835,
+    "condition": "[NOT]([GT](<*CTX( Container(Flow Computer Interfaces).Row(3).Column(Nodes).Get )*>,0))",
+    "name": "PS_Flow Computer Interface_EP-IROC00_Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-IROC00)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

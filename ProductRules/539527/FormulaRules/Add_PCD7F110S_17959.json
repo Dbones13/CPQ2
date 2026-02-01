@@ -1,0 +1,11 @@
+{
+    "id": 17959,
+    "condition": "[GT](<*VALUE(PCD_Qty_of_Serial_Interface_RS_422_RS_485)*>,0)",
+    "name": "Add_PCD7.F110S",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PCD_Part_Summary:PCD7.F110S,PCD_Qty_of_Serial_Interface_RS_422_RS_485:0)*><*SETATVQTY(PCD_Part_Summary:PCD7.F110S,<*VALUE(PCD_Qty_of_Serial_Interface_RS_422_RS_485)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

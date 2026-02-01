@@ -1,0 +1,11 @@
+{
+    "id": 13204,
+    "condition": "[AND]([EQ](<*VALUE(TPA_What_system_are_we_migrating)*>,PMD R7xx (>R612)),[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR)))",
+    "name": "TPA_Labor_Constant_R7",
+    "action": "<*ASSIGNVALUE(TPA_labor_para_cst_hhg:0.02)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_hng:0.02)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_hp:0.005)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_wptpas:30)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_whpb1:0.008055556)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_whpb2:0.0175)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_gesblck:0)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_blckofst:0.73)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_blckonst:0.27)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_minfat_app:0.005)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_dsbmt:8)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_gdsb:0)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_hartdp:0)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_migsc:8)*>\n<*ASSIGNVALUE(TPA_labor_para_cst_prof_anbs:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

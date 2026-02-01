@@ -1,0 +1,11 @@
+{
+    "id": 22912,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_IPRating)*>,)",
+    "name": "Default_SeriesC_RG_IP_Rating",
+    "action": "<*SELECTVALUE(SeriesC_RG_IPRating:IP20)*>",
+    "description": "CXCPQ_37879",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

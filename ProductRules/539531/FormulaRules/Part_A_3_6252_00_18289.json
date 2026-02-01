@@ -1,0 +1,11 @@
+{
+    "id": 18289,
+    "condition": "[AND]([EQ](<*VALUE(MXPro_Sensor_Z_Gap_Sensor)*>,Yes),[EQ](<*VALUE(MXP_Measurement_Type)*>,6k))",
+    "name": "Part_A_3_6252_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-6252-00)*><*SETATVQTY(MXP_SE_Bom_Parts:3-6252-00,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

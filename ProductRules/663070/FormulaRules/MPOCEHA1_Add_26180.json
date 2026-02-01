@@ -1,0 +1,11 @@
+{
+    "id": 26180,
+    "condition": "[AND]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[EQ](<*VALUE(Extended Height Alarm Light Panel)*>,Yes),[EQ](<*VALUE(Node Supplier)*>,Honeywell))",
+    "name": "MP-OCEHA1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-OCEHA1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCEHA1, <*VALUE(Orion Console 2Position Base Unit (0-20))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-39020",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

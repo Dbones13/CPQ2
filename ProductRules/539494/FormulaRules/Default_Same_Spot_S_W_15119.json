@@ -1,0 +1,11 @@
+{
+    "id": 15119,
+    "condition": "[EQ](<*VALUE(MXP_Same_Spot_S_W)*>,)",
+    "name": "Default_Same_Spot_S_W",
+    "action": "<*SELECTVALUE(MXP_Same_Spot_S_W:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

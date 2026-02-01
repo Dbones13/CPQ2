@@ -1,0 +1,11 @@
+{
+    "id": 13567,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[EQ](<*VALUE(Virtualization_for_Hosts_and_Switches)*>,No))),[EQ](<* ProductName *>,Virtualization System))",
+    "name": "Virtualization_Hide_server_Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(Header_05_close,Header_05_open,Virtualization_Cabinet_Base_Required,Virtualization_Cabinet_Color,Virtualization_Cabinet_Depth_Size,Virtualization_Cabinet_Door_Type,Virtualization_Cabinet_Hinge_Type,Virtualization_Cabinet_Keylock_Type,Virtualization_Cabinet_Thermostat_Required,Virtualization_Power_Supply_Voltage)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

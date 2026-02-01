@@ -1,0 +1,11 @@
+{
+    "id": 21838,
+    "condition": "[EQ](<*VALUE(FDM Virtualization Server CAL License (0-7))*>,)",
+    "name": "Default_FDM Virtualization Server CAL License (0-7)",
+    "action": "<*ASSIGNVALUE(FDM Virtualization Server CAL License (0-7):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

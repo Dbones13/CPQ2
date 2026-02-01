@@ -1,0 +1,11 @@
+{
+    "id": 12148,
+    "condition": "[AND]([EQ](<*VALUE(PSW_Only_HAZOP_Scope)*>,No), [EQ](<*VALUE(PSW_HAZOP+LOPA+SIL_Ver_calcs+SRS+FTP_Scope)*>,No),\n[EQ](<*VALUE(PSW_HAZOP_Import_Scope)*>,No))",
+    "name": "Disallow PSW_Number_of_P&IDs_(1-500)",
+    "action": "<*DISALLOWATTRIBUTES(PSW_Number_of_P&IDs_(1-500))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

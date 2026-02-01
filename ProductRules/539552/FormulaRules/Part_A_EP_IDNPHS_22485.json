@@ -1,0 +1,11 @@
+{
+    "id": 22485,
+    "condition": "[NEQ](<*VALUE(ESDC_DNP3_History_Backfill_Interface)*>,0)",
+    "name": "Part_A_EP_IDNPHS",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:EP-IDNPHS)*><*SETATVQTY(ESDC_BOM_Parts:EP-IDNPHS, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18080,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow),[LEQ](<*VALUE(MXP_Zone_Width)*>,0))",
+    "name": "Part_D_91412_MM",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_CD_Bom_Parts:91412-MM)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

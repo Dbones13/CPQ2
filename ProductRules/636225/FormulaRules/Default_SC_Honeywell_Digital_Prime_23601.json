@@ -1,0 +1,11 @@
+{
+    "id": 23601,
+    "condition": "[EQ](<*VALUE(SC_Honeywell_Digital_Prime)*>,)",
+    "name": "Default_SC_Honeywell_Digital_Prime",
+    "action": "<*ASSIGNVALUE(SC_Honeywell_Digital_Prime:Digital Prime Twin)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

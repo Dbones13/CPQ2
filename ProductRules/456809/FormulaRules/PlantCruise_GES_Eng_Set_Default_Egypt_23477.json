@@ -1,0 +1,11 @@
+{
+    "id": 23477,
+    "condition": "[AND]([NOT](<*ATTSEL(PlantCruise_GES_Eng)*>),<*ISSELECTED(PlantCruise_Ges_Location_Labour.GES Egypt)*>)",
+    "name": "PlantCruise_GES_Eng_Set_Default_Egypt",
+    "action": "<*SELECTVALUE(PlantCruise_GES_Eng:HPS_GES_P350B_EG)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

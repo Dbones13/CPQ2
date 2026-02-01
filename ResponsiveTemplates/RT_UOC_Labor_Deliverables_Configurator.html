@@ -1,0 +1,100 @@
+	<!-- UOC Labor Tab Responsive Template -->
+
+	<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+        <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+          <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+        </div>
+  
+        <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+        <!-- /ko -->
+  
+      <div class="row col-xs-12 swagger">
+          <div id="uoc-general">
+            <div>
+              <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-general')">
+                <span>CE UOC Engineering</span>
+                <a id="uoc-general-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+  
+              <div id="uoc-general-content">
+        <div id="ce uoc engineering labor container-content">
+                <div id="ce uoc engineering labor container">
+                  <div class="col-xs-12 col-sm-12">
+                      <!-- ko foreach: attributes.filterByProperty('name' ,"CE UOC GES Engineer %","CE UOC Engineering Execution Country","CE UOC Engineering Execution Year","CE UOC Engineering Productivity") -->
+                          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-3 col-xs-3', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+							<table class="fiori3-configuration-container-table" style="width:100%">
+								<tbody>
+									<tr class="full-width-attribute">
+										<td style="white-space:nowrap;text-align:right;padding-right:10px">
+											<label
+											data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+											<span
+											data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }"
+											style="overflow-wrap: break-word; display: none; margin-bottom: 0px;"
+											class="grayout"></span>
+										</td>
+										<!-- ko if: ['CE UOC Engineering Productivity', 'CE UOC GES Engineer %'].includes($data.name()) -->
+											<td style="width:50%"><input type="text"
+											oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+											data-bind="value: userInput, enable: isEnabled, css:{'error':!isValid() || hasConflict()}, attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"
+											class="form-control"></td>
+										<!-- /ko -->
+										<!-- ko if: ["CE UOC Engineering Execution Country","CE UOC Engineering Execution Year"].includes($data.name()) -->
+											<td><select
+											data-bind="options: values, optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"
+											class="form-control"></select></td>
+										<!-- /ko -->
+									</tr>
+								</tbody>
+							</table>
+                          </div>
+                  	  <!-- /ko -->
+                      <!-- ko foreach: attributes.filterByProperty('name' , "CE UOC Engineering Labor Container") -->
+                          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                          </div>
+                    <!-- /ko -->
+                  </div>
+                </div>
+              </div>
+        <!-- end of swagger section ce-pmd-engineering -->
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row col-xs-12 swagger">
+          <div id="uoc-labor">
+            <div>
+              <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-labor')">
+                <span>Additional Custom Deliverables</span>
+                <a id="uoc-labor-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+  
+              <div id="uoc-labor-content">
+        <div id="ce uoc engineering additional labor container-content">
+                <div id="ce uoc engineering additional labor container">
+                  <div class="col-xs-12 col-sm-12">
+                      <!-- ko foreach: attributes.filterByProperty('name' ,"UOC_CD_LD_GES Engineer %", "UOC_CD_LaborDeliverables_Execution Country", "UOC_CD_LD_Engineering_Execution Year") -->
+                          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-3 col-xs-3', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                          <!-- ko template: { name: $root.getAttributeTemplate } -->
+                          <!-- /ko -->
+                          </div>
+                  	  <!-- /ko -->
+                    <!-- ko foreach: attributes.filterByProperty('name' , "CE UOC Additional Custom Deliverables") -->
+                      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                      </div>
+                    <!-- /ko -->
+                  </div>
+                </div>
+              </div>
+        <!-- end of swagger section ce-pmd-engineering -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

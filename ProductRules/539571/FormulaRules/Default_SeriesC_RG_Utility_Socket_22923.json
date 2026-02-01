@@ -1,0 +1,11 @@
+{
+    "id": 22923,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_UtilitySocket)*>,)",
+    "name": "Default_SeriesC_RG_Utility_Socket",
+    "action": "<*SELECTVALUE(SeriesC_RG_UtilitySocket:No)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

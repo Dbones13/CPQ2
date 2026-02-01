@@ -1,0 +1,11 @@
+{
+    "id": 19159,
+    "condition": "[NEQ](<*VALUE(PlantCruise_Alarm_Pager)*>,Yes)",
+    "name": "Del_Software_CV-ACVAGE",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-ACVAGE)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

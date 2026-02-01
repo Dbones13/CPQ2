@@ -1,0 +1,11 @@
+{
+    "id": 23782,
+    "condition": "[NOT](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)",
+    "name": "Allow_Power_System",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_R2Q_Power_System_Vendor)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

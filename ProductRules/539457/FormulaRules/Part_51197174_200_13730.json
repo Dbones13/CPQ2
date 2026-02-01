@@ -1,0 +1,11 @@
+{
+    "id": 13730,
+    "condition": "[AND]([GEQ](<* Eval(<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*> + <*VALUE(Virtualization_Number_of_R640XL_Standard_Servers)*>  + <*VALUE(Virtualization_Number_R740XL_Performance_A_Servers)*> + <*VALUE(Virtualization_Number_R740XL_Performance_B_Servers)*> ) *>,1),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[EQ](<*VALUE(Virtualization_Cabinet_Color)*>,Gray-RAL7032),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_51197174_200",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:51197174-200)*><*SETATVQTY(Virtualization_BOM_Parts:51197174-200, <*VALUE(Virtualization_Cabinet)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

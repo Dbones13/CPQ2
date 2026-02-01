@@ -1,0 +1,11 @@
+{
+    "id": 2604,
+    "condition": "[EQ](<*VALUE(Terminal_Ges_Location_Labour)*>,GES China)",
+    "name": "GES_Location_Values_China",
+    "action": "<*DISALLOWVALUES(Terminal_GES_Eng:HPS_GES_P350B_IN,Terminal_GES_Eng:HPS_GES_P350F_IN)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

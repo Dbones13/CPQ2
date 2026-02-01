@@ -1,0 +1,11 @@
+{
+    "id": 10698,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_Digital_Input_Contact_type_Modules_16_poin)*>,))",
+    "name": "QCS_Mig_Default_Digital_Input_Contact_type_Modules_16_point",
+    "action": "<*ASSIGNVALUE(QCS_Mig_Digital_Input_Contact_type_Modules_16_poin:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

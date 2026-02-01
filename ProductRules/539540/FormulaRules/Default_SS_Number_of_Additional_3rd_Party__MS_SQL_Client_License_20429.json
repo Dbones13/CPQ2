@@ -1,0 +1,11 @@
+{
+    "id": 20429,
+    "condition": "[EQ](<*VALUE(SS_Number_of_Additional_3rd_Party_ MS_SQL_Client_License)*>,)",
+    "name": "Default_SS_Number_of_Additional_3rd_Party_ MS_SQL_Client_License",
+    "action": "<*ASSIGNVALUE(SS_Number_of_Additional_3rd_Party_ MS_SQL_Client_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

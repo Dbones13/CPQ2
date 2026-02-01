@@ -1,0 +1,11 @@
+{
+    "id": 26367,
+    "condition": "[AND](<*ISSELECTED(Experion Backup & Restore (Experion Server).Yes)*>,[IN](<*VALUE(Experion Software Release)*>,R520,R530))",
+    "name": "show_values_in_Server Node Type EBR",
+    "action": "<*ALLOWVALUES(Server Node Type EBR:SVR_PER_DELL_Rack_RAID1_XE,Server Node Type EBR:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

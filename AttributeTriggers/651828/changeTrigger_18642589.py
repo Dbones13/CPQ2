@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(DMS Flex Station Hardware Selection)*>,STN_PER_DELL_Rack_RAID1)){ <*SELECTVALUE(DMS Remote Peripheral Solution Type RPS:Pepperl_Fuchs_BTC22)*>}{<*SELECTVALUE(DMS Remote Peripheral Solution Type RPS:None)*> }[ENDIF]

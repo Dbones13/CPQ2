@@ -1,0 +1,11 @@
+{
+    "id": 24213,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[NEQ](<*VALUE(RESS_System_Required)*>,Yes))",
+    "name": "Hide_RESS_EST_Native_window",
+    "action": "<*SETOPTIONAL(RESS_EST_Native_window)*><*DISALLOWATTRIBUTES(RESS_EST_Native_window)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22963,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE))",
+    "name": "Show_Dummy_RG_IO_Mounting_Solution_for_SerC_CG_Type_of_Controller_Required_values",
+    "action": "[IF]([EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Cabinet)){<*SELECTVALUE(SerC_IO_Mounting_Solution:Cabinet)*>}{[IF]([EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Mounting Panel)){<*SELECTVALUE(SerC_IO_Mounting_Solution:Mounting Panel)*>}{<*SELECTVALUE(SerC_IO_Mounting_Solution:Universal Process Cab - 1.3M)*>}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

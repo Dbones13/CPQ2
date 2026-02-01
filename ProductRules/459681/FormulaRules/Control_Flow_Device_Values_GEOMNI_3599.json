@@ -1,0 +1,11 @@
+{
+    "id": 3599,
+    "condition": "[AND](<*ISSELECTED(Identifiers.A18)*>,[EQ](<*VALUE(Scada_chek)*>,1))",
+    "name": "Control_Flow_Device_Values_GE/OMNI",
+    "action": "<*ASSIGNVALUE(Nodes:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

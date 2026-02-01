@@ -1,0 +1,11 @@
+{
+    "id": 24274,
+    "condition": "[EQ](<*VALUE(ARO_Client_Qty_20)*>,)",
+    "name": "DefaultValue - ARO_Client_Qty_20",
+    "action": "<*ASSIGNVALUE(ARO_Client_Qty_20:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

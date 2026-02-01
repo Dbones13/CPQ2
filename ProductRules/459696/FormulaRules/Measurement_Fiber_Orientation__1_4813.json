@@ -1,0 +1,11 @@
+{
+    "id": 4813,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Fiber Orientation))",
+    "name": "Measurement_Fiber Orientation _1",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Fiber Orientation Msmt both sides|Fiber Orientation Msmt Bottom|Fiber Orientation Msmt Top)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

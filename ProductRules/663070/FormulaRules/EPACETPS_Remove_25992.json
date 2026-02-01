@@ -1,0 +1,11 @@
+{
+    "id": 25992,
+    "condition": "[NOT]([OR]([GT](<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,0),[GT](<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,0)))",
+    "name": "EP-ACETPS_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-ACETPS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

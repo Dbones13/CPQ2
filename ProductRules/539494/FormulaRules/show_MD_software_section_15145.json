@@ -1,0 +1,11 @@
+{
+    "id": 15145,
+    "condition": "[OR]([EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,QCS CD),[EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,Standalone CD))",
+    "name": "show_MD_software_section",
+    "action": "<*DISALLOWATTRIBUTES(MXP_MD_Control_Heading)*>\n<*DISALLOWATTRIBUTES(MXP_Biax_Control_Software)*>\n<*DISALLOWATTRIBUTES(MXP_Extruction_Coating_Software)*>\n<*DISALLOWATTRIBUTES(MXP_Flat_Die_Extrusion_and_Non_Woven_Control)*>\n<*DISALLOWATTRIBUTES(MXP_Vynil_Control)*>\n<*DISALLOWATTRIBUTES(MXP_Roll_Blade_Coating_Control)*>\n<*DISALLOWATTRIBUTES(MXP_Tire_Calendar_Control)*>\n<*DISALLOWATTRIBUTES(MXP_Profile_Control,MXP_Tire_Calendar_Control)*><*DISALLOWATTRIBUTES(Header_05_close,Header_05_open)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

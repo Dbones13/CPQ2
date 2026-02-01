@@ -1,0 +1,11 @@
+{
+    "id": 22292,
+    "condition": "[EQ](<*VALUE(MSID_GES_Location)*>,None)",
+    "name": "Hide GES_Unit_Regional_Cost in Labor Deliverables Based on GES Location",
+    "action": "<*CTX(Container(MSID_Labor_EBR_Con).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*>\n<*CTX(Container(MSID_Labor_Orion_Console_Con).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*>\n<*CTX(Container(MSID_Labor_TCMI_Con).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*>\n<*CTX(Container(MSID_Labor_EHPM_HART_IO_Con).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

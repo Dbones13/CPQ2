@@ -1,0 +1,11 @@
+{
+    "id": 23116,
+    "condition": "[AND]([GT](<*CTX ( Container(Series_c_RG_standardart_3rd_partsummary_cont).Rows.GetCount )*>,0),[GT](<*CTX ( Container(Series_C_RG_Third_Party_Parts).Rows.GetCount )*>,0),[NEQ](<*CTX( Container(Series_C_RG_Third_Party_Parts).UniqueValues(LoadCont).Separator(aaaUNIONaaa) )*>,))",
+    "name": "C300_RG_Third_Party_Parts_1",
+    "action": "<*CTX ( Container(Series_C_RG_Part_Summary_Cont_3rd_Party).LoadKeys(PartNumber).Load(<*eval(Replace(Replace(Replace(\"Select<*CTX( Container(Series_C_RG_Third_Party_Parts).UniqueValues(LoadCont).Separator(aaaUNIONaaa) )*> UNION Select <*CTX( Container(Series_c_RG_standardart_3rd_partsummary_cont).UniqueValues(LoadCont).Separator(aaaUNIONaaa) )*>\",\"aaaUNIONaaa\",\" UNION SELECT \"),chr(40),\"[\"),chr(41),\"]\"))*>) )*>",
+    "description": "",
+    "rank": "10000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

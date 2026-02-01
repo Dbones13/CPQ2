@@ -1,0 +1,10 @@
+{
+    "id": 61,
+    "condition": "Interface with TPS Required?:No",
+    "name": "Experion_Server_Type_No",
+    "action": "Disallow Experion Server Type : Server TPS",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

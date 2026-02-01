@@ -1,0 +1,11 @@
+{
+    "id": 11651,
+    "condition": "[EQ](<*VALUE(IS_No_of_Shared_cabinet/JB_Wiring_Diagrams_(0-100))*>,)",
+    "name": "Default_Number of Shared cabinet/JB Wiring Diagrams (0-100)",
+    "action": "<*ASSIGNVALUE(IS_No_of_Shared_cabinet/JB_Wiring_Diagrams_(0-100):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

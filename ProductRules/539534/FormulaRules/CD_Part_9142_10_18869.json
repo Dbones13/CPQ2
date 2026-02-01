@@ -1,0 +1,11 @@
+{
+    "id": 18869,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,AutoSlice),[EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW45L SuperFlex Titanium),[EQ](<*VALUE(MX_CD_Actuator_Housing_Autoslice)*>,Stainless steel))",
+    "name": "CD_Part_9142_10",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9142-10)*><*SETATVQTY(MX_CD_Bom_Parts:9142-10, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

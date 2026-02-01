@@ -1,0 +1,11 @@
+{
+    "id": 10570,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Site_Acceptance_Test_Req)*>,)",
+    "name": "QCS_Mig_Default_Site_Acceptance",
+    "action": "<*SELECTVALUE(QCS_Mig_Site_Acceptance_Test_Req:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13703,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_vSphere_Client_Node_Type)*>,Dell OptiPlex XE4),[GT](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,0))",
+    "name": "Part_EP_COAW10",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-COAW21)*><*SETATVQTY(Virtualization_BOM_Parts:EP-COAW21,<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>)*><* DoResetAtt *>",
+    "description": "Story 8705 & Story 8708",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

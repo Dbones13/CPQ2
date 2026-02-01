@@ -1,0 +1,11 @@
+{
+    "id": 13541,
+    "condition": "[EQ](<*VALUE(Virtualization_Will Honeywell provide the HW/SW?)*>,)",
+    "name": "default_Virtualization_Will Honeywell provide the HW/SW",
+    "action": "<*SELECTVALUE(Virtualization_Will Honeywell provide the HW/SW?:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

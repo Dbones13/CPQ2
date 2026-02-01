@@ -1,0 +1,11 @@
+{
+    "id": 19929,
+    "condition": "[NOT]([OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)))",
+    "name": "Hide_SerC_CG_Cabinet_Type_03",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Cabinet_Type_03)*>",
+    "description": "CXCPQ-44672",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

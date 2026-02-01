@@ -1,0 +1,11 @@
+{
+    "id": 18243,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,MXIR Coat Weight SSIR LATEX / CACO3/ MOI)",
+    "name": "Part_D_Q6406_86",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q6406-86)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

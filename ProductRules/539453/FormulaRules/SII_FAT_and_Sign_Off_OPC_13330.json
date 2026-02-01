@@ -1,0 +1,11 @@
+{
+    "id": 13330,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is OPC Interface in Scope?)*>,Yes))",
+    "name": "SII FAT and Sign Off_OPC",
+    "action": "<*ASSIGNVALUE(SII FAT and Sign Off_OPC:<* Eval(0.25*<*VALUE(Number of OPC Interfaces)*>) *>)*>",
+    "description": "39404",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

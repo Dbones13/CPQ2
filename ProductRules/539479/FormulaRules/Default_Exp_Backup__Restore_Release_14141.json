@@ -1,0 +1,11 @@
+{
+    "id": 14141,
+    "condition": "[EQ](<*VALUE(Exp_Backup & Restore_Release)*>,)",
+    "name": "Default_Exp_Backup & Restore_Release",
+    "action": "<*SELECTVALUE(Exp_Backup & Restore_Release:R520)*>",
+    "description": "CXCPQ-37118",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

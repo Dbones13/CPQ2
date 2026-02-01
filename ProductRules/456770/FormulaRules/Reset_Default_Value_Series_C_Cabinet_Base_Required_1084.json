@@ -1,0 +1,11 @@
+{
+    "id": 1084,
+    "condition": "[NOT](<*ANYSELATT(Series_C_Cabinet_Base_Required)*>)",
+    "name": "Reset_Default_Value_Series_C_Cabinet_Base_Required",
+    "action": "<*RESETATTRIBUTE(Series_C_Cabinet_Base_Required)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17767,
+    "condition": "[EQ](<*VALUE(Calculate_Trigger)*>,1)",
+    "name": "PartSummary Calculation Trigger",
+    "action": "<* ExecuteScript(PS_SM_RG_Part_Summary) *>\n<*RESETATTRIBUTE(Calculate_Trigger)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

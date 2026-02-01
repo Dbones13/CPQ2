@@ -1,0 +1,11 @@
+{
+    "id": 12982,
+    "condition": "[OR](<*ATTSEL(SC_Labor_Pricing_Escalation_Based)*>,<*ATTSEL(SC_Labor_Resource_Type)*>)",
+    "name": "SC_Labor_CustomerPrice_Calc",
+    "action": "<* ExecuteScript(PS_Calculate_total_prices) *>\n[IF]([EQ](<*VALUE(SC_Product_Type)*>,New)){<*ASSIGNVALUE(SC_Labor_Customer_List_Price:<* Round ( <*VALUE(SC_Labor_Honeywell_List_Price)*>, 2) *>)*>}{[IF]([EQ](<*VALUE(SC_Labor_Pricing_Escalation_Based)*>,Yes)){<*ASSIGNVALUE(SC_Labor_Customer_List_Price:<*VALUE(SC_Labor_PY_CustomerLP)*>)*>}{<*ASSIGNVALUE(SC_Labor_Customer_List_Price:<* Round ( <*VALUE(SC_Labor_Honeywell_List_Price)*>, 2) *>)*>}[ENDIF]}[ENDIF]\n[IF]([EQ](<*VALUE(SC_Labor_Customer_List_Price)*>,)){<*ASSIGNVALUE(SC_Labor_Customer_List_Price:0)*>}[ENDIF]",
+    "description": "",
+    "rank": "20",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

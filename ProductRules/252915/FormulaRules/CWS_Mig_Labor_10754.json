@@ -1,0 +1,11 @@
+{
+    "id": 10754,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,CWS RAE Upgrade),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "CWS_Mig_Labor",
+    "action": "<*DISALLOWATTRIBUTES(CWS_Mig_Customer_require_a_Touch_Screen_monitor,CWS_Mig_system_contain_Serial_Communication_links,CWS_Mig_Touch_Screen_monitor_for_the_Operator_Station)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

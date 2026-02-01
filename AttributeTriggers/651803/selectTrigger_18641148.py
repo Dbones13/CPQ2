@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(Number of Windows Assets:0)*>

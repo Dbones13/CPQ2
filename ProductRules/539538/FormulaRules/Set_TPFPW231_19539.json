@@ -1,0 +1,11 @@
+{
+    "id": 19539,
+    "condition": "[GT](<* IsNull(<*VALUE(Exp HS Enter Total Monitors required in the system)*>,0) *>,0)",
+    "name": "Set TP-FPW231",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:TP-FPW231)*><*SETATVQTY(Experion_HS_PART_SUMMARY:TP-FPW231,<*VALUE(Exp HS Enter Total Monitors required in the system)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

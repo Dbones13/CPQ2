@@ -1,0 +1,11 @@
+{
+    "id": 13271,
+    "condition": "[EQ](<*VALUE(Number of Fieldbus Devices)*>,)",
+    "name": "Set default value for Number of Fieldbus Devices",
+    "action": "<*ASSIGNVALUE(Number of Fieldbus Devices:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

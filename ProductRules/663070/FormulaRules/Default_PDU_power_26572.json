@@ -1,0 +1,11 @@
+{
+    "id": 26572,
+    "condition": "[EQ](<*VALUE(PDU Power Cable Req for HP/ Huawei Switch)*>,)",
+    "name": "Default_PDU_power",
+    "action": "<*SELECTVALUE(PDU Power Cable Req for HP/ Huawei Switch:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

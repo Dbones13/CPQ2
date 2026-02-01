@@ -1,0 +1,11 @@
+{
+    "id": 12141,
+    "condition": "[EQ](<*VALUE(PSW_Number of SIFs)*>,)",
+    "name": "Default value of PSW_Number of SIFs",
+    "action": "<*ASSIGNVALUE(PSW_Number of SIFs:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20761,
+    "condition": "[AND]([NOT]([AND]([EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module)*>,Yes),[EQ](<*VALUE(SS_Server_Node_Type)*>,SVR_PER_HP_Rack_RAID5))),[NOT]([AND]([EQ](<*VALUE(SS_Trusted_Platform_Module_Station)*>,Yes),[EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Server_Node_Type_Workstation)*>,SVR_PER_HP_Rack_RAID5))))",
+    "name": "Part_D_MZ_PCSV85_4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MZ-PCSV85)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

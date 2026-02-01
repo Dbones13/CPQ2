@@ -1,0 +1,11 @@
+{
+    "id": 19738,
+    "condition": "[EQ](<*VALUE(SerC_CG_Wiring_and_Ducts)*>,)",
+    "name": "Default_SerC_CG_Wiring_and_Ducts",
+    "action": "<*SELECTVALUE(SerC_CG_Wiring_and_Ducts:Standard PVC FRLS (Fire Retardant + Low Smoke))*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

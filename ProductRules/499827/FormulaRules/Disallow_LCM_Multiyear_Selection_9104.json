@@ -1,0 +1,11 @@
+{
+    "id": 9104,
+    "condition": "<*IFANYVALUE(LCM_MultiYear_Project:No)*>",
+    "name": "Disallow LCM_Multiyear_Selection",
+    "action": "<*DISALLOWATTRIBUTES(LCM_Multiyear_Selection)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

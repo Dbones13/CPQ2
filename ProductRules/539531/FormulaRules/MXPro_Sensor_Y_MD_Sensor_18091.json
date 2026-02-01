@@ -1,0 +1,11 @@
+{
+    "id": 18091,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Y_MD_Sensor)*>,)",
+    "name": "MXPro_Sensor_Y_MD_Sensor",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Y_MD_Sensor:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

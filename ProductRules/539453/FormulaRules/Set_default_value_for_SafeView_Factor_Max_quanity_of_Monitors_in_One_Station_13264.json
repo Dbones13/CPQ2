@@ -1,0 +1,11 @@
+{
+    "id": 13264,
+    "condition": "[EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,)",
+    "name": "Set default value for SafeView Factor (Max quanity of Monitors in One Station)",
+    "action": "<*SELECTVALUE(SafeView Factor (Max quanity of Monitors in One Station):Dual)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

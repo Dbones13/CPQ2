@@ -1,0 +1,11 @@
+{
+    "id": 19730,
+    "condition": "[EQ](<*VALUE(SerC_CG_Cabinet_Thermostat)*>,)",
+    "name": "Default_SerC_CG_Cabinet_Thermostat",
+    "action": "<*SELECTVALUE(SerC_CG_Cabinet_Thermostat:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

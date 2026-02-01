@@ -1,0 +1,11 @@
+{
+    "id": 14636,
+    "condition": "[EQ](<*VALUE(MXP_Software_Extensionsadd_ons_for_existing)*>,)",
+    "name": "Default_MX_CD_Software_Extensions_add_ons_for_existing",
+    "action": "<*SELECTVALUE(MXP_Software_Extensionsadd_ons_for_existing:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

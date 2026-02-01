@@ -1,0 +1,11 @@
+{
+    "id": 19860,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).Rows.GetCount )*>,0),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II))",
+    "name": "Load_Enhanced_function_Mark",
+    "action": "<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).LoadKeys(IO_Type).Load(SELECT IO_Type FROM Enhanced_function1 WHERE Container_Name = 'C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont'))*>",
+    "description": "CXCPQ-37808",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

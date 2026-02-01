@@ -1,0 +1,11 @@
+{
+    "id": 24371,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Experion_PKS_Release)*>,R520),[EQ](<*VALUE(FDM_RCI_PC_required)*>,Yes))",
+    "name": "Station_node_values_520_allow_pc",
+    "action": "<*ALLOWVALUES(FDM_RCI_PC_Station_Node_Type:STN_PER_DELL_Tower_RAID2)*>\n<*DISALLOWVALUES(FDM_RCI_PC_Station_Node_Type:None)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

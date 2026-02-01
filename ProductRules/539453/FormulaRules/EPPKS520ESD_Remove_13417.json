@@ -1,0 +1,11 @@
+{
+    "id": 13417,
+    "condition": "[OR]([NEQ](<*VALUE(Experion Software Release)*>,R520),[NEQ](<*VALUE(Experion Base Media Delivery)*>,Electronic Download))",
+    "name": "EP-PKS520-ESD_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Sys_Part_Summary:EP-PKS520-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

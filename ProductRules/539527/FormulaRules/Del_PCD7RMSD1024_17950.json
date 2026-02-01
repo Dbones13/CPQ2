@@ -1,0 +1,11 @@
+{
+    "id": 17950,
+    "condition": "[NOT]([GT](<*VALUE(PCD_Qty_of_Saia_PCD_uSD_Flash_memory_card_1024_MB)*>,0))",
+    "name": "Del_PCD7.R-MSD1024",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PCD_Part_Summary:PCD7.R-MSD1024)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

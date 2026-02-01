@@ -1,0 +1,11 @@
+{
+    "id": 20391,
+    "condition": "[AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R530),[GT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0))",
+    "name": "Show_DeskNodeOption",
+    "action": "<*ALLOWVALUES(SS_Flex Staton  Desk Node_desk:STN_PER_HP_Tower_RAID1,SS_Flex Staton  Desk Node_desk:STN_PER_DELL_Rack_RAID1,SS_Flex Staton  Desk Node_desk:STN_PER_DELL_Tower_RAID1)*><*DISALLOWVALUES(SS_Flex Staton  Desk Node_desk:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

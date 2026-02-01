@@ -1,0 +1,11 @@
+{
+    "id": 25897,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Orion Console Left Extend Auxil Equip Unit (0-40))*>,0),[EQ](<*VALUE(Turret location in Extended Auxil Equip Unit)*>,Center),[OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Left Extend Auxil Equip Unit (0-40))*>,0),[NEQ](<*VALUE(Orion Console Turret Type)*>,None)))",
+    "name": "MP-OCXDL1-100_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCXDL1-100)*><* DoResetAtt *>",
+    "description": "CXCPQ-38789",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

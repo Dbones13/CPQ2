@@ -1,0 +1,11 @@
+{
+    "id": 14553,
+    "condition": "[EQ](<*VALUE(PRMS Number of Regulating Packages)*>,)",
+    "name": "Default Number of Regulating Packages",
+    "action": "<*ASSIGNVALUE(PRMS Number of Regulating Packages:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

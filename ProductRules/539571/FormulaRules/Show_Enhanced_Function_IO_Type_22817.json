@@ -1,0 +1,11 @@
+{
+    "id": 22817,
+    "condition": "[OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)",
+    "name": "Show Enhanced Function IO Type",
+    "action": "<*ALLOWATTRIBUTES(Header_15_close,Header_15_open,SerC_RG_Enhanced_Function_IO_Cont,SerC_RG_Enhanced_Function_IO_Cont2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

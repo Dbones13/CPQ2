@@ -1,0 +1,11 @@
+{
+    "id": 26562,
+    "condition": "[AND]([NEQ](<*VALUE(CMS Flex Station Hardware Selection)*>,STN_PER_DELL_Rack_RAID1),[NEQ](<*VALUE(CMS TPS Station Hardware Selection)*>,STN_PER_DELL_Rack_RAID1),[NEQ](<*ISSELECTED(CMS Console Station Hardware Selection.STN_PER_DELL_Rack_RAID1)*>,STN_PER_DELL_Rack_RAID1),[NEQ](<*ISSELECTED(CMS Console Station Extension Hardware Selection.STN_PER_DELL_Rack_RAID1)*>,STN_PER_DELL_Rack_RAID1), [EQ](<*VALUE(CMS Cabinet Mounting Stations required)*>,Yes))",
+    "name": "SHOW_CMS Cabinet Station Mounting Type",
+    "action": "<*ALLOWATTRIBUTES(CMS Cabinet Station Mounting Type)*><*SETREQUIRED(CMS Cabinet Station Mounting Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

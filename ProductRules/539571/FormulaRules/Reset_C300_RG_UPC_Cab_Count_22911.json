@@ -1,0 +1,11 @@
+{
+    "id": 22911,
+    "condition": "[EQ](<*VALUE(C300_RG_UPC_Cab_Count)*>,)",
+    "name": "Reset_C300_RG_UPC_Cab_Count",
+    "action": "<*ASSIGNVALUE(C300_RG_UPC_Cab_Count:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

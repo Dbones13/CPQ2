@@ -1,0 +1,11 @@
+{
+    "id": 1013,
+    "condition": "[IN](<*VALUE(MSID_Current_Experion_Release)*>,R511)",
+    "name": "Hide R511 Future Release",
+    "action": "<*DISALLOWVALUES(MSID_Future_Experion_Release:R511)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

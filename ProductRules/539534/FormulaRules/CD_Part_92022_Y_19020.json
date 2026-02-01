@@ -1,0 +1,11 @@
+{
+    "id": 19020,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Yankee),[EQ](<*VALUE(MX_CD_Air_Cylinder)*>,Yes))",
+    "name": "CD_Part_92022_Y",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:92022-Y)*><*SETATVQTY(MX_CD_Bom_Parts:92022-Y, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

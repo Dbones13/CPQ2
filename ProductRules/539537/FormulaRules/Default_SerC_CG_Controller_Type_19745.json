@@ -1,0 +1,11 @@
+{
+    "id": 19745,
+    "condition": "[EQ](<*VALUE(SerC_CG_Controller_Type)*>,)",
+    "name": "Default_SerC_CG_Controller_Type",
+    "action": "<*SELECTVALUE(SerC_CG_Controller_Type:Redundant)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

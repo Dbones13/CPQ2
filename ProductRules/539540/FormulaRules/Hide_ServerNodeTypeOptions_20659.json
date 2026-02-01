@@ -1,0 +1,11 @@
+{
+    "id": 20659,
+    "condition": "[AND]([EQ](<*VALUE(SS_Simulation_Server_required)*>,Yes),\n[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R511))",
+    "name": "Hide_ServerNodeTypeOptions",
+    "action": "<*DISALLOWVALUES(SS_Server_Node_Type:SVR_PER_DELL_Rack_RAID1_XE)*>\n<*DISALLOWVALUES(SS_Server_Node_Type:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

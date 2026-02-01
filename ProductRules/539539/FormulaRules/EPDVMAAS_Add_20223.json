@@ -1,0 +1,11 @@
+{
+    "id": 20223,
+    "condition": "[GT](<*VALUE(DVM_HVA -Active_Alert_Standard_EP-DVMAAS)*>,0)",
+    "name": "EP-DVMAAS_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMAAS)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMAAS, <*VALUE(DVM_HVA -Active_Alert_Standard_EP-DVMAAS)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14990,
+    "condition": "[GT](<*Eval(int(((0<*VALUE(LSS_Total_Experion_UOC_Advanced_Batch_Points)*>/100))))*>,0)",
+    "name": "BOM_PLC_UOC_EP-2BP100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-2BP100)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-2BP100, <*Eval(int((0<*VALUE(LSS_Total_Experion_UOC_Advanced_Batch_Points)*>/100)))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13107,
+    "condition": "[NOT](<*ATTDEF(SC_WEP_ServiceProduct_OCP)*>)",
+    "name": "Default_ServiceProduct_OCP",
+    "action": "<*ASSIGNVALUE(SC_WEP_ServiceProduct_OCP:Workforce Excellence Program)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

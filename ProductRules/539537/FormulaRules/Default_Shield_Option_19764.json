@@ -1,0 +1,11 @@
+{
+    "id": 19764,
+    "condition": "[EQ](<*VALUE(Shield_Option)*>,)",
+    "name": "Default_Shield_Option",
+    "action": "<*SELECTVALUE(Shield_Option:Shields)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

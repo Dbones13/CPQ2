@@ -1,0 +1,11 @@
+{
+    "id": 14614,
+    "condition": "[EQ](<*VALUE(MSC_Number_Of_Period_Reports_Per_Liquid_System)*>,)",
+    "name": "Default_Number_Of_Period_Reports_Per_Liquid_System",
+    "action": "<*ASSIGNVALUE(MSC_Number_Of_Period_Reports_Per_Liquid_System:2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25619,
+    "condition": "[EQ](<*VALUE(Experion UOC Digital Points (0-61440))*>,)",
+    "name": "select_default_UOC5",
+    "action": "<*SELECTVALUE(Experion UOC Digital Points (0-61440):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13195,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "TPA_labor_del_Serial_Interface_Engineering_OnSite",
+    "action": "<*ASSIGNVALUE(TPA_labor_del_Serial_Interface_Engineering_OnSite:<* Round ( <* Eval((<* Round ( <* Eval(<*VALUE(TPA_Existing_RTU_in_FC_or_existing_terminal_device_server_used_Existing_serial_links_that_remains_as_is_now)*>*<*VALUE(TPA_labor_para_cst_link_1t1)*>+<*VALUE(TPA_Existing_serial_links_with_supported_protocol_which_will_be_redone_with_Serial_Device_Driver)*>*<*VALUE(TPA_labor_para_cst_link_sp)*>+<*VALUE(TPA_Existing_serial_links_with_unsupported_protocol_which_will_be_redone_with_Serial_Device_Driver_Profibus_or_Profinet)*>*<*VALUE(TPA_labor_para_cst_link_new)*>+([IF]([GT](<*VALUE(TPA_How_many_existing_OPC_communication_partners_direct_to_DCS_No_PHD_available_or_data_is_not_in_PHD_or_OPC_data_is_used_for_controls)*>,0)){<*VALUE(TPA_labor_para_cst_opclnk_ua)*>+(<*VALUE(TPA_How_many_existing_OPC_communication_partners_direct_to_DCS_No_PHD_available_or_data_is_not_in_PHD_or_OPC_data_is_used_for_controls)*>-1)*<*VALUE(TPA_labor_para_cst_opclnk_ua)*>/2}{<*VALUE(TPA_How_many_existing_OPC_communication_partners_direct_to_DCS_No_PHD_available_or_data_is_not_in_PHD_or_OPC_data_is_used_for_controls)*>*<*VALUE(TPA_labor_para_cst_opclnk_ua)*>}[ENDIF])+([IF]([GT](<*VALUE(TPA_How_many_existing_OPC_communication_partners_thru_PHD?_New_ICSS_will_have_PHD_and_needed_data_is_in_PHD_DB)*>,0)){<*VALUE(TPA_labor_para_cst_opclnk_phd)*>+(<*VALUE(TPA_How_many_existing_OPC_communication_partners_thru_PHD?_New_ICSS_will_have_PHD_and_needed_data_is_in_PHD_DB)*>-1)*<*VALUE(TPA_labor_para_cst_opclnk_phd)*>/2}{<*VALUE(TPA_How_many_existing_OPC_communication_partners_thru_PHD?_New_ICSS_will_have_PHD_and_needed_data_is_in_PHD_DB)*>*<*VALUE(TPA_labor_para_cst_opclnk_phd)*>}[ENDIF])) *>,2) *>)*<*VALUE(TPA_labor_para_lnk_onst)*>) *>,2) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

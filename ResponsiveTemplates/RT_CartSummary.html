@@ -1,0 +1,43 @@
+<li id="cartSummaryMenu" class="current-quote current-quote-and-favorites shellbar-navigation-item hidden" data-bind="visible: isQuoteEnvironmentExists, css: { 'disabled': document.location.pathname == '/quotation/Cart.aspx', 'hidden': shouldHideOptions || isElectronicallyGuestLoggedIn }" style="display: none;">
+    <a id="cartSummaryMenuDropdownTrigger" class="dropdown-toggle nav-menu-icon current-quote-icon-style" aria-label="@Translation.GetJS("Default.master.CurrentQuote")" data-toggle="dropdown" href="#" data-bind="click: function() { toggleCurrentCartMenuIcon(); getViewQuoteItemsModel(); }, css: { 'icon-clicked': currentCartMenuIconClicked }, tooltip: { title: '@Translation.GetJS("Default.master.CurrentQuote")', placement: 'left', viewport: (!landedFromC4C ? '.current-quote-and-favorites' : 'header') }, attr: { tabindex: document.location.pathname == '/quotation/Cart.aspx' ? '-1' : '0' }">
+        &#xe12a;
+        <span class="badge" data-bind="text: mainItemsNo() <= 99 ? mainItemsNo : '99+'"></span>
+    </a>
+    <div class="customer-menu-closing-div" data-bind="click: turnOffMenus, visible: currentCartMenuIconClicked"></div>
+        <div id="currentQuoteDropdown" class="dropdown-menu stayOpen customer-menu-dropdown current-quote-dropdown-menu">
+            <div id="CartPreviewContainer">
+                <table>
+                    <tbody>
+                        <!-- ko foreach: viewQuoteItems -->
+                        <tr data-bind="css: { 'newly-added-product': !isCalculated }">
+                            <td>
+                                <span data-bind="text: rolledUpCartItem"></span>
+                            </td>
+                            <td>
+                                <img data-bind="visible: productImage.length > 0, attr: { src: productImage, alt: '' }" height="40" width="40">
+                            </td>
+                            <td>
+                                <span data-bind="text: productName" class="bold"></span>
+                                <span data-bind="visible: partNumber">(<span data-bind="    text: partNumber"></span>)</span>
+                                <br>
+                                Qty: <span data-bind="text: quantity"></span>
+                            </td>
+                            <td>
+                                <label class="label label-success" data-bind="text: price"></label>
+                            </td>
+                        </tr>
+                        <!-- /ko -->
+                    </tbody>
+                </table>
+                <span class="current-quote-more-items" data-bind="visible: mainItemsNo() > 10, text: '+' + (mainItemsNo() - 10) + ' more'"></span>
+            </div>
+            <a class="current-quote-view btn btn-tertiary fiori3-btn-tertiary" href="#" data-bind="click: $root.viewQuote" >@Translation.Get("View.CartSummery.ViewQuote")</a>
+        </div>
+</li>
+@*if guest user is logged in, show only log in link*@
+<li class="guest-user-login-button hidden" data-bind="css: { hidden : !isGuestUserLoggedIn }">
+    <a data-bind="click: guestUserLogin" href="#">@Translation.Get("Default.master.Login")</a>
+    @Html.PartialWithNameAsComment("GuestUserLoginTemplate")
+</li>
+<!-- only show this on SF menu -->
+<li><div class="sap_logo_small"></div></li>

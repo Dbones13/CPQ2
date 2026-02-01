@@ -1,0 +1,11 @@
+{
+    "id": 26086,
+    "condition": "<*ISSELECTED(Experion Server Type.Flex Server)*>",
+    "name": "Allow_Experion_Server_Type_Flex_Server",
+    "action": "<*ALLOWVALUES(Cabinet Depth:0.8M)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

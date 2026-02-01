@@ -1,0 +1,11 @@
+{
+    "id": 13058,
+    "condition": "[AND]([EQ](<*CTX( Quote.CustomField(Quote Type) )*>,Contract New),[NOT]([EQ](<*VALUE(SC_License_type)*>,Term)))",
+    "name": "Hide/Show_SC_Years_of_Support",
+    "action": "<*ALLOWATTRIBUTES(SC_Years_of_Support)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

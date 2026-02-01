@@ -1,0 +1,11 @@
+{
+    "id": 14992,
+    "condition": "1",
+    "name": "BOM_PLC_UOC_EP-REG100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-REG100)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-REG100, <*Eval(int((0<*VALUE(LSS_Experion_UOC_Regulatory_Compliance_Points)*>/100)+(<*VALUE(subcal_EP_REG100)*>)))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

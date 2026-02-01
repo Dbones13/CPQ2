@@ -1,0 +1,11 @@
+{
+    "id": 22899,
+    "condition": "[EQ](<*VALUE(C300_RG_UPC_Non_GIIS_Universal_Marshalling_Count)*>,)",
+    "name": "Reset_C300_RG_UPC_Non_GIIS_Universal_Marshalling_Count",
+    "action": "<*ASSIGNVALUE(C300_RG_UPC_Non_GIIS_Universal_Marshalling_Count:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22133,
+    "condition": "[NOT]([GEQ](<* Eval(<*VALUE(FDM HART-IP Server Points/Devices (0-5000))*> + 15) *>,4096))",
+    "name": "Del_HC-HS4096",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-HS4096)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14988,
+    "condition": "1",
+    "name": "BOM_PLC_UOC_TC-RCMP01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:TC-RCMP01)*><* DoResetAtt *>[IF]([LT](<*Eval(((0<*VALUE(LSS_Experion_UOC_Regulatory_Compliance_Points)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-REG100)*>*100)))*>,0)){<*SETATVQTY(PLC_UOC_BOM_Items:TC-RCMP01, 0)*>}{<*SETATVQTY(PLC_UOC_BOM_Items:TC-RCMP01, <*Eval(0-int(0-(((0<*VALUE(LSS_Experion_UOC_Regulatory_Compliance_Points)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-REG100)*>*100))/50)))*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13912,
+    "condition": "[EQ](<*VALUE(PCD_Ges_Location_Labour)*>,None)",
+    "name": "GES_Location_None",
+    "action": "<*CTX( Container(PCD Engineering Labor Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(PCD Engineering Labor Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX( Container(PCD Additional Custom Deliverables).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(PCD Additional Custom Deliverables).Column(GES Eng % Split).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(PCD_GES_%)*><*DISALLOWATTRIBUTES(PCD_ACD_GES_%)*><*CTX( Container(PCD Engineering Labor Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*>\n<*CTX( Container(PCD Engineering Labor Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*>\n<*CTX( Container(PCD Engineering Labor Container).Column(GES_ListPrice).SetPermission(Hidden) )*>\n<*CTX( Container(PCD Engineering Labor Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*>\n<*CTX( Container(PCD Engineering Labor Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n<*CTX( Container(PCD Additional Custom Deliverables).Column(GES_Unit_Regional_Cost).SetPermission(Hidden))*>\n<*CTX( Container(PCD Additional Custom Deliverables).Column(GES_Regional_Cost).SetPermission(Hidden))*>\n<*CTX( Container(PCD Additional Custom Deliverables).Column(GES_ListPrice).SetPermission(Hidden))*>\n<*CTX( Container(PCD Additional Custom Deliverables).Column(GES_WTW_Cost).SetPermission(Hidden))*>\n<*CTX( Container(PCD Additional Custom Deliverables).Column(GES_MPA_Price).SetPermission(Hidden))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

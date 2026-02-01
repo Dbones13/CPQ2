@@ -1,0 +1,11 @@
+{
+    "id": 26234,
+    "condition": "[EQ](<*VALUE(Display Size (ACE-T))*>,)",
+    "name": "Default_Display Size (ACE-T)",
+    "action": "<*SELECTVALUE(Display Size (ACE-T):27 inch NTS NEC)*>",
+    "description": "35416",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

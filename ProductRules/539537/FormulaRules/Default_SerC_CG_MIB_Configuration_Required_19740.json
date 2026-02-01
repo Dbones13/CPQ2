@@ -1,0 +1,11 @@
+{
+    "id": 19740,
+    "condition": "[EQ](<*VALUE(SerC_CG_MIB_Configuration_Required)*>,)",
+    "name": "Default_SerC_CG_MIB_Configuration_Required",
+    "action": "<*SELECTVALUE(SerC_CG_MIB_Configuration_Required:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

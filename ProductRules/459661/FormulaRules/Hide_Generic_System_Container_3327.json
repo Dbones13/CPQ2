@@ -1,0 +1,11 @@
+{
+    "id": 3327,
+    "condition": "[NOT]([EQ](<*VALUE(Include_Generic_System)*>,Yes))",
+    "name": "Hide Generic System Container",
+    "action": "<*DISALLOWATTRIBUTES(PMC_Generic_System_Cont)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

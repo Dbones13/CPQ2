@@ -1,0 +1,11 @@
+{
+    "id": 20341,
+    "condition": "[EQ](<*VALUE(SS_Printer_Required)*>,No)",
+    "name": "Dissallow_SS_LaserJet_Printer_Monochrome",
+    "action": "<*DISALLOWATTRIBUTES(SS_LaserJet_Printer_Monochrome)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

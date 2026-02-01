@@ -1,0 +1,11 @@
+{
+    "id": 25745,
+    "condition": "[AND](<*ISSELECTED(CMS Cabinet Mounting Stations required.No)*>,\n<*ISSELECTED(Orion Stations required.No)*>)",
+    "name": "set default value for exp_ent_cab_qnt",
+    "action": "<*ASSIGNVALUE(exp_ent_cab_qnt:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

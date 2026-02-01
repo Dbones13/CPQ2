@@ -1,0 +1,11 @@
+{
+    "id": 4839,
+    "condition": "[EQ](<*VALUE(MX_SE_Dynamic_Air_Gap_Temperature)*>,)",
+    "name": "Default_Dynamic_Air_Gap_Temperature",
+    "action": "<*SELECTVALUE(MX_SE_Dynamic_Air_Gap_Temperature:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

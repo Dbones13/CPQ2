@@ -1,0 +1,11 @@
+{
+    "id": 4842,
+    "condition": "[EQ](<*VALUE(MX_SE_Measurement_Type)*>,)",
+    "name": "none_rule",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

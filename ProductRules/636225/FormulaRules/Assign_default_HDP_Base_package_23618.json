@@ -1,0 +1,11 @@
+{
+    "id": 23618,
+    "condition": "[AND]([EQ](<*VALUE(HDPBase Package)*>,),[EQ](<*VALUE(SC_Product_Type)*>,New))",
+    "name": "Assign default HDP Base package",
+    "action": "<*SELECTVALUE(HDPBase Package:Experion)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

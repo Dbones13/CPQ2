@@ -1,0 +1,11 @@
+{
+    "id": 19249,
+    "condition": "[EQ](<*VALUE(PlantCruise_Experion_Backup_&_Restore_Media_Kit)*>,ESD)",
+    "name": "Add_Software_Base_EP-BRM520-ESD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:EP-BRM520-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

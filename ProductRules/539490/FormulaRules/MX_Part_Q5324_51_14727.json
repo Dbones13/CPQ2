@@ -1,0 +1,11 @@
+{
+    "id": 14727,
+    "condition": "[EQ](<*VALUE(MX_RAE_OPC_DA_Client)*>,Yes)",
+    "name": "MX_Part_Q5324_51",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5324-51)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5324-51, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

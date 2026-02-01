@@ -1,0 +1,11 @@
+{
+    "id": 13849,
+    "condition": "1",
+    "name": "SSE System Integration and Internal Test",
+    "action": "<*ASSIGNVALUE(SSE System Integration and Internal Test:<*Eval((2 + 6*<*VALUE(Labor_parameter_mcab)*> + 2*<*VALUE(Labor_parameter_rg)*>)+ (0.1 * <*VALUE(Labor_parameter_mcab)*> * (40 + 10*<*VALUE(Labor_parameter_is)*>))+ (0.05 * <*VALUE(Labor_parameter_io)*> * [IF]([EQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(Implementation_Methodology).Get )*>,StandardBuildEstimate)){0.9}{1}[ENDIF]))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

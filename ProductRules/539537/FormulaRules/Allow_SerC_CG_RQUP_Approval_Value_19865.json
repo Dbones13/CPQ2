@@ -1,0 +1,11 @@
+{
+    "id": 19865,
+    "condition": "[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Cabinet)*>)",
+    "name": "Allow_SerC_CG_RQUP_Approval_Value",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_RQUP_Approval_Value)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

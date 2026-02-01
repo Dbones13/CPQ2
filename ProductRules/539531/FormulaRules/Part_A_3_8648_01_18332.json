@@ -1,0 +1,11 @@
+{
+    "id": 18332,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Large_angle_kit)*>,Yes),[IN](<*VALUE(MXP_Scanner_Type)*>,3-6080-41,3-6080-00,3-6080-81,3-6080-43,3-6080-46))",
+    "name": "Part_A_3_8648_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-8648-01)*><*SETATVQTY(MXP_SE_Bom_Parts:3-8648-01,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

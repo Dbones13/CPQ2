@@ -1,0 +1,11 @@
+{
+    "id": 26580,
+    "condition": "[EQ](<*VALUE(Cabinet_Industrial_KB_Mouse)*>,)",
+    "name": "Cabinet_Industrial_KB_Mouse def",
+    "action": "<*SELECTVALUE(Cabinet_Industrial_KB_Mouse:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

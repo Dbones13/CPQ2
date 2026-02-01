@@ -1,0 +1,11 @@
+{
+    "id": 23967,
+    "condition": "[NOT](<*ISSELECTED(Terminal_Mode_of_Transport.Truck loading/unloading)*>)",
+    "name": "Disallow Hazardous Material Support",
+    "action": "<*DISALLOWATTRIBUTES(Hazardous_Material_Support)*><*SETOPTIONAL(Hazardous_Material_Support)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

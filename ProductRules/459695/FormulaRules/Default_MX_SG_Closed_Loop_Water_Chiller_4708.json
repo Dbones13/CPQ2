@@ -1,0 +1,11 @@
+{
+    "id": 4708,
+    "condition": "[EQ](<*VALUE(MX_SG_Closed_Loop_Water_Chiller)*>,)",
+    "name": "Default_MX_SG_Closed_Loop_Water_Chiller",
+    "action": "<*SELECTVALUE(MX_SG_Closed_Loop_Water_Chiller:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

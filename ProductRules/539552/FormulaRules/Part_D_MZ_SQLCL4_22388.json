@@ -1,0 +1,11 @@
+{
+    "id": 22388,
+    "condition": "[AND]([NEQ](<*VALUE(ESDC_Software_Release)*>,R530),[EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[EQ](<*VALUE(ESDC_Station_Node_Type)*>,None))",
+    "name": "Part_D_MZ_SQLCL4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-SQLCL4)*><* DoResetAtt *><* DoNotResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

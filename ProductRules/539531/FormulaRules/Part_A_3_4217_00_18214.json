@@ -1,0 +1,11 @@
+{
+    "id": 18214,
+    "condition": "[EQ](<*VALUE(MXP_Sensor_Type)*>,X Ray sensor, 5kV, 0.4-1\" gap.)",
+    "name": "Part_A_3_4217_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-4217-00)*><*SETATVQTY(MXP_SE_Bom_Parts:3-4217-00,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

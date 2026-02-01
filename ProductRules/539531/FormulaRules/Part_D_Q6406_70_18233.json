@@ -1,0 +1,11 @@
+{
+    "id": 18233,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,MXIR Coat Weight SSIR CLAY / LATEX)",
+    "name": "Part_D_Q6406_70",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q6406-70)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

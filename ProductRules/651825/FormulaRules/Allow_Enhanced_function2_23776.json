@@ -1,0 +1,11 @@
+{
+    "id": 23776,
+    "condition": "[AND]([GT](<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont1).Sum(Message_Check) )*>,0),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II))",
+    "name": "Allow_Enhanced_function2",
+    "action": "<*ALLOWATTRIBUTES(Enhanced_function_message2)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

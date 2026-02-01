@@ -1,0 +1,11 @@
+{
+    "id": 13826,
+    "condition": "1",
+    "name": "SSE Safety System Architectural Specification 2",
+    "action": "<*ASSIGNVALUE(SSE Safety System Architectural Specification 2:<* Eval(8*<*VALUE(Labor_parameter_scab)*>*0.9) *>)*>",
+    "description": "For Safety System - ESD/FGS/BMS/HIPPS deliverable:\n\nCalculated Hours= 8*scab*0.9",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

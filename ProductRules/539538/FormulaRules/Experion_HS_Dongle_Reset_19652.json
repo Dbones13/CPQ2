@@ -1,0 +1,11 @@
+{
+    "id": 19652,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(New_Expansion)*>,New),[IF]([EQ](<*Eval(LCASE(\"<* TABLE ( SELECT Booking_Country FROM PMC_Exp_HS_Dongle_Product_BookingCountry \nWHERE Booking_Country = '<*Eval(LCASE(\"<*CTX( Quote.CustomField(Booking Country) )*>\"))*>' ) *>\"))*>,<*Eval(LCASE(\"<*CTX( Quote.CustomField(Booking Country) )*>\"))*>)){1}{0}[ENDIF]))",
+    "name": "Experion HS Dongle Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-DONUSB)*><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-DONENB)*><* DoResetAtt *>",
+    "description": "Reset EP-DONUSB and EP-DONENB",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

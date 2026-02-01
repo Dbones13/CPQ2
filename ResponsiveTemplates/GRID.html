@@ -1,0 +1,68 @@
+<div data-bind="visible: !hasData()">
+    <div class="alert alert-warning">
+        @Translation.Get("Msg.NoQuotesFound")
+        <!-- ko if: $root.filter.hasActiveFilters -->
+        <a href="#" data-bind="click: $root.filter.clearAllFilters">@Translation.Get("Msg.ClearAllFilters")</a>
+        <!-- /ko -->
+    </div>
+</div>
+<div class="clearfix" data-bind="visible: hasData() && !isInViewMode()">
+    <div class="pull-left">
+        <button data-bind="visible: hasData() && !isInViewMode(), click: $root.saveData" class="btn btn-primary fiori3-btn-primary">@Translation.Get("Msg.Save")</button>
+        <button data-bind="visible: hasData() && !isInViewMode(), click: setViewMode" class="btn btn-secondary fiori3-btn-secondary">@Translation.Get("Msg.Cancel")</button>
+    </div>
+</div>
+<div id="no-more-tables" class="table-responsive col-md-12 mobile-grid cpq-scroll" data-bind="visible: hasData()">
+    <table class="table table-bordered fiori3-table">
+        <thead>
+            <tr>
+	
+                <th class="column-with-actions-header"></th>
+                <!-- ko foreach: columns -->
+                <!-- ko if: isSortable() -->
+                <th data-bind="class:'header '+fieldName.replaceAll(' ','_'),click: setSortBy, css: { 'header-sort-up': isAscDirection(), 'header-sort-down': isDescDirection() }">
+                    <span data-bind="textOrNbsp: title"></span>
+                </th>
+                <!-- /ko -->
+                <!-- ko ifnot: isSortable() -->
+                <th data-bind="visible: $parent.showStatusColumn || name != 'order_status'">
+                    <span data-bind="textOrNbsp: title"></span>
+                </th>
+                <!-- /ko -->
+                <!-- /ko -->
+            </tr>
+        </thead>
+		
+        <tbody data-bind="foreach: rows">
+            <tr>
+                <td class="column-with-actions dropdown">
+                    <div class="btn-group dropdown">
+                        <div class="fiori3-icon-button dropdown-toggle" data-bind="enable: actions().length > 0, tooltip: { title: '@Translation.GetJS("ActionsList.Title")' }, popover: { templateId: 'actionsTemplate', autoClose: true, placement: 'auto bottom', container: '#cartListContainer', closeOnClick: true }">
+                            <span class="sap-icon">&#xe1f2;</span>
+                        </div>
+                    </div>
+                </td>
+                <!-- ko foreach: cells -->
+				 <!-- ko if: headerLabel().replaceAll(' ','_') == 'Quote_Number' -->
+                <td onclick="setqttype(this)" data-bind="attr: { 'data-title': headerLabel ,'class':headerLabel().replaceAll(' ','_')}">
+                    <!-- ko template: { name: templateName } -->
+                    <!-- /ko -->
+                </td> 
+				 <!-- /ko -->
+				 <!-- ko if: headerLabel().replaceAll(' ','_') != 'Quote_Number' -->
+				<td data-bind="attr: { 'data-title': headerLabel ,'class':headerLabel().replaceAll(' ','_')}">
+                    <!-- ko template: { name: templateName } -->
+                    <!-- /ko -->
+                </td>
+				 <!-- /ko -->
+                <!-- /ko -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <!-- ko template: { name: 'PagerTemplate', data: pager } -->
+    <!-- /ko -->
+
+
+ 

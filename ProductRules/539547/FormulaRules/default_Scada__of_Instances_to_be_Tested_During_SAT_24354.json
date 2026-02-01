@@ -1,0 +1,11 @@
+{
+    "id": 24354,
+    "condition": "[EQ](<*VALUE(Scada_%_of_Instances_to_be_Tested_During_SAT)*>,)",
+    "name": "default_Scada_%_of_Instances_to_be_Tested_During_SAT",
+    "action": "<*ASSIGNVALUE(Scada_%_of_Instances_to_be_Tested_During_SAT:100)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

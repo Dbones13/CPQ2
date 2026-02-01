@@ -1,0 +1,11 @@
+{
+    "id": 22317,
+    "condition": "1",
+    "name": "GES Location",
+    "action": "[IF]([EQ](<*CTX( Container(PMD_Labour_Details).Row(1).Column(PMD_Ges_Location).GetDisplayValue )*>,None)){<*DISALLOWATTRIBUTES(CE PMD GES Engineer %)*><*CTX( Container(PMD Engineering Labor Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(PMD Engineering Labor Container).Column(GES Eng % Split).SetPermission(Hidden) )*>}{<*ALLOWATTRIBUTES(CE PMD GES Engineer %)*><*CTX( Container(PMD Engineering Labor Container).Column(GES Eng).SetPermission(Editable) )*><*CTX( Container(PMD Engineering Labor Container).Column(GES Eng % Split).SetPermission(Editable) )*>}[ENDIF]\n\n\n[IF]([EQ](<*CTX( Container(PMD_Labour_Details).Row(1).Column(PMD_Ges_Location).GetDisplayValue )*>,None)){<*DISALLOWATTRIBUTES(PMD CE LD GES Engineer %)*><*CTX( Container(PMD Labor Additional Custom Deliverable).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(PMD Labor Additional Custom Deliverable).Column(GES Eng % Split).SetPermission(Hidden) )*>}{<*ALLOWATTRIBUTES(PMD CE LD GES Engineer %)*><*CTX( Container(PMD Labor Additional Custom Deliverable).Column(GES Eng).SetPermission(Editable) )*><*CTX( Container(PMD Labor Additional Custom Deliverable).Column(GES Eng % Split).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "This script removes GES fields from the Labor Container and attributes, if there is no GES Location.",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

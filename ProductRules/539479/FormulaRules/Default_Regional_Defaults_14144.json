@@ -1,0 +1,11 @@
+{
+    "id": 14144,
+    "condition": "[EQ](<*VALUE(Regional_Defaults)*>,)",
+    "name": "Default_Regional_Defaults",
+    "action": "<*SELECTVALUE(Regional_Defaults:Coated)*>",
+    "description": "CXCPQ-37118",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

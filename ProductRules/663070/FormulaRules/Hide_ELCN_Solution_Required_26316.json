@@ -1,0 +1,11 @@
+{
+    "id": 26316,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[NEQ](<*VALUE(Interface with TPS Required?)*>,Yes))",
+    "name": "Hide_ELCN_Solution_Required",
+    "action": "<*DISALLOWATTRIBUTES(ELCN Solution Required)*>",
+    "description": "Display question ELCN Solution Required only if project is selected as Expansion and Interface with TPS Required? is selected as Yes else hide it.",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

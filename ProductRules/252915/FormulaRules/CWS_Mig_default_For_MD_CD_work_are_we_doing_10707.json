@@ -1,0 +1,11 @@
+{
+    "id": 10707,
+    "condition": "[EQ](<*VALUE(CWS_Mig_For_MD_CD_work_are_we_doing_installation)*>,)",
+    "name": "CWS_Mig_default_For_MD_CD_work_are_we_doing",
+    "action": "<*SELECTVALUE(CWS_Mig_For_MD_CD_work_are_we_doing_installation:Installation Supervision)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

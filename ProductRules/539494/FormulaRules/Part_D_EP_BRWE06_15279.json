@@ -1,0 +1,11 @@
+{
+    "id": 15279,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_ebr)*>,Yes),[LEQ](<*VALUE(MXP_Number_of_Operator_Station)*>,0))",
+    "name": "Part_D_EP_BRWE06",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:EP-BRWE06)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

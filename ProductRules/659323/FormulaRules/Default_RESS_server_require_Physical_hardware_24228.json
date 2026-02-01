@@ -1,0 +1,11 @@
+{
+    "id": 24228,
+    "condition": "[EQ](<*VALUE(RESS_server_require_Physical_hardware)*>,)",
+    "name": "Default_RESS_server_require_Physical_hardware",
+    "action": "<*SELECTVALUE(RESS_server_require_Physical_hardware:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

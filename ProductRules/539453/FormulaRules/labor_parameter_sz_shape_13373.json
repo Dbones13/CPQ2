@@ -1,0 +1,11 @@
+{
+    "id": 13373,
+    "condition": "1",
+    "name": "labor_parameter_sz_shape",
+    "action": "<*ASSIGNVALUE(labor_parameter_sz_shape:[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_ss)*>+0<*VALUE(labor_parameter_cs)*>+0<*VALUE(labor_parameter_ms)*>+0<*VALUE(labor_parameter_vcs)*>+0<*VALUE(labor_parameter_rs)*>) *>,50)){0.6}{[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_ss)*>+0<*VALUE(labor_parameter_cs)*>+0<*VALUE(labor_parameter_ms)*>+0<*VALUE(labor_parameter_vcs)*>+0<*VALUE(labor_parameter_rs)*>) *>,200)){1}{2}[ENDIF]}[ENDIF])*>",
+    "description": "If (ss+ms+cs+vcs+rs) <= 50, SZ = 0.6, else if > 50 and <= 200, SZ = 1 else SZ = 2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

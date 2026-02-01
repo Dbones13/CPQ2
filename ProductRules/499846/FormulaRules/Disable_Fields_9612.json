@@ -1,0 +1,11 @@
+{
+    "id": 9612,
+    "condition": "[EQ](<*CTX( Container(PRODUCTIZED _SKID_BOM).SelectedRow.Column(Type).Get )*>,H)",
+    "name": "Disable Fields",
+    "action": "<*CTX( Container(PRODUCTIZED _SKID_BOM).Column(Part Number).SetPermission(ReadOnly) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

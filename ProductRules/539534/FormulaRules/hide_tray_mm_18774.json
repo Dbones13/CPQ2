@@ -1,0 +1,11 @@
+{
+    "id": 18774,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,ProFlow),[EQ](<*VALUE(MX_CD_How_many_trays)*>,0))",
+    "name": "hide tray mm",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_Tray_mm)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

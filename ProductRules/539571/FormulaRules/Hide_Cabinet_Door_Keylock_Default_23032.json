@@ -1,0 +1,11 @@
+{
+    "id": 23032,
+    "condition": "<*ISSELECTED(SerC_RG_Cabinet_Type.Alternate Cabinet)*>",
+    "name": "Hide_Cabinet_Door_Keylock_Default",
+    "action": "<*DISALLOWVALUES(SerC_RG_Cabinet_Door_Keylock_Default:Pushbutton)*>",
+    "description": "CXCPQ-47015",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23938,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Terminal_Number_of_Reviews)*>,0),[GT](<*VALUE(Terminal_Number_of_Days_per_Design_Review)*>,0)))",
+    "name": "TM Design Review Meetings with Customer Reset",
+    "action": "<*ASSIGNVALUE(TM Design Review Meetings with Customer:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

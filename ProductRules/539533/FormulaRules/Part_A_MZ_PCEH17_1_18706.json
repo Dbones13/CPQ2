@@ -1,0 +1,11 @@
+{
+    "id": 18706,
+    "condition": "[AND]([EQ](<*VALUE(ES_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID5),[EQ](<*VALUE(ES_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ES_Additional_Hard_Disk)*>,Yes))",
+    "name": "Part_A_MZ_PCEH17_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:MZ-PCEH17)*><*SETATVQTY(eServer_BOM_parts:MZ-PCEH17,1)*>\n<* DoResetAtt *>",
+    "description": "7959 story",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

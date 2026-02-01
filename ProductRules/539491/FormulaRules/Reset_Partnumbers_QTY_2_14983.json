@@ -1,0 +1,11 @@
+{
+    "id": 14983,
+    "condition": "1",
+    "name": "Reset_Partnumbers_QTY_2",
+    "action": "[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC10K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-RSC10K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC05K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-RSC05K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC02K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-RSC02K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC01K)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-RSC01K)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC100)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-RSC100)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:TC-PROF01)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:TC-PROF01)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-1BP100)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-1BP100)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-1UOS50)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-1UOS50)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-REG100)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-REG100)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:TC-RCMP01)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:TC-RCMP01)*><* DoResetAtt *>}{}[ENDIF];[IF]([EQ](0<*GETATVQTY(PLC_UOC_BOM_Items:EP-2BP100)*>,0)){<* DoNotResetAtt *><*RESETVALUE(PLC_UOC_BOM_Items:EP-2BP100)*><* DoResetAtt *>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

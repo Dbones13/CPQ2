@@ -1,0 +1,11 @@
+{
+    "id": 9110,
+    "condition": "[NEQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,None)",
+    "name": "UNHide-Project_GES_Location_none",
+    "action": "<*ALLOWATTRIBUTES(Project_GES_%)*><*CTX( Container(Project_management_Labor_Container).Column(GES Eng).SetPermission(Editable) )*><*CTX( Container(Project_management_Labor_Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX( Container(Project_management_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX( Container(Project_management_Labor_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX( Container(Project_management_Labor_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX( Container(Project_management_Labor_Container).Column(GES_MPA_Price).SetPermission(Editable) )*><*CTX( Container(Project_management_Labor_Container).Column(GES_ListPrice).SetPermission(Editable) )*>",
+    "description": "CXCPQ-36563",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

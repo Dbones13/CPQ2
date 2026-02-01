@@ -1,0 +1,11 @@
+{
+    "id": 18574,
+    "condition": "[NEQ](<*VALUE(ES_Printer_Required)*>,Yes)",
+    "name": "Condition_for_Printer_required",
+    "action": "<*DISALLOWATTRIBUTES(ES_LaserJet_Printer_Monochrome)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

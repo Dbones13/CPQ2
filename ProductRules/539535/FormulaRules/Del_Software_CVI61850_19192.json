@@ -1,0 +1,11 @@
+{
+    "id": 19192,
+    "condition": "[NEQ](<*VALUE(PlantCruise_IEC_61850_Interface)*>,Yes)",
+    "name": "Del_Software_CV-I61850",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-I61850)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

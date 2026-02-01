@@ -1,0 +1,11 @@
+{
+    "id": 10580,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Is_this_a_Standalone_CD_node)*>,)",
+    "name": "CWS_Mig_Default_Standalone_CD_node",
+    "action": "<*SELECTVALUE(CWS_Mig_Is_this_a_Standalone_CD_node:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,194 @@
+@using WebSite.Controllers
+
+<div class="action-items-container" data-bind="with: cartActionsModel">
+    @*Primary actions*@
+    <!-- ko if: areActionsVisibleOnSide() -->
+  <!--  <input type="button" value="EffectiveDate" onclick="ProductValidation();" />-->
+    <!-- ko if: primaryActions()[0] -->
+	<!-- ko if: sessionStorage.getItem("R2QFlag") ==='Yes' || cpq.models.cart.customFields.firstWithProperty('name', 'R2QFlag')?.content() ==='Yes' -->
+    <button class="btn btn-primary fiori3-btn-primary product-validation" id="r2q_comparisoncall" onclick="r2q_html_comparisoncall()"><span>Comparison Report</span></button>
+	<!-- /ko -->
+    	<!-- ko if: primaryActions()[0].name === 'Add Item' -->
+    	<button class="btn btn-primary fiori3-btn-primary product-validation" onClick="ProductValidation();">Update Effective Date</button>
+    	<!-- /ko -->
+		<!-- ko if: primaryActions()[0].name == 'Reprice' && cpq.models.cart.orderStatusName() != 'Submitted to Customer' -->
+			<div class="action-row" data-bind="attr: { 'class':'action-row '+name.replaceAll(' ','_')}">
+				<a href="#" data-bind="click: checkPrimaryActionButtonsAvailable() ? primaryActions()[0].execute : null" class="btn-primary fiori3-btn-primary" role="button">
+					<!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+					<img data-bind="attr: { src: primaryActions()[0].imageUrl }, visible: primaryActions()[0].imageUrl" />
+					<!-- /ko -->
+					<span data-bind="text: primaryActions()[0].name"></span>
+				</a>
+			</div>
+		<!-- /ko -->
+		<!-- ko if: primaryActions()[0].name != 'Reprice' -->
+    		<!-- ko if: ($parent.items.renderingMainItems().length == 0 && primaryActions()[0].name == 'Update Currency') -->
+				<div class="action-row" data-bind="attr: { 'class':'action-row '+name.replaceAll(' ','_')}">
+					<a href="#" data-bind="click: checkPrimaryActionButtonsAvailable() ? primaryActions()[0].execute : null" class="btn-primary fiori3-btn-primary" role="button">
+						<!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+						<img data-bind="attr: { src: primaryActions()[0].imageUrl }, visible: primaryActions()[0].imageUrl" alt="">
+						<!-- /ko -->
+						<span data-bind="text: primaryActions()[0].name"></span>
+					</a>
+				</div>
+    		<!-- /ko -->
+    		<!-- ko if: ($parent.items.renderingMainItems().length > 0 && $parent.items.renderingMainItems()[0].itemDescription.partNumber() !== "Service Contract") -->
+			<div class="action-row" data-bind="attr: { 'class':'action-row '+name.replaceAll(' ','_')}">
+				<a href="#" data-bind="click: checkPrimaryActionButtonsAvailable() ? primaryActions()[0].execute : null" class="btn-primary fiori3-btn-primary" role="button">
+					<!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+					<img data-bind="attr: { src: primaryActions()[0].imageUrl }, visible: primaryActions()[0].imageUrl" alt="">
+					<!-- /ko -->
+					<span data-bind="text: primaryActions()[0].name"></span>
+				</a>
+			</div>
+    		<!-- /ko -->
+    		<!-- ko if: (($parent.items.renderingMainItems().length > 0 && $parent.items.renderingMainItems()[0].itemDescription.partNumber() === "Service Contract") || ($root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal")) -->
+			<div class="action-row" data-bind="attr: { 'class':'action-row '+name.replaceAll(' ','_')}">
+                <!-- ko if: primaryActions()[0].name === 'Add Item' -->
+				<a href="#" data-bind="css: {disabled: true}" class="btn-primary fiori3-btn-primary" role="button">
+					<!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+					<img data-bind="attr: { src: primaryActions()[0].imageUrl }, visible: primaryActions()[0].imageUrl" />
+					<!-- /ko -->
+					<span data-bind="text: primaryActions()[0].name"></span>
+				</a>
+                <!-- /ko -->
+                <!-- ko ifnot: primaryActions()[0].name === 'Add Item' -->
+                <a href="#" data-bind="click: checkPrimaryActionButtonsAvailable() ? primaryActions()[0].execute : null" class="btn-primary fiori3-btn-primary" role="button">
+					<!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+					<img data-bind="attr: { src: primaryActions()[0].imageUrl }, visible: primaryActions()[0].imageUrl" />
+					<!-- /ko -->
+					<span data-bind="text: primaryActions()[0].name"></span>
+				</a>
+                <!-- /ko -->
+			</div>
+    		<!-- /ko -->
+		<!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: primaryActions()[1] -->
+		<!-- ko if: primaryActions()[1].name == 'Create Project' ||  primaryActions()[1].name == 'Place order to ERP' -->
+			<div class="action-row" data-bind="attr: { 'class':'action-row '+name.replaceAll(' ','_')}">
+				<a href="#" data-bind="click: function(){ $data.primaryActions()[1].execute(); closeTab($data.primaryActions()[1].name);} " class="btn-tertiary fiori3-btn-tertiary" role="button">
+					<!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+					<img data-bind="attr: { src: primaryActions()[1].imageUrl }, visible: primaryActions()[1].imageUrl" />
+					<!-- /ko -->
+					<span data-bind="text: primaryActions()[1].name"></span>
+				</a>
+			</div>
+		 <!-- /ko -->
+		 <!-- ko if: primaryActions()[1].name != 'Create Project' && primaryActions()[1].name != 'Place order to ERP' -->
+			<div class="action-row" data-bind="attr: { 'class':'action-row '+name.replaceAll(' ','_')}">
+				<a href="#" data-bind="click: checkPrimaryActionButtonsAvailable() ? primaryActions()[1].execute : null" class="btn-tertiary fiori3-btn-tertiary" role="button">
+					<!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+					<img data-bind="attr: { src: primaryActions()[1].imageUrl }, visible: primaryActions()[1].imageUrl" />
+					<!-- /ko -->
+					<span data-bind="text: primaryActions()[1].name"></span>
+				</a>
+			</div>
+		<!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: primaryActions()[2] -->
+        <!-- ko if: primaryActions()[2].name == 'Reprice' -->
+        <div class="action-row" data-bind="attr: { 'class':'action-row '+name.replaceAll(' ','_')}">
+            <a href="#" data-bind="click: checkPrimaryActionButtonsAvailable() ? function(){TriggerSavePLSRepirce(primaryActions(),primaryActions()[2])} : null" class="btn-tertiary fiori3-btn-tertiary" role="button">
+                <!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+                <img data-bind="attr: { src: primaryActions()[2].imageUrl }, visible: primaryActions()[2].imageUrl" />
+                <!-- /ko -->
+                <span data-bind="text: primaryActions()[2].name"></span>
+            </a>
+        </div>
+        <!-- /ko -->
+        <!-- ko ifnot: primaryActions()[2].name == 'Reprice' -->
+        <div class="action-row" data-bind="attr: { 'class':'action-row '+primaryActions()[2].name.replaceAll(' ','_')}">
+            <a href="#" data-bind="click: checkPrimaryActionButtonsAvailable() ? primaryActions()[2].execute : null" class="btn-tertiary fiori3-btn-tertiary" role="button">
+                <!-- ko if : displayImagesForCartActions && !areActionsVisibleOnSide() -->
+                <img data-bind="attr: { src: primaryActions()[2].imageUrl }, visible: primaryActions()[2].imageUrl" />
+                <!-- /ko -->
+                <span data-bind="text: primaryActions()[2].name"></span>
+            </a>
+        </div>
+        <!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: (areActionsVisibleOnSide() && (primaryActions().length > 3 || nonPrimaryActions().length > 0)) || (!areActionsVisibleOnSide() && (primaryActions().length > 0 || nonPrimaryActions().length > 0)) -->
+    <div id="cartActionsDropdownMenu" class="dropdown actions-dropdown fiori3-dropdown">
+        <a href="#" id="actionsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" class="fiori3-icon-button" data-bind="tooltip: { title: '@Translation.GetJS("ActionsList.Title")', placement: 'auto top' }">
+            <span class="sap-icon">&#xe1f2;</span>
+        </a>
+        <div id="cartActionsDropdownMenuContainer" class="dropdown-menu slide-down" aria-labelledby="actionsDropdown">
+            <ul class="cpq-scroll">
+                <!-- ko template : { name : 'actionsTemplate', data: areActionsVisibleOnSide() ? primaryActions.slice(3) : primaryActions }  -->
+                <!-- /ko -->
+                <!-- ko if: canUndo -->
+                <li class="action-row">
+                    <!-- ko if : displayImagesForCartActions -->
+                    <a href="#"><img role="button" src="@CartController.DefaultActionImageUrl" data-bind="click: undo" /><span data-bind="click: undo">@Translation.Get("xsltUndo")</span></a>
+                    <!-- /ko -->
+                    <!-- ko ifnot : displayImagesForCartActions -->
+                    <a href="#"><span role="button" data-bind="click: undo">@Translation.Get("xsltUndo")</span></a>
+                    <!-- /ko -->
+                </li>
+                <!-- /ko -->
+                <!-- ko if: canRedo-->
+                <li class="action-row">
+                    <!-- ko if : displayImagesForCartActions -->
+                    <a href="#"><img role="button" src="@CartController.DefaultActionImageUrl" data-bind="click: redo" /><span data-bind="click: redo">@Translation.Get("xsltRedo")</span></a>
+                    <!-- /ko -->
+                    <!-- ko ifnot : displayImagesForCartActions -->
+                    <a href="#"><span data-bind="click: redo" role="button">@Translation.Get("xsltRedo")</span></a>
+                    <!-- /ko -->
+                </li>
+                <!-- /ko -->
+                @*Non primary actions*@
+                <!-- ko template : { name : 'actionsTemplate', data: nonPrimaryActions }  -->
+                <!-- /ko -->
+            </ul>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+@Html.PartialWithNameAsComment("~/Views/Cart/Templates/ActionsTemplate.cshtml")
+@Html.Partial("ScriptLocalization", new[] { "CartActionsModel" })
+@Html.PartialWithNameAsComment("~/Views/Cart/Dialogs/ConfirmHighStakesActionDialogTemplate.cshtml")
+
+<script type="text/javascript">
+	function inIframe () {
+		try { return window.self !== window.top; } 
+		catch (e) { return true; }
+	}
+	
+	function redirection(actionname){
+		if (actionname == 'Create Project'){
+			if (cpq.models.cart.orderStatusName() != 'Accepted by Customer'){
+				if (Iframe){   if ($('#ProjCreation_Success').css('display') == 'none') { $('#ProjCreation_Success').appendTo("body").modal('show'); $('#ProjCreation_Success .modal-body p').text('Request has been sent. Please re-visit in sometime to check the Latest Status.'); } }
+				else       {     window.location.href = window.location.origin+'/quotation/LoadQuote.aspx' }
+			}
+		}else if (actionname == 'Place order to ERP'){
+			/*if (cpq.models.cart.orderStatusName() != 'Project Created'){
+				if (Iframe){    $('#ProjCreation_Success').appendTo("body").modal('show'); $('#ProjCreation_Success .modal-body p').text('Order Placed Successfully'); }
+				else       {     window.location.href = window.location.origin+'/quotation/LoadQuote.aspx' }
+			}*/
+		}
+	}
+	function closeTab(actionname){
+		Iframe = inIframe()
+		a = setInterval(function(){ redirection(actionname); },2000);
+		setTimeout(function(){ clearInterval(a); },40000)
+	}
+	function CloseIFrameTab(){
+		window.parent.postMessage('CloseIFrame' , '*');
+		window.location.href = window.location.origin+'/quotation/LoadQuote.aspx'
+	}
+    $("#ProjCreation_Success").on('hide.bs.modal', function(){  CloseIFrameTab(); });
+    function TriggerSavePLSRepirce(preimaryactions,currentaction){
+        if(cpq.models.cart.areCellsDirty()){
+            for(i=0;i<preimaryactions.length;i++){
+                if(preimaryactions[i].name=="Save Quote"){
+                    preimaryactions[i].execute();
+                    break;
+                }
+            }
+        }
+        const myInterval1 = setInterval(function(){ if($(".loaderWrap").css('display') === 'none'){ currentaction.execute();clearInterval(myInterval1);} }, 1000);
+    }
+</script>

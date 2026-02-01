@@ -1,0 +1,11 @@
+{
+    "id": 20079,
+    "condition": "[AND]([EQ](<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Rows.GetCount )*>,0),[OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>))",
+    "name": "Load Enhanced Functions IO",
+    "action": "[IF](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>){<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Load(Select top 10 IO_Type, red_is, future_red_is, non_red_is, red_nis, future_red_nis, non_red_nis, red_isltr, future_red_isltr, non_red_isltr,Rank from Enhanced_Function_IO WHERE Rank!='3' ) )*>}{<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Load(Select top 10 IO_Type, red_is, future_red_is, non_red_is, red_nis, future_red_nis, non_red_nis, red_isltr, future_red_isltr, non_red_isltr,Rank from Enhanced_Function_IO WHERE IO_Type!='' ) )*>}[ENDIF]",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Lahu Giri"
+}

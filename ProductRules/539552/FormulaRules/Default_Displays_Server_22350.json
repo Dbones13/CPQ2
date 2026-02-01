@@ -1,0 +1,11 @@
+{
+    "id": 22350,
+    "condition": "[EQ](<*VALUE(ESDC_Displays_Server)*>,)",
+    "name": "Default_Displays_Server",
+    "action": "<*ASSIGNVALUE(ESDC_Displays_Server:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

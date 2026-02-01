@@ -1,0 +1,11 @@
+{
+    "id": 14175,
+    "condition": "[EQ](<*VALUE(No_of_Complex_Operations_per_Product (0-100))*>,)",
+    "name": "Default_No_of_Complex_Operations_per_Product (0-100)",
+    "action": "<*ASSIGNVALUE(No_of_Complex_Operations_per_Product (0-100):0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

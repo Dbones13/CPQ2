@@ -1,0 +1,11 @@
+{
+    "id": 14003,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Workstation_Wiring_Diagrams)*>,)",
+    "name": "Default_DVM_Number_of_Workstation_Wiring_Diagrams",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Workstation_Wiring_Diagrams:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

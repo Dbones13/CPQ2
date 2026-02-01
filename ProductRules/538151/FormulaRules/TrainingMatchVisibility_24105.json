@@ -1,0 +1,11 @@
+{
+    "id": 24105,
+    "condition": "[EQ](<*VALUE(SC_Service_Product)*>,System Evolution Program)",
+    "name": "TrainingMatchVisibility",
+    "action": "<*DISALLOWATTRIBUTES(SC_Training_Match_Contract_Value)*> <*DISALLOWATTRIBUTES(SC_Training_Match_Contract_Value_Percent)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "18/10/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

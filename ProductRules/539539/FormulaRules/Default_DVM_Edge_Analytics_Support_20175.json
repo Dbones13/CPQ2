@@ -1,0 +1,11 @@
+{
+    "id": 20175,
+    "condition": "[EQ](<*VALUE(DVM_Edge_Analytics_Support)*>,)",
+    "name": "Default_DVM_Edge_Analytics_Support",
+    "action": "<*SELECTVALUE(DVM_Edge_Analytics_Support:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

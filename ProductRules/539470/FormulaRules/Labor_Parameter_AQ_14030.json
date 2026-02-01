@@ -1,0 +1,11 @@
+{
+    "id": 14030,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_Parameter_AQ",
+    "action": "[IF]([EQ](<*VALUE(DVM_Redundant_DVM_Servers)*>,Yes)){<*ASSIGNVALUE(Labor_Parameter_AQ:1)*>}{<*ASSIGNVALUE(Labor_Parameter_AQ:0)*>}[ENDIF]",
+    "description": "CXCPQ-51106",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

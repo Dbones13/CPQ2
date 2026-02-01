@@ -1,0 +1,11 @@
+{
+    "id": 18997,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Aqualizer MX),[EQ](<*VALUE(MX_CD_Water_Control_Unit_Aqualizer)*>,Dual Pump))",
+    "name": "CD_Part_9580_WCUDP",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9580-WCUDP)*><*SETATVQTY(MX_CD_Bom_Parts:9580-WCUDP, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

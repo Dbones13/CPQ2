@@ -1,0 +1,11 @@
+{
+    "id": 9622,
+    "condition": "[EQ](<*ATTSEL(PSkid FGK Amount of Labor)*>,1)",
+    "name": "Set Total Production Labor Costs",
+    "action": "<*ASSIGNVALUE(Pskid Total Production Labor Costs:<* Eval(Round((<*VALUE(PSkid Production Labor Hourly Rate)*> * <*VALUE(PSkid Production Labor Hours)*> ) + <*VALUE(PSkid FGK Amount of Labor)*>,2))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

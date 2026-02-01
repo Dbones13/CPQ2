@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(CMS Flex Station Hardware Selection)*>,STN_PER_DELL_Rack_RAID1)){<*SELECTVALUE(CMS Remote Peripheral Solution Type RPS:Pepperl_Fuchs_BTC22)*> <*DISALLOWATTRIBUTES(Remote Peripheral validation message)*>}{<*SELECTVALUE(CMS Remote Peripheral Solution Type RPS:None)*> <*ALLOWATTRIBUTES(Remote Peripheral validation message)*>}[ENDIF]

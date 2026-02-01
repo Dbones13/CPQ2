@@ -1,0 +1,11 @@
+{
+    "id": 17867,
+    "condition": "[EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(2).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-IGES90_Hide",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-IGES90)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

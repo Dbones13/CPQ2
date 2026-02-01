@@ -1,0 +1,11 @@
+{
+    "id": 24206,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(RESS_System_Required)*>,Yes))",
+    "name": "Show_RESS_Experion_Software_Release",
+    "action": "<*ALLOWATTRIBUTES(RESS_Experion_Software_Release)*><*SETREQUIRED(RESS_Experion_Software_Release)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

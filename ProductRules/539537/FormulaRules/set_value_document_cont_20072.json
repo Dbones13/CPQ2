@@ -1,0 +1,11 @@
+{
+    "id": 20072,
+    "condition": "[GT](<*CTX ( Container(Document_cont_c300).Rows.GetCount )*>,0)",
+    "name": "set_value_document_cont",
+    "action": "[IF](<*ISSELECTED(SerC_CG_PM_IO_Solution_required.Yes)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(SerC_CG_PM_IO_Solution_required).Set(Yes) )*>}{<*CTX ( Container(Document_cont_c300).Row(1).Column(SerC_CG_PM_IO_Solution_required).Set(No) )*>}[ENDIF]\n[IF](<*ISSELECTED(SerC_CG_Universal_Marshalling_Cabinet.No)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(SerC_CG_Universal_Marshalling_Cabinet).Set(No) )*>}{<*CTX ( Container(Document_cont_c300).Row(1).Column(SerC_CG_Universal_Marshalling_Cabinet).Set(Yes) )*>}[ENDIF]\n[IF](<*ISSELECTED(SerC_CG_Foundation_Fieldbus_Interface_required.Yes)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(SerC_CG_Foundation_Fieldbus_Interface_required).Set(Yes) )*>}{<*CTX ( Container(Document_cont_c300).Row(1).Column(SerC_CG_Foundation_Fieldbus_Interface_required).Set(No) )*>}[ENDIF]\n[IF](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(Io_family).Set(seriesC) )*>}{[IF](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(Io_family).Set(Mark2) )*>}{[IF](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(Io_family).Set(TurboM) )*>}{<*CTX ( Container(Document_cont_c300).Row(1).Column(Io_family).Set(None) )*>}[ENDIF]}[ENDIF]}[ENDIF]\n[IF](<*ISSELECTED(SerC_GC_Profibus_Gateway_Interface.Yes)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(Profibus Gateway Interface).Set(Yes) )*>}{<*CTX ( Container(Document_cont_c300).Row(1).Column(Profibus Gateway Interface).Set(No) )*>}[ENDIF]\n[IF](<*ISSELECTED(SerC_CG_Ethernet_Interface.Yes)*>){<*CTX ( Container(Document_cont_c300).Row(1).Column(Ethernet Interface).Set(Yes) )*>}{<*CTX ( Container(Document_cont_c300).Row(1).Column(Ethernet Interface).Set(No) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

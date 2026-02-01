@@ -1,0 +1,11 @@
+{
+    "id": 13400,
+    "condition": "1",
+    "name": "Experion UOC Digital Points",
+    "action": "<*ASSIGNVALUE(Experion UOC Digital Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Experion UOC Digital Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

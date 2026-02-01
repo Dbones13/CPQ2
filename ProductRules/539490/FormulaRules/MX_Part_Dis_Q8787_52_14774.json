@@ -1,0 +1,11 @@
+{
+    "id": 14774,
+    "condition": "[EQ](<*VALUE(MX_HC_Analog_Output_0_20_Ma_16_Channel)*>,0)",
+    "name": "MX_Part_Dis_Q8787_52",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q8787-52)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

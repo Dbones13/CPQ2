@@ -1,0 +1,11 @@
+{
+    "id": 13012,
+    "condition": "[NEQ](<*VALUE(SC_QCS_Per_Machine_Price)*>,)",
+    "name": "SC_QCS_Machine_Price_Roundoff",
+    "action": "<*ASSIGNVALUE(SC_QCS_Per_Machine_Price:<* Round ( <*VALUE(SC_QCS_Per_Machine_Price)*>, 2 ) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13813,
+    "condition": "[EQ](<*VALUE(Labor_Marshalling_Database)*>,Yes)",
+    "name": "Labor_parameter_mdb_yes",
+    "action": "<*ASSIGNVALUE(Labor_parameter_mdb:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

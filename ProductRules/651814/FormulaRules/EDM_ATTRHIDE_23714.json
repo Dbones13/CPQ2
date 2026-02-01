@@ -1,0 +1,11 @@
+{
+    "id": 23714,
+    "condition": "[OR]([EQ](<*VALUE(R2QRequest)*>,Yes),[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "EDM_ATTRHIDE",
+    "action": "<* ExecuteScript(R2Q_HCI_EDM_ATTRHIDE) *>\n<* ExecuteScript(HCI_ProductAttr_Validation) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "10/09/25",
+    "modifiedBy": "Lahu Giri"
+}

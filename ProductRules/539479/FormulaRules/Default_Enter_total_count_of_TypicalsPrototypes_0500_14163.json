@@ -1,0 +1,11 @@
+{
+    "id": 14163,
+    "condition": "[EQ](<*VALUE(Enter_total_count_of_Typicals/Prototypes (0-500))*>,)",
+    "name": "Default_Enter_total_count_of_Typicals/Prototypes (0-500)",
+    "action": "<*ASSIGNVALUE(Enter_total_count_of_Typicals/Prototypes (0-500):0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

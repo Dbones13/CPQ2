@@ -1,0 +1,11 @@
+{
+    "id": 17912,
+    "condition": "[GT](<*VALUE(Scada_conatiner_sum)*>,1999)",
+    "name": "SCADA_EP-DSC2K_point",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-DSC02K)*><*SETATVQTY(SCADA_BOM_Items:EP-DSC02K, <*eval(INT(Fix((<*VALUE(Scada_conatiner_sum)*>-(INT(Fix(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000-(INT(Fix((<*VALUE(Scada_conatiner_sum)*>-(INT(Fix(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000)))*5000)/2000)))*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26072,
+    "condition": "[EQ](<*VALUE(Addon Advanced Solution  Pack(0-1))*>,)",
+    "name": "Default_Addon_Advance_Solution_pack",
+    "action": "<*ASSIGNVALUE(Addon Advanced Solution  Pack(0-1):0)*>",
+    "description": "CXCPQ-44529",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

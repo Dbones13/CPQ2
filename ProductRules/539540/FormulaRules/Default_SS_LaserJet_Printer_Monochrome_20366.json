@@ -1,0 +1,11 @@
+{
+    "id": 20366,
+    "condition": "[EQ](<*VALUE(SS_LaserJet_Printer_Monochrome)*>,)",
+    "name": "Default_SS_LaserJet_Printer_Monochrome",
+    "action": "<*ASSIGNVALUE(SS_LaserJet_Printer_Monochrome:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

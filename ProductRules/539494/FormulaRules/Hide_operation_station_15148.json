@@ -1,0 +1,11 @@
+{
+    "id": 15148,
+    "condition": "[OR]([EQ](<*VALUE(MXP_number_of_operator_station)*>,0),[EQ](<*VALUE(MXP_number_of_operator_station)*>,))",
+    "name": "Hide_operation_station",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Operator_station_transpose)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

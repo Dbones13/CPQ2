@@ -1,0 +1,11 @@
+{
+    "id": 19506,
+    "condition": "[EQ](<*VALUE(Exp HS Use Honeywell supplied Network Switches?)*>,Yes)",
+    "name": "Show LAN and Switch",
+    "action": "<*ALLOWATTRIBUTES(Exp HS Select LAN Type,Exp HS Select Honeywell supplied switch type)*><*SETREQUIRED(Exp HS Select Honeywell supplied switch type,Exp HS Select LAN Type)*>",
+    "description": "Show  \"LAN Type\" and \"Select Honeywell supplied switch type\" only when Do you want to use Honeywell supplied Network Switches?\tYES",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

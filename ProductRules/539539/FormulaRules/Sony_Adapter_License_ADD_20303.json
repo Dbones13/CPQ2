@@ -1,0 +1,11 @@
+{
+    "id": 20303,
+    "condition": "[EQ](<*VALUE(DVM_Sony_Adapter_License)*>,Yes)",
+    "name": "Sony Adapter License_ADD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMSOI)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMSOI,1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45460",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

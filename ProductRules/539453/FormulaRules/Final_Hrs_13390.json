@@ -1,0 +1,11 @@
+{
+    "id": 13390,
+    "condition": "1",
+    "name": "Final_Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(System_Network_Engineering_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(Additional_CustomDev_Labour_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(EBR_Engineering_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(Hardware Engineering Labour Container).Total(Final Hrs) )*>)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

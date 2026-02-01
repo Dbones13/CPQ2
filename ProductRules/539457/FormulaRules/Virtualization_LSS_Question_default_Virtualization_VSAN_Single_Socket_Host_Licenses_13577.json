@@ -1,0 +1,11 @@
+{
+    "id": 13577,
+    "condition": "[EQ](<*VALUE(Virtualization_VSAN_Single_Socket_Host_Licenses)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_VSAN_Single_Socket_Host_Licenses",
+    "action": "<*ASSIGNVALUE(Virtualization_VSAN_Single_Socket_Host_Licenses:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

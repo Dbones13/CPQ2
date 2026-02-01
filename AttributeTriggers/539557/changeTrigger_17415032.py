@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(Total_Labor_Hrs:<* Eval(<*VALUE(Total_Project_Hrs)*>-<*VALUE(Final_Hrs)*>) *>)*>

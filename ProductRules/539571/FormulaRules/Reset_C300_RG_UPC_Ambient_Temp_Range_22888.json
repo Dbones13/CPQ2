@@ -1,0 +1,11 @@
+{
+    "id": 22888,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_Ambient_Temp_Range)*>)",
+    "name": "Reset_C300_RG_UPC_Ambient_Temp_Range",
+    "action": "<*RESETATTRIBUTE(C300_RG_UPC_Ambient_Temp_Range)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

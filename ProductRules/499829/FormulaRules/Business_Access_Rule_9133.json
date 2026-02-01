@@ -1,0 +1,11 @@
+{
+    "id": 9133,
+    "condition": "[EQ](<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(2).Column(Trace_Software_Business_Level_Access).GetDisplayValue )*>,Yes)",
+    "name": "Business Access Rule",
+    "action": "<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(1).Column(Trace_Software_Business_Level_Access).Set(Yes) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

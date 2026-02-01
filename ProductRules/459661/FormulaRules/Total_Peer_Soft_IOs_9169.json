@@ -1,0 +1,11 @@
+{
+    "id": 9169,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_Peer_Soft_IOs",
+    "action": "<*ASSIGNVALUE(Total_Peer_Soft_IOs:<* Eval(<*CTX ( Container(CE_System_Cont).Sum(Labor_parameter_sio) )*>+<*CTX ( Container(CE_System_Cont).Sum(Labor_Parameter_Peer) )*>)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

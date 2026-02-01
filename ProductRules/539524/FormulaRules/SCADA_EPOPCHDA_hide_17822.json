@@ -1,0 +1,11 @@
+{
+    "id": 17822,
+    "condition": "[OR]([EQ](<*CTX( Container(OPC Application Instances).Row(4).Column(Nodes).Get )*>,),[EQ](<*CTX( Container(OPC Application Instances).Row(4).Column(Nodes).Get )*>,0))",
+    "name": "SCADA_EP-OPCHDA_hide",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-OPCHDA)*>",
+    "description": "Hide-SCADA_EP-OPCHDA",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

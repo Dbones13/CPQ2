@@ -1,0 +1,11 @@
+{
+    "id": 23071,
+    "condition": "[OR]([NOT](<*ATTSEL(SerC_IO_Mounting_Solution)*>),<*IFANYVALUE(C300_RG_UPC_Specify_Id_Modifier:YES,SerC_IO_Mounting_Solution:Cabinet,SerC_IO_Mounting_Solution:Mounting Panel)*>)",
+    "name": "Disallow_C300_RG_UPC_CN100_IO_HIVE",
+    "action": "<*DISALLOWATTRIBUTES(C300_RG_UPC_CN100_IO_HIVE)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

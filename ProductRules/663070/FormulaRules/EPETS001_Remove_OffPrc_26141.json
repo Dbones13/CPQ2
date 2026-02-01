@@ -1,0 +1,11 @@
+{
+    "id": 26141,
+    "condition": "[EQ](<*VALUE(Off_process_base_software)*>,0)",
+    "name": "EPETS001_Remove_OffPrc",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-ETS001)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

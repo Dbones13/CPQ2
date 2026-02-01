@@ -1,0 +1,11 @@
+{
+    "id": 10913,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(HC900_900_Control_Station_4)*>,0) *>,0))",
+    "name": "Reset 900CR04-00",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900CR04-00)*><* DoResetAtt *>",
+    "description": "CXCPQ-40190",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21909,
+    "condition": "[EQ](<*VALUE(FDM_Server_Specification)*>,Workstation)",
+    "name": "Allow for workstation server specification",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_05_close,ATTCON_05_open,FDM_Display size (i),FDM_Display Supplier,FDM_Node Supplier,FDM_Station Node Type,Header_04_close,Header_04_open)*>\n<*SETREQUIRED(FDM_Display size (i),FDM_Display Supplier,FDM_Node Supplier,FDM_Station Node Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

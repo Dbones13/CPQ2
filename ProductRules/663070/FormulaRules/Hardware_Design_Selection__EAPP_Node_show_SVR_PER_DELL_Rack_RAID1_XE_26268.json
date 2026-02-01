@@ -1,0 +1,11 @@
+{
+    "id": 26268,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),<*ISSELECTED(Interface with TPS Required?.Yes)*>,[GT](<*VALUE(Experion APP Node - Rack Mount)*>,0))",
+    "name": "Hardware_Design_Selection_-_EAPP_Node_show_SVR_PER_DELL_Rack_RAID1_XE",
+    "action": "<*ALLOWVALUES(Hardware_Design_Selection - EAPP Node:SVR_PER_DELL_Rack_RAID1_XE)*>",
+    "description": "CXDEV-8007",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

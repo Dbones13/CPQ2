@@ -1,0 +1,11 @@
+{
+    "id": 22995,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_Universal_marshalling_cabinet",
+    "action": "[IF]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)){[IF]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet)){<*ALLOWATTRIBUTES(Ser_RG_Universal_Marshalling_Cabinet)*>}{<*DISALLOWATTRIBUTES(Ser_RG_Universal_Marshalling_Cabinet)*>}[ENDIF]}{[IF]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)){<*ALLOWATTRIBUTES(Ser_RG_Universal_Marshalling_Cabinet)*>}{<*DISALLOWATTRIBUTES(Ser_RG_Universal_Marshalling_Cabinet)*>}[ENDIF]}[ENDIF]",
+    "description": "CXCPQ-44728",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

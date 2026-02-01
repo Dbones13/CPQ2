@@ -1,0 +1,11 @@
+{
+    "id": 19207,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_Profibus_Gateway)*>,0))",
+    "name": "Del_IO_Section_8C-IP0102",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:8C-IP0102)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

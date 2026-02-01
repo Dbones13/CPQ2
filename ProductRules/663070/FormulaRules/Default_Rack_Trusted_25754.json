@@ -1,0 +1,11 @@
+{
+    "id": 25754,
+    "condition": "[EQ](<*VALUE(TrustedPlatformModule_TPM)*>,)",
+    "name": "Default_Rack_Trusted",
+    "action": "<*SELECTVALUE(TrustedPlatformModule_TPM:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

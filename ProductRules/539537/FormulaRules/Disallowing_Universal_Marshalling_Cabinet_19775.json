@@ -1,0 +1,11 @@
+{
+    "id": 19775,
+    "condition": "[OR](<*ISSELECTED(SerC_CG_Universal_Marshalling_Cabinet.No)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)",
+    "name": "Disallowing Universal Marshalling Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_01_close,ATTCON_01_open,Header_01_close,Header_01_open,SerC_Cabinet_Power,SerC_CG_AC_Input_Voltage,SerC_CG_Cabinet_Fan,SerC_CG_Cabinet_Light_(LED),SerC_CG_Cabinet_Thermostat,SerC_CG_Cabinet_Type,SerC_CG_IP_Rating,SerC_CG_label_Universal_Marshalling_Cabinet,SerC_CG_Mounting_Option,SerC_CG_Percentage_of_Spare_Space_required(0-100%),SerC_CG_Power_Supply_Vendor,SerC_CG_SIC_Length_for_UMC,SerC_CG_Termination_of_Spare_Wires_in_Field_Cabin,SerC_CG_Universal_Marshaling_Cabinet_layout,SerC_CG_Utility_Socket_(230/115 VAC),SerC_CG_Wiring_and_Ducts,SerC_CG_GIIS_Analog_Inputs_Isolator_2Wire_Type,SerC_CG_Is_NAMUR_isolator_type_Required)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20755,
+    "condition": "[AND]([EQ](<*VALUE(SS_Display_Supplier_desk)*>,Honeywell),[EQ](<*VALUE(SS_Display_size_desk)*>,21.33 inch NTS),[GT](<*VALUE(SS_No_of_Displays_desk)*>,0),[GT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,0))",
+    "name": "Sum21_4",
+    "action": "<*ASSIGNVALUE(SS_21_33inch:<* Eval(<*VALUE(SS_21_33inch)*>+<*VALUE(SS_No_of_Displays_desk)*>*<*VALUE(SS_Flex_Station_Qty_Desk)*>) *>)*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

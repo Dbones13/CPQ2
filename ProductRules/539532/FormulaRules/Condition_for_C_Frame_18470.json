@@ -1,0 +1,11 @@
+{
+    "id": 18470,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Size)*>,C-Frame)",
+    "name": "Condition_for_C_Frame",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Scanner_Type:3-4036-10|3-4036-11|3-6080-46)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

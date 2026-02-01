@@ -1,0 +1,11 @@
+{
+    "id": 15095,
+    "condition": "[EQ](<*VALUE(MXP_Split_Sheet_MIS_Reports_for_Multiple_winders)*>,)",
+    "name": "Default_Split_Sheet_MIS",
+    "action": "<*SELECTVALUE(MXP_Split_Sheet_MIS_Reports_for_Multiple_winders:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

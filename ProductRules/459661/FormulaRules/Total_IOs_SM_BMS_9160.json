@@ -1,0 +1,11 @@
+{
+    "id": 9160,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_IOs_SM_BMS",
+    "action": "<*ASSIGNVALUE(Total_IOs_SM_BMS:<* Eval(<*CTX ( Container(CE_System_Cont).Sum(Total_IOs_SM_BMS) )*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13104,
+    "condition": "[NOT](<*ATTDEF(SC_WEP_ServiceProduct_TNA)*>)",
+    "name": "Default_ServiceProduct_TNA",
+    "action": "<*ASSIGNVALUE(SC_WEP_ServiceProduct_TNA:Workforce Excellence Program)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

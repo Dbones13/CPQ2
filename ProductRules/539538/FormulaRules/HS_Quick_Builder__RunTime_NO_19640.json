@@ -1,0 +1,11 @@
+{
+    "id": 19640,
+    "condition": "[AND]([EQ](<*VALUECODE(Exp HS Runtime System)*>,No),[GT](<* IsNull(<*VALUE(Exp HS Quick Builder - Enter License Quantity)*>,0)*>,0))",
+    "name": "HS Quick Builder - RunTime NO",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HSQBLD)*><*SETATVQTY(Experion_HS_PART_SUMMARY:EP-HSQBLD, <*IsNull(<*VALUE(Exp HS Quick Builder - Enter License Quantity)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

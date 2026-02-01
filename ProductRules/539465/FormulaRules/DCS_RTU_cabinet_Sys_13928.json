@@ -1,0 +1,11 @@
+{
+    "id": 13928,
+    "condition": "1",
+    "name": "DCS_RTU_cabinet_Sys",
+    "action": "<*ASSIGNVALUE(DCS_RTU_cabinet_Sys:<*Eval(0<*CTX ( Container(RTU_ControlGroup_Cont).Sum(staging_RTU_Num_of_Sys_Cabinets) )*>)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

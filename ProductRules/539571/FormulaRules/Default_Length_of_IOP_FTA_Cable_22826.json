@@ -1,0 +1,11 @@
+{
+    "id": 22826,
+    "condition": "[EQ](<*VALUE(Length_of_IOP_FTA_Cable)*>,)",
+    "name": "Default_Length_of_IOP_FTA_Cable",
+    "action": "<*SELECTVALUE(Length_of_IOP_FTA_Cable:10M)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

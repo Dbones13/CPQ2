@@ -1,0 +1,11 @@
+{
+    "id": 10533,
+    "condition": "[EQ](<*VALUE(LSS_Front_only_Cabinet_Base_Required?)*>,)",
+    "name": "default_LSS_Front_only_Cabinet_Base_Required?",
+    "action": "<*SELECTVALUE(LSS_Front_only_Cabinet_Base_Required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

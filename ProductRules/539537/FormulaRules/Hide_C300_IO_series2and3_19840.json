@@ -1,0 +1,11 @@
+{
+    "id": 19840,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_C300 IO series2and3",
+    "action": "<*CTX ( Container(C300_C IO MS2).Rows.Clear )*><*CTX ( Container(C300_C IO MS3).Rows.Clear )*><*DISALLOWATTRIBUTES(Header_18_close,Header_18_open,C300_C IO MS2,C300_C IO MS3)*>",
+    "description": "34205",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

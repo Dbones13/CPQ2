@@ -1,0 +1,11 @@
+{
+    "id": 13005,
+    "condition": "[NOT](<*ATTSEL(SC_QCS_One Time Service Charges)*>)",
+    "name": "SC_QCS_Disable_Onetime_Service",
+    "action": "<*DISALLOWATTRIBUTES(SC_QCS_Section_OneTime_Service_Charges,SC_QCS_Local Day Rate,SC_QCS_Local_Onboarding_Support_Days,SC_QCS_Qty_Honeywell_Edge_Device_VM,SC_QCS_Qty_Honeywell_Edge_Device,SC_QCS_Quantity_Honeywell_Service_Node)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

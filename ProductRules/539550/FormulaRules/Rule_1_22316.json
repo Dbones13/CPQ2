@@ -1,0 +1,11 @@
+{
+    "id": 22316,
+    "condition": "1",
+    "name": "Rule 1",
+    "action": "[IF]([EQ](<*CTX( Container(PMD_General_Input).Row(1).Column(PMD_System_Type).GetDisplayValue )*>,New)){<*CTX( Container(PMD_General_Input).Column(PMD_System_Asset_MSID).SetPermission(Hidden) )*><*CTX( Container(PMD_General_Input).Column(PMD_System_Number).SetPermission(Hidden) )*>}{<*CTX( Container(PMD_General_Input).Column(PMD_System_Asset_MSID).SetPermission(Editable) )*>\n<*CTX( Container(PMD_General_Input).Column(PMD_System_Number).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

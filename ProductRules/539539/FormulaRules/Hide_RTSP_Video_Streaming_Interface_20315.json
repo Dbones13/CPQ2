@@ -1,0 +1,11 @@
+{
+    "id": 20315,
+    "condition": "[NEQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Hide_RTSP_Video_Streaming_Interface",
+    "action": "<*DISALLOWATTRIBUTES(RTSP_Video_Streaming_Interface)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

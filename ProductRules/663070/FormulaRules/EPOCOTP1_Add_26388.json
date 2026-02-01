@@ -1,0 +1,11 @@
+{
+    "id": 26388,
+    "condition": "[OR]([GT](<*VALUE(EP-OCOTP1_S1)*>,0),[GT](<*VALUE(EP-OCOTP1_S2)*>,0),[GT](<*VALUE(TP-OTP231_s1)*>,0),[GT](<*VALUE(TP-OTP231_S2)*>,0),[GT](<*VALUE(TP-OTP231_s3)*>,0),[GT](<*VALUE(TP-OTP231_S4)*>,0))",
+    "name": "EP-OCOTP1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-OCOTP1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-OCOTP1, <* Eval(<*VALUE(EP-OCOTP1_S1)*>+<*VALUE(EP-OCOTP1_S2)*>+<*VALUE(TP-OTP231_s1)*>+<*VALUE(TP-OTP231_S2)*>+<*VALUE(TP-OTP231_s3)*>+<*VALUE(TP-OTP231_S4)*>) *>.)*><* DoResetAtt *>",
+    "description": "CXCPQ-38928",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

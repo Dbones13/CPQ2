@@ -1,0 +1,11 @@
+{
+    "id": 5466,
+    "condition": "[AND]([NEQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,0),[EQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,9))",
+    "name": "Group 9 Disallow",
+    "action": "<*DISALLOWATTRIBUTES(TL_Dummy_Attr_10,ATTCON_10_close,ATTCON_10_open,Header_11_close,Header_11_open,TL_Travel_Phase_10,TL_Inputs_10,TL_Expense_Calculation_Cont_10)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

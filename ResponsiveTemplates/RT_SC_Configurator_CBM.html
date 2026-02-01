@@ -1,0 +1,177 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span
+                class="sap-icon-extended">&#xf200;</span>@Translation.GetJS("Configurator.NoAttributesOnTab")
+        </div>
+    </div>
+    
+ 
+    
+<!-- ko if: tabs().length != 0  -->
+<!-- ko if: tabs()[0].name() == currentTab().name() -->
+        <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+        <!-- /ko -->
+<!-- /ko -->
+<!-- /ko -->
+  
+    <!-- ko foreach: {data:attributes, as: 'pattribute', noChildContext: true }-->
+      <!-- ko if:$("#" + pattribute.id()).length === 0 -->
+        <!-- ko if:pattribute.name().slice(0,6) === "Header" && pattribute.name().slice(10,14) === 'open' -->
+
+            <div class="row col-xs-12 swagger">
+                <div data-bind="attr:{id:pattribute.name()}">
+                    <div>
+
+                        <div class="swagger-header"
+                        
+                            data-bind="click: function(data,event){togglePanel(event,productId() +currentTab().displayName().replace(/ |\//g, '_')+pattribute.name(),$('#' + productId() +currentTab().displayName().replace(/ |\//g, '_') + pattribute.name() + '-content'), $('#' + pattribute.name() + '-href'), 'slow');  }">
+                            <span data-bind="text:pattribute.hint()"></span>
+                            <a data-bind="attr:{id:productId() +currentTab().displayName().replace(/ |\//g, '_') + pattribute.name()+'-href'}" class="swagger-toggle">&#xe066;</a>
+                        </div>
+                        <div class="newtoggle" data-bind="attr:{id:productId() +currentTab().displayName().replace(/ |\//g, '_') + pattribute.name()+'-content'}" >
+
+<!-- ko foreach: {data:attributes().filter(function(v) {return  (Number(attributes().indexOf(v)) > Number(attributes().map(item => item.name()).indexOf(pattribute.name().slice(0,9) + '_open'))) && Number(attributes().indexOf(v))  <  Number(attributes().map(item => item.name()).indexOf(pattribute.name().slice(0,9) + '_close'));
+    }), as: 'cattribute'} -->            
+                                        <!-- ko if:name().slice(0,6) === "ATTCON" && name().slice(10,14) === 'open'-->
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div id="no-more-tables" class="config-container cpq-scroll col-xs-12">
+                                                        <table class="table table-bordered fiori3-table fiori3-configuration-container-table">
+                                                            <tbody>
+
+                                                                <!-- ko foreach: {data:$parent.attributes().filter(function(v) {return  (Number($parent.attributes().indexOf(v)) > Number($parent.attributes().map(item => item.name()).indexOf(cattribute.name().slice(0,9) + '_open'))) && ($parent.attributes().indexOf(v)) < Number($parent.attributes().map(item => item.name()).indexOf(cattribute.name().slice(0,9) + '_close'));
+                                                                    }), as: 'conattribute'} -->
+
+                                                                    <tr data-bind="attr:{id:id()}">
+                                                                        <!-- ko if:template() === 'TextBoxTemplate' || template() === 'MultilineTextBoxTemplate' || template() === 'DropDownTemplate'-->
+                                                                            <!-- ko template: { name: 'CBM_' + template() , data:cpq.models.configurator.attributes()[$index()], as: 'concattribute', noChildContext: true } -->
+                                                                            <!-- /ko -->
+                                                                        <!-- /ko -->
+                                                                        <!-- ko if:template() === 'ContainerTemplate' -->
+                                                                            <!-- ko template: { name: 'HW_' + template() , data:cpq.models.configurator.attributes()[$index()], as: 'concattribute', noChildContext: true } -->
+                                                                            <!-- /ko -->
+                                                                        <!-- /ko -->
+                                                                        <!-- ko if:template() !== 'TextBoxTemplate' && template() !== 'ContainerTemplate' && template() !== 'MultilineTextBoxTemplate' && template() != 'DropDownTemplate'-->
+                                                                            <!-- ko template: { name: $root.getAttributeTemplate, data:cpq.models.configurator.attributes()[$index()], as: 'concattribute', noChildContext: true } -->
+                                                                            <!-- /ko -->
+                                                                        <!-- /ko -->
+                                                                    </tr>
+                                                                
+                                                                <!-- /ko -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                        <!-- /ko -->
+                                        <!-- ko if:($("#" + id()).length === 0 && name().slice(0,6) != "ATTCON")-->
+
+                                            <!-- ko if:name().search("Inputs_Con") == "-1" -->
+                                                <div
+                                                    data-bind="style: {margin:dataType() === 'Container' ? '' : '' }, attr: { 'class': dataType() === 'Container'  && isWholeRow() ? 'col-xs-12' : '' }">
+
+                                                    <div
+                                                        data-bind="style: { width: mlc() > 0 && dataType() === 'Container' ? mlc() +'px' : '' }, attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                                        <!-- ko if:name().substr(name().length - 9) != 'transpose'-->
+                                                            <!-- ko ifnot: ["GES %","Execution Country","Execution Year","Productivity"].includes(label()) -->
+                                                                <!-- ko if:name().substr(name().length - 9) == 'Labor_con'-->
+                                                                    <!-- ko template: { name: 'ContainerTemplate_labor', data:cpq.models.configurator.attributes()[$index()], as: 'ccattribute', noChildContext: true } -->
+                                                                    <!-- /ko -->
+                                                                <!-- /ko -->
+                                                                <!-- ko if:name().substr(name().length - 9) != 'Labor_con'-->
+                                                                    <!-- ko template: { name: 'SC_ContainerTemplate_CBM'} -->
+                                                                    <!-- /ko -->
+                                                                
+                                                                <!-- /ko -->
+                                                            <!-- /ko -->
+                                                        <!-- /ko -->
+                                                        <!-- ko if: ["GES %","Execution Country","Execution Year","Productivity"].includes(label()) -->
+                                                        <table class="fiori3-configuration-container-table" style="width:90%">
+                                                            <tbody>
+                                                                <tr class="full-width-attribute">
+                                                                    <td style="white-space:nowrap;text-align:right;padding-right:10px">
+                                                                        <label
+                                                                            data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() &amp;&amp; $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+                                                                        <span
+                                                                            data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }"
+                                                                            style="overflow-wrap: break-word; display: none; margin-bottom: 0px;"
+                                                                            class="grayout"></span>
+                                                                    </td>
+                                                                    <!-- ko if: ['Productivity', 'GES %'].includes(label()) -->
+                                                                    <td style="width:50%"><input type="text"
+                                                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                            data-bind="value: userInput, enable: isEnabled, css:{'error':!isValid() || hasConflict()}, attr: { name: name, id: stdAttrCode(), 'aria-label': name() }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"
+                                                                            class="form-control"></td>
+                                                                    <!-- /ko -->
+                                                                    <!-- ko if: ["Execution Country","Execution Year"].includes(label()) -->
+                                                                    <td><select
+                                                                            data-bind="options: values, optionsText: 'displayValueWithPrices' , value: selectedValue, enable: isEnabled, css: { 'error': hasConflict() }, attr: { name: name, id: stdAttrCode() , 'aria-label': name }, event: { change: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"
+                                                                            class="form-control"></select></td>
+                                                                    <!-- /ko -->
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- /ko -->
+
+                                                        <!-- ko if:name().substr(name().length - 9) === 'transpose'-->
+                                                        <!-- ko if:name() === 'Trace_Software_License_Configuration_transpose'-->
+                                                        <div style="width: max-content;">
+                                                        <!-- ko template: { name: "Transposed_ContainerTemplate", data:cpq.models.configurator.attributes()[$index()], as: 'ccattribute', noChildContext: true } -->
+                                                        <!-- /ko -->
+                                                        </div>
+                                                        <!-- /ko -->
+                                                        <!-- ko if:name() !== 'Trace_Software_License_Configuration_transpose'-->
+                                                        <!-- ko template: { name: "Transposed_ContainerTemplate", data:cpq.models.configurator.attributes()[$index()], as: 'ccattribute', noChildContext: true } -->
+                                                        <!-- /ko -->
+                                                        <!-- /ko -->
+                                                        <!-- /ko -->
+
+                                                    </div>
+                                                </div>
+                                            <!-- /ko -->
+                                            <!-- ko if:name().search("Inputs_Con") != "-1" -->
+                                                <div
+                                                    data-bind="style: {margin:dataType() === 'Container' ? '' : '' }, attr: { 'class': dataType() === 'Container' && isWholeRow() ? 'col-xs-12' : '' }">
+                                                    <div
+                                                        data-bind="style: { width: mlc() > 0 && dataType() === 'Container' ? mlc() +'px' : '' }, attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                                                         <!-- ko if:dataType() === 'Container' -->
+                                                        <!-- ko template: { name: "ContainerTemplate_nomoretable", data:$data} -->
+                                                        <!-- /ko -->
+                                                        <!-- /ko -->
+                                                    </div>
+                                                </div>
+                                            <!-- /ko -->
+
+                                <!-- /ko -->
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- /ko -->
+
+        <!-- ko if:($("#" + pattribute.id()).length === 0 && pattribute.name().slice(0,6) != "Header" && pattribute.name().slice(0,6) != "ATTCON" &&  !["MSID_Selected_Products", "Migration_MSID_Choices","MSID_Generic_System_Products_Count","Generic_System_Migration_User_Define_Name"].includes(pattribute.name()))-->
+
+            <!-- ko if:pattribute.name().search("Inputs_Con") == "-1" -->
+            <div
+                                data-bind="style: {margin:pattribute.dataType() === 'Container' ? '' : '' }, attr: { 'class': pattribute.dataType() === 'Container' && pattribute.isWholeRow() ? 'col-xs-12' : '' }">
+                <div
+                    data-bind="style: { width: pattribute.mlc() > 0 && pattribute.dataType() === 'Container' ? pattribute.mlc() +'px' : '' }, attr: { 'class': pattribute.isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: pattribute.id }, css: { 'fiori3-configuration-container-wrapper': pattribute.isWholeRow() && pattribute.dataType() === 'Container', 'full-width-attribute': pattribute.isWholeRow() && pattribute.dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate, data:pattribute} -->
+                    <!-- /ko -->
+                </div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if:pattribute.name().search("Inputs_Con") != "-1" -->
+            <div
+                                data-bind="style: {margin:pattribute.dataType() === 'Container' ? '' : '' }, attr: { 'class': pattribute.dataType() === 'Container' && pattribute.isWholeRow() ? 'col-xs-12' : '' }">
+                <div
+                    data-bind="style: { width: pattribute.mlc() > 0 && pattribute.dataType() === 'Container' ? pattribute.mlc() +'px' : '' }, attr: { 'class': pattribute.isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: pattribute.id }, css: { 'fiori3-configuration-container-wrapper': pattribute.isWholeRow() && pattribute.dataType() === 'Container', 'full-width-attribute': pattribute.isWholeRow() && pattribute.dataType() !== 'Container' }">
+                    <!-- ko template: { name: "ContainerTemplate_nomoretable", data:pattribute} -->
+                    <!-- /ko -->
+                </div>
+            </div>
+            <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->        
+    <!-- /ko -->
+</div>

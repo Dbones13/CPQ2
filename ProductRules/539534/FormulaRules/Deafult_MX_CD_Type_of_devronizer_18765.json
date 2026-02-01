@@ -1,0 +1,11 @@
+{
+    "id": 18765,
+    "condition": "[EQ](<*VALUE(MX_CD_Type_of_devronizer)*>,)",
+    "name": "Deafult_MX_CD_Type_of_devronizer",
+    "action": "<*SELECTVALUE(MX_CD_Type_of_devronizer:Press)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

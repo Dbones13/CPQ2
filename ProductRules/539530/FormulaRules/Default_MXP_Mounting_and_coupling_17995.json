@@ -1,0 +1,11 @@
+{
+    "id": 17995,
+    "condition": "[EQ](<*VALUE(MXP_Mounting_and_coupling)*>,)",
+    "name": "Default_MXP_Mounting_and_coupling",
+    "action": "<*SELECTVALUE(MXP_Mounting_and_coupling:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17858,
+    "condition": "[GT](<*CTX( Container(Miscellaneous Interfaces).Row(6).Column(Nodes).Get )*>,0)",
+    "name": "PS_Miscellaneous_Interfaces_EP-IASEAI_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IASEAI)*><*SELECTVALUE(SCADA_BOM_Items:EP-IASEAI)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IASEAI, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

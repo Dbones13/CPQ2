@@ -1,0 +1,11 @@
+{
+    "id": 23040,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 I/O HIVE - C300 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual)))",
+    "name": "Hide_SerC_RG_CN100_I/O_HOVE_None",
+    "action": "<*DISALLOWVALUES(SerC_RG_CN100_I/O_HOVE:None)*>",
+    "description": "CXCPQ-52160 - Requirement 1",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

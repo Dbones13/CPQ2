@@ -1,0 +1,11 @@
+{
+    "id": 12908,
+    "condition": "[AND](<*ISSELECTED(SC_P1P2_AutoUpdate_Editable_Ext.&nbsp)*>,[GEQ](<*CTX ( Container(SC_P1P2_Parts_Details).Rows.GetCount )*>,0))",
+    "name": "Calculate_ExtPrice_AutoUpdate",
+    "action": "<*ASSIGNVALUE(SC_P1P2_Parts_Ext_Price:<*CTX ( Container(SC_P1P2_Parts_Details).Sum(Hidden_ListPrice) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

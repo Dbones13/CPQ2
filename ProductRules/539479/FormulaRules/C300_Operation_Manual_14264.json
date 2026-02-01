@@ -1,0 +1,11 @@
+{
+    "id": 14264,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300 Operation Manual",
+    "action": "<*ASSIGNVALUE(C300 Operation Manual:[IF]([AND]([GEQ](<*VALUE(labor_parameter_io)*>,0),[LEQ](<*VALUE(labor_parameter_io)*>,400))){20}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,400),[LEQ](<*VALUE(labor_parameter_io)*>,2000))){30}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,2000),[LEQ](<*VALUE(labor_parameter_io)*>,5000))){40}{100}[ENDIF]}[ENDIF]}[ENDIF])*>\n",
+    "description": "CXCPQ-43584",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

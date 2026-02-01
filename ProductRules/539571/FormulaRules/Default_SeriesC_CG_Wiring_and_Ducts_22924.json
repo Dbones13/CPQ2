@@ -1,0 +1,11 @@
+{
+    "id": 22924,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_WiringandDucts)*>,)",
+    "name": "Default_SeriesC_CG_Wiring_and_Ducts",
+    "action": "<*SELECTVALUE(SeriesC_RG_WiringandDucts:Standard PVC FRLS (Fire Retardant + Low Smoke))*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23537,
+    "condition": "[OR](<*ISSELECTED(Additional_CustomDev_GES_Eng.SYS GES Eng-BO-EG)*>,<*ISSELECTED(Additional_CustomDev_GES_Eng.SYS GES Eng-FO-EG)*>)",
+    "name": "Hide GES Location other than UZ",
+    "action": "<*DISALLOWALLVALUESEXCEPT(Additional_CustomDev_GES_Eng:HPS_GES_P350B_EG|HPS_GES_P350F_EG)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

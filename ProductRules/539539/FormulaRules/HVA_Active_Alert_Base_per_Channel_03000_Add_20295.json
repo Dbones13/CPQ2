@@ -1,0 +1,11 @@
+{
+    "id": 20295,
+    "condition": "[GT](<*VALUE(DVM_HVA -Active_Alert_Base)*>,0)",
+    "name": "HVA -Active Alert Base, per Channel (0-3000_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAAB)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMAAB,<*VALUE(DVM_HVA -Active_Alert_Base)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45704",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

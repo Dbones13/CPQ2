@@ -1,0 +1,11 @@
+{
+    "id": 13518,
+    "condition": "[EQ](<*VALUE(Virtualization_Documentation_required)*>,)",
+    "name": "Default_documentation_required",
+    "action": "<*SELECTVALUE(Virtualization_Documentation_required:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 21897,
+    "condition": "[EQ](<*VALUE(FDM_Client_License(0-4))*>,)",
+    "name": "Default_FDM_Client_License(0-4)",
+    "action": "<*ASSIGNVALUE(FDM_Client_License(0-4):0)*>",
+    "description": "CXCPQ-48540",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

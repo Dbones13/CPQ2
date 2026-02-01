@@ -1,0 +1,751 @@
+<div class="cart-content fiori3-cart-content clearfix">
+    <div id="cartSectionsWrapper" class="cart-sections-wrapper">
+      <!-- ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() === 'CCC') && ($root.customFields.firstWithProperty('name','Quote Type')?.content() === 'Parts and Spot') -->
+      <div class="row">
+        <div id="functional-review-qn" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#functional-review-qn')">
+              <span>Functional Review Questions</span>
+              <a id="functional-review-qn-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="functional-review-qn-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+              <div class="row">
+                <div class="custom-fields cpq-scroll">
+                  <div class="custom-field-headers col-xs-12">CREDITWORTHINESS</div>
+                  <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-5 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <th class="col-md-5 text-center">Rule</th>
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_CFR1_Ques','EGAP_CFR2_Ques','EGAP_CFR3_Ques','EGAP_CFR4_Ques','EGAP_ETR_Number')">
+                      <tr>
+                      <!-- ko ifnot: ($data.name === 'EGAP_CFR2_Ques') && ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == 'CCC') -->
+                        <!-- ko if: $data.name.split('_')[1] != 'ETR' -->
+                          <td data-bind="text: $data.name.split('_')[1]" class="col-sm-1 text-center"></td>
+                        <!-- /ko -->
+                        <!-- ko if: $data.name.split('_')[1] == 'ETR' -->
+                          <td class="col-sm-1 text-center">&nbsp;</td>
+                        <!-- /ko -->
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span data-bind="visible: $data.isRequiredIndicatorVisible" class="required">*</span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: (template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate') &&  $data.name != 'EGAP_ETR_Number' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                            <!-- ko if: template == 'CartCustomFieldFreeFormTemplate' || $data.name == 'EGAP_ETR_Number'  -->
+                              <input data-bind="valueUpdatedOnEnter: $data.content, enable: $data.editable, 'aria-required': $data.isRequiredIndicatorVisible, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" class="form-control"/>
+                              <span data-bind="visible: $data.error, text: 'ETR Number is a required field', enable: $data.editable" class="required" role="alert" aria-live="assertive"></span>
+                            <!-- /ko -->
+                          </td>
+                          <td class="item-column-absolute col-md-5" style="white-space: pre-wrap" data-bind="html: $root.customFields.firstWithProperty('name', $data.name+'_Rule')?.content()"></td>
+                      <!-- /ko -->
+                      </tr>
+                    </tbody>
+					<tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_CFR5_Ques','EGAP_CFR6_Ques')">
+                      <tr>
+                      <!-- ko ifnot: ($data.name === 'EGAP_CFR2_Ques') && ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == 'CCC') -->
+                        <!-- ko if: $data.name.split('_')[1] != 'ETR' -->
+                          <td data-bind="text: $data.name.split('_')[1]" class="col-sm-1 text-center"></td>
+                        <!-- /ko -->
+                        <!-- ko if: $data.name.split('_')[1] == 'ETR' -->
+                          <td class="col-sm-1 text-center">&nbsp;</td>
+                        <!-- /ko -->
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span data-bind="visible: $data.isRequiredIndicatorVisible" class="required">*</span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: (template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate') &&  $data.name != 'EGAP_ETR_Number' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                            <!-- ko if: template == 'CartCustomFieldFreeFormTemplate' || $data.name == 'EGAP_ETR_Number'  -->
+                              <input data-bind="valueUpdatedOnEnter: $data.content, enable: $data.editable, 'aria-required': $data.isRequiredIndicatorVisible, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" class="form-control"/>
+                              <span data-bind="visible: $data.error, text: 'ETR Number is a required field', enable: $data.editable" class="required" role="alert" aria-live="assertive"></span>
+                            <!-- /ko -->
+                          </td>
+                          <td class="item-column-absolute col-md-5" style="white-space: pre-wrap" data-bind="html: $root.customFields.firstWithProperty('name', $data.name+'_Rule')?.content()"></td>
+                      <!-- /ko -->
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+			  <!-- ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() === 'HCP') && ($root.customFields.firstWithProperty('name','Quote Type')?.content() === 'Parts and Spot') -->
+              <div class="row">
+                <div class="custom-fields cpq-scroll">
+                  <div class="custom-field-headers col-xs-12">MILESTONES</div>
+                  <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-5 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <th class="col-md-5 text-center">Rule</th>
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_MFR1_Ques','EGAP_MFR2_Ques')">
+                      <tr>
+                          <td data-bind="text: $data.name.split('_')[1]" class="col-sm-1 text-center"></td>
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                          </td>
+                          <td class="item-column-absolute col-md-5" style="white-space: pre-wrap" data-bind="html: $root.customFields.firstWithProperty('name', $data.name+'_Rule')?.content()"></td>
+                      </tr>
+                    </tbody>
+                  </table>                              
+                </div>
+              </div>
+              <div class="row">
+                <div class="custom-fields cpq-scroll">
+                  <div class="custom-field-headers col-xs-12">PRICING</div>
+                  <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-5 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <th class="col-md-5 text-center">Rule</th>
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_PFR1_Ques')">
+                      <tr>
+                          <!-- ko ifnot: ($data.name === 'EGAP_PFR1_Ques') && ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == 'CCC') -->
+                          <td data-bind="text: $data.name.split('_')[1]" class="col-sm-1 text-center"></td>
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                          </td>
+                          <td class="item-column-absolute col-md-5" style="white-space: pre-wrap" data-bind="html: $root.customFields.firstWithProperty('name', $data.name+'_Rule')?.content()"></td>
+                          <!-- /ko -->
+                      </tr>
+                    </tbody>
+                  </table> 
+                </div>
+              </div>
+              <!-- /ko -->
+              <div class="row">
+                <div class="custom-fields cpq-scroll">
+                  <div class="custom-field-headers col-xs-12">RISK ASSESSMENT</div>
+                  <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-5 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <th class="col-md-5 text-center">Rule</th>
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_RAFR1_Ques','EGAP_RAFR2_Ques','EGAP_RAFR2_RQUP_Number', 'EGAP_RAFR1_RQUP_Number','EGAP_RAFR3_Ques','EGAP_RAFR4_Ques')">
+                      <tr>
+                        <!-- ko ifnot: ($data.name === 'EGAP_RAFR1_Ques' || $data.name === 'EGAP_RAFR1_RQUP_Number')&& ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == 'CCC') -->
+                        <!-- ko if: $data.name.split('_')[2] != 'RQUP' -->
+                          <td data-bind="text: $data.name.split('_')[1]" class="col-sm-1 text-center"></td>
+                        <!-- /ko -->
+                        <!-- ko if: $data.name.split('_')[2] == 'RQUP' -->
+                          <td class="col-sm-1 text-center">&nbsp;</td>
+                        <!-- /ko -->                      
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span data-bind="visible: $data.isRequiredIndicatorVisible" class="required">*</span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: (template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate')  &&  $data.name != 'EGAP_RAFR1_RQUP_Number' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                            <!-- ko if: template == 'CartCustomFieldFreeFormTemplate' || $data.name == 'EGAP_RAFR1_RQUP_Number'-->
+                              <input data-bind="valueUpdatedOnEnter: $data.content, enable: $data.editable, 'aria-required': $data.isRequiredIndicatorVisible, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" class="form-control"/>
+                              <span data-bind="visible: $data.error, text:'RQUP Number is a required field', enable: $data.editable" class="required" role="alert" aria-live="assertive"></span> 
+                            <!-- /ko -->
+                          </td>
+                          <td class="item-column-absolute col-md-5" style="white-space: pre-wrap" data-bind="html: $root.customFields.firstWithProperty('name', $data.name+'_Rule')?.content()"></td>
+                          <!-- /ko -->
+                      </tr>
+                    </tbody>
+                  </table>                 
+                </div>
+              </div>
+              <div class="row">
+                <div class="custom-fields cpq-scroll">
+                  <div class="custom-field-headers col-xs-12">CONTRACT TERMS</div>
+                  <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-5 text-center">Question</th>
+                          <th class="col-md-4 text-center">Answer</th>
+                          <th class="col-md-4 text-center">Rule</th>
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_CTFR1_Ques','EGAP_CTFR5_Ques','EGAP_CTFR12_Ques')" >
+                      <tr>
+                          <td data-bind="text: $data.name.split('_')[1]" class="col-sm-1 text-center"></td>
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-md-4 text-center">
+                          <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                            <!-- ko ifnot: $data.name == 'EGAP_CTFR7_Ques' -->
+                              <select class="form-control" style="width:40%" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->   
+                            <!-- ko if: $data.name == 'EGAP_CTFR7_Ques' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko --> 
+                          <!-- /ko -->
+                          </td>
+                          <td class="item-column-absolute col-md-4" style="white-space: pre-wrap" data-bind="html: $root.customFields.firstWithProperty('name', $data.name+'_Rule')?.content()"></td>
+                      </tr>                   
+                    </tbody>
+                  </table>               
+                </div>
+              </div>
+            <!-- FRQ_SECTION_END -->  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" data-bind="visible: $root.customFields.firstWithProperty('name', 'IsCARQuestionsVisible')?.content() == '1' ? true : false">
+        <div id="controllership-review-qn" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#controllership-review-qn')">
+              <span>Controllership Review Questions</span>
+              <a id="controllership-review-qn-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="controllership-review-qn-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+              <div class="row">
+                <div class="custom-fields cpq-scroll">
+                  <div class="custom-field-headers col-xs-12">CONTROLLERSHIP APPROVAL REVIEW QUESTIONS</div>
+                  <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-10 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <!--th class="col-md-5 text-center">Rule</th-->
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_CAR_Ques_1','EGAP_CAR_Ques_2','EGAP_CAR_Ques_3','EGAP_CAR_Ques_4','EGAP_CAR_Ques_5','EGAP_CAR_Ques_6','EGAP_CAR_Ques_7','EGAP_CAR_Ques_8','EGAP_CAR_Ques_9')">
+                      <tr>
+                          <!-- ko ifnot: ($data.name === 'EGAP_CAR_Ques_3' || $data.name === 'EGAP_CAR_Ques_4' || $data.name === 'EGAP_CAR_Ques_5' || $data.name === 'EGAP_CAR_Ques_6' || $data.name === 'EGAP_CAR_Ques_7')&& ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == 'CCC') -->
+                         <!-- ko if: $index() == 0 -->
+                          <td class="col-sm-1 text-center">Entry Field</td>
+                         <!-- /ko -->
+                         <!-- ko if: $index() > 0  -->
+                          <td data-bind="text: $index()" class="col-sm-1 text-center"></td>
+                         <!-- /ko -->
+                          <td class="item-column-absolute col-md-10">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: (template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate') && $data.name != 'EGAP_CAR_Ques_1' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                            <!-- ko if: template == 'CartCustomFieldFreeFormTemplate' || $data.name == 'EGAP_CAR_Ques_1' -->
+                              <input data-bind="numericValue:$data.content, valueUpdatedOnEnter: $data.content, enable: $data.editable, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" class="form-control numberCell"/>
+                            <!-- /ko -->
+                          </td>
+                          <!--td class="item-column-absolute col-md-5" style="white-space: pre-wrap"></td-->
+                          <!-- /ko -->
+                      </tr>
+                    </tbody>
+                  </table>   
+                </div>
+              </div>
+              <!-- CRQ_SECTION_END -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" data-bind="visible: $root.customFields.firstWithProperty('name', 'IsCashRiskQuestionsVisible')?.content() == '1' ? true : false">
+        <div id="cash-risk-questions" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#cash-risk-questions')">
+              <span>Cash Risk Questions</span>
+              <a id="cash-risk-questions-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="cash-risk-questions-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+              <div class="custom-fields cpq-scroll">
+                <div class="custom-field-headers col-xs-12">CASH RISK APPROVAL REVIEW QUESTIONS</div>
+                 <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-5 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <th class="col-md-5 text-center">Risk Factor per Group</th>
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_Ques_CR1b','EGAP_Ques_CR3b','EGAP_Ques_CR3c','EGAP_Ques_CR3d','EGAP_Ques_CR4a','EGAP_Ques_CR4b','EGAP_Ques_CR4c','EGAP_Ques_CR5a','EGAP_Ques_CR5b','EGAP_Ques_CR5c','EGAP_Ques_CR6a','EGAP_Ques_CR6b','EGAP_Ques_CR7a','EGAP_Ques_CR8a','EGAP_Ques_CR9a','EGAP_Ques_CR9b')">
+                      <tr>
+                          <!-- ko ifnot: ($data.name === 'EGAP_Ques_CR4a' || $data.name === 'EGAP_Ques_CR4b')&& ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == 'CCC') -->
+                          <td data-bind="text: $data.name.split('_')[2]" class="col-sm-1 text-center"></td>
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                          </td>
+                          <td class="item-column-absolute col-md-5 text-center" data-bind="html: $root.customFields.firstWithProperty('name', 'EGAP_Risk_Count_'+$data.name.split('_')[2])?.content()" ></td>
+                          <!-- /ko -->
+                          </tr>
+                        </tbody>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_Total_Number_Of_Risk_Factors')">
+                      <tr>
+                          <td class="col-sm-1 text-center"></td>
+                          <td class="item-column-absolute col-md-5">
+                            <span data-bind="html: $data.label"></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                          </td>
+                          <td class="item-column-absolute col-md-5 text-center" data-bind="html: $root.customFields.firstWithProperty('name', 'EGAP_Total_Number_Of_Risk_Factors')?.content()" ></td>
+                       </tr>
+                    </tbody>
+                     </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- /ko -->
+      <div class="row">
+        <div id="other-questions" class="fiori3-cart-section clearfix section-toggled">
+          <div>
+            <div class="fiori3-quote-section-header" onclick="toggleSection(event, '#other-questions')">
+              <span>Other Questions</span>
+              <a id="other-questions-href" href="#" class="fiori3-quote-section-toggle fiori3-rotated-quote-section-toggle">&#xe066;</a>
+            </div>
+            <div id="other-questions-content" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container" style="display:none;">
+              <div class="row">
+                <div class="custom-fields cpq-scroll">
+                  <div class="custom-field-headers col-xs-12">INFORMATION QUESTIONS</div>
+                  <!--ko ifnot: ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == "CCC"  || $root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == "HCP") -->
+                    <table class="table table-bordered">
+                      <thead class="search-in-columns-disabled">
+                        <tr>
+                            <th class="col-sm-1 text-center">S.NO</th>
+                            <th class="col-md-10 text-center">Question</th>
+                            <th class="col-sm-1 text-center">Answer</th>
+                            <!--th class="col-md-5 text-center">Rule</th-->
+                        </tr>
+                      </thead>
+                      <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_1','EGAP_IQ_Ques_2','EGAP_IQ_Ques_3','EGAP_IQ_Ques_4','EGAP_IQ_Ques_18','EGAP_IQ_Ques_19','EGAP_IQ_Ques_20')">
+                        <!-- ko if: (($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == "PAS" && $data.name === 'EGAP_IQ_Ques_18') || $data.name !== 'EGAP_IQ_Ques_18') -->
+                        <tr>
+                            <td data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></td>
+                            <td class="item-column-absolute col-md-10">
+                              <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                              <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                            </td>
+                            <td class="col-sm-1 text-center">
+                              <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                              <!-- /ko -->
+                            </td>
+                            <!--td class="item-column-absolute col-md-5" style="white-space: pre-wrap"></td-->
+                        </tr>
+                        <!-- /ko -->
+                      </tbody>
+                    </table>
+                  <!-- /ko -->
+				  <!--ko if: ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == "HCP") -->
+                  <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-10 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <!--th class="col-md-5 text-center">Rule</th-->
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_15','EGAP_IQ_Ques_16','EGAP_IQ_Ques_17','EGAP_IQ_Ques_19','EGAP_IQ_Ques_20')">
+                      <tr>
+                          <td data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></td>
+                          <td class="item-column-absolute col-md-10">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe289;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko -->
+                          </td>
+                          <!--td class="item-column-absolute col-md-5" style="white-space: pre-wrap"></td-->
+                      </tr>
+                    </tbody>
+                  </table>
+				  <!-- /ko -->
+                    <!-- ko if: ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == "PAS") -->
+					<!-- <table class="table table-bordered">
+                    <thead class="search-in-columns-disabled">
+                      <tr>
+                          <th class="col-sm-1 text-center">S.NO</th>
+                          <th class="col-md-10 text-center">Question</th>
+                          <th class="col-sm-1 text-center">Answer</th>
+                          <!--th class="col-md-5 text-center">Rule</th>
+                      </tr>
+                    </thead>
+                    <tbody data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_18')">
+                      <tr>
+                          <td data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></td>
+                          <td class="item-column-absolute col-md-10">
+                            <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                            <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe289;</span></a></span>
+                          </td>
+                          <td class="col-sm-1 text-center">
+                            <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' >
+                              <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                            <!-- /ko >
+                          </td>
+                          <!--td class="item-column-absolute col-md-5" style="white-space: pre-wrap"></td>
+                      </tr>
+                    </tbody>
+                  </table>-->
+<!-- /ko -->
+
+
+                  <!--ko if: ($root.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() == "CCC") -->
+                      <div class="col-md-12">
+                        <span style="border-top: 1px solid #bfbfbf;border-bottom-width: 2px;border: 1px solid #ddd;padding:8px;background-color:#d9d9d9 "class="col-sm-1">S.NO</span>
+                        <span style="border-top: 1px solid #bfbfbf;border-bottom-width: 2px;border: 1px solid #ddd;padding:8px;background-color:#d9d9d9 " class="col-md-5 text-center">Question</span>
+                        <span style="border-top: 1px solid #bfbfbf;border-bottom-width: 2px;border: 1px solid #ddd;padding:8px;background-color:#d9d9d9 " class="col-sm-1 text-center">Answer</span>
+                        <span style="border-top: 1px solid #bfbfbf;border-bottom-width: 2px;border: 1px solid #ddd;padding:8px;background-color:#d9d9d9 " class="col-md-5 text-center">Comment</span>
+                      </div>
+                      <!-- ko if: ($root.customFields.firstWithProperty('name','Quote Type')?.content() === 'Projects') -->
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_5')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_5_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                          <hr style="border-bottom: 1px solid black;">
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_6')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_6_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                          <hr style="border-bottom: 1px solid black;">
+                      <!-- /ko -->
+                      <div class="col-md-12">
+                          <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_7')">
+                              <span class="col-sm-1" >
+                                  <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                              </span>
+                              <span class="col-md-*">
+                                  <span class="item-column-absolute col-md-5">
+                                    <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                    <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                  </span>
+                              </span>
+                              <span class="col-sm-1 text-center">
+                                  <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                  <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                <!-- /ko -->
+                              </span>
+                          </span>
+                          <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_7_Comment')">
+                              <span class="item-column-absolute col-md-5" >
+                                          <textarea class="form-control" data-bind="
+                                                  event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                  value: content,
+                                                  valueUpdatedOnEnter: content,
+                                                  enable: editable,
+                                                  attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                          </textarea>
+                                  </span>
+                          </span>
+                      </div>
+                      <hr style="border-bottom: 1px solid black;">
+                      <div class="col-md-12">
+                          <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_8')">
+                              <span class="col-sm-1" >
+                                  <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                              </span>
+                              <span class="col-md-*">
+                                  <span class="item-column-absolute col-md-5">
+                                    <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                    <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                  </span>
+                              </span>
+                              <span class="col-sm-1 text-center">
+                                  <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                  <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                <!-- /ko -->
+                              </span>
+                          </span>
+                          <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_8_Comment')">
+                              <span class="item-column-absolute col-md-5" >
+                                          <textarea class="form-control" data-bind="
+                                                  event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                  value: content,
+                                                  valueUpdatedOnEnter: content,
+                                                  enable: editable,
+                                                  attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                          </textarea>
+                                  </span>
+                          </span>
+                      </div>
+                      <!-- ko if: ($root.customFields.firstWithProperty('name','Quote Type')?.content() === 'Projects') -->
+                          <hr style="border-bottom: 1px solid black;">
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_9')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_9_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                          <hr style="border-bottom: 1px solid black;">
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_10')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_10_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                            <hr style="border-bottom: 1px solid black;">
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_11')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_11_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                          <hr style="border-bottom: 1px solid black;">
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_12')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_12_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                          <hr style="border-bottom: 1px solid black;">
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_13')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_13_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                      <!-- /ko -->
+                      <!-- ko if: ($root.customFields.firstWithProperty('name','Quote Type')?.content() === 'Parts and Spot') -->
+                            <hr style="border-bottom: 1px solid black;">
+                          <div class="col-md-12">
+                              <span data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_14')">
+                                  <span class="col-sm-1" >
+                                      <span data-bind="text: 'Q'+($data.name.split('_')[3])" class="col-sm-1 text-center"></span>
+                                  </span>
+                                  <span class="col-md-*">
+                                      <span class="item-column-absolute col-md-5">
+                                        <span data-bind="html: $data.label.split('#N#')[0].split('#BR#').join('<br/>')"></span>
+                                        <span class="tooltip-trigger" data-bind="visible: $data.label.split('#N#')[1],tooltip: { title: $data.label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: $data.label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></span>
+                                      </span>
+                                  </span>
+                                  <span class="col-sm-1 text-center">
+                                      <!-- ko if: template == 'CartCustomFieldAttributeTemplate' || template == 'CartCustomFieldHtmlTemplate' -->
+                                      <select class="form-control" data-bind="options: $data.values, optionsText: 'value', value: $data.selectedValue, disable: !$data.editable, attr: { id: $index() + '_' + id, 'aria-disabled': !$data.editable, 'aria-required': $data.isRequiredIndicatorVisible}"></select>
+                                    <!-- /ko -->
+                                  </span>
+                              </span>
+                              <span class="col-md-*" data-bind="foreach: customFields.filterByProperty('name','EGAP_IQ_Ques_14_Comment')">
+                                  <span class="item-column-absolute col-md-5" >
+                                              <textarea class="form-control" data-bind="
+                                                      event: { focus: setLastFocusedField, blur: clearLastFocusedField },
+                                                      value: content,
+                                                      valueUpdatedOnEnter: content,
+                                                      enable: editable,
+                                                      attr: { id: $data.name + '_Comment', 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible, required: isRequiredIndicatorVisible }">
+                                              </textarea>
+                                      </span>
+                              </span>
+                          </div>
+                      <!-- /ko -->
+                  <!-- /ko -->
+                 </div>
+               </div>
+            <!-- OQ_SECTION_END -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

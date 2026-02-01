@@ -1,0 +1,11 @@
+{
+    "id": 14564,
+    "condition": "[EQ](<*VALUE(PRMS Number of Meter Calibration Events)*>,)",
+    "name": "Default Number of Meter Calibration Events",
+    "action": "<*ASSIGNVALUE(PRMS Number of Meter Calibration Events:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20326,
+    "condition": "[AND]([EQ](<*VALUE(DVM_Software_Release)*>,R800),[EQ](<*VALUE(RTSP_Video_Streaming_Interface)*>,Yes))",
+    "name": "EP-DVMRTS_Add_G",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMRTS)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMRTS, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23469,
+    "condition": "<*ATTSEL(CN900_Bom_Parts)*>",
+    "name": "Load_part_summary_cont",
+    "action": "<*CTX( Container(CN900_CG_PartSummary_Cont).LoadKeys(CE_Part_Number).Load(select '<*eval(Replace(\"<*VALUE(CN900_Bom_Parts)*>\",\", \",\"' as CE_Part_Number UNION SELECT '\"))*>' as CE_Part_Number) )*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

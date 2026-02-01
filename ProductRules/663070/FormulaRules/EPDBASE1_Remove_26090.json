@@ -1,0 +1,11 @@
+{
+    "id": 26090,
+    "condition": "[NOT]([EQ](<*VALUE(Experion Server Type)*>,Server))",
+    "name": "EP-DBASE1_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DBASE1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

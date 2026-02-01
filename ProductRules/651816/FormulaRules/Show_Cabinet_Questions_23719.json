@@ -1,0 +1,11 @@
+{
+    "id": 23719,
+    "condition": "[EQ](<*VALUE(Cabinet_Required_Racks_Mounting)*>,Yes)",
+    "name": "Show Cabinet Questions",
+    "action": "<*ALLOWATTRIBUTES(UOC_CG_Cabinet_Cont)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

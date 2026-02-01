@@ -1,0 +1,11 @@
+{
+    "id": 14043,
+    "condition": "[EQ](<*CTX( Container(DVM_Additional_Labour_Container).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Addi Custom Deliverable",
+    "action": "<*CTX( Container(DVM_Additional_Labour_Container).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

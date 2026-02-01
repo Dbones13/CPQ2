@@ -1,0 +1,11 @@
+{
+    "id": 20087,
+    "condition": "[AND]([EQ](<*CTX ( Container(C300_TurboM_IOM_CG_Cont).Rows.GetCount )*>,0),<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)",
+    "name": "Load C300_TurboM_IOM_CG_Cont",
+    "action": "<*CTX ( Container(C300_TurboM_IOM_CG_Cont).Load(Select IO_Type, Red_IOM from C300_TurboM_IOM) )*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

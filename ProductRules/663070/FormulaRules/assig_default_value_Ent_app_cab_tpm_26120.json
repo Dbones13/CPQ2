@@ -1,0 +1,11 @@
+{
+    "id": 26120,
+    "condition": "[EQ](<*VALUE(Ent_app_cab_tpm)*>,)",
+    "name": "assig default value Ent_app_cab_tpm",
+    "action": "<*SELECTVALUE(Ent_app_cab_tpm:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

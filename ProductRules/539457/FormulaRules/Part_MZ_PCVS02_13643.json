@@ -1,0 +1,11 @@
+{
+    "id": 13643,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B),[GT](<*CTX( Container(Virtualization_cluster_transpose).Sum(Virtualization_of_48_Port_Top_of_Rack_Switch) )*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_PCVS02",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVS02)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVS02,<*CTX( Container(Virtualization_cluster_transpose).Sum(Virtualization_of_48_Port_Top_of_Rack_Switch) )*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "02/01/26",
+    "modifiedBy": "Abhijeet Shinde"
+}

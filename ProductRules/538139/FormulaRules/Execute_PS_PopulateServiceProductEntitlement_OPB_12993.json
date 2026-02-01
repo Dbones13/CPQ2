@@ -1,0 +1,11 @@
+{
+    "id": 12993,
+    "condition": "[NEQ](<*VALUE(SC_OPB_Check_SP_Ent)*>,1)",
+    "name": "Execute_PS_PopulateServiceProductEntitlement_OPB",
+    "action": "<* ExecuteScript(PS_PopulateServiceProductEntitlement_OPB) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

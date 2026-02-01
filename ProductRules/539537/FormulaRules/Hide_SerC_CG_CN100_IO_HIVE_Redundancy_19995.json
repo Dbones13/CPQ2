@@ -1,0 +1,11 @@
+{
+    "id": 19995,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 I/O HIVE - C300 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual))))",
+    "name": "Hide_SerC_CG_CN100_IO_HIVE_Redundancy",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_CN100_IO_HIVE_Redundancy)*>",
+    "description": "CXCPQ-51941 - Requirement 4",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

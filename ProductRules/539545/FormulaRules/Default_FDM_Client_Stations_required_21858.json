@@ -1,0 +1,11 @@
+{
+    "id": 21858,
+    "condition": "[EQ](<*VALUE(FDM Client Stations required)*>,)",
+    "name": "Default_FDM Client Stations required",
+    "action": "<*SELECTVALUE(FDM Client Stations required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

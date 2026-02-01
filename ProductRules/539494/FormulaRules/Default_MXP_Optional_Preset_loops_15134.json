@@ -1,0 +1,11 @@
+{
+    "id": 15134,
+    "condition": "[EQ](<*VALUE(MXP_Optional_Preset_loops)*>,)",
+    "name": "Default_MXP_Optional_Preset_loops",
+    "action": "<*ASSIGNVALUE(MXP_Optional_Preset_loops:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18070,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(MXP_CalcoilPRO_Type)*>,On Machine Power modules),[EQ](<*VALUE(MXP_Temperature)*>,High Temperature),[EQ](<*VALUE(MXP_CD_Control_Type)*>,Calcoil PRO),[EQ](<*VALUE(MXP_kW)*>,4.5),[GT](<*VALUE(MXP_Number_of_Zones)*>,0)))",
+    "name": "Part_D_9760_10_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_CD_Bom_Parts:9760-10-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20791,
+    "condition": "[NOT](<*ATTSEL(Simulation_Bom_parts)*>)",
+    "name": "rest",
+    "action": "<*CTX ( Container(Simulation_partsummary_cont\n).Rows.Clear )*>",
+    "description": "",
+    "rank": "90",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

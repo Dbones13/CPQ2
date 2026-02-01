@@ -1,0 +1,11 @@
+{
+    "id": 26541,
+    "condition": "[EQ](<*VALUE(Hardware Design Selection_ACE_T_Node)*>,SVR_PER_DELL_Rack_RAID5)",
+    "name": "Show_Additional_MemoryDisk_ACETDesk",
+    "action": "[IF]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(Additional Memory (ACE-T))*><*DISALLOWATTRIBUTES(Additional Memory (ACE-T))*>}{<*ALLOWVALUES(Additional Memory (ACE-T):16GB)*>}[ENDIF]",
+    "description": "ACE-T Node in Desk Preference\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

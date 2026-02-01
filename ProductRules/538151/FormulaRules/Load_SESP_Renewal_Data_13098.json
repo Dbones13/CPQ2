@@ -1,0 +1,11 @@
+{
+    "id": 13098,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_SESP_Renewal_Check)*>,0))",
+    "name": "Load SESP Renewal Data",
+    "action": "<* ExecuteScript(Load data) *>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

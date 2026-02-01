@@ -1,0 +1,11 @@
+{
+    "id": 14253,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "CD_LD_CR_SG_Hrs",
+    "action": "<*ASSIGNVALUE(CD_LD_CR_SG_Hrs:<* Eval((((0.16*0<*VALUE(Labor_Parameter_hio)*>+  10 * 1) * 0<*VALUE(Labor_parameter_mdb)*>+0.16*0<*VALUE(Labor_Parameter_hio)*>*0.06*0<*VALUE(C300_Labor_parameter_is)*>) * 1.05)+(0.25 * 0<*VALUE(Labor_parameter_ld)*> * (((0.16 * 0<*VALUE(Labor_Parameter_hio)*>+  10 * 1) *0<*VALUE(Labor_parameter_mdb)*> ) * 1.05))+((1.2 * (10 + (0<*VALUE(Labor_parametre_sys)*>+ 0<*VALUE(Labor_parameter_mar)*>) * 0.5 )) * 0.9)+(0.5*(0<*VALUE(Total_Number_of_ProfiNet_Devices (0-10000))*>+ 0<*VALUE(Total_Number_of_EtherNet_IP_Devices (0-10000))*>))) *>)*>",
+    "description": "CD Hrs = ((0.16 hio+  10 * 1) * mdb +0.16 hio*0.06*is) * 1.05\n\nLD Hrs = 0.25 * ld * (((0.16 *hio +  10 * 1) * mdb ) * 1.05)\n\nCR Hrs = (1.2 * (10 + (sys + mar ) * 0.5 )) * 0.9\n\nSG Hrs = 0.5*(proN + eIP)",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

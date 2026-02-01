@@ -1,0 +1,11 @@
+{
+    "id": 25752,
+    "condition": "[EQ](<*VALUE(Server_NodeType)*>,)",
+    "name": "Default_Rack_Server",
+    "action": "<*SELECTVALUE(Server_NodeType:SVR_STD_DELL_Rack_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

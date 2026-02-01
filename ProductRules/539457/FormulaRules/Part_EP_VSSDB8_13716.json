@@ -1,0 +1,11 @@
+{
+    "id": 13716,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_VMWare_VSAN_Dual_Socket_Host)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_VSSDB8",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VSSDB8)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VSSDB8,<*VALUE(Virtualization_VMWare_VSAN_Dual_Socket_Host)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

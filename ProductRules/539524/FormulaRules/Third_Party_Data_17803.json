@@ -1,0 +1,11 @@
+{
+    "id": 17803,
+    "condition": "[EQ](<*CTX( Container(Miscellaneous Interfaces).Rows.GetCount )*>,0)",
+    "name": "Third Party Data",
+    "action": "<*CTX( Container(Miscellaneous Interfaces).LoadKeys(Identifiers,Default_Network_type, Default_Network_Interface).Load(SELECT Identifiers,Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'Miscellaneous Interfaces') )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

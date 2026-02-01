@@ -1,0 +1,11 @@
+{
+    "id": 15165,
+    "condition": "[AND]([EQ](<*VALUE(MXP_MXOpen_ODX_Network_link)*>,Yes),[GT](<*VALUE(MXP_number_of_points_4)*>,0))",
+    "name": "Part_A_3_5877_01_PT",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5877-01-PT)*><*SETATVQTY(MXP_Bom_Parts:3-5877-01-PT,<*VALUE(MXP_number_of_points_4)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

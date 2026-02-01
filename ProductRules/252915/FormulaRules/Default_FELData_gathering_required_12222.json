@@ -1,0 +1,11 @@
+{
+    "id": 12222,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering)\n,[EQ](<*VALUE(ELEPIU_FEL/Data_gatheringrequired?)*>,))",
+    "name": "Default_FEL/Data gathering required?",
+    "action": "<*SELECTVALUE(ELEPIU_FEL/Data_gatheringrequired?:Yes)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

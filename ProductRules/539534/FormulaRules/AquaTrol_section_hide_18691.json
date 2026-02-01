@@ -1,0 +1,11 @@
+{
+    "id": 18691,
+    "condition": "[NEQ](<*VALUE(MX_CD_Control_Type)*>,AquaTrol)",
+    "name": "AquaTrol section hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_Additional_Power_Control_Wire,MX_CD_Pneumatic_Retraction,MX_CD_Water_Control_Unit)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

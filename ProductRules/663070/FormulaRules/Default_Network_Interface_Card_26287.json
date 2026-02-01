@@ -1,0 +1,11 @@
+{
+    "id": 26287,
+    "condition": "[EQ](<*VALUE(Network Interface Card Type)*>,)",
+    "name": "Default_Network_Interface_Card",
+    "action": "<*SELECTVALUE(Network Interface Card Type:Onboard)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

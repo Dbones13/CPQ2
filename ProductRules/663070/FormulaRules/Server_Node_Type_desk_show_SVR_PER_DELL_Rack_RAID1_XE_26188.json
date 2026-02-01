@@ -1,0 +1,11 @@
+{
+    "id": 26188,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),[OR](<*ISSELECTED(Experion Server Type.Server TPS)*>,[EQ](<*VALUE(Experion Server Type)*>,Server)),<*ISSELECTED(Server Mounting.Desk)*>)",
+    "name": "Server_Node_Type_desk_show_SVR_PER_DELL_Rack_RAID1_XE",
+    "action": "<*ALLOWVALUES(Server Node Type_desk:SVR_PER_DELL_Rack_RAID1_XE)*>",
+    "description": "CXDEV-8007",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

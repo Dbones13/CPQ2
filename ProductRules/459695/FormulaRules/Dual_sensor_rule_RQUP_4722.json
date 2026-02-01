@@ -1,0 +1,11 @@
+{
+    "id": 4722,
+    "condition": "[NOT](<*ISSELECTED(MX_SG_Type_of_Scanner.Q4022-34 I-Beam O-Frame)*>)",
+    "name": "Dual sensor rule (RQUP)",
+    "action": "<*DISALLOWATTRIBUTES(MX_SG_Dual_Sensor_Measurement)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

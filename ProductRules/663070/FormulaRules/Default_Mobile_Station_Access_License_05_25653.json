@@ -1,0 +1,11 @@
+{
+    "id": 25653,
+    "condition": "[EQ](<*VALUE(Mobile Station Access License (0-5))*>,)",
+    "name": "Default_Mobile_Station_Access_License_(0-5)",
+    "action": "<*ASSIGNVALUE(Mobile Station Access License (0-5):0)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

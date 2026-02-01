@@ -1,0 +1,149 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+	<div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+	  <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+		@Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	</div>
+  
+	<!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	<!-- /ko -->
+
+            <!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") -->
+                <div class="row col-xs-12 swagger"> 
+                    <div class="Calc_btn" >
+                        <div class="col-xs-12 col-sm-12">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+                        </div>
+                    </div>
+    			</div>
+            <!-- /ko -->
+			
+			
+	<div class="row col-xs-12 swagger">
+	  <div id="uoc-rg-cabinet">
+		<div>
+		  <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-rg-cabinet')"> -->
+			<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'uoc-rg-cabinet',$('#uoc-rg-cabinet-content'), $('#uoc-rg-cabinet-href'), 'slow');  }">
+			<!-- ko ifnot: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Remote Group')-->
+			<span>Cabinet and Remote IO Rack Details</span>
+			 <!-- /ko -->
+       		 <!-- ko if: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Remote Group')-->
+			<span>Remote IO Rack Details</span>
+ 			<!-- /ko -->
+			<a id="uoc-rg-cabinet-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="uoc-rg-cabinet-content" class="newtoggle">
+			<!-- ko ifnot: (localStorage.getItem("checkR2Q") ==='Yes' && cpq.models.configurator.actionModule.responderModule.name() === 'UOC Remote Group')-->
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "UOC_RG_Cabinet_Cont") -->
+				<div class="text-center attribute-field-headers" data-bind="text:label">Cabinet Questions</div>
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+			<!-- /ko -->
+			<!-- ko ifnot: ((cpq.models.configurator.actionModule.responderModule.name() === 'R2Q UOC Remote Group') && localStorage.getItem("checkR2Q") ==='Yes')-->
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "UOC_RG_Controller_Rack_Cont") -->
+				<div class="text-center attribute-field-headers" data-bind="text:label">Remote IO Rack Questions</div>
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+			<!-- /ko -->
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+  
+	<div class="row col-xs-12 swagger">
+	  <div id="uoc-rg-uio">
+		<div>
+		  <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-rg-uio')"> -->
+			<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'uoc-rg-uio',$('#uoc-rg-uio-content'), $('#uoc-rg-uio-href'), 'slow');  }">
+			<span>IO Count for Universal IO Module</span>
+			<a id="uoc-rg-uio-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="uoc-rg-uio-content" class="newtoggle">
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "UOC_RG_UIO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_uio_1"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "UOC_RG_UIO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_uio_2"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<div class="row col-xs-12 swagger">
+	  <div id="uoc-rg-other-io">
+		<div>
+		  <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-rg-other-io')"> -->
+			<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'uoc-rg-other-io',$('#uoc-rg-other-io-content'), $('#uoc-rg-other-io-href'), 'slow');  }">
+			<span>IO Count for Individual IO Module</span>
+			<a id="uoc-rg-other-io-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="uoc-rg-other-io-content" class="newtoggle">
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "UOC_RG_Other_IO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_firstHalf"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "UOC_RG_Other_IO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_secondHalf"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- ko ifnot: ((cpq.models.configurator.actionModule.responderModule.name() === 'R2Q UOC Remote Group') && localStorage.getItem("checkR2Q") ==='Yes')-->
+	<div class="row col-xs-12 swagger">
+	  <div id="uoc-rg-pf">
+		<div>
+		  <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#uoc-rg-pf')"> -->
+			<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'uoc-rg-pf',$('#uoc-rg-pf-content'), $('#uoc-rg-pf-href'), 'slow');  }">
+			<span>IS/Isolated Universal IO Points</span>
+			<a id="uoc-rg-pf-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="uoc-rg-pf-content" class="newtoggle">
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "UOC_RG_PF_IO_Cont") -->
+				<div class="text-center attribute-field-headers" data-bind="text:label">IS/Isolated Universal IO Points</div>
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- /ko -->
+  </div>
+
+

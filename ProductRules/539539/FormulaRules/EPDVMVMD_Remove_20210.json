@@ -1,0 +1,11 @@
+{
+    "id": 20210,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Video_Motion_Detection_Premium)*>,Yes))",
+    "name": "EP-DVMVMD_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMVMD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

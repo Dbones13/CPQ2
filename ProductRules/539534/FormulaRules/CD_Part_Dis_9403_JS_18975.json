@@ -1,0 +1,11 @@
+{
+    "id": 18975,
+    "condition": "[NEQ](<*VALUE(MX_CD_SCU_Steam_add_on_to_SCU_Model_9203_S_x)*>,Yes)",
+    "name": "CD_Part_Dis_9403_JS",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9403-JS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

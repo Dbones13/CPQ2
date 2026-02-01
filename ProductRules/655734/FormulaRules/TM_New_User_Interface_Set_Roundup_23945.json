@@ -1,0 +1,11 @@
+{
+    "id": 23945,
+    "condition": "[AND]([OR]([GT](<*VALUE(Terminal_Number_of_Simple_Screens_for_new_UI)*>,0),[GT](<*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*>,0),[GT](<*VALUE(Terminal_Number_of_Complex_Screens_for_new_UI)*>,0)),[GT](<*Eval(5.5*<*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*> -int(5.5*<*VALUE(Terminal_Number_of_New_Moderate_Reports)*>))*>,0))",
+    "name": "TM New User Interface Set Roundup",
+    "action": "<*ASSIGNVALUE(TM New User Interface:\n<*Eval(((3 * <*VALUE(Terminal_Number_of_Simple_Screens_for_new_UI)*>) +(8 * <*VALUE(Terminal_Number_of_Complex_Screens_for_new_UI)*>)+ (1+ int( (5.5 * <*VALUE(Terminal_Number_of_Moderate_Screens_for_new_UI)*>))))*8.5)*>\n)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

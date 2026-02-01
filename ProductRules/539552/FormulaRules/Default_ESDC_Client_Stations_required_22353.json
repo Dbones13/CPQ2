@@ -1,0 +1,11 @@
+{
+    "id": 22353,
+    "condition": "[EQ](<*VALUE(ESDC_Client_Stations_required)*>,)",
+    "name": "Default_ESDC_Client_Stations_required",
+    "action": "<*SELECTVALUE(ESDC_Client_Stations_required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

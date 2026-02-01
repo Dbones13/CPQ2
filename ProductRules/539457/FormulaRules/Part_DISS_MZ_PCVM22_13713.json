@@ -1,0 +1,11 @@
+{
+    "id": 13713,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[EQ](<*VALUE(Virtualization_Number_R740XL_Performance_B_Servers)*>,0))",
+    "name": "Part_DISS_MZ_PCVM22",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCVM22)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

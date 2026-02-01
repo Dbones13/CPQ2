@@ -1,0 +1,11 @@
+{
+    "id": 19265,
+    "condition": "[EQ](<*VALUE(PlantCruise_Class_Based_Recipe_Running_Instance)*>,100)",
+    "name": "Add_Software_CV-CBR100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-CBR100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

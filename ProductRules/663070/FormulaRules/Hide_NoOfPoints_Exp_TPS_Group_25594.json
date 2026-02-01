@@ -1,0 +1,11 @@
+{
+    "id": 25594,
+    "condition": "[NEQ](<*VALUE(Interface with TPS Required?)*>,Yes)",
+    "name": "Hide_NoOfPoints_Exp_TPS_Group",
+    "action": "<*DISALLOWATTRIBUTES(Header_03_open)*>,<*DISALLOWATTRIBUTES(Header_03_close)*>",
+    "description": "If Interface with TPS Required is selected as Yes then display the section name as Number of Points in Experion TPS Group.",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26522,
+    "condition": "<*ISSELECTED(Power Cord Type.Japan)*>",
+    "name": "Show_51199562_203",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:51199562-203)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:51199562-203, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38334",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14578,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Houses/Enclosures_Included_in_the_Scope)*>,)",
+    "name": "Default Number of Houses/Enclosures Included in the Scope",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Houses/Enclosures_Included_in_the_Scope:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

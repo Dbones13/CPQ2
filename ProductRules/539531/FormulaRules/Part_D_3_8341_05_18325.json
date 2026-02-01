@@ -1,0 +1,11 @@
+{
+    "id": 18325,
+    "condition": "[NEQ](<*VALUE(MXP_Radiation_lamp_BW_X_Ray)*>,Yes)",
+    "name": "Part_D_3_8341_05",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-8341-05)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20481,
+    "condition": "[LEQ](<*VALUE(SS_OTS_Station_TPS_Enabler_License)*>,0)",
+    "name": "Part_D_EP_OTU020",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-OTU020)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25781,
+    "condition": "[GT](<*VALUE(svr_hardt16gb_qnt)*>,0)",
+    "name": "MZ-PCEM49 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCEM49)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCEM49,<* Eval(<*VALUE(svr_hardt16gb_qnt)*>*2) *>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37554",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

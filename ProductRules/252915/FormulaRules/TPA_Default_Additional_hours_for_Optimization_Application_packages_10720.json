@@ -1,0 +1,11 @@
+{
+    "id": 10720,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Additional_hours_for_Optimization_Application_packages_existing_in_current_TPA_system)*>,))",
+    "name": "TPA_Default_Additional_hours_for_Optimization_Application_packages",
+    "action": "<*ASSIGNVALUE(TPA_Additional_hours_for_Optimization_Application_packages_existing_in_current_TPA_system:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

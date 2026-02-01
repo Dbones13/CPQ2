@@ -1,0 +1,11 @@
+{
+    "id": 21891,
+    "condition": "[EQ](<*VALUE(FDM_Server_Device_Adder_Blocks(0-4000))*>,)",
+    "name": "Default_FDM_Server_Device_Adder_Blocks(0-4000)",
+    "action": "<*ASSIGNVALUE(FDM_Server_Device_Adder_Blocks(0-4000):0)*>",
+    "description": "CXCPQ-48540",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

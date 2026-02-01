@@ -1,0 +1,11 @@
+{
+    "id": 26214,
+    "condition": "[AND]([EQ](<*VALUE(Experion Software Release)*>,R530),[EQ](<*VALUE(DMS Desk Mounting Stations required)*>,Yes),[GT](<*VALUE(DMS Console Station Extension Qty 0_15)*>,0))",
+    "name": "DMS Console Station R530",
+    "action": "<*ALLOWVALUES(DMS Console Station Extension Hardware Selection:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "7712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

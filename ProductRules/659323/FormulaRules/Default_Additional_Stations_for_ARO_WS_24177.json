@@ -1,0 +1,11 @@
+{
+    "id": 24177,
+    "condition": "[EQ](<*VALUE(Additional_Stations_for_ARO_WS)*>,)",
+    "name": "Default_Additional_Stations_for_ARO_WS",
+    "action": "<*ASSIGNVALUE(Additional_Stations_for_ARO_WS:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

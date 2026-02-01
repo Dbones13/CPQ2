@@ -1,0 +1,11 @@
+{
+    "id": 26070,
+    "condition": "[EQ](<*VALUE(Advanced HMIWeb Solution  Pack(0-1))*>,0)",
+    "name": "Show_Addon_Advanced_Solution_Pack",
+    "action": "<*ALLOWATTRIBUTES(Addon Advanced Solution  Pack(0-1))*>",
+    "description": "CXCPQ-44529",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

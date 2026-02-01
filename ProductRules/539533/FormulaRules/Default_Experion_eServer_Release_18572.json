@@ -1,0 +1,11 @@
+{
+    "id": 18572,
+    "condition": "[EQ](<*VALUE(ES_Experion_eServer_Release)*>,)",
+    "name": "Default_Experion_eServer_Release",
+    "action": "<*SELECTVALUE(ES_Experion_eServer_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

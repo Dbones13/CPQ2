@@ -1,0 +1,11 @@
+{
+    "id": 23677,
+    "condition": "[NOT]([AND](<*ISSELECTED(Patching and Anti-Virus Required.Yes)*>,<*ISSELECTED(Onsite Support Implementation Services.Yes)*>))",
+    "name": "Microsoft updates Install",
+    "action": "<*DISALLOWATTRIBUTES(Microsoft Updates Install)*>",
+    "description": "",
+    "rank": "40",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

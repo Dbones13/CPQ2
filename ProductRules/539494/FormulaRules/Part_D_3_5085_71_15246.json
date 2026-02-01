@@ -1,0 +1,11 @@
+{
+    "id": 15246,
+    "condition": "[NEQ](<*VALUE(MXP_AllianceView_License)*>,AllianceView 1 user license)",
+    "name": "Part_D_3_5085_71",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5085-71)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

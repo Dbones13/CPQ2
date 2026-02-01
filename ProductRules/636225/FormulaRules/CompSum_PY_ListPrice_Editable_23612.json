@@ -1,0 +1,11 @@
+{
+    "id": 23612,
+    "condition": "[OR]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<* QuoteProperty (SC_CF_Parent_Quote_Number_Link) *>,))",
+    "name": "CompSum_PY_ListPrice_Editable",
+    "action": "<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(PY_ListPrice).SetPermission(Editable) )*>\n<*CTX ( Container(SC_Honeywell_Scope_Summary_Pricing).Column(PY_Quantity).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

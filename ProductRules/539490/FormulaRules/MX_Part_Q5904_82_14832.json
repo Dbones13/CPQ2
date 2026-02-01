@@ -1,0 +1,11 @@
+{
+    "id": 14832,
+    "condition": "[EQ](<*VALUE(MX_MD_Jet_to_Wire_Control)*>,Yes)",
+    "name": "MX_Part_Q5904_82",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-82)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-82, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

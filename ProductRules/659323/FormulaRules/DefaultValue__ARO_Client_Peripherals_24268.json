@@ -1,0 +1,11 @@
+{
+    "id": 24268,
+    "condition": "[EQ](<*VALUE(ARO_Client_Peripherals)*>,)",
+    "name": "DefaultValue - ARO_Client_Peripherals",
+    "action": "<*ASSIGNVALUE(ARO_Client_Peripherals:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22438,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Software_Release)*>,R511),[NEQ](<*VALUE(ESDC_base_media)*>,Electronic Download))",
+    "name": "Part_D_EP_PKS511_ESD",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-PKS511-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

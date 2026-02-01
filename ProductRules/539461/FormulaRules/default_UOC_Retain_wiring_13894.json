@@ -1,0 +1,11 @@
+{
+    "id": 13894,
+    "condition": "[EQ](<*VALUE(LSS_Total_number_of_IO_modules_retaining_wiring)*>,)",
+    "name": "default_UOC_Retain_wiring.",
+    "action": "<*ASSIGNVALUE(LSS_Total_number_of_IO_modules_retaining_wiring:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

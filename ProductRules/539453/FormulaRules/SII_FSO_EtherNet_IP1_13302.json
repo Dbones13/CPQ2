@@ -1,0 +1,11 @@
+{
+    "id": 13302,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is EtherNet IP Interface in Scope?)*>,Yes))",
+    "name": "SII_FSO_EtherNet_IP1",
+    "action": "<*ASSIGNVALUE(SII FAT and Sign Off-EtherNet IP1:<* Eval(0.25 * <*VALUE(Number of EtherNet IP Devices)*> ) *>)*>",
+    "description": "SII FAT and Sign Off-EtherNet IP1\n\nCalculated Hrs = en*0.25",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13356,
+    "condition": "1",
+    "name": "labor_parameter_HMI_sf",
+    "action": "<*ASSIGNVALUE(labor_parameter_HMI_sf:[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Single)){0.5}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Dual)){1}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Triple)){2}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Quad/Orion)){2}{[IF]([EQ](<*VALUE(SafeView Factor (Max quanity of Monitors in One Station))*>,Combination of Safeview configurations)){2.5}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "39007",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

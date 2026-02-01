@@ -1,0 +1,11 @@
+{
+    "id": 14600,
+    "condition": "[EQ](<*VALUE(MSC_Total_Number_Of_Gas_Grab_Samplers)*>,)",
+    "name": "Default_Total_Number_Of_Gas_Grab_Samplers",
+    "action": "<*ASSIGNVALUE(MSC_Total_Number_Of_Gas_Grab_Samplers:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

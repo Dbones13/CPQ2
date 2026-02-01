@@ -1,0 +1,11 @@
+{
+    "id": 26455,
+    "condition": "[OR]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Interface with TPS Required?)*>,No))",
+    "name": "Hide_AppNodeTpsGroup1",
+    "action": "<*DISALLOWATTRIBUTES(Header_16_open,Header_16_close,Experion APP Node - Rack Mount,Ent_app_desk_tpm,Experion APP Node - Tower Mount,APP Node in Cabinet Preference,APP Node in Desk Preference,Hardware Design Selection - EAPP Node,Node_Supplier_EAPP,Additional Memory_EAPP,Additional Hard Disk_EAPP,Displays_EAPP,Display Size_EAPP,Display Supplier_EAPP,Ent_app_cab_tpm,ServerLocClusNetwork_Group_ACE_T,APP Node in Cabinet Preference,Hardware_Design_Selection - EAPP Node,Node_Supplier_EAPP,Additional_Memory_EAPP,Additional_Hard_Disk_EAPP,EAPP_Mounting_Type,Display_Supplier_EAPP,ServerLocClusNetwork_Group_ACET,Node Supplier_EAPP)*>",
+    "description": "CXCPQ 35420",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

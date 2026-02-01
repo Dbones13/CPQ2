@@ -1,0 +1,11 @@
+{
+    "id": 15325,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_Autoprofile_Control_Cabinet_Type)*>,Autoprofile Control (APC) Interface, Three Phase Floor mount Enclosure(s) with Failure detection.),[LEQ](<*VALUE(MXP_Number_of_Bolts)*>,0))",
+    "name": "Part_D_3_8980_10_BO",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-8980-10-BO)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

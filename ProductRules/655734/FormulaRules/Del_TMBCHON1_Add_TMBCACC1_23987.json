@@ -1,0 +1,11 @@
+{
+    "id": 23987,
+    "condition": "[NEQ](<*VALUE(Terminal_Batch_Controller?)*>,Honeywell)",
+    "name": "Del_TM-BCHON1_Add_TM-BCACC1",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-BCHON1)*><*SELECTVALUE(Terminal_Part_Summary:TM-BCACC1)*><*SETATVQTY(Terminal_Part_Summary:TM-BCACC1,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

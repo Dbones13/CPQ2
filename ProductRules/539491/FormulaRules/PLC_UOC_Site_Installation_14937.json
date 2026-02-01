@@ -1,0 +1,11 @@
+{
+    "id": 14937,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_Site_Installation",
+    "action": "<*ASSIGNVALUE(PLC_UOC_Site_Installation:<* EVAL(<*VALUE(PLC_UOC_siteinstallation_cal_1)*>+<*VALUE(PLC_UOC_siteinstallation_cal_2)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

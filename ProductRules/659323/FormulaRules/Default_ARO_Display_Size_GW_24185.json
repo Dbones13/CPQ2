@@ -1,0 +1,11 @@
+{
+    "id": 24185,
+    "condition": "[EQ](<*VALUE(ARO_Display_Size_GW)*>,)",
+    "name": "Default_ARO_Display_Size_GW",
+    "action": "<*SELECTVALUE(ARO_Display_Size_GW:27 inch NTS NEC)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9092,
+    "condition": "[EQ](<*CTX ( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).Get )*>,CN)",
+    "name": "set value GES location 3",
+    "action": "<*CTX ( Container(Labor_Details_New/Expansion_Cont).Row(1).Column(GES_Location).Set(CN) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

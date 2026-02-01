@@ -1,0 +1,11 @@
+{
+    "id": 25775,
+    "condition": "[EQ](<*VALUE(svr_hardt37547qnt)*>,0)",
+    "name": "MZ-PCEH15 Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCEH15)*><* DoResetAtt *>",
+    "description": "#37547",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

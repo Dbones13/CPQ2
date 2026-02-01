@@ -1,0 +1,11 @@
+{
+    "id": 1060,
+    "condition": "[EQ](<*VALUE(MIgration_Scope_Choices)*>, HW/SW)",
+    "name": "FSC_to_SM_Services",
+    "action": "<*DISALLOWATTRIBUTES(FSC_to_SM_Which_documentation_is_required)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "24/01/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

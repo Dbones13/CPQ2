@@ -1,0 +1,11 @@
+{
+    "id": 13235,
+    "condition": "1",
+    "name": "labor_parameter",
+    "action": "<*ASSIGNVALUE(labor_parameter_sd:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(2).Column( Labor_calc_value).Get )*>)*><*ASSIGNVALUE(labor_parameter_md:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(3).Column( Labor_calc_value).Get )*>)*><*ASSIGNVALUE(labor_parameter_cd:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(4).Column( Labor_calc_value).Get )*>)*><*ASSIGNVALUE(labor_parameter_vcd:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(5).Column( Labor_calc_value).Get )*>)*><*ASSIGNVALUE(labor_parameter_rd:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(6).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_ss:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(7).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_ms:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(8).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_cs:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(9).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_vcs:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(10).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_rs:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(11).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_sf:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(12).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_mf:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(13).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_cf:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(14).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_vcf:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(15).Column( Labor_calc_value).Get )*>)*>\n<*ASSIGNVALUE(labor_parameter_rf:<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(16).Column( Labor_calc_value).Get )*>)*>",
+    "description": "Number of Simple Displays",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20204,
+    "condition": "[EQ](<*VALUE(DVM_Internet_Explorer/ Browser_Client)*>,)",
+    "name": "Default_DVM_Internet_Explorer/ Browser_Client",
+    "action": "<*ASSIGNVALUE(DVM_Internet_Explorer/ Browser_Client:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25949,
+    "condition": "[GT](<*VALUE(How many Experion Panel PCs required? 0_30)*>,0)",
+    "name": "MZ-PPCT01_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MZ-PPCT01)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PPCT01, <*VALUE(How many Experion Panel PCs required? 0_30)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

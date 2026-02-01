@@ -1,0 +1,11 @@
+{
+    "id": 18668,
+    "condition": "[OR]([EQ](<*VALUE(ES_eServer_Staton_Node)*>,STN_STD_DELL_Tower_NonRAID),[NEQ](<*VALUE(ES_Node_Supplier_station)*>,Honeywell),[EQ](<*VALUE(ES_Additional_Stations_for_eServer)*>,0),[NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R511))",
+    "name": "Part_D_EP_COAW10",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:EP-COAW10)*><* DoResetAtt *>",
+    "description": "7968 Story",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

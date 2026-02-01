@@ -1,0 +1,11 @@
+{
+    "id": 14138,
+    "condition": "[EQ](<*VALUE(Experion_PKS_Software_Release)*>,)",
+    "name": "Default_Experion_PKS_Software_Release",
+    "action": "<*SELECTVALUE(Experion_PKS_Software_Release:R520)*>",
+    "description": "CXCPQ-37118",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

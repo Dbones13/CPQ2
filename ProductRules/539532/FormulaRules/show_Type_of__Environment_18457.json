@@ -1,0 +1,11 @@
+{
+    "id": 18457,
+    "condition": "[NEQ](<*VALUE(MXP_Scanner_Size)*>,Small)",
+    "name": "show_Type_of _Environment",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Type of Environment)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

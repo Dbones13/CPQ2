@@ -1,0 +1,11 @@
+{
+    "id": 19731,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Exp HS Redundant Servers)*>,Yes),[EQ](<*VALUE(Exp HS Runtime System)*>,Yes),[EQ](<*VALUE(Exp HS Enter Number of additional Points RunTime)*>,350 pt)))",
+    "name": "Experion HS 350 pt Runtime Redundancy Adder Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HRR350)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

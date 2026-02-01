@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(SS_Desk_Multi_Window_Support_Option_Required_desk)*>,No)){<*RESETATTRIBUTE(SS_No_of_Displays_desk)*>}{}[ENDIF]

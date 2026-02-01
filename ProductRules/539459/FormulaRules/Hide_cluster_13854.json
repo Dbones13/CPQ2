@@ -1,0 +1,11 @@
+{
+    "id": 13854,
+    "condition": "[EQ](<*VALUE(Enterprise_flag_check)*>,True)",
+    "name": "Hide_cluster",
+    "action": "<*CTX( Container(SM_Common_Questions).Column(SM_Cluster).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

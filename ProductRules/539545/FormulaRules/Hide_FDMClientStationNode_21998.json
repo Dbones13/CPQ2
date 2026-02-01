@@ -1,0 +1,11 @@
+{
+    "id": 21998,
+    "condition": "[AND]([NEQ](<*VALUE(FDM_Experion_PKS_Release)*>,R530),[EQ](<*VALUE(FDM Client Stations required)*>,Yes))",
+    "name": "Hide_FDMClientStationNode",
+    "action": "<*DISALLOWVALUES(FDM_Client_Station Node Type:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

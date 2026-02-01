@@ -1,0 +1,11 @@
+{
+    "id": 14222,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_DCS_CGRG_Cabinet_Sys",
+    "action": "<*ASSIGNVALUE(Total_DCS_CGRG_Cabinet_Sys:<*Eval(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(C300_Sys_Cabinets) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(C300_Sys_Cabinets_RG) )*>)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

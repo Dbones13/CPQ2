@@ -1,0 +1,11 @@
+{
+    "id": 10574,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_HSE_and_Quality_Plan)*>,))",
+    "name": "QCS_Mig_Default_HSE",
+    "action": "<*SELECTVALUE(QCS_Mig_HSE_and_Quality_Plan:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18680,
+    "condition": "[NEQ](<*VALUE(CE_Site_Voltage)*>,240V)",
+    "name": "Part_D_51305557_100",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:51305557-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

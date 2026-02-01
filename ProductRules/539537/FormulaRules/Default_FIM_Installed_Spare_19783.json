@@ -1,0 +1,11 @@
+{
+    "id": 19783,
+    "condition": "[EQ](<*VALUE(FIM_Percent_Installed_Spare_Fieldbus_IO)*>,)",
+    "name": "Default_FIM_Installed_Spare",
+    "action": "<*ASSIGNVALUE(FIM_Percent_Installed_Spare_Fieldbus_IO:0)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

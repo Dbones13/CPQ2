@@ -1,0 +1,11 @@
+{
+    "id": 13580,
+    "condition": "[EQ](<*VALUE(Virtualization_VMWare_VSAN_Dual_Socket_Host)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_VMWare_VSAN_Dual_Socket_Host",
+    "action": "<*ASSIGNVALUE(Virtualization_VMWare_VSAN_Dual_Socket_Host:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

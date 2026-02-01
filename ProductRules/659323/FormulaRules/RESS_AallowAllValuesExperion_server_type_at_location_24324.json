@@ -1,0 +1,11 @@
+{
+    "id": 24324,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(RESS_System_Required)*>,Yes))",
+    "name": "RESS_AallowAllValuesExperion_server_type_at_location",
+    "action": "<*ALLOWVALUES(Experion_server_type_at_location:Experion PKS Server,Experion_server_type_at_location:Server TPS)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

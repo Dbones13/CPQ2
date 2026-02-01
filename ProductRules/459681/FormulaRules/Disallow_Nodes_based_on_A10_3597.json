@@ -1,0 +1,11 @@
+{
+    "id": 3597,
+    "condition": "<*ISSELECTED(Identifiers.A10)*>",
+    "name": "Disallow Nodes based on A10",
+    "action": "<*DISALLOWATTRIBUTES(Nodes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

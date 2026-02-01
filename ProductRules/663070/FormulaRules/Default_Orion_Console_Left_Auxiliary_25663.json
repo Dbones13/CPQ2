@@ -1,0 +1,11 @@
+{
+    "id": 25663,
+    "condition": "[EQ](<*VALUE(Orion Console Left Auxiliary Equipment Unit (0-40))*>,)",
+    "name": "Default Orion Console Left Auxiliary",
+    "action": "<*ASSIGNVALUE(Orion Console Left Auxiliary Equipment Unit (0-40):0)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

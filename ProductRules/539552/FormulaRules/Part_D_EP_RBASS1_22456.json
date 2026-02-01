@@ -1,0 +1,11 @@
+{
+    "id": 22456,
+    "condition": "[NEQ](<*VALUE(ESDC_Red_nonRed_Check)*>,2)",
+    "name": "Part_D_EP_RBASS1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-RBASS1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

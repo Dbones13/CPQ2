@@ -1,0 +1,11 @@
+{
+    "id": 20176,
+    "condition": "[EQ](<*VALUE(DVM_Edge_Device_Video_Storage_Support)*>,)",
+    "name": "Default_DVM_Edge_Device_Video_Storage_Support",
+    "action": "<*SELECTVALUE(DVM_Edge_Device_Video_Storage_Support:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

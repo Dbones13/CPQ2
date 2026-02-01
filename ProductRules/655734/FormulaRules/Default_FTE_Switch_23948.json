@@ -1,0 +1,11 @@
+{
+    "id": 23948,
+    "condition": "[NOT](<*ATTSEL(Terminal_FTE_Switch)*>)",
+    "name": "Default_FTE_Switch",
+    "action": "<*SELECTVALUE(Terminal_FTE_Switch:SW_L2_NRT_CISCO_24PT)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

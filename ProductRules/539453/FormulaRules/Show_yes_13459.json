@@ -1,0 +1,11 @@
+{
+    "id": 13459,
+    "condition": "[NEQ](<*VALUE(Network Assessment in scope?)*>,Yes)",
+    "name": "Show_yes",
+    "action": "<*SELECTVALUE(Network Assessment in scope?:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19950,
+    "condition": "1",
+    "name": "C300Cal",
+    "action": "<*ASSIGNVALUE(C300Cal:<*Eval(<*CTX(Container(C300_C IO MS).Row(3).Column(Non_Red_NIS).Get)*>*(1+(<*VALUE(SerC_CG_Percent_Installed_Spare)*>/100))/16)*>)*>",
+    "description": "Calculation",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

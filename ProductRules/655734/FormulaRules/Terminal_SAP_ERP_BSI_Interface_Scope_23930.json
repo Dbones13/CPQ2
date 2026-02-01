@@ -1,0 +1,11 @@
+{
+    "id": 23930,
+    "condition": "[EQ](<*CTX ( Container(Terminal_SAP_ERP_BSI_Interface_Scope).Rows.GetCount )*>,0)",
+    "name": "Terminal_SAP_ERP_BSI_Interface_Scope",
+    "action": "<*CTX ( Container(Terminal_SAP_ERP_BSI_Interface_Scope).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

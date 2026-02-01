@@ -1,0 +1,11 @@
+{
+    "id": 20687,
+    "condition": "[AND]([AND]([EQ](<*VALUE(SS_Server_Node_Type)*>,SVR_PER_DELL_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module)*>,Yes)),\n[AND]([EQ](<*VALUE(SS_Server_Node_Type_Workstation)*>,SVR_PER_DELL_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module_Station)*>,Yes)))",
+    "name": "Part_A_MZ_PCST02_Sum",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCST02)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCST02, <* Eval(<*VALUE(Simulation_red_non_red_Check)*>+<*VALUE(SS_Number_of_Simulation_PCs_required)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

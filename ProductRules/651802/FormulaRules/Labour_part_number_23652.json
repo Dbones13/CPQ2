@@ -1,0 +1,11 @@
+{
+    "id": 23652,
+    "condition": "1",
+    "name": "Labour_part_number",
+    "action": "[IF](<*ISSELECTED(Assessment Type.Cyber)*>){<*ASSIGNVALUE(Labour_Part_Number:SVC-NSER-ST)*>}{<*ASSIGNVALUE(Labour_Part_Number:SVC-NMON-ST)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

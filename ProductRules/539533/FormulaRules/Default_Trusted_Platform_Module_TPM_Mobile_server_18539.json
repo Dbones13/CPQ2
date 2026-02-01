@@ -1,0 +1,11 @@
+{
+    "id": 18539,
+    "condition": "[EQ](<*VALUE(ES_Trusted_Platform_Module_Mobile_Server)*>,)",
+    "name": "Default_Trusted_Platform_Module (TPM)_Mobile_server",
+    "action": "<*SELECTVALUE(ES_Trusted_Platform_Module_Mobile_Server:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13458,
+    "condition": "[NEQ](<*VALUE(Is System Network Engineering in Scope?)*>,Yes)",
+    "name": "Hide Network Assessment Questions",
+    "action": "<*DISALLOWATTRIBUTES(Network Assessment in scope?,Is WLAN in Scope?,Number of FTE Communities,Number of FTE Community Locations,Number of Locations with FTE Switches,Number of Non Factory Installed Servers,Number of Server Types,Number of Station Types,Number of Types of Network Devices)*>",
+    "description": "Hide questions when Is System Network Engineering in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

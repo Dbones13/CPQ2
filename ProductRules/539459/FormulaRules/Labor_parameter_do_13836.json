@@ -1,0 +1,11 @@
+{
+    "id": 13836,
+    "condition": "1",
+    "name": "Labor_parameter_do",
+    "action": "<*ASSIGNVALUE(Labor_parameter_do:<*CTX( Container(SM_ControlGroup_Cont).Sum(Labor_parameter_do) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

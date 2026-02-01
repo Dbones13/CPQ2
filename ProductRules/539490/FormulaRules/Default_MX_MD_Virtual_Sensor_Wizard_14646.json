@@ -1,0 +1,11 @@
+{
+    "id": 14646,
+    "condition": "[EQ](<*VALUE(MX_MD_Virtual_Sensor_Wizard)*>,)",
+    "name": "Default_MX_MD_Virtual_Sensor_Wizard",
+    "action": "<*SELECTVALUE(MX_MD_Virtual_Sensor_Wizard:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

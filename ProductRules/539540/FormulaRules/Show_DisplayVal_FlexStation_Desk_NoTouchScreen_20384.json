@@ -1,0 +1,11 @@
+{
+    "id": 20384,
+    "condition": "[EQ](<*VALUE(SS_Touch_Screen_required_desk)*>, No Touch Screen)",
+    "name": "Show_DisplayVal_FlexStation_Desk_NoTouchScreen",
+    "action": "<*DISALLOWALLVALUESEXCEPT(SS_Display_size_desk:21.33 inch NTS|23 inch NTS|55 inch NTS|24 inch NTS NEC|27 inch NTS NEC|27 inch NTS DELL|24 inch NTS DELL)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

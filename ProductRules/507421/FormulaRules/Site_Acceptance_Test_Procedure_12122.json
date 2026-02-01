@@ -1,0 +1,11 @@
+{
+    "id": 12122,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Site Acceptance Test Procedure",
+    "action": "<*ASSIGNVALUE(Site Acceptance Test Procedure:<* Eval(0-INT(0-(<* Eval(16+4+2+(<*VALUE(OWS_Number of Transmitters)*>/20)+(<*VALUE(OWS_Number of Wi-Fi adapters)*>/2)+(<*VALUE(OWS_Number of Mobile Stations)*>/2)+(<*VALUE(OWS_Number of FEWIO)*>/2)+<*VALUE(OWS_Number of RADIUS Servers)*>+<*VALUE(OWS_Number of RESS servers)*>) *>))) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

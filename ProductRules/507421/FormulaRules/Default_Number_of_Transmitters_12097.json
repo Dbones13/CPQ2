@@ -1,0 +1,11 @@
+{
+    "id": 12097,
+    "condition": "[EQ](<*VALUE(OWS_Number of Transmitters)*>,)",
+    "name": "Default_Number of Transmitters",
+    "action": "<*ASSIGNVALUE(OWS_Number of Transmitters:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

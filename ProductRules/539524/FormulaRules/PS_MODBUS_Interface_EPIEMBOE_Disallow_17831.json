@@ -1,0 +1,11 @@
+{
+    "id": 17831,
+    "condition": "[NOT]([AND]([GT](<*CTX( Container(Modbus/OPC Interfaces).Row(4).Column(Nodes).Get )*>,0),[EQ](<*CTX( Container(Modbus/OPC Interfaces).Row(5).Column(Devices).Get )*>,Yes)))",
+    "name": "PS_MODBUS_Interface_EP-IEMBOE_Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-IEMBOE)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

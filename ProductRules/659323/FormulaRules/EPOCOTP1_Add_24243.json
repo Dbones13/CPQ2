@@ -1,0 +1,11 @@
+{
+    "id": 24243,
+    "condition": "[OR]([GT](<*VALUE(ARO_OTP_hardware_&_software_required)*>,0),[GT](<*VALUE(RESS_OTP_hardware_&_software_required)*>,0))",
+    "name": "EP-OCOTP1_Add",
+    "action": "[IF]([AND]([EQ](<*VALUE(ARO_System_Required)*>,Yes),[EQ](<*VALUE(RESS_System_Required)*>,Yes))){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-OCOTP1)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-OCOTP1, <*Eval(<*VALUE(ARO_OTP_hardware_&_software_required)*>+<*VALUE(RESS_OTP_hardware_&_software_required)*>) *>.)*><* DoResetAtt *>}{[IF]([EQ](<*VALUE(ARO_System_Required)*>,Yes)){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-OCOTP1)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-OCOTP1, <*Eval(<*VALUE(ARO_OTP_hardware_&_software_required)*>) *>.)*><* DoResetAtt *>}{[IF]([EQ](<*VALUE(RESS_System_Required)*>,Yes)){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-OCOTP1)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-OCOTP1, <*Eval(<*VALUE(RESS_OTP_hardware_&_software_required)*>) *>.)*><* DoResetAtt *>}{0}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

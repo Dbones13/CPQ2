@@ -1,0 +1,11 @@
+{
+    "id": 19804,
+    "condition": "[EQ](<*VALUE(SerC_Control_Firewall_to_PGM_Cable_Length)*>,)",
+    "name": "Default_SerC_Control_Firewall_to_PGM_Cable_Length",
+    "action": "<*SELECTVALUE(SerC_Control_Firewall_to_PGM_Cable_Length:84  Inch)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

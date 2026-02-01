@@ -1,0 +1,11 @@
+{
+    "id": 14927,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_Inhouse_eng_cal_3",
+    "action": "<*ASSIGNVALUE(PLC_UOC_Inhouse_eng_cal_3:<* EVAL([IF]([GT](<*VALUE(PLC_UOC_labor_parameter_var_4)*>,0)){[IF]([GT](<*VALUE(PLC_UOC_labor_parameter_var_6)*>,0)){[IF]([GT](<*VALUE(PLC_UOC_labor_parameter_var_33)*>,0)){(<*VALUE(PLC_UOC_labor_parameter_var_4)*>+<*VALUE(PLC_UOC_labor_parameter_var_6)*>+<*VALUE(PLC_UOC_labor_parameter_var_33)*>)*4}{0}[ENDIF]}{0}[ENDIF]}{0}[ENDIF]+(<*VALUE(PLC_UOC_labor_parameter_var_6)*>*4)+(<*VALUE(PLC_UOC_labor_parameter_var_9)*>*4)+(<*VALUE(PLC_UOC_labor_parameter_var_10)*>*4)+(<*VALUE(PLC_UOC_labor_parameter_var_11)*>*13.5)+(<*VALUE(PLC_UOC_labor_parameter_var_12)*>*13)) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

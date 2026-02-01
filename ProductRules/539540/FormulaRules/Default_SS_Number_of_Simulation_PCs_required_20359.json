@@ -1,0 +1,11 @@
+{
+    "id": 20359,
+    "condition": "[EQ](<*VALUE(SS_Number_of_Simulation_PCs_required)*>,)",
+    "name": "Default_SS_Number_of_Simulation_PCs_required",
+    "action": "<*ASSIGNVALUE(SS_Number_of_Simulation_PCs_required:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

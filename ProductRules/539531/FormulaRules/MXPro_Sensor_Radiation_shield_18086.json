@@ -1,0 +1,11 @@
+{
+    "id": 18086,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Radiation_shield)*>,)",
+    "name": "MXPro_Sensor_Radiation_shield",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Radiation_shield:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

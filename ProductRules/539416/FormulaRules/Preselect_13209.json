@@ -1,0 +1,11 @@
+{
+    "id": 13209,
+    "condition": "1",
+    "name": "Preselect",
+    "action": "[IF]([EQ](<*VALUE(TPA_Do_you_know_the_number_of_huge_and_normal_TPA_PMD_HMI_graphics)*>,)){<*RESETATTRIBUTE(TPA_Do_you_know_the_number_of_huge_and_normal_TPA_PMD_HMI_graphics)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups)*>,)){<*SELECTVALUE(TPA_Total_Count_of_TPA_PMD_HMI_graphics_and_popups:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPA_How_many_DUAL_screen_physical_HMI_in_CABINET_are_required)*>,)){<*SELECTVALUE(TPA_How_many_DUAL_screen_physical_HMI_in_CABINET_are_required:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPA_How_many_QUAD_screen_physical_HMI_in_CABINET_are_required)*>,)){<*SELECTVALUE(TPA_How_many_QUAD_screen_physical_HMI_in_CABINET_are_required:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(TPA_How_many_SINGLE_screen_physical_HMI_in_CABINET_are_required)*>,)){<*SELECTVALUE(TPA_How_many_SINGLE_screen_physical_HMI_in_CABINET_are_required:0)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22361,
+    "condition": "[OR]([EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID1_RUG),[EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Tower_RAID1),[EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID1),[EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_STD_DELL_Rack_RAID1),[EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_HP_Rack_RAID5),[EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID5))",
+    "name": "condition_for_additionalRAM",
+    "action": "<*DISALLOWALLVALUESEXCEPT(ESDC_Additional_Memory:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

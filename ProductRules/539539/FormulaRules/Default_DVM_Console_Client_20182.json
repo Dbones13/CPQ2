@@ -1,0 +1,11 @@
+{
+    "id": 20182,
+    "condition": "[EQ](<*VALUE(DVM_Console_Client)*>,)",
+    "name": "Default_DVM_Console_Client",
+    "action": "<*ASSIGNVALUE(DVM_Console_Client:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

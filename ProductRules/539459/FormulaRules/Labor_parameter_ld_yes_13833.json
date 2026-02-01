@@ -1,0 +1,11 @@
+{
+    "id": 13833,
+    "condition": "[EQ](<*VALUE(Labor_Loop_Drawings)*>,Yes)",
+    "name": "Labor_parameter_ld_yes",
+    "action": "<*ASSIGNVALUE(Labor_parameter_ld:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

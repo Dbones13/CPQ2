@@ -1,0 +1,11 @@
+{
+    "id": 4709,
+    "condition": "[EQ](<*VALUE(MX_SG_Dusty_Environment Kit)*>,)",
+    "name": "Default_MX_SG_Dusty_Environment",
+    "action": "<*SELECTVALUE(MX_SG_Dusty_Environment Kit:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

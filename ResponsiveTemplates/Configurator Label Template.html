@@ -1,0 +1,94 @@
+<script type="text/html" id="LabelTemplate">
+	<!-- ko if: name() !== "EnabledsearchBox" && name() !== "K&E Model Number" && name() !== "Spare_Parts_Cabinets_Configured" && name() !== "SC_Entitlements" && name() !== "SC_Select_MSID_Cont" && name() !== "SC_Entitlements_Model" && name() !== "SC_SESP Models" && name() !== "SC_P1P2_ServiceProduct_Entitlement" && name() !== "SC_P1P2_Parts_List_Summary" && name() !== "SC_MSID_Search_Field_Scope_Select" && name() !== "SC_MSID_Search_Field" && name() !== "SC_P1P2_ServiceProduct_Entitlement_1" && name() !== "SC_P1P2_Parts_Replacement_Summary" && name() !== "SC_QCS_Number of Machines" && name() !== "SC_QCS_Edge_Device_Remote_Subscription" && name() !== "SC_QCS_One Time Service Charges" && name() !== "SC_QCS_Qty_Honeywell_Edge_Device" && name()!== "SC_QCS_Quantity_Honeywell_Service_Node" && name()!== "SC_QCS_Local_Onboarding_Support_Days" && name()!== "SC_QCS_Qty_Honeywell_Edge_Device_VM" && name()!== "SC_TPS_Service_Product" && name() != 'Customer_has_cyber_enabledServicesModel' && name() !='L3_L4_FILE_MOVER_ESSENTIAL_enabledServicesModel' && name() != 'SC_SelectionSS_HR_RWL' && name() != 'SC_ServiceProduct_HR_RWL' && name() != 'DurationOfPlan_enabledServices' && ( name() != "ContractStartDate_EnabledService" || ( name() == "ContractStartDate_EnabledService" && ['Enabled Services','Solution Enhancement Support Program'].includes($root.responderModule.name())) ) && ( name() != "ContractEndDate_EnabledService" || ( name() == "ContractEndDate_EnabledService" && ['Enabled Services','Solution Enhancement Support Program'].includes($root.responderModule.name()))) && name() != 'SC_Pricing_Escalation' && name() !=  'SC_SelectionSS_HR_RWL' && name() != 'SC_ServiceProduct_HR_RWL'   && name() != 'Migration_MSID_System_Number'  && name() != 'Migration_MSID_Choices'  && name() != 'ATT_ELCN_Qty_of_NGs_more_than_100mts' && name() != 'Migration_Product_Choices' && name() != 'MSID_PRDCHOICES' && name() && name() != 'SC_Is_Scope_Change' && name() != 'SC_SESP_AVH_Data'-->
+
+
+  <div  data-bind="class:'fiori3-container-label flex '+name().replaceAll(' ','_')"    style="width:50%">
+      <span class="label-range-hint-wrapper flex">
+          <label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+          <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+          <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, tooltip: {trigger: 'focus', title: hint, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+      </span>
+
+  </div>
+ 
+  <!-- /ko -->
+  <!-- ko if: name() === 'SC_SelectionSS_HR_RWL' -->
+  <div class="fiori3-container-label flex" style="width:17%">
+      <span class="label-range-hint-wrapper flex">
+          <label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+          <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+          <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+      </span>
+  </div>
+  <!-- /ko -->
+  <!--ko if: name() === 'SC_ServiceProduct_HR_RWL' || name() === 'EnabledsearchBox' || name() == 'Customer_has_cyber_enabledServicesModel' || name() =='L3_L4_FILE_MOVER_ESSENTIAL_enabledServicesModel' || name() == '#_of_independent_"areas"_enabledServicesModel' || name() == '#_of_recommended_udc_servers_enabledServicesModel' || name()=='#_l3_l4_file_move_licenses_enabledServicesModel' || name() == 'CurrentSupportContract_EnabledService' || ( name() == 'DurationOfPlan_enabledServices' && !['Hardware Refresh','Hardware Warranty'].includes($parent.responderModule.name()))-->
+<div class="fiori3-container-label flex">
+  <span class="label-range-hint-wrapper flex">
+      <label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+      <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+      <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+  </span>
+</div>
+<!--/ko-->
+<!--ko if: ((name() == 'DurationOfPlan_enabledServices' || name() == "ContractStartDate_EnabledService" || name() == "ContractEndDate_EnabledService") && ($root.responderModule.name() == 'Hardware Warranty' || $root.responderModule.name() == 'Hardware Refresh' )) || name() == 'SC_Pricing_Escalation' || name() == 'SC_Is_Scope_Change' -->
+<div class="fiori3-container-label flex" style="width:50%">
+  <span class="label-range-hint-wrapper flex">
+      <label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+      <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+      <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+  </span>
+</div>
+<!--/ko-->
+  <!-- ko if: name() == "SC_QCS_Number of Machines" || name() == "SC_QCS_Edge_Device_Remote_Subscription" || name() == "SC_QCS_One Time Service Charges" || name() == "SC_QCS_Qty_Honeywell_Edge_Device" || name() == "SC_QCS_Quantity_Honeywell_Service_Node" || name() == "SC_QCS_Local_Onboarding_Support_Days" -->
+<div class="fiori3-container-label flex" style="width:80%">
+    <span class="label-range-hint-wrapper flex">
+        <label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+        <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+        <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+    </span>
+</div>
+<!-- /ko -->
+<!-- ko if:  name() == "SC_MSID_Search_Field_Scope_Select" || name() == "SC_MSID_Search_Field" || name() == "SC_QCS_Qty_Honeywell_Edge_Device_VM" -->
+<div class="fiori3-container-label flex" style="width:90%">
+    <span class="label-range-hint-wrapper flex">
+        <label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+        <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+        <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+    </span>
+</div>
+<!-- /ko -->
+<!-- ko if:  name() == "SC_TPS_Service_Product" -->
+<div class="fiori3-container-label flex" style="width:25%;white-space:nowrap;">
+    <span class="label-range-hint-wrapper flex">
+        <label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+        <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+        <a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+    </span>
+</div>
+<!-- /ko -->
+<!-- ko if:  name() == "SC_SESP_AVH_Data" -->
+<div class="fiori3-container-label flex" style="width:100%">
+	<span class="label-range-hint-wrapper flex">
+		<label style="display: inline-block" data-bind="html: label, css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'pull-left': hint(), 'required-attribute': required }, attr: { for: stdAttrCode }"></label>
+		<span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+		<a href="#" class="label-hint-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a>
+	</span>
+</div>
+<!-- /ko -->
+</script>
+<script type="text/html" id="HintTemplate">
+  <div class="description-popover" >
+      <span data-bind="html: hint"></span>
+  </div>
+</script>
+
+<script type="text/html" id="HW_LabelTemplate">
+  <div class="fiori3-container-label flex">
+      <span class="label-range-hint-wrapper flex">
+          <div class="form-group"><label class="control-label" style="display: inline" data-bind="html: label()  , css: { 'fiori3-incomplete-label': incomplete() && $root.highlightIncomplete(), 'required-attribute1': required }, attr: { for: stdAttrCode ,class:name().replaceAll(' ','_')}"></label>    <a href="#" class="sap-icon" data-bind="attr: { id: 'popover' + id() }, visible: !isButtonTemplate() && hint().length > 0, popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true, trigger: 'hover' }" aria-label="@Translation.GetJS("Configurator.HintPopover")"><span class="sap-icon">&#xe202;</span></a></div>      
+          <span data-bind="visible: validationRangeMessage(), text: validationRangeMessage(), style: { 'margin-bottom': validationRangeMessage() ? '4px' : '0' }" style="word-wrap: break-word" class="grayout"></span>
+
+
+      </span>
+  </div>
+</script>

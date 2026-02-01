@@ -1,0 +1,11 @@
+{
+    "id": 11974,
+    "condition": "<*ISSELECTED(FGC_Implementation_Methodology.Standard Build Estimate)*>",
+    "name": "SB Calculate Hours F&G DAS Report (FGDAS)",
+    "action": "<*ASSIGNVALUE(F&G DAS Report (FGDAS):<* Eval(<* Eval(20+(<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>*0.5)) *>*1.1) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

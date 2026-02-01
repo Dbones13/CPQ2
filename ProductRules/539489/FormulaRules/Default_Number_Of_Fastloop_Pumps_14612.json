@@ -1,0 +1,11 @@
+{
+    "id": 14612,
+    "condition": "[EQ](<*VALUE(MSC_Number_Of_Fastloop_Pumps)*>,)",
+    "name": "Default_Number_Of_Fastloop_Pumps",
+    "action": "<*ASSIGNVALUE(MSC_Number_Of_Fastloop_Pumps:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

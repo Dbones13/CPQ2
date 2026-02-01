@@ -1,0 +1,11 @@
+{
+    "id": 13907,
+    "condition": "1",
+    "name": "LabourColumnsHide",
+    "action": "[IF]([OR]([EQ](<*CTX( Container(UOC_Labor_Details).Row(1).Column(UOC_Process_Type_Labour).GetDisplayValue )*>,None),[EQ](<*CTX( Container(UOC_Labor_Details).Row(1).Column(UOC_Process_Type_Labour).GetDisplayValue )*>,Continuous),[EQ](<*CTX( Container(UOC_Labor_Details).Row(1).Column(UOC_Process_Type_Labour).GetDisplayValue )*>,Continuous + Interlock),[EQ](<*CTX( Container(UOC_Labor_Details).Row(1).Column(UOC_Process_Type_Labour).GetDisplayValue )*>,Continuous + Sequence),[EQ](<*CTX( Container(UOC_Labor_Details).Row(1).Column(UOC_Process_Type_Labour).GetDisplayValue )*>,Continuous + Interlock + Sequence))){<*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Batch_Units_Master_Labour).SetPermission(Hidden) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Batch_Units_Copies_Replica_Master_Labour).SetPermission(Hidden) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Product_Master_Recipes_Labour).SetPermission(Hidden) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Product_Copy_Unit_Product_Replicated_Unit).SetPermission(Hidden) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Complex_SCMs_Per_Unit_Labour).SetPermission(Hidden) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Complex_Operations_Per_Product_Labour).SetPermission(Hidden) )*>}{<*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Batch_Units_Master_Labour).SetPermission(Editable) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Batch_Units_Copies_Replica_Master_Labour).SetPermission(Editable) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Product_Master_Recipes_Labour).SetPermission(Editable) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Product_Copy_Unit_Product_Replicated_Unit).SetPermission(Editable) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Complex_SCMs_Per_Unit_Labour).SetPermission(Editable) )*><*CTX( Container(UOC_Labor_Details).Column(UOC_Num_Complex_Operations_Per_Product_Labour).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

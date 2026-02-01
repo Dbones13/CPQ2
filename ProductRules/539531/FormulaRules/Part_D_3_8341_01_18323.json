@@ -1,0 +1,11 @@
+{
+    "id": 18323,
+    "condition": "[NEQ](<*VALUE(MXP_Radiation_lamp_Basis_Weight)*>,Yes)",
+    "name": "Part_D_3_8341_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-8341-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

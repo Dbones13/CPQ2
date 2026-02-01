@@ -1,0 +1,11 @@
+{
+    "id": 9082,
+    "condition": "1",
+    "name": "Project Duration (in weeks)",
+    "action": "<*ASSIGNVALUE(Project Duration (in weeks):<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Project Duration in weeks).Get )*>\n)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20026,
+    "condition": "[AND]([EQ](<*VALUE(Experion_PKS_Software_Release)*>,R530),[EQ](<*VALUE(SerC_CG_Ethernet_Interface)*>,Yes))",
+    "name": "Show_Ethernet_Modbus",
+    "action": "<*ALLOWATTRIBUTES(SerC_Number_NonRedundant_EIM_for_Modbus,SerC_Number_Redundant_EIM_for_Modbus)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

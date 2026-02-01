@@ -1,0 +1,11 @@
+{
+    "id": 24009,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Terminal_SAP_ERP_BSI_Interface_required?)*>,Yes),[EQ](<*VALUE(Terminal_Experion_Client_PC)*>,Tower)))",
+    "name": "Del_MZ-PCWT01",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:MZ-PCWT01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

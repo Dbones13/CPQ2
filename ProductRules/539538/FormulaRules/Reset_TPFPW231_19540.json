@@ -1,0 +1,11 @@
+{
+    "id": 19540,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(Exp HS Enter Total Monitors required in the system)*>,0) *>,0))",
+    "name": "Reset TP-FPW231",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:TP-FPW231)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

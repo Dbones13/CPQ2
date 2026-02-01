@@ -1,0 +1,11 @@
+{
+    "id": 26291,
+    "condition": "[EQ](<*VALUE(Additional Memory (ACE-T))*>,)",
+    "name": "Default_ACETAdditionalMemory",
+    "action": "<*SELECTVALUE(Additional Memory (ACE-T):None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

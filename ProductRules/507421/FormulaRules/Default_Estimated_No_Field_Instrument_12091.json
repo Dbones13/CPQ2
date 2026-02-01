@@ -1,0 +1,11 @@
+{
+    "id": 12091,
+    "condition": "[EQ](<*VALUE(OWS_Estimated No of Field InstrumentsTested Survey)*>,)",
+    "name": "Default_Estimated_No_Field_Instrument",
+    "action": "<*ASSIGNVALUE(OWS_Estimated No of Field InstrumentsTested Survey:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

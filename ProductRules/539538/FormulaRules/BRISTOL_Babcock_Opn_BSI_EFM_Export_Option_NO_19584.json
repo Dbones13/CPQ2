@@ -1,0 +1,11 @@
+{
+    "id": 19584,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS BRISTOL Babcock Opn BSI, EFM Export Option)*>,Yes))",
+    "name": "BRISTOL Babcock Opn BSI, EFM Export Option NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HBBREF)*><* DoResetAtt *>",
+    "description": "Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

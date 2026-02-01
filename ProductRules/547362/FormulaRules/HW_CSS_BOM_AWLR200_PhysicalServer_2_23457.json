@@ -1,0 +1,11 @@
+{
+    "id": 23457,
+    "condition": "[EQ](<*VALUE(AWL-Cb Physical Server)*>,0)",
+    "name": "HW_CSS_BOM_AWLR200_PhysicalServer_2",
+    "action": "<*RESETATTRIBUTE(HW_CSS_BOM_AWLR200_PhysicalServer,HW_CSS_BOM_AWLR200_PhysicalServer,HW_CSS_BOM_AWLR200_PhysicalServer)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

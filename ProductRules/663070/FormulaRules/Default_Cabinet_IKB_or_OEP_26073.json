@@ -1,0 +1,11 @@
+{
+    "id": 26073,
+    "condition": "[EQ](<*VALUE(Cabinet_IKB_or_OEP)*>,)",
+    "name": "Default_Cabinet_IKB_or_OEP",
+    "action": "<*SELECTVALUE(Cabinet_IKB_or_OEP:None)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

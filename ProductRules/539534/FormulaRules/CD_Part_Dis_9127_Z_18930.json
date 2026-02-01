@@ -1,0 +1,11 @@
+{
+    "id": 18930,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line),[NEQ](<*VALUE(MX_CD_Clamping_Assembly)*>,Yes),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_9127_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9127-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

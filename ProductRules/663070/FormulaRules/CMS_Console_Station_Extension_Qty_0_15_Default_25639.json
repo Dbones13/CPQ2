@@ -1,0 +1,11 @@
+{
+    "id": 25639,
+    "condition": "[EQ](<*VALUE(CMS Console Station Extension Qty 0_15)*>,)",
+    "name": "CMS Console Station Extension Qty 0_15 Default",
+    "action": "<*ASSIGNVALUE(CMS Console Station Extension Qty 0_15:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

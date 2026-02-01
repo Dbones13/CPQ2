@@ -1,0 +1,11 @@
+{
+    "id": 12236,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "ELEPIU_labor_del_Site_Acceptance_Test",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_Site_Acceptance_Test:<* Eval([IF]([EQ](<*VALUE(ELEPIU_SAT required?)*>,Yes)){<* Eval(8+2.5*(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>-1)) *>}{0}[ENDIF]) *>)*>",
+    "description": "CXCPQ-60190",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

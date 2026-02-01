@@ -1,0 +1,11 @@
+{
+    "id": 23010,
+    "condition": "<*IFANYVALUE(C300_RG_UPC_CN100_IO_HIVE:H,C300_RG_UPC_CN100_IO_HIVE:R)*>",
+    "name": "Disallow_C300_RG_UPC_Ext_FDAP_Comm_Supp_Values",
+    "action": "<*DISALLOWVALUES(C300_RG_UPC_Ext_FDAP_Comm_Supp:M)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

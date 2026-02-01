@@ -1,0 +1,11 @@
+{
+    "id": 23903,
+    "condition": "[EQ](<*VALUE(Labor_Site_Activities)*>,Yes)",
+    "name": "Show Attributes when Site Activities is Yes",
+    "action": "<*ALLOWATTRIBUTES(Terminal_Number_of_Days_for_TM_SAT)*><*ALLOWATTRIBUTES(Terminal_Number_of_Engineer_for_SAT)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19107,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Type_of_devronizer)*>,Yankee),[EQ](<*VALUE(MX_CD_Mounting_Upgrade)*>,Yes))",
+    "name": "CD_Part_92021_Y",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:92021-Y)*><*SETATVQTY(MX_CD_Bom_Parts:92021-Y, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

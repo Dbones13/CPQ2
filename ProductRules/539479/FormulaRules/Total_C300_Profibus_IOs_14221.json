@@ -1,0 +1,11 @@
+{
+    "id": 14221,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_C300_Profibus_IOs",
+    "action": "<*ASSIGNVALUE(Total_C300_Profibus_IOs:<*Eval(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(Total_Profibus_Red_NonRed_IOs) )*>)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

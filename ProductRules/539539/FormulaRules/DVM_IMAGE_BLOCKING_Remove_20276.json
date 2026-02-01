@@ -1,0 +1,11 @@
+{
+    "id": 20276,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Image_Blocking_License)*>,Yes))",
+    "name": "DVM IMAGE BLOCKING_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMIMB)*><* DoResetAtt *>",
+    "description": "CXCPQ-45728",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

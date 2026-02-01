@@ -1,0 +1,11 @@
+{
+    "id": 13893,
+    "condition": "[EQ](<*VALUE(LSS_Total_number_of_IO_modules_with_re-wiring)*>,)",
+    "name": "default_UOC_rewiring",
+    "action": "<*ASSIGNVALUE(LSS_Total_number_of_IO_modules_with_re-wiring:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

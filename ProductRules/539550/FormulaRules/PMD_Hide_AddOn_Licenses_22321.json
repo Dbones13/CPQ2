@@ -1,0 +1,11 @@
+{
+    "id": 22321,
+    "condition": "1",
+    "name": "PMD Hide AddOn Licenses",
+    "action": "[IF]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)){<*DISALLOWATTRIBUTES(PMD_Add_on_Licenses)*>}{<*ALLOWATTRIBUTES(PMD_Add_on_Licenses)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

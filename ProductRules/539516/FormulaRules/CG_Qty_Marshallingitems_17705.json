@@ -1,0 +1,11 @@
+{
+    "id": 17705,
+    "condition": "1",
+    "name": "CG_Qty_Marshallingitems",
+    "action": "<*ASSIGNVALUE(CG_Qty_Marshallingitems:<* Eval(0<*CTX( Container(SM_CG_PartSummary_Cont).Sum(Qty_Marshallingitems) )*>+0<*CTX( Container(SM_RemoteGroup_Cont).Sum(RG_Qty_Marshallingitems) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19288,
+    "condition": "[EQ](<*VALUE(PlantCruise_Need_Experion_Backup_&_Restore)*>,Yes)",
+    "name": "Add_Software_Base_EP-BRWE06",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:EP-BRWE06)*><*SETATVQTY(PlantCruise_Part_Summary:EP-BRWE06,<* Eval(<*VALUE(PlantCruise_Number_of_Direct_Station)*> + <*VALUE(PlantCruise_Number_of_Flex_Station)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

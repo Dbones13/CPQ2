@@ -1,0 +1,11 @@
+{
+    "id": 24358,
+    "condition": "[AND]([EQ](<*VALUE(Scada_Are_Equipment_Templates_Used)*>,),[NEQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "default_Scada_Are_Equipment_Templates_Used",
+    "action": "<*SELECTVALUE(Scada_Are_Equipment_Templates_Used:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

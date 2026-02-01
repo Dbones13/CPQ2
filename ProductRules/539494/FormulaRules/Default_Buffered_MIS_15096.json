@@ -1,0 +1,11 @@
+{
+    "id": 15096,
+    "condition": "[EQ](<*VALUE(MXP_Buffered_MIS)*>,)",
+    "name": "Default_Buffered_MIS",
+    "action": "<*SELECTVALUE(MXP_Buffered_MIS:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

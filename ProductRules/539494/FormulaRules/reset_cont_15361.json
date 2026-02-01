@@ -1,0 +1,11 @@
+{
+    "id": 15361,
+    "condition": "[NOT](<*ATTSEL(MXP_Bom_Parts)*>)",
+    "name": "reset_cont",
+    "action": "<*CTX ( Container(MXP_partsummary_cont).Rows.Clear )*>",
+    "description": "",
+    "rank": "99",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

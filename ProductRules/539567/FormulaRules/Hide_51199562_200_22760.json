@@ -1,0 +1,11 @@
+{
+    "id": 22760,
+    "condition": "[NOT](<*ISSELECTED(Power_Cord_Type.US)*>)",
+    "name": "Hide_51199562_200",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Location_Cluster_Part_Summary:51199562-200)*><* DoResetAtt *>",
+    "description": "38330",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

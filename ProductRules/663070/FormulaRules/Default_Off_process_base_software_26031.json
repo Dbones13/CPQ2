@@ -1,0 +1,11 @@
+{
+    "id": 26031,
+    "condition": "[EQ](<*VALUE(Off_process_base_software)*>,)",
+    "name": "Default_Off_process_base_software",
+    "action": "<*ASSIGNVALUE(Off_process_base_software:0)*>",
+    "description": "CXCPQ-45607",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

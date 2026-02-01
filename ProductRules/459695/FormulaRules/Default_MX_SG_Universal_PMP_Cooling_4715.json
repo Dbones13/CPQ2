@@ -1,0 +1,11 @@
+{
+    "id": 4715,
+    "condition": "[EQ](<*VALUE(MX_SG_Universal_PMP_Cooling)*>,)",
+    "name": "Default_MX_SG_Universal_PMP_Cooling",
+    "action": "<*SELECTVALUE(MX_SG_Universal_PMP_Cooling:Fan Cooling Kit (max 40 \u00b0C ambient))*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19593,
+    "condition": "[EQ](<*VALUE(Exp HS Electronic Signature)*>,Yes)",
+    "name": "Electronic Signature YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HSIG01)*><* DoResetAtt *>",
+    "description": "SET",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

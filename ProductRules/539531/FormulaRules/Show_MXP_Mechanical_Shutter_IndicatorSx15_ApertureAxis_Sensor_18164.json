@@ -1,0 +1,11 @@
+{
+    "id": 18164,
+    "condition": "[IN](<*VALUE(MXP_Scanner_Type)*>,3-5080-00,3-5080-43)",
+    "name": "Show_MXP_Mechanical_Shutter_Indicator|Sx15_Aperture|Axis_Sensor",
+    "action": "<*ALLOWATTRIBUTES(MXP_Mechanical_Shutter_Indicator,MXP_Sx15_Aperture,MXP_Z_Axis_Sensor)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9111,
+    "condition": "[NEQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,None)",
+    "name": "UNHide-Labor_GES_Location_none",
+    "action": "<*ALLOWATTRIBUTES(Labor_GES_%)*><*CTX( Container(Labor_Container).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(Labor_Container).Column(GES Eng % Split).SetPermission(Editable) )*> <*CTX(Container(Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*> <*CTX(Container(Labor_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*> <*CTX(Container(Labor_Container).Column(GES_ListPrice).SetPermission(Editable) )*> <*CTX(Container(Labor_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*> <*CTX(Container(Labor_Container).Column(GES_MPA_Price).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

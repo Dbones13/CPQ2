@@ -1,0 +1,11 @@
+{
+    "id": 20247,
+    "condition": "[EQ](<*VALUE(DVM_IPSOTEK_Analytics_Integration)*>,Yes)",
+    "name": "Add_EP-DVMIPS",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMIPS)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMIPS, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45746",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

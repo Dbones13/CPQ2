@@ -1,0 +1,11 @@
+{
+    "id": 20397,
+    "condition": "[EQ](<*VALUE(SS_Experion_Backup_Restore_Simulation_Server)*>,)",
+    "name": "Default_SS_Experion_Backup_Restore_Simulation_Server",
+    "action": "<*SELECTVALUE(SS_Experion_Backup_Restore_Simulation_Server:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

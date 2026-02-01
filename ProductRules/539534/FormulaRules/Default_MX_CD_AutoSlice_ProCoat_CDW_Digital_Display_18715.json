@@ -1,0 +1,11 @@
+{
+    "id": 18715,
+    "condition": "[EQ](<*VALUE(MX_CD_AutoSlice_ProCoat_CDW_Digital_Display)*>,)",
+    "name": "Default_MX_CD_AutoSlice_ProCoat_CDW_Digital_Display",
+    "action": "<*SELECTVALUE(MX_CD_AutoSlice_ProCoat_CDW_Digital_Display:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

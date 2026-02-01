@@ -1,0 +1,11 @@
+{
+    "id": 20584,
+    "condition": "[AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R510),[EQ](<*VALUE(SS_Experion_Base_Media_Delivery)*>,Electronic Download))",
+    "name": "Part_A_EP_PKS510_ESD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:EP-PKS510-ESD)*><*SETATVQTY(Simulation_Bom_parts:EP-PKS510-ESD,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

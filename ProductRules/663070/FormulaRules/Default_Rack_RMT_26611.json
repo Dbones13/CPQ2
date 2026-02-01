@@ -1,0 +1,11 @@
+{
+    "id": 26611,
+    "condition": "[EQ](<*VALUE(Rack_Mounting_Type)*>,)",
+    "name": "Default_Rack_RMT",
+    "action": "<*SELECTVALUE(Rack_Mounting_Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

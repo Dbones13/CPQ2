@@ -1,0 +1,11 @@
+{
+    "id": 22905,
+    "condition": "[EQ](<*VALUE(C300_RG_UPC_STT650_Count)*>,)",
+    "name": "Reset_C300_RG_UPC_STT650_Count",
+    "action": "<*ASSIGNVALUE(C300_RG_UPC_STT650_Count:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15025,
+    "condition": "[EQ](<*VALUE(MSE_Number_Single_Stream_Systems)*>,)",
+    "name": "Default_Single_Stream_Metering_Systems",
+    "action": "<*ASSIGNVALUE(MSE_Number_Single_Stream_Systems:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

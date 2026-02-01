@@ -1,0 +1,11 @@
+{
+    "id": 9616,
+    "condition": "[EQ](<*ATTSEL(PSkid Mounting hardware and O-rings Material percentage)*>,0)",
+    "name": "Clear Mounting hardware and O-rings Material amount",
+    "action": "<*ASSIGNVALUE(PSkid Mounting hardware and O-rings Material amount:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

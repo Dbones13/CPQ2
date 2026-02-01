@@ -1,0 +1,11 @@
+{
+    "id": 14171,
+    "condition": "[EQ](<*VALUE(No_of_Batch_Unit_Copies(Replica of Master Units))*>,)",
+    "name": "Default_No_of_Batch_Unit_Copies(Replica of Master Units)",
+    "action": "<*ASSIGNVALUE(No_of_Batch_Unit_Copies(Replica of Master Units):0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,2 @@
+from GS_SC_SFDC_Role_Validation import SC_SFDC_Role_Validation
+SC_SFDC_Role_Validation(Quote)

@@ -1,0 +1,11 @@
+{
+    "id": 20043,
+    "condition": "[AND]([NEQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[NOT]([OR](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)))",
+    "name": "Hide Universal IO cont",
+    "action": "<*CTX ( Container(C300_CG_Universal_IO_cont_1).Rows.Clear )*><*CTX ( Container(C300_CG_Universal_IO_cont_2).Rows.Clear )*><*DISALLOWATTRIBUTES(C300_CG_Universal_IO_cont_1,C300_CG_Universal_IO_cont_2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "13/08/25",
+    "modifiedBy": "Ramesh Kumar"
+}

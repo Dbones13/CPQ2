@@ -1,0 +1,11 @@
+{
+    "id": 15093,
+    "condition": "[EQ](<*VALUE(MXP_Historical_Trending)*>,)",
+    "name": "Default_Historical_rending",
+    "action": "<*SELECTVALUE(MXP_Historical_Trending:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

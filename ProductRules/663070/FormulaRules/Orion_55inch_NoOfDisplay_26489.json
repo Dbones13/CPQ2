@@ -1,0 +1,11 @@
+{
+    "id": 26489,
+    "condition": "[AND]([GT](<*VALUE(Orion Console Display Devices (0-4))*>,1),[EQ](<*VALUE(Orion Console Display Size)*>,55 inch NTS))",
+    "name": "Orion_55inch_NoOfDisplay",
+    "action": "<*RESETVALUE(Orion Console Display Devices (0-4):1)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20131,
+    "condition": "1",
+    "name": "Run_PowerSupply_Script",
+    "action": "<* ExecuteScript(SerC_CG_PowerSupply_Parts)*>",
+    "description": "",
+    "rank": "999",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

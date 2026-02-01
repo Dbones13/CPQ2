@@ -1,0 +1,11 @@
+{
+    "id": 26465,
+    "condition": "[GT](<*VALUE(Experion APP Node - Rack Mount)*>,0)",
+    "name": "Show_Node Cabinet",
+    "action": "<*ALLOWATTRIBUTES(APP Node in Cabinet Preference,Hardware_Design_Selection - EAPP Node,Ent_app_cab_tpm,Node_Supplier_EAPP,Additional_Hard_Disk_EAPP,EAPP_Mounting_Type,Display_Supplier_EAPP,ServerLocClusNetwork_Group_ACET)*>\n[IF]([IN](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(Additional_Memory_EAPP)*><*DISALLOWATTRIBUTES(Additional_Memory_EAPP)*>}{<*ALLOWATTRIBUTES(Additional_Memory_EAPP)*><*SETREQUIRED(Additional_Memory_EAPP)*>}[ENDIF]\n<*xDisallowallValuesExcept(ServerLocClusNetwork_Group_ACET:<* LIST ( SELECT AttValue FROM\u00a0ClusterAttValues WHERE CAST (AttValueCode AS float)\u00a0<= '<*CTX( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>' ) *>)*>",
+    "description": "35420",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

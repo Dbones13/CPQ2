@@ -1,0 +1,11 @@
+{
+    "id": 13520,
+    "condition": "[EQ](<*VALUE(Virtualization_Will_Honeywell_perform_equipment)*>,)",
+    "name": "Default_Honeywell_equipments",
+    "action": "<*SELECTVALUE(Virtualization_Will_Honeywell_perform_equipment:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

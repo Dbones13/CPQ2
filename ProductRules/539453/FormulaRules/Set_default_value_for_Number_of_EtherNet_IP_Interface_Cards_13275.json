@@ -1,0 +1,11 @@
+{
+    "id": 13275,
+    "condition": "[EQ](<*VALUE(Number of EtherNet IP Interface Cards)*>,)",
+    "name": "Set default value for Number of EtherNet IP Interface Cards",
+    "action": "<*ASSIGNVALUE(Number of EtherNet IP Interface Cards:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

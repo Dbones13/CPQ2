@@ -1,0 +1,11 @@
+{
+    "id": 22784,
+    "condition": "1",
+    "name": "Hide_51305482-210",
+    "action": "[IF]([EQ](<*VALUE(Tree_B10m_cable_01000)*>,0)){<* DoNotResetAtt *><*RESETVALUE(Location_Cluster_Part_Summary:51305482-210)*><* DoResetAtt *>}[ENDIF]",
+    "description": "CXCPQ-38371",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

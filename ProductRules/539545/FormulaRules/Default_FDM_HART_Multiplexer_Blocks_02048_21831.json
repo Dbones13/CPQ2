@@ -1,0 +1,11 @@
+{
+    "id": 21831,
+    "condition": "[EQ](<*VALUE(FDM HART Multiplexer Blocks (0-2048))*>,)",
+    "name": "Default_FDM HART Multiplexer Blocks (0-2048)",
+    "action": "<*ASSIGNVALUE(FDM HART Multiplexer Blocks (0-2048):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

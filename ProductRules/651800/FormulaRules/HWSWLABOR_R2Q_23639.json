@@ -1,0 +1,11 @@
+{
+    "id": 23639,
+    "condition": "[AND]([EQ](<*VALUE(R2QRequest)*>,Yes),[EQ](<*VALUE(CYBER_Scope_Choices)*>,HW/SW/LABOR))",
+    "name": "HW/SW/LABOR_R2Q",
+    "action": "<*DISALLOWALLVALUESEXCEPT(AR_CyberPrdChoices:MSS|SMX|Assessments|PCN Hardening)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

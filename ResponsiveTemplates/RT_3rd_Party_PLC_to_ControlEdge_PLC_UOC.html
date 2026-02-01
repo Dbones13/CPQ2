@@ -1,0 +1,49 @@
+
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper"  >
+<div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> 
+        @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+</div>
+<!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+<div style="width:100%">
+<div class="msid-label">
+  <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+</div>
+</div>
+<!-- /ko -->
+<!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+<!-- /ko -->
+ 
+    <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="Graphics_Migration_Migration_Scenario" onclick="toggleConfigSection(event, '#Graphics_Migration_Migration_Scenario')">
+      <label class="onlytext">Migration Scenario / Standard Builds</label>
+ 
+    </div>
+    <div id="Graphics_Migration_Migration_Scenario-content"  class=" col-md-12 clear-padding">
+      <div class="col-xs-12 col-sm-12"> 
+        <!-- ko foreach: attributes.filterByProperty('name' , " LSS_PLC_Number_of_ControlEdge_PLC_Groups_required ", " LSS_PLC_Number_of_ControlEdge_UOC_vUOC_confi_req ", " LSS_PLC_Number_of_ControlEdge_PLC_UOC_vUOC_confi ", " LSS_PLC_How_many_existing_Cabinets_will_be_used ", " LSS_PLC_Base_Media_Delivery ") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+      </div>
+    </div>
+   
+ 
+      <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="Graphics_Migration_Displays_Shapes_Faceplates" onclick="toggleConfigSection(event, '#Graphics_Migration_Displays_Shapes_Faceplates')">
+        <label class="onlytext">Displays / Shapes / Faceplates / Context Menus</label>
+        
+      </div>
+      <div id="Graphics_Migration_Displays_Shapes_Faceplates-content"  class=" col-md-12 clear-padding">
+      <div class="col-xs-12 col-sm-12">
+          <!-- ko foreach: attributes.filterByProperty('name' , "  LSS_Configuration_for_Rockwell_transpose  ") -->
+            <!-- ko if:$data.container.columns().length !== 0-->
+              <!-- ko template: { name: "ContainerTemplate_ LSS_Configuration_for_Rockwell_transpose_Context_Menus"} -->
+              <!-- /ko -->
+            <!-- /ko -->
+          <!-- /ko -->
+        </div>
+      </div>
+       
+   
+</div>

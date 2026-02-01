@@ -1,0 +1,11 @@
+{
+    "id": 21927,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Experion_PKS_Release)*>,R530),[EQ](<*VALUE(FDM Client Stations required)*>,Yes))",
+    "name": "Show_NodeTypeOption_CS",
+    "action": "<*ALLOWVALUES(FDM_Client_Station Node Type:STN_PER_HP_Tower_RAID1,FDM_Client_Station Node Type:STN_PER_DELL_Rack_RAID1,FDM_Client_Station Node Type:STN_PER_DELL_Tower_RAID1)*><*DISALLOWVALUES(FDM_Client_Station Node Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

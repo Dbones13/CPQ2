@@ -1,0 +1,11 @@
+{
+    "id": 17967,
+    "condition": "[NOT]([GT](<*VALUE(PCD_Total_Qty_of_Modules)*>,4))",
+    "name": "Del_HPCD3.C200",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PCD_Part_Summary:HPCD3.C200)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

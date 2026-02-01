@@ -1,0 +1,11 @@
+{
+    "id": 24232,
+    "condition": "[AND]([LT](<*VALUE(ARO_new_Console_Station_Extension_License)*>,1),[LT](<*VALUE(RESS_new_Console_Station_Extension_License)*>,1))",
+    "name": "EP-STACEX_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:EP-STACEX)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

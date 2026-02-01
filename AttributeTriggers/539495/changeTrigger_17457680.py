@@ -1,0 +1,1 @@
+<*CTX( Container(PLC_Labour_Details).Row(1).Column(PLC_Ges_Location).Set(<*VALUECODE(Default_Ges_Location)*>) )*>

@@ -1,0 +1,11 @@
+{
+    "id": 19622,
+    "condition": "[EQ](<*VALUE(Exp HS ODBC Data Exchange)*>,Yes)",
+    "name": "ODBC Data Exchange YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HODBCD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

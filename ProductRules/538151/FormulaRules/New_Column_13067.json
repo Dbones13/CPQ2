@@ -1,0 +1,11 @@
+{
+    "id": 13067,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "New_Column",
+    "action": "<*DISALLOWATTRIBUTES(SC_Invalid_Models_Renewal,SC_Models_Scope_Renewal,SC_Scope_Selection_Refresh_Renewal,SC_SESP Models_Renewal,SC_Scope Addition,SC_MSID_Search_Sope_Selection,SC_MSID_Search_Sope_Selection_Button,SC_SESP_OutOfScope_Models)*>",
+    "description": "It will show  columns relevant to new",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

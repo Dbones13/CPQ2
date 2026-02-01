@@ -1,0 +1,11 @@
+{
+    "id": 14947,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_7_cal_2",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_7_cal_2:<* EVAL([IF]([AND]([OR]([EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(5).Column(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Get )*>,PLC),[EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(5).Column(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Get )*>,UOC)),[EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(5).Column(LSS_PLC_Controller_Type).Get )*>,Non Redundant))){<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(5).Column(LSS_PLC_controllers_intend_to_migrate).Get )*>}{0}[ENDIF]+[IF]([AND]([OR]([EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(6).Column(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Get )*>,PLC),[EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(6).Column(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Get )*>,UOC)),[EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(6).Column(LSS_PLC_Controller_Type).Get )*>,Non Redundant))){<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(6).Column(LSS_PLC_controllers_intend_to_migrate).Get )*>}{0}[ENDIF]+[IF]([AND]([OR]([EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(7).Column(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Get )*>,PLC),[EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(7).Column(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Get )*>,UOC)),[EQ](<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(7).Column(LSS_PLC_Controller_Type).Get )*>,Non Redundant))){<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Row(7).Column(LSS_PLC_controllers_intend_to_migrate).Get )*>}{0}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

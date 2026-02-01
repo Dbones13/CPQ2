@@ -1,0 +1,11 @@
+{
+    "id": 13650,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Windows_Server_2019_COA_Licenses)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_COAS19",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-COAS19)*><*SETATVQTY(Virtualization_BOM_Parts:EP-COAS19,<*VALUE(Virtualization_Windows_Server_2019_COA_Licenses)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20649,
+    "condition": "[OR]([LEQ](<*VALUE(SS_Flex_Station_Qty_Orion)*>,0),[NEQ](<*VALUE(SS_Orion_Console_Display_Size)*>,23 inch),[NEQ](<*VALUE(SS_Orion_Console_Display_Supplier)*>,Honeywell))",
+    "name": "Part_D_TP_FPW231",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPW231)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

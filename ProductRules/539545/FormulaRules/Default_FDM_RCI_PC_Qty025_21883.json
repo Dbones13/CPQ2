@@ -1,0 +1,11 @@
+{
+    "id": 21883,
+    "condition": "[EQ](<*VALUE(FDM_RCI_PC_Qty(0-25))*>,)",
+    "name": "Default_FDM_RCI_PC_Qty(0-25)",
+    "action": "<*ASSIGNVALUE(FDM_RCI_PC_Qty(0-25):0)*>",
+    "description": "CXCPQ-46451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

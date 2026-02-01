@@ -1,0 +1,52 @@
+
+<div id="treeViewContainer" data-bind="template: { name: 'configurationTreeTemplate' }" class="cpq-scroll">
+</div>
+
+<script type="text/html" id="configurationTreeTemplate">
+    <div id="treeViewContainerStyle">
+        <div class="clearfix">
+            <h3 class="config-tree-parent">
+                <a href="#" id="configTreeParent" data-bind="text: configurationTreeFieldToDisplay, click: goToRootProduct, executeOnEnter: function(){$element.click()}, css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected }"></a>
+            </h3>
+        </div>
+
+        <div>
+            <ul id="navCatChildren" class="navCat" data-bind="template: { name: 'configurationTreeChildTemplate', foreach: children }"></ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="configurationTreeChildTemplate">
+<!-- ko ifnot:['UOC Remote Group','UOC Control Group','CE PLC Remote Group','CE PLC Control Group'].includes( $parent.name())  -->
+	<li data-bind="visible: ((!String(partNumber()).includes('_')  )  && $data.canEditRows())">
+		<a tabindex="0" data-bind="visible: children().length > 0, click: toggleExpanded, executeOnEnter: function(){$element.click()}, clickBubble: false" class="tree-view-icons">
+			<span class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</span>
+			<span class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</span>
+		</a>
+		<span data-bind="visible: children().length === 0" class="categories-tree"></span>
+		<a tabindex="0" href="#" class="categoryName"
+		   data-bind="text: partNumber(),
+           				visible: ((!String(partNumber()).includes('_')  )  && $data.canEditRows()) ,
+           			  attr: { id: $data.uniqueIdentifier },
+           			 click: editProduct,
+                   css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected, 'disabled': $data.hasIncompleteChildren(), 'not-active': !$data.canEditRows()}"></a>
+        <ul class="navCat nav-cat-child" data-bind='template: { name: "configurationTreeChildTemplate", foreach: children }, visible: isExpanded'></ul>
+    </li>
+    <!--/ko-->
+   <!-- ko if:['UOC Remote Group','UOC Control Group','CE PLC Remote Group','CE PLC Control Group'].includes( $parent.name())  -->
+	<li data-bind="visible: (children().length > 0  && $data.canEditRows())">
+		<a tabindex="0" data-bind="visible: children().length > 0, click: toggleExpanded, executeOnEnter: function(){$element.click()}, clickBubble: false" class="tree-view-icons">
+			<span class="sap-icon" data-bind="visible: !isExpanded()">&#xe066;</span>
+			<span class="sap-icon" data-bind="visible: isExpanded()">&#xe1e2;</span>
+		</a>
+		<span data-bind="visible: children().length === 0" class="categories-tree"></span>
+		<a tabindex="0" href="#" class="categoryName"
+		   data-bind="text: partNumber(),
+           				visible: ((!String(partNumber()).includes('_')  )  && $data.canEditRows()),
+           			  attr: { id: $data.uniqueIdentifier },
+           			 click: editProduct,
+                   css: { 'label-incomplete': !isComplete(), 'selectedCat': isSelected, 'disabled': $data.hasIncompleteChildren(), 'not-active': !$data.canEditRows()}"></a>
+                   <ul class="navCat nav-cat-child" data-bind='template: { name: "configurationTreeChildTemplate", foreach: children }, visible: isExpanded'></ul>
+    </li>
+    <!--/ko-->
+</script>

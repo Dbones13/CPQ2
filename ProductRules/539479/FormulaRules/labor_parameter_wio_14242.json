@@ -1,0 +1,11 @@
+{
+    "id": 14242,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "labor_parameter_wio",
+    "action": "<*ASSIGNVALUE(Labor_parameter_wio:<* Eval(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AO) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AI) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DI) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DO) )*>) *>)*>",
+    "description": "0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AO) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AI) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DI) )*>0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DO) )*>",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13291,
+    "condition": "[EQ](<*VALUE(Supervisory Network Type)*>,)",
+    "name": "set FTE as default",
+    "action": "<*SELECTVALUE(Supervisory Network Type:FTE)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

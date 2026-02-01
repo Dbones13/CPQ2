@@ -1,0 +1,11 @@
+{
+    "id": 23041,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,C300 CEE),[OR]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Mounting Panel)))",
+    "name": "Show_SerC_RG_CN100_I/O_HOVE_None",
+    "action": "<*ALLOWVALUES(SerC_RG_CN100_I/O_HOVE:None)*>[IF]([EQ](<*VALUE(SerC_RG_CN100_I/O_HOVE)*>,)){<*SELECTVALUE(SerC_RG_CN100_I/O_HOVE:None)*>}{}[ENDIF]",
+    "description": "CXCPQ-52160 - Requirement 1",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

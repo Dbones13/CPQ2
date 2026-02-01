@@ -1,0 +1,11 @@
+{
+    "id": 14259,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "43529_Base",
+    "action": "<*ASSIGNVALUE(43529_Base:[IF]([LEQ](<*VALUE(labor_parameter_io)*>,400)){12}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,400),[LEQ](<*VALUE(labor_parameter_io)*>,2000))){20}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,2000),[LEQ](<*VALUE(labor_parameter_io)*>,5000))){44}{[IF]([GT](<*VALUE(labor_parameter_io)*>,5000)){<*CTX( Container(C300_Labor_Base_Details).Row(1).Column(Base_Values).Get )*>}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Lahu Giri"
+}

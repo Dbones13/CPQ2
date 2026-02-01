@@ -1,0 +1,11 @@
+{
+    "id": 24191,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(ARO_System_Required)*>,Yes))",
+    "name": "Dummay_show_new",
+    "action": "<*ALLOWATTRIBUTES(Header_02_open,ATTCON_02_open,ARO_Common_Questions,ARO_Experion_Software_Release,ARO_new_Flex_Station_licenses_required,ARO_new_Console_Station_Extension_License,ARO_Stations_require_Multiwindow_support,ARO_OTP_hardware_&_software_required,ARO_Qty_of_Thin_clients,ARO_Does_site_have_DMZ,ARO_Honeywell_to_Supply_the_hardware,ARO_Tower_server_preferred,ATTCON_02_close,ATTCON_04_open,ARO_WorkStation,Additional_Stations_for_ARO_WS,ARO_Station_Node_WS,ARO_Node_Supplier_WB,ARO_Display_size_WB,ATTCON_04_close,ATTCON_03_open,ARO_Server,ARO_Server_Node_Type,ARO_Node_Supplier,ARO_Trusted_Platform_Module,ARO_Additional_Hard_Disk,ARO_Display_Size,ARO_Display_Supplier,ATTCON_03_close,ATTCON_05_open,ARO_Gateway,ARO_Server_Node_Type_GW,ARO_Node_Supplier_GW,ARO_Trusted_Platform_Module_GW,ARO_Additional_Hard_Disk_GW,ARO_Display_Size_GW,ARO_Display_Supplier_GW,ATTCON_05_close,ARO_server_require_Physical_hardware,ARO_Gateway_require_Physical_hardware)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

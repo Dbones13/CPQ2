@@ -1,0 +1,11 @@
+{
+    "id": 15024,
+    "condition": "[EQ](<*VALUE(MSE_Estimated_Project_Duration)*>,)",
+    "name": "Default_Estimated Project Duration",
+    "action": "<*ASSIGNVALUE(MSE_Estimated_Project_Duration:40)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

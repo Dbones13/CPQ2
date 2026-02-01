@@ -1,0 +1,11 @@
+{
+    "id": 20168,
+    "condition": "[EQ](<*VALUE(DVM_IPSOTEK_Analytics_Integration)*>,)",
+    "name": "Default_DVM_IPSOTEK_Analytics_Integration",
+    "action": "<*SELECTVALUE(DVM_IPSOTEK_Analytics_Integration:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23416,
+    "condition": "<*ATTSEL(Simulation_Bom_parts)*>",
+    "name": "Execute_SSG_BOM",
+    "action": "<* ExecuteScript(SSG_PartSummary_Population) *>",
+    "description": "",
+    "rank": "99",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

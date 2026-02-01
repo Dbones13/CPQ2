@@ -1,0 +1,11 @@
+{
+    "id": 10459,
+    "condition": "1",
+    "name": "CB_EC_Third_Party_Row1",
+    "action": "<*CTX( Container(CB_EC_Third_party_items_Cont).Row(1).Column(CB_EC_Name).Set(3rd party Hardware) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

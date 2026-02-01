@@ -1,0 +1,11 @@
+{
+    "id": 20790,
+    "condition": "[OR]([NEQ](<*VALUE(CE_Site_Voltage)*>,240V),[LEQ](<*VALUE(SS_display_sum)*>,0))",
+    "name": "Part_D_51305557_100",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:51305557-100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "8",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

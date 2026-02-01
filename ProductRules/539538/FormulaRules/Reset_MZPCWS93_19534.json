@@ -1,0 +1,11 @@
+{
+    "id": 19534,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Exp HS Select WorkStation Grade Computer Platform Type)*>,T5820XL),[GT](<* IsNull(<*VALUE(Exp HS Quantity of Flex Station)*>,0) *>,0)))",
+    "name": "Reset MZ-PCWS93",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:MZ-PCWS93)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

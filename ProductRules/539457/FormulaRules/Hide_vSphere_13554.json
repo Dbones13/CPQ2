@@ -1,0 +1,11 @@
+{
+    "id": 13554,
+    "condition": "[OR]([EQ](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,0),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix))",
+    "name": "Hide_vSphere",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_vSphere_Client_Node_OS_Type,Virtualization_vSphere_Client_Node_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Lahu Giri"
+}

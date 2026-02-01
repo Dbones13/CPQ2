@@ -1,0 +1,11 @@
+{
+    "id": 13106,
+    "condition": "[NOT](<*ATTDEF(SC_WEP_ServiceProduct_OM)*>)",
+    "name": "Default_ServiceProduct_OM",
+    "action": "<*ASSIGNVALUE(SC_WEP_ServiceProduct_OM:Training)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

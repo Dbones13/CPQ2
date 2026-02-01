@@ -1,0 +1,1 @@
+[IF]([GT](<*VALUE(labor_parameter_ip)*>,1)){<*ASSIGNVALUE(labor_parameter_C:<* Eval((<*VALUE(labor_parameter_ip)*> - 1) * 0.1) *>)*>}{<*ASSIGNVALUE(labor_parameter_C:<* Eval((<*VALUE(labor_parameter_ip)*> - 1) * 0.001) *>)*>}[ENDIF]

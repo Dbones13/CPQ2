@@ -1,0 +1,11 @@
+{
+    "id": 19582,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS Application Communication Option)*>,Yes))",
+    "name": "Application Communication Option NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HMESAO)*><* DoResetAtt *>",
+    "description": "Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

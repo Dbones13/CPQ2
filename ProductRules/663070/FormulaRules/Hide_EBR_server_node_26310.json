@@ -1,0 +1,11 @@
+{
+    "id": 26310,
+    "condition": "[OR]([EQ](<*VALUE(Experion Backup & Restore (Experion Server))*>,No),[EQ](<*VALUE(Experion Backup & Restore (Experion Server))*>,))",
+    "name": "Hide_EBR_server_node",
+    "action": "<*DISALLOWATTRIBUTES(Server Node Type EBR)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

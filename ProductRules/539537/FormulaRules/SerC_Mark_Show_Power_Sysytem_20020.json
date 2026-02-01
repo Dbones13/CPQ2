@@ -1,0 +1,11 @@
+{
+    "id": 20020,
+    "condition": "<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>",
+    "name": "SerC_Mark_Show_Power_Sysytem",
+    "action": "<*DISALLOWVALUES(SerC_CG_Power_System_Type:Locally Supplied Power,SerC_CG_Power_System_Type:Minimum Required Non Redundant,SerC_CG_Power_System_Type:Minimum Required Redundant,SerC_CG_Power_System_Type:Non Redundant 20A,SerC_CG_Power_System_Type:Non Redundant 40A,SerC_CG_Power_System_Type:Redundant 40A)*>",
+    "description": "#CXCPQ-37203",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

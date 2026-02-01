@@ -1,0 +1,11 @@
+{
+    "id": 22776,
+    "condition": "[NOT](<*ISSELECTED(Power_Cord_Type.Argentina)*>)",
+    "name": "Hide_51199562_207",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Location_Cluster_Part_Summary:51199562-207)*><* DoResetAtt *>",
+    "description": "CXCPQ-38337",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22328,
+    "condition": "[EQ](<*VALUE(ESDC_EBR_base_media)*>,)",
+    "name": "Default_ESDC_EBR_base_media",
+    "action": "<*SELECTVALUE(ESDC_EBR_base_media:Electronic Download)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

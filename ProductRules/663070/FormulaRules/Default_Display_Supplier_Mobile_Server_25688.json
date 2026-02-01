@@ -1,0 +1,11 @@
+{
+    "id": 25688,
+    "condition": "[EQ](<*VALUE(Display Supplier (Mobile Server))*>,)",
+    "name": "Default_Display_Supplier_Mobile_Server",
+    "action": "<*SELECTVALUE(Display Supplier (Mobile Server):Honeywell)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

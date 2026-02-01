@@ -1,0 +1,11 @@
+{
+    "id": 19561,
+    "condition": "[AND]([EQ](<*VALUECODE(Exp HS Redundant Servers)*>,Yes),[EQ](<*VALUE(New_Expansion)*>,New))",
+    "name": "Redundant Server Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HMRBAS)*><* DoResetAtt *>",
+    "description": "Add EP-HMRBAS",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

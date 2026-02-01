@@ -1,0 +1,11 @@
+{
+    "id": 25825,
+    "condition": "[EQ](<*VALUE(Trusted Platform Module1)*>,)",
+    "name": "set_default_desk_mount4",
+    "action": "<*SELECTVALUE(Trusted Platform Module1:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

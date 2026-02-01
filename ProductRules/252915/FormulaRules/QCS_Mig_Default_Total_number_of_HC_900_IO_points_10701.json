@@ -1,0 +1,11 @@
+{
+    "id": 10701,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_Total_number_of_HC_900_IO_points)*>,))",
+    "name": "QCS_Mig_Default_Total_number_of_HC_900_IO_points",
+    "action": "<*SELECTVALUE(QCS_Mig_Total_number_of_HC_900_IO_points:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

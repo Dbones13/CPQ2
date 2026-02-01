@@ -1,0 +1,11 @@
+{
+    "id": 14251,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Control_Application_Configuration",
+    "action": "<*ASSIGNVALUE(C300_Labour_Control_Application_Configuration:<*EVAL(0<*VALUE(C300_Labour_Parameter_Base)*>+5*0<*VALUE(Labor_parameter_Ctr)*>+0<*VALUE(Labor_parameter_pT)*>*(0.15*(0<*VALUE(labor_parameter_hio)*>+0<*VALUE(labor_parameter_sio)*>)+0.65*(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AI) )*>-0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AO) )*>)+0.65*(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AO))*>)+0.25*(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DO) )*>/1.2)+(1+0.1*<*VALUE(Labor_Parameter_bat)*>)*15))*>)*>",
+    "description": "CXCPQ-43539",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "24/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

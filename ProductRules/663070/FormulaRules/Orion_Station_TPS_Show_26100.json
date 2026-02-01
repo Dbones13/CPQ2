@@ -1,0 +1,11 @@
+{
+    "id": 26100,
+    "condition": "[AND](<*ISSELECTED(Interface with TPS Required?.Yes)*>,<*ISSELECTED(Orion Stations required.Yes)*>)",
+    "name": "Orion_Station_TPS_Show",
+    "action": "<*ALLOWATTRIBUTES(TPS Station Qty (0-20),TPS Station Hardware Selection)*><*DISALLOWATTRIBUTES(Console Station Qty (0-20))*>",
+    "description": "CXCPQ-34882 - 2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

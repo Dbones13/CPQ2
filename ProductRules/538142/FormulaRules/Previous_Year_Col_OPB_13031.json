@@ -1,0 +1,11 @@
+{
+    "id": 13031,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Previous_Year_Col_OPB",
+    "action": "<*CTX ( Container(SC_Cyber_Models_Scope_Cont).Column(PY_Quantity).SetPermission(Editable) )*>\n<*CTX ( Container(SC_Cyber_Models_Scope_Cont).Column(PY_ListPrice).SetPermission(Editable) )*>\n<*CTX ( Container(SC_Cyber_Models_Scope_Cont).Column(PY_CostPrice).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23783,
+    "condition": "[NEQ](<*VALUE(SerC_CG_Foundation_Fieldbus_Interface_required)*>,Yes)",
+    "name": "Hide_FIM_Table",
+    "action": "<*CTX ( Container(SerC_CG_FIM_FF_IO_Cont).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(FIM_Type,FIM_Percent_Installed_Spare_Fieldbus_IO,FIM_Num_Devices_Open_Loop,FIM_Num_Devices_Close_Loop,FIM_Num_Close_Loop_per_Segment,FIM_Num_FF_Temp_Mux_per_Segment,FIM_Num_of_MOVs_per_Segment,FIM_FF_IOs_with_Power_conditioner,FIM_Power_Conditioner_Scope,FIM_Segment_Calc_PC_Questions,SerC_CG_FIM_FF_IO_Cont,FIM_FIM4_Not_Recommended,Header_09_open)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

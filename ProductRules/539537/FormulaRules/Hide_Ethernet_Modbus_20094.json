@@ -1,0 +1,11 @@
+{
+    "id": 20094,
+    "condition": "[OR]([NEQ](<*VALUE(Experion_PKS_Software_Release)*>,R530),[EQ](<*VALUE(SerC_CG_Ethernet_Interface)*>,))",
+    "name": "Hide_Ethernet_Modbus",
+    "action": "<*DISALLOWATTRIBUTES(SerC_Number_NonRedundant_EIM_for_Modbus,SerC_Number_Redundant_EIM_for_Modbus)*>",
+    "description": "CXDEV-7705",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

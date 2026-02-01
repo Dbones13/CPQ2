@@ -1,0 +1,11 @@
+{
+    "id": 13491,
+    "condition": "1",
+    "name": "Total_Number_Display_Graphics",
+    "action": "<*ASSIGNVALUE(Total_Number_Display_Graphics:<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

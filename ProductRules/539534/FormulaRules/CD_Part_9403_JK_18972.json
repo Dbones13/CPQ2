@@ -1,0 +1,11 @@
+{
+    "id": 18972,
+    "condition": "[EQ](<*VALUE(MX_CD_SCU_Steam_add_on_to_SCU_Model_9203_K_x)*>,Yes)",
+    "name": "CD_Part_9403_JK",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9403-JK)*><*SETATVQTY(MX_CD_Bom_Parts:9403-JK, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

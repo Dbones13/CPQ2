@@ -1,0 +1,11 @@
+{
+    "id": 15440,
+    "condition": "[EQ](<*VALUE(FDA Number of EBI interfaces to other systems)*>,)",
+    "name": "Default Number of EBI interfaces to other systems",
+    "action": "<*ASSIGNVALUE(FDA Number of EBI interfaces to other systems:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

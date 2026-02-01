@@ -1,0 +1,11 @@
+{
+    "id": 14853,
+    "condition": "[NEQ](<*VALUE(MX_MD_Coater_Startup_and_Shutdown)*>,Yes)",
+    "name": "MX_Part_Dis_RQUP4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:RQUP4)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

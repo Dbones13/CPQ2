@@ -1,0 +1,11 @@
+{
+    "id": 12230,
+    "condition": "[NEQ](<*VALUE(MSID_GES_Location)*>,None)",
+    "name": "Show GES Columns on Labor Deliverables tab Price5",
+    "action": "<*CTX( Container(MSID_Labor_ELEPIU_con).Column(GES_MPA_Price).SetPermission(Editable) )*>\n<*CTX( Container(MSID_Labor_ELEPIU_con).Column(GES_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(MSID_Labor_ELEPIU_con).Column(GES_ListPrice).SetPermission(Editable) )*>",
+    "description": "CXCPQ-60159",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

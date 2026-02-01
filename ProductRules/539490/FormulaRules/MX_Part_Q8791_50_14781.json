@@ -1,0 +1,11 @@
+{
+    "id": 14781,
+    "condition": "[GT](<*VALUE(MX_HC_Digital_Output_Relays_8_Channel)*>,0)",
+    "name": "MX_Part_Q8791_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8791-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8791-50, <*VALUE(MX_HC_Digital_Output_Relays_8_Channel)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

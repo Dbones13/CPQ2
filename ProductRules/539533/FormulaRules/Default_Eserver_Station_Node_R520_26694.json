@@ -1,0 +1,11 @@
+{
+    "id": 26694,
+    "condition": "[AND]([EQ](<*VALUE(ES_eServer_Staton_Node)*>,),[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R520))",
+    "name": "Default_Eserver_Station_Node_R520",
+    "action": "<*SELECTVALUE(ES_eServer_Staton_Node:STN_PER_DELL_Tower_RAID2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Ravika Pupneja"
+}

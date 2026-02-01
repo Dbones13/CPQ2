@@ -1,0 +1,11 @@
+{
+    "id": 11706,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS Badging Workstation Configuration",
+    "action": "<*ASSIGNVALUE(IS Badging Workstation Configuration:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval(4*<*VALUE(IS_No_of_Badging_Stations_(0-5))*>) *>}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){<* Eval(4*<*VALUE(IS_No_of_Badging_Stations_(0-5))*>) *>}{<* Eval(4*<*VALUE(IS_No_of_Badging_Stations_(0-5))*>) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

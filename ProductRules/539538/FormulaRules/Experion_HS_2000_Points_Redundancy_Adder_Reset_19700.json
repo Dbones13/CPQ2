@@ -1,0 +1,11 @@
+{
+    "id": 19700,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Exp HS Redundant Servers)*>,Yes),[EQ](<*VALUE(Exp HS Runtime System)*>,No),[GEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,13),[LEQ](<*VALUE(Exp HS Number of 100 point bundles)*>,21)))",
+    "name": "Experion HS 2000 Points Redundancy Adder Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HMR02K)*><* DoResetAtt *>",
+    "description": "CXCPQ-37955;Rule inactivated as part of CXCPQ-43096",
+    "rank": "6",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

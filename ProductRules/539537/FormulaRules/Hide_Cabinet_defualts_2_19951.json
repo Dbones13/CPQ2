@@ -1,0 +1,11 @@
+{
+    "id": 19951,
+    "condition": "<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Mounting Panel)*>",
+    "name": "Hide_Cabinet_defualts_2",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Cabinet_Defaults,SerC_CG_Cabinet_Type_03,SerC_CG_Fan_Option,SerC_CG_Integrated_Marshalling_Cabinet,SerC_Integrated_Marshalling_Cabinet)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

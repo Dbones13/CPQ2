@@ -1,0 +1,11 @@
+{
+    "id": 20626,
+    "condition": "[AND]([EQ](<*VALUE(SS_Experion_Backup_&_Restore_Release)*>,R520),[EQ](<*VALUE(SS_Experion_Backup_Restore_Simulation_Server)*>,Yes),[EQ](<*VALUE(SS_Simulation_Server_required)*>,Yes))",
+    "name": "Part_A_EP_BRSE06",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:EP-BRSE06)*><*SETATVQTY(Simulation_Bom_parts:EP-BRSE06,<*VALUE(Simulation_red_non_red_Check)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

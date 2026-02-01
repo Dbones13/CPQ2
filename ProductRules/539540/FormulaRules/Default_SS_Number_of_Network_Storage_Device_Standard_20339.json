@@ -1,0 +1,11 @@
+{
+    "id": 20339,
+    "condition": "[EQ](<*VALUE(SS_Number_of_Network_Storage_Device_Standard)*>,)",
+    "name": "Default_SS_Number_of_Network_Storage_Device_Standard",
+    "action": "<*ASSIGNVALUE(SS_Number_of_Network_Storage_Device_Standard:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

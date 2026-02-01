@@ -1,0 +1,11 @@
+{
+    "id": 18089,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Z_Gap_Sensor)*>,)",
+    "name": "MXPro_Sensor_Z_Gap_Sensor",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Z_Gap_Sensor:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

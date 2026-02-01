@@ -1,0 +1,11 @@
+{
+    "id": 12995,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*CTX ( Quote.CustomField(SC_CF_Parent_Quote_Number_Link) )*>,))",
+    "name": "Editable_Scope_selection_columns",
+    "action": "<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Previous_Year_Cost_Price).SetPermission(Editable) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Previous_Year_List_Price).SetPermission(Editable) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(PY_Quantity).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

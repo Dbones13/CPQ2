@@ -1,0 +1,11 @@
+{
+    "id": 26423,
+    "condition": "[NOT]([AND]([AND]([OR](<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-100)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-200)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-100)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-200)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-103)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-203)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-103)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-203)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-102)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-202)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-102)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-202)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-101)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C1MCB1-201)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-101)*>,<*ISSELECTED(Exp_Ent_Grp_Part_Summary.MP-C8LCB1-201)*>),[EQ](<*VALUE(Cabinet Depth)*>,0.8M)),[EQ](<*VALUE(Cabinet Base)*>,Yes)))",
+    "name": "MU-C8DBA1 part delete",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MU-C8DBA1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38422",
+    "rank": "1000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

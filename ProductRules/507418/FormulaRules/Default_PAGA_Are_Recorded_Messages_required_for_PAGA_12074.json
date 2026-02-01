@@ -1,0 +1,11 @@
+{
+    "id": 12074,
+    "condition": "[EQ](<*VALUE(PAGA_Are_Recorded_Messages_required_for_PAGA?)*>,)",
+    "name": "Default_PAGA_Are_Recorded_Messages_required_for_PAGA?",
+    "action": "<*SELECTVALUE(PAGA_Are_Recorded_Messages_required_for_PAGA?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

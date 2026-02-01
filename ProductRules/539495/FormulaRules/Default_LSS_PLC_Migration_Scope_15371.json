@@ -1,0 +1,11 @@
+{
+    "id": 15371,
+    "condition": "[AND]([EQ](<* ProductName *>,ControlEdge PLC System Migration),[EQ](<*VALUE(LSS_PLC_Migration_Scope)*>,))",
+    "name": "Default_LSS_PLC_Migration_Scope",
+    "action": "<*SELECTVALUE(LSS_PLC_Migration_Scope:Controller Migration)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

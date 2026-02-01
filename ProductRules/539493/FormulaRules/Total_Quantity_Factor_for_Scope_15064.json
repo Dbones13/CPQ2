@@ -1,0 +1,11 @@
+{
+    "id": 15064,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_Quantity_Factor_for_Scope",
+    "action": "<*ASSIGNVALUE(Total_Quantity_Factor_for_Scope:<* Eval(0<*VALUE(Q1)*>+0<*VALUE(Q2)*>+0<*VALUE(Q3)*>+0<*VALUE(Q4)*>) *>)*>",
+    "description": "Total Quantity Factor for Scope(QF)",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

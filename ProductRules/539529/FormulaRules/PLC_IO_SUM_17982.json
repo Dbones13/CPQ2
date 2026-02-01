@@ -1,0 +1,11 @@
+{
+    "id": 17982,
+    "condition": "1",
+    "name": "PLC_IO_SUM",
+    "action": "<*ASSIGNVALUE(PLC_IO_SUM:<* Eval(0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AI_Points) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AI_HART_Points) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AO_100_250) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AO_250_499) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AO_500) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AO_HART_100_250) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AO_HART_250_499) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_AO_HART_500) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_DI_Points) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_DO_10_250) )*>+0<*CTX ( Container(PLC_CG_UIO_Cont).Sum(PLC_DO_250_500) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Universal_Analog_Input8) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Universal_Analog_Input8_TCRTDmVOhm) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Analog_Input16) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Analog_Output4) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Analog_Output8_Internal) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Analog_Output8_External) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Digital_Input32) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Digital_Input16_120240VAC) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Digital_Input_Contact_Type16) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Digital_Input16_125VDC) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Digital_Output32) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Digital_Output8) )*>+0<*CTX ( Container(PLC_CG_Other_IO_Cont).Sum(PLC_Digital_Output_Relay8) )*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

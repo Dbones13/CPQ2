@@ -1,0 +1,1 @@
+[IF](<*ISSELECTED(FDM_ FDM_Gateway_required.Yes)*>){<*SELECTVALUES(FDM_Additional_Hard_Disk(Server):No,FDM_Additional_Memory(Server Disk):None,FDM_Display_Size(Server):24 inch NTS DELL,FDM_Display_Supplier(Server):Honeywell,FDM_Node_Supplier(Server):Honeywell,FDM_Server_Node_Type:SVR_STD_DELL_Tower_RAID1,FDM_Trusted_Platform_Module(TPM):Yes)*>}{if_false}[ENDIF]

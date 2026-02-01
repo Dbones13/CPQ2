@@ -1,0 +1,11 @@
+{
+    "id": 24326,
+    "condition": "[AND]([NEQ](<*VALUE(ARO_Server_Node_Type_GW)*>,SVR_PER_HP_Rack_RAID5),[NEQ](<*VALUE(ARO_Server_Node_Type_GW)*>,SVR_PER_DELL_Rack_RAID5))",
+    "name": "Hide_YES_GatWay",
+    "action": "<*DISALLOWVALUES(ARO_Additional_Hard_Disk_GW:Yes)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22493,
+    "condition": "[NEQ](<*VALUE(ESDC_OPC_Alarm_and_Event_Server)*>,0)",
+    "name": "Part_A_EP_OPCDA1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:EP-OPCDA1)*><*SETATVQTY(ESDC_BOM_Parts:EP-OPCDA1, <*VALUE(ESDC_OPC_Alarm_and_Event_Server)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

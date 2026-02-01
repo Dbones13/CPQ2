@@ -1,0 +1,11 @@
+{
+    "id": 14797,
+    "condition": "[AND]([IN](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD,QCS MD & CD),[EQ](<*VALUE(MX_Electronic_or_physical_media)*>,Physical))",
+    "name": "MX_Part_QCS_MXCDC_702",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:QCS-MXCDC-702)*><*SETATVQTY(MX_Platform_Bom_Parts:QCS-MXCDC-702, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

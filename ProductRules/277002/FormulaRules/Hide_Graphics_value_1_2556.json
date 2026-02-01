@@ -1,0 +1,11 @@
+{
+    "id": 2556,
+    "condition": "[NEQ](<*VALUE(Graphics_Migration_Is_the_system_connected_to)*>,No)",
+    "name": "Hide Graphics value 1",
+    "action": "<*DISALLOWVALUES(Graphics_Migration_Require_multi_tag_shapes:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "03/05/23",
+    "modifiedBy": "Madhuri Sharma"
+}

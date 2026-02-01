@@ -1,0 +1,11 @@
+{
+    "id": 20414,
+    "condition": "[EQ](<*VALUE(SS_Node_Supplier_Station)*>,)",
+    "name": "default_SS_Node_Supplier_Station",
+    "action": "<*SELECTVALUE(SS_Node_Supplier_Station:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

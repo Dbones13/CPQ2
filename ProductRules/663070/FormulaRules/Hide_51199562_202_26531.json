@@ -1,0 +1,11 @@
+{
+    "id": 26531,
+    "condition": "[NOT](<*ISSELECTED(Power Cord Type.UK)*>)",
+    "name": "Hide_51199562_202",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51199562-202)*><* DoResetAtt *>",
+    "description": "CXCPQ-38333",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

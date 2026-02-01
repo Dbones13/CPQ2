@@ -1,0 +1,11 @@
+{
+    "id": 15013,
+    "condition": "[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "BOM_PLC_UOC_EP-DSC01K",
+    "action": "[IF]([AND]([GEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,900),[LEQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,1000))){<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-DSC01K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-DSC01K,1)*>}{[IF]([LEQ](<*Eval(int((((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC10K)*>*10000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC05K)*>*5000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC02K)*>*2000))/1000)))*>,0)){}{<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-DSC01K)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-DSC01K,<*Eval(int((((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC10K)*>*10000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC05K)*>*5000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-DSC02K)*>*2000))/1000)))*>)*>}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

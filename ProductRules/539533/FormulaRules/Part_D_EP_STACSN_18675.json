@@ -1,0 +1,11 @@
+{
+    "id": 18675,
+    "condition": "1",
+    "name": "Part_D_EP_STACSN",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:EP-STACSN)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

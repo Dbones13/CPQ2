@@ -1,0 +1,11 @@
+{
+    "id": 23382,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZDSRB2,TP-ZESVL6,TP-ZSDRT1,TP-ZSDTG2,TP-ZSDTB2,TP-ZSDRL1,TP-ZESVT5,TP-ZSDRJ1,TP-ZSDTE2,TP-ZSDTD2)",
+    "name": "14 Station Upgrade",
+    "action": "<*DISALLOWALLVALUESEXCEPT(KE_Software_Release:R520|R530)*>\n<*DISALLOWATTRIBUTES(KE_Controller Experion peer to peer connectivity)*>\n<*DISALLOWATTRIBUTES(KE_ISA_Adapter_Required)*>",
+    "description": "ExperionReleaseValues_R520_R530",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

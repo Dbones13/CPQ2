@@ -1,0 +1,11 @@
+{
+    "id": 20069,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual)))",
+    "name": "Show_HIVE_Control_Applications",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_24_close,ATTCON_24_open,Header_24_close,Header_24_open,Heading_HIVE_Control_Applications,SerC_CG_Control_HIVE_Availability_Level_required,SerC_CG_HIVE_Number_of_Controller_Required,SerC_CG_Number_of_Extra_HIVE_Control_Applications,SerC_CG_Number_of_HIVE_Control_Applications(HCA),SerC_CG_Number_of_Redundant_HIVE_Control_App)*>",
+    "description": "CXCPQ-51943",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

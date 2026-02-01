@@ -1,0 +1,11 @@
+{
+    "id": 20593,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R511),[EQ](<*VALUE(SS_Experion_Base_Media_Delivery)*>,Physical Delivery)))",
+    "name": "Part_D_EP_PKS511",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-PKS511)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

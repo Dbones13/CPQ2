@@ -1,0 +1,11 @@
+{
+    "id": 22935,
+    "condition": "1",
+    "name": "RG_Labor_parameter_is",
+    "action": "<*ASSIGNVALUE(RG_Labor_parameter_is:[IF]([GT](<* Eval(0<*CTX ( Container(C300_SerC_GIIS_RG_Cont).Sum(labor_parameter_is) )*>+0<*CTX ( Container(C300_C IO_RG MS).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_C IO_RG MS2).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_C IO_RG MS3).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_RAIL_Universal_IO_cont_RG_1).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_RAIL_Universal_io_RG_cont_2).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_RG_Universal_IO_cont_1).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_UPC_Labor_IO_count_RG_1).Sum(UPC_Labor_IS) )*>+0<*CTX ( Container(C300_UPC_Labor_IO_count_RG_2).Sum(UPC_Labor_IS) )*>+0<*CTX ( Container(C300_RG_Universal_IO_cont_2).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_RG_Cont).Sum(Labor_IS) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_RG_Cont1).Sum(Labor_IS) )*>+0<*CTX ( Container(SerC_RG_Enhanced_Function_IO_Cont2).Sum(Labor_IS) )*>+0<*CTX ( Container(SerC_RG_Enhanced_Function_IO_Cont).Sum(Labor_IS) )*>) *>,0)){1}{0}[ENDIF])*>\n<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntCG:<* Eval(0<*CTX( Container(C300_CG_Universal_IO_Mark_1).Sum(AI) )*>+0<*CTX( Container(C300_CG_Universal_IO_Mark_1).Sum(AO) )*>+0<*CTX( Container(C300_CG_Universal_IO_Mark_2).Sum(DI) )*>+0<*CTX( Container(C300_CG_Universal_IO_Mark_2).Sum(DO) )*>+0<*CTX( Container(C300_RG_Universal_IO_cont_1).Sum(AI) )*>+0<*CTX( Container(C300_RG_Universal_IO_cont_1).Sum(AO) )*>+0<*CTX( Container(C300_RG_Universal_IO_cont_2).Sum(DI) )*>+0<*CTX( Container(C300_RG_Universal_IO_cont_2).Sum(DO) )*>) *>)*>\n[IF]([EQ](<*VALUE(Ser_RG_Universal_Marshalling_Cabinet)*>,Yes)){<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntmarsh:1)*>}{<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntmarsh:0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

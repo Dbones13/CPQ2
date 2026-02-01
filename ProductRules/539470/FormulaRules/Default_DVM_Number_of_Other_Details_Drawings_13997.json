@@ -1,0 +1,11 @@
+{
+    "id": 13997,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Other_Details_Drawings)*>,)",
+    "name": "Default_DVM_Number_of_Other_Details_Drawings",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Other_Details_Drawings:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

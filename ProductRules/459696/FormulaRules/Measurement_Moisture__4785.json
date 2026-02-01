@@ -1,0 +1,11 @@
+{
+    "id": 4785,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture))",
+    "name": "Measurement_Moisture_",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Microwave Moisture Measurement|Microwave Moisture Msmt High Weight|MXIR FW and Moi for Experion MX|MXIR Moi for Experion MX|TRIR Moisture Msmt High Weight)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

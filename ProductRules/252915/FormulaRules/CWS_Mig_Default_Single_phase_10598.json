@@ -1,0 +1,11 @@
+{
+    "id": 10598,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Single_phase_or_Three_phase_power)*>,)",
+    "name": "CWS_Mig_Default_Single_phase",
+    "action": "<*SELECTVALUE(CWS_Mig_Single_phase_or_Three_phase_power:Single phase)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

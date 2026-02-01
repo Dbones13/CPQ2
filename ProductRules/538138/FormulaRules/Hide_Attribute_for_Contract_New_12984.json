@@ -1,0 +1,11 @@
+{
+    "id": 12984,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_Attribute_for_Contract_New",
+    "action": "<*DISALLOWATTRIBUTES(ComparisonSummary)*>\n<*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Service_Product).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Entitlement).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Related_Module).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Resource_Type).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Deliverables_Hours).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Renewal_Year_Deliverables_Hours).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_UnitPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Total_Expenses).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Renewal_Year_Total_Expenses).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Scope_Reduction_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Scope_Addition_Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Contigency_Cost).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Total_Cost_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Contigency_Cost).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Comments).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(Final_Total_Cost_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_Labor_Summary_Container).Column(PY_Expenses_Cost).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(ComparisonSummary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "07/07/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

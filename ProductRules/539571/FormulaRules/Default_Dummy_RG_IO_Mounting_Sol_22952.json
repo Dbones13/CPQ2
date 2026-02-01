@@ -1,0 +1,11 @@
+{
+    "id": 22952,
+    "condition": "[IF]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes)){0}{[EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,)}[ENDIF]",
+    "name": "Default_Dummy_RG_IO_Mounting_Sol",
+    "action": "<*SELECTVALUE(Dummy_RG_IO_Mounting_Solution:Cabinet)*>",
+    "description": "51884",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

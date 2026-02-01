@@ -1,0 +1,11 @@
+{
+    "id": 13736,
+    "condition": "[AND]([GEQ](<* Eval(<*VALUE(Virtualization_Number_of_R640XL_Management_Servers)*> + <*VALUE(Virtualization_Number_of_R640XL_Standard_Servers)*>  + <*VALUE(Virtualization_Number_R740XL_Performance_A_Servers)*> + <*VALUE(Virtualization_Number_R740XL_Performance_B_Servers)*> ) *>,1),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[EQ](<*VALUE(Virtualization_Power_Supply_Voltage)*>,120V),[EQ](<*VALUE(Virtualization_Cabinet_Depth_Size)*>,1 meter),[EQ](<*VALUE(Virtualization_Cabinet_Door_Type)*>,Reverse Front),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MP_C1MCB1_103",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MP-C1MCB1-103)*><*SETATVQTY(Virtualization_BOM_Parts:MP-C1MCB1-103, <*VALUE(Virtualization_Cabinet)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

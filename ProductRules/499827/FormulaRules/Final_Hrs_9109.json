@@ -1,0 +1,11 @@
+{
+    "id": 9109,
+    "condition": "1",
+    "name": "Final_Hrs",
+    "action": "<*ASSIGNVALUE(Total_Project_Hrs:<*Eval(<*CTX(Container(CE_SystemGroup_Cont).Sum(Final_Hrs))*>+<*CTX(Container(Project_management_Labor_Container).Sum(Final Hrs))*>+<*CTX(Container(Labor_Container).Sum(Final Hrs))*>+<*CTX(Container(PLE_Labor_Container).Sum(Final Hrs))*>+<*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Sum(Final Hrs))*>)*>)*>",
+    "description": "This is used for Total Project Hours",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

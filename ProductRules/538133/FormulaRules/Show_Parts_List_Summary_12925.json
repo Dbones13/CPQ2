@@ -1,0 +1,11 @@
+{
+    "id": 12925,
+    "condition": "[NEQ](<*CTX ( Container(SC_P1P2_Parts_Details).Rows.GetCount )*>,0)",
+    "name": "Show_Parts_List_Summary",
+    "action": "<*ALLOWATTRIBUTES(Header_06_close,Header_06_open,SC_P1P2_Parts_List_Summary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

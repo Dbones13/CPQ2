@@ -1,0 +1,11 @@
+{
+    "id": 14007,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Weather_Proof_PTZ_Cameras)*>,)",
+    "name": "Default_DVM_Number_of_Weather_Proof_PTZ_Cameras",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Weather_Proof_PTZ_Cameras:100)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

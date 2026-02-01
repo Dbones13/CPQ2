@@ -1,0 +1,11 @@
+{
+    "id": 26444,
+    "condition": "1",
+    "name": "Total_switch_qnt",
+    "action": "<*ASSIGNVALUE(Total_switch_qnt:<*EVAL(<*VALUE(Port 8 Network Switch)*>+<*VALUE(Port 12 Network Switch)*>+<*VALUE(Port 24 Network Switch)*>+<*VALUE(Port 48 Network Switch)*>)*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

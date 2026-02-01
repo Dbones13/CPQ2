@@ -1,0 +1,11 @@
+{
+    "id": 25783,
+    "condition": "[GT](<*VALUE(MZ-PCEM44_qnt)*>,0)",
+    "name": "MZ-PCEM44 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCEM44)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCEM44,<* Eval(<*VALUE(MZ-PCEM44_qnt)*>*2) *>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37553",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26536,
+    "condition": "[NEQ](<*VALUE(Hardware Design Selection - Sim PC Node1)*>,)",
+    "name": "Hide_Additional_MemoryDisk_SimDesk",
+    "action": "<*DISALLOWVALUES(Additional Hard Disk (Sim PC Desk):Yes)*><*DISALLOWVALUES(Additional Memory (Sim PC Desk):16GB)*>",
+    "description": "SIM PC Desk Configuration\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

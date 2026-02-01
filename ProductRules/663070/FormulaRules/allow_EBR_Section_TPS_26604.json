@@ -1,0 +1,11 @@
+{
+    "id": 26604,
+    "condition": "[EQ](<*VALUE(Interface with TPS Required?)*>,Yes)",
+    "name": "allow_EBR_Section_TPS",
+    "action": "<*ALLOWATTRIBUTES(Experion Backup & Restore (Experion TPS Server),Experion Backup & Restore (ACE)1,Experion Backup & Restore (ACE-T),Experion Backup & Restore (Experion APP),Experion Backup & Restore (Simulation PC)1,Experion Backup & Restore (Flex Station ES-F)1,Experion Backup & Restore (TPS Station ES-T),Experion Backup & Restore ConsoleStation Extension)*><*SETREQUIRED(Experion Backup & Restore (Experion TPS Server),Experion Backup & Restore (ACE)1,Experion Backup & Restore (ACE-T),Experion Backup & Restore (Experion APP),Experion Backup & Restore (Simulation PC)1,Experion Backup & Restore (Flex Station ES-F)1,Experion Backup & Restore (TPS Station ES-T),Experion Backup & Restore ConsoleStation Extension)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

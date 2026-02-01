@@ -1,0 +1,11 @@
+{
+    "id": 19212,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(PlantCruise_Need_Experion_Batch_Points)*>,Yes),[GT](<*VALUE(PlantCruise_Specify_no_of_IO_pt_Batch_process)*>,0)))",
+    "name": "Del_Software_Base_CV-1BP100",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-1BP100)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

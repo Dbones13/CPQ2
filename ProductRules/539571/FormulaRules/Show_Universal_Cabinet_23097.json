@@ -1,0 +1,11 @@
+{
+    "id": 23097,
+    "condition": "[EQ](<*VALUE(SerC_CG_Universal_Marshalling_Cabinet)*>,Yes)",
+    "name": "Show_Universal_Cabinet",
+    "action": "<*ALLOWATTRIBUTES(SeriesC_RG_ACInputVoltage,SeriesC_RG_ACInputVoltage,SeriesC_RG_CabinetFan,SeriesC_RG_CabinetFan,SeriesC_RG_CabinetLightLED,SeriesC_RG_CabinetLightLED,SeriesC_RG_CabinetPower,SeriesC_RG_CabinetPower,SeriesC_RG_CabinetThermostat,SeriesC_RG_CabinetThermostat,SeriesC_RG_CabinetType,SeriesC_RG_CabinetType,SeriesC_RG_IPRating,SeriesC_RG_IPRating,SeriesC_RG_IPRating,SeriesC_RG_IPRating,SeriesC_RG_MountingOption,SeriesC_RG_MountingOption,SeriesC_RG_Percentage,SeriesC_RG_PowerSupplyVendor,SeriesC_RG_PowerSupplyVendor,SeriesC_RG_SICLength,SeriesC_RG_SICLength,SeriesC_RG_SICLength,SeriesC_RG_SICLength,SeriesC_RG_SICLength,SeriesC_RG_SICLength,SeriesC_RG_SICLength,SeriesC_RG_Termination,SeriesC_RG_Termination,SeriesC_RG_UniversalMarshallingCabinet,SeriesC_RG_UniversalMarshallingCL,SeriesC_RG_UniversalMarshallingCL,SeriesC_RG_UtilitySocket,SeriesC_RG_UtilitySocket,SeriesC_RG_WiringandDucts,SeriesC_RG_WiringandDucts,ATTCON_04_close,ATTCON_04_open,Header_20_close,Header_20_open)*>",
+    "description": "37879",
+    "rank": "9",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

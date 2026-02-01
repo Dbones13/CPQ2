@@ -1,0 +1,11 @@
+{
+    "id": 18902,
+    "condition": "[NEQ](<*VALUE(MX_CD_CDW_Digital_Display)*>,Yes)",
+    "name": "CD_Part_Dis_91412",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:91412)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

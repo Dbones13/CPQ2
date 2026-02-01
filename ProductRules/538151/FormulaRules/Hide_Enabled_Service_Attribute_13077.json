@@ -1,0 +1,11 @@
+{
+    "id": 13077,
+    "condition": "1",
+    "name": "Hide_Enabled_Service_Attribute",
+    "action": "[IF]([EQ](<*VALUE(SC_EnabledServiceChkFlg_New)*>,True)){<*DISALLOWATTRIBUTES(EnableSelection_SESP)*>}{<*ALLOWATTRIBUTES(EnableSelection_SESP)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

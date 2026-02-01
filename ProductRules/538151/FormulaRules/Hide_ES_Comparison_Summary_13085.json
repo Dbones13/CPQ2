@@ -1,0 +1,11 @@
+{
+    "id": 13085,
+    "condition": "[NEQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide ES Comparison Summary",
+    "action": "<*DISALLOWATTRIBUTES(ESComparisonSummary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

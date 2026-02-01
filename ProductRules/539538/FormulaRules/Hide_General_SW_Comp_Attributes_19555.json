@@ -1,0 +1,11 @@
+{
+    "id": 19555,
+    "condition": "[NEQ](<*VALUE(New_Expansion)*>,New)",
+    "name": "Hide_General_SW_Comp_Attributes",
+    "action": "<*SETOPTIONAL(Exp HS Select the OS for Experion HS Server Node)*><*DISALLOWATTRIBUTES(Exp HS Select the OS for Experion HS Server Node)*>",
+    "description": "CXCPQ-42954",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

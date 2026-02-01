@@ -1,0 +1,11 @@
+{
+    "id": 26589,
+    "condition": "[EQ](<*VALUE(DMS TPS Station Qty 0_20)*>,)",
+    "name": "DMS TPS Station Qty 0_20 default",
+    "action": "<*ASSIGNVALUE(DMS TPS Station Qty 0_20:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

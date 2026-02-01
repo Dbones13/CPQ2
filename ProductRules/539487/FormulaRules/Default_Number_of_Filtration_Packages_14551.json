@@ -1,0 +1,11 @@
+{
+    "id": 14551,
+    "condition": "[EQ](<*VALUE(PRMS Number of Filtration Packages)*>,)",
+    "name": "Default Number of Filtration Packages",
+    "action": "<*ASSIGNVALUE(PRMS Number of Filtration Packages:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

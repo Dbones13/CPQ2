@@ -1,0 +1,1 @@
+[IF]([OR]([GT](<*VALUE(FDM Server Network Interface License (0-24))*>,0),[GT](<*VALUE(FDM MAX Remote Comm Interface (RCI) License (0-1))*>,0))){<*ASSIGNVALUE(FDM MAX Server Network Interface License (0-1):0)*>}{0}[ENDIF]

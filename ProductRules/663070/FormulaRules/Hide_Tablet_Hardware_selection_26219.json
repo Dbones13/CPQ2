@@ -1,0 +1,11 @@
+{
+    "id": 26219,
+    "condition": "[EQ](<*VALUE(Tablet Quantity (0-5))*>,0)",
+    "name": "Hide Tablet Hardware selection",
+    "action": "<*DISALLOWATTRIBUTES(Tablet Hardware selection)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

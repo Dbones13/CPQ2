@@ -1,0 +1,11 @@
+{
+    "id": 26608,
+    "condition": "[NEQ](<*VALUE(Interface with TPS Required?)*>,Yes)",
+    "name": "show_LAN_Type",
+    "action": "<*ALLOWATTRIBUTES(LAN Type)*><*SETREQUIRED(LAN Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

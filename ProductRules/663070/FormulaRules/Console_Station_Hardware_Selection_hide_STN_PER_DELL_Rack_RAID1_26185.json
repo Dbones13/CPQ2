@@ -1,0 +1,11 @@
+{
+    "id": 26185,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R530,R520,R511,R510),<*ISSELECTED(Orion Stations required.Yes)*>,[GT](<*VALUE(Console Station Qty (0-20))*>,0))",
+    "name": "Console_Station_Hardware_Selection_hide_STN_PER_DELL_Rack_RAID1",
+    "action": "<*DISALLOWVALUES(Console Station Hardware Selection:STN_PER_DELL_Rack_RAID1)*>",
+    "description": "CXDEV-8006",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,91 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' , 'Migration_Number_Of_MSID' , 'Migration_Add_MSID_Rows') -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-4 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' , 'Migration_MSID_Selection_Container') -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+
+
+    <!-- ko foreach: attributes.filterByProperty('name' , 'Migration_Product_Choices') -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+
+    <!-- changes by Pratik : CXCPQ-63375 (LCM).....START -->
+    <div class="row col-xs-12">
+		<!-- ko foreach: attributes.filterByProperty('name' , 'Migration_Apply_Product_Selection') -->
+
+		<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko -->
+		</div>
+
+		<!-- /ko -->
+
+		<!-- ko foreach: attributes.filterByProperty('name' , 'Migration_Apply_System_Number') -->
+
+		<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko -->
+		</div>
+
+		<!-- /ko -->
+    </div>
+    
+    <!-- ko foreach: attributes.filterByProperty('name' , 'Migration_MSID_System_Number_Table') -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+
+    <div class="col-xs-6 col-sm-6">
+        <div id="no-more-tables" class="config-container cpq-scroll col-xs-12">
+            <table class="table table-bordered fiori3-table fiori3-configuration-container-table">
+                <tbody>
+
+                    <!-- ko foreach: {data:attributes.filterByProperty('name' , 'LCM_MultiYear_Project', 'LCM_Multiyear_Selection'), as: 'conattribute'} -->
+
+                        <tr data-bind="attr:{id:id()}">
+                            <!-- ko if:template() === 'TextBoxTemplate' || template() === 'DropDownTemplate' || template() === 'AutoCompleteInputTemplate'-->
+                                <!-- ko template: { name: 'HW_' + template() , data:cpq.models.configurator.attributes()[$index()], as: 'concattribute', noChildContext: true } -->
+                                <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- ko if:template() != 'TextBoxTemplate' && template() != 'DropDownTemplate'  && template() != 'AutoCompleteInputTemplate'-->
+                                <!-- ko template: { name: $root.getAttributeTemplate, data:cpq.models.configurator.attributes()[$index()], as: 'concattribute', noChildContext: true } -->
+                                <!-- /ko -->
+                            <!-- /ko -->
+                        </tr>
+                    
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- changes by Pratik : CXCPQ-63375 (LCM).....END -->
+
+
+</div>

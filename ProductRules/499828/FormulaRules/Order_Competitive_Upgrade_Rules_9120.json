@@ -1,0 +1,11 @@
+{
+    "id": 9120,
+    "condition": "[EQ](<*VALUE(Trace_Software_Order_Type)*>,Competitive Upgrade)",
+    "name": "Order Competitive Upgrade Rules",
+    "action": "<*DISALLOWVALUES(Trace_Software_Business_Level_Access:Yes,Trace_Software_Number_of_Concurrent_Users:11 to 15 users,Trace_Software_Number_of_Concurrent_Users:6 to 10 users,Trace_Software_Number_of_Concurrent_Users:More than 15 users)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

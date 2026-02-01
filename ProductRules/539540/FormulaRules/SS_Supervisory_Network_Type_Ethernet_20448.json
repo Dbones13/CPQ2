@@ -1,0 +1,11 @@
+{
+    "id": 20448,
+    "condition": "[EQ](<*VALUE(SS_Supervisory_Network_Type)*>,Ethernet)",
+    "name": "SS_Supervisory_Network_Type_Ethernet",
+    "action": "<*SELECTVALUE(SS_Station_node_LAN_Interface_Card_desk:Ethernet)*>\n<*SELECTVALUE(SS_Station_nodes_ LAN_Interface_Card_orion:Ethernet)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

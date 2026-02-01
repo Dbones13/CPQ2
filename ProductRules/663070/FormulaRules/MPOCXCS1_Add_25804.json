@@ -1,0 +1,11 @@
+{
+    "id": 25804,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>,0),<*ISSELECTED(Orion Console Turret Type.None)*>)",
+    "name": "MP-OCXCS1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-OCXCS1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCXCS1,<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-38905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

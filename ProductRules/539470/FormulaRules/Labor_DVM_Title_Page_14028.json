@@ -1,0 +1,11 @@
+{
+    "id": 14028,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_DVM_Title_Page",
+    "action": "[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Non-Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Title_Page:<* Eval((1.5*<*VALUE(DVM_Number_of_Title_Page_Sheet)*>+0.75*<*VALUE(DVM_Number_of_Symbols)*>)+((<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Title_Page_Sheet)*>+<*VALUE(DVM_Number_of_Symbols)*>))*0.25))*>)*>}{[IF]([AND]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate),[NEQ](<*VALUE(DVM_GES_Location)*>,None))){<*ASSIGNVALUE(Labor_DVM_Title_Page:<* Eval((((1.5*<*VALUE(DVM_Number_of_Title_Page_Sheet)*>+0.75*<*VALUE(DVM_Number_of_Symbols)*>)+((<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Title_Page_Sheet)*>+<*VALUE(DVM_Number_of_Symbols)*>))*0.25))*0.8)*1.1) *>)*>}{[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Title_Page:<* Eval(((1.5*<*VALUE(DVM_Number_of_Title_Page_Sheet)*>+0.75*<*VALUE(DVM_Number_of_Symbols)*>)+((<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Title_Page_Sheet)*>+<*VALUE(DVM_Number_of_Symbols)*>))*0.25))*0.8) *>)*>}{0}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "CXCPQ-51112",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

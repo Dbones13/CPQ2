@@ -1,0 +1,11 @@
+{
+    "id": 19253,
+    "condition": "[GT](<*VALUE(PlantCruise_Advanced_HMIWeb_Solution_Pack)*>,0)",
+    "name": "Add_Software_CV-ADSP01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-ADSP01)*><*SETATVQTY(PlantCruise_Part_Summary:CV-ADSP01,<*VALUE(PlantCruise_Advanced_HMIWeb_Solution_Pack)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

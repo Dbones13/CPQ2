@@ -1,0 +1,11 @@
+{
+    "id": 14179,
+    "condition": "[OR]([AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(C300_Process_Type)*>,Batch-Chemical)),[EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma))",
+    "name": "Show_Input_Quality",
+    "action": "<*ALLOWATTRIBUTES(Input_Quality (User Requirement Specification))*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

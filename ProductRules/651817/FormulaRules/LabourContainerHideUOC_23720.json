@@ -1,0 +1,11 @@
+{
+    "id": 23720,
+    "condition": "1",
+    "name": "LabourContainerHideUOC",
+    "action": "[IF]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)){<*DISALLOWATTRIBUTES(UOC_Labor_Details)*>}{<*ALLOWATTRIBUTES(UOC_Labor_Details)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

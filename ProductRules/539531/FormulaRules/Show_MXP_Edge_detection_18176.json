@@ -1,0 +1,11 @@
+{
+    "id": 18176,
+    "condition": "[NOT]([IN](<*VALUE(MXP_Scanner_Type)*>,3-4022-54,3-4022-64,3-4022-44,Q6031-00,3-4036-10,3-4036-11,3-6056-01,3-6056-02,3-6056-04))",
+    "name": "Show_MXP_Edge_detection",
+    "action": "<*ALLOWATTRIBUTES(MXP_Edge_detection)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

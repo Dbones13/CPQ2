@@ -1,0 +1,11 @@
+{
+    "id": 18194,
+    "condition": "[EQ](<*VALUE(MXP_Edge_detection)*>,)",
+    "name": "Default_MXP_Edge_detection",
+    "action": "<*SELECTVALUE(MXP_Edge_detection:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

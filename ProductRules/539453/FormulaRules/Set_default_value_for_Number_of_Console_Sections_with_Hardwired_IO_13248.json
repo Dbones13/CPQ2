@@ -1,0 +1,11 @@
+{
+    "id": 13248,
+    "condition": "[EQ](<*VALUE(Number of Console Sections with Hardwired IO)*>,)",
+    "name": "Set default value for Number of Console Sections with Hardwired IO",
+    "action": "<*ASSIGNVALUE(Number of Console Sections with Hardwired IO:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

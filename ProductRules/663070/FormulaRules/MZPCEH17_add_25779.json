@@ -1,0 +1,11 @@
+{
+    "id": 25779,
+    "condition": "[GT](<*VALUE(Quantity_MZ-PCEH17)*>,0)",
+    "name": "MZ-PCEH17 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCEH17)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCEH17,<*VALUE(Quantity_MZ-PCEH17)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37552",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

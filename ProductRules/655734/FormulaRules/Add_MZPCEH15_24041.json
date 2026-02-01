@@ -1,0 +1,11 @@
+{
+    "id": 24041,
+    "condition": "[AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,Dell R740XL),[EQ](<*VALUE(Terminal_Additional_Hard_Drive)*>,Yes))",
+    "name": "Add_MZ-PCEH15",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-PCEH15)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

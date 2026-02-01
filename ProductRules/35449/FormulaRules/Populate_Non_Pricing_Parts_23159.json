@@ -1,0 +1,11 @@
+{
+    "id": 23159,
+    "condition": "1",
+    "name": "Populate Non Pricing Parts",
+    "action": "<* ExecuteScript(GS_AdditionofPartNumbers) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/11/24",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

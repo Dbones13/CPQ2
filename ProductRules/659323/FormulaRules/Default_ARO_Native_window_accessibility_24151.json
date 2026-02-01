@@ -1,0 +1,11 @@
+{
+    "id": 24151,
+    "condition": "[EQ](<*VALUE(ARO_Native_window_accessibility)*>,)",
+    "name": "Default_ARO_Native_window_accessibility",
+    "action": "<*SELECTVALUE(ARO_Native_window_accessibility:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

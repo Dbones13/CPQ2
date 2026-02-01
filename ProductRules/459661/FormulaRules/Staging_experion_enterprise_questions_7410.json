@@ -1,0 +1,11 @@
+{
+    "id": 7410,
+    "condition": "[OR]([NEQ](<*VALUE(staging_Number_of_Operator_Console_Sections)*>,<*CTX( Container(CE_System_Cont).Sum(Number of Operator Console Sections) )*>),[NEQ](<*VALUE(staging_Number_of_Console_Sections_with_Hardwired)*>,<*CTX( Container(CE_System_Cont).Sum(Number of Console Sections with Hardwired IO) )*>),[NEQ](<*VALUE(Staging_Network_and_Server_Cabinet_Count)*>,<*CTX( Container(CE_System_Cont).Sum(Network_and_Server_Cabinet_Count) )*>),[NEQ](<*VALUE(staging_Auxiliary_Cabinet_Count)*>,<*CTX( Container(CE_System_Cont).Sum(Auxiliary_Cabinet_Count) )*>))",
+    "name": "Staging_experion_enterprise_questions",
+    "action": "<*ASSIGNVALUE(staging_Auxiliary_Cabinet_Count:<*CTX( Container(CE_System_Cont).Sum(Auxiliary_Cabinet_Count) )*>)*>\n<*ASSIGNVALUE(Staging_Network_and_Server_Cabinet_Count:<*CTX( Container(CE_System_Cont).Sum(Network_and_Server_Cabinet_Count) )*>)*>\n<*ASSIGNVALUE(staging_Number_of_Console_Sections_with_Hardwired:<*CTX( Container(CE_System_Cont).Sum(Number of Console Sections with Hardwired IO) )*>)*>\n<*ASSIGNVALUE(staging_Number_of_Operator_Console_Sections:<*CTX( Container(CE_System_Cont).Sum(Number of Operator Console Sections) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/10/23",
+    "modifiedBy": "Madhuri Sharma"
+}

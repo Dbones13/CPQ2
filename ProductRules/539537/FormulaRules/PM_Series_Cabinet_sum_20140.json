@@ -1,0 +1,11 @@
+{
+    "id": 20140,
+    "condition": "[GT](<*CTX ( Container(Series_C_CG_Part_Summary_Cont).Rows.GetCount )*>,0)",
+    "name": "PM Series Cabinet sum",
+    "action": "<*ASSIGNVALUE(PM Series Cabinet sum:<* Eval(0<*GETATVQTY(Series_C_CG_Part_Summary:MU-C8DS01)*>+0<*GETATVQTY(Series_C_CG_Part_Summary:MU-C8SS01)*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(PM Series Cabinet sum) )*>) *>)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

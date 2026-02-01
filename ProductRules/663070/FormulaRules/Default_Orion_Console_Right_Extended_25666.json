@@ -1,0 +1,11 @@
+{
+    "id": 25666,
+    "condition": "[EQ](<*VALUE(Orion Console Right Extend Auxil Equip Unit (0-40))*>,)",
+    "name": "Default Orion Console Right Extended",
+    "action": "<*ASSIGNVALUE(Orion Console Right Extend Auxil Equip Unit (0-40):0)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

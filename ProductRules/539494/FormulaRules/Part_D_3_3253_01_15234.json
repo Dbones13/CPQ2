@@ -1,0 +1,11 @@
+{
+    "id": 15234,
+    "condition": "[NEQ](<*VALUE(MXP_Tire_Calendar_Control)*>,Adaptive Preset of roll bending or cross-axis (per item) requires Preset)",
+    "name": "Part_D_3_3253_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5876-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

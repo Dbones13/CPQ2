@@ -1,0 +1,11 @@
+{
+    "id": 10458,
+    "condition": "[NEQ](<*VALUE(MSID_Labor_Message)*>,)",
+    "name": "Hide Apply Deliverables",
+    "action": "<*DISALLOWATTRIBUTES(MSID_Labor_Apply_Deliverables)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

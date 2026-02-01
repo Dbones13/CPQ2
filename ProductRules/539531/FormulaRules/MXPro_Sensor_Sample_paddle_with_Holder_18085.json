@@ -1,0 +1,11 @@
+{
+    "id": 18085,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Sample_paddle_with_Holder)*>,)",
+    "name": "MXPro_Sensor_Sample_paddle_with_Holder",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Sample_paddle_with_Holder:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

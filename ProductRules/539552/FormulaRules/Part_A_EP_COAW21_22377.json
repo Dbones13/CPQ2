@@ -1,0 +1,11 @@
+{
+    "id": 22377,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[EQ](<*VALUE(ESDC_Node_Supplier)*>,Honeywell),[NEQ](<*VALUE(ESDC_Client_Station_Qty)*>,0),[EQ](<*VALUE(ESDC_Software_Release)*>,R530),[NEQ](<*VALUE(ESDC_Station_Node_Type)*>,STN_STD_DELL_Tower_NonRAID))",
+    "name": "Part_A_EP_COAW21",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:EP-COAW21)*><*SETATVQTY(ESDC_BOM_Parts:EP-COAW21, <*VALUE(ESDC_Client_Station_Qty)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

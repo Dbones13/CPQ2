@@ -1,0 +1,11 @@
+{
+    "id": 19294,
+    "condition": "[EQ](<*VALUE(PlantCruise_Use_S8_C300_or_ControlEdge_UOC)*>,C300)",
+    "name": "Add_Controller_8C-PCNT03",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:8C-PCNT03)*>[IF]([EQ](<*VALUE(PlantCruise_Redundant_C300_Controller)*>,Yes)){<*SETATVQTY(PlantCruise_Part_Summary:8C-PCNT03,2)*>}{<*SETATVQTY(PlantCruise_Part_Summary:8C-PCNT03,1)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

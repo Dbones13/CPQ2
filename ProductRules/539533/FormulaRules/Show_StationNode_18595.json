@@ -1,0 +1,11 @@
+{
+    "id": 18595,
+    "condition": "[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R530)",
+    "name": "Show_StationNode",
+    "action": "<*ALLOWVALUES(ES_eServer_Staton_Node:STN_PER_HP_Tower_RAID1,ES_eServer_Staton_Node:STN_PER_DELL_Rack_RAID1,ES_eServer_Staton_Node:STN_PER_DELL_Tower_RAID1)*> <*DISALLOWVALUES(ES_eServer_Staton_Node:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

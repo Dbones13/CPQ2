@@ -1,0 +1,11 @@
+{
+    "id": 22386,
+    "condition": "[AND]([NOT]([AND]([EQ](<*VALUE(ESDC_Display_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ESDC_Display_Size)*>,27 inch NTS DELL),[NEQ](<*VALUE(ESDC_Displays_Server)*>,0))),[NOT]([AND]([EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[EQ](<*VALUE(ESDC_Display_Supplier)*>,Honeywell),[EQ](<*VALUE(ESDC_Display_size_I)*>,27 inch NTS DELL),[NEQ](<*VALUE(ESDC_Client_Station_Qty)*>,0))))",
+    "name": "Part_D_TP_FPW272",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:TP-FPW272)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

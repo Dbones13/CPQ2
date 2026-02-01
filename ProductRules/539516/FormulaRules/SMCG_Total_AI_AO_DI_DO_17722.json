@@ -1,0 +1,11 @@
+{
+    "id": 17722,
+    "condition": "1",
+    "name": "SMCG_Total_AI_AO_DI_DO",
+    "action": "<*ASSIGNVALUE(SMCG_Total_AI_AO_DI_DO:<* Eval(0<*VALUE(Labor_parameter_ai)*>+0<*VALUE(Labor_parameter_ao)*>+0<*VALUE(Labor_parameter_di)*>+0<*VALUE(Labor_parameter_do)*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

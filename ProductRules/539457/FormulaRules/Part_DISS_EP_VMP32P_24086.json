@@ -1,0 +1,11 @@
+{
+    "id": 24086,
+    "condition": "[EQ](<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*> + <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>) *>,0)",
+    "name": "Part_DISS_EP_VMP32P",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-VMP32P)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14643,
+    "condition": "[EQ](<*VALUE(MX_MD_Coater_Startup_and_Shutdown)*>,)",
+    "name": "Default_MX_MD_Coater_Startup_and_Shutdown",
+    "action": "<*SELECTVALUE(MX_MD_Coater_Startup_and_Shutdown:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 1083,
+    "condition": "[EQ](<*VALUE(Spare_Parts_Cabinet_TDI_Power_Supply_Cable_Length)*>,)",
+    "name": "Select TDI Power Supply",
+    "action": "<*SELECTVALUE(Spare_Parts_Cabinet_TDI_Power_Supply_Cable_Length:48 in)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

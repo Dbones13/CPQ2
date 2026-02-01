@@ -1,0 +1,11 @@
+{
+    "id": 24284,
+    "condition": "[EQ](<*VALUE(Multiwindow_support)*>,Yes)",
+    "name": "Disallow_RESS_Multiwindow_support",
+    "action": "<*DISALLOWATTRIBUTES(Display_Qty)*><*ALLOWATTRIBUTES(Display_Qty_4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

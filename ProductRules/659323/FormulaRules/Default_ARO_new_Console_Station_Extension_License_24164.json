@@ -1,0 +1,11 @@
+{
+    "id": 24164,
+    "condition": "[EQ](<*VALUE(ARO_new_Console_Station_Extension_License)*>,)",
+    "name": "Default_ARO_new_Console_Station_Extension_License",
+    "action": "<*ASSIGNVALUE(ARO_new_Console_Station_Extension_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

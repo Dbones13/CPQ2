@@ -1,0 +1,11 @@
+{
+    "id": 22773,
+    "condition": "<*ISSELECTED(Power_Cord_Type.Italy)*>",
+    "name": "Show_51199562_205",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Location_Cluster_Part_Summary:51199562-205)*>\n<*SETATVQTY(Location_Cluster_Part_Summary:51199562-205, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-38336",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

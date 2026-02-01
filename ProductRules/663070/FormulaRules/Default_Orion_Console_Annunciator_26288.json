@@ -1,0 +1,11 @@
+{
+    "id": 26288,
+    "condition": "[EQ](<*VALUE(Orion Cons Annunc Rly Cont Box Required (IKB/OEP))*>,)",
+    "name": "Default Orion Console Annunciator",
+    "action": "<*SELECTVALUE(Orion Cons Annunc Rly Cont Box Required (IKB/OEP):No)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

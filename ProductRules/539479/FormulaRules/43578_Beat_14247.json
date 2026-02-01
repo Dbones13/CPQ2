@@ -1,0 +1,11 @@
+{
+    "id": 14247,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "43578_Beat",
+    "action": "<*ASSIGNVALUE(43578_Beat:<* Eval((0<*VALUE(Labor_Percentage_FAT)*>/100)*((0<*VALUE(Number_of_Batch_Units (Master Units)  (0-100))*>+0<*VALUE(No_of_Batch_Unit_Copies(Replica of Master Units))*>)*(0<*VALUE(43578_F)*>*5 + 26.212*0<*VALUE(No_of_Complex_SCMs_per_Unit (0-100))*>+ 6.4) + (0<*VALUE(Number_of_Product(Master Recipes)  (0-100))*>+0<*VALUE(No_of_Product_on_Copy_Unit)*>)*(4.66*5 + 11.55*0<*VALUE(No_of_Complex_Operations_per_Product (0-100))*>+ 8.9))) *>)*>",
+    "description": "CXCPQ-43578\n\n(fat/100)((bmu+bru)(F*5 + 26.212*bcscm + 6.4) + (bmr+bpr){*}(4.66*5 + 11.55*bco + 8.9))",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

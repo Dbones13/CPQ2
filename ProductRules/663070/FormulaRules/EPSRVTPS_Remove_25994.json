@@ -1,0 +1,11 @@
+{
+    "id": 25994,
+    "condition": "[AND]([NEQ](<*VALUE(Interface with TPS Required?)*>,Yes),[NEQ](<*VALUE(Experion Server Type)*>,Server TPS))",
+    "name": "EP-SRVTPS_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-SRVTPS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

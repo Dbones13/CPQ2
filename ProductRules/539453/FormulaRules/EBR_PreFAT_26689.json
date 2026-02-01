@@ -1,0 +1,11 @@
+{
+    "id": 26689,
+    "condition": "1",
+    "name": "EBR Pre-FAT",
+    "action": "<*ASSIGNVALUE(EBR Pre-FAT:<*Eval((<*VALUE(Labor_parameter_var_9)*>)*2)*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

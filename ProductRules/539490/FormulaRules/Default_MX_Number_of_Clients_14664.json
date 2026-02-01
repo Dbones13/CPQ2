@@ -1,0 +1,11 @@
+{
+    "id": 14664,
+    "condition": "[EQ](<*VALUE(MX_Number_of_Clients)*>,)",
+    "name": "Default_MX_Number_of_Clients",
+    "action": "<*ASSIGNVALUE(MX_Number_of_Clients:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

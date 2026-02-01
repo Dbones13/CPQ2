@@ -1,0 +1,11 @@
+{
+    "id": 26175,
+    "condition": "[NOT]([AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),[OR](<*ISSELECTED(Experion Server Type.Server TPS)*>, <*ISSELECTED(Experion Server Type.Server)*>),[GT](<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,0)))",
+    "name": "Hardware_Design_Selection_ACE_T_Node_hide_SVR_PER_DELL_Rack_RAID1_XE",
+    "action": "<*DISALLOWVALUES(Hardware Design Selection_ACE_T_Node:SVR_PER_DELL_Rack_RAID1_XE)*>",
+    "description": "CXDEV-8007",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20246,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Edge_Analytics_Support)*>,Yes))",
+    "name": "Remove_EP-DVMEGA",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMEGA)*><* DoResetAtt *>",
+    "description": "CXCPQ-45737",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

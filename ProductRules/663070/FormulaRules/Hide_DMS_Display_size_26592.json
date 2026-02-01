@@ -1,0 +1,11 @@
+{
+    "id": 26592,
+    "condition": "<*ISSELECTED(DMS Touch Screen required?.Touch Screen)*>",
+    "name": "Hide_DMS_Display_size",
+    "action": "<*DISALLOWVALUES(DMS Display size:21.33 inch NTS,DMS Display size:23 inch NTS,DMS Display size:24 inch NTS NEC,DMS Display size:24 inch NTS DELL,DMS Display size:27 inch NTS NEC,DMS Display size:27 inch NTS DELL,DMS Display size:55 inch NTS)*>\n<*ALLOWVALUES(DMS Display size:21.33 inch Touch,DMS Display size:24 inch Touch HP,DMS Display size:24 inch Touch Dell)*>",
+    "description": "CXCPQ-45058",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

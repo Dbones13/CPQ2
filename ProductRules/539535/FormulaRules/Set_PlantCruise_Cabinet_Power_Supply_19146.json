@@ -1,0 +1,11 @@
+{
+    "id": 19146,
+    "condition": "[AND]([NEQ](<*VALUE(PlantCruise_Cabinet_Power_Supply)*>,24VDC/20A PULS CPS),[NEQ](<*VALUE(PlantCruise_Cabinet_Power_Supply)*>,24VDC/20A TRIO-PS))",
+    "name": "Set_PlantCruise_Cabinet_Power_Supply",
+    "action": "<*SELECTVALUE(PlantCruise_Cabinet_Power_Supply:24VDC/20A PULS QS)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

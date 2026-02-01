@@ -1,0 +1,11 @@
+{
+    "id": 12092,
+    "condition": "[EQ](<*VALUE(OWS_Number of Wireless Device Managers)*>,)",
+    "name": "Default_Number of Wireless Device Managers",
+    "action": "<*ASSIGNVALUE(OWS_Number of Wireless Device Managers:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

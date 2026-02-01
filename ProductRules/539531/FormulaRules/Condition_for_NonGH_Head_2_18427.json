@@ -1,0 +1,11 @@
+{
+    "id": 18427,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Scanner_Type)*>,Q6031-00),[EQ](<*VALUE(MXP_Measurement_Type)*>,Non-GH Head))",
+    "name": "Condition_for_Non-GH Head_2",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Sensor_Type:Calibration Sample Holder 6031|MXIR Coat Weight SSIR CLAY / CACO3|MXIR Coat Weight SSIR CLAY / CACO3 / MOI|MXIR Coat Weight SSIR CLAY / LATEX|MXIR Coat Weight SSIR CLAY / LATEX / MOI|MXIR Coat Weight SSIR LATEX / CACO3|MXIR Coat Weight SSIR LATEX / CACO3/ MOI|MXIR CWT SSIR PE/PP/PET|MXIR Moisture SSIR|Sheet Temperature Sensor (High Temp))*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

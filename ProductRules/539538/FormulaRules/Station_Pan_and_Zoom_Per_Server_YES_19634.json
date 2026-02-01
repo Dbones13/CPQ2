@@ -1,0 +1,11 @@
+{
+    "id": 19634,
+    "condition": "[EQ](<*VALUE(Exp HS Station Pan and Zoom, Per Server)*>,Yes)",
+    "name": "Station Pan and Zoom, Per Server YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HPZE00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26121,
+    "condition": "[EQ](<*VALUE(QVCS Support)*>,Yes)",
+    "name": "QVCS Support for Process Points",
+    "action": "<*ASSIGNVALUE(QVCS Support for Process Points:<*VALUE(Experion Process Points (0 - 45000))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

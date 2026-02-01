@@ -1,0 +1,11 @@
+{
+    "id": 26441,
+    "condition": "<*ATTDEF(Exp_Ent_Grp_Part_Summary)*>",
+    "name": "Load Exp Ent Grp PartSummary Cont",
+    "action": "<*CTX( Container(Exp_Ent_Grp_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(Exp_Ent_Grp_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "To load the part summary container from the part summary attribute. Always should run at last (rank highest)",
+    "rank": "1001",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

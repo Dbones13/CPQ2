@@ -1,0 +1,11 @@
+{
+    "id": 18582,
+    "condition": "[OR]([NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R530),[NEQ](<*VALUE(ES_eServer_Base_Media_Delivery)*>,Physical Delivery))",
+    "name": "Part_D_EP_PKS530",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(eServer_BOM_parts:EP-PKS530)*><* DoResetAtt *>",
+    "description": "7958 story",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

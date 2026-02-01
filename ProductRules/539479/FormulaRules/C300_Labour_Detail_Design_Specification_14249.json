@@ -1,0 +1,11 @@
+{
+    "id": 14249,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Detail_Design_Specification",
+    "action": "<*ASSIGNVALUE(C300_Labour_Detail_Design_Specification:<* Eval((0<*VALUE(C300_Labour_Parameter_IM)*>+10*0<*VALUE(Labor_parameter_Ctr)*>+10*0<*VALUE(Number_of_SCADA_Node_Types_for_C300)*>+(20*0<*VALUE(Total_Number_of_New_Typicals (0-500))*>+5*(0<*VALUE(Enter_total_count_of_Typicals/Prototypes (0-500))*>-0<*VALUE(Total_Number_of_New_Typicals (0-500))*>))*0<*VALUE(Labor_parameter_pT)*>)+120*0<*VALUE(Labor_Parameter_bat)*>) *>)*>",
+    "description": "CXCPQ-43534\nIf ges = None, then \nCalculated Hours = (Base + 8 * Ctr + 16*pT*nty)*0.9 + 120*bat\nElse\nCalculated Hours = (Base + 10* Ctr + 20*pT*nty )*0.9 + 120*bat",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Yogesh Baisla2"
+}

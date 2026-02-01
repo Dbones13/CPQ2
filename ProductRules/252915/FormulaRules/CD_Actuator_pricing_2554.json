@@ -1,0 +1,11 @@
+{
+    "id": 2554,
+    "condition": "[AND]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MSID_Selected_Products)*>,CD Actuator I-F Upgrade))",
+    "name": "CD_Actuator_pricing",
+    "action": "<*DISALLOWATTRIBUTES(CD_Actuator_pricing_factory_cost)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "03/05/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

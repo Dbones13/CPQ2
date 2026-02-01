@@ -1,0 +1,11 @@
+{
+    "id": 19991,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual)))",
+    "name": "Hide_SerC_CG_Controller_Type",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Controller_Type)*>",
+    "description": "CXCPQ-51941 - Requirement 2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

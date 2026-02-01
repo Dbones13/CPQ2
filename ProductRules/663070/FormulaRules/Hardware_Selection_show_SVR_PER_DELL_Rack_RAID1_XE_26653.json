@@ -1,0 +1,11 @@
+{
+    "id": 26653,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R520,R530),[GT](<*VALUE(Mobile Server Nodes (0-1))*>,0))",
+    "name": "Hardware_Selection_show_SVR_PER_DELL_Rack_RAID1_XE",
+    "action": "<*ALLOWVALUES(Hardware Selection:SVR_PER_DELL_Rack_RAID1_XE)*>",
+    "description": "CXDEV-8006",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17966,
+    "condition": "[GT](<*VALUE(PCD_Total_Qty_of_Modules)*>,4)",
+    "name": "Add_HPCD3.C200",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PCD_Part_Summary:HPCD3.C200)*>[IF]([GT](<* Eval(<*VALUE(PCD_Total_Qty_of_Modules)*>/12) *>,<* Eval(INT(<*VALUE(PCD_Total_Qty_of_Modules)*>/12)) *>)){<*SETATVQTY(PCD_Part_Summary:HPCD3.C200,<* Eval(INT(<*VALUE(PCD_Total_Qty_of_Modules)*>/12)+1) *>)*>}{<*SETATVQTY(PCD_Part_Summary:HPCD3.C200,<* Eval(INT(<*VALUE(PCD_Total_Qty_of_Modules)*>/12)) *>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

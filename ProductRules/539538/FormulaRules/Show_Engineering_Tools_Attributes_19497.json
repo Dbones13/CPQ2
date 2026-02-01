@@ -1,0 +1,11 @@
+{
+    "id": 19497,
+    "condition": "[NEQ](<*VALUE(Exp HS Runtime System)*>,Yes)",
+    "name": "Show_Engineering_Tools_Attributes",
+    "action": "<*ALLOWATTRIBUTES(Exp HS Display Builder - Enter License Quantity,Exp HS Quick Builder - Enter License Quantity,Header_03_open,Header_03_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

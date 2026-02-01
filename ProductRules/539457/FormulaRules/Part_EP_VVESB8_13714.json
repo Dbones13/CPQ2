@@ -1,0 +1,11 @@
+{
+    "id": 13714,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_VMWare_vSphere_Plus_Single_Socket)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_VVESB8",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VVESB8)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VVESB8,<*VALUE(Virtualization_VMWare_vSphere_Plus_Single_Socket)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23959,
+    "condition": "[NOT](<*ATTSEL(Terminal_Experion_Server_Hardware)*>)",
+    "name": "Default_Experion_Server_Hardware",
+    "action": "<*SELECTVALUE(Terminal_Experion_Server_Hardware:DELL R760XL)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18669,
+    "condition": "[AND]([AND]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes),[EQ](<*VALUE(CE_Site_Voltage)*>,240V),[EQ](<*VALUE(ES_Display_Size_Mobile_Server)*>,21.33 inch NTS),[EQ](<*VALUE(ES_Display_Supplier_Mobile_Server)*>,Honeywell)),[AND]([GT](<*VALUE(ES_Displays_Server)*>,0),[EQ](<*VALUE(ES_Display_Size)*>,21.33 inch NTS),[EQ](<*VALUE(CE_Site_Voltage)*>,240V),[EQ](<*VALUE(ES_Display_Supplier_Server)*>,Honeywell)))",
+    "name": "Part_A_TP_FPD211_200_3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:TP-FPD211-200)*><*SETATVQTY(eServer_BOM_parts:TP-FPD211-200,2)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

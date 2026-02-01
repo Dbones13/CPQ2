@@ -1,0 +1,11 @@
+{
+    "id": 25760,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Experion SCADA Points (0 - 300000))*>,1999),[GT](<*eval(INT(Fix((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000-(INT(Fix((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(Fix(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000)))*5000)/2000)))*>,0)))",
+    "name": "Exp_SCADA_Pnt_Del_EPDSC02K",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DSC02K)*><* DoResetAtt *>",
+    "description": "Delete EP-DSC02K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22253,
+    "condition": "[EQ](<*VALUE(Scada_METTLER_TOLEDO_JagXtreme_Scale)*>,Yes)",
+    "name": "SCADA_TC-MTJXL1_Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:TC-MTJXL1)*><*SETATVQTY(SCADA_BOM_Items:TC-MTJXL1, 1)*><* DoResetAtt *>",
+    "description": "Add-TC-MTJXL1",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

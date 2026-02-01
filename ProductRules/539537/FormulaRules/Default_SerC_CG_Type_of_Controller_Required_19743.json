@@ -1,0 +1,11 @@
+{
+    "id": 19743,
+    "condition": "[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,)",
+    "name": "Default_SerC_CG_Type_of_Controller_Required",
+    "action": "<*SELECTVALUE(SerC_CG_Type_of_Controller_Required:CN100 I/O HIVE - C300 CEE)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

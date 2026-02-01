@@ -1,0 +1,11 @@
+{
+    "id": 26093,
+    "condition": "[AND]([EQ](<*VALUE(CMS Multi Window Support Option Required?)*>,No),[GT](<*VALUE(CMS Flex Station Qty 0_60)*>,0))",
+    "name": "Hide_Cabinet_No_of_Displays (0-4)_No",
+    "action": "<*ASSIGNVALUE(Cabinet_No_of_Displays (0-4):0)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

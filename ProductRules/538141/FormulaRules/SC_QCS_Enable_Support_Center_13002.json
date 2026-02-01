@@ -1,0 +1,11 @@
+{
+    "id": 13002,
+    "condition": "<*ATTSEL(SC_QCS_Support_Center_Select)*>",
+    "name": "SC_QCS_Enable_Support_Center",
+    "action": "<*ALLOWATTRIBUTES(SC_QCS_No_Of_Machines,SC_QCS_Per_Machine_Price,SC_QCS_Section_Support Center,SC_QCS_Support_Center_List_Price)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

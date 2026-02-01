@@ -1,0 +1,11 @@
+{
+    "id": 21813,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "ELEPIU_labor_del_SW_HW_Order",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_SW_HW_Order:6)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

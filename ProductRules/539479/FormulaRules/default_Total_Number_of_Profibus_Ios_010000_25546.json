@@ -1,0 +1,11 @@
+{
+    "id": 25546,
+    "condition": "[EQ](<*VALUE(Total Number of Profibus Ios (0-10000))*>,)",
+    "name": "default Total Number of Profibus Ios (0-10000)",
+    "action": "<*ASSIGNVALUE(Total Number of Profibus Ios (0-10000):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

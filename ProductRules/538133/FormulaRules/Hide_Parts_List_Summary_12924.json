@@ -1,0 +1,11 @@
+{
+    "id": 12924,
+    "condition": "[EQ](<*CTX ( Container(SC_P1P2_Parts_Details).Rows.GetCount )*>,0)",
+    "name": "Hide_Parts_List_Summary",
+    "action": "<*DISALLOWATTRIBUTES(Header_06_close,Header_06_open,SC_P1P2_Parts_List_Summary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

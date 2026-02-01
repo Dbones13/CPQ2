@@ -1,0 +1,11 @@
+{
+    "id": 14560,
+    "condition": "[EQ](<*VALUE(PRMS Number of Client Meetings at Home Site or On-line (4-99))*>,)",
+    "name": "Default Number of Client Meetings at Home Site or On-line (4-99)",
+    "action": "<*ASSIGNVALUE(PRMS Number of Client Meetings at Home Site or On-line (4-99):4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

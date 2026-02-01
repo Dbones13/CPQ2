@@ -1,0 +1,11 @@
+{
+    "id": 14286,
+    "condition": "[GT](<* IsNull(<*VALUE(MIQ_How_many_stations)*>,0)*>,0)",
+    "name": "Set MO-BASE01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MIQ_PART_SUMMARY:MO-BASE01)*>\n<*SETATVQTY(MIQ_PART_SUMMARY:MO-BASE01, <*VALUE(MIQ_How_many_stations)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-50830",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

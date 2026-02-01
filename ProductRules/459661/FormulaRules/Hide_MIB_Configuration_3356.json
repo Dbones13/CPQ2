@@ -1,0 +1,11 @@
+{
+    "id": 3356,
+    "condition": "[OR]([EQ](<*CTX( Container(CE_System_Cont).Rows.GetCount )*>,0), [AND]([NOT]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System)),[NOT]([LIKE](<*VALUE(CE_Selected_Products)*>,C300 System))))",
+    "name": "Hide MIB Configuration",
+    "action": "<*DISALLOWATTRIBUTES(MIB Configuration Required?)*>",
+    "description": "MIB Configuration Required attribute is required only for Experion Enterprise System Product",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

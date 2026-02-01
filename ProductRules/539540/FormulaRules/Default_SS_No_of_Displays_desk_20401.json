@@ -1,0 +1,11 @@
+{
+    "id": 20401,
+    "condition": "[EQ](<*VALUE(SS_No_of_Displays_desk)*>,)",
+    "name": "Default_SS_No_of_Displays_desk",
+    "action": "<*ASSIGNVALUE(SS_No_of_Displays_desk:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

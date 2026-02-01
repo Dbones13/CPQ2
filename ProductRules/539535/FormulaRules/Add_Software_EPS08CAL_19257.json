@@ -1,0 +1,11 @@
+{
+    "id": 19257,
+    "condition": "[GT](<*VALUE(PlantCruise_Windows_Server_5_Device_CAL)*>,0)",
+    "name": "Add_Software_EP-S08CAL",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:EP-S08CAL)*><*SETATVQTY(PlantCruise_Part_Summary:EP-S08CAL,<*VALUE(PlantCruise_Windows_Server_5_Device_CAL)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

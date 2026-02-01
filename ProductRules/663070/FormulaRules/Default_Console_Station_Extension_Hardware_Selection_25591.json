@@ -1,0 +1,11 @@
+{
+    "id": 25591,
+    "condition": "[EQ](<*VALUE(Console Station Extension Hardware Selection)*>,)",
+    "name": "Default Console Station Extension Hardware Selection",
+    "action": "<*SELECTVALUE(Console Station Extension Hardware Selection:STN_PER_DELL_Tower_RAID1)*>",
+    "description": "CXCPQ-34882",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

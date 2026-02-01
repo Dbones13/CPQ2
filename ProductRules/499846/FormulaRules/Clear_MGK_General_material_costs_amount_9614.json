@@ -1,0 +1,11 @@
+{
+    "id": 9614,
+    "condition": "[EQ](<*ATTSEL(PSkid MGK General material costs percentage)*>,0)",
+    "name": "Clear MGK General material costs amount",
+    "action": "<*ASSIGNVALUE(PSkid MGK General material costs amount:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

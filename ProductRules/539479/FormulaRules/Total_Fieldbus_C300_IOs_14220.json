@@ -1,0 +1,11 @@
+{
+    "id": 14220,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_Fieldbus_C300_IOs",
+    "action": "<*ASSIGNVALUE(Total_Fieldbus_C300_IOs:<*Eval(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(Total_Sumof_FF_IOs) )*>)*>)*>",
+    "description": "Labor Report task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

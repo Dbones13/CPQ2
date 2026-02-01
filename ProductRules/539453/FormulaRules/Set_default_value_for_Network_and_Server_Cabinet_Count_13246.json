@@ -1,0 +1,11 @@
+{
+    "id": 13246,
+    "condition": "[NEQ](<*CTX ( Container(Experion_Enterprise_Cont).Sum(Network_Cabinet_Qty) )*>,)",
+    "name": "Set default value for Network and Server Cabinet Count",
+    "action": "<*ASSIGNVALUE(Network and Server Cabinet Count:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Network_Cabinet_Qty) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

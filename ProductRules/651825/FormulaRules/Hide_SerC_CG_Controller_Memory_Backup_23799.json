@@ -1,0 +1,11 @@
+{
+    "id": 23799,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[IN](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE,CN100 I/O HIVE - C300 CEE,Control HIVE - Physical,Control HIVE - Virtual))",
+    "name": "Hide_SerC_CG_Controller_Memory_Backup",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Controller_Memory_Backup)*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

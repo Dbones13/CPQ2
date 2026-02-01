@@ -1,0 +1,11 @@
+{
+    "id": 20372,
+    "condition": "[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R520)",
+    "name": "Hide_FlexStationDeskNode",
+    "action": "<*DISALLOWVALUES(SS_Flex Staton  Desk Node_desk:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

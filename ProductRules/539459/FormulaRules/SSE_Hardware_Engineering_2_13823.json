@@ -1,0 +1,11 @@
+{
+    "id": 13823,
+    "condition": "[EQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(Implementation_Methodology).GetDisplayValue )*>,Non-Standard Build Estimate)",
+    "name": "SSE Hardware Engineering 2",
+    "action": "<*ASSIGNVALUE(SSE Hardware Engineering labor:<* Eval((1.05 * ( 0.5 * <*VALUE(Labor_parameter_rg)*> +  0.08 * <*VALUE(Labor_parameter_Stn)*>))+(1.2 * (<*VALUE(Labor_parameter_mcab)*>* (8  + <*VALUE(Labor_parameter_Is)*>*2) )*0.9)+((0.16   *<*VALUE(Labor_parameter_io)*> * <*VALUE(Labor_parameter_mdb)*> +0.16 *<*VALUE(Labor_parameter_io)*>*0.06*<*VALUE(Labor_parameter_Is)*>) * 1.05)) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

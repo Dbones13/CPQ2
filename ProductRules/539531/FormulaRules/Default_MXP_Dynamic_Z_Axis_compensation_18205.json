@@ -1,0 +1,11 @@
+{
+    "id": 18205,
+    "condition": "[EQ](<*VALUE(MXP_Dynamic_Z_Axis_compensation)*>,)",
+    "name": "Default_MXP_Dynamic_Z_Axis_compensation",
+    "action": "<*SELECTVALUE(MXP_Dynamic_Z_Axis_compensation:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

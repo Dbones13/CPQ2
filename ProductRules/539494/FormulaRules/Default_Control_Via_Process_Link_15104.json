@@ -1,0 +1,11 @@
+{
+    "id": 15104,
+    "condition": "[EQ](<*VALUE(MXP_Control_Via_Process_Link)*>,)",
+    "name": "Default_Control_Via_Process_Link",
+    "action": "<*SELECTVALUE(MXP_Control_Via_Process_Link:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

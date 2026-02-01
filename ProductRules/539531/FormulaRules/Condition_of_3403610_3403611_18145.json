@@ -1,0 +1,11 @@
+{
+    "id": 18145,
+    "condition": "[OR]([EQ](<*VALUE(MXP_Scanner_Type)*>,3-4036-10),[EQ](<*VALUE(MXP_Scanner_Type)*>,3-4036-11))",
+    "name": "Condition_of_3-4036-10_3-4036-11",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Measurement_Type:Aluminium|None)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

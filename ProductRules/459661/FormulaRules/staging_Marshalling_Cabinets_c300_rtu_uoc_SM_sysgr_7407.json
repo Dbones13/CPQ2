@@ -1,0 +1,11 @@
+{
+    "id": 7407,
+    "condition": "[NEQ](<*VALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_sysgr)*>,<*CTX ( Container(CE_System_Cont).Sum(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc) )*>)",
+    "name": "staging_Marshalling_Cabinets_c300_rtu_uoc_SM_sysgr",
+    "action": "<*ASSIGNVALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_sysgr:<*CTX ( Container(CE_System_Cont).Sum(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/10/23",
+    "modifiedBy": "Madhuri Sharma"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4704,
+    "condition": "[IN](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame,Q4022-34 I-Beam O-Frame,Q6031-00 Single-Sided,Q4052-00 Color C-Frame)",
+    "name": "Headgap Hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_SG_Head_Gap_Cleaner)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

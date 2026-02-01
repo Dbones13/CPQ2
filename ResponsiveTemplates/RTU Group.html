@@ -1,0 +1,178 @@
+<div class="attributes fiori3-attributes flex" style="justify-content:space-around" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+  
+	<div class="col-xs-12 col-sm-4">
+    	  <div class="text-center custom-field-headers"  style="margin-left: -16px;margin-right: -16px;" data-bind="html:$root.productId() === 1257 ? 'RTU Parts Summary' :'RTU Details'"></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "RTU Field container") -->
+          <div id="vertical-table-custom" class="config-container cpq-scroll col-xs-12">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  @*Header*@
+                  <thead>
+                  <tr>
+                      <th class="column-with-actions-header" data-bind="attr: { 'id': 'actionsCell_' + id() }, visible: container.hasActions">
+                          <div>
+                              @Translation.Get("Container.Actions")
+                          </div>                                
+                      </th>
+
+                      <!-- ko foreach : container.columns -->
+                      <th data-bind="click: function () { sort($parent.id() + '_' + columnId) }">
+                          <div class="sortable-display-icon fiori3-sortable-display-icon">
+                              <span data-bind="text: headerLabel"></span>
+                              <span class="sortable-icon-position" data-bind="attr: { id: $parent.id() + '_' + columnId, 'aria-label': sortTooltipTitle }, event: { keyup: function() { sortOnEnter(event, $parent.id() + '_' + columnId); }, focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id,
+                                    tooltip: { title: sortTooltipTitle }, css: { 'sorting_asc': isAscSort(), 'sorting_desc': isDescSort(), 'sorting': !isAscSort() && !isDescSort() }" tabindex="0"></span>
+                          </div>
+                      </th>
+                      <!-- /ko -->
+                  </tr>
+                  </thead>
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  @*Rows*@
+                  <!-- ko foreach: container.rows -->
+                  <tr>
+                      @*Row actions column*@
+
+                          <td data-bind="visible: $parent.container.hasActions" class="column-with-actions show-all">
+
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canEdit, click: edit, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.Edit")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe038;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canCopy, click: copy, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.Copy")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe245;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canDelete, click: remove, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.Delete")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe03d;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canReorderRows, click: moveUp, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.MoveUp")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe04b;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canReorderRows, click: moveDown, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.MoveDown")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe04e;</span></button>
+
+
+
+                          </td>
+                          <!-- ko foreach: values -->
+                          <td data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                              <!-- ko template : { name : template , data : $data } -->
+                              <!-- /ko -->
+                          </td>
+                          <!-- /ko -->
+						  <!-- ko foreach: $root.attributes.filterByProperty('name' , "Add Group") -->
+                          <td style="display:flex;"data-bind="attr : { 'data-title' : label}">
+                              <!-- ko template : { name : template , data : $data } -->
+                              <!-- /ko -->
+                          </td>
+                          <!-- /ko -->
+                      </tr>
+                      <!-- /ko -->
+
+                  </tbody>
+                  @*Footer*@
+                  <tfoot>
+                      <tr data-bind="visible: container.hasAnyFooterLabel">
+                          <td data-bind="visible: container.hasActions"></td>
+                          <!-- ko foreach : container.columns -->
+                          <td data-bind="text: footerLabel, attr : { 'data-title' : headerLabel}"></td>
+                          <!-- /ko -->
+                      </tr>
+                      @*Totals*@
+                      <tr data-bind="visible: container.hasAnyTotal, attr: { title: container.pager && container.pager.lastPage() > 1 ? '@Translation.GetJS("xstlContainerTotalTip")'  : '' }">
+                          <td data-bind="visible: container.hasActions"></td>
+                          <!-- ko foreach : container.columns -->
+                          <td data-bind="text: totalValue, attr : { 'data-title' : headerLabel}"></td>
+                          <!-- /ko -->
+                      </tr>
+                  </tfoot>
+              </table>
+          </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' , "IO Counts") -->
+      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+      </div>
+    <!-- /ko -->
+    </div>
+  	<div class="col-xs-12 col-sm-3" >
+      <div class="text-center custom-field-headers"  style="margin-left: -10px;margin-right: -10px;" data-bind="html:$root.productId() === 1257 ? 'Software' :'Added RTU Groups'"></div>
+      <!-- ko foreach: attributes.filterByProperty('name' , "RTU Groups") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" style="margin-top:-40px;">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+      <!-- /ko -->
+      <!-- ko foreach: attributes.filterByProperty('name' , "RTU Software Field container") -->
+
+          <div id="vertical-table-custom" class="config-container cpq-scroll">
+              <table class="table table-bordered fiori3-table fiori3-configuration-container-table" data-bind="attr: { 'aria-label': label, id: 'containerTable_' + stdAttrCode() }">
+                  @*Header*@
+                  <thead>
+                  <tr>
+                      <th class="column-with-actions-header" data-bind="attr: { 'id': 'actionsCell_' + id() }, visible: container.hasActions">
+                          <div>
+                              @Translation.Get("Container.Actions")
+                          </div>                                
+                      </th>
+
+                      <!-- ko foreach : container.columns -->
+                      <th data-bind="click: function () { sort($parent.id() + '_' + columnId) }">
+                          <div class="sortable-display-icon fiori3-sortable-display-icon">
+                              <span data-bind="text: headerLabel"></span>
+                              <span class="sortable-icon-position" data-bind="attr: { id: $parent.id() + '_' + columnId, 'aria-label': sortTooltipTitle }, event: { keyup: function() { sortOnEnter(event, $parent.id() + '_' + columnId); }, focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id,
+                                    tooltip: { title: sortTooltipTitle }, css: { 'sorting_asc': isAscSort(), 'sorting_desc': isDescSort(), 'sorting': !isAscSort() && !isDescSort() }" tabindex="0"></span>
+                          </div>
+                      </th>
+                      <!-- /ko -->
+                  </tr>
+                  </thead>
+                  <tbody data-bind="visible: container.totalNumberOfRows">
+                  @*Rows*@
+                  <!-- ko foreach: container.rows -->
+                  <tr>
+                      @*Row actions column*@
+
+                          <td data-bind="visible: $parent.container.hasActions" class="column-with-actions show-all">
+
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canEdit, click: edit, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.Edit")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe038;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canCopy, click: copy, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.Copy")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe245;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canDelete, click: remove, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.Delete")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe03d;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canReorderRows, click: moveUp, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.MoveUp")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe04b;</span></button>
+                              <button class="btn fiori3-icon-button flex" data-bind="visible : canReorderRows, click: moveDown, enable: $parent.isEnabled, tooltip: { trigger: 'hover', title: '@Translation.GetJS("Container.MoveDown")', placement: 'top', delay: { 'show': 150, 'hide': 50 } }"><span class="sap-icon">&#xe04e;</span></button>
+
+
+
+                          </td>
+                          <!-- ko foreach: values -->
+                          <td data-bind="ifnot : isEmpty, attr : { 'data-title' : headerLabel}">
+                              <!-- ko template : { name : template , data : $data } -->
+                              <!-- /ko -->
+                          </td>
+                          <!-- /ko -->
+                      </tr>
+                      <!-- /ko -->
+
+                  </tbody>
+                  @*Footer*@
+                  <tfoot>
+                      <tr data-bind="visible: container.hasAnyFooterLabel">
+                          <td data-bind="visible: container.hasActions"></td>
+                          <!-- ko foreach : container.columns -->
+                          <td data-bind="text: footerLabel, attr : { 'data-title' : headerLabel}"></td>
+                          <!-- /ko -->
+                      </tr>
+                      @*Totals*@
+                      <tr data-bind="visible: container.hasAnyTotal, attr: { title: container.pager && container.pager.lastPage() > 1 ? '@Translation.GetJS("xstlContainerTotalTip")'  : '' }">
+                          <td data-bind="visible: container.hasActions"></td>
+                          <!-- ko foreach : container.columns -->
+                          <td data-bind="text: totalValue, attr : { 'data-title' : headerLabel}"></td>
+                          <!-- /ko -->
+                      </tr>
+                  </tfoot>
+              </table>
+          </div>
+    <!-- /ko -->
+    </div>
+    <div class="col-xs-12 col-sm-4" >
+      <div class="text-center custom-field-headers"  style=" margin-left: -16px;margin-right: -16px;" data-bind="html:$root.productId() === 1257 ? '&nbsp;' :'RTU Parts Summary'"></div>
+      <!-- ko foreach: attributes.filterByProperty('name' , "RTU Parts") -->
+        <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" style="margin-top:-40px;">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+      <!-- /ko -->
+    </div>
+</div>

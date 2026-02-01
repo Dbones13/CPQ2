@@ -1,0 +1,11 @@
+{
+    "id": 22215,
+    "condition": "[IF]([IN](<*VALUE(FDM_Release)*>,R520,R521,R530)){[GT](<*VALUE(FDM HART-IP Downlink license (0-10))*>,0)}{0}[ENDIF]",
+    "name": "Add_HC-HIP000",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-HIP000)*><*SETATVQTY(FDM_Part_Summary:HC-HIP000,<*VALUE(FDM HART-IP Downlink license (0-10))*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": false,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

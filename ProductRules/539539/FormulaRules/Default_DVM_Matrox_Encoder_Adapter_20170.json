@@ -1,0 +1,11 @@
+{
+    "id": 20170,
+    "condition": "[EQ](<*VALUE(DVM_Matrox_Encoder_Adapter)*>,)",
+    "name": "Default_DVM_Matrox_Encoder_Adapter",
+    "action": "<*SELECTVALUE(DVM_Matrox_Encoder_Adapter:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

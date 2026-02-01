@@ -1,0 +1,11 @@
+{
+    "id": 15074,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Subcontractor Interface pre FAT",
+    "action": "<*ASSIGNVALUE(Subcontractor Interface - pre FAT:<* Eval(2*(16*(<* Eval(INT((<* Eval(1+(3+(0<*VALUE(Unique_quantity_factor_total_scope)*>*2)+(0<*VALUE(Quantity_duplication_factor_total_scope)*>*1))/12) *>))) *>)+8*(<* Eval(0-INT(0-(<* Eval(3+(0<*VALUE(Unique_quantity_factor_total_scope)*>*2)+0<*VALUE(Quantity_duplication_factor_total_scope)*>*1) *>))) *>))) *>)*>",
+    "description": "2*(16*ROUNDDOWN(1+(3+(QFU*2)+(QFD*1))/12,0)+8*ROUNDUP(3+(QFU*2)+QFD*1,0))",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13447,
+    "condition": "[EQ](<*VALUE(EBR_Software_Required)*>,Yes)",
+    "name": "Remove_R501_release",
+    "action": "<*DISALLOWVALUES(Experion Backup Restore Software Release:R501)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

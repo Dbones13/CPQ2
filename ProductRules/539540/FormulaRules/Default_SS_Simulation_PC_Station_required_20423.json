@@ -1,0 +1,11 @@
+{
+    "id": 20423,
+    "condition": "[EQ](<*VALUE(SS_Simulation_PC_Station_required)*>,)",
+    "name": "Default_SS_Simulation_PC_Station_required",
+    "action": "<*SELECTVALUE(SS_Simulation_PC_Station_required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

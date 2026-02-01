@@ -1,0 +1,11 @@
+{
+    "id": 25706,
+    "condition": "[GT](<*VALUE(Experion Process Points (0 - 45000))*>,1999)",
+    "name": "Exp_Prc_Pnt_Add_EPDPR02K_Red",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR02K)*>[IF]([GT](<*eval(INT(Fix((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000-(INT(Fix((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000)))*5000)/2000)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DPR02K, <*eval(INT(Fix((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000-(INT(Fix((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000)))*5000)/2000)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP_DPR02K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

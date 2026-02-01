@@ -1,0 +1,11 @@
+{
+    "id": 14635,
+    "condition": "[EQ](<*VALUE(MX_CD_Communication_Link_to_Non_Honeywell_QCS)*>,)",
+    "name": "Default_MX_CD_Communication_Link_to_Non_Honeywell_QCS",
+    "action": "<*SELECTVALUE(MX_CD_Communication_Link_to_Non_Honeywell_QCS:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

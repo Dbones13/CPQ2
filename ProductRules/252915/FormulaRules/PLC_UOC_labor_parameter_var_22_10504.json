@@ -1,0 +1,11 @@
+{
+    "id": 10504,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "PLC_UOC_labor_parameter_var_22",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_22:<* Eval(<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_CDA_based_Controller_Connections) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_OPC_UA_Servers) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_OPC_UA_Clients) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_MODBUS_TCP_Slaves) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_Modbus_Master) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

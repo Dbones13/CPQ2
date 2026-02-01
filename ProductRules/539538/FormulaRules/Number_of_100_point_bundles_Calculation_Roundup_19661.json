@@ -1,0 +1,11 @@
+{
+    "id": 19661,
+    "condition": "[AND]([EQ](<*ATTSEL(Exp HS Enter Number of additional Points)*>,1),[GT](<*Eval(<*VALUE(Exp HS Enter Number of additional Points)*>/100 -int(<*VALUE(Exp HS Enter Number of additional Points)*>/100))*>,0))",
+    "name": "Number of 100 point bundles Calculation Roundup",
+    "action": "<*ASSIGNVALUE(Exp HS Number of 100 point bundles:<*Eval(1+int(<*VALUE(Exp HS Enter Number of additional Points)*>/100))*>)*>",
+    "description": "Rule inactivated as part of CXCPQ-43096Applicable only when Run Time NO\n\nNumber of 100 point bundles=ROUNDUP(Enter Number of additional Points)/100)\n\nEx: roundup(21/5)=5",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

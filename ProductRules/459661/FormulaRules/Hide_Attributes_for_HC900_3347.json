@@ -1,0 +1,11 @@
+{
+    "id": 3347,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(CE_Selected_Products)*>,HC900 System))",
+    "name": "Hide_Attributes_for_HC900",
+    "action": "<*CTX( Container(CE_General_Inputs_Cont).Column(CE_EBR_Media).SetPermission(Hidden) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_System_Number).SetPermission(Hidden) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_System_Asset).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

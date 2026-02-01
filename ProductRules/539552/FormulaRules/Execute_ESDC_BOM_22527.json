@@ -1,0 +1,11 @@
+{
+    "id": 22527,
+    "condition": "<*ATTDEF(ESDC_BOM_Parts)*>",
+    "name": "Execute_ESDC_BOM",
+    "action": "<* ExecuteScript(ESDC_PartSummary_Population) *>",
+    "description": "",
+    "rank": "99",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

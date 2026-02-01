@@ -1,0 +1,11 @@
+{
+    "id": 15432,
+    "condition": "[EQ](<*VALUE(FDA Number of horns)*>,)",
+    "name": "Default Number of horns",
+    "action": "<*ASSIGNVALUE(FDA Number of horns:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

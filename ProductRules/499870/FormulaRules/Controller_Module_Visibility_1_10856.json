@@ -1,0 +1,11 @@
+{
+    "id": 10856,
+    "condition": "[EQ](<*VALUE(HC900_System_Type)*>,SIL2 Safety System)",
+    "name": "Controller Module Visibility_1",
+    "action": "<*ALLOWATTRIBUTES(HC900_Controller_(CPU)_Module_NSIL2)*><*SETREQUIRED(HC900_Controller_(CPU)_Module_NSIL2)*><*SETOPTIONAL(HC900_Controller_(CPU)_Module)*>\n<*DISALLOWATTRIBUTES(HC900_Controller_(CPU)_Module)*><*DISALLOWATTRIBUTES(HC900_IO_Details_of_Non-SIL)*><*ALLOWATTRIBUTES(HC900_IO_Details_of_SIL2)*><*ALLOWATTRIBUTES(HC900_Additional_IO_Details_of_SIL2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

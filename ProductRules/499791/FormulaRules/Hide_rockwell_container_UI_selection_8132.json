@@ -1,0 +1,11 @@
+{
+    "id": 8132,
+    "condition": "[EQ](<*VALUE(LSS_existing_ethernet_switch_for_I/O_network)*>,Yes)",
+    "name": "Hide_rockwell_container_UI_selection",
+    "action": "<*DISALLOWATTRIBUTES(LSS_PLC_Ethernet_Switch_Supplier,LSS_PLC_Ethernet_Switch_Type,LSS_PLC_Network_Topology,LSS_Ethernet_Switch_Ports)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14050,
+    "condition": "[NEQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Hide_DVM_Base_Media_Delivery",
+    "action": "<*DISALLOWATTRIBUTES(DVM_Base_Media_Delivery)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

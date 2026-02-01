@@ -1,0 +1,11 @@
+{
+    "id": 19862,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "show_enhanced_function",
+    "action": "<*ALLOWATTRIBUTES(Header_22_open,C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont,Header_22_close)*>",
+    "description": "CXCPQ-37808",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

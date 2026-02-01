@@ -1,0 +1,11 @@
+{
+    "id": 13298,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is Profibus Interface in Scope?)*>,Yes))",
+    "name": "SII_PF_Profibus1",
+    "action": "<*ASSIGNVALUE(SII Pre-FAT - Profibus1:<* Eval(3 * <*VALUE(Number of Profibus Interface Types)*> ) *>)*>",
+    "description": "SII Pre-FAT - Profibus1 \n\nCalculated Hrs = pbt*3",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14858,
+    "condition": "[EQ](<*VALUE(MX_MD_Color_Controls)*>,Color Control three Color Coordinates)",
+    "name": "MX_Part_Q5976_53",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5976-53)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5976-53, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

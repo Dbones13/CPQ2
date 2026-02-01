@@ -1,0 +1,11 @@
+{
+    "id": 18293,
+    "condition": "[OR]([NEQ](<*VALUE(MXPro_Sensor_Y_MD_Sensor)*>,Yes),[NEQ](<*VALUE(MXP_Measurement_Type)*>,6k))",
+    "name": "Part_D_3_6254_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-6254-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

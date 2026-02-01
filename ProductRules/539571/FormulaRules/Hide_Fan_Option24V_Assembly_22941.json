@@ -1,0 +1,11 @@
+{
+    "id": 22941,
+    "condition": "[NEQ](<*VALUE(SerC_RG_Power_System_Vendor)*>,TDI)",
+    "name": "Hide_Fan_Option24V Assembly",
+    "action": "<*DISALLOWVALUES(SerC_RG_Fan_Option:24V Assembly)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

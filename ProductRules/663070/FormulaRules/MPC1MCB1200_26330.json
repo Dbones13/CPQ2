@@ -1,0 +1,11 @@
+{
+    "id": 26330,
+    "condition": "[AND](<*ISSELECTED(Cabinet Doors.Standard)*>,[EQ](<*VALUE(Cabinet Depth)*>,1M),[EQ](<*VALUE(CE_Site_Voltage)*>,240V),<*ISSELECTED(CE_Site_Frequency.50Hz)*>,[GT](<*VALUE(exp_ent_cab_qnt)*>,0))",
+    "name": "MP-C1MCB1-200",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-200)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-C1MCB1-200, <*VALUE(exp_ent_cab_qnt)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37824",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

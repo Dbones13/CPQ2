@@ -1,0 +1,11 @@
+{
+    "id": 12226,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[EQ](<*CTX ( Quote.CustomField(EGAP_Proposal_Type) )*>,Budgetary))",
+    "name": "Set_Total number of graphics affected by ELPIU migration",
+    "action": "<*ASSIGNVALUE(ELEPIU_Total_number_of_graphics_affected_by_ELPIU:<* Eval(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>*7) *>)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23657,
+    "condition": "1",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-IPSB_Yes",
+    "action": "[IF]([AND](<*ISSELECTED(Secure Remote Access.Yes)*>,<*ISSELECTED(IP Security Tunnel Required.Yes)*>)){<*SELECTVALUES(IP Security Tunnel Required BOM:CS-MSS-IPS-ANL|CS-MSS-IPSB)*><*SETATVQTY(IP Security Tunnel Required BOM:CS-MSS-IPSB,1)*><*SETATVQTY(IP Security Tunnel Required BOM:CS-MSS-IPS-ANL,1)*>}{<*RESETATTRIBUTE(IP Security Tunnel Required BOM)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

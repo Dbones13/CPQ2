@@ -1,0 +1,11 @@
+{
+    "id": 23622,
+    "condition": "[EQ](<*VALUE(HDP_Additional_Appliance)*>,)",
+    "name": "set defualt HDP_Additional_Appliance",
+    "action": "<*ASSIGNVALUE(HDP_Additional_Appliance:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22415,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Tower_RAID1),[EQ](<*VALUE(ESDC_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ESDC_Trusted_Platform_Module)*>,Yes))",
+    "name": "Part_A_MZ_PCST02",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:MZ-PCST02)*><*SETATVQTY(ESDC_BOM_Parts:MZ-PCST02, <*VALUE(ESDC_Red_nonRed_Check)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

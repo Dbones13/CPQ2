@@ -1,0 +1,11 @@
+{
+    "id": 22250,
+    "condition": "[EQ](<*VALUE(Scada_EXPERION_METERSUITE_LIBRARY)*>,No)",
+    "name": "SCADA_TC-MTRS01_No",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:TC-MTRS01)*><* DoResetAtt *>",
+    "description": "Hide-TC-MTRS01",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

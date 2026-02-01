@@ -1,0 +1,11 @@
+{
+    "id": 13393,
+    "condition": "[EQ](<*VALUE(Number of Locations with FTE Switches)*>,)",
+    "name": "Set default value for Number of Locations with FTE Switches",
+    "action": "<*ASSIGNVALUE(Number of Locations with FTE Switches:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

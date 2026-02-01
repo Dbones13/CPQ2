@@ -1,0 +1,11 @@
+{
+    "id": 22939,
+    "condition": "[OR]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Mounting Panel),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Hide functionality for SerC_IO_Mounting_Solution Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(SerC_Power_Supply_Cable_Length,SerC_RG_Power_Entry_Default)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

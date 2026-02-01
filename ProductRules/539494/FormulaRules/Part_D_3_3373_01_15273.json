@@ -1,0 +1,11 @@
+{
+    "id": 15273,
+    "condition": "[NEQ](<*VALUE(MXP_Application_Sofware)*>,Application Software for One-Scanner Wire Calenders)",
+    "name": "Part_D_3_3373_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-3373-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

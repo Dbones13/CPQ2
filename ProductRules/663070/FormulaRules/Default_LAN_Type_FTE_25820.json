@@ -1,0 +1,11 @@
+{
+    "id": 25820,
+    "condition": "[AND]([EQ](<*VALUE(Interface with TPS Required?)*>,No),[EQ](<*VALUE(Supervisory Network Type)*>,FTE),[EQ](<*VALUE(LAN Type)*>,))",
+    "name": "Default_LAN_Type_FTE",
+    "action": "<*SELECTVALUE(LAN Type:FTE)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

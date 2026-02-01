@@ -1,0 +1,11 @@
+{
+    "id": 4745,
+    "condition": "[EQ](<*VALUE(MX_SG_Water_to_Water_Heat_Exchanger)*>,Yes)",
+    "name": "Part_A_Q8214_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Scanner_sensor_bom_parts:Q8214-00)*><*SETATVQTY(Scanner_sensor_bom_parts:Q8214-00, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

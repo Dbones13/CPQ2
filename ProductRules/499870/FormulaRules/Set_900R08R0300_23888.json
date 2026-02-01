@@ -1,0 +1,11 @@
+{
+    "id": 23888,
+    "condition": "[AND]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*VALUE(HC900_Redundant_I/O_Rack_Power_Supplies)*>,Yes),[GT](<*CTX( Container(HC900_Rack_Size_Quantity_Cont).Sum(Quantity) )*>,0))",
+    "name": "Set 900R08R-0300",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(HC900_PART_SUMMARY:900R08R-0300)*><*SETATVQTY(HC900_PART_SUMMARY:900R08R-0300, <*CTX( Container(HC900_Rack_Size_Quantity_Cont).Sum(Quantity) )*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/08/25",
+    "modifiedBy": "Hinduja Devaraj"
+}

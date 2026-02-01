@@ -1,0 +1,11 @@
+{
+    "id": 20503,
+    "condition": "[OR]([AND]([LEQ](<*VALUE(SS_Orion_Console_2_Position_Base_Unit_Total)*>,0),[LEQ](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,0)),[NEQ](<*VALUE(SS_Node_Supplier_orion)*>, Honeywell),[LEQ](<*VALUE(SS_Orion_Console_Center_Curved_Auxiliary_Equipment_Unit)*>,0),[NEQ](<*VALUE(SS_Orion_Console_Turret_Type)*>,))",
+    "name": "Part_D_MP_OCXCC1",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MP-OCXCC1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

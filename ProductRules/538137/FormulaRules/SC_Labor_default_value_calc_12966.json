@@ -1,0 +1,11 @@
+{
+    "id": 12966,
+    "condition": "[AND]([EQ](<*VALUE(SC_Labor_Burden_for_Hr_Day)*>,),[NOT](<*ISSELECTED(SC_Labor_LumpSum.&nbsp)*>))",
+    "name": "SC_Labor_default_value_calc",
+    "action": "<*ASSIGNVALUE(SC_Labor_Hrs_per_Full_Day:8)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

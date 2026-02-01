@@ -1,0 +1,11 @@
+{
+    "id": 4835,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame),[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided)),[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture))",
+    "name": "show_sheet_temprature_sensor",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Sheet_Temperature_Sensor)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

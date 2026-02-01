@@ -1,0 +1,11 @@
+{
+    "id": 18229,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,Sheet Temperature Sensor (High Temp))",
+    "name": "Part_D_Q6209_51",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q6209-51)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,2612 @@
+@*placeholder for header*@
+<link rel="stylesheet" href='@Url.MTContent("Additionalfiles/HPS/DEFAULT_STYLE.css")?version=2607.02'>
+<link rel="stylesheet" href='@Url.MTContent("Additionalfiles/HPS/PRODUCT_STYLE.css")?version=version=1008.02'>
+<link rel="stylesheet" href='@Url.MTContent("Additionalfiles/HPS/JSANDCSS/bootstrap-treeview_min.css")'>
+<script type="text/javascript" src='@Url.MTContent("Additionalfiles/HPS/JSANDCSS/bootstrap-table_min.js")'></script>
+<script type="text/javascript" src='@Url.MTContent("Additionalfiles/HPS/JSANDCSS/bootstrap-treeview.js")'></script>
+<script type="text/javascript" src='@Url.MTContent("Additionalfiles/HPS/JSANDCSS/bootstrap-table-filter-control_min.js")'></script>
+<script type="text/javascript"  src='@Url.MTContent("Additionalfiles/HPS/JSANDCSS/xlsx_full_min.js")'></script> 
+<script>
+function y_ace_validation(){
+    y_data = {}
+	var y_quote = $('#y_ace_quote_text').val()
+    var y_desc = $('#y_desc_text').val()
+    var y_adder = document.getElementById('y_adder_text').checked
+    var y_total = document.getElementById('y_total_text').checked
+    var y_list = $('#y_listprice_text').val()
+    var y_cost = $('#y_cost_text').val()
+    //console.log(y_adder,"-yess---y_ace--->",y_total)
+    $('#y_special_alert').hide()
+    document.getElementById("y_alert").innerHTML=''
+    if (y_quote=='' && y_desc==''){
+		document.getElementById("y_alert").innerHTML = 'Assign Yearly / ACE quote no or Description for the Yspecial model';
+        $('#y_special_alert').show()
+    }else if (!y_adder && !y_total){
+        document.getElementById("y_alert").innerHTML = 'Select the Adder or Total LP for pricing calculation';
+        $('#y_special_alert').show()
+    }else if(y_list==''){
+        document.getElementById("y_alert").innerHTML = 'Assign adder or Total LP amount for pricing calculation';
+        $('#y_special_alert').show()
+    }else{
+        //console.log(y_quote,"--finall-->",y_desc,"-->",y_adder,"-->",y_total,"-->",y_list,"-->",y_cost)
+		cpq.server.executeScript("GS_PMC_YSpecial", {'y_special':'set','y_quote': y_quote,'y_desc':y_desc,'y_adder':y_adder,'y_total':y_total,'y_list':y_list,'y_cost':y_cost}, function (data) {
+			console.log("--set--data-->",data)
+		});
+	}
+}
+function y_ace() {
+    y_ace_validation();
+}
+function y_special() {
+    CurrentTab = document.querySelector('li.active').closest('li').innerText;
+    if(CurrentTab.toUpperCase()=='SPECIAL'){
+        $(".y_ace_quote").show();
+        $(".yrlyspec").hide();
+        $(".yrlyspectab").hide();
+        $("#addyspec").hide();
+        document.getElementById('addyspec').style.display = 'none';
+        $(document.getElementsByClassName('yrlyspec')[0]).hide();
+        $(document.getElementsByClassName('yrlyspectab')[0]).hide();
+        $(document.getElementsByClassName('Special_Options?')[0]).parent('div').hide();
+        $(document.getElementsByClassName('Standard_Special_Options?')[0]).parent('div').hide();
+		console.log('---CurrentTab-->',CurrentTab)
+    }else{$(".y_ace_quote").hide();}
+    //$(document.getElementsByClassName('Special_Options?')[0]).parent('div').hide();
+    //$(document.getElementsByClassName('Standard_Special_Options?')[0]).parent('div').hide();
+	cpq.server.executeScript("GS_PMC_YSpecial", {'y_special':'get'}, function (data) {
+        console.log("----get--data-->",data)
+        if(data){
+            if(data[0].trim() || data[1].trim()){
+                $('#y_ace_quote_text').val(data[0])
+                $('#y_desc_text').val(data[1])
+            }else{y_ace_validation();}
+            if(data[2]){
+                if(data[2]=='Adder'){
+                    document.getElementById("y_adder_text").checked = true;
+                }else if(data[2]=='Total LP'){
+                    document.getElementById("y_total_text").checked = true;
+                }
+            }else{y_ace_validation();}
+            if(data[3]){
+                $('#y_listprice_text').val(data[3])
+                $('#y_cost_text').val(data[4])
+            }else{y_ace_validation();}
+        }else{y_ace_validation();}
+    });
+}
+
+	function dropdow_value(val) {
+ 
+	if (val.length > 0) {
+		const new_data = val.map(item => {
+			if (item.displayValue === '- none -') {
+				return { ...item, displayValue: '' };
+			}
+			return item;
+		});
+		return new_data;
+	} else {
+		return val;
+	}
+}
+
+
+
+
+    function execdisable(){
+	if( sessionStorage.getItem("R2QFlag") ==='Yes'  && cpq.models.cart.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content() === 'LSS'){
+		 let disableNextRows = localStorage.getItem('disableNextRows') // Flag to track when to disable rows
+
+	$(".fiori3-items-container .fiori3-items-table tr").each(function () {
+		let rolleditem = $(this).find("td.item-column .item-number").text().trim();
+		let rollednum = (rolleditem.match(/\./g) || []).length; // Count dots (.) in rolleditem
+		let prodname = $(this).find("td.item-column span.item-part-number").first().text().trim();
+		if (prodname.includes("Migration")) {
+		localStorage.setItem('disableNextRows',true)
+			disableNextRows = true;
+			// If this row contains "Migration", start disabling next rows localStorage.setItem('disableNextRows',true)
+			$(this).find("td.item-column .fiori3-item-wrapper a").removeClass("itemdisabled");
+		}
+		// If disableNextRows is true and rollednum > 0 (meaning it's a child item), disable it
+		if (localStorage.getItem('disableNextRows')  && rollednum > 0) {
+			$(this).find("td.item-column .fiori3-item-wrapper a").addClass("itemdisabled");
+			$(this).addClass("disabled-row"); // Optional visual effect
+		}
+	});
+			$('.item-action-button-cart').click(function () {
+			var classcheck = $(this).closest('tr').find("td.item-column .fiori3-item-wrapper a").hasClass("itemdisabled")
+			 if(classcheck == true){
+					 let intervalID = setInterval(function () {
+						if ($(".click_Edit").length > 0) {
+						  $('.click_Edit').addClass('disp_none'); // Hide the Copy button
+							clearInterval(intervalID); // Stop the interval
+						} 
+					}, 10); 
+			 }
+			});
+	}
+	}
+    function hiderowdynamically(contname,readonlyrow,columncheck){
+
+getattr = cpq.models.configurator.attributes()
+getattrcode = 0
+for (attr in getattr){
+    if(getattr[attr].name() == contname){
+        getattrcode = getattr[attr].stdAttrCode()
+    }
+}
+
+if (contname!='HCI_PHD_AdditionalDeliverables'){
+$('#containerTable_'+getattrcode +' tbody tr').each(function(){
+    if (readonlyrow.includes($(this).find('td:nth-child('+columncheck+') div span:last').text())) {
+            $(this).find('td:nth-child(6)').text(' ')
+            $(this).find('input.form-control').css({
+                "background-color": "#8F8F8F",
+                "pointer-events": "none"
+            })
+            $(this).find('input').closest('label').css({
+                "pointer-events": "none"
+            })
+            $(this).css({
+                "background-color": "#8F8F8F"
+            })
+        }
+})
+}
+if (contname=='HCI_PHD_AdditionalDeliverables'){
+    $('#containerTable_'+getattrcode +' tbody tr:last').css({"background-color": "#8F8F8F"}) 
+    $('#containerTable_'+getattrcode +' tbody tr:last td:nth-child(1) div').hide()
+    $('#containerTable_'+getattrcode +' tbody tr:last td:nth-child(3) ').text('Totals') 
+    $('#containerTable_'+getattrcode +' tbody tr:last ').find('input.form-control').css({"background-color": "#8F8F8F","pointer-events": "none"})
+    $('#containerTable_'+getattrcode +' tbody tr:last td:nth-child(4) ').text(' ')
+    $('#containerTable_'+getattrcode +' tbody tr:last td:nth-child(6) ').text(' ')
+    $('#containerTable_'+getattrcode +' tbody tr:last td:nth-child(7) ').text(' ')
+    $('#containerTable_'+getattrcode +' tbody tr:last td:nth-child(8) ').text(' ')
+}
+}
+
+	
+	cpq.ready(function () {
+				  
+		var setqtType =  localStorage.getItem("setQuoteType")
+
+	})
+    
+    function reprice_click(){
+		$('li.action-row.TariffReprice a').click()
+	}
+	
+	function setqttype(ele){
+		var QtType =   $(ele).closest('tr').find('td.Quote_Type').text().trim()
+		localStorage.setItem('setQuoteType',QtType)
+	}
+
+cpq.events.sub("configurator:updated",function(){
+		
+		var checkR2Q = cpq.models.configurator.attributes()[0].userInput();
+		localStorage.setItem("checkR2Q", checkR2Q);
+
+		//CXCPQ-110898
+		if($('.product-name').text() == 'Cyber'){
+			$("<style> div > #AddRowModal{ visibility: visible !important; }</style>").appendTo("head");
+		}
+		//CXCPQ-110898
+
+		// CXCPQ-105108
+		attr = cpq.models.configurator.attributes()
+		backgroupcolorlist = []
+		for(row in attr){
+			if(['AR_HCI_LABOR_CONTAINER'].includes(attr[row].name())){
+		backgroupcolorlist.push(attr[row].stdAttrCode())
+	 
+			}
+		} 
+		for(attrcon in backgroupcolorlist){
+ 
+			$('table#containerTable_'+backgroupcolorlist[attrcon]).find('tfoot tr').css('background-color','#f0f0f0')
+		}
+		if($('.product-name').text() == 'HCI Labor Upload'){
+			contname = 'AR_HCI_LABOR_CONTAINER'
+			columncheck = 4
+			readonlyrow =['Total']
+			getattr = cpq.models.configurator.attributes()
+			getattrcode = 0
+			for (attr in getattr){
+			if(getattr[attr].name() == contname){
+			getattrcode = getattr[attr].stdAttrCode()
+			}
+			}
+			$('#containerTable_'+getattrcode +' tbody tr').each(function(){ 
+
+			if (readonlyrow.includes($(this).find('td:nth-child('+columncheck+') div span:last').text())) {
+				$(this).addClass("labour_total")
+				$('#containerTable_'+getattrcode +' tbody tr:last td:nth-child(16) ').text(' ')
+			}
+			})
+		}
+		if(cpq.models.configurator.responderModule.name() == 'PHD Labor'){
+		
+			if (cpq.models.configurator.currentTab().name()=='General Inputs'){
+				var getattrcode = cpq.models.configurator.attributes.filterByProperty('name', 'AR_HCI_PHD_ProjectInputs2')()[0].stdAttrCode()
+				var graphicsInput = $('#containerTable_'+getattrcode +' tbody tr:first td:nth-child(2) div select').attr("title")
+				if (graphicsInput=='No'){
+					$('#ce-Graphics').hide()
+				}
+				if (graphicsInput=='Yes'){
+					$('#ce-Graphics').show()
+				}
+			}	
+			readonlyrow = ['Project Set Up and Scope of Work','User Requirements','Functional and Detailed Design','Order, Build and Configure','Uniformance Insight Implementation','Graphics and Reports','Upgrade/Update','Installation, Setup and FAT','On-Site Installation and SAT','Post-Go-Live Activities and Documentation','Client Training','Post Delivery Support','Total','Total Travel Time']
+			columncheck = 4
+			containername = 'HCI_PHD_EngineeringLabour'
+			hiderowdynamically(containername,readonlyrow,columncheck)
+			
+			contList=['HCI_PHD_ProjectManagement','HCI_PHD_ProjectManagement2','HCI_PHD_AdditionalDeliverables']
+			for (i = 0; i < contList.length; i++) {
+				readonlyrow = ['Total']
+				columncheck = 4
+				hiderowdynamically(contList[i],readonlyrow,columncheck)
+			}
+		}
+		if(cpq.models.configurator.responderModule.name() == 'AFM Labor'){
+		contList=['HCI_PHD_ProjectManagement','HCI_PHD_ProjectManagement2','HCI_PHD_AdditionalDeliverables']
+			for (i = 0; i < contList.length; i++) {
+				readonlyrow = ['Total']
+				columncheck = 4
+				hiderowdynamically(contList[i],readonlyrow,columncheck)
+			}			
+		
+		}
+		if(cpq.models.configurator.responderModule.name() == 'Uniformance Insight Labor'){
+		contList=['HCI_PHD_EngineeringLabour','HCI_PHD_ProjectManagement','HCI_PHD_ProjectManagement2','HCI_PHD_AdditionalDeliverables']
+			for (i = 0; i < contList.length; i++) {
+				readonlyrow = ['Total']
+				columncheck = 4
+				hiderowdynamically(contList[i],readonlyrow,columncheck)
+			}			
+		
+		}
+		
+	})
+	
+	cpq.events.sub("configurator:updated", function (data, event) {
+		$('.r2q_app_main .r2q_app .Sys_Group_Name_inner .R2Q_Select_Category + div select option:first-child').hide();
+		if (data.model.responderModule.name() === "R2Q New / Expansion Project") {
+			attr1 = cpq.models.configurator.attributes.filterByProperty('name', 'R2Q Select Category')()[0];
+			if (attr1) {
+			let ele = $('#' + attr1.stdAttrCode());
+				$(ele).find('option').each(function() {
+				if ($(this).val() === "None") {
+				$(this).remove();
+				}
+				});
+			}
+		}
+
+
+
+	});
+	
+		window.containsRestrictedPart = function(partNumber) {
+			const restrictedParts = [
+				"Operator Training",
+				"Skid and Instruments",
+				"Small Volume Prover"
+			];
+			return restrictedParts.some(p => String(partNumber).includes(p));
+		};
+	
+	cpq.events.sub("cart:updated",function(){
+		execdisable()
+		handleShellbarNavigationForR2Q()
+		var  checkcartR2Q = cpq.models.cart.customFields.firstWithProperty('name', 'IsR2QRequest')?.content()
+		sessionStorage.setItem("checkcartR2Q",checkcartR2Q)
+		var  QuoteType = cpq.models.cart.customFields.firstWithProperty('name', 'Quote Type')?.content()
+ localStorage.setItem("setQuoteType", QuoteType); 
+		var QuoteStatusID = cpq.models.cart.orderStatusId()
+		sessionStorage.setItem("QuoteStatusID",QuoteStatusID)         
+		$(".quote-custom-fields:contains('R2Q Sell Price Strategy')").addClass("r2q-none");
+		$(".quote-custom-fields:contains('Customer Budget (USD)')").addClass("r2q-none");
+		$(".action-items-container .action-row:contains('Generate_BOM_R2Q')").addClass("r2q-none");
+		$(".action-items-container .action-row:contains('Generate Document R2Q')").addClass("r2q-none");
+		$(".action-items-container .action-row:contains('Trigger_R2Q_Approval')").addClass("r2q-none");
+		if ((localStorage.getItem("checkR2Q") === "Yes" || localStorage.getItem("checkcartR2Q") === "Yes" || sessionStorage.getItem("R2QFlag") ==='Yes') && localStorage.getItem("setQuoteType") === "Projects" && localStorage.getItem("Opp_statusName") != "Submitted to Customer") {
+			$(".action-items-container .action-row:contains('Generate Document R2Q')").removeClass("r2q-none");
+		}
+	var  cartR2QFlag = cpq.models.cart.customFields.firstWithProperty('name', 'R2QFlag')?.content()
+    var  SoldToCustomerIdChange = cpq.models.cart.customFields.firstWithProperty('name', 'SoldToCustomerIdChange')?.content()
+    var  Lob = cpq.models.cart.customFields.firstWithProperty('name', 'Quote Tab Booking LOB')?.content()
+		sessionStorage.setItem("R2QFlag",cartR2QFlag)	
+		if(sessionStorage.getItem("R2QFlag") =='Yes'){
+			$('#r2q_comparisoncall').removeClass('d-none')
+		}		
+		else{
+			$('#r2q_comparisoncall').addClass('d-none')
+		}
+        if (SoldToCustomerIdChange=="True" && QuoteType=='Parts and Spot' && QuoteStatusID=='32' && Lob=='LSS')
+        {
+            var modalHTML = `
+            <div class="modal fade" id="Informationpop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog    " role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                            <!--   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+                                  <h4 class="modal-title" id="myModalLabel">Notice</h4>
+                              </div>
+                              <div class="modal-body">
+                              <div>Sold To details have been updated.Please click the <strong>Reprice</strong> button to recalculate the pricing.</div>
+                                </div>
+                              <div class="modal-footer" style="text-align:center">
+                                   <button type="button" class="btn btn-primary"  data-dismiss="modal"  onclick="reprice_click()">REPRICE</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              `;
+              
+              if ($("#Informationpop").length === 0) {
+                  $("body").append(modalHTML);
+              }
+      
+              $('#Informationpop').modal('show');
+        }
+        else{
+                if ($("#Informationpop").length > 0) {
+                  $('#Informationpop').modal('hide');
+                }
+            }
+
+	})
+	
+	</Script>
+<style type="text/css">
+    .modal-body>.popup-table {
+        border: 2px solid black!important;
+        border-collapse: collapse!important;
+    }
+
+    .modal-body>.popup-table th {
+        background-color: #F2F2F2!important;
+        color: #000!important;
+        font-size: 1.2rem!important;
+        font-weight: bold!important;
+        text-align: center!important;
+        border: 2px solid black!important;
+    }
+
+    .modal-body>.popup-table td {
+        color: #000!important;
+        padding: 0 .5rem!important;
+        font-size: 1rem!important;
+        font-weight: bold!important;
+        text-align: center!important;
+        border: 2px solid black!important;
+    }
+
+    .modal-body>.popup-table td>span {
+        font-weight: normal!important;
+	}
+	.r2q-none{
+		display:none !important;
+	}
+  div#r2QModal #myModalLabel {
+	padding: 6px;
+	}
+	div#r2QModal .modal-dialog {
+	width: 80%;
+	}
+	div#r2QModal .fixed-table-loading {
+		display: none;
+	}
+	div#r2QModal .bootstrap-table {
+	height: 600px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+div#r2QModal .bootstrap-table table#r2Q_compatability_table {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+	div#r2QModal .bootstrap-table .th-inner.sortable.both {
+	font-size: 14px;
+}
+    div#cartActionsDropdownMenuContainer li.TariffReprice{
+	display: none;
+    }
+</style>
+
+<span id='IsSAPProduct' style="display: none;"></span>
+
+<script type="text/javascript">
+	if(location.href == location.origin + "/Configurator.aspx"){
+$.ajax({
+url: location.origin + "/api/rd/v1/Configurator/GetModel",
+success: function(data) {
+        $('#IsSAPProduct').text(data.IsSapConfigurableProduct);
+			}
+		})
+		};
+</script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="ProjCreation_Success">
+    <div class="modal-dialog fiori3-modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="">
+                <h3 class="" style='background:#0A6ED1 !important;font-family:"51",Calibri,Arial,sans-serif'>
+                    <b>Alert</b>
+                </h3>
+            </div>
+			<div class="modal-body" style="padding:10px;">
+				<p>Request has been sent. Please re-visit in sometime to check the Latest Status.</p>
+			</div>
+            <div class="modal-footer">
+                <button class="btn btn-primary fiori3-btn-primary rowIndex" id="" style="text-transform:none;" onclick="CloseIFrameTab()">Okay</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade in" id="deleteAction">
+    <div class="modal-dialog fiori3-modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <b>Warning: Item(s) will be deleted. Are you sure?</b>
+                </h3>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary fiori3-btn-primary rowIndex" id="" onclick="Delete(this.id)"><span class="sap-icon">&#xe03d;</span>&nbsp; Delete</button>
+                <button class="btn btn-tertiary fiori3-btn-tertiary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CXCPQ- 30840 -->
+<div id="identifierModStruct" class="modal fade in" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:57%;margin-right:0;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">1.3 M Cabinet Identifier Modifier Structure</h4>
+        </div>
+        <div class="modal-body">
+<table cellspacing="0" style="border-collapse:collapse;">
+	<tbody>
+		<tr>
+			<td colspan="5" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; height:25px; text-align:center; vertical-align:middle; white-space:nowrap; width:1264px"><span style="font-size:19px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">1.3 M Cabinet Identifier Modifier Structure</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td colspan="5" style="background-color:#f2f2f2; border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; height:22px; text-align:center; vertical-align:middle; white-space:normal; width:1264px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">SM SC USC<span style="font-size:12pt"><span style="color:black"><strong><span style="font-family:Calibri,sans-serif"> Order Identifier Structure = 12345181967891011121314151617</span></strong></span></span></span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:center; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">NAME</span></span></strong></span></td>
+			<td colspan="4" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:normal; width:901px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">AVAILABLE OPTIONS</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">1: <span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Safety Cabinet</span></span></span></span></span></span></td>
+			<td colspan="4" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:normal; width:901px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">S=1.3M Safety Cabinet</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:42px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">2: <span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Cabinet Material Type, Ingress Protection &amp; Power</span></span></span></span></span></span></td>
+			<td colspan="4" style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; text-align:center; vertical-align:middle; white-space:normal; width:901px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">S=316L Stainless 1.3M, IP66</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:42px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">3:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> Ambient Temperature Range</span></span></span></span></span></span></td>
+								<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">A= Without Fan,<br />Max Ambient +40&deg;C</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">B= With Fan,<br />
+			Max Ambient +55&deg;C</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">4:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> S300</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X=No S300</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">S = Redundant S300</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><span style="font-family:Arial,sans-serif"><span style="color:black">&nbsp;</span></span></span></td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:84px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">5:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> Fiber Optic Extender</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">S=Single Mode X4<br />
+			&nbsp;EDS-408A</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">T=Single Mode X4<br />
+			EDS-305</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">M=Multi-Mode X4<br />
+			&nbsp;EDS-408A</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">N=Multi-Mode X4<br />
+			EDS-305</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:42px; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">U=Single Mode X2<br />
+			&nbsp;EDS-408A</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">V=Single Mode X2<br />
+			EDS-305</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">W=Multi-Mode X2<br />
+			&nbsp;EDS-408A</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">Y=Multi-Mode X2<br />
+			EDS-305</span></span></strong></span></td>
+		</tr>
+        <tr>
+            <td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">18:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> Number of Control Network Module</span></span></span></span></span></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">Number of CNM = 0, 2 or 4</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:none; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></span></td>
+            <td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:84px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">19:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> CNM SFP Type</span></span></span></span></span></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">A = None</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">B = Single Mode &commat; 100/100Mbps, 15 Km</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">C = Multi Mode &commat; 100/100Mbps, 2 Km</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">D = Single Mode &commat; 1Gbps, 10 Km</span></span></strong></span></td>
+        </tr>
+        <tr>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:42px; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">E = Multi Mode &commat; 1Gbps, 550 m</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+            <td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+        </tr>
+		<tr>
+			<td rowspan="2" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:64px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">6:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> Field Termination Assembly for PUIO</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">M= Default Marshaling<br />
+			FC-TUIO51/52</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">U=Universal Marshalling, PTA</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">I = Intrinsically Safe</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">A = 32 IS, 64 Non-IS</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">B= 64 IS, 32 Non-IS</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">C= 32 IS, 32 Non-Is</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:64px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">7: Field Termination Assembly for PDIO</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">M= Default Marshaling<br />
+			FC-TDIO51/52</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">U = Universal Marshalling, PTA</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">I = Intrinsically Safe</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">A= 32 IS, 64 Non-IS</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">B= 64 IS, 32 Non-IS</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">C= 32 IS, 32 Non-IS</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">8: <span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Wire Routing Options</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X= No Panduit</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">P= Panduit</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">9:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> PUIO</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X=0 Channels PUIO</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">A=32 Channels PUIO</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">B=64 Channels PUIO</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">C=96 Channels PUIO</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">10:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> PDIO</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X=0 Channels PDIO</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">A=32 Channels PDIO</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">B=64 Channels PDIO</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">C=96 Channels PDIO</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">11:<span style="font-size:12pt"><span style="font-family:Cambria,serif"> Power Supply Type</span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">Q = 20A AC/DC QUINT4+ PS&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">A = 24A AC/DC FC-PSUNI2424</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">E =&nbsp; 48A FC-PSU-UNI2450U</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">D = 24 VDC/DC QUINT4+ Supply</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">12:<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif"> Power Supply Redundancy</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">R = REDUNDANT PSU</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:none; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">13<span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">: Earth leakage detector (</span></span></span><span style="font-size:12pt"><span style="color:black"><span style="font-family:Arial,sans-serif">TELD)</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X= Grounded Power (No TELD)</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">F= Floating Power (TELD)</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">14: <span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">IO Redundancy</span></span></span><span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X=&nbsp; Non-Redundant IO&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">R= Redundant IO</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">15: <span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Temperature monitoring</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X = No STT650</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">Y = STT650</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">16: <span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">External (24VDC) terminal block</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X = No Ext TB</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">Y= Ext TB</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">V=Ext TB w/6A Fuse</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; height:22px; text-align:left; vertical-align:middle; white-space:normal; width:363px"><span style="font-size:16px"><span style="color:black"><span style="font-family:Calibri,sans-serif">17: <span style="font-size:12pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Abu Dhabi Build Loc.</span></span></span></span></span></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:219px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">X = No</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:222px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">Y= Yes</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:234px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+			<td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; text-align:left; vertical-align:middle; white-space:normal; width:226px"><span style="font-size:16px"><strong><span style="color:black"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+    </div>
+    </div>
+    </div>
+</div>
+
+<!-- CX-CPQ-30840 implementation ends -->
+<!-- CXCPQ-38097 -->
+<div id="upcIdentifierModStruct" class="modal fade in" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:60%;margin-right:0;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">UPC Order Identifier Structure</h4>
+            </div>
+            <div class="modal-body">
+                <table class="popup-table">
+                    <thead>
+                        <tr>
+                            <th colspan="5">UPC Order Identifier Structure = ABC-DEFSTUV-GHJKLM-NP-QRW</th>
+                        </tr>
+                        <tr>
+                            <th>NAME</th>
+                            <th colspan="4">AVAILABLE OPTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A: <span>Process Cabinet</span></td>
+                            <td>P = 1.3M Process Cabinet</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>B: <span>Cabinet Material Type and Ingress Protection</span></td>
+                            <td>S = 316L Stainless 1.3M, IP66</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>C: <span>Ambient Temperature Range</span></td>
+                            <td>A = Without Fan, Max Ambient +40°C</td>
+                            <td>B = With Fan, Max Ambient +55°C</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">D: <span>CN100 I/O HIVE</span></td>
+                            <td>N = None</td>
+                            <td>H = Non-Redundant with SM SFP</td>
+                            <td>R = Redundant with SM SFP</td>
+                            <td>M = Non-Redundant with MM SFP</td>
+                        </tr>
+                        <tr>
+                            <td>T = Redundant with MM SFP</td>
+                            <td>A = Non-Redundant</td>
+                            <td>B = Redundant</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">E: <span>Fiber Optic Extender</span></td>
+                            <td>S = Single Mode x2</td>
+                            <td>T = Single Mode x4</td>
+                            <td>M = Multi-Mode x2</td>
+                        </tr>
+                        <tr>
+                            <td>0 = None</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>F: <span>External FDAP Communication Support</span></td>
+                            <td>S = FDAP Single-Mode</td>
+                            <td>M = FDAP Multi-Mode</td>
+                            <td>0 = No FDAP</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>S: <span>CNM</span></td>
+                            <td>N = No CNM</td>
+                            <td>Y = Red Pair CNM </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>T: <span>CNM Expansion Module</span></td>
+                            <td>N = No Expansion Module</td>
+                            <td>Y = 2x Expansion Modules</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>U: <span>CNM Uplink SFP Type</span></td>
+                            <td>A = Red Pair CNM with SM 10/100M SFP, 15Km </td>
+                            <td>B = Red Pair CNM with MM 10/100M SFP, 2Km</td>
+                            <td>C = Red Pair CNM with SM 1G SFP, 10Km</td>
+                            <td>D = Red Pair CNM with MM 1G SFP, 300-500m</td>
+                        </tr>
+                        <tr>
+                            <td>V: <span>EIM</span></td>
+                            <td>N = No EIM</td>
+                            <td>Y = Yes, Red pair EIM</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>G: <span>Field Termination Assembly</span></td>
+                            <td>N## = Universal Marshalling, GIIS (0-6)/Non-GIIS (0-6)</td>
+                            <td>M = Weidmuller Marshalling</td>
+                            <td>G# = Universal Marshalling, GI only (0-6)</td>
+                            <td>X = No Treatment</td>
+                        </tr>
+                        <tr>
+                            <td>H: <span>Wire Routing Options</span></td>
+                            <td>N = No Panduit</td>
+                            <td>P = Panduit</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>J: <span>Universal IO Count</span></td>
+                            <td>0 = 0</td>
+                            <td>3 = 32</td>
+                            <td>6 = 64</td>
+                            <td>9 = 96</td>
+                        </tr>
+                        <tr>
+                            <td>K: <span>UIO2 Redundancy</span></td>
+                            <td>R = Redundant</td>
+                            <td>N = Non-Redundant</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>L: <span>LLAI Count</span></td>
+                            <td colspan="2">0 to 8 = 0, 1, 2, 3, 4, 5, 6, 7 or 8 x LLAI</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>M: <span>STT650 Count</span></td>
+                            <td colspan="2">0 = No STT650</td>
+                            <td>1 = 1x STT650</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>N: <span>Power Supply Type</span></td>
+                            <td>Q = 20A AC/DC QUINT4+ Supply </td>
+                            <td>A = 25A AC/DC ATDI Supply</td>
+                            <td>R = 20A AC/DC ATDI Supply - Rack Mount</td>
+                            <td>D = 20A DC/DC QUINT4+ Supply</td>
+                        </tr>
+                        <tr>
+                            <td>P: <span>Power Supply Redundancy</span></td>
+                            <td>R = REDUNDANT</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Q: <span>Marine Certifications</span></td>
+                            <td>M = Yes</td>
+                            <td>N = No</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>R: <span>Number of Controlled IO License</span></td>
+                            <td>0 = No Control </td>
+                            <td>2 = 240 IO Control</td>
+                            <td>8 = 800 IO Control</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>W: <span>Abu Dhabi Build Loc.</span></td>
+                            <td>N = No</td>
+                            <td>Y = Yes</td>
+                            <td>&nbsp;</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CXCPQ-38097 Ends -->
+
+<!-- START - CXCPQ-69297 - 06/11/2023 - Manthan Rajguru -- Added to display KPI data on click of info icon  -->
+	
+	<div id="divKpiScrore" class="modal fade in" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:30%;margin-right:0;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="popup-table">
+                    <thead>
+                        <tr>
+                            <th>Skill Assessment Level</th>
+                            <th>Min score level</th>
+                            <th>Max score level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left!important;">AWARENESS</td>
+                            <td style="text-align: right!important;">1</td>
+                            <td style="text-align: right!important;">4.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left!important;">FUNDAMENTAL</td>
+                            <td style="text-align: right!important;">4.6</td>
+                            <td style="text-align: right!important;">8</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left!important;">SKILLED</td>
+                            <td style="text-align: right!important;">8.1</td>
+                            <td style="text-align: right!important;">9.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left!important;">EXPERT</td>
+                            <td style="text-align: right!important;">9.6</td>
+                            <td style="text-align: right!important;">10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END - CXCPQ-69297 - 06/11/2023 - Manthan Rajguru -- Added to display KPI data on click of info icon  -->
+
+<script type="text/javascript">
+	//Start of PMC logic
+	var productList = ['PMD System', 'ControlEdge UOC System', 'UOC Control Group', 'UOC Remote Group', 'New / Expansion Project', 'System Group', 'ControlEdge PLC System', 'CE PLC Control Group', 'CE PLC Remote Group', 'ControlEdge RTU System', 'RTU Group', 'Safety Manager ESD', 'Safety Manager FGS',  'Safety Manager BMS', 'Safety Manager HIPPS', 'SM Control Group', 'SM Remote Group', 'Experion Enterprise System', 'Experion Enterprise Group', 'List of Locations/Clusters/ Network Groups', 'C300 System', 'Series-C Control Group', 'Series-C Remote Group']
+
+    function fmetoconfig() {
+        var fmeinput = $("#fmeinput").val();
+        cpq.server.executeScript("GS_FME_CONFIG", { fmeinput: fmeinput }, function (data) {
+            location.reload();
+        });
+       
+    }
+    
+    function sfme_update()
+    {
+        var fmeinput = $("#fmeinput").val();
+        var sfmeinput = $("#sfmeinput").val();
+        cpq.server.executeScript("GS_SetYspecFME", { fmeinput: fmeinput , sfmeinput: sfmeinput}, function () {
+		
+        });
+        //alert("sfme updated");
+    }
+	localStorage.setItem('LOB',$("#readOnly_87").text().trim())
+	cpq.events.sub("configurator:updated", function (data, event) {
+    
+		//Condition to avoid this script to be executed for PAS products
+		prodIndex = productList.indexOf(cpq.models.configurator.responderModule.name());
+	IsSAPProduct=$('#IsSAPProduct').text();
+	
+    if(IsSAPProduct == 'true') {
+                cpq.server.executeScript("GS_Get_Quote_LOB",{}, function (v_lob) {
+            if (v_lob=='PMC' || v_lob=='HCP')
+            {
+            var fmeinput = $("#fmeinput").val();
+            var sfmeinput = $("#sfmeinput").val();
+			cpq.server.executeScript("GS_SetYspecFME", {fmeinput: fmeinput, sfmeinput: sfmeinput}, function (return_value) {  });
+            }
+        });
+    }
+}); 
+        
+    //ETO GAS products- Functions--Start-- configurator:updated
+    cpq.events.sub("configurator:updated", function (data, event) {
+		//Condition to avoid this script to be executed for PAS products
+IsSAPProduct=$('#IsSAPProduct').text();
+		
+    
+    if(IsSAPProduct == 'true') {
+			cpq.server.executeScript("GS_Get_Quote_LOB",{}, function (v_lob) {
+				if (v_lob=='PMC' || v_lob=='HCP')
+				{
+					cpq.server.executeScript("GS_IsValid_PMCProduct", {}, function (return_value) {
+						
+						var spcial_opt = $("#1156 option:selected").text().toString();
+                        //CXCPQ-52824 :06/15/2023: Added Elster Product in IF condition
+						if (return_value[0] === "True" && (return_value[1]=="Instrumentation" || return_value[1]=="Gas Products" || return_value[1]=="Elster Product") && spcial_opt.search("[Y]") >= 0) {
+						
+	 
+							if (cpq.models.configurator.hasGuid() === true) {
+							cpq.server.executeScript("GS_PMC_ETO_JsonData", { action: "view" }, function (data) {
+								
+
+								var rowcount = 1;
+								if (data.length > 0) {
+								   
+									for (i = 0; i < data.length; i++) {
+										var colcount = 0;
+										tr = document.createElement("tr");
+										for (j = 0; j <= 5; j++) {
+											td = document.createElement("td");
+											if(j==1 || j==2 || j==3)
+											{
+												textarea = document.createElement("textarea");
+												textarea.setAttribute("onkeyup", "tableToJson();");
+												textarea.setAttribute("cols", "30");
+												textarea.setAttribute("rows", "2");
+												if (data[i][j] != null) {
+													tex = document.createTextNode(data[i][j]);
+												} else {
+													tex = document.createTextNode("");
+												}
+												textarea.appendChild(tex);
+												td.appendChild(textarea);
+											}
+											else
+											{
+												input = document.createElement("input");
+												if (j == 4 || j == 5) {
+													input.setAttribute("type", "number");
+                                                    input.setAttribute("min", "0");
+													input.setAttribute("style", "height:45px;");
+													input.setAttribute("oninput", "preventNegative(this)");
+													input.setAttribute("onkeydown", "blockMinus(event)");
+												} else {
+													input.setAttribute("type", "text");
+													input.setAttribute("style", "height:45px;");
+												}
+												input.setAttribute("onkeyup", "check_duplicacy(i+2,this.value);tableToJson();");
+											
+												if (data[i][j] != null) {
+													//var tex = document.createTextNode(data[i][j]);
+													input.setAttribute("value", data[i][j]);
+													input.setAttribute("id", "data" + rowcount + colcount);
+												} else {
+													tex = document.createTextNode("");
+												}
+												td.appendChild(input);
+											}
+											tr.appendChild(td);
+											colcount++;
+										}
+										rowcount++;
+										td = document.createElement("td");
+										input = document.createElement("input");
+										input.setAttribute("type", "button");
+										input.setAttribute("value", "delete");
+										input.setAttribute("onclick", "deleteRow(this);tableToJson();");
+
+										td.appendChild(input);
+										tr.appendChild(td);
+
+										document.getElementById("eto_grid").appendChild(tr);
+									}
+									$("#etotable").css("display", "block");
+								}
+								//end
+							});}
+							
+						} else {
+						
+							$("#addeto").css("display", "none");
+							$("#etotable").css("display", "none");
+						}
+					});
+				}
+			});
+		}
+    });
+    function addeto() {
+        $(".yrlyspectab").css("display", "none");
+        $("#etotable").css("display", "block");
+        var ETO_ref = $("#eto_refnos").val();
+	   
+        if(ETO_ref!=null)
+        {
+        cpq.server.executeScript("GS_IsValid_PMCProduct", {}, function (return_value) {
+        cpq.server.executeScript("GS_PMC_ETOInfo", {FamilyCode: return_value[1], ETO_ref: ETO_ref}, function (info) {  
+		
+        var table = document.getElementById("ETO-table");
+        var rowCount = table.rows.length;
+        var cellCount = table.rows[0].cells.length;
+        var duplicacy = "";
+        if(rowCount>2)
+        {
+        	for (var d = 2; d < rowCount; d++) 
+        	{
+				
+            	var row_ref = table.rows[d].cells[0].children[0].value;
+            	if(row_ref==info[0][0])
+            	{
+                	duplicacy = "true";
+            	}
+        	}
+        }
+        if(duplicacy=="true")
+        {
+		   
+            //CXCPQ-52824 :06/15/2023: Commented and added common message
+            alert("Customized Special Reference Number already exists");
+            /*if(return_value[1]=="Instrumentation")
+            {
+            	alert("Marine Yspec Ref already exists");
+            }
+            else if(return_value[1]=="Gas Products")
+            {
+                alert("ETO Reference no. already exists");
+            }*/
+        }
+        else
+        {
+        var row = table.insertRow(rowCount);
+        for (var i = 0; i < cellCount; i++) {
+            var cell = row.insertCell(i);
+            if (i == 0) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<input type="text" value="'+info[0][0]+'" onkeyup="tableToJson();" style="height:45px;"/>';
+            }
+            else if (i==1) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<textarea rows="2" cols="30" value="" onkeyup="tableToJson();" id="data' + rowvalue + colvalue + '" >'+info[0][1]+'</textarea>';
+            }
+            else if (i==2) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<textarea rows="2" cols="30" value="" onkeyup="tableToJson();" id="data' + rowvalue + colvalue + '" >'+info[0][2]+'</textarea>';
+            }
+            else if (i==3) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<textarea rows="2" cols="30" value="" onkeyup="tableToJson();" id="data' + rowvalue + colvalue + '" >'+info[0][3]+'</textarea>';
+            }
+            else if (i == 4) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+				cell.innerHTML = '<input type="number" min="0" value="'+info[0][4]+'" onkeyup="tableToJson();" oninput="preventNegative(this);" onkeydown="blockMinus(event);" style="height:45px;"/>';
+			} 
+			else if (i == 5) {
+				var rowvalue = rowCount;
+				var colvalue = i;
+				cell.innerHTML = '<input type="number" min="0" value="'+info[0][5]+'" onkeyup="tableToJson();" oninput="preventNegative(this);" onkeydown="blockMinus(event);" style="height:45px;"/>';
+			} else if (i == 6) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<input type="button" value="Delete"  onclick="deleteRow(this);tableToJson();"  />';
+            }
+        }
+            tableToJson();
+        }
+            });});
+            
+		}
+	}
+	function preventNegative(el) {
+    if (el.value < 0) {
+        el.value = '';
+    }
+	}
+	function blockMinus(e) {
+    if (e.key === '-' || e.keyCode === 189) {
+        e.preventDefault();
+    }
+        if (e.key === '+' || e.keyCode === 187) {
+            e.preventDefault();
+        }
+    }
+    function addNewRow() {
+        var table = document.getElementById("ETO-table");
+        var rowCount = table.rows.length;
+   
+        var cellCount = table.rows[0].cells.length;
+        var row = table.insertRow(rowCount);
+        for (var i = 0; i < cellCount; i++) {
+            var cell = row.insertCell(i);
+            if (i==1 || i==2 || i==3) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<textarea rows="2" cols="30" value="" onkeyup="tableToJson();" id="data' + rowvalue + colvalue + '" ></textarea>';
+            }
+            else if (i == 0) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<input type="text" value="" onkeyup="tableToJson();" onblur="check_duplicacy('+rowvalue+',this.value);" style="height:45px;"/>';
+			} else if (i == 4 || i == 5) {
+                var rowvalue = rowCount;
+                var colvalue = i;
+				cell.innerHTML = '<input type="number" min="0" value="" oninput="preventNegative(this);" onkeyup="tableToJson();" onkeydown="blockMinus(event);" style="height:45px;"/>';
+            } else {
+                var rowvalue = rowCount;
+                var colvalue = i;
+                cell.innerHTML = '<input type="button" value="Delete"  onclick="deleteRow(this);tableToJson();"  />';
+            }
+        }
+        //tableToJson();
+    }
+    /* This method will delete a row */
+    function deleteRow(ele) {
+        var table = document.getElementById("ETO-table");
+        ele.parentNode.parentNode.remove();
+        //tableToJson();
+    }
+    function check_duplicacy(row,input)
+    {
+        var table = document.getElementById("ETO-table");
+        var rowCount = table.rows.length;
+        var cellCount = table.rows[0].cells.length;
+        var duplicacy = "";
+        if(rowCount>2)
+        {
+        	for (var d = 2; d < rowCount; d++)
+        	{
+			
+            	var row_ref = table.rows[d].cells[0].children[0].value;
+            	if(row_ref==input && d!=row)
+            	{
+                	duplicacy = "true";
+            	}
+        	}
+        }
+        if(duplicacy=="true")
+        {
+            cpq.server.executeScript("GS_IsValid_PMCProduct", {}, function (return_value) {
+		  
+            //CXCPQ-52824 :06/15/2023: Commented and added common message
+            alert("Customized Special Reference Number already exists");
+            /*if(return_value[1]=="Instrumentation")
+            {
+            	alert("Marine Yspec Ref already exists");
+            }
+            else if(return_value[1]=="Gas Products")
+            {
+                alert("ETO Reference no. already exists");
+            }*/
+            });
+            table.rows[row].cells[0].children[0].value = "";
+        }
+    }
+    /* Convert table data to json object */
+    function tableToJson() {
+        var table = document.getElementById("ETO-table");
+        var rowCount = table.rows.length;
+        var cellCount = table.rows[0].cells.length;
+        var data = [];
+        var headers = [];
+        var inputs = table.getElementsByTagName("input");
+        var tot_input = inputs.length;
+        var length = 2;
+        var textarea_count=0;
+											   
+		for (var x = 0; x < cellCount - 1; x++) {
+            header_text = table.rows[0].cells[x].innerHTML;
+													   
+            headers[x] = header_text.replace(/ /gi, "_");
+        }
+        for (var a = 2; a < rowCount; a++) {
+            var tableRow = table.rows[a];
+            var rowData = {};
+            for (b = 0; b < tableRow.cells.length; b++) 
+            {
+                if(b==1 || b==2 || b==3)
+                {
+                    var notes = table.getElementsByTagName("textarea")[textarea_count].value;
+                    rowData[headers[b]] = notes;
+												   
+                    textarea_count++;
+                }
+                else
+                {
+                    if (inputs[length].type != "text" && inputs[length].type != "number") {
+                        length++;
+												  
+                        continue;
+                    } else {
+                        rowData[headers[b]] = inputs[length].value;
+																																					  
+                        length++;
+                    }
+                }
+            }
+											   
+            data.push(rowData);
+        }
+        var myjson = JSON.stringify(data);
+										 
+        var ETO_json_Data = '{"ETOSPEC":' + myjson + "}";
+        //var ETO_json_Data = myjson;
+        var test_x = '{"ETOSPEC":' + myjson + "}";
+        var test = JSON.parse(test_x);
+        var ETO_Row_CNT = test.ETOSPEC.length;
+
+        cpq.server.executeScript("GS_PMC_ETO_JsonData", { action: "add", ETO_json_Data: ETO_json_Data, ETO_Row_CNT: ETO_Row_CNT.toString() }, function (data) {});
+    }
+//Default FMEINPUT
+
+    cpq.events.sub("configurator:updated", function (data, event) {
+		//Condition to avoid this script to be executed for PAS products
+				IsSAPProduct=$('#IsSAPProduct').text();
+		if(IsSAPProduct == 'true') {
+			cpq.server.executeScript("GS_Get_Quote_LOB",{}, function (v_lob) {
+				if (v_lob=='PMC' || v_lob=='HCP')
+				{ 
+				 //if (v_lob=='HCP'){$("#attributesContainer").hide()}
+			cpq.server.executeScript("GS_getProductFMECode", { PartNumber: cpq.models.configurator.responderModule.partNumber() }, function (data) {
+					 
+					  $("#fmeinput").val(data[0])
+					  $("#sfmeinput").val(data[1])
+					  sfme_update();
+                	  if(v_lob=='PMC'){
+						cpq.server.executeScript("GS_PMC_YSpecial", {'y_special':'type'}, function (data) {
+                            console.log("--type--data-->",data)
+                            if(data=='Field Instruments'){
+								var fmeinput = $("#fmeinput").val();
+                                if(fmeinput.startsWith("Y")){
+									$(".y_ace_quote").show();
+									$(".yrlyspec").hide();
+                                    $(document.getElementsByClassName('Special_Options?')[0]).parent('div').hide();
+									y_special();
+								} 
+                               }
+						});
+                      }
+				   //  if (!$("#sfmeinput").val()) {
+				// strValue was empty string then assign the value from return function
+					 //  $("#sfmeinput").val(data[1]);
+				 //    }
+					});
+				}
+			});
+		}
+	});
+             
+    cpq.events.sub("configurator:updated", function (data, event) {
+		//Condition to avoid this script to be executed for PAS products
+				IsSAPProduct=$('#IsSAPProduct').text();
+		if(IsSAPProduct == 'true') {
+			cpq.server.executeScript("GS_Get_Quote_LOB",{}, function (v_lob) {
+				if (v_lob=='PMC' || v_lob=='HCP')
+				{
+				cpq.server.executeScript("GS_IsValid_PMCProduct", {}, function (return_value) {
+				cpq.server.executeScript("GS_PMC_ETO_Ref", { FamilyCode: return_value[1] }, function (data1) {
+					$("#eto_refno").html(data1);
+					$('#eto_refnos').select2();
+				}); });
+				}
+			});
+		}
+	});
+    //ETO GAS products- Functions--End--
+// yspec search box start
+function checkinput(col_no,col_id,table_id)
+{
+
+    var table = document.getElementById(table_id);
+	var input=document.getElementById(col_id).value;
+	var filter = input.toUpperCase();
+	var tr = table.getElementsByTagName("tr");
+
+	for(var i=1;i<tr.length;i++)
+	{
+		var td = tr[i].getElementsByTagName("td")[col_no];
+
+		if(td)
+		{
+            if(table_id=="ETO-table")
+            {
+                if(col_id=="ref_no")
+                {
+                	txtvalue = td.getElementsByTagName("input")[0].value;
+                }
+                else
+                {
+                    txtvalue = td.getElementsByTagName("textarea")[0].value;
+                }
+            }
+            else
+            {
+				txtvalue = td.textContent || td.innerText;
+            }
+			if(txtvalue.toUpperCase().indexOf(filter)>-1)
+			{
+			tr[i].style.display="";
+			}
+			else
+			{
+			tr[i].style.display="none";
+			}
+		}
+	}
+	
+}  
+    
+	function clearval(col_name)
+    {
+        if(col_name=="yspecial_quote")
+        {
+            $("#yspecial_description").val("");
+        }
+        else if(col_name=="yspecial_description")
+        {
+            $("#yspecial_quote").val("");
+        }
+    }
+// yspec search box end
+    cpq.events.sub("configurator:updated", function (data, event) {
+		handleShellbarNavigationForR2Q()
+		var breadcrumbs = cpq.models.configurator.breadcrumbsModule.breadcrumbs();
+		var breadcrumbsSelected = breadcrumbs.map(b => b.name);
+		var migrationRelevant = breadcrumbsSelected.includes("HCI Labor Config");
+		var migrationnew = breadcrumbsSelected.includes("MSID_New");
+		if(migrationnew || migrationRelevant){
+			$('select').each(function() {
+				const $firstOption = $(this).find('option:first-child');
+				if ($firstOption.length  && $firstOption.text().trim() === '') {
+					$firstOption.remove();
+				}
+				
+			});
+		}
+		if(sessionStorage.getItem("checkcartR2Q") =='Yes' ){
+
+			$('.actions-and-statuses.mobile-white.fiori3-configurator-actions .configAdd').addClass('disabled');
+			$('.actions-and-statuses.mobile-white.fiori3-configurator-actions .cancle_cart').addClass('disabled');
+		}
+		else if (sessionStorage.QuoteStatusID =='32' && sessionStorage.getItem("checkcartR2Q") !='Yes' ){
+			$('.actions-and-statuses.mobile-white.fiori3-configurator-actions .configAdd').removeClass('disabled');
+			$('.actions-and-statuses.mobile-white.fiori3-configurator-actions .cancle_cart').removeClass('disabled');
+		}
+		function favQuoteIdnewexp(){
+			var quoteidconfignewexp = cpq.models.configurator.attributes()[1].userInput();
+				localStorage.setItem("QuoteIdnewexp", quoteidconfignewexp);
+				let storedQuoteNumber = localStorage.getItem('QuoteIdnewexp');
+				let sessionQuoteNumber = sessionStorage.getItem('editquote_num');
+				if (storedQuoteNumber !== sessionQuoteNumber && sessionQuoteNumber) {
+					sessionStorage.setItem('editquote_number', '');
+					sessionStorage.setItem('editquote_num', '');
+				}
+			}
+		
+		if(localStorage.getItem("checkR2Q") =='Yes' ){
+			//if($('.product-name').text() == 'CE PLC Remote Group'){
+				//cpq.server.executeScript("PLCCONTHIDE",{},function (dataset) {
+				 
+					//});
+				//}
+
+
+		
+		
+				$(document).on("keypress", ".config-container.cpq-scroll.underscore table tr td:last-child input", function (e) {
+			if (e.key === "_") {
+				e.preventDefault();
+				let $input = $(this);
+				let $existingError = $input.siblings(".underscore-error");
+				if ($existingError.length === 0) {
+					let $errorMsg = $('<span class="underscore-error" style="color: #ff0000;font-size: 12px;background: #ffebeb;padding: 3px 5px;position: absolute;left: 0;margin: 0;border-radius: 4px;z-index: 9;">Underscore (_) character is not allowed!</span>');
+					$input.after($errorMsg);
+
+					setTimeout(function () {
+						$errorMsg.fadeOut(300, function () {
+							$(this).remove();
+						});
+					}, 3000); 
+				}
+			}
+		});
+
+		
+						$('.table_R2Q_CE_System_Cont tbody .read-only-container-cell span').each(function () {
+		  // Get the current title attribute
+		  let title = $(this).attr('title');
+
+		  if (title) {
+			// Replace both strings in the title
+			title = title.replace('Industrial Security (Access Control)', 'Personnel Access Control')
+						 .replace('Digital Video Manager', 'CCTV System').replace('Tank Gauging Engineering', 'Tank Gauging').replace('Fire Detection & Alarm Engineering', 'Fire Alarm Panel'); 
+			$(this).attr('title', title);
+		  }
+		});
+			//replace the name Digital Video Manager to CCTV System for R2Q start
+			$("div#Header_02_open span.onlytext:contains('Fire Detection & Alarm Engineering')," +
+			  ".table_R2Q_CE_System_Cont tbody .read-only-container-cell span:contains('Fire Detection & Alarm Engineering')," +
+			  "ul#breadcrumbsContainer li.breadcrumb-item span:contains('Fire Detection & Alarm Engineering')," +
+			  ".table_DVM_System_Group_Cont th .sortable-display-icon.fiori3-sortable-display-icon span:contains('Fire Detection & Alarm Engineering')," +
+			  "#productNameHeadingId:contains('Fire Detection & Alarm Engineering')"
+			).each(function() {	 
+				let currentText = $(this).text();
+				let newText = currentText.replace("Fire Detection & Alarm Engineering", "Fire Alarm Panel");
+				$(this).text(newText);
+			});
+
+			if ($('.table_DVM_System_Group_Cont').length) {
+				$(".table_DVM_System_Group_Cont td input.form-control").each(function() {
+					let currentVal = $(this).val();
+					if (currentVal.includes("Digital Video Manager")) {
+						$(this).val(currentVal.replace("Fire Detection & Alarm Engineering", "Fire Alarm Panel"));
+					}
+				});
+			} 
+		//replace the name Digital Video Manager to CCTV System for R2Q End
+		 //replace the name Digital Video Manager to CCTV System for R2Q start
+			$("div#Header_02_open span.onlytext:contains('Digital Video Manager')," +
+			  ".table_R2Q_CE_System_Cont tbody .read-only-container-cell span:contains('Digital Video Manager')," +
+			  "ul#breadcrumbsContainer li.breadcrumb-item span:contains('Digital Video Manager')," +
+			  ".table_DVM_System_Group_Cont th .sortable-display-icon.fiori3-sortable-display-icon span:contains('Digital Video Manager')," +
+			  "#productNameHeadingId:contains('Digital Video Manager')"
+			).each(function() {
+				let currentText = $(this).text();
+				let newText = currentText.replace("Digital Video Manager", "CCTV System");
+				$(this).text(newText);
+			});
+
+			if ($('.table_DVM_System_Group_Cont').length) {
+				$(".table_DVM_System_Group_Cont td input.form-control").each(function() {
+					let currentVal = $(this).val();
+					if (currentVal.includes("Digital Video Manager")) {
+						$(this).val(currentVal.replace("Digital Video Manager", "CCTV System"));
+					}
+				});
+			} 
+		//replace the name Digital Video Manager to CCTV System for R2Q End
+			//replace the name Industrial Security (Access Control) to Personnel Access Control for R2Q start
+			$("div#Header_02_open span.onlytext:contains('Industrial Security (Access Control)')," +
+				".table_R2Q_CE_System_Cont tbody .read-only-container-cell span:contains('Industrial Security (Access Control)')," +
+				"ul#breadcrumbsContainer li.breadcrumb-item span:contains('Industrial Security (Access Control)')," +
+				".table_DVM_System_Group_Cont th .sortable-display-icon.fiori3-sortable-display-icon span:contains('Industrial Security (Access Control)')," +
+				"#productNameHeadingId:contains('Industrial Security (Access Control)')"
+				).each(function() {
+					let currentText = $(this).text();
+					let newText = currentText.replace("Industrial Security (Access Control)", "Personnel Access Control");
+					$(this).text(newText);
+				});
+
+			if ($('.table_DVM_System_Group_Cont').length) {
+				$(".table_DVM_System_Group_Cont td input.form-control").each(function() {
+					let currentVal = $(this).val();
+					if (currentVal.includes("Industrial Security (Access Control)")) {
+						$(this).val(currentVal.replace("Industrial Security (Access Control)", "Personnel Access Control"));
+					}
+				});
+			} 
+		//replace the name Industrial Security (Access Control) to Personnel Access Control for R2Q end
+		//replace the name Tank Gauging Engineering to Tank Gauging for R2Q start
+			$("div#Header_02_open span.onlytext:contains('Tank Gauging Engineering')," +
+					".table_R2Q_CE_System_Cont tbody .read-only-container-cell span:contains('Tank Gauging Engineering')," +
+					"ul#breadcrumbsContainer li.breadcrumb-item span:contains('Tank Gauging Engineering')," +
+					".table_DVM_System_Group_Cont th .sortable-display-icon.fiori3-sortable-display-icon span:contains('Tank Gauging Engineering')," +
+					"#productNameHeadingId:contains('Tank Gauging Engineering')"
+					).each(function() {
+						let currentText = $(this).text();
+						let newText = currentText.replace("Tank Gauging Engineering", "Tank Gauging");
+						$(this).text(newText);
+					});
+
+				if ($('.table_DVM_System_Group_Cont').length) {
+					$(".table_DVM_System_Group_Cont td input.form-control").each(function() {
+						let currentVal = $(this).val();
+						if (currentVal.includes("Tank Gauging Engineering")) {
+							$(this).val(currentVal.replace("Tank Gauging Engineering", "Tank Gauging"));
+						}
+					});
+				} 
+		//replace the name Tank Gauging Engineering to Tank Gauging for R2Q end
+					
+			var breadcrumbs = cpq.models.configurator.breadcrumbsModule.breadcrumbs();
+			var breadcrumbsSelected = breadcrumbs.map(b => b.name);
+			var migrationCEplc = breadcrumbsSelected.includes("R2Q New / Expansion Project");
+			if (migrationCEplc) {
+				if(data.model.responderModule.name() =='R2Q ControlEdge PLC System'){ 
+					var cabinate_req= $('[aria-label="Choose PLC_Software_Question_Cont"] > tbody  > tr > td[data-title*="Is Cabinet Required"] select option:selected').text()
+			 
+					if(cabinate_req == 'No'){
+						localStorage.setItem('cabinate_req','No')
+					}
+					else if(cabinate_req == 'Yes'){
+						localStorage.setItem('cabinate_req','Yes')
+					}
+					else{
+						localStorage.setItem('cabinate_req','')
+					}
+				}
+			}
+			
+			$('.left_configtree').show()
+			$('#attributesContainer').addClass('col-md-10').removeClass('row');
+			$('#attributesContainer').parent().parent().addClass('r2q_app');
+			$('#attributesContainer').closest('#main').addClass('r2q_app_main');
+			$('.r2q_app_main').closest('#wrap').addClass('r2q_app_wrap');			
+			const incompleteIndicator = document.getElementById("incompleteIndicator");
+			const submitProductButton = document.getElementById("submitproduct");
+			if (incompleteIndicator && submitProductButton) {
+				const isIndicatorHidden = incompleteIndicator.style.display === "none";
+				if (isIndicatorHidden) {
+					submitProductButton.classList.remove("submit_disable");
+				} else {
+					submitProductButton.classList.add("submit_disable");
+					sessionStorage.removeItem('QuotecartStatusName');                
+				}
+			}
+			function egapfunction(){
+				let egapuserInputValue = cpq.models.configurator.attributes()[3]?.userInput();
+				if (egapuserInputValue === "Submit") {
+					$('#submitproduct').addClass("submit_disable");
+					$('#saveproduct').addClass("submit_disable");
+					$('.r2q_view_favorites').addClass("submit_disable");
+					}
+				}
+
+			$(".r2q_app_main .r2q_app").on("click", "#attributesContainer, #actionsContainer", function() {
+				iconhide(); 
+			  });
+			var lastLi = $('.breadcrumb li:last-child');   
+			if (lastLi.text().trim() === "R2Q New / Expansion Project") {
+				$('#submitproduct').show();
+				$('#saveproduct').show();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons').hide();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons.r2q_favorites-icons').show();
+				$("#r2q_heading").text("");
+				$('#saveproduct').removeAttr('disabled');
+				iconhide();
+				favQuoteIdnewexp();	
+				submitcustomer();
+				egapfunction();
+			}
+			else if (lastLi.text().trim() === "Migration_New"){	
+				$('#submitproduct').show();
+				$('#saveproduct').show();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons').hide();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons.r2q_favorites-icons').show();
+				iconhide();
+				favQuoteIdnewexp();			
+				submitcustomer();
+				egapfunction();			
+				$(".r2q_app .fiori3-table tr td:last-child .read-only-container-cell span:last-child").each(function() {
+					let htmlContent = $(this).html();
+					let titleAttr = $(this).attr("title");
+					if (htmlContent) {
+						htmlContent = htmlContent.replace(/Project Management/gi, '').replace(/<br><br>/g, '<br>');
+							if (htmlContent.endsWith('<br>')) {  
+								htmlContent = htmlContent.slice(0, -4);
+							}
+						$(this).html(htmlContent);
+					}
+					if (titleAttr) {
+						titleAttr = titleAttr.replace(/Project Management/gi, '').replace(/<br>/g, ', ').replace(/, , /g, ', ');
+							if (titleAttr.endsWith(', ')) {
+								titleAttr = titleAttr.slice(0, -2);
+							}
+						$(this).attr("title", titleAttr);
+					}
+				});
+			}
+			else if (lastLi.text().trim() === "Digital Video Manager Group" && localStorage.checkR2Q == 'Yes'){
+				$(".r2q_app_main .r2q_app div#tab_Name ul#configurator-tabs li:contains('product_Config_Debug')").hide();
+				$('#submitproduct').hide();
+				$('#saveproduct').hide();
+			}
+			else if (lastLi.text().trim() === "Terminal Manager" && localStorage.checkR2Q == 'Yes'){
+				//$(".r2q_app_main .r2q_app .row.col-xs-12.swagger:has(#Header_05_open):contains('Labor Details')").hide();
+				$('#submitproduct').hide();
+				$('#saveproduct').hide();
+			}
+			else if (lastLi.text().trim() === "EHPM/EHPMX/ C300PM" && localStorage.checkR2Q == 'Yes'){
+				$("table[aria-label^='ENB Migration - Configurations']").find('p').first()[0].innerText = 'Number of NIMs in this config? (0-10)';
+				$('#submitproduct').hide();
+				$('#saveproduct').hide();
+			}
+			else if (lastLi.text().trim() === "Virtualization System"){
+				workloadList = Array.from($('#workload-questions-content tbody:odd'));
+				for(i=1;i<6;i++){
+					$(workloadList[i]).find('tr:first input').attr('disabled', 'disabled');
+				}
+				$('#submitproduct').hide();
+				$('#saveproduct').hide();
+			}
+			
+			else if ($('#breadcrumbsContainer .breadcrumb-item').last().find('span').text()== 'R2Q HCI'){
+				$('#submitproduct').show();
+				$('#saveproduct').show();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons').hide();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons.r2q_favorites-icons').show();
+				iconhide();
+				favQuoteIdnewexp();	
+				submitcustomer();
+				egapfunction();
+			}
+			else if ($('#breadcrumbsContainer .breadcrumb-item').last().find('span').text()== 'Cyber'){
+				$('#submitproduct').show();
+				$('#saveproduct').show();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons').hide();
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons.r2q_favorites-icons').show();
+				iconhide();
+				favQuoteIdnewexp();			
+				submitcustomer();
+				egapfunction();
+			}
+			else {
+				$('#submitproduct').css('display', 'none');
+				$('#saveproduct').css('display', 'none');
+				$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons').css('display', 'none');
+			$('.r2q_app_main .r2q_app .PrimaryHighlightedPanel span.favorites-icons.r2q_favorites-icons').css('display', 'none');
+			}
+			document.querySelectorAll('.r2q_app_main .r2q_app .fiori3-container-label label').forEach(label => {
+				if (label.innerHTML.trim() === '&nbsp;') {
+					label.style.display = 'none';
+				}
+			});
+			
+             $('.r2q_app_main .r2q_app [aria-label="Choose R2Q_Project_Questions_TAS_Cont"] td.col-xs-8 span:contains(Type of TAS System)').addClass('required-attribute')
+             
+			<!-- remove empty option -->
+			var lastLi = $('.breadcrumb li:last-child');
+			var breadcrumbs = cpq.models.configurator.breadcrumbsModule.breadcrumbs();
+			var breadcrumbsSelected = breadcrumbs.map(b => b.name);
+			var migrationRelevant = breadcrumbsSelected.includes("HCI Labor Config");
+			var migrationnew = breadcrumbsSelected.includes("MSID_New");
+			var HC900_System = breadcrumbsSelected.includes("HC900 System");
+			var migration3rdparty = breadcrumbsSelected.includes("3rd Party PLC to ControlEdge PLC/UOC");
+            var migrationc200 = breadcrumbsSelected.includes("C200 Migration");
+				if (lastLi.text().trim() === "3rd Party PLC to ControlEdge PLC/UOC") {
+					$('#attributesContainer').addClass('thirdparty_migration')
+				}
+				if (lastLi.text().trim() != "3rd Party PLC to ControlEdge PLC/UOC") {
+					$('#attributesContainer').removeClass('thirdparty_migration')
+				}
+            if(migrationc200){
+			$('.r2q_app_main .r2q_app tr td select option:first-child:contains("- none -")').hide();
+			}
+            if(HC900_System){
+				var heading = cpq.models.configurator.responderModule.description()
+		        $("#r2q_heading").text(heading)
+			}
+			if(migrationnew){
+				$('.r2q_app_main .r2q_app span#heading').css("display","flex");
+				/*if ((localStorage.getItem("checkR2Q") !== "Yes" )){
+				$('select').each(function() {
+					const $firstOption = $(this).find('option:first-child');
+					if ($firstOption.length && $firstOption.text().trim() === '') {
+						$firstOption.remove();
+					}
+				});
+				}*/
+			}
+			
+			if(migration3rdparty){
+				$('.r2q_app_main .r2q_app [name="Calculation_Button"]').css("display","block");
+				$('select').each(function() {
+					const $firstOption = $(this).find('option:first-child');
+					if ($firstOption.length && $firstOption.text().trim() === '') {
+						$firstOption.remove();
+					}
+				});
+			}
+			if (migrationRelevant) {
+			/*if ((localStorage.getItem("checkR2Q") !== "Yes" )){
+				$('select').each(function() {
+					const $firstOption = $(this).find('option:first-child');
+					if ($firstOption.length && $firstOption.text().trim() === '') {
+						$firstOption.remove();
+					}
+				});
+				}*/
+			}
+			
+            // Sorting in alphabetical order in product list starts here
+            
+            function sortModalListAZ() {
+            const ul = document.querySelector('#AddRowModal ul[data-bind="foreach: $data"]');
+            if (!ul) return;
+            const listItems = Array.from(ul.querySelectorAll('li'));
+            listItems.sort((a, b) => {
+                const textA = a.textContent.trim().toUpperCase();
+                const textB = b.textContent.trim().toUpperCase();
+                return textA.localeCompare(textB);
+            });
+            listItems.forEach(li => ul.appendChild(li));
+            }            
+            $('.r2q_add_row_btn').on('click', function () {
+            setTimeout(sortModalListAZ, 100);
+            });
+            // Sorting in alphabetical order in product list ends here
+
+			<!-- remove empty option -->	
+			$('.r2q_app_main .r2q_app .R2Q_virtualization tr td select option:first-child:contains("- none -")').hide();
+			setTimeout(function() {
+				var lastLi = $('.breadcrumb li:last-child');
+				if (lastLi.text().trim() === "ControlEdge PLC System") {
+					var breadcrumbs = cpq.models.configurator.breadcrumbsModule.breadcrumbs();
+					var breadcrumbsSelected = breadcrumbs.map(b => b.name);
+					var migrationRelevant = breadcrumbsSelected.includes("R2Q New / Expansion Project");
+					if (migrationRelevant) {
+						$('#saveAndExitNestedProduct').removeAttr('disabled');
+					}
+				}
+			}, 500);			
+			<!-- getting userinput value quote status starts here-->
+	  function submitcustomer(){
+		const QuotecartStatusName = cpq.models.configurator.attributes().map(attr => attr.userInput());
+		sessionStorage.setItem("QuotecartStatusName", QuotecartStatusName);
+		const attributes = cpq.models.configurator.attributes();
+		const Quoteattributesvalue = attributes.map(attr => attr.userInput());
+		const StatusNamesubmit = Quoteattributesvalue.find(value => value === "Submitted to Customer");
+		if (StatusNamesubmit) {
+		  	sessionStorage.setItem("QuotecartStatusName", StatusNamesubmit);
+		}
+		else{
+			sessionStorage.setItem("QuotecartStatusName", "");
+		}
+			}
+			var quotestatusname = sessionStorage.getItem('QuotecartStatusName');    
+			if (quotestatusname === "Submitted to Customer") {
+				$('#submitproduct').addClass('submit_disable');
+				$('#saveproduct').addClass('submit_disable');
+		$('#saveAndExitNestedProduct').addClass('submit_disable');
+		$('.r2q_app_main .r2q_app .r2q_add_row_btn').addClass('submit_disable');
+				$('.r2q_favorites-icons .r2q_view_favorites').addClass('submit_disable');
+			}
+			<!-- getting userinput value quote status ends here-->
+
+			$('.breadcrumb li').each(function() {
+				if ($(this).text().trim() === "New / Expansion Project") {
+					$('.left_configtree').hide();
+					$('#attributesContainer').removeClass('col-md-10').addClass('row');
+					$('.r2q_app_main').closest('#wrap').removeClass('r2q_app_wrap');
+					$('#attributesContainer').parent().parent().removeClass('r2q_app');
+					$('#attributesContainer').closest('#main').removeClass('r2q_app_main');
+				}
+			});
+			// Set the QuoteId in localStorage
+			var quoteidconfig = cpq.models.configurator.attributes()[1].userInput();
+			//localStorage.setItem("QuoteId", quoteidconfig);
+			let storedQuoteNumber = localStorage.getItem('QuoteIdnewexp');
+			if (storedQuoteNumber && !$('span').text().includes(storedQuoteNumber)) {
+			$('.r2q_app_main .r2q_php_header .php_btnsec span').text(storedQuoteNumber);
+			 
+			}
+		}
+		else{
+			$('.left_configtree').hide();
+			$('#attributesContainer').removeClass('col-md-10').addClass('row');
+			$('#attributesContainer').parent().parent().removeClass('r2q_app');
+			$('#attributesContainer').closest('#main').removeClass('r2q_app_main');
+			$('.r2q_app_main').closest('#wrap').removeClass('r2q_app_wrap');
+		}
+		
+		//Condition to avoid this script to be executed for PAS products
+				IsSAPProduct=$('#IsSAPProduct').text();
+		if(IsSAPProduct == 'true') {
+			cpq.server.executeScript("GS_Get_Quote_LOB",{}, function (v_lob) {
+								  
+				if (v_lob=='PMC' || v_lob=='HCP')
+				{
+					cpq.server.executeScript("GS_FME_VISIBILITY", {}, function (data) {
+						if (data == true) {
+							localStorage.setItem("confighide", true);
+						
+							var tb_name = $("div#tab_Name ul.nav.nav-responsive.nav-tabs li.active span#tab_Name_system").text().trim();
+						  
+							if (tb_name != "$general" && tb_name != "Y-SPECIAL" && tb_name != "SPECIAL" && tb_name != "Special" && tb_name != "General" && tb_name != "SPECIALS") {
+						
+								$(".fmecls").css("display", "none");
+								$(".yrlyspec").css("display", "none");
+							} else {
+								if (tb_name == "$general") {
+							
+									$(".fmecls").css("display", "block");
+									$(".yrlyspec").css("display", "none");
+									$("#addyspec").css("display", "none");
+									$("#etotable").css("display", "none");
+									$("#addeto").css("display", "none");
+									$("#etoref").css("display", "none");
+									cpq.server.executeScript("GS_IsValid_PMCProduct", {}, function (return_value) {
+									if (return_value[0] === "True" && (return_value[1]=="Gas Products"))
+									{
+										$("#smc_div").css("display", "block");
+									}
+									else
+									{
+										$("#smc_div").css("display", "none");
+									}
+									});
+									
+								} else {
+									
+									$(".fmecls").css("display", "block");
+
+									cpq.server.executeScript("GS_IsValid_PMCProduct", {}, function (return_value) {
+										var spcial_opt = $("#1156 option:selected").text().toString();
+                                        //CXCPQ-52824 :06/15/2023: Added Elster Product in IF condition
+										if (return_value[0] === "True" && (return_value[1]=="Instrumentation" || return_value[1]=="Gas Products" || return_value[1]=="Elster Product"))
+										{
+											if(return_value[1]=="Instrumentation" || return_value[1]=="Gas Products" || return_value[1]=="Elster Product")
+										{
+											document.getElementById("eto_ref_no").innerHTML = "Customized Special Reference Number";
+											document.getElementById("proposal_notes").innerHTML = "Customized Special Proposal Notes";
+											document.getElementById("production_notes").innerHTML = "Customized Special Production Notes";
+											document.getElementById("manufacturing_notes").innerHTML = "Customized Special Manufacturing Notes";
+											document.getElementById("eto_price").innerHTML = "Customized Special Price";
+											document.getElementById("eto_cost").innerHTML = "Customized ETO Cost";
+											document.getElementById("choose_ref_no").innerHTML = "Choose Customized Special Reference Number";
+											document.getElementById("addeto_btn").innerHTML = "Add ETO Ref.";
+										}
+                                        //CXCPQ-52824 :06/15/2023: Added Elster Product in IF condition
+                                        if(return_value[1]=="Instrumentation" || return_value[1]=="Elster Product")
+                                        {
+                                            $("#smc_div").css("display", "none");
+                                        }
+										else if(return_value[1]=="Gas Products" || return_value[1]=="Elster Product")
+										{
+											$("#smc_div").css("display", "block");
+										}
+										$(".yrlyspec").css("display", "none");
+										$(".addyspec").css("display", "none");
+										$("#addyspec").css("display", "none");
+										
+										var table = document.getElementById("ETO-table");
+										var rowCount = table.rows.length;
+										
+										if (rowCount > 2) {
+											$("#etotable").css("display", "block");
+										} else {
+											$("#etotable").css("display", "none");
+										}
+									  
+										if(spcial_opt.search("[Y]") >= 0)
+										{
+											$("#addeto").css("display", "block");
+											$("#etoref").css("display", "block");
+                                            $("#etotable").css("display", "block");
+										}
+										else
+										{
+											$("#addeto").css("display", "none");
+											$("#etoref").css("display", "none");
+                                            $("#etotable").css("display", "none");
+										}
+										
+									} 
+										else if (return_value[0] === "True" && return_value[1]=="Field Instruments")
+										 {
+											if(spcial_opt.search("[Y]") >= 0)
+											{
+												$(".yrlyspec").css("display", "none");
+												$("#addyspec").css("display", "none");
+											}
+											else
+											{
+												$(".yrlyspec").css("display", "none");
+												$("#addyspec").css("display", "none");
+											}
+											$("#smc_div").css("display", "none");
+											$("#addeto").css("display", "none");
+											$("#etotable").css("display", "none");
+											$("#etoref").css("display", "none");
+										}
+										else
+										{
+											$("#smc_div").css("display", "none");
+											$("#addeto").css("display", "none");
+											$("#etotable").css("display", "none");
+											$("#etoref").css("display", "none");
+											$(".yrlyspec").css("display", "none");
+											$(".addyspec").css("display", "none");
+											$("#addyspec").css("display", "none");
+											$(".yrlyspectab").css("display", "none");
+										}
+									});
+
+									
+									var yspecquote = $("#yspec_quote_input").val();
+
+									if (yspecquote != "" && typeof yspecquote != "undefined") {
+										$("#addyspec").css("display", "block");
+									} else {
+										$("#addyspec").css("display", "none");
+									}
+								}
+							}
+						} else {
+							localStorage.setItem("confighide", false);
+							$(".fmecls").css("display", "none");
+							$(".yrlyspec").css("display", "none");
+						}
+					});
+ 
+
+					if (document.getElementById("sampletest")) {
+						if (document.getElementById("yspec_quote")) {
+							var spec = $("#yspec_quote").val();
+						 
+						} else {
+							var spec = "";
+					 
+						}
+
+						cpq.server.executeScript("GS_Yspec_Quote", { yspecitm: spec }, function (data) {
+						
+							document.getElementById("sampletest").innerHTML = data;
+							$('#yspec_quote_input').select2();
+
+						});
+						$(".yrlyspectab").css("display", "block");
+						$("#yspec_grid").html("");
+
+						cpq.server.executeScript("GS_Yspec_table", { action: "view", yqt: "", yso: "" }, function (data) {
+						
+							for (i = 0; i < data.length; i++) {
+								tr = document.createElement("tr");
+								td = document.createElement("td");
+								input = document.createElement("input");
+								input.setAttribute("type", "button");
+								input.setAttribute("onclick", "delqtrow(this)");
+								input.setAttribute("class", "delitm");
+								td.appendChild(input);
+								tr.appendChild(td);
+								for (j = 0; j <= 5; j++) {
+									td = document.createElement("td");
+									if (data[i][j] != null) {
+										tex = document.createTextNode(data[i][j]);
+									} else {
+										tex = document.createTextNode("");
+									}
+									if (j==5){
+										tex = document.createElement("input");
+										tex.setAttribute("type", "number");
+										tex.setAttribute("style", "height:45px;");
+										tex.setAttribute("onkeyup", "yspecJson();")
+										if (data[i][j] != null) {
+												tex.setAttribute("value", data[i][j]);
+												}
+									}
+									td.appendChild(tex);
+									tr.appendChild(td);
+								}
+								document.getElementById("yspec_grid").appendChild(tr);
+							}
+							//if (data.length == 0) {
+								//tr = document.createElement("tr");
+								//td = document.createElement("td");
+								//td.setAttribute("colspan", "6");
+								//tex = document.createTextNode("No data available");
+								//td.appendChild(tex);
+								//tr.appendChild(td);
+								//document.getElementById("yspec_grid").appendChild(tr);
+								//$(".yrlyspectab").css("display", "none");
+						   // }
+						});
+					}
+				}
+			});
+		}
+    });
+
+	cpq.events.sub("configurator:updated", function (data, event) {
+        const validTitles = [
+            "Personnel Access Control",
+            "Terminal Manager",
+            "Fire Alarm Panel",
+            "CCTV System",
+            "Public Address General Alarm System",
+            "Tank Gauging",
+            "Operator Training",
+            "Small Volume Prover",
+            "Skid and Instruments"
+        ];
+
+        let attempts = 0;
+        const maxAttempts = 20;
+
+        const interval = setInterval(() => {
+            var breadcrumbs = cpq.models.configurator.breadcrumbsModule.breadcrumbs();
+            var lastLiText = $('.breadcrumb li:last-child').text().trim();
+
+            if (validTitles.includes(lastLiText)) {
+                const h2 = document.getElementById("productNameHeadingId");
+                const target = document.getElementById("r2q_heading");
+
+                if (h2 && h2.textContent && target) {
+                    target.textContent = h2.textContent;
+                    clearInterval(interval);
+                }
+            }
+
+            if (++attempts >= maxAttempts) {
+                clearInterval(interval);
+            }
+        }, 100); // Check every 100ms
+    });
+
+    function subopt() {
+        selectedValue = document.getElementById("yspec_quote_input").value;
+		
+        if (selectedValue != "") {
+            cpq.server.executeScript("GS_Yspec_subopt", { yspecitm: selectedValue }, function (data) {
+				//console.log("yspec---->",data)
+				document.getElementById("suboptn").style.display = "none";
+				//document.getElementById("suboptn").innerHTML = data;
+            });
+        } else {
+            document.getElementById("addyspec").style.display = "none";
+            document.getElementById("suboptn").style.display = "none";
+        }
+    }
+    function addrowyspec(Elam) {
+        selectedValue = Elam.value;
+        if (selectedValue != "") {
+            document.getElementById("addyspec").style.display = "block";
+        } else {
+            document.getElementById("addyspec").style.display = "none";
+        }
+    }
+    
+    function addyspecgrid() {
+       // var yqt = $("#yspec_quote").val();
+        var yqt=$("#yspec_quote_input").val();
+		//var yso = $("#yspec_subopt").val();        
+        $(".yrlyspectab").css("display", "block");
+        //$("#yspec_grid").html("");
+ 
+		cpq.server.executeScript("GS_Yspec_table", { action: "get_yspec_info", yqt: yqt, yso: '' }, function (data) {
+ 
+            var table = document.getElementById("yspec-table");
+        	var rowCount = table.rows.length;
+            var duplicacy="";
+            if(rowCount>2)
+            {
+                for (var d = 2; d < rowCount; d++) 
+                {
+					
+                    var row_ref = table.rows[d].cells[1].innerHTML;
+				
+                    if(row_ref==data[0][0])
+                    {
+                        duplicacy = "true";
+                    }
+                }
+            }
+            if(duplicacy=="true")
+            {
+                alert("Yspec Reference no. already exists");
+            }
+            else{
+            for (i = 0; i < data.length; i++) {
+                tr = document.createElement("tr");
+                td = document.createElement("td");
+                input = document.createElement("input");
+                input.setAttribute("type", "button");
+                input.setAttribute("onclick", "delqtrow(this)");
+                input.setAttribute("class", "delitm");
+                td.appendChild(input);
+                tr.appendChild(td);
+                for (j = 0; j <= 5; j++) {
+                    td = document.createElement("td");
+                    if (i==0 && j==0)
+                    {
+					 
+                        cpq.server.executeScript("GS_getProductFMECode", { PartNumber: cpq.models.configurator.responderModule.partNumber() }, function (data) {
+					  
+                       	 $("#fmeinput").val(data[0])
+						 $("#sfmeinput").val(data[1])
+                         sfme_update();
+                       //  if (!$("#sfmeinput").val()) {
+    						// strValue was empty string then assign the value from return function
+						//      $("#sfmeinput").val(data[1]);
+							//  }
+                        	}); 
+                    }
+                    if (data[i][j] != null) {
+                        tex = document.createTextNode(data[i][j]);
+                    } else {
+                        tex = document.createTextNode("");
+                    }
+					if (j==5){
+							tex = document.createElement("input");
+							tex.setAttribute("type", "number");
+							tex.setAttribute("style", "height:45px;");
+							tex.setAttribute("onkeyup", "yspecJson();")
+							if (data[i][j] != null) {
+								tex.setAttribute("value", data[i][j]);
+								}
+							}
+                    td.appendChild(tex);
+                    tr.appendChild(td);
+                }
+                document.getElementById("yspec_grid").appendChild(tr);
+            }
+            yspecJson();
+        }
+        });
+        
+    }
+	
+    function delqtrow(row) {
+        var table = document.getElementById("yspec-table");
+        row.parentNode.parentNode.remove();
+        
+        $(".yrlyspectab").css("display", "block");
+        yspecJson();
+    }
+    function yspecJson() 
+	{
+        var table = document.getElementById("yspec-table");
+        var rowCount = table.rows.length;
+        var cellCount = table.rows[0].cells.length;
+	  
+   
+        var data = [];
+        var headers = [];
+        
+		for (var x = 1; x < cellCount; x++) 
+		{
+            header_text = table.rows[0].cells[x].innerHTML;
+            headers[x] = header_text.replace(/ /gi, "_");
+        }
+        for (var a = 2; a < rowCount; a++) 
+		{
+            var tableRow = table.rows[a];
+            var rowData = {};
+            for (b = 1; b < tableRow.cells.length; b++) 
+            {
+                var cell_value = table.rows[a].cells[b].innerHTML;
+                rowData[headers[b]] = cell_value;
+            }
+            data.push(rowData);
+        }
+        var myjson = JSON.stringify(data);
+        var yspec_json_Data = '{"YSPEC_info":' + myjson + "}";
+        var test = JSON.parse(yspec_json_Data);
+        var YSPEC_Row_CNT = test.YSPEC_info.length;
+	  
+		
+        cpq.server.executeScript("GS_Yspec_table", { action: "add", yqt: "", yso: "",yspec_json_data:yspec_json_Data, yspec_row_cnt:YSPEC_Row_CNT }, function (data){});
+	}
+	//End of LOB-PMC if condition
+			//}            
+       // });//End of PMC condition
+		//}); 
+    cpq.events.sub("configurator:updated", function (data, event) {
+if (cpq.models.configurator !== undefined){
+	if (cpq.models.configurator.currentTab() !== undefined){
+		currentTab = cpq.models.configurator.currentTab().name();
+		if ($('#breadcrumbsContainer .breadcrumb-item').last().find('span').text()== 'R2Q HCI' && cpq.models.configurator.attributes.filterByProperty('name', 'AR_HCI_GES Participation %')()[0]?.userInput() == '0'){
+			$('[data-title="GES Location"] select').prop('disabled',true)
+		}
+        if (["LM to ELMM ControlEdge PLC"].includes(currentTab)){
+            cpq.server.executeScript("GS_LM_RacksRemotelyLocated", {}, function (data) {
+			   for(let x=0; x < data.length; x++){
+				   if(data[x] == 'Yes - Only Remote'){
+				   $("#lm-to-elmm-local-col"+x+ " td > div > input").attr("disabled", true);
+				   }
+				   if(data[x] == 'No' || data[x] == ""){
+				   $("#lm-to-elmm-remote-col"+x+ " td > div > input").attr("disabled", true);
+				   }
+			   }
+		   });
+            cpq.server.executeScript("GS_LM_RetainCustomerWiring", {}, function (data) {
+			   for(let x=1; x < data.length; x++){
+				   if(data[x] == 'No' || data[x] == ""){
+				   $("#"+data[0]+(Number(x-1))).attr('disabled', true);
+				   }
+				   else{
+				   $("#"+data[0]+(Number(x-1))).attr('disabled', false);
+				   }
+			   }
+		   });
+        }
+        if (["Graphics Migration"].includes(currentTab)){
+        
+			var graphicsMigrationDisplaysShapesFaceplates= $("#Graphics_Migration_Displays_Shapes_Faceplates1").val();
+			if (graphicsMigrationDisplaysShapesFaceplates !== undefined){
+				$("#Graphics_Migration_Displays_Shapes_Faceplates1 td > div > input").attr("disabled", true);
+				$("#Graphics_Migration_Displays_Shapes_Faceplates1 td > div > input").attr("style", "border: none;background: none;-webkit-box-shadow: none;padding-right: inherit;text-align: -webkit-right;");
+				$("#Graphics_Migration_Displays_Shapes_Faceplates1 td > div > input").first().attr("style", "display: none;");
+				$("#Graphics_Migration_Displays_Shapes_Faceplates0 td > div > span").each(function(){
+					if(this.innerHTML == "0"){
+					$(this).attr("style", "display: none;");
+					}
+				});  
+			}
+        }
+		if (["FDM Upgrade 1", "FDM Upgrade 2", "FDM Upgrade 3"].includes(currentTab)) {
+		
+			
+			cpq.server.executeScript("GS_FDM_AuditTrailfileRequired", {}, function (data) {
+			   for(let x=1; x < data.length; x++) {
+				   if(data[x] == 'No' || data[x] == "") {
+				   $("#"+data[0]+(Number(x-1))).attr('readonly', true);
+				   }
+				   else{
+				   $("#"+data[0]+(Number(x-1))).attr('readonly', false);
+				   }
+			   }
+		   });
+		   
+		   cpq.server.executeScript("GS_FDMUpgrade", {}, function (data) {
+			for(let x=0; x < data.length; x++){
+			 
+				if(data[x] == 'Yes'){
+				//$("#fdm-config-col-"+x+ " td > div > input").attr("disabled", false);
+				//$("#fdm-config-col-"+x+ " td > div > select").attr("disabled", false);
+				  for(var j=1;j<=7;j++)
+				  {
+					 $("#233800_"+j+"_"+x).attr("disabled", false);
+				  }
+				}
+				if(data[x] == 'No' || data[x] == ""){
+				//$("#fdm-config-col-"+x+ " td > div > input").attr("disabled", true);
+				//$("#fdm-config-col-"+x+ " td > div > select").attr("disabled", true);
+				  for(var j=1;j<=7;j++)
+				  {
+					 $("#233800_"+j+"_"+x).attr("disabled", true);
+				  }
+				}
+			}
+		});
+		   cpq.server.executeScript("GS_FDMAddConfig", {}, function (data) {
+			for(let x=0; x < data.length; x++){
+				 
+				if(data[x] == 'Yes'){
+				  for(var j=1;j<=14;j++)
+				  {
+					 $("#846728_"+j+"_"+x).attr("disabled", false);
+				  }
+				}
+				if(data[x] == 'No' || data[x] == ""){
+				  for(var j=1;j<=14;j++)
+				  {
+					 $("#846728_"+j+"_"+x).attr("disabled", true);
+				  }
+				   $("#846728_"+16+"_"+x).attr("disabled", true);
+				}
+			}
+		});
+		  cpq.server.executeScript("GS_FDM_Downlink", {}, function (data) {
+			for(x=0; x < 3; x++){
+			 
+				if(data[0] != 'FDM R520')
+				{
+				$("#846728_"+16+"_"+x).attr("disabled", true);
+				}
+			}
+				});
+			   cpq.server.executeScript("GS_FDMHardware", {}, function (data) {
+				for(let x=0; x < data.length; x++){
+				 
+					if(data[x] == 'Yes'){
+					  for(var j=1;j<=5;j++)
+					  {
+						 $("#233799_"+j+"_"+x).attr("disabled", false);
+					  }
+					}
+					if(data[x] == 'No' || data[x] == ""){
+					  for(var j=1;j<=5;j++)
+					  {
+						 $("#233799_"+j+"_"+x).attr("disabled", true);
+					  }
+					}
+				}
+			});
+     }
+	}}
+}
+);
+    // CXCPQ-22977
+    function deleteAction(deleteRowIndex) {
+        var containerId = $(".containerRow").attr("id").split("_", 2)[1];
+        var containerName = cpq.models.configurator.attributes.filterByProperty("stdAttrCode", parseInt(containerId))()[0].name();
+        var indexId = containerName + "|" + deleteRowIndex;
+
+        $("#deleteAction").modal("show");
+        $("body").removeClass("modal-open");
+
+        $(".rowIndex").attr("id", indexId);
+		
+    }
+    
+    // CXCPQ-30840
+    function getIdentifierModStruct() {
+        $("#identifierModStruct").modal("show");
+        $("body").removeClass("modal-open");
+    }
+
+    // CXCPQ-38097
+    function showModel(modalId) {
+        $(`#${modalId}`).modal("show");
+        $("body").removeClass("modal-open");
+    }
+
+    function Delete(row) {
+        if (row !== "") {
+            cont_name = row.split("|")[0];
+            index = row.split("|")[1];
+            cpq.models.configurator.attributes.filterByProperty("name", cont_name)()[0].container.rows()[index].remove();
+            $("#deleteAction").modal("hide");
+        }
+    }
+
+    function displayvalcodeenable() {
+ 
+        return localStorage.getItem("displayvalcode");
+    }
+
+
+
+
+    cpq.events.sub("configurator:updated", function (data, event) {
+
+        // FDM Additional Configuration
+        var fdm_nos= $("#233801_5_0").val();
+		
+        if(fdm_nos==0)
+        {
+           $("#fdm-additionalconfiguration-content").css("display", "none");
+           $("#fdm-additionalconfiguration-href").attr('class', 'swagger-toggle swagger-toggle-rotated');
+           $("#fdm-additionalconfiguration").attr('class', 'section-toggled');
+        }
+        else
+        {
+            $("#fdm-additionalconfiguration-content").css("display", "block");
+            $("#fdm-additionalconfiguration-href").attr('class', 'swagger-toggle');
+            $("#fdm-additionalconfiguration").attr('class', '');
+        }
+        //FSC_to_SM_IO MIGRATION
+        var total_fsc_sm= $("#4298048_1_0").val();
+        if(total_fsc_sm==0)
+        {
+           $("#FSC_to_SM_IO-station-questions-content").css("display", "none");
+           $("#FSC_to_SM_IO-station-questions-href").attr('class', 'swagger-toggle swagger-toggle-rotated');
+           $("#FSC_to_SM_IO-station-questions").attr('class', 'section-toggled');
+        }
+        else
+        {
+            $("#FSC_to_SM_IO-station-questions-content").css("display", "block");
+            $("#FSC_to_SM_IO-station-questions-href").attr('class', 'swagger-toggle');
+            $("#FSC_to_SM_IO-station-questions").attr('class', '');
+        }
+
+    });
+
+     cpq.events.sub("configurator:updated", function (data, event) {
+        var no_of_zone = $("#858542_1_0").val();
+	  
+        if(no_of_zone<10 || no_of_zone> 256)
+        {
+        	$("#858542_1_0").val("");
+        }
+        $("#858542_12_0").attr('maxlength','100');
+
+        if ($("#breadcrumbsContainer").text().indexOf('New / Expansion Project') != -1){
+            $("#config_tree").show();
+        }
+     });
+    /*
+    cpq.server.executeScript("GS_Get_Quote_LOB",{}, function (v_lob) {
+ 
+            if(v_lob=='PAS')
+            {
+                $("#config_tree").show();
+            }
+        });
+     */
+	 <!-- START - CXCPQ-69297 - 06/11/2023 - Manthan Rajguru -- Added to display KPI data on click of info icon -->
+    function getKPIScore() {
+        $("#divKpiScrore").modal("show");
+        $("body").removeClass("modal-open");
+    }
+
+	cpq.events.sub("configurator:updated", function (data, event) {
+    if (data.model.responderModule.name() === "Workforce Excellence Program") {
+        attr1 = cpq.models.configurator.attributes.filterByProperty('name', 'SC_WEP_Current_Score_OCP')()[0];
+        if (attr1) {
+              let infoEle = $('#popover' + attr1.id());
+            if (infoEle){
+                infoEle.attr("onClick", "getKPIScore()");
+            }
+          }
+    }
+});
+	<!-- END - CXCPQ-69297 - 06/11/2023 - Manthan Rajguru -- Added to display KPI data on click of info icon -->
+	
+	function hideNoneOption() {
+		var attrNames = ["Ges_Location", "GES_Location", "GES Location", "Geo Location", "Process_Type", "_Additional_Memory", "Additional Memory", "Power_Entry_Default", "Exp HS Specify Total Care Pack", "PlantCruise", "HC900", "MXP", "C200_C300_Power_Entry", "xPM_C300_Power_Entry", "xPM_C300_FTE_switch","Graphics_Migration_New_Safeview_Configuration", "FG_System"];
+		attrNames.forEach(function(attr){
+			var selectElements = document.querySelectorAll('select[aria-label*="' + attr + '"]');
+			selectElements.forEach(function(selectElement) {
+				var options = selectElement.getElementsByTagName("option");
+				var noneCount = 0;
+				var firstNoneIndex = -1;
+
+				for (var i = 0; i < options.length; i++) {
+				  if (options[i].value === "" && options[i].text === "None") {
+					noneCount++;
+					if (firstNoneIndex === -1) {
+					  firstNoneIndex = i;
+					}
+				  }
+				}
+				if (noneCount === 2 && firstNoneIndex !== -1) {
+				  options[firstNoneIndex].style.display = "none";
+				}
+			});
+		});
+	};
+
+	cpq.events.sub("configurator:updated", function (data, event) {
+		hideNoneOption();
+           if(sessionStorage.EditTrigger=="Triggered"){
+                sessionStorage.setItem('EditTrigger', 'Trigger Completed');
+                cpq.server.executeScript('DTAG_OnProductEditEnd', null, function (data) {});
+            }
+	});
+    function TriggerEditStart(){
+       sessionStorage.setItem('EditTrigger', 'Triggered');
+       cpq.server.executeScript('DTAG_OnProductEditStart', null, function (data) {});
+	}
+</script>
+<script>
+
+  function r2q_html_comparisoncall() {
+	  cpq.server.executeScript("GS_R2Q_COMPARISON_POPUP", {"func_call": "table"}, function (data) {
+		
+		  // Create the modal structure
+		  var modalHTML = `
+		<div class="modal fade" id="r2QModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog fiori3-modal-dialog fiori3-configuration-tree-modal" role="document">
+					  <div class="modal-content">
+						  <div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							  <h4 class="modal-title" id="myModalLabel">R2Q Configuration</h4>
+						  </div>
+						  <div class="modal-body">
+							  ${data}  <!-- Inject table header here -->
+						  </div>
+						  <div class="modal-footer">
+							  <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+							  <button type="button" class="btn btn-secondary" onclick="downloadExcel()" data-dismiss="modal">Download Excel</button>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  `;
+		  
+		  // Append the modal to the body if it doesn't exist
+		  if ($("#r2QModal").length === 0) {
+			  $("body").append(modalHTML);
+		  }
+  
+		  $('#r2QModal').modal('show');
+	  });
+  }
+  
+  </script>
+  <script>
+	function downloadExcel() {
+		 // Get the HTML table
+		 let table = document.getElementById('r2Q_compatability_table');
+		 
+		 // Create a new workbook and worksheet
+		 let worksheet = `<table>${table.innerHTML}</table>`;
+		 
+		 // Define the Excel file content
+		 let excelFile = `
+			 <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+			 <head><meta charset="UTF-8">
+	 <style>
+					 table, th, td {
+						 border: 1px solid black;
+						 border-collapse: collapse;
+						 padding: 8px;
+					 }
+					 th {
+						 background-color: #f2f2f2;
+					 }
+				 </style>
+	 </head>
+			 <body>${worksheet}</body>
+			 </html>`;
+		 
+		 // Convert to a Blob object
+		 let blob = new Blob([excelFile], {
+			 type: 'application/vnd.ms-excel;charset=utf-8;'
+		 });
+		 
+		 // Create a link element for download
+		 let link = document.createElement('a');
+		 link.href = URL.createObjectURL(blob);
+         let storedQuoteNumber = cpq.models.cart.cartCompositeNumber();
+         var fileName = 'R2Q_CPQ_Data_Analysis_' + storedQuoteNumber + '.xls';
+		 link.download = fileName;
+		 document.body.appendChild(link);
+		 link.click();
+		 document.body.removeChild(link);
+	 }
+ </script>
+ <script>
+function handleShellbarNavigationForR2Q() {
+    try {
+		var breadcrumbs = cpq?.models?.configurator?.breadcrumbsModule?.breadcrumbs?.();
+		var showShellbarMig = !breadcrumbs?.some(b => {
+					//console.log('b.name', b.name);
+					return ['Migration_New'].includes(b.name);
+				});
+		var showShellbar = !breadcrumbs?.some(b => {
+					//console.log('b.name', b.name);
+					return ['R2Q New / Expansion Project'].includes(b.name);
+				});
+        var R2QReq = localStorage.getItem("checkR2Q") === "Yes";
+       if (!showShellbar)
+        {$('.shellbar-navigation').toggleClass('hidden');
+        }
+        else if (R2QReq && !showShellbarMig) {$('.shellbar-navigation').toggleClass('hidden');
+        }
+        else {$('.shellbar-navigation').removeClass('hidden');};
+    } catch {
+        // Outside configurator: always show shellbar
+        $('.shellbar-navigation').removeClass('hidden');
+				return true;
+    }
+	 
+	}
+</script>
+<script>
+(function () {
+const SELECT_NAME = "OPM_Experion_Server_Hardware_Selection";
+function disableOptions(selectEl){
+cpq.server.executeScript("GS_OPM_Disable_Attribute_Options",{},function(response){
+if (!response || !Array.isArray(response.value_to_disable)) return;
+const disableList = response.value_to_disable.map(v => v.trim());
+Array.from(selectEl.options).forEach(option => {
+if(disableList.includes(option.text.trim())){
+option.disabled = true;
+}
+});
+}
+);
+}
+function findTargetSelect(){
+return document.querySelector(`select[name="${SELECT_NAME}"]`);
+}
+function applyLogic(){
+const select = findTargetSelect();
+if(select){
+disableOptions(select);
+}
+}
+applyLogic();
+const opm_observer = new MutationObserver(function () {
+applyLogic();
+});
+opm_observer.observe(document.body,{
+childList:true,
+subtree:true
+});
+})();
+</script>

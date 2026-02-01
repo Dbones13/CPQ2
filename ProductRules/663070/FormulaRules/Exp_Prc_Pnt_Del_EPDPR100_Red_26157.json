@@ -1,0 +1,11 @@
+{
+    "id": 26157,
+    "condition": "[NOT]([AND]([GT]([IF]([GT](<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_int)*>,<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>)){<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty_plus1)*>}{<*VALUE(Exp_Prc_Pnt_Add_EPDPR100_Red_qty)*>}[ENDIF],0),[GT](<*VALUE(Experion Process Points (0 - 45000))*>,0)))",
+    "name": "Exp_Prc_Pnt_Del_EPDPR100_Red",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR100)*><* DoResetAtt *>",
+    "description": "Delete EP_DPR100",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23105,
+    "condition": "[GT](<*CTX ( Container(Series_C_RG_Part_Summary_Cont).Rows.GetCount )*>,0)",
+    "name": "DCS Universal Marshalling Cabinet nis and is",
+    "action": "<*ASSIGNVALUE(DCS Universal Marshalling Cabinet nis:<* Eval(0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-PS-3I-672)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-ES-3I-720)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-PS-2P-488)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-PS-2I-488)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-ES-2P-488)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-ES-2I-480)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-PS-3I-288)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-ES-3I-336)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-PS-2P-192)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-PS-2I-192)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-ES-2P-224)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-ES-2I-224)*>) *>)*>\n<*ASSIGNVALUE(DCS Universal Marshalling Cabinet is:<* Eval(0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-PS-3I-672IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-ES-3I-720IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-PS-2P-488IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-PS-2I-488IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-ES-2P-488IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCD-ES-2I-480IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-PS-3I-288IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-ES-3I-336IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-PS-2P-192IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-PS-2I-192IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-ES-2P-224IS)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:MCS-ES-2I-224IS)*>) *>)*>",
+    "description": "",
+    "rank": "1001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

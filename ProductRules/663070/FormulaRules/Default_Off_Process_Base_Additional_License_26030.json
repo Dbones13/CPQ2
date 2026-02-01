@@ -1,0 +1,11 @@
+{
+    "id": 26030,
+    "condition": "[EQ](<*VALUE(Off_Process_Base_Additional_License)*>,)",
+    "name": "Default_Off_Process_Base_Additional_License",
+    "action": "<*ASSIGNVALUE(Off_Process_Base_Additional_License:0)*>",
+    "description": "CXCPQ-45607",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

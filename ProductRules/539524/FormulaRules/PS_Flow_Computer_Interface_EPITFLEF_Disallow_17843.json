@@ -1,0 +1,11 @@
+{
+    "id": 17843,
+    "condition": "[NOT]([AND]([GT](<*CTX( Container(Flow Computer Interfaces).Row(5).Column(Nodes).Get )*>,0),[EQ](<*CTX( Container(Flow Computer Interfaces).Row(6).Column(Devices).Get )*>,Yes)))",
+    "name": "PS_Flow Computer Interface_EP-ITFLEF_Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-ITFLEF)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24005,
+    "condition": "[LT](<*VALUE(Terminal_that_require_Slot_Booking_Application)*>,1)",
+    "name": "Del_TM-SBLT01",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-SBLT01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

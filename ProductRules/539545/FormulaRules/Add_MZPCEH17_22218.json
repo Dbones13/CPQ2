@@ -1,0 +1,11 @@
+{
+    "id": 22218,
+    "condition": "[OR]([GT](<*VALUE(FDM_Server_MZ_PCEH17)*>,0),[GT](<*VALUE(FDM_Gateway_PC_MZ_PCEH17)*>,0))",
+    "name": "Add_MZ-PCEH17",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:MZ-PCEH17)*><*SETATVQTY(FDM_Part_Summary:MZ-PCEH17,<* Eval(<*VALUE(FDM_Server_MZ_PCEH17)*>+<*VALUE(FDM_Gateway_PC_MZ_PCEH17)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

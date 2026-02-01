@@ -1,0 +1,29 @@
+<li id="userMenu" data-bind="css: { 'hidden': (isGuestUserLoggedIn || isElectronicallyGuestLoggedIn || shouldHideOptions) }" class="shellbar-navigation-item hide-userdrop fix-color hidden">
+    <a id="userMenuDropdownTrigger" class="dropdown-toggle customer-menu fiori3-customer-menu" aria-label="@Translation.GetJS("Default.master.UserMenu")" data-toggle="dropdown" href="#" data-bind="click: toggleUserMenuIcon, css: { 'icon-clicked': userMenuIconClicked }, tooltip: {title: '@Translation.GetJS("Default.master.UserMenu")', placement: 'left', viewport: '#headerContainer'}">
+        &#xe082;
+    </a>
+    <div class="customer-menu-closing-div" data-bind="click: turnOffMenus, visible: userMenuIconClicked"></div>
+
+    <ul id="userMenuDropdownContainer" class="dropdown-menu pull-right customer-menu-dropdown fiori3-customer-menu-dropdown cpq-scroll" role="menu">
+        <li class="list-header">
+            <span class="initials" data-bind="text: getUserInitials()"></span>
+            <div class="user-info">
+                <span class="user-name" data-bind="text: fullName"></span>
+                <span class="user-position" data-bind="text: userType"></span>
+            </div>
+        </li>
+        <li><a href="/multiusers/UserPersonalizationPage.aspx" data-bind="click: clearSessionStorageOnButtonClick">@Translation.Get("Default.master.UserPage")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canBulkReassignQuotes }"><a href="/multiusers/BulkQuoteReassign.aspx">@Translation.Get("Multiusers.master.BulkQuoteReassign")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canManageCompaniesLocaly }"><a href="/multiusers/UserAdministerCompaniesList.aspx">@Translation.Get("Multiusers.master.AdministerCompanies")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canManageGlobalTemplates }"><a href="/multiusers/DocumentGenerationGlobalTemplateList.aspx">@Translation.Get("DocumentGenerationTemplates.ManageGlobalDocumentTemplates")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canManageDocumentTemplates }"><a href="/multiusers/DocumentGenerationContentList.aspx">@Translation.Get("DocumentGenerationTemplates.ManageContentDocuments")</a></li>
+        <li class="hidden" data-bind="css: { hidden : isBusinessPartnersEnabled }"><a href="/multiusers/UserManageCustomer.aspx">@Translation.Get("Multiusers.master.ManageCustomers")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canManageDocumentTemplates }"><a href="/multiusers/DocumentGenerationTemplateList.aspx">@Translation.Get("DocumentGenerationTemplates.ManageDocumentTemplates")</a></li>
+        <li><a href="/multiusers/ManageGeneratedQuotes.aspx">@Translation.Get("Multiusers.master.ManageGeneratedQuotes")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canManageCustomTables }"><a href="/multiusers/CustomTablesList.aspx">@Translation.Get("multiusers.CustomTablesList.Title")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canManageUsersLocaly }"><a href="/multiusers/UserAdministerUsersList.aspx">@Translation.Get("Multiusers.master.AdministerUsers")</a></li>
+        <li><a href="/multiusers/QuoteLayout.aspx">@Translation.Get("multiusers.QuoteLayout")</a></li>
+        <li class="hidden" data-bind="css: { hidden : !canUseReportModule }"><a href="/stats/ReportModule.aspx">@Translation.Get("Multiusers.master.Reports")</a></li>
+        <li><a href="/Logoff.aspx">@Translation.Get("View.CartSummery.LogOut")</a></li>
+    </ul>
+</li>

@@ -1,0 +1,11 @@
+{
+    "id": 20782,
+    "condition": "[LEQ](<*VALUE(SS_27inch)*>,0)",
+    "name": "Part_D_TP_FPW271",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPW271)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

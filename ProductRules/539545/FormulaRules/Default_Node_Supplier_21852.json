@@ -1,0 +1,11 @@
+{
+    "id": 21852,
+    "condition": "[EQ](<*VALUE(FDM_Node Supplier(Client Station))*>,)",
+    "name": "Default_Node Supplier",
+    "action": "<*SELECTVALUE(FDM_Node Supplier(Client Station):Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

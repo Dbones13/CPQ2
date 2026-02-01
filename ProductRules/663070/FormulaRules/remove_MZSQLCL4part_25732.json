@@ -1,0 +1,11 @@
+{
+    "id": 25732,
+    "condition": "[EQ](<*VALUE(exp_ent_Quantity37198)*>,0)",
+    "name": "remove MZ-SQLCL4part",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MZ-SQLCL4)*><* DoResetAtt *>",
+    "description": "CXCPQ-37198",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

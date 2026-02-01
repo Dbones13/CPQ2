@@ -1,0 +1,11 @@
+{
+    "id": 13986,
+    "condition": "[EQ](<*VALUE(DVM_GES_Location)*>,)",
+    "name": "Defalt_DVM_GES_Location",
+    "action": "<*SELECTVALUE(DVM_GES_Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

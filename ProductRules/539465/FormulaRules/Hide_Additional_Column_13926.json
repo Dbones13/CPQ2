@@ -1,0 +1,11 @@
+{
+    "id": 13926,
+    "condition": "1",
+    "name": "Hide Additional Column",
+    "action": "<*CTX( Container(RTU Field container).Column(IO Spare percentage).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Number of Rows per controller).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Number of Engineering stations).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Engineering Station Make).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Engineering Station Model).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Engineering Station Screen).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Engineering Station Keyboard).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Number of Gas meter run licenses).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Number of Liquid meter run licenses).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(ELEPIU Library Required).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

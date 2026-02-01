@@ -1,0 +1,11 @@
+{
+    "id": 23863,
+    "condition": "1",
+    "name": "Labor_parameter_ctr",
+    "action": "<*ASSIGNVALUE(Labor_parameter_ctr:<*CTX( Container(SM_RG_PartSummary_Cont).Sum(qty_controller) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

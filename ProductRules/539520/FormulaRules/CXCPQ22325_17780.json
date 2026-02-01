@@ -1,0 +1,11 @@
+{
+    "id": 17780,
+    "condition": "1",
+    "name": "CXCPQ-22325",
+    "action": "[IF]([EQ](<*CTX( Container(UOC_CG_Controller_Rack_Cont).Row(1).Column(UOC_Controller_Type).Get )*>,Redundant)){<*CTX( Container(UOC_CG_Controller_Rack_Cont).Column(UOC_Redundant_Controller_Physical_Seperation).SetPermission(Editable) )*>}{<*CTX( Container(UOC_CG_Controller_Rack_Cont).Column(UOC_Redundant_Controller_Physical_Seperation).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "CXCPQ-22325",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

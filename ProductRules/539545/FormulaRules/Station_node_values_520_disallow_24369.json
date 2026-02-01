@@ -1,0 +1,11 @@
+{
+    "id": 24369,
+    "condition": "[NEQ](<*VALUE(FDM_Experion_PKS_Release)*>,R520)",
+    "name": "Station_node_values_520_disallow",
+    "action": "<*DISALLOWVALUES(FDM_Client_Station Node Type:STN_PER_DELL_Tower_RAID2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

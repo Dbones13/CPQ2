@@ -1,0 +1,11 @@
+{
+    "id": 22603,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Gas MeterSuite C300 Quantity Factor",
+    "action": "<*ASSIGNVALUE(Gas MeterSuite C300 Quantity Factor:<* Eval(<* Eval([IF]([EQ](<*VALUE(Gas MeterSuite Number Of Gas Meter Streams Using This Application (1-99))*>,1)){0}{<* Eval(<*VALUE(Gas MeterSuite Number Of Gas Metering Stations Using This App (1-99))*>*0.4) *>}[ENDIF]+[IF]([EQ](<*VALUE(Gas MeterSuite Number Of Gas Meter Streams Using This Application (1-99))*>,0)){0}{<* Eval(4+(0.8*(<*VALUE(Gas MeterSuite Number Of Gas Meter Streams Using This Application (1-99))*>-1))) *>}[ENDIF]+[IF]([EQ](<*VALUE(Gas MeterSuite Number Of Gas Metering Station With a Master Meter (0-99))*>,0)){0}{<* Eval(4+(0.8*(<*VALUE(Gas MeterSuite Number Of Gas Metering Station With a Master Meter (0-99))*>-1))) *>}[ENDIF]+[IF]([EQ](<*VALUE(Gas MeterSuite Number Of Gas Metering Station With a Check Meter (0-99))*>,0)){0}{<* Eval(2+(0.4*(<*VALUE(Gas MeterSuite Number Of Gas Metering Station With a Check Meter (0-99))*>-1))) *>}[ENDIF]+[IF](<*ISSELECTED(Gas MeterSuite Gas Composition Download Included.Yes)*>){0.4}{0}[ENDIF])*>+(0.1*<*VALUE(Gas MeterSuite Number Of Gas Analysers For FWA (0-9))*>))*>)*>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

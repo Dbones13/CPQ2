@@ -1,0 +1,11 @@
+{
+    "id": 10601,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Update_existing_documents)*>,)",
+    "name": "CWS_Mig_Default_Update_existing_documents",
+    "action": "<*SELECTVALUE(CWS_Mig_Update_existing_documents:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

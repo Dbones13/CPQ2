@@ -1,0 +1,11 @@
+{
+    "id": 13704,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_Adapter_for_Redundant_FTE_Networks)*>,0))",
+    "name": "Part_DISS_TP_THNPP2",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:TP-THNPP2)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

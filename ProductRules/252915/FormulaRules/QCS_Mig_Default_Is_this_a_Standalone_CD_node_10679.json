@@ -1,0 +1,11 @@
+{
+    "id": 10679,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Is_this_a_Standalone_CD_node)*>,)",
+    "name": "QCS_Mig_Default_Is_this_a_Standalone_CD_node",
+    "action": "<*SELECTVALUE(QCS_Mig_Is_this_a_Standalone_CD_node:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

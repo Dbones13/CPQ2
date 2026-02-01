@@ -1,0 +1,11 @@
+{
+    "id": 23814,
+    "condition": "1",
+    "name": "PLC_Station_Count",
+    "action": "<*ASSIGNVALUE(PLC_Station_Count:<*CTX ( Container(CE_PLC_System_Hardware).Sum(PLC_Engineering_Station_Qty) )*>)*>)*>",
+    "description": "Labor Report task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

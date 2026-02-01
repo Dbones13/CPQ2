@@ -1,0 +1,11 @@
+{
+    "id": 20226,
+    "condition": "[GT](<*VALUE(DVM_Internet_Explorer/ Browser_Client)*>,0)",
+    "name": "EP-DVMIEC_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMIEC)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMIEC, <*VALUE(DVM_Internet_Explorer/ Browser_Client)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

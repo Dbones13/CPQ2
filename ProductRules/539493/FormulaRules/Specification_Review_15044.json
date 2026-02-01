@@ -1,0 +1,11 @@
+{
+    "id": 15044,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Specification Review",
+    "action": "<*ASSIGNVALUE(Specification Review:<* Eval(0<*VALUE(MSE_Number_Project_Specifications_Supplied)*>*2) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

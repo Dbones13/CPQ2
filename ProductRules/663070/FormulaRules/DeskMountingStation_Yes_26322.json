@@ -1,0 +1,11 @@
+{
+    "id": 26322,
+    "condition": "[EQ](<*VALUE(Multi-Window Support Option Required?)*>,Yes)",
+    "name": "DeskMountingStation_Yes",
+    "action": "<*ALLOWATTRIBUTES(DMS No of Displays 0_4)*><*DISALLOWATTRIBUTES(DMS No of Displays 0_4_2)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

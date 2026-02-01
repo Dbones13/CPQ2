@@ -1,0 +1,11 @@
+{
+    "id": 25742,
+    "condition": "[OR]([NEQ](<*VALUE(Experion Software Release)*>,R520),[EQ](<*VALUE(ServerQuantity37544)*>,0))",
+    "name": "EP-COAS19 remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-COAS19)*><* DoResetAtt *>",
+    "description": "CXCPQ-37544",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

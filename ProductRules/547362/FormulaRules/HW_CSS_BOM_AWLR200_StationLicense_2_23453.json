@@ -1,0 +1,11 @@
+{
+    "id": 23453,
+    "condition": "[LT](<* Eval(<*CTX( Container(Network Level Container).Total(Validated Stations) )*> + <*CTX( Container(Network Level Container).Total(Non\u2010Validated Stations) )*>) *>,1)",
+    "name": "HW_CSS_BOM_AWLR200_StationLicense_2",
+    "action": "<*RESETATTRIBUTE(HW_CSS_BOM_AWLR200_StationLicense)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

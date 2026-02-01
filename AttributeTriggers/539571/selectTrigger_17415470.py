@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(Total_CN100:<*CTX ( Container(Series_C_RG_Part_Summary_Cont).Sum(51943_Total_Part_Sum) )*>)*>

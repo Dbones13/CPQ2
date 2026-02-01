@@ -1,0 +1,11 @@
+{
+    "id": 21930,
+    "condition": "[EQ](<*VALUE(FDM Report license (0-1))*>,)",
+    "name": "Default_FDM Report license (0-1)",
+    "action": "<*ASSIGNVALUE(FDM Report license (0-1):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

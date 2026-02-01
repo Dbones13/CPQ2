@@ -1,0 +1,11 @@
+{
+    "id": 14121,
+    "condition": "[EQ](<*CTX( Container(PlantCruise_Cont).Rows.GetCount )*>,0)",
+    "name": "Set default row for PlantCruise_Cont",
+    "action": "<*CTX( Container(PlantCruise_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

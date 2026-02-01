@@ -1,0 +1,11 @@
+{
+    "id": 9623,
+    "condition": "[EQ](<*ATTSEL(PSkid Grossmargin in Percentage)*>,0)",
+    "name": "Clear Gross Marin Amount",
+    "action": "<*ASSIGNVALUE(PSkid Grossmargin Amount:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

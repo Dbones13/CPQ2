@@ -1,0 +1,11 @@
+{
+    "id": 12994,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_SC_Pricing_Escalation_Attribute",
+    "action": "<*DISALLOWATTRIBUTES(SC_Pricing_Escalation)*>\n<*DISALLOWATTRIBUTES(SC_Is_Scope_Change)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "14/09/24",
+    "modifiedBy": "Ishwar Chordiya"
+}

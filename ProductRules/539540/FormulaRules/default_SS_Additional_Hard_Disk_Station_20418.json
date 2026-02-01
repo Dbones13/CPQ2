@@ -1,0 +1,11 @@
+{
+    "id": 20418,
+    "condition": "[EQ](<*VALUE(SS_Additional_Hard Disk_Station)*>,)",
+    "name": "default_SS_Additional_Hard Disk_Station",
+    "action": "<*SELECTVALUE(SS_Additional_Hard Disk_Station:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

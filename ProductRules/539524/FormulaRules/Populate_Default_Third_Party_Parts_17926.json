@@ -1,0 +1,11 @@
+{
+    "id": 17926,
+    "condition": "[EQ](<*CTX ( Container(CCR_Third_Party_Parts).Rows.GetCount )*>,0)",
+    "name": "Populate Default Third Party Parts",
+    "action": "<*CTX ( Container(CCR_Third_Party_Parts).Load( SELECT PartNumber, Description FROM CT_CCR WHERE  Container_Name = 'CCR_Third_Party_Parts' ) )*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

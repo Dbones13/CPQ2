@@ -1,0 +1,11 @@
+{
+    "id": 19336,
+    "condition": "<*ATTDEF(PlantCruise_Part_Summary)*>",
+    "name": "Load BOM",
+    "action": "<*CTX( Container(PlantCruise_PartSummary_Cont).LoadKeys(Partnumber).Load(select '<*Eval(Replace(\"<*VALUE(PlantCruise_Part_Summary)*>\",\", \",\"' as Partnumber UNION SELECT '\"))*>' as Partnumber   ) )*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

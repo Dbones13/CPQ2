@@ -1,0 +1,11 @@
+{
+    "id": 22387,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Software_Release)*>,R530),[EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes))",
+    "name": "Hide_ESDC_Client_Station_None",
+    "action": "<*DISALLOWVALUES(ESDC_Station_Node_Type:None,ESDC_Station_Node_Type:STN_PER_DELL_Tower_RAID2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Vignesh Narayanasamy"
+}

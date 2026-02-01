@@ -1,0 +1,11 @@
+{
+    "id": 14558,
+    "condition": "[EQ](<*VALUE(PRMS Number of Dedicated Master or Check Meters)*>,)",
+    "name": "Default Number of Dedicated Master or Check Meters",
+    "action": "<*ASSIGNVALUE(PRMS Number of Dedicated Master or Check Meters:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

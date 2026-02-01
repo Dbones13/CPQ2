@@ -1,0 +1,11 @@
+{
+    "id": 22915,
+    "condition": "[EQ](<*VALUE(SeriesC_RG_MountingOption)*>,)",
+    "name": "Default_SerC_RG_Mounting_Option",
+    "action": "<*SELECTVALUE(SeriesC_RG_MountingOption:Bracket Mounting)*>",
+    "description": "CXCPQ-37879",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

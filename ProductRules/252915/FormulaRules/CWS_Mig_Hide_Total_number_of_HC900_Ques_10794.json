@@ -1,0 +1,11 @@
+{
+    "id": 10794,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,CWS RAE Upgrade),[NEQ](<*VALUE(CWS_Mig_Machine_Cross_Direction_controls_upgraded_peripheral_hardware_licensing)*>,Yes))",
+    "name": "CWS_Mig_Hide_Total_number_of_HC900_Ques",
+    "action": "<*DISALLOWATTRIBUTES(CWS_Mig_Total_number_of_HC900_IO_points)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

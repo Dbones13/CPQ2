@@ -1,0 +1,11 @@
+{
+    "id": 25736,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Number of Class Based Recipe licenses (0-1000))*>,99),[GT](<*eval(INT(Fix((<*VALUE(Number of Class Based Recipe licenses (0-1000))*>-(INT(Fix(<*VALUE(Number of Class Based Recipe licenses (0-1000))*>/300)))*300)/100)))*>,0)))",
+    "name": "Num_Class_Base_Del_TCCBR100",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TC-CBR100)*><* DoResetAtt *>",
+    "description": "Delete TC-CBR100",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

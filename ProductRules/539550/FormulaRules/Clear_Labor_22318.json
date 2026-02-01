@@ -1,0 +1,11 @@
+{
+    "id": 22318,
+    "condition": "<*IFANYVALUE(CE_Scope_Choices:HWSW)*>",
+    "name": "Clear Labor",
+    "action": "<*CTX( Container(PMD Engineering Labor Container).Rows.Clear )*>\n<*CTX( Container(PMD Labor Additional Custom Deliverable).Rows.Clear )*>\n<*CTX( Container(CE PMD Standard Deliverable Cont).Rows.Clear )*>\n<*RESETATTRIBUTE(Error_Message_1)*>",
+    "description": "Clears the labor container if Labor is not on scope (inherited from project level)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "10/12/24",
+    "modifiedBy": "YashwanthKumar Boya"
+}

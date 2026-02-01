@@ -1,0 +1,11 @@
+{
+    "id": 10784,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Non-virtualized_or_virtualized_PMD_system)*>,Virtualized))",
+    "name": "TPA_Hide_HMI_in_CABINET",
+    "action": "<*DISALLOWATTRIBUTES(TPA_How_many_SINGLE_screen_physical_HMI_in_CABINET_are_required,TPA_How_many_DUAL_screen_physical_HMI_in_CABINET_are_required,TPA_How_many_QUAD_screen_physical_HMI_in_CABINET_are_required)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

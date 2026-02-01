@@ -1,0 +1,11 @@
+{
+    "id": 25565,
+    "condition": "[OR]([EQ](<*VALUE(MIB Configuration Required?)*>,No),[EQ](<*VALUE(Station Type)*>,STN_STD_DELL_Tower_NonRAID),[EQ](<*VALUE(Additional Stations)*>,0))",
+    "name": "Message_Station_Type",
+    "action": "<*DISALLOWATTRIBUTES(Station_Type_Message)*>",
+    "description": "CXCPQ-35454",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

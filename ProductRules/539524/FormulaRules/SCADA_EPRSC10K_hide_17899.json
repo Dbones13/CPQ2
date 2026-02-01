@@ -1,0 +1,11 @@
+{
+    "id": 17899,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Scada_conatiner_sum)*>,9999),[EQ](<*VALUE(Scada_SCADA_Server_Redundancy)*>,Yes),[GT](<*eval(Int(Fix(<*VALUE(Scada_conatiner_sum)*>/10000)))*>,0)))",
+    "name": "SCADA_EP-RSC10K_hide",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-RSC10K)*><* DoResetAtt *>",
+    "description": "Hide EP-RSC10K",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

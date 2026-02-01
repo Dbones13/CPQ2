@@ -1,0 +1,11 @@
+{
+    "id": 24123,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[GT](<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN01)*>) *>,0))",
+    "name": "Part_MZ_PCVOS2_nutanix",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVOS2)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVOS2,<* Eval( <*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN01)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

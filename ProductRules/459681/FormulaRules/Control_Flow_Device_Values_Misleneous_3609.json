@@ -1,0 +1,11 @@
+{
+    "id": 3609,
+    "condition": "[AND](<*ISSELECTED(Identifiers.A3)*>,[EQ](<*VALUE(Scada_chek)*>,1))",
+    "name": "Control_Flow_Device_Values_Misleneous",
+    "action": "<*DISALLOWVALUES(Devices:Yes)*>\n<*SELECTVALUE(Devices:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

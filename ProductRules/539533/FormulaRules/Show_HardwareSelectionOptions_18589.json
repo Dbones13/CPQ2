@@ -1,0 +1,11 @@
+{
+    "id": 18589,
+    "condition": "[AND]([NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R511),[EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes))",
+    "name": "Show_HardwareSelectionOptions",
+    "action": "<*ALLOWVALUES(ES_Hardware_Selection:SVR_PER_DELL_Rack_RAID1_XE,ES_Hardware_Selection:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "7960 story",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

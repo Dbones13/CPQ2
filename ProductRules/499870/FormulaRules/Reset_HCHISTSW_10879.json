@@ -1,0 +1,11 @@
+{
+    "id": 10879,
+    "condition": "[NOT]([EQ](<*VALUE(HC900_ControlEdge_HC900_Historian)*>,Yes))",
+    "name": "Reset HC-HISTSW",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:HC-HISTSW)*><* DoResetAtt *>",
+    "description": "CXCPQ-40188",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

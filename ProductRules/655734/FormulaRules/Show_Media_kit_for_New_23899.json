@@ -1,0 +1,11 @@
+{
+    "id": 23899,
+    "condition": "[NEQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "Show Media kit for New",
+    "action": "<*ALLOWATTRIBUTES(Terminal_Media_kit_required)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

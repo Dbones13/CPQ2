@@ -1,0 +1,11 @@
+{
+    "id": 14763,
+    "condition": "[EQ](<*VALUE(MX_HC_HC900_Chassis_for_Q5000_Cabinet)*>,Yes)",
+    "name": "MX_Part_Q8785_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8785-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8785-50, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

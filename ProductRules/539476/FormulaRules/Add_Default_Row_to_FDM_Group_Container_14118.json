@@ -1,0 +1,11 @@
+{
+    "id": 14118,
+    "condition": "[EQ](<*CTX ( Container(FDM_System_Group_Cont).Rows.GetCount )*>,0)",
+    "name": "Add_Default_Row_to_FDM_Group_Container",
+    "action": "<*CTX ( Container(FDM_System_Group_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

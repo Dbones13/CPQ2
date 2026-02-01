@@ -1,0 +1,11 @@
+{
+    "id": 22904,
+    "condition": "[EQ](<*VALUE(C300_RG_UPC_LLAI_Count)*>,)",
+    "name": "Reset_C300_RG_UPC_LLAI_Count",
+    "action": "<*ASSIGNVALUE(C300_RG_UPC_LLAI_Count:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

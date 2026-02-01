@@ -1,0 +1,11 @@
+{
+    "id": 19734,
+    "condition": "[EQ](<*VALUE(SerC_CG_Utility_Socket_(230/115 VAC))*>,)",
+    "name": "Default_SerC_CG_Utility_Socket_(230/115 VAC)",
+    "action": "<*SELECTVALUE(SerC_CG_Utility_Socket_(230/115 VAC):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

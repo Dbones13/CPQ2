@@ -1,0 +1,11 @@
+{
+    "id": 12919,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_P1P2_PartsUsageMethod)*>,List Price with Discount Applied))",
+    "name": "Show_LPDA_Section",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_03_close,ATTCON_03_open,Header_03_close,Header_03_open,SC_P1P2_LPDA_CY_DiscountPrice,SC_P1P2_LPDA_CY_FinalListPrice,SC_P1P2_LPDA_CY_ListPrice,SC_P1P2_LPDA_PY_ListPrice,SC_P1P2_LPDA_PY_SellPrice,SC_P1P2_LPDA_ScopeChange,SC_P1P2_LPDA_AutoUpdate_Editable_Ext)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

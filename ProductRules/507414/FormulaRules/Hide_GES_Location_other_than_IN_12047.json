@@ -1,0 +1,11 @@
+{
+    "id": 12047,
+    "condition": "[OR](<*ISSELECTED(MSE_Labor_GES_Eng.SYS GES Eng-BO-IN)*>,<*ISSELECTED(MSE_Labor_GES_Eng.SYS GES Eng-FO-IN)*>)",
+    "name": "Hide GES Location other than IN",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MSE_Labor_GES_Eng:HPS_GES_P350B_IN|HPS_GES_P350F_IN)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

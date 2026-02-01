@@ -1,0 +1,11 @@
+{
+    "id": 14963,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_21",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_21:<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_Subsea_MDIS_Interface_Site_Lic) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10561,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,Generic System),[GT](<*CTX( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,0))",
+    "name": "MSID_Generic_System_Migration_Calc_Hrs",
+    "action": "<*ASSIGNVALUE(MSID_Generic_System_Migration_Calc_Hrs:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "11/12/23",
+    "modifiedBy": "Madhuri Sharma"
+}

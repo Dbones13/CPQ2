@@ -1,0 +1,11 @@
+{
+    "id": 15433,
+    "condition": "[EQ](<*VALUE(FDA Number of strobes)*>,)",
+    "name": "Default Number of strobes",
+    "action": "<*ASSIGNVALUE(FDA Number of strobes:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

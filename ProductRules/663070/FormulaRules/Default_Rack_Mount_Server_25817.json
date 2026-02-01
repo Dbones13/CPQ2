@@ -1,0 +1,11 @@
+{
+    "id": 25817,
+    "condition": "[EQ](<*VALUE(ServerLocationClusterNetwork_Group_Desk)*>,)",
+    "name": "Default_Rack_Mount_Server",
+    "action": "<*SELECTVALUE(ServerLocationClusterNetwork_Group_Desk:Location/Cluster/Network Group 4)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

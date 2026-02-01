@@ -1,0 +1,11 @@
+{
+    "id": 10753,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,CWS RAE Upgrade),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW))",
+    "name": "CWS_Mig_Hide_Services",
+    "action": "<*DISALLOWATTRIBUTES(CWS_Mig_Customization_to_be_migrated,CWS_Mig_HSE_and_Quality_Plan,CWS_Mig_Is_the_DRG_file_16_DRG_or_earlier,CWS_Mig_Site_Acceptance_Test_Required,CWS_Mig_Update_existing_documents,Header_21_close,Header_21_open,CWS_Mig_Is_there_existing_Cross_Directional_Contro,CWS_Mig_Is_there_existing_Machine_Direction_Contro,CWS_Mig_For_MD_CD_work_are_we_doing_installation,CWS_Mig_Total_number_of_HC900_IO_points)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

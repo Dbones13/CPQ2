@@ -1,0 +1,11 @@
+{
+    "id": 12965,
+    "condition": "[AND]([NOT](<*ISSELECTED(SC_Labor_LumpSum.&nbsp)*>),[EQ](<*VALUE(SC_Labor_Burden_for_Hr_Day)*>,))",
+    "name": "SC_Labor_Lumpsum_unchecked_Calc",
+    "action": "<*ASSIGNVALUE(SC_Labor_Burden_for_Hr_Day:<* TABLE ( SELECT Burden_Rate FROM CT_SC_Labor_ResourceType WHERE  Type = '<*VALUECODE(SC_Labor_Resource_Type)*>'  and Country ='<*CTX( Quote.CustomField(Opportunity Tab Booking Country))*>') *>)*><*RESETATTRIBUTE(SC_Labor_Resource_Type)*><*RESETATTRIBUTE(SC_Labor_Honeywell_List_Price)*><*RESETATTRIBUTE(SC_Labor_Customer_List_Price)*><*RESETATTRIBUTE(SC_Labor_Burden_for_Hr_Day)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

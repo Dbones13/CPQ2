@@ -1,0 +1,11 @@
+{
+    "id": 13571,
+    "condition": "[EQ](<*VALUE(Virtualization_Additional On Site Activities hours)*>,)",
+    "name": "Virtualization_LSS_Question_default_HWSW",
+    "action": "<*ASSIGNVALUE(Virtualization_Additional On Site Activities hours:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

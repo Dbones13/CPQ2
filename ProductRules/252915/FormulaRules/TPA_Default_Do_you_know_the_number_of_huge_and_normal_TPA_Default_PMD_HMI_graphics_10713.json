@@ -1,0 +1,11 @@
+{
+    "id": 10713,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Do_you_know_the_number_of_huge_and_normal_TPA_PMD_HMI_graphics)*>,))",
+    "name": "TPA_Default_Do_you_know_the_number_of_huge_and_normal_TPA_Default_PMD_HMI_graphics",
+    "action": "<*SELECTVALUE(TPA_Do_you_know_the_number_of_huge_and_normal_TPA_PMD_HMI_graphics:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

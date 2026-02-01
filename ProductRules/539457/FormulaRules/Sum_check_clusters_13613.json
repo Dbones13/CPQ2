@@ -1,0 +1,11 @@
+{
+    "id": 13613,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[GT](<* Eval(0<*VALUE(Virtualization_Enter_the_starting_Cluster_Number)*> + 0<*VALUE(Virtualization_Number_of_Clusters_in_the_network)*>) *>,31))",
+    "name": "Sum_check_clusters",
+    "action": "<*ASSIGNVALUE(Virtualization_Number_of_Clusters_in_the_network:0)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

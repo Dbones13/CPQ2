@@ -1,0 +1,11 @@
+{
+    "id": 23636,
+    "condition": "[AND]([NEQ](<*CTX( Quote.CustomField(IsR2QRequest) )*>,Yes)\n,[NEQ](<*VALUE(R2QRequest)*>,No),[NEQ](<*VALUE(R2Q_QuoteNumber)*>,))",
+    "name": "Estimator_Edit",
+    "action": "<*ASSIGNVALUE(R2QRequest:No)*>\n<*ASSIGNVALUE(R2Q_QuoteNumber:'')*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

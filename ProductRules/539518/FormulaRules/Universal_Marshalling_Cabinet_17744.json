@@ -1,0 +1,11 @@
+{
+    "id": 17744,
+    "condition": "1",
+    "name": "Universal Marshalling Cabinet",
+    "action": "<*ASSIGNVALUE(Universal Marshalling Cabinet:<*CTX( Container(SM_RG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>)*>",
+    "description": "Assigning value for Universal Marshalling Cabinet",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,2 @@
+if Product.Attributes.GetByName('AR_HCI_R2QConfig').GetValue() == 'Yes' and Product.Attributes.GetByName('HCI_PHD_GES_Location').GetValue() == '':
+	Product.Attributes.GetByName('AR_HCI_No_GES_ENG').AssignValue('')

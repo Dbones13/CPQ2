@@ -1,0 +1,11 @@
+{
+    "id": 20093,
+    "condition": "1",
+    "name": "SerC_CG_Number_of_HIVE_Control_Applications(HCA)_Qty",
+    "action": "<*ASSIGNVALUE(HCA_Part:<* Eval(0-Int(0-(<*VALUE(SerC_CG_Total_CN100)*>/10))) *>)*>",
+    "description": "CXCPQ-51943",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

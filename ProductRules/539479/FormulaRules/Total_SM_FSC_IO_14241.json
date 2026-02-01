@@ -1,0 +1,11 @@
+{
+    "id": 14241,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_SM_FSC_IO",
+    "action": "<*ASSIGNVALUE(Total_SM_FSC_IO:<* Eval(0<*VALUE(Number_of_SM/FSC_Soft I/O_(SCADA))*>) *>)*>",
+    "description": "Labor Report",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Payal Gupta"
+}

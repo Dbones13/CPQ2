@@ -1,0 +1,11 @@
+{
+    "id": 20405,
+    "condition": "[EQ](<*VALUE(SS_Extended_Height_Alarm_Light_Panel)*>,)",
+    "name": "Default_SS_Extended_Height_Alarm_Light_Panel",
+    "action": "<*SELECTVALUE(SS_Extended_Height_Alarm_Light_Panel:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13347,
+    "condition": "1",
+    "name": "HMI SAT_Sign Off",
+    "action": "<*ASSIGNVALUE(HMI SAT_Sign Off:<* Eval(<*VALUE(labor_parameter_HMIS_SZ)*>*16) *>)*>",
+    "description": "CXCPQ-39012",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

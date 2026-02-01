@@ -1,0 +1,11 @@
+{
+    "id": 26577,
+    "condition": "[EQ](<*VALUE(CMS Console Station Hardware Selection)*>,)",
+    "name": "CMS Console Station Hardware Selection def",
+    "action": "<*SELECTVALUE(CMS Console Station Hardware Selection:STN_PER_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

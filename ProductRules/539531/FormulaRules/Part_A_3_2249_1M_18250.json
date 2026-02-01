@@ -1,0 +1,11 @@
+{
+    "id": 18250,
+    "condition": "[EQ](<*VALUE(MXP_Sensor_Type)*>,10 kV Dual-mode PrecisionPLUS X-Ray Sensor)",
+    "name": "Part_A_3_2249_1M",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-2249-1M)*><*SETATVQTY(MXP_SE_Bom_Parts:3-2249-1M,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

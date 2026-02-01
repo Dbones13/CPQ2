@@ -1,0 +1,11 @@
+{
+    "id": 13378,
+    "condition": "1",
+    "name": "labor_parameter_ag",
+    "action": "<*ASSIGNVALUE(labor_parameter_ag:[IF]([EQ](<*VALUE(Are Alarm Groups in Scope?)*>,Yes)){1}{0}[ENDIF])*>",
+    "description": "If ag = Yes, ag = 1\nElse ag = 0",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

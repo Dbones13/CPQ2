@@ -1,0 +1,11 @@
+{
+    "id": 12972,
+    "condition": "[NEQ](<*VALUE(SC_Labor_Honeywell_List_Price)*>,)",
+    "name": "SC_Honeywell_Roundoff_Calc",
+    "action": "<*ASSIGNVALUE(SC_Labor_Honeywell_List_Price:<* Eval(<* Round ( <*VALUE(SC_Labor_Honeywell_List_Price)*>, 2) *>) *>)*><* ExecuteScript(PS_Calculate_total_prices) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

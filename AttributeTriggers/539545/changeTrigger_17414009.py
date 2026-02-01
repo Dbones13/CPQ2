@@ -1,0 +1,2 @@
+[IF]([AND]([EQ](<*VALUE(FDM_Node Supplier (Server))*>,Honeywell),[EQ](<*VALUE(FDM_Server Node Type)*>,SVR_PER_DELL_Rack_RAID5),[EQ](<*VALUE(FDM_Trusted Platform Module (TPM))*>,Yes))){<*DISALLOWVALUES(FDM_Additional Hard Disk (Server):Yes)*>}{<*ALLOWVALUES(FDM_Additional Hard Disk (Server):Yes)*>}[ENDIF]
+<*ALLOWATTRIBUTES(Calculation_Button)*>

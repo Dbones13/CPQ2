@@ -1,0 +1,11 @@
+{
+    "id": 22940,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_remote_IO",
+    "action": "[IF]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))){<*DISALLOWATTRIBUTES(ATTCON_01_close,ATTCON_01_open,Header_19_close,Header_19_open,SerC_RG_DO_Relay_Extension_Cable_Length,SerC_RG_Group_label_Defaults_for_Cabinet,SerC_RG_New_Name,SerC_RG_Percent_Installed_Spare(0-100%))*>}{<*ALLOWATTRIBUTES(ATTCON_01_close,ATTCON_01_open,Header_19_close,Header_19_open,SerC_RG_DO_Relay_Extension_Cable_Length,SerC_RG_Group_label_Defaults_for_Cabinet,SerC_RG_New_Name,SerC_RG_Percent_Installed_Spare(0-100%))*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,78 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper"  style="background-color:#edeff0" >
+	<div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		<div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	</div>
+ <div class="row col-xs-12 swagger">
+	  <div class="row col-xs-12 swagger-header"><span>Service Product and Entitlements</span></div>
+	<!-- ko foreach: attributes.filterByProperty('name' , "SC_TPS_Service_Product") -->
+			<div class="col-xs-12 col-sm-6 flex">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko --> 
+			</div> 
+	<!-- /ko -->
+			</div> 
+ 
+	<div class="row col-xs-12 swagger">
+	   
+	 <!-- ko foreach: attributes.filterByProperty('name' , "SC_TPS_Entitlements") -->
+			<div class="col-xs-12 col-sm-4">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko --> 
+			</div>
+	<!-- /ko -->
+ 
+	</div>
+   
+	<div class="row col-xs-12 swagger">   
+		<div id="sc-fileUpload-tps" class="swagger-header" onclick="toggleConfigSection(event, '#sc-fileUpload-tps')">
+			<label class="onlytext">File Upload</label>
+			<a id="sc-fileUpload-tps-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>  
+		</div>
+		<div id="sc-fileUpload-tps-content" style = "display:none;"  class=" col-md-12 clear-padding ">
+   <div class="row col-xs-12 clear-padding">
+	<!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	<!-- /ko -->
+	   <div class="row col-xs-12" style="padding-top:20px;">
+		<!-- ko foreach: attributes.filterByProperty('name' , "SC_Pricing_Escalation") -->
+		<div class="row col-xs-6 flex price_exe" style="padding-left:8px;">
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko -->
+		</div>
+		<!-- /ko -->
+	</div>
+	<!-- ko foreach: attributes.filterByProperty('name' , "SC_TPS_Models_Scope", "SC_TPS_RC_Models_Scope") -->
+	<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+	</div>
+	<!-- /ko -->
+	<div class = "col-xs-12 col-sm-12 ">
+	<!-- ko foreach: attributes.filterByProperty('name','SC_TPS_DeleteModels') -->
+		 <div  class="flt_rt">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+		</div>
+	<!-- /ko -->
+	</div>
+	<!-- ko foreach: attributes.filterByProperty('name' , "SC_TPS_Invalid_Models","SC_TPS_RC_Invalid_Models") -->
+	<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 pt10 config_row', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+	</div>
+	<!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+	<!-- ko foreach: attributes.filterByProperty('name','SC_TPS_DeleteInvalidModels') -->
+		 <div  class="flt_rt">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+		</div>
+	<!-- /ko -->
+	</div>
+	</div>
+	</div>
+	</div>
+	
+  
+	
+</div>
+

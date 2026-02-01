@@ -1,0 +1,11 @@
+{
+    "id": 8134,
+    "condition": "[EQ](<*VALUE(LSS_PLC_Ethernet_Switch_Type)*>,)",
+    "name": "Default Ethernet Switch",
+    "action": "<*SELECTVALUE(LSS_PLC_Ethernet_Switch_Type:Multi Mode)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

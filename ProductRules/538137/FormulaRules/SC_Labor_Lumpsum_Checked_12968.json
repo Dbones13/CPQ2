@@ -1,0 +1,11 @@
+{
+    "id": 12968,
+    "condition": "<*ISSELECTED(SC_Labor_LumpSum.&nbsp)*>",
+    "name": "SC_Labor_Lumpsum_Checked",
+    "action": "<*DISALLOWATTRIBUTES(SC_Labor_Burden_for_Hr_Day)*><*DISALLOWATTRIBUTES(SC_Labor_Hrs_per_Full_Day)*>\n<*DISALLOWATTRIBUTES(SC_Labor_Resource_Type)*><*DISALLOWATTRIBUTES(SC_Labor_Block_Discount)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

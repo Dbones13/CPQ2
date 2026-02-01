@@ -1,0 +1,11 @@
+{
+    "id": 20431,
+    "condition": "[EQ](<*VALUE(SS_OTS_CAB_Developer_license)*>,)",
+    "name": "Default_SS_OTS_CAB_Developer_license",
+    "action": "<*ASSIGNVALUE(SS_OTS_CAB_Developer_license:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19919,
+    "condition": "[EQ](<*VALUE(SerC_CG_C300_Controller_Module_Type)*>,C300(PCNT05))",
+    "name": "Show_Message_message_SerC_Num EIM for IEC61850",
+    "action": "<*ASSIGNVALUE(SerC_Number of Redundant EIM for IEC61850:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

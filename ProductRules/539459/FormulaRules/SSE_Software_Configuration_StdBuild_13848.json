@@ -1,0 +1,11 @@
+{
+    "id": 13848,
+    "condition": "[EQ](<*CTX( Container(SM_Labor_Cont).Row(1).Column(Implementation_Methodology).Get )*>,StandardBuildEstimate)",
+    "name": "SSE Software Configuration_StdBuild",
+    "action": "<*ASSIGNVALUE(SSE Software Configuration:<*Eval((0<*VALUE(Labor_calc_temp_dd_hrs)*>*.8) + (0<*VALUE(Labor_calc_temp_fld_hrs)*>*.9))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

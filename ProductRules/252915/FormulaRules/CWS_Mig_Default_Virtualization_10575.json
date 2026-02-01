@@ -1,0 +1,11 @@
+{
+    "id": 10575,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Virtualization_Configuration)*>,)",
+    "name": "CWS_Mig_Default_Virtualization",
+    "action": "<*SELECTVALUE(CWS_Mig_Virtualization_Configuration:ESXi Virtualization with Management host and four VMs and four thin clients)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

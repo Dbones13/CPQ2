@@ -1,0 +1,11 @@
+{
+    "id": 23995,
+    "condition": "[LT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,1)",
+    "name": "Del_TM-ENTPS1_EP-DBASE1",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-ENTPS1)*><*RESETVALUE(Terminal_Part_Summary:EP-DBASE1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

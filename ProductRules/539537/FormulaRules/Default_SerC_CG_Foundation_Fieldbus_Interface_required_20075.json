@@ -1,0 +1,11 @@
+{
+    "id": 20075,
+    "condition": "[EQ](<*VALUE(SerC_CG_Foundation_Fieldbus_Interface_required)*>,)",
+    "name": "Default_SerC_CG_Foundation_Fieldbus_Interface_required",
+    "action": "<*SELECTVALUE(SerC_CG_Foundation_Fieldbus_Interface_required:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

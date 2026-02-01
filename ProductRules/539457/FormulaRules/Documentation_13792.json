@@ -1,0 +1,11 @@
+{
+    "id": 13792,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Documentation",
+    "action": "<*ASSIGNVALUE(Documentation:<* Eval([IF]([EQ](<*VALUE(Labor_parameter_varn_4)*>,Yes)){8}{0}[ENDIF]+[IF]([EQ](<*VALUE(Labor_parameter_varn_5)*>,Yes)){16}{0}[ENDIF]+[IF]([EQ](<*VALUE(Labor_parameter_varn_6)*>,Yes)){16}{0}[ENDIF]+[IF]([EQ](<*VALUE(Labor_parameter_varn_7)*>,Yes)){16}{0}[ENDIF]+[IF]([EQ](<*VALUE(Labor_parameter_var_19)*>,Yes)){16}{0}[ENDIF]+[IF]([EQ](<*VALUE(Labor_parameter_varn_21)*>,Yes)){24}{0}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

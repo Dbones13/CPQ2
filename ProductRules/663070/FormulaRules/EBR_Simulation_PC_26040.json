@@ -1,0 +1,11 @@
+{
+    "id": 26040,
+    "condition": "1",
+    "name": "EBR (Simulation PC)",
+    "action": "[IF]([OR]([EQ](<*VALUE(Experion Backup & Restore (Simulation PC))*>,Yes),[EQ](<*VALUE(Experion Backup & Restore (Simulation PC)1)*>,Yes))){<*ASSIGNVALUE(Labor Experion Backup & Restore (Simulation PC):<*Eval(0-INT(0-<* Eval(((0<*VALUE(SIM-ACE Licenses (0-7))*> +<* Eval(0-INT(0-(<* Eval(0.4*0<*VALUE(Sim-Cx00 PC Licenses (0-20))*>)*>))) *>) + <* Eval(0-INT(0-(<* Eval(0.1*0<*VALUE(SIM-FFD Licenses (0-125))*>)*>))) *>)/4) *>))*>)*>}{<*ASSIGNVALUE(Labor Experion Backup & Restore (Simulation PC):0)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

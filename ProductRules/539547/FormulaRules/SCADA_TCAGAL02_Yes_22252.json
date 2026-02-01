@@ -1,0 +1,11 @@
+{
+    "id": 22252,
+    "condition": "[EQ](<*VALUE(Scada_MeterSuite_Library)*>,Yes)",
+    "name": "SCADA_TC-AGAL02_Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:TC-AGAL02)*><*SETATVQTY(SCADA_BOM_Items:TC-AGAL02, 1)*><* DoResetAtt *>",
+    "description": "Add-TC-AGAL02",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

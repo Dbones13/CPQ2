@@ -1,0 +1,11 @@
+{
+    "id": 24267,
+    "condition": "[EQ](<*VALUE(Number of Users/ Devices requiring access (0- 500))*>,)",
+    "name": "Default_Number of Users/ Devices requiring access",
+    "action": "<*ASSIGNVALUE(Number of Users/ Devices requiring access (0- 500):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

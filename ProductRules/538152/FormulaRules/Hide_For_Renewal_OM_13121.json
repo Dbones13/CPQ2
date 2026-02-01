@@ -1,0 +1,11 @@
+{
+    "id": 13121,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_For_Renewal_OM",
+    "action": "<*CTX ( Container(SC_WEP_Subscription_Price_OM).Column(User_Count).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Subscription_Price_OM).Column(Subscription_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Add_On_Fees_OM).Column(Subscription_Price_USD).SetPermission(Hidden) )*><*CTX ( Container(SC_WEP_Add_On_Fees_OM).Column(Subscription_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

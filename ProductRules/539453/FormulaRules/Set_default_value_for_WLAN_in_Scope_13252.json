@@ -1,0 +1,11 @@
+{
+    "id": 13252,
+    "condition": "[EQ](<*VALUE(Is WLAN in Scope?)*>,)",
+    "name": "Set default value for WLAN in Scope",
+    "action": "<*SELECTVALUE(Is WLAN in Scope?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

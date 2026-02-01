@@ -1,0 +1,11 @@
+{
+    "id": 13267,
+    "condition": "[EQ](<*VALUE(Test System Complexity)*>,)",
+    "name": "Set default value for Test System Complexity",
+    "action": "<*SELECTVALUE(Test System Complexity:Low)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

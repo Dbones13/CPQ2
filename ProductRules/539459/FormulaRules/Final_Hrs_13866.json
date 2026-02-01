@@ -1,0 +1,11 @@
+{
+    "id": 13866,
+    "condition": "1",
+    "name": "Final Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(SM_SSE_Engineering_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(SM_Additional_Custom_Deliverables_Labor_Container).Total(Final Hrs) )*>) *>++<* Round (<*CTX( Container(SM Safety System - ESD/FGS/BMS/HIPPS Container).Total(Final Hrs) )*>) *>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

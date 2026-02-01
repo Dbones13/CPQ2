@@ -1,0 +1,11 @@
+{
+    "id": 25831,
+    "condition": "[EQ](<*VALUE(Additional Memory_Server Disk)*>,)",
+    "name": "set_default_desk_mount7",
+    "action": "<*SELECTVALUE(Additional Memory_Server Disk:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

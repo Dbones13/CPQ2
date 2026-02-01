@@ -1,0 +1,11 @@
+{
+    "id": 14169,
+    "condition": "[EQ](<*VALUE(Total_Number_of_EtherNet_IP_Ios (0-10000))*>,)",
+    "name": "Default_Total_Number_of_EtherNet_IP_Ios (0-10000)",
+    "action": "<*ASSIGNVALUE(Total_Number_of_EtherNet_IP_Ios (0-10000):0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

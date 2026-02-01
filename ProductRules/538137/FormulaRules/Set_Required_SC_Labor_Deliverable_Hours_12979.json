@@ -1,0 +1,11 @@
+{
+    "id": 12979,
+    "condition": "[EQ](<*CTX ( Quote.CustomField(Quote Type) )*>,Contract New)",
+    "name": "Set_Required_SC_Labor_Deliverable_Hours",
+    "action": "<*SETREQUIRED(SC_Labor_Deliverable_Hours)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

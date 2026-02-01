@@ -1,0 +1,11 @@
+{
+    "id": 13268,
+    "condition": "[EQ](<*VALUE(Number of Custom Context Menus)*>,)",
+    "name": "Set default value for Number of Custom Context Menus",
+    "action": "<*ASSIGNVALUE(Number of Custom Context Menus:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

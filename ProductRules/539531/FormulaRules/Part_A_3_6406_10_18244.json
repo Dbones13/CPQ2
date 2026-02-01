@@ -1,0 +1,11 @@
+{
+    "id": 18244,
+    "condition": "[EQ](<*VALUE(MXP_Sensor_Type)*>,MXIR CWT SSIR PE/PP/PET)",
+    "name": "Part_A_3_6406_10",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-6406-10)*><*SETATVQTY(MXP_SE_Bom_Parts:3-6406-10,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

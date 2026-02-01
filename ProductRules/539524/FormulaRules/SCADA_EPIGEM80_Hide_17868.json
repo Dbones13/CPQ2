@@ -1,0 +1,11 @@
+{
+    "id": 17868,
+    "condition": "[EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(3).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-IGEM80_Hide",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-IGEM80)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

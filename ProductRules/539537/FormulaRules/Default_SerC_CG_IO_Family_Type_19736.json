@@ -1,0 +1,11 @@
+{
+    "id": 19736,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,)",
+    "name": "Default_SerC_CG_IO_Family_Type",
+    "action": "<*SELECTVALUE(SerC_CG_IO_Family_Type:Series C)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

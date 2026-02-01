@@ -1,0 +1,11 @@
+{
+    "id": 20469,
+    "condition": "[AND]([EQ](<*VALUE(SS_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID5),[EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module)*>,Yes))",
+    "name": "Part_A_MZ_PCSR04_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCSR04)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCSR04, <*VALUE(Simulation_red_non_red_Check)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

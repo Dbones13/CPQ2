@@ -1,0 +1,11 @@
+{
+    "id": 24122,
+    "condition": "[EQ](<*VALUE(Nutanix License Type)*>,Per VM)",
+    "name": "Show_Per_VM",
+    "action": "<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Column(Number_of_Nutanix_NCIE_Per_VM_25).SetPermission(Editable) )*>\n<*CTX ( Container(Virtualization_Single_Node_Cluster_Conf_transpose).Column(Number_of_Nutanix_NCIE_Per_VM_25_SN).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

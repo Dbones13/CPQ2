@@ -1,0 +1,11 @@
+{
+    "id": 11708,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS Combined Workstation Configuration",
+    "action": "<*ASSIGNVALUE(IS Combined Workstation Configuration:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval(4*<*VALUE(IS_No_of_Dual_Use_Workstations_(0-20))*>) *>}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){<* Eval(4*<*VALUE(IS_No_of_Dual_Use_Workstations_(0-20))*>) *>}{<* Eval(4*<*VALUE(IS_No_of_Dual_Use_Workstations_(0-20))*>) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

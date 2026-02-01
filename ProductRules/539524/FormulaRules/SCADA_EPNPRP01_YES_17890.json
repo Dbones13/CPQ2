@@ -1,0 +1,11 @@
+{
+    "id": 17890,
+    "condition": "[EQ](<*CTX( Container(IEC/DNP3 Interfaces).Row(3).Column(Devices).Get )*>,Yes)",
+    "name": "SCADA_EP-NPRP01_YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-NPRP01)*><*SETATVQTY(SCADA_BOM_Items:EP-NPRP01, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

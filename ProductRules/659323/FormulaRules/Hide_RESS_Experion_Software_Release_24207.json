@@ -1,0 +1,11 @@
+{
+    "id": 24207,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,New),[NEQ](<*VALUE(RESS_System_Required)*>,Yes))",
+    "name": "Hide_RESS_Experion_Software_Release",
+    "action": "<*SETOPTIONAL(RESS_Experion_Software_Release)*><*DISALLOWATTRIBUTES(RESS_Experion_Software_Release)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

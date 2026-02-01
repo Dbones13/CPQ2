@@ -1,0 +1,11 @@
+{
+    "id": 20108,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_C300_Controller_Module_Type)*>,C300(PCNT05)),[AND]([EQ](<*VALUE(SerC_CG_C300_Controller_Module_Type)*>,C300(PCNT02)),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 I/O HIVE - C300 CEE)))))",
+    "name": "Show_SerC_CG_C300_Controller_Module_Type",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Control_Networking_Module_Required)*>",
+    "description": "CXCPQ-51941 - Requirement 5",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

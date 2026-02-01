@@ -1,0 +1,11 @@
+{
+    "id": 9621,
+    "condition": "[OR]([EQ](<*ATTSEL(PSkid MGK General material costs amount)*>,1),[EQ](<*ATTSEL(PSkid Mounting hardware and O-rings Material amount)*>,1),[EQ](<*ATTSEL(PSkid Welding Costs Frame Material amount)*>,1))",
+    "name": "Set Total Material Costs",
+    "action": "<*ASSIGNVALUE(Pskid Total Material Costs:<*Eval(Round( <*VALUE(PSkid MGK General material costs amount)*> + <*VALUE(PSkid Mounting hardware and O-rings Material amount)*> + <*VALUE(PSkid Welding Costs Frame Material amount)*>,2))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22178,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Server),[GEQ](<* Eval(<*VALUE(FDM_Server_Audit)*> - (INT((<*VALUE(FDM_Server_Audit)*>)/1024))*1024) *>,512))",
+    "name": "Add_HC-AT0512_Server",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-AT0512)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

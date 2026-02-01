@@ -1,0 +1,11 @@
+{
+    "id": 13346,
+    "condition": "1",
+    "name": "labor_parameter_HMIS_SZ",
+    "action": "<*ASSIGNVALUE(labor_parameter_HMIS_SZ:[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,50)){0.5}{[IF]([LEQ](<* Eval(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_cd)*>+0<*VALUE(labor_parameter_md)*>+0<*VALUE(labor_parameter_vcd)*>+0<*VALUE(labor_parameter_rd)*>) *>,200)){1}{2.5}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-39012",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

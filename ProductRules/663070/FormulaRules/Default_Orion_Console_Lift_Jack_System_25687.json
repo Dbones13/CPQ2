@@ -1,0 +1,11 @@
+{
+    "id": 25687,
+    "condition": "[EQ](<*VALUE(Orion Console Lift Jack System)*>,)",
+    "name": "Default Orion Console Lift Jack System",
+    "action": "<*SELECTVALUE(Orion Console Lift Jack System:No)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

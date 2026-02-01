@@ -1,0 +1,11 @@
+{
+    "id": 23023,
+    "condition": "1",
+    "name": "Disallow_C300_RG_UPC_Universal_IO_Count_Values",
+    "action": "[IF]([GT](0<*VALUE(C300_RG_UPC_LLAI_Count)*>,2)){<*DISALLOWALLVALUESEXCEPT(C300_RG_UPC_Universal_IO_Count:0)*>}{[IF]([GT](0<*VALUE(C300_RG_UPC_LLAI_Count)*>,1)){<*DISALLOWVALUES(C300_RG_UPC_Universal_IO_Count:6,C300_RG_UPC_Universal_IO_Count:9)*>}{[IF]([GT](0<*VALUE(C300_RG_UPC_LLAI_Count)*>,0)){<*DISALLOWVALUES(C300_RG_UPC_Universal_IO_Count:9)*>}{}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

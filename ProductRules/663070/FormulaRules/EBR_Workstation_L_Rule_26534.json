@@ -1,0 +1,11 @@
+{
+    "id": 26534,
+    "condition": "1",
+    "name": "EBR_Workstation_L_Rule",
+    "action": "<*ASSIGNVALUE(EBR_Workstation_L:<*Eval(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:EP-BRWE06)*>+<*GETATVQTY(Exp_Ent_Grp_Part_Summary:EP-BRWE05)*>) *>)*>",
+    "description": "CXCPQ-51989",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

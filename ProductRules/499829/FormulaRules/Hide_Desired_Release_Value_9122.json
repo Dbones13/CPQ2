@@ -1,0 +1,11 @@
+{
+    "id": 9122,
+    "condition": "[NEQ](<*VALUE(Trace_Software_What_is_the_scope)*>,Changes to Existing License (Expansions))",
+    "name": "Hide_Desired_Release_Value",
+    "action": "<*DISALLOWVALUES(Trace_Software_Select_desired_Release:R140,Trace_Software_Select_desired_Release:R150)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "11/09/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

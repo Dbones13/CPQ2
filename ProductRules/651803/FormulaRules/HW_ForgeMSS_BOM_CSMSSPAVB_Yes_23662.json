@@ -1,0 +1,11 @@
+{
+    "id": 23662,
+    "condition": "1",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-PAVB_Yes",
+    "action": "[IF]([AND](<*ISSELECTED(Secure Remote Access.Yes)*>,<*ISSELECTED(Patching and Anti-Virus Required.Yes)*>)){<*SETATVQTY(Patching and Anti-Virus Required PAVB BOM:CS-MSS-PAVB-ANL,1)*><*SELECTVALUES(Patching and Anti-Virus Required PAVB BOM:CS-MSS-PAVB|CS-MSS-PAVB-ANL)*><*SETATVQTY(Patching and Anti-Virus Required PAVB BOM:CS-MSS-PAVB,1)*>}{<*RESETATTRIBUTE(Patching and Anti-Virus Required PAVB BOM)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

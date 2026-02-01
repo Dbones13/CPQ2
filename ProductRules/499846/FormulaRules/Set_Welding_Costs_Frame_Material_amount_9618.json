@@ -1,0 +1,11 @@
+{
+    "id": 9618,
+    "condition": "[EQ](<*ATTSEL(PSkid Welding Costs Frame Material percentage)*>,1)",
+    "name": "Set Welding Costs Frame Material amount",
+    "action": "<*ASSIGNVALUE(PSkid Welding Costs Frame Material amount:<* Eval(Round((<*CTX( Container(PRODUCTIZED _SKID_BOM).Total(Net Cost) )*> * <*VALUE(PSkid Welding Costs Frame Material percentage)*>) /100,2))*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

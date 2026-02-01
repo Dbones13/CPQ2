@@ -1,0 +1,11 @@
+{
+    "id": 14679,
+    "condition": "[EQ](<*VALUE(MXP_Number_of_Zones)*>,)",
+    "name": "Default_number_of_zones",
+    "action": "<*ASSIGNVALUE(MXP_Number_of_Zones:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

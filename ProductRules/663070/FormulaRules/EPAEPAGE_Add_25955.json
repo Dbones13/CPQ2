@@ -1,0 +1,11 @@
+{
+    "id": 25955,
+    "condition": "[GT](<*VALUE(Alarm Pager(0-1))*>,0)",
+    "name": "EP-AEPAGE_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-AEPAGE)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-AEPAGE, <*VALUE(Alarm Pager(0-1))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9118,
+    "condition": "1",
+    "name": "LE Site Acceptance Test and Sign Off",
+    "action": "<*ASSIGNVALUE(LE Site Acceptance Test and Sign Off:<*EVAL((40*<*VALUE(labor_parameter_sd)*>+32*<*VALUE(labor_parameter_Le_pf)*>)*0.8)*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

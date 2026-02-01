@@ -1,0 +1,11 @@
+{
+    "id": 21907,
+    "condition": "[EQ](<*VALUE(FDM_Server_Specification)*>,Server)",
+    "name": "Allow for FDM_Server_Specification) Server",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_04_close,ATTCON_04_open,FDM_Additional Hard Disk (Server),FDM_Additional Memory (Server Disk),FDM_Display Size (Server),FDM_Display Supplier (Server),FDM_Displays (Server) (0-1),FDM_Node Supplier (Server),FDM_Server Node Type,FDM_Trusted Platform Module (TPM),Header_03_close,Header_03_open)*>\n<*SETREQUIRED(FDM_Additional Hard Disk (Server),FDM_Additional Memory (Server Disk),FDM_Display Size (Server),FDM_Display Supplier (Server),FDM_Displays (Server) (0-1),FDM_Node Supplier (Server),FDM_Server Node Type,FDM_Trusted Platform Module (TPM))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

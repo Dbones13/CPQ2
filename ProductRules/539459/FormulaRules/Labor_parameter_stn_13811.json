@@ -1,0 +1,11 @@
+{
+    "id": 13811,
+    "condition": "1",
+    "name": "Labor_parameter_stn",
+    "action": "<*ASSIGNVALUE(Labor_parameter_stn:<*CTX( Container(SM_Hardware_Builder_Station_Cont).Row(1).Column(SM_Builder_Station_Required).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

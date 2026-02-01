@@ -1,0 +1,11 @@
+{
+    "id": 25993,
+    "condition": "[AND]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes),[EQ](<*VALUE(Experion Server Type)*>,Server TPS))",
+    "name": "EP-SRVTPS_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-SRVTPS)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-SRVTPS, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

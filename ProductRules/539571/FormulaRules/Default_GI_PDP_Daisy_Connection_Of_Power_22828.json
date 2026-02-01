@@ -1,0 +1,11 @@
+{
+    "id": 22828,
+    "condition": "[EQ](<*VALUE(GI_PDP_Daisy_Connection_Of_Power)*>,)",
+    "name": "Default_GI_PDP_Daisy_Connection_Of_Power",
+    "action": "<*SELECTVALUE(GI_PDP_Daisy_Connection_Of_Power:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

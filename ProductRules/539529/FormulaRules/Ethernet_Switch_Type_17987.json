@@ -1,0 +1,11 @@
+{
+    "id": 17987,
+    "condition": "1",
+    "name": "Ethernet Switch Type",
+    "action": "[IF]([EQ](<*CTX( Container(PLC_CG_Controller_Rack_Cont).Row(1).Column(PLC_Ethernet_Switch_Type).GetDisplayValue )*>,Single Mode)){<*CTX( Container(PLC_CG_Controller_Rack_Cont).Column(PLC_G3_Option_Ethernet_Switch).SetPermission(Hidden) )*>}{<*CTX( Container(PLC_CG_Controller_Rack_Cont).Column(PLC_G3_Option_Ethernet_Switch).SetPermission(Editable) )*>}[ENDIF]\n\n[IF]([EQ](<*CTX( Container(PLC_CG_Controller_Rack_Cont).Row(1).Column(PLC_G3_Option_Ethernet_Switch).GetDisplayValue )*>,Yes)){<*CTX( Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi_G3).SetPermission(Editable) )*>}{<*CTX( Container(PLC_CG_Additional_Controller_Cont).Column(PLC_Fiber_Optic_Converter_Multi_G3).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "CXCPQ-20384 & CXCPQ-20385",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

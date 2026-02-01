@@ -1,0 +1,11 @@
+{
+    "id": 26091,
+    "condition": "[AND](<*ISSELECTED(Interface with TPS Required?.Yes)*>,[OR]([GT](<*VALUE(ACE Node Tower Mount Desk)*>,0),[GT](<*VALUE(ACE Node Rack Mount Cabinet)*>,0),[GT](<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,0),[GT](<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,0)))",
+    "name": "TC-SWSC01_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TC-SWSC01)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-SWSC01, <* Eval(<*VALUE(ACE Node Tower Mount Desk)*>+<*VALUE(ACE Node Rack Mount Cabinet)*>+<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>+<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>) *>.)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

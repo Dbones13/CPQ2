@@ -1,0 +1,11 @@
+{
+    "id": 13776,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_var_16",
+    "action": "<*ASSIGNVALUE(Labor_parameter_var_16:<*VALUE(Virtualization_Will Honeywell provide the HW/SW?)*>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

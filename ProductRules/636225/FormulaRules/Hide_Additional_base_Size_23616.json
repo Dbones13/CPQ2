@@ -1,0 +1,11 @@
+{
+    "id": 23616,
+    "condition": "[AND]([GT](<*VALUE(HDP TPS Only)*>,0),[NEQ](<*CTX ( Quote.CustomField(Quote Type) )*>,Contract Renewal))",
+    "name": "Hide Additional base Size",
+    "action": "<*ALLOWATTRIBUTES(HDP_System_additional_Size)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

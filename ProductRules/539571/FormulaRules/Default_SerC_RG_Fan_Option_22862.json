@@ -1,0 +1,11 @@
+{
+    "id": 22862,
+    "condition": "[EQ](<*VALUE(SerC_RG_Fan_Option)*>,)",
+    "name": "Default_SerC_RG_Fan_Option",
+    "action": "<*SELECTVALUE(SerC_RG_Fan_Option:Assembly)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

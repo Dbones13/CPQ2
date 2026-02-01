@@ -1,0 +1,11 @@
+{
+    "id": 20441,
+    "condition": "[EQ](<*VALUE(SS_Desk_Multi_Window_Support_Option_Required_desk)*>,)",
+    "name": "Default_SS_Desk_Multi_Window_Support_Option_Required_desk",
+    "action": "<*SELECTVALUE(SS_Desk_Multi_Window_Support_Option_Required_desk:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

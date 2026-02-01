@@ -1,0 +1,11 @@
+{
+    "id": 26314,
+    "condition": "[EQ](<*VALUE(Cabinet_Industrial_KB_Mouse)*>,)",
+    "name": "Default_Cabinet_Industrial_KB_Mouse",
+    "action": "<*SELECTVALUE(Cabinet_Industrial_KB_Mouse:No)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

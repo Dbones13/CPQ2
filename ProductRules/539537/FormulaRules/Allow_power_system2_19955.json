@@ -1,0 +1,11 @@
+{
+    "id": 19955,
+    "condition": "[AND]( [NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery),[NEQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Mounting Panel))",
+    "name": "Allow_power_system2",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Power_System_Type,SerC_CG_Power_System_Vendor)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

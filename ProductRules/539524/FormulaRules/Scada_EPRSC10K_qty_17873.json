@@ -1,0 +1,11 @@
+{
+    "id": 17873,
+    "condition": "1",
+    "name": "Scada_EP-RSC10K_qty",
+    "action": "<*ASSIGNVALUE(Scada_EP-RSC10K_qty:<*eval(INT(ROUND((<*VALUE(Scada_conatiner_sum)*>-FIX((<*VALUE(Scada_conatiner_sum)*>-10000*INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000))-5000*INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000-(INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000)))*5000)/2000)))/1000)*1000-INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000))*10000-INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000))*5000-2000*INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000-(INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000)))*5000)/2000)))/100)))*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

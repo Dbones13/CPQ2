@@ -1,0 +1,11 @@
+{
+    "id": 13222,
+    "condition": "1",
+    "name": "Preselect",
+    "action": "[IF]([EQ](<*VALUE(XP10_Actuator_Will_an_A7_actuator_tool_be_needed)*>,)){<*SELECTVALUE(XP10_Actuator_Will_an_A7_actuator_tool_be_needed:No)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

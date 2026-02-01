@@ -1,0 +1,11 @@
+{
+    "id": 26066,
+    "condition": "1",
+    "name": "Add_TotalSum",
+    "action": "<*ASSIGNVALUE(TotalSum:<* Eval(0<*VALUE(Add_Scenario1)*>+0<*VALUE(Add_Scenario2)*>) *>)*>",
+    "description": "44029",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

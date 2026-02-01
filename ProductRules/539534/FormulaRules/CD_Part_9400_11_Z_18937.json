@@ -1,0 +1,11 @@
+{
+    "id": 18937,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Calendizer),[GEQ](<*VALUE(MX_CD_Number_of_zones)*>,1))",
+    "name": "CD_Part_9400_11_Z",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9400-11-Z)*><*SETATVQTY(MX_CD_Bom_Parts:9400-11-Z, <*VALUE(MX_CD_Number_of_zones)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

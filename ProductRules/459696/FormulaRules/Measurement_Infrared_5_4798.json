@@ -1,0 +1,11 @@
+{
+    "id": 4798,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Infrarred))",
+    "name": "Measurement_Infrared_5",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:MXIR Coat Weight SSIR CLAY/CACO3|MXIR Coat Weight SSIR Clay/CACO3/Moi|MXIR Coat Weight SSIR CLAY/LATEX|MXIR Coat Weight SSIR Clay/Latex/Moi|MXIR Coat Weight SSIR LATEX/CACO3|MXIR Coat Weight SSIR Latex/CACO3/Moi)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20163,
+    "condition": "[EQ](<*VALUE(DVM_High_Availability_Client_Node)*>,)",
+    "name": "Default_DVM_High_Availability_Client_Node",
+    "action": "<*SELECTVALUE(DVM_High_Availability_Client_Node:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

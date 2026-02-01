@@ -1,0 +1,11 @@
+{
+    "id": 23674,
+    "condition": "<*ISSELECTED(Optional Hardware and Software Required.Yes)*>",
+    "name": "Disallow Hardware Refresh",
+    "action": "<*DISALLOWATTRIBUTES(Hardware Refresh)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

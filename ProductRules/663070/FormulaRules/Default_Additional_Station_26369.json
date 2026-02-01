@@ -1,0 +1,11 @@
+{
+    "id": 26369,
+    "condition": "[EQ](<*VALUE(Additional Stations)*>,)",
+    "name": "Default_Additional_Station",
+    "action": "<*ASSIGNVALUE(Additional Stations:0)*>",
+    "description": "Default value for Additional Station (0-10)",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

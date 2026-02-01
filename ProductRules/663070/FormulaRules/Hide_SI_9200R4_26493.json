@@ -1,0 +1,11 @@
+{
+    "id": 26493,
+    "condition": "[NOT](<*ISSELECTED(Default Switch.SW_L3_RT_CISCO_24PT)*>)\n",
+    "name": "Hide_SI_9200R4",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:SI-9200R4)*><* DoResetAtt *>\n",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

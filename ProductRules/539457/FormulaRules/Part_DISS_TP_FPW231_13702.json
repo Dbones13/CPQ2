@@ -1,0 +1,11 @@
+{
+    "id": 13702,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[LT](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,1))",
+    "name": "Part_DISS_TP_FPW231",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:TP-FPW231)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Lahu Giri"
+}

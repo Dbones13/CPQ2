@@ -1,0 +1,11 @@
+{
+    "id": 13853,
+    "condition": "[EQ](<*VALUE(Enterprise_flag_check)*>,False)",
+    "name": "Show_Cluster",
+    "action": "<*CTX( Container(SM_Common_Questions).Column(SM_Cluster).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

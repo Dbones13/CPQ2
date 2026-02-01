@@ -1,0 +1,2 @@
+if Product.Attr("Scope").GetValue != 'HW/SW' and Product.Attr("Graphics_Migration_Type_of_Existing_Displays").GetValue() in ('Existing US Graphics','Existing GUS Graphics','Existing Experion .DSP Graphics'):
+    attr = Product.Attr('ATT_GMPERUSD').AssignValue('100')

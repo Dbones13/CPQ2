@@ -1,0 +1,11 @@
+{
+    "id": 10695,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(QCS_Mig_Digital_Input_24VDC_Modules_32_point)*>,))",
+    "name": "QCS_Mig_Default_Digital_Input_24VDC_Modules_32_point",
+    "action": "<*ASSIGNVALUE(QCS_Mig_Digital_Input_24VDC_Modules_32_point:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4734,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-10 Compact O-Frame (Standard Head)),[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-20 Compact O-Frame (Extended Head)),[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided)),[NEQ](<*VALUE(MX_SG_Calibration_Sample_Holder)*>,Yes))",
+    "name": "Part_D_Q6760_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q6760-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

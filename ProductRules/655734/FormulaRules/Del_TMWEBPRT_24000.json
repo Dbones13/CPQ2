@@ -1,0 +1,11 @@
+{
+    "id": 24000,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Web_Portal_required?)*>,Yes)))",
+    "name": "Del_TM-WEBPRT",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-WEBPRT)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

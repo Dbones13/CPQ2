@@ -1,0 +1,11 @@
+{
+    "id": 4759,
+    "condition": "[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-20 Compact O-Frame (Extended Head))",
+    "name": "Part_D_Q6088_20",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q6088-20)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17800,
+    "condition": "[OR]([EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(4).Column(Nodes).Get )*>,0),[EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(4).Column(Nodes).Get )*>,))",
+    "name": "Scada_check_GE/OMNI_r4_5",
+    "action": "<*CTX( Container(GE_OR_OMNI_Interfaces).Row(5).Column(Scada_check).Set(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12136,
+    "condition": "[AND]([EQ](<*VALUE(PSW_Only_HAZOP_Scope)*>,No), [EQ](<*VALUE(PSW_Only_LOPA_Scope)*>,No),\n [EQ](<*VALUE(PSW_Only_SIL_Verification_Calculation_Scope)*>,No),[EQ](<*VALUE(Only Safety Requirement Specification (SRS) Scope)*>,No),\n [EQ](<*VALUE(PSW_Only_Functional_Test_Procedure_(FTP)_Scope)*>,No), [EQ](<*VALUE(PSW_HAZOP+LOPA+SIL_Ver_calcs+SRS+FTP_Scope)*>,No),\n [EQ](<*VALUE(PSW_LOPA+SIL_Ver_calcs+SRS+FTP_Scope)*>,No), [EQ](<*VALUE(PSW_LOPA+SIL_Ver_calcs+SRS_Scope)*>,No),\n [EQ](<*VALUE(PSW_SIL_Ver_calcs+SRS+FTP_Scope)*>,No),[EQ](<*VALUE(PSW_SIL_Ver_calcs+SRS_Scope)*>,No))",
+    "name": "Disallow PSW_Number_of_Documents_Sent_by_Customer",
+    "action": "<*DISALLOWATTRIBUTES(PSW_Number_of_Documents_Sent_by_Customer)*>",
+    "description": "Hide the field 'Number of Documents Sent by Customer'",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23685,
+    "condition": "[AND]([EQ](<*VALUE(R2QRequest)*>,Yes),[EQ](<*VALUE(calculate_value_set)*>,True))",
+    "name": "R2Q Trigger",
+    "action": "<* ExecuteScript(Number of Domains) *>\n<* ExecuteScript(GS_Populate_Activities) *>\n<* ExecuteScript(Populate hours for each activity) *>\n<* ExecuteScript(GS_CYBER_ACTIVITIES_DELETE) *>\n<* ExecuteScript(Fill Parts Summary) *>\n<* ExecuteScript(Fill Final Activities Container) *>\n<* ExecuteScript(Add Write Ins) *>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

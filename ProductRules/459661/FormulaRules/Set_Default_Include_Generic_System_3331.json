@@ -1,0 +1,11 @@
+{
+    "id": 3331,
+    "condition": "[NOT](<*ATTDEF(Include_Generic_System)*>)",
+    "name": "Set Default Include Generic System",
+    "action": "<*SELECTVALUE(Include_Generic_System:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

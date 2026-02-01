@@ -1,0 +1,11 @@
+{
+    "id": 12980,
+    "condition": "[AND]([NEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,),[NEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,0))",
+    "name": "Assign_SC_Labor_BackupDeliverableHours",
+    "action": "<*ASSIGNVALUE(SC_Labor_BackupDeliverableHours:<* Eval(int(<*VALUE(SC_Labor_Deliverable_Hours)*>)) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

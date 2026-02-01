@@ -1,0 +1,11 @@
+{
+    "id": 14582,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Enclosures_with_Space_Heaters)*>,)",
+    "name": "Default Number of Enclosures with Space Heaters",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Enclosures_with_Space_Heaters:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

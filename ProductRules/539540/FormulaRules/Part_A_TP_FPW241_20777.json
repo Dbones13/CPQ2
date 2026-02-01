@@ -1,0 +1,11 @@
+{
+    "id": 20777,
+    "condition": "[AND]([GT](<*VALUE(SS_21_33inch)*>,0),[EQ](<*VALUE(CE_Site_Voltage)*>,240V))",
+    "name": "Part_A_TP_FPW241",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:TP-FPD211-200)*><*SETATVQTY(Simulation_Bom_parts:TP-FPD211-200,<*VALUE(SS_21_33inch)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

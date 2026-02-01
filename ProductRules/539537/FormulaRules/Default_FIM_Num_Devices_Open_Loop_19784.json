@@ -1,0 +1,11 @@
+{
+    "id": 19784,
+    "condition": "[EQ](<*VALUE(FIM_Num_Devices_Open_Loop)*>,)",
+    "name": "Default_FIM_Num_Devices_Open_Loop",
+    "action": "<*ASSIGNVALUE(FIM_Num_Devices_Open_Loop:10)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

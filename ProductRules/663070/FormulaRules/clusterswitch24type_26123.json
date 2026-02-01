@@ -1,0 +1,11 @@
+{
+    "id": 26123,
+    "condition": "1",
+    "name": "clusterswitch24type",
+    "action": "<*ASSIGNVALUE(Port 24 Network Switchcluster:<*CTX ( Container(List of Locations/Clusters/Network Groups).Sum(Port 24 Network Switchcluster) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

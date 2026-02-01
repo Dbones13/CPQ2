@@ -1,0 +1,11 @@
+{
+    "id": 13303,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is OPC Interface in Scope?)*>,Yes))",
+    "name": "SII_OPC_Self_Test1",
+    "action": "<*ASSIGNVALUE(SII OPC Self Test1:<* Eval(80 * <*VALUE(Number of New/Non tested OPC Interfaces)*> ) *>)*>",
+    "description": "SII OPC Self Test1\n\nCalculated Hrs = opcN*80",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

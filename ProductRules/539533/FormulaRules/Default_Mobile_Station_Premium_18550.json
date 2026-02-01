@@ -1,0 +1,11 @@
+{
+    "id": 18550,
+    "condition": "[EQ](<*VALUE(ES_Mobile_Station_Premium_Access_License)*>,)",
+    "name": "Default_Mobile_Station_Premium",
+    "action": "<*ASSIGNVALUE(ES_Mobile_Station_Premium_Access_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

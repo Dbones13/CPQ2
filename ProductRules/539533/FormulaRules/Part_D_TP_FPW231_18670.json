@@ -1,0 +1,11 @@
+{
+    "id": 18670,
+    "condition": "[OR]([NEQ](<*VALUE(ES_Node_Supplier_station)*>,Honeywell),[EQ](<*VALUE(ES_Additional_Stations_for_eServer)*>,0),[NEQ](<*VALUE(ES_Display_size_i)*>,23 inch))",
+    "name": "Part_D_TP_FPW231",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:TP-FPW231)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

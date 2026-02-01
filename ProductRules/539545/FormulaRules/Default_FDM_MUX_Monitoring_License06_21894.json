@@ -1,0 +1,11 @@
+{
+    "id": 21894,
+    "condition": "[EQ](<*VALUE(FDM_MUX_Monitoring_License(0-6))*>,)",
+    "name": "Default_FDM_MUX_Monitoring_License(0-6)",
+    "action": "<*ASSIGNVALUE(FDM_MUX_Monitoring_License(0-6):0)*>",
+    "description": "CXCPQ-48540",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

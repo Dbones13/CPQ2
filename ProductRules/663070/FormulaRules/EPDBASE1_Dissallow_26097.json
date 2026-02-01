@@ -1,0 +1,11 @@
+{
+    "id": 26097,
+    "condition": "[AND]([NEQ](<*VALUE(Interface with TPS Required?)*>,Yes),[NEQ](<*VALUE(Experion Server Type)*>,Server TPS))",
+    "name": "EP-DBASE1_Dissallow",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DBASE1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

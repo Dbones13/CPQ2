@@ -1,0 +1,11 @@
+{
+    "id": 15390,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours for Configure XLS Net",
+    "action": "<*ASSIGNVALUE(FDA XLS Network Configuration:[IF](<*ISSELECTED(FDA Implementation Methodology.Non-Standard Build Estimate)*>){[IF]([EQ](<*VALUE(FDA Panels Networked)*>,Yes)){<* Eval(2*<*VALUE(FDA Number of XLS Panels)*>) *>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,<*ISSELECTED(FDA GES Location.None)*>)){[IF]([EQ](<*VALUE(FDA Panels Networked)*>,Yes)){<* Eval(2*<*VALUE(FDA Number of XLS Panels)*>) *>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(FDA Implementation Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(FDA GES Location)*>,None))){[IF]([EQ](<*VALUE(FDA Panels Networked)*>,Yes)){<* Eval(2*<*VALUE(FDA Number of XLS Panels)*>) *>}{0}[ENDIF]}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

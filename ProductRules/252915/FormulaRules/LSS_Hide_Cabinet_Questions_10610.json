@@ -1,0 +1,11 @@
+{
+    "id": 10610,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[NOT]([LIKE](<*CTX( Container(LSS_Configuration_for_Rockwell_transpose).UniqueValues(LSS_PLC_Need_Cabinet_for_the_controller_for_budget).Separator(,) )*>,Front))))",
+    "name": "LSS_Hide_Cabinet_Questions",
+    "action": "<*DISALLOWATTRIBUTES(LSS_Cabinet_Color?,LSS_Cabinet_Color_Front_Access,LSS_Cabinet_Doors,LSS_Cabinet_Hinge_Type,LSS_Cabinet_Keylock_Type,LSS_Cabinet_Light_Required?,LSS_Cabinet_Thermostat_Required?,LSS_Front_only_Cabinet Doors,LSS_Front_only_Cabinet Hinge Type,LSS_Front_only_Cabinet_Keylock_Type,LSS_Front_Only_Cabinet_Light_Required?,LSS_Front_only_Cabinet_Thermostat_Required?,LSS_Front_only_Power_Entry,LSS_Front_only_TDI_Power_Supply_Cable_Length,LSS_Power_Entry,LSS_TDI_Power_Supply_Cable_Length,LSS_Integrated_Marshalling_Cabinet_Layout_Type,Front_Access_Only,Front_and_Rear_Access,LSS_Cabinet_Base_Required?,LSS_Fan_Voltage,LSS_Front_only_Cabinet_Base_Required?,LSS_Front_Only_Fan_Voltage)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

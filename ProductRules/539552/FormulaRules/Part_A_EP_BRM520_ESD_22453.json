@@ -1,0 +1,11 @@
+{
+    "id": 22453,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Experion_Backup_&_Restore_Release)*>,R520),[EQ](<*VALUE(ESDC_EBR_base_media)*>,Electronic Download))",
+    "name": "Part_A_EP_BRM520_ESD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:EP-BRM520-ESD)*><*SETATVQTY(ESDC_BOM_Parts:EP-BRM520-ESD, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

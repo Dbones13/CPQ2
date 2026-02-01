@@ -1,0 +1,11 @@
+{
+    "id": 14745,
+    "condition": "[AND]([EQ](<*VALUE(MX_Switch_type)*>,SWITCH,CISCO9200L,NON ROUTE,24PORT),[NEQ](<*VALUE(MX_Do_you_need_FTE_switches)*>,No))",
+    "name": "MX_Part_SI_920LN4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:SI-920LN4)*><*SETATVQTY(MX_Platform_Bom_Parts:SI-920LN4,<*VALUE(MX_Do_you_need_FTE_switches)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

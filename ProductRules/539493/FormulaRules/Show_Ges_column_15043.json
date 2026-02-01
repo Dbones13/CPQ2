@@ -1,0 +1,11 @@
+{
+    "id": 15043,
+    "condition": "[NEQ](<*VALUE(MSE GES Location)*>,None)",
+    "name": "Show_Ges_column",
+    "action": "<*ALLOWATTRIBUTES(MSE_Addi_Labor_GES_%,MSE_Engineering_Labor_GES_%)*><*CTX ( Container(MSE_Engineering_Labor_Container).Column(GES Eng).SetPermission(Editable) )*><*CTX ( Container(MSE_Engineering_Labor_Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(MSE_Engineering_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(MSE_Engineering_Labor_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(MSE_Engineering_Labor_Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(MSE_Engineering_Labor_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(MSE_Engineering_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*><*CTX ( Container(MSE_Additional_Labor_Container).Column(GES Eng).SetPermission(Editable) )*><*CTX ( Container(MSE_Additional_Labor_Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(MSE_Additional_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(MSE_Additional_Labor_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(MSE_Additional_Labor_Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(MSE_Additional_Labor_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(MSE_Additional_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

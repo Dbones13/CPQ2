@@ -1,0 +1,11 @@
+{
+    "id": 14015,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Converters)*>,)",
+    "name": "Default_DVM_Number_of_Converters",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Converters:25)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

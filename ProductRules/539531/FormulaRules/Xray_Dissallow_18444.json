@@ -1,0 +1,11 @@
+{
+    "id": 18444,
+    "condition": "[NEQ](<*VALUE(MXP_Measurement_Type)*>,X-Ray)",
+    "name": "X-ray_Dissallow",
+    "action": "<*DISALLOWVALUES(MXP_Sensor_Type:X Ray sensor 30kV 10\" gap,MXP_Sensor_Type:X Ray sensor 30kV 20\" gap,MXP_Sensor_Type:X Ray sensor 5kV 0.4-1\" gap.,MXP_Sensor_Type:X Ray sensor Ceramic Coat weight sensor)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

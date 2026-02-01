@@ -1,0 +1,11 @@
+{
+    "id": 23845,
+    "condition": "1",
+    "name": "Disallow Container Column",
+    "action": "[IF]([EQ](<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Row(1).Column(Specify_Identifier_Modifier_for_SM_SC_Universal_Safety_Cabinet).GetDisplayValue )*>,No)){<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Column(UI_Identifier_Modifier_for_SM_SC_Universal_Safety_Cabinet).SetPermission(Hidden) )*>}{<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Column(UI_Identifier_Modifier_for_SM_SC_Universal_Safety_Cabinet).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

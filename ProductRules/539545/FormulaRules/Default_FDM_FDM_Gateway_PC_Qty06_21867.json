@@ -1,0 +1,11 @@
+{
+    "id": 21867,
+    "condition": "[EQ](<*VALUE(FDM_FDM_Gateway_PC_Qty(0-6))*>,)",
+    "name": "Default_FDM_FDM_Gateway_PC_Qty(0-6)",
+    "action": "<*ASSIGNVALUE(FDM_FDM_Gateway_PC_Qty(0-6):0)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

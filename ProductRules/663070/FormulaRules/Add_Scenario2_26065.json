@@ -1,0 +1,11 @@
+{
+    "id": 26065,
+    "condition": "[AND]([OR]([EQ](<*VALUE(CE_Site_Voltage)*>,120V),[EQ](<*VALUE(CE_Site_Voltage)*>,240V)),[NEQ](<*VALUE(Additional_Station_Cabinet_Mounting_Type)*>,None))",
+    "name": "Add_Scenario2",
+    "action": "<*ASSIGNVALUE(Add_Scenario2:<* Eval(<*VALUE(Additional Stations)*>) *>)*>",
+    "description": "44029",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22959,
+    "condition": "[EQ](<*VALUE(SerC_RG_Fiber_Optic_IO_Link_Extender_Type_for_PMIO)*>,)",
+    "name": "Default_SerC_RG_Fiber_Optic_IO_Link_Extender_Type_for_PMIO",
+    "action": "<*SELECTVALUE(SerC_RG_Fiber_Optic_IO_Link_Extender_Type_for_PMIO:Multi Mode)*>",
+    "description": "CXCPQ-52066",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

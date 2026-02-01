@@ -1,0 +1,11 @@
+{
+    "id": 19022,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[IN](<*VALUE(MX_CD_Type_of_devronizer)*>,Fourdrinier preheat and profiling,Press,Fourdrinier profiling only,Couch,Yankee),[EQ](<*VALUE(MX_CD_Quick_Disconnect_Assembly_devronizer)*>,Yes))",
+    "name": "CD_Part_9205",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9205)*><*SETATVQTY(MX_CD_Bom_Parts:9205, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

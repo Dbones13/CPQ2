@@ -1,0 +1,11 @@
+{
+    "id": 18000,
+    "condition": "[EQ](<*VALUE(MXP_Tray_mm)*>,)",
+    "name": "Default_MXP_CD_Tray_mm",
+    "action": "<*ASSIGNVALUE(MXP_Tray_mm:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18199,
+    "condition": "[EQ](<*VALUE(MXP_Vortex_Cooling)*>,)",
+    "name": "Default_MXP_Vortex_Cooling",
+    "action": "<*SELECTVALUE(MXP_Vortex_Cooling:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

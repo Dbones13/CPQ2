@@ -1,0 +1,11 @@
+{
+    "id": 14799,
+    "condition": "[AND]([IN](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD,QCS MD & CD),[EQ](<*VALUE(MX_Electronic_or_physical_media)*>,Electronic))",
+    "name": "MX_Part_QCS_MXCDC_702_ESD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:QCS-MXCDC-702-ESD)*><*SETATVQTY(MX_Platform_Bom_Parts:QCS-MXCDC-702-ESD, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 2603,
+    "condition": "[EQ](<*VALUE(Terminal_Ges_Location_Labour)*>,GES India)",
+    "name": "GES_Location_Values_India",
+    "action": "<*DISALLOWVALUES(Terminal_GES_Eng:HPS_GES_P350B_CN,Terminal_GES_Eng:HPS_GES_P350F_CN)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

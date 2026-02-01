@@ -1,0 +1,11 @@
+{
+    "id": 2555,
+    "condition": "[EQ](<*VALUE(Graphics_Migration_Is_the_system_connected_to)*>,No)",
+    "name": "Show Graphics value 1",
+    "action": "<*ALLOWVALUES(Graphics_Migration_Require_multi_tag_shapes:No,Graphics_Migration_Require_multi_tag_shapes:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "03/05/23",
+    "modifiedBy": "Madhuri Sharma"
+}

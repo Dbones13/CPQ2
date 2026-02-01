@@ -1,0 +1,11 @@
+{
+    "id": 26280,
+    "condition": "[EQ](<*VALUE(Cabinet Hinge Type)*>,)",
+    "name": "Default_Cabinet_Hinge_Type",
+    "action": "<*SELECTVALUE(Cabinet Hinge Type:130 Degree)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20367,
+    "condition": "[NEQ](<*VALUE(SS_Touch_Screen_required_desk)*>,No Touch Screen)",
+    "name": "Condition_for_Touch_screen",
+    "action": "<*DISALLOWALLVALUESEXCEPT(SS_Display_size_desk:21.33 inch NTS)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

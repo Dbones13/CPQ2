@@ -1,0 +1,11 @@
+{
+    "id": 9103,
+    "condition": "[AND]([OR]([LT](<*CTX ( Container(Labor_Details_New/Expansion_Cont).Row(1).Column(Labor_Percentage_FAT).Get )*>,0),[GT](<*CTX ( Container(Labor_Details_New/Expansion_Cont).Row(1).Column(Labor_Percentage_FAT).Get )*>,100)),[NEQ](<*CTX ( Container(Labor_Details_New/Expansion_Cont).Row(1).Column(Labor_Percentage_FAT).Get )*>,))",
+    "name": "set_value_Labor_Percentage_FAT",
+    "action": "<*CTX ( Container(Labor_Details_New/Expansion_Cont).Row(1).Column(Labor_Percentage_FAT).Set(100) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

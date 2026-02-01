@@ -1,0 +1,11 @@
+{
+    "id": 25560,
+    "condition": "[EQ](<*VALUE(Number of Network Storage Device Standard)*>,)",
+    "name": "Default_Number_of_Network_Storage_Device_Standard",
+    "action": "<*ASSIGNVALUE(Number of Network Storage Device Standard:0)*>",
+    "description": "CXCPQ-35453",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

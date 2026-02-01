@@ -1,0 +1,11 @@
+{
+    "id": 15039,
+    "condition": "[EQ](<*VALUE(MSE_Number_Specifications_Product_Purchases)*>,)",
+    "name": "Default_Product_Purchases",
+    "action": "<*ASSIGNVALUE(MSE_Number_Specifications_Product_Purchases:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

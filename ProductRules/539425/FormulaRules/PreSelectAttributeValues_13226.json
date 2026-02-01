@@ -1,0 +1,11 @@
+{
+    "id": 13226,
+    "condition": "1",
+    "name": "PreSelectAttributeValues",
+    "action": "[IF]([EQ](<*VALUE(FDM_Upgrade_Are_additional_components_required)*>,)){<*RESETATTRIBUTE(FDM_Upgrade_Are_additional_components_required)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FDM_Upgrade_Audit_trail_file_required)*>,)){<*RESETATTRIBUTE(FDM_Upgrade_Audit_trail_file_required)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FDM_Upgrade_HART_Devices_Offline_Configuration_req)*>,)){<*RESETATTRIBUTE(FDM_Upgrade_HART_Devices_Offline_Configuration_req)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FDM_Upgrade_Is_Experion_Server_redundant_for_FDM)*>,)){<*RESETATTRIBUTE(FDM_Upgrade_Is_Experion_Server_redundant_for_FDM)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FDM_Upgrade_Asset_Sentinel_integration_required)*>,)){<*RESETATTRIBUTE(FDM_Upgrade_Asset_Sentinel_integration_required)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(FDM HART IP DOWNLINK LICENSE)*>,)){<*RESETATTRIBUTE(FDM HART IP DOWNLINK LICENSE)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

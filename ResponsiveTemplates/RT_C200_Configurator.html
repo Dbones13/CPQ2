@@ -1,0 +1,279 @@
+ <!-- RT_C200_Configurator--> 
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper" >
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+   
+        <div id="c200-migration-scenario" class="config_row col-md-12 clear-padding pt10 flex banner_clps" onclick="toggleConfigSection(event, '#c200-migration-scenario')">
+          <label class="onlytext">Migration Scenario</label>
+           <a id="c200-migration-scenario-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-migration-scenario-content" class=" col-md-12 clear-padding">
+			<!-- ko foreach: attributes.filterByProperty('name' ,"C200_Select_Migration_Scenario") --> 
+			  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                 <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+				 </div>
+            <!-- /ko -->
+        </div>
+     
+  
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="c200-migration-questions" onclick="toggleConfigSection(event, '#c200-migration-questions')">
+          <label class="onlytext">General Questions - C200 Migration</label>
+            <a id="c200-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-migration-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Migration_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+       
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="c200-migration-configurations" onclick="toggleConfigSection(event, '#c200-migration-configurations')">
+          <label class="onlytext">C200 Migration - Configuration</label>
+           <a id="c200-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-migration-configurations-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Migration_Config_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_C200Configurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>          
+        </div>
+     
+
+
+        <!-- ko ifnot: localStorage.getItem("checkR2Q") === 'Yes' -->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="c200-third-party-items" onclick="toggleConfigSection(event, '#c200-third-party-items')">
+         <label class="onlytext">Third Party Items</label>
+          <a id="c200-third-party-items-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-third-party-items-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Third_Party_Items_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+        <!-- /ko -->
+      
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="c200-services" onclick="toggleConfigSection(event, '#c200-services')">
+          <label class="onlytext">Services</label>
+           <a id="c200-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-services-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+          <!-- ko foreach: attributes.filterByProperty('name' ,"C200_Factory_Acceptance_Test_Required", "C200_Will_Honeywell_perform_equipment_installation", "C200_Data_Gathering_Required", "C200_Documentation_Required", "C200_additional_hrs_ins") --> 
+          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko --> 
+          </div>
+              <!-- /ko -->
+          </div>
+        </div>
+        <!-- ko ifnot: localStorage.getItem("checkR2Q") === 'Yes' -->
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="c200-c300-cabinet-configuration" onclick="toggleConfigSection(event, '#c200-c300-cabinet-configuration')">
+          <label class="onlytext">C300 Series C Cabinet Configuration</label>
+           <a id="c200-c300-cabinet-configuration-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-c300-cabinet-configuration-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-6">
+          <div class="text-center" style="font-weight:bold" >Front & Rear Access </div>
+          <!-- ko foreach: attributes.filterByProperty('name' ,"C200_C300_Cabinet_Doors", "C200_C300_Cabinet_Hinge_Type", "C200_C300_Cabinet_Light_Required", "C200_C300_Cabinet_Thermostat_Required", "C200_C300_Cabinet_Keylock_Type", "C200_C300_Power_Entry", "C200_C300_TDI_Power_Supply_Cable_Length", "C200_C300_Cabinet_Color", "C200_C300_Fan_Voltage", "C200_C300_Cabinet_Base_Required", "Power System Vendor", "Power System Type") --> 
+          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko --> 
+          </div>
+              <!-- /ko -->
+          </div>
+		  <div class="col-xs-12 col-sm-6">
+        <div class="text-center" style="font-weight:bold" >Front Access Only </div>
+			  <!-- ko foreach: attributes.filterByProperty('name' ,"C200_C300_Cabinet_Doors_FAO","ATT_C200C300CABHTYP","ATT_C200C300CABLITREQ","ATT_C200C300CABTHREQ","ATT_C200C300CABKEYTYP","ATT_C200C300PWREN","ATT_C200C300TDIPWRCAB","ATT_C200C300CABCLR","ATT_C200C300FANVOLT","ATT_C200C300CABBSREQ","ATT_C200C300PSV","ATT_C200C300PST") --> 
+			  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12 brdr_bt' : 'col-sm-12 col-xs-12 brdr_bt', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                 <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+				 </div>
+            <!-- /ko -->
+          </div>
+        </div>
+        <!-- /ko -->
+</div>
+<!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <div class="row col-xs-12 swagger">
+    <div id="c200-migration-scenario">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-migration-scenario')">
+          <span>Migration Scenario</span>
+          <a id="c200-migration-scenario-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-migration-scenario-content">
+          <div class="col-xs-12 col-sm-7">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Migration_Scenario_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="c200-migration-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-migration-questions')">
+          <span>General Questions - C200 Migration</span>
+          <a id="c200-migration-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-migration-questions-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Migration_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="c200-migration-configurations">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-migration-configurations')">
+          <span>C200 Migration - Configuration</span>
+          <a id="c200-migration-configurations-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-migration-configurations-content">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Migration_Config_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_C200Configurations"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="c200-third-party-items">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-third-party-items')">
+          <span>Third Party Items</span>
+          <a id="c200-third-party-items-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-third-party-items-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Third_Party_Items_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="c200-services">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-services')">
+          <span>Services</span>
+          <a id="c200-services-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-services-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Services_1_Cont",) -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_Services_2_Cont",) -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="c200-c300-cabinet-configuration">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#c200-c300-cabinet-configuration')">
+          <span>C300 Series C Cabinet Configuration</span>
+          <a id="c200-c300-cabinet-configuration-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="c200-c300-cabinet-configuration-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_C300_Series_C_Cabinet_Config_Cont") -->
+            <div class="text-center" style="font-weight:bold" data-bind="text:label">Front & Rear Access </div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+		  <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "C200_C300_Series_C_Cabinet_Config_Cont_FAOnly") -->
+            <div class="text-center" style="font-weight:bold" data-bind="text:label">Front Access Only </div>
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ko -->

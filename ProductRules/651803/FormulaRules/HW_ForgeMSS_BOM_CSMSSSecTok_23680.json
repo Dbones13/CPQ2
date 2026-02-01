@@ -1,0 +1,11 @@
+{
+    "id": 23680,
+    "condition": "1",
+    "name": "HW_ForgeMSS_BOM_CS-MSS-Sec-Tok",
+    "action": "[IF]([AND](<*ISSELECTED(Secure Remote Access.Yes)*>,[GT](<*VALUE(Number of Tokens Required)*>,0))){<*SELECTVALUES(Secure Remote Access Token BOM:CS-MSS-SEC-TOK|CS-MSS-SEC-TOK-ANL)*><*SETATVQTY(Secure Remote Access Token BOM:CS-MSS-SEC-TOK, <*VALUE(Number of Tokens Required)*>)*><*SETATVQTY(Secure Remote Access Token BOM:CS-MSS-SEC-TOK-ANL, <*VALUE(Number of Tokens Required)*>)*>}{<*RESETATTRIBUTE(Secure Remote Access Token BOM)*>}[ENDIF]",
+    "description": "",
+    "rank": "40",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

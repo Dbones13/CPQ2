@@ -1,0 +1,11 @@
+{
+    "id": 14584,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Enclosures_with_Force_Ventilation)*>,)",
+    "name": "Default Number of Enclosures with Force Ventilation",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Enclosures_with_Force_Ventilation:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

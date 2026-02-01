@@ -1,0 +1,11 @@
+{
+    "id": 20771,
+    "condition": "1",
+    "name": "Part_D_EP_COAS16_5",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Simulation_Bom_parts:EP-COAS16)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

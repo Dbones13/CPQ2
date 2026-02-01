@@ -1,0 +1,11 @@
+{
+    "id": 26146,
+    "condition": "[AND]([EQ](<*VALUE(Interface with TPS Required?)*>,No),[GT](<*VALUE(Mobile Station Access License (0-5))*>,0))",
+    "name": "EP_T09CAL_Add_MobStation",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-T09CAL)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-T09CAL, <*VALUE(Mobile Station Access License (0-5))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45609",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

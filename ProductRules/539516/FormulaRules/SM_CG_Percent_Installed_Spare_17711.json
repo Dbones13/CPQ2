@@ -1,0 +1,11 @@
+{
+    "id": 17711,
+    "condition": "1",
+    "name": "SM_CG_Percent_Installed_Spare",
+    "action": "<*ASSIGNVALUE(SM_CG_Percent_Installed_Spare:<*CTX ( Container(SM_CG_Cabinet_Details_Cont_Right).Row(1).Column(Percent_Installed_Spare_IOs).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

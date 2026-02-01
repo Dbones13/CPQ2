@@ -1,0 +1,11 @@
+{
+    "id": 20302,
+    "condition": "[NEQ](<*VALUE(DVM_Encoder_I/O_Monitoring)*>,Yes)",
+    "name": "ENCODER I/O MONITORING_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMEIO)*><* DoResetAtt *>",
+    "description": "CXCPQ-45714",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

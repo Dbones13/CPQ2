@@ -1,0 +1,11 @@
+{
+    "id": 13381,
+    "condition": "1",
+    "name": "HMI Test Procedure (FAT & SAT)",
+    "action": "<*ASSIGNVALUE(HMI Test Procedure (FAT & SAT):[IF]([EQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,None)){<* Eval(<*VALUE(labor_parameter_sz1)*>*8*1.2+0<*VALUE(labor_parameter_sz1)*>*4*1.05) *>}{<* Eval(<*VALUE(labor_parameter_sz1)*>*8*1.2+0<*VALUE(labor_parameter_sz1)*>*4*1.05) *>}[ENDIF])*>",
+    "description": "If ges=none then\n         calculated Hrs = SZ * (8 + 4)\nElse If ges!=none then\n        calculated Hrs = SZ * (8 + 4) * 1.2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

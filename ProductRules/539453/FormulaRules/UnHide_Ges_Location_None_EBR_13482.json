@@ -1,0 +1,11 @@
+{
+    "id": 13482,
+    "condition": "[NEQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,None)",
+    "name": "UnHide_Ges_Location_None_EBR",
+    "action": "{<*ALLOWATTRIBUTES(EBR_Engineering_Labor_GES_%)*><*CTX( Container(EBR_Engineering_Labor_Container).Column(GES Eng).SetPermission(Editable) )*><*CTX( Container(EBR_Engineering_Labor_Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(EBR_Engineering_Labor_Container).Column(GES_MPA_Price).SetPermission(Editable) )*>}",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Vignesh Narayanasamy"
+}

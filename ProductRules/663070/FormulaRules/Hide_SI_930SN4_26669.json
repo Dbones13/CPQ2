@@ -1,0 +1,11 @@
+{
+    "id": 26669,
+    "condition": "[NOT](<*ISSELECTED(Default Switch.SW_BB_RT_CISCO_24PT_SFP)*>)",
+    "name": "Hide_SI_930SN4",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:SI-930SN4)*><* DoResetAtt *>\n",
+    "description": "CXCPQ-118467",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

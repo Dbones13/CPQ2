@@ -1,0 +1,11 @@
+{
+    "id": 17931,
+    "condition": "[OR]([EQ](<*CTX( Container(Additional Hardware).Row(1).Column(Switch_Port).Get)*>,24 Ports),[EQ](<*CTX( Container(Additional Hardware).Row(1).Column(Switch_Port).Get)*>,48 Ports))",
+    "name": "Switch_16_Ports_51199883-100_Allow",
+    "action": "<* DoNotResetAtt *><*ALLOWVALUES(SCADA_BOM_Items:51199883-100)*><*SELECTVALUE(SCADA_BOM_Items:51199883-100)*><*SETATVQTY(SCADA_BOM_Items:51199883-100,<*VALUE(SubCal_51199883_100)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

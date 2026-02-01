@@ -1,0 +1,11 @@
+{
+    "id": 21836,
+    "condition": "[EQ](<*VALUE(FDM Client License (0-10))*>,)",
+    "name": "Default_FDM Client License (0-10)",
+    "action": "<*ASSIGNVALUE(FDM Client License (0-10):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

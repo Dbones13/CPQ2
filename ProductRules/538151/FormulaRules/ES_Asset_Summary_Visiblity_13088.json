@@ -1,0 +1,11 @@
+{
+    "id": 13088,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*CTX ( Quote.CustomField(SC_CF_Parent_Quote_Number_Link) )*>,))",
+    "name": "ES Asset Summary Visiblity",
+    "action": "<*CTX ( Container(ES_Asset_Summary ).Column(No_MSID_PY).SetPermission(Editable) )*>\n<*CTX ( Container(ES_Asset_Summary ).Column(PY_List_Price).SetPermission(Editable) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

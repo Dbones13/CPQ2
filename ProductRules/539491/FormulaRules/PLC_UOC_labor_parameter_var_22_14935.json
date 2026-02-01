@@ -1,0 +1,11 @@
+{
+    "id": 14935,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_22",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_22:<* Eval(<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_CDA_based_Controller_Connections) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_OPC_UA_Servers) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_OPC_UA_Clients) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_MODBUS_TCP_Slaves) )*>+<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_Modbus_Master) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

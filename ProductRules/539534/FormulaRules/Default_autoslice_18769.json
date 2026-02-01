@@ -1,0 +1,11 @@
+{
+    "id": 18769,
+    "condition": "[EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,)",
+    "name": "Default_autoslice",
+    "action": "<*SELECTVALUE(MX_CD_Type_of_Valve_Autoslice:CDW60L Standard)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

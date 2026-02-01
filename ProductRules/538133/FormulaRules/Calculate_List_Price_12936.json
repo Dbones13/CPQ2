@@ -1,0 +1,11 @@
+{
+    "id": 12936,
+    "condition": "[GEQ](<*VALUE(SC_P1P2_Parts_Ext_Price)*>,0)",
+    "name": "Calculate_List_Price",
+    "action": "<*ASSIGNVALUE(SC_P1P2_ListPrice:<* Eval((<*VALUE(SC_P1P2_Fee_Percentage)*>/100)*<*VALUE(SC_P1P2_Parts_Ext_Price)*>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

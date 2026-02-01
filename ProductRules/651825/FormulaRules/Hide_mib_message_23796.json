@@ -1,0 +1,11 @@
+{
+    "id": 23796,
+    "condition": "[EQ](<*VALUE(SerC_CG_MIB_Configuration_Required)*>,No)",
+    "name": "Hide_mib_message",
+    "action": "<*DISALLOWATTRIBUTES(Enhanced_function_message,Enhanced_function_message2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

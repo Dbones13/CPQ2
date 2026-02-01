@@ -1,0 +1,11 @@
+{
+    "id": 20177,
+    "condition": "[EQ](<*VALUE(DVM_Adaptive Video Streaming)*>,)",
+    "name": "Default_DVM_Adaptive Video Streaming",
+    "action": "<*SELECTVALUE(DVM_Adaptive Video Streaming:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

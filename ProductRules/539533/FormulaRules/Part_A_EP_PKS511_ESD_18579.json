@@ -1,0 +1,11 @@
+{
+    "id": 18579,
+    "condition": "[AND]([EQ](<*VALUE(ES_Experion_PKS_Release)*>,R511),[EQ](<*VALUE(ES_eServer_Base_Media_Delivery)*>,Electronic Download))",
+    "name": "Part_A_EP_PKS511_ESD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(eServer_BOM_parts:EP-PKS511-ESD)*><*SETATVQTY(eServer_BOM_parts:EP-PKS511-ESD, 1)*><* DoResetAtt *>",
+    "description": "7958 story",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

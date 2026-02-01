@@ -1,0 +1,11 @@
+{
+    "id": 13321,
+    "condition": "1",
+    "name": "labor_parameter_qci",
+    "action": "<*ASSIGNVALUE(labor_parameter_qci:[IF](<*ISSELECTED(Quality of Customer Input.Old Graphic)*>){1}{1.1}[ENDIF])*>",
+    "description": "If qci = Old Graphic, Q = 1\nElse Q = 1.1",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

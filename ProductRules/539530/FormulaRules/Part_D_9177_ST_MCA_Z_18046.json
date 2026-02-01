@@ -1,0 +1,11 @@
+{
+    "id": 18046,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow),[NEQ](<*VALUE(MXP_Proflow_Type)*>,Rotational),[NEQ](<*VALUE(MXP_Type_of_Valve)*>,Standard Torque (20Nm) Andritz Y),[NOT]([IN](<*VALUE(MXP_Actuator_Housing_cover)*>,Stainless steel,Zytel)),[NEQ](<*VALUE(MXP_ProFlow_Machined_Mounting_Adapter_Valve Coupling)*>,Yes),[LEQ](<*VALUE(MXP_Number_of_Zones)*>,0))",
+    "name": "Part_D_9177_ST_MCA_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_CD_Bom_Parts:9177-ST-MCA-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14789,
+    "condition": "[GT](<*VALUE(MX_HC_Digital_Input_24_VDC_32_Channels)*>,0)",
+    "name": "MX_Part_Q8796_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q8796-50)*><*SETATVQTY(MX_Platform_Bom_Parts:Q8796-50, <*VALUE(MX_HC_Digital_Input_24_VDC_32_Channels)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

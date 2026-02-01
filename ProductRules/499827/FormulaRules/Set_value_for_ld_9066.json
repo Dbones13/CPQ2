@@ -1,0 +1,11 @@
+{
+    "id": 9066,
+    "condition": "1",
+    "name": "Set value for ld",
+    "action": "[IF]([EQ](<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Liquidated Damages Included).Get )*>,Yes)){<*ASSIGNVALUE(Labor_parameter_ld: 1)*>}{<*ASSIGNVALUE(Labor_parameter_ld: 0)*>}[ENDIF]",
+    "description": "Liquidated Damages Included?",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

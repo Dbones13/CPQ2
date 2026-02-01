@@ -1,0 +1,11 @@
+{
+    "id": 9152,
+    "condition": "1",
+    "name": "Populate Part Qty",
+    "action": "<* ExecuteScript(GS_Trace_Software_PartSummary) *>",
+    "description": "",
+    "rank": "10001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26533,
+    "condition": "[EQ](<*VALUE(DMS Multi Window Support Option Required?)*>,)",
+    "name": "DMS Multi Window Support Option Required? def",
+    "action": "<*SELECTVALUES(DMS Multi Window Support Option Required?:No|Yes)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26728,
+    "condition": "[EQ](<*CTX( Container(Additional Hardware).Row(1).Column(Switch_Port).Get)*>,48 Ports)",
+    "name": "Scada_48_Switch_SI-920LN8_Allow",
+    "action": "<* DoNotResetAtt *><*ALLOWVALUES(SCADA_BOM_Items:SI-920LN8)*><*SELECTVALUE(SCADA_BOM_Items:SI-920LN8)*><*SETATVQTY(SCADA_BOM_Items:SI-920LN8,<*VALUE(SubCal_SI-920LN8)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "06/01/26",
+    "modifiedBy": "Yogesh Baisla2"
+}

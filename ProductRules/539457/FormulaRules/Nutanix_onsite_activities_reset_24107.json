@@ -1,0 +1,11 @@
+{
+    "id": 24107,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[EQ](<*VALUE(Virtualization_OnSite_Activities_hours)*>,))",
+    "name": "Nutanix_onsite_activities_reset",
+    "action": "<*RESETATTRIBUTE(Virtualization_OnSite_Activities_hours)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11693,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS Detailed Functional Design Specification/Sequence of Operations",
+    "action": "<*ASSIGNVALUE(IS Detailed Functional Design Specification/Sequen:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){[IF](<*ISSELECTED(IS_Detailed_Functional_Design_Specification_Req.Yes)*>){<*Eval((40) + ((<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> - 1) * 4) + <*VALUE(IS_No_of_EIS_Points_(0-5000))*> * (0.083))*>}{0}[ENDIF]}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){<* Eval([IF](<*ISSELECTED(IS_Detailed_Functional_Design_Specification_Req.Yes)*>){<*Eval((40) + (( <*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*>- 1) * 4) + <*VALUE(IS_No_of_EIS_Points_(0-5000))*>  * (0.083))*>}{0}[ENDIF]*0.8) *>}{<* Eval(([IF](<*ISSELECTED(IS_Detailed_Functional_Design_Specification_Req.Yes)*>){<*Eval((40) + ((<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> - 1) * 4) + <*VALUE(IS_No_of_EIS_Points_(0-5000))*>  * (0.083))*>}{0}[ENDIF]*0.8) *1.1) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

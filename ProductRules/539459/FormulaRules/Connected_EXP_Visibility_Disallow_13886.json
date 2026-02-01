@@ -1,0 +1,11 @@
+{
+    "id": 13886,
+    "condition": "[EQ](<*VALUE(Enterprise_flag_check)*>,False)",
+    "name": "Connected_EXP_Visibility_Disallow",
+    "action": "<*DISALLOWATTRIBUTES(SM_Enterprise_Cluster,SM_Enterprise_Cluster_Sub)*>",
+    "description": "",
+    "rank": "100",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

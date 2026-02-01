@@ -1,0 +1,11 @@
+{
+    "id": 23932,
+    "condition": "[AND]([GT](<*VALUE(Terminal_Number_of_Reviews)*>,0),[GT](<*VALUE(Terminal_Number_of_Days_per_Design_Review)*>,0))",
+    "name": "Set TM Design Review Meetings with Customer",
+    "action": "<*ASSIGNVALUE(TM Design Review Meetings with Customer:<*Eval(<*VALUE(Terminal_Number_of_Days_per_Design_Review)*> * <*VALUE(Terminal_Number_of_Reviews)*> * 8.5)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

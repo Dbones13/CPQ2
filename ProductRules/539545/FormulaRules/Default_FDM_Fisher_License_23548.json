@@ -1,0 +1,11 @@
+{
+    "id": 23548,
+    "condition": "[EQ](<*VALUE(FDM_FF_Connector_Interface_Licence_Fisher)*>,)",
+    "name": "Default_FDM_Fisher_License",
+    "action": "<*ASSIGNVALUE(FDM_FF_Connector_Interface_Licence_Fisher:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

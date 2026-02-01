@@ -1,0 +1,11 @@
+{
+    "id": 15229,
+    "condition": "[EQ](<*VALUE(MXP_Tire_Calendar_Control)*>,Pre-calender Width Control, feedback (req. scanner/sensor), Textile Calender Control Mode only)",
+    "name": "Part_A_3_3217_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-3217-01)*><*SETATVQTY(MXP_Bom_Parts:3-3217-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

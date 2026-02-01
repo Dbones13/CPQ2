@@ -1,0 +1,11 @@
+{
+    "id": 21919,
+    "condition": "[OR]([NEQ](<*CTX ( Quote.CustomField(Booking LOB) )*>,PAS), [EQ](<*VALUE(FDM_Release)*>,R511))",
+    "name": "Hide_FDM HART-IP Server Interfaces (0-1)",
+    "action": "<*DISALLOWATTRIBUTES(FDM HART-IP Server Interfaces (0-1))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

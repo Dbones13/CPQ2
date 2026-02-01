@@ -1,0 +1,11 @@
+{
+    "id": 14660,
+    "condition": "[EQ](<*VALUE(MX_MD_Coordinated_speed_change_control)*>,)",
+    "name": "Default_MX_MD_Coordinated_speed_change_control",
+    "action": "<*SELECTVALUE(MX_MD_Coordinated_speed_change_control:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

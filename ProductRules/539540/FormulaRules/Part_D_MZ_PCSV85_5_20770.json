@@ -1,0 +1,11 @@
+{
+    "id": 20770,
+    "condition": "[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R511)",
+    "name": "Part_D_MZ_PCSV85_5",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MZ-PCSV85)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

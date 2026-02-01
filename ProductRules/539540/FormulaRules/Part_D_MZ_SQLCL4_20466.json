@@ -1,0 +1,11 @@
+{
+    "id": 20466,
+    "condition": "[LEQ](<*VALUE(SS_display_sum)*>,0)",
+    "name": "Part_D_MZ_SQLCL4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:MZ-SQLCL4)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

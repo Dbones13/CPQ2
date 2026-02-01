@@ -1,0 +1,133 @@
+<div id="cartListContainer" class="w960 user-page-container load-quote-page-container hidden" data-bind="visible: isInitialized, css: { hidden : $root.landedFromC4C }">
+        <div class="cart-list fiori3-cart-list ">
+            <div class="fiori3-cart-list-header php">
+                <div class="dropdown fiori3-dropdown">
+                    <div class="php_icon"><i class="fa fa-tag"></i></div>
+                    <div class="quotelst-header">
+                        <div class="quote_title">Quotes</div>
+                        <div class="flex">
+                            <p data-bind="text: activeTab().name" class="fiori3-active-tab"></p>
+                            <div class="fiori3-dropdown-menu-wrapper">
+                                <button href="#" class="dropdown-toggle fiori3-icon-button btn" data-toggle="dropdown"><span class="sap-icon">&#xe1fe;</span></button>
+                                    <ul class="dropdown-menu" data-bind="foreach: tabs">
+                                        <li data-bind="css: { active: isActive }, click:$root.activateTab">
+                                            <a href="#tabsimple1" data-toggle="tab" class="active-border">
+                                                <span data-bind="text: name"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ko with: filter -->
+                <!--data-bind="click: changeVisibility"-->
+                <div class="input-group filter-content fiori3-cart-search-group fiori3-cart-search-group-add-new" data-bind="css: { 'search-in-use': $root.isSearchInputFocused() }">
+                    <div class="search-input-trigger" data-bind="click: $root.openSearchInput, css: { 'search-input-trigger-hover-state': !$root.isSearchInputFocused() }">
+                        <span class="sap-icon">&#xe00d;</span>
+                    </div>
+                    <div class="fiori3-search-input-holder">
+                        <input id="quoteSearch" type="text" class="form-control" placeholder='@Translation.Get("CartList.SearchByQuoteNumber")' data-bind="valueUpdatedOnEnter: $root.filter.quoteNumber, visible: $root.isSearchInputFocused()">
+                    </div>
+                    <div class="input-group-btn">
+                        <div data-toggle="dropdown" class="filter-trigger" role="button" data-bind="tooltip: { title: '@Translation.GetJS("Catalogue.Filters")' }">
+                            <span class="sap-icon" data-bind="css: { 'color-change': hasActiveFilters() }" data-original-title="" title="">&#xe076;</span>
+                        </div>
+                        <div class="dropdown-menu stayOpen pull-right col-md-12 col-sm-12 col-xs-12" role="menu">
+                            <div class="filter-header">
+                                @Translation.Get("QuoteList.Filter")
+                            </div>
+                            <div class="filters clearfix cpq-scroll filter-dropdown-menu-content" id="filterDropdownMenuContent">
+                                <!-- ko with: statuses -->
+                                <div class="form-group clearfix">
+                                    <label for="Status Filter">@Translation.Get("Msg.FilterByStatus")</label>
+                                    <select multiple="" class="form-control" data-bind="select2: selectedValues, options: availableValues, optionsValue: 'id', optionsText: 'value'" tabindex="-1" style="display: block; width: 100%;"></select>
+                                </div>
+                                <!-- /ko -->
+                                <!-- ko with: dateRange -->
+                                <div class="form-group clearfix fiori3-input-group">
+                                    <label for="Date Filter">@Translation.Get("Msg.FilterByDate")</label>
+                                    <input type="text" name="reservation" id="dateRangeFilter" data-bind="daterangepicker: { ranges: $parent.getRanges(), format: $parent.dateFormat(), setRanges: $parent.setDateRange, clickRangeHandler: $parent.clickRangeHandler, startDate: from, endDate: to, parentElement: '#filterDropdownMenuContent' }, value: value" class="form-control" autocomplete="off">
+                                </div>
+                                <!-- /ko -->
+                                <!-- ko foreach: additionalFields -->
+                                <!-- ko template : { name : templateName } -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                            </div>
+                            <div class="filter-footer vertical-align">
+                                <button data-bind="click: saveSettings" data-toggle="dropdown" role="button" class="btn btn-primary fiori3-btn-primary save-filter">@Translation.Get("Msg.SaveFilters")</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+            <div class="fiori3-pills-container" data-bind="visible: filter.hasActiveFilters()">
+                <ul>
+                    <!-- ko foreach: filter.activeFilters -->
+                    <li>
+                        <span class="fiori3-pills">
+                            <!-- ko template : { name : templateName } -->
+                            <!-- /ko -->
+                        </span>
+                    </li>
+                    <!-- /ko -->
+                    <li><a data-bind="click: filter.clearAllFilters" href="#" class="clear-filters">@Translation.Get("Msg.ClearAll")</a></li>
+                </ul>
+            </div>
+            
+            <div class="fiori3-quote-list-grid" data-bind="visible: isInitialized" style="display: none">
+                <!-- ko with: mainGrid -->
+                @Html.PartialWithNameAsComment("Grid")
+                <div class="row col-md-12" data-bind="visible: hasData() && !isInViewMode()">
+                    <button data-bind="visible: hasData() && !isInViewMode(), click: $root.saveData" class="btn btn-primary fiori3-btn-primary">@Translation.Get("Msg.Save")</button>
+                    <button data-bind="visible: hasData() && !isInViewMode(), click: setViewMode" class="btn btn-secondary fiori3-btn-secondary">@Translation.Get("Msg.Cancel")</button>
+                </div>
+                <!-- /ko -->
+                <div data-bind="visible: activeTab().id() === 2">
+                    <!-- ko if: loadDelegatedApprover -->
+                    <!-- ko with: delegatedApproverGrid -->
+                    <h4>@Translation.Get("CartList.QuotesMyTeamNeedsToApprove")</h4>
+                    @Html.PartialWithNameAsComment("Grid")
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </div>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    <!-- ko if: $root.landedFromC4C -->
+        <div class="fiori3-alert fiori3-alert-danger fiori3-alert-danger-border hidden" data-bind="css: { hidden : !$root.landedFromC4C }">
+            <span class="sap-icon">&#xe1ec;</span>
+            <span>@Translation.Get("C4C.LoadQuoteDisabledWhenLadningFromC4C")</span>
+        </div>
+    <!-- /ko -->
+    <div id="templates" style="display: none">
+        @Html.PartialWithNameAsComment("Editors/AdditionalFieldTemplate/AdditionalFieldTextBoxTemplate")
+        @Html.PartialWithNameAsComment("Editors/AdditionalFieldTemplate/AdditionalFieldDatePickerTemplate")
+        @Html.PartialWithNameAsComment("Editors/AdditionalFieldTemplate/AdditionalFieldDateIntervalTemplate")
+        @Html.PartialWithNameAsComment("Editors/AdditionalFieldTemplate/AdditionalFieldNumberIntervalTemplate")
+        @Html.PartialWithNameAsComment("Editors/CellTemplate/CellWithActionTemplate")
+        @Html.PartialWithNameAsComment("Editors/CellTemplate/DatePickerTemplate")
+        @Html.PartialWithNameAsComment("Editors/CellTemplate/LabelTemplate")
+        @Html.PartialWithNameAsComment("Editors/CellTemplate/ListBoxTemplate")
+        @Html.PartialWithNameAsComment("Editors/CellTemplate/TextBoxTemplate")
+        @Html.PartialWithNameAsComment("Editors/SelectedFilterTemplate/SelectedFilterAdditionalFieldTextTemplate")
+        @Html.PartialWithNameAsComment("Editors/SelectedFilterTemplate/SelectedFilterDateRangeTemplate")
+        @Html.PartialWithNameAsComment("Editors/SelectedFilterTemplate/SelectedFilterTextTemplate")
+        @Html.PartialWithNameAsComment("Dialogs/ReassignCartDialogTemplate")
+        @Html.PartialWithNameAsComment("PagerTemplate")
+    </div>
+</div>
+
+<script type="text/html" id="actionsTemplate">
+    <ul data-bind="foreach: actions" class="dropdown-menu-cart fiori3-quote-list-actions fiori3-dropdown-menu">
+        <li>
+            <span class="vertical-align" data-bind="text: name, click: activate, css: { 'btn-primary fiori3-btn-primary': name == 'Edit' }"></span>
+        </li>
+    </ul>
+</script>
+@Html.Partial("~/Views/Approvals/RetractApprovalCommentTemplate.cshtml")
+

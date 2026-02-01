@@ -1,0 +1,11 @@
+{
+    "id": 14106,
+    "condition": "[EQ](<*VALUE(No. of FDM System groups)*>,)",
+    "name": "Default_FDM System Group",
+    "action": "<*ASSIGNVALUE(No. of FDM System groups:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

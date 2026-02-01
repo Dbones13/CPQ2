@@ -1,0 +1,11 @@
+{
+    "id": 13329,
+    "condition": "1",
+    "name": "SII I/F Configuration Settings_Modbus",
+    "action": "<*ASSIGNVALUE(SII I/F Configuration Settings_Modbus:<* Eval(0.25*<*VALUE(Number of Modbus Interfaces Types)*>+0.5*<*VALUE(Number of Modbus Interfaces)*>) *>)*>",
+    "description": "39333",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

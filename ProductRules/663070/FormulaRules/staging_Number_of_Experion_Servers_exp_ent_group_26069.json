@@ -1,0 +1,11 @@
+{
+    "id": 26069,
+    "condition": "[NEQ](<*CTX( Math.Sum([IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Non Redundant)){1}{2}[ENDIF],<*VALUE(ACE Node Tower Mount Desk)*>,<*VALUE(ACE Node Rack Mount Cabinet)*>,<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,<*VALUE(Experion APP Node - Tower Mount)*>,<*VALUE(Experion APP Node - Rack Mount)*>,<*VALUE(Mobile Server Nodes (0-1))*>,<*VALUE(Additional Servers)*>) )*>,<*VALUE(staging_Number_of_Experion_Servers_exp_ent_group)*>)",
+    "name": "staging_Number_of_Experion_Servers_exp_ent_group",
+    "action": "<*ASSIGNVALUE(staging_Number_of_Experion_Servers_exp_ent_group:<*CTX( Math.Sum([IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Non Redundant)){1}{2}[ENDIF],<*VALUE(ACE Node Tower Mount Desk)*>,<*VALUE(ACE Node Rack Mount Cabinet)*>,<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,<*VALUE(ACE_T_Node _Rack_Mount_Cabinet)*>,<*VALUE(Experion APP Node - Tower Mount)*>,<*VALUE(Experion APP Node - Rack Mount)*>,<*VALUE(Mobile Server Nodes (0-1))*>,<*VALUE(Additional Servers)*>) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

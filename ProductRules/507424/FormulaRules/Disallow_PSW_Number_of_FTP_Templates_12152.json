@@ -1,0 +1,11 @@
+{
+    "id": 12152,
+    "condition": "[EQ](<*VALUE(PSW_FTP_Template_Import_Scope)*>,No)",
+    "name": "Disallow PSW_Number_of_FTP_Templates",
+    "action": "<*DISALLOWATTRIBUTES(PSW_Number_of_FTP_Templates)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

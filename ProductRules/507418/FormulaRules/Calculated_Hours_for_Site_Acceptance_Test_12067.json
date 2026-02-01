@@ -1,0 +1,11 @@
+{
+    "id": 12067,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated Hours for Site Acceptance Test",
+    "action": "<*ASSIGNVALUE(PAGA Site Acceptance Test:[IF](<*ISSELECTED(PAGA_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval(16*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>) *>}{[IF]([AND](<*ISSELECTED(PAGA_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(PAGA_GES_Location.None)*>)){<* Eval((<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>*0.5)*16) *>}{[IF]([AND](<*ISSELECTED(PAGA_Implementation_Methodology.Standard Build Estimate)*>,[NEQ](<*VALUE(PAGA_GES_Location)*>,None))){<* Eval(((1.15*<*VALUE(PAGA_Number_of_PAGA_Cabinets)*>)*0.5)*16) *>}{0}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-61049",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

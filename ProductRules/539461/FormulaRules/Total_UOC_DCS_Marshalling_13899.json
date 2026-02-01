@@ -1,0 +1,11 @@
+{
+    "id": 13899,
+    "condition": "1",
+    "name": "Total_UOC_DCS_Marshalling",
+    "action": "<*ASSIGNVALUE(Total_UOC_DCS_Marshalling:<*VALUE(staging_Marshalling_Cabinets_c300_rtu_uoc_SM_plc)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

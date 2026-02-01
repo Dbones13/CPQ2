@@ -1,0 +1,11 @@
+{
+    "id": 20775,
+    "condition": "[LEQ](<*VALUE(SS_23_inch_NTS)*>,0)",
+    "name": "Part_D_TP_FPW231",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPW231)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15377,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScriptsLabor)*>,SCRIPT_RUN)",
+    "name": "Run_scripts on Add to quote",
+    "action": "<* ExecuteScript(PS_PLC_Calculate_Labor_Hours)*>\n<* ExecuteScript(PS_Calc_Final_Hrs)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

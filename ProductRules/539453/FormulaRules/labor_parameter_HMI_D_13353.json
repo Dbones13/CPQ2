@@ -1,0 +1,11 @@
+{
+    "id": 13353,
+    "condition": "1",
+    "name": "labor_parameter_HMI_D",
+    "action": "<*ASSIGNVALUE(labor_parameter_HMI_D:<* Eval(<*VALUE(labor_parameter_sd)*>*0.5+<*VALUE(labor_parameter_md)*>*0.75+<*VALUE(labor_parameter_cd)*>+<*VALUE(labor_parameter_vcd)*>*1.5+<*VALUE(labor_parameter_rd)*>*0.5) *>)*>",
+    "description": "CXCPQ-39010\nD = sd * 0.5 + md * 0.75 + cd + vcd * 1.5 + rd * 0.5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

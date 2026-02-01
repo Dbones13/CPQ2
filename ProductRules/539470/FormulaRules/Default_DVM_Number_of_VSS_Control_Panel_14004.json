@@ -1,0 +1,11 @@
+{
+    "id": 14004,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_VSS_Control_Panel)*>,)",
+    "name": "Default_DVM_Number_of_VSS_Control_Panel",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_VSS_Control_Panel:2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

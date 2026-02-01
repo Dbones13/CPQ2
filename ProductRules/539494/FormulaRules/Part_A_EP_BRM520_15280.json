@@ -1,0 +1,11 @@
+{
+    "id": 15280,
+    "condition": "[AND]([EQ](<*VALUE(MXP_ebr)*>,Yes),[EQ](<*VALUE(MXP_Electronic_or_physical_media)*>,Physical))",
+    "name": "Part_A_EP_BRM520",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:EP-BRM520)*><*SETATVQTY(MXP_Bom_Parts:EP-BRM520,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

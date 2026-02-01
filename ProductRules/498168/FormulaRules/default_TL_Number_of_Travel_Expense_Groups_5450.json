@@ -1,0 +1,11 @@
+{
+    "id": 5450,
+    "condition": "[OR]([EQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,),[EQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,0))",
+    "name": "default_TL_Number_of_Travel_Expense_Groups",
+    "action": "<*ASSIGNVALUE(TL_Number_of_Travel_Expense_Groups:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

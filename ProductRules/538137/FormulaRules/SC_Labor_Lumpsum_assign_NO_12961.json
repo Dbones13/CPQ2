@@ -1,0 +1,11 @@
+{
+    "id": 12961,
+    "condition": "[NOT](<*ATTSEL(SC_Labor_LumpSum)*>)",
+    "name": "SC_Labor_Lumpsum_assign_NO",
+    "action": "<*ASSIGNVALUE(SC_Labor_Lumpsum_Hidden:N)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

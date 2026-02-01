@@ -1,0 +1,11 @@
+{
+    "id": 21922,
+    "condition": "[EQ](<*VALUE(FDM_ FDM_Gateway_required)*>,Yes)",
+    "name": "Show_FDMGatewayServerNode",
+    "action": "<*ALLOWVALUES(FDM_Server_Node_Type:SVR_PER_DELL_Rack_RAID1_XE,FDM_Server_Node_Type:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

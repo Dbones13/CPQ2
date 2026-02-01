@@ -1,0 +1,11 @@
+{
+    "id": 21869,
+    "condition": "[EQ](<*VALUE(FDM_Node_Supplier(Server))*>,)",
+    "name": "Default_FDM_Node_Supplier(Server)",
+    "action": "<*SELECTVALUE(FDM_Node_Supplier(Server):Honeywell)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

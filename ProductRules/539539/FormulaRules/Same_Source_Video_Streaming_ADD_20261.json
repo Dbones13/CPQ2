@@ -1,0 +1,11 @@
+{
+    "id": 20261,
+    "condition": "[AND]([EQ](<*VALUE(DVM_Same_Source_Video_Streaming)*>,Yes),[GT](<*VALUE(DVM_4_Camera_Interface)*>,0))",
+    "name": "Same Source Video Streaming_ADD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMSSS)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMSSS, <* Eval(0-Int(0-(<*VALUE(DVM_4_Camera_Interface)*>/4)))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45734",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

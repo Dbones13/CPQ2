@@ -1,0 +1,11 @@
+{
+    "id": 14282,
+    "condition": "[OR]([NOT](<*ATTDEF(MIQ_Perpetual_Contract)*>),<* IsNull(<*VALUE(MIQ_Perpetual_Contract)*>,1) *>)",
+    "name": "Set Default Perpetual Contract",
+    "action": "<*SELECTVALUE(MIQ_Perpetual_Contract:Yes)*>",
+    "description": "CXCPQ-50742",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

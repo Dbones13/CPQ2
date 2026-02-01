@@ -1,0 +1,11 @@
+{
+    "id": 18188,
+    "condition": "[EQ](<*VALUE(MXP_Wire_Calender_Kit)*>,)",
+    "name": "Default_MXP_Wire_Calender_Kit",
+    "action": "<*SELECTVALUE(MXP_Wire_Calender_Kit:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

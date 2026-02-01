@@ -1,0 +1,11 @@
+{
+    "id": 17793,
+    "condition": "[EQ](<*CTX( Container(Allen-Bradley/Siemens Interfaces).Rows.GetCount )*>,0)",
+    "name": "Allen-Bradley/Siemens Interfaces",
+    "action": "<*CTX( Container(Allen-Bradley/Siemens Interfaces).LoadKeys(Identifiers, Default_Network_type, Default_Network_Interface).Load(SELECT Identifiers, Default_Network_type, Default_Network_Interface FROM CT_CCR WHERE Container_Name = 'Allen-Bradley/Siemens Interfaces') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

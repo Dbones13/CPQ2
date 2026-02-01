@@ -1,0 +1,11 @@
+{
+    "id": 20008,
+    "condition": "<*ATTDEF(SerC_CG_Number_of_HIVE_Control_Applications(HCA))*>",
+    "name": "HCA_Calc",
+    "action": "[IF]([GT](<*VALUE(HCA_Part)*>,<*VALUE(HCA_Total_IO_Point)*>)){<*ASSIGNVALUE(SerC_CG_Number_of_HIVE_Control_Applications(HCA):<*VALUE(HCA_Part)*>)*>}{<*ASSIGNVALUE(SerC_CG_Number_of_HIVE_Control_Applications(HCA):<*VALUE(HCA_Total_IO_Point)*>)*>}[ENDIF]",
+    "description": "CXCPQ-51943",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

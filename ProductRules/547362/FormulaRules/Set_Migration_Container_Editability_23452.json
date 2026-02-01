@@ -1,0 +1,11 @@
+{
+    "id": 23452,
+    "condition": "1",
+    "name": "Set Migration Container Editability",
+    "action": "[IF]([EQ](<*VALUE(Network Level Migration Editability)*>,Editable)){\n<*CTX( Container(Network Level Container).Column(Validated Stations).SetPermission(ReadOnly) )*>\n<*CTX( Container(Network Level Container).Column(Validated Servers).SetPermission(ReadOnly) )*>\n<*CTX( Container(Network Level Container).Column(Non\u2010Validated Stations).SetPermission(ReadOnly) )*>\n<*CTX( Container(Network Level Container).Column(Non\u2010Validated Servers).SetPermission(ReadOnly) )*>\n<*CTX( Container(Network Level Container).Column(MIGRATIONS ONLY - Existing Server & Station Clients).SetPermission(Editable) )*>\n}{[IF]([EQ](<*VALUE(Network Level Migration Editability)*>,Non Editable)){\n<*CTX( Container(Network Level Container).Column(Validated Stations).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(Validated Servers).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(Non\u2010Validated Stations).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(Non\u2010Validated Servers).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(MIGRATIONS ONLY - Existing Server & Station Clients).SetPermission(ReadOnly) )*>\n}{\n<*CTX( Container(Network Level Container).Column(Validated Stations).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(Validated Servers).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(Non\u2010Validated Stations).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(Non\u2010Validated Servers).SetPermission(Editable) )*>\n<*CTX( Container(Network Level Container).Column(MIGRATIONS ONLY - Existing Server & Station Clients).SetPermission(Editable) )*>\n}[ENDIF]}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

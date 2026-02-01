@@ -1,0 +1,11 @@
+{
+    "id": 14852,
+    "condition": "[EQ](<*VALUE(MX_MD_Coater_Startup_and_Shutdown)*>,Yes)",
+    "name": "MX_Part_RQUP4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:RQUP4)*><*SETATVQTY(MX_Platform_Bom_Parts:RQUP4, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

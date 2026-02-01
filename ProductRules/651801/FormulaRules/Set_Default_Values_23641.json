@@ -1,0 +1,11 @@
+{
+    "id": 23641,
+    "condition": "1",
+    "name": "Set Default Values",
+    "action": "[IF]([EQ](<*VALUE(Initial Communication Configuration)*>,)){<*ASSIGNVALUE(Initial Communication Configuration:1)*>}[ENDIF][IF]([EQ](<*VALUE(Travel Time)*>,)){<*ASSIGNVALUE(Travel Time:16)*>}[ENDIF][IF]([EQ](<*VALUE(Solution Familiarization)*>,)){<*ASSIGNVALUE(Solution Familiarization:4)*>}[ENDIF][IF]([EQ](<*VALUE(Cybert Coordination Pct)*>,)){<*ASSIGNVALUE(Cybert Coordination Pct:10)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

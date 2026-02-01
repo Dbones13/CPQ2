@@ -1,0 +1,11 @@
+{
+    "id": 9135,
+    "condition": "[EQ](<*VALUE(Trace_software_Active_Service_Contract)*>,)",
+    "name": "Default_active_service_contract",
+    "action": "<*SELECTVALUE(Trace_software_Active_Service_Contract:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

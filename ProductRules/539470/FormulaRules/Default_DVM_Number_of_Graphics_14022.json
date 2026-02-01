@@ -1,0 +1,11 @@
+{
+    "id": 14022,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Graphics)*>,)",
+    "name": "Default_DVM_Number_of_Graphics",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Graphics:50)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

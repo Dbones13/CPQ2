@@ -1,0 +1,11 @@
+{
+    "id": 3332,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "rules_exp_ebr_media",
+    "action": "<*ASSIGNVALUE(exp_ebr_media:<*CTX ( Container(CE_General_Inputs_Cont).Row(1).Column(CE_EBR_Media).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

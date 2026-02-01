@@ -1,0 +1,11 @@
+{
+    "id": 4841,
+    "condition": "[EQ](<*VALUE(MX_SE_Is_Sensor_Calibration_Kit_required)*>,)",
+    "name": "Default_Is_Sensor_Calibration_Kit_required",
+    "action": "<*SELECTVALUE(MX_SE_Is_Sensor_Calibration_Kit_required:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13507,
+    "condition": "[EQ](<*VALUE(Virtualization_Cabinet_Thermostat_Required)*>,)",
+    "name": "Default_thermostat_required",
+    "action": "<*SELECTVALUE(Virtualization_Cabinet_Thermostat_Required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

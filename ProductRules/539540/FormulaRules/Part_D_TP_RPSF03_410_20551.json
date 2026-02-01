@@ -1,0 +1,11 @@
+{
+    "id": 20551,
+    "condition": "[NOT]([AND]([OR]([GT](<*VALUE(SS_Orion_Console_2_Position_Base_Unit_Total)*>,0),[GT](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,0)),[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell),[EQ](<*VALUE(SS_Orion_Console _Remote_Peripheral_Solution_Type)*>,Extio3-Multi Mode Fiber)))",
+    "name": "Part_D_TP_RPSF03_410",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-RPSF03-410)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

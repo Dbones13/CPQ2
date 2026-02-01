@@ -1,0 +1,11 @@
+{
+    "id": 25550,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Experion Server Type)*>,Server TPS)),[EQ](<*VALUE(Cabinet Depth)*>,))",
+    "name": "Default_Cabinet_Depth",
+    "action": "<*ASSIGNVALUE(Cabinet Depth:1M)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

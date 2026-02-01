@@ -1,0 +1,11 @@
+{
+    "id": 20365,
+    "condition": "[EQ](<*VALUE(SS_Printer_Required)*>,)",
+    "name": "Default_SS_Printer_Required",
+    "action": "<*SELECTVALUE(SS_Printer_Required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

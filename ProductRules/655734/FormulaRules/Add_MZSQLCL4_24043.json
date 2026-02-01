@@ -1,0 +1,11 @@
+{
+    "id": 24043,
+    "condition": "[GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0)",
+    "name": "Add_MZ-SQLCL4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-SQLCL4)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

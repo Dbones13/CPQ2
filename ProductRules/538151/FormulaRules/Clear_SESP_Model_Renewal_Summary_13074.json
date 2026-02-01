@@ -1,0 +1,11 @@
+{
+    "id": 13074,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[OR]([EQ](<*CTX ( Container(SC_Models_Scope_Renewal).Rows.GetCount )*>,0),[EQ](<*CTX ( Container(SC_SESP Models_Renewal).Rows.GetCount )*>,0)) )",
+    "name": "Clear SESP Model Renewal Summary",
+    "action": "<*CTX ( Container(SC_SESP Models_Renewal).Rows.Clear )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

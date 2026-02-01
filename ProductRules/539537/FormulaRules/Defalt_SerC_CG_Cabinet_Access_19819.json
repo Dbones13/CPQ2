@@ -1,0 +1,11 @@
+{
+    "id": 19819,
+    "condition": "[EQ](<*VALUE(SerC_CG_Cabinet_Access)*>,)",
+    "name": "Defalt_SerC_CG_Cabinet_Access",
+    "action": "<*SELECTVALUE(SerC_CG_Cabinet_Access:Dual Access)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

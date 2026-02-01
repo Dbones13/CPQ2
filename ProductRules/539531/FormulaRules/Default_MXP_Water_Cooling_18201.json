@@ -1,0 +1,11 @@
+{
+    "id": 18201,
+    "condition": "[EQ](<*VALUE(MXP_Water_Cooling)*>,)",
+    "name": "Default_MXP_Water_Cooling",
+    "action": "<*SELECTVALUE(MXP_Water_Cooling:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

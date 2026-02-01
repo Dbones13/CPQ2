@@ -1,0 +1,11 @@
+{
+    "id": 14206,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "43578_F",
+    "action": "<*ASSIGNVALUE(43578_F:[IF]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma)){9.412}{6.052}[ENDIF])*>",
+    "description": "CXCPQ-43578",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

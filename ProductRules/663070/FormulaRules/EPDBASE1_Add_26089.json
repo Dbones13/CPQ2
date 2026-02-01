@@ -1,0 +1,11 @@
+{
+    "id": 26089,
+    "condition": "[EQ](<*VALUE(Experion Server Type)*>,Server)",
+    "name": "EP-DBASE1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-DBASE1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-DBASE1, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

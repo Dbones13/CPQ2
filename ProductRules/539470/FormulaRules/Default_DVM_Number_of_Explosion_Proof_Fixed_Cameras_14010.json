@@ -1,0 +1,11 @@
+{
+    "id": 14010,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Explosion_Proof_Fixed_Cameras)*>,)",
+    "name": "Default_DVM_Number_of_Explosion_Proof_Fixed_Cameras",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Explosion_Proof_Fixed_Cameras:5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

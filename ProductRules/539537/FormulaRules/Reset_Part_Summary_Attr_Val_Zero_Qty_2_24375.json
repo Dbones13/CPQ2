@@ -1,0 +1,11 @@
+{
+    "id": 24375,
+    "condition": "1",
+    "name": "Reset_Part_Summary_Attr_Val_Zero_Qty_2",
+    "action": "[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:51197165-100)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:51197165-100)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:51199406-200)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:51199406-200)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:51199947-175)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:51199947-175)*>}{}[ENDIF];;[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:51199948-100)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:51199948-100)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:CC-CBDD01)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:CC-CBDD01)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:MU-C8DRS1)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:MU-C8DRS1)*>}{}[ENDIF];;[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:MU-C8DSS1)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:MU-C8DSS1)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:50135106-100)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:50135106-100)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:51202971-102)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:51202971-102)*>}{}[ENDIF];;[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:51307186-275)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:51307186-275)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:51454909-100)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:51454909-100)*>}{}[ENDIF];[IF]([EQ](<*GETATVQTY(Series_C_CG_Part_Summary:CF-SP0000)*>,0)){<*RESETVALUE(Series_C_CG_Part_Summary:CF-SP0000)*>}{}[ENDIF];",
+    "description": "",
+    "rank": "6",
+    "active": false,
+    "modifiedDate": "12/01/26",
+    "modifiedBy": "Yogesh Baisla2"
+}

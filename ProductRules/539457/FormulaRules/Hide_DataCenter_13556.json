@@ -1,0 +1,11 @@
+{
+    "id": 13556,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Hide_DataCenter",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_Windows_Server_2016_COA_Licenses,Virtualization_Windows_Server_2019_COA_Licenses,Virtualization_Windows_Server_2022_COA_Licenses)*>\n[IF]([AND]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*CTX ( Quote.CustomField(IsR2QRequest) )*>,Yes))){<*ALLOWATTRIBUTES(Virtualization_Windows_2022_COA_Licenses_24,Virtualization_Windowsr_2022_COA_Licenses_16)*>}{<*DISALLOWATTRIBUTES(Virtualization_Windows_2022_COA_Licenses_24,Virtualization_Windowsr_2022_COA_Licenses_16)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

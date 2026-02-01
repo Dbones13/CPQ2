@@ -1,0 +1,11 @@
+{
+    "id": 13543,
+    "condition": "[EQ](<* ProductName *>,Virtualization System Migration)",
+    "name": "Hide_GES_attr",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_Ges_Location)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

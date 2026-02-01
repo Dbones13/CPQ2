@@ -1,0 +1,11 @@
+{
+    "id": 21984,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server Node Type)*>,SVR_PER_DELL_Rack_RAID5),[EQ](<*VALUE(FDM_Node Supplier (Server))*>,Honeywell),[EQ](<*VALUE(FDM_Trusted Platform Module (TPM))*>,Yes))",
+    "name": "Hide_Additional_RAM_(Server Disk)",
+    "action": "<*DISALLOWVALUES(FDM_Additional Hard Disk (Server):Yes,FDM_Additional Memory (Server Disk):16GB)*>",
+    "description": "CXCPQ-48589",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "13/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

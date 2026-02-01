@@ -1,0 +1,11 @@
+{
+    "id": 10849,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "PS_PLC_UOC_partsummary_labor_PartNumbers",
+    "action": "<* ExecuteScript(PS_PLC_UOC_partsummary_labor_PartNumbers) *>",
+    "description": "",
+    "rank": "8",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15101,
+    "condition": "[EQ](<*VALUE(MXP_Modbus_RTU_Link)*>,)",
+    "name": "Default_Modbus_RTU_Link",
+    "action": "<*SELECTVALUE(MXP_Modbus_RTU_Link:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

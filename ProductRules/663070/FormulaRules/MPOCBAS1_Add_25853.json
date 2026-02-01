@@ -1,0 +1,11 @@
+{
+    "id": 25853,
+    "condition": "[AND]([GT](<*VALUE(Orion_2P_Base_Unit_No_Left_Right)*>,0),<*ISSELECTED(Node Supplier.Honeywell)*>)",
+    "name": "MP-OCBAS1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-OCBAS1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCBAS1, <*VALUE(Orion_2P_Base_Unit_No_Left_Right)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-38099",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

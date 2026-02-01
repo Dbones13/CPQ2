@@ -1,0 +1,11 @@
+{
+    "id": 25780,
+    "condition": "[EQ](<*VALUE(Quantity_MZ-PCEH17)*>,0)",
+    "name": "MZ-PCEH17 remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCEH17)*><* DoResetAtt *>",
+    "description": "CXCPQ-37552",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

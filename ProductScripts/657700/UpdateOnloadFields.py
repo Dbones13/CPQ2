@@ -1,0 +1,1 @@
+Product.Attr('SC_ItemEditFlag').AssignValue('Hidden')

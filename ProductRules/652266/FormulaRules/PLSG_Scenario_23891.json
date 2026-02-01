@@ -1,0 +1,11 @@
+{
+    "id": 23891,
+    "condition": "[EQ](<*VALUECODE(Discount Bulk Upload Type)*>,PLSG)",
+    "name": "PLSG Scenario",
+    "action": "<*CTX ( Container(Discount Bulk Upload Container).Column(PLSG).SetPermission(Editable) )*>\n<*CTX ( Container(Discount Bulk Upload Container).Column(PL).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

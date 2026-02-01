@@ -1,0 +1,11 @@
+{
+    "id": 13699,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_Microsoft_SQL_Client_Access_Lic)*>,0))",
+    "name": "Part_DISS_MZ_SQLCL4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-SQLCL4)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

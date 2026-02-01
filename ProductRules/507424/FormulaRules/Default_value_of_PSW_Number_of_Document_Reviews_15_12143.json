@@ -1,0 +1,11 @@
+{
+    "id": 12143,
+    "condition": "[EQ](<*VALUE(PSW_Number_of_Document_Reviews_(1-5))*>,)",
+    "name": "Default value of PSW_Number_of_Document_Reviews_(1-5)",
+    "action": "<*ASSIGNVALUE(PSW_Number_of_Document_Reviews_(1-5):2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

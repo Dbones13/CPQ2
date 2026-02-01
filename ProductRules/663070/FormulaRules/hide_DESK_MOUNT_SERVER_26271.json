@@ -1,0 +1,11 @@
+{
+    "id": 26271,
+    "condition": "[OR]([EQ](<*VALUE(Experion Server Type)*>,Flex Server),[EQ](<*VALUE(Server Mounting)*>,Cabinet))",
+    "name": "hide_DESK_MOUNT_SERVER",
+    "action": "<*DISALLOWATTRIBUTES(Trusted Platform Module1,Server Node Type_desk,Node Supplier_server,Additional Hard Disk1,Additional Memory_Server Disk,Optional DVD_Server Disk,Displays_server01,Display Size_server,Display Supplier_Server,Trackball _Server,Server LocationClusterNetwork_desk mount  server1,Desk _Mount_Server,Marine_Requirement_Desk)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10732,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Select_the_type_of_fiber_optic_converters_GBICs_required)*>,))",
+    "name": "TPA_Default_Select_the_type_of_fiber_optic_converters_GBICs_required",
+    "action": "<*SELECTVALUE(TPA_Select_the_type_of_fiber_optic_converters_GBICs_required:Multimode)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14048,
+    "condition": "[NEQ](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "EP-DVMRTS_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Part_Summary:EP-DVMRTS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

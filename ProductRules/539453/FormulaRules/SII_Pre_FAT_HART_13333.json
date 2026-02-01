@@ -1,0 +1,11 @@
+{
+    "id": 13333,
+    "condition": "1",
+    "name": "SII_Pre_FAT_HART",
+    "action": "<*ASSIGNVALUE(SII_Pre_FAT_HART:<* Eval(0.33*<*VALUE(Number of HART Devices)*>) *>)*>",
+    "description": "39422",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

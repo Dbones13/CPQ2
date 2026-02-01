@@ -1,0 +1,11 @@
+{
+    "id": 22179,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Workstation),[GEQ](<* Eval(<*VALUE(FDM_Station_Audit)*> - (INT(<*VALUE(FDM_Station_Audit)*>/128))*128 - (INT((<*VALUE(FDM_Station_Audit)*> - (INT(<*VALUE(FDM_Station_Audit)*>/128))*128)/64))*64) *>,32))",
+    "name": "Add_HC-AT0032_Station",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-AT0032)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

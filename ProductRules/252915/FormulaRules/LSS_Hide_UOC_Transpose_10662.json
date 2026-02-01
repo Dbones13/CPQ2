@@ -1,0 +1,11 @@
+{
+    "id": 10662,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_PLC_Number_of_ControlEdge_UOC_vUOC_confi_req)*>,0))",
+    "name": "LSS_Hide_UOC_Transpose",
+    "action": "<*DISALLOWATTRIBUTES(LSS_UOC_connection_transpose)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

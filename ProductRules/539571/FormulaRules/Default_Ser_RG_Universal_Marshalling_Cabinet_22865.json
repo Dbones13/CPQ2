@@ -1,0 +1,11 @@
+{
+    "id": 22865,
+    "condition": "[AND]([EQ](<*VALUE(Ser_RG_Universal_Marshalling_Cabinet)*>,),<*ISSELECTED(SerC_IO_Mounting_Solution.Cabinet)*>)",
+    "name": "Default_Ser_RG_Universal_Marshalling_Cabinet",
+    "action": "<*SELECTVALUE(Ser_RG_Universal_Marshalling_Cabinet:Yes)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

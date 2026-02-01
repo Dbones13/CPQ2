@@ -1,0 +1,11 @@
+{
+    "id": 25707,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Experion Process Points (0 - 45000))*>,1999),[GT](<*eval(INT(Fix((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000-(INT(Fix((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(Fix(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000)))*5000)/2000)))*>,0)))",
+    "name": "Exp_Prc_Pnt_Del_EPDPR02K_Red",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR02K)*><* DoResetAtt *>",
+    "description": "Delete EP_DPR02K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

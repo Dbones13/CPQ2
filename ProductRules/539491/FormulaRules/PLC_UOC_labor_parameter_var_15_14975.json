@@ -1,0 +1,11 @@
+{
+    "id": 14975,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR)))",
+    "name": "PLC_UOC_labor_parameter_var_15",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_15:<* Eval([IF]([EQ](<*GETATVQTY(PLC_UOC_BOM_Items:900R12R-0300)*>,0)){0}{<*GETATVQTY(PLC_UOC_BOM_Items:900R12R-0300)*>}[ENDIF]+[IF]([EQ](<*GETATVQTY(PLC_UOC_BOM_Items:900R12-0300)*>,0)){0}{<*GETATVQTY(PLC_UOC_BOM_Items:900R12-0300)*>}[ENDIF]+[IF]([EQ](<*GETATVQTY(PLC_UOC_BOM_Items:900R08R-0300)*>,0)){0}{<*GETATVQTY(PLC_UOC_BOM_Items:900R08R-0300)*>}[ENDIF]+[IF]([EQ](<*GETATVQTY(PLC_UOC_BOM_Items:900R08-0300)*>,0)){0}{<*GETATVQTY(PLC_UOC_BOM_Items:900R08-0300)*>}[ENDIF] ) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

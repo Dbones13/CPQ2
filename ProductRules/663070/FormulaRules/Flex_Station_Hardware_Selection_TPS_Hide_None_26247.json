@@ -1,0 +1,11 @@
+{
+    "id": 26247,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R530),<*ISSELECTED(Orion Stations required.Yes)*>,[GT](<*VALUE(Flex Station Qty (0-60))*>,0))",
+    "name": "Flex_Station_Hardware_Selection_TPS_Hide_None",
+    "action": "<*DISALLOWVALUES(Flex Station Hardware Selection TPS:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

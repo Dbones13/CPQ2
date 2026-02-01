@@ -1,0 +1,11 @@
+{
+    "id": 18227,
+    "condition": "[NEQ](<*VALUE(MXP_Sensor_Type)*>,MXIR Moisture SSIR)",
+    "name": "Part_D_Q6406_50",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:Q6406-50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

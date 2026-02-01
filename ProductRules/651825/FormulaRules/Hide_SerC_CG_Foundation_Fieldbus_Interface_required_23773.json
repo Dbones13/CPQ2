@@ -1,0 +1,11 @@
+{
+    "id": 23773,
+    "condition": "[OR]([AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 I/O HIVE - C300 CEE),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual))),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))",
+    "name": "Hide_SerC_CG_Foundation_Fieldbus_Interface_required",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Ethernet_Interface,SerC_CG_Foundation_Fieldbus_Interface_required)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

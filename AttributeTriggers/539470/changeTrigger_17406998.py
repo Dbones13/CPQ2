@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(DVM Graphics Configuration:<* Eval(6*0<*VALUE(DVM_Number_of_Graphics)*>) *>)*>

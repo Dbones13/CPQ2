@@ -1,0 +1,11 @@
+{
+    "id": 24138,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - Performance A/B), [NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_PKSVMP_Gen3Node",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-PKSVMP)*><*SETATVQTY(Virtualization_BOM_Parts:EP-PKSVMP, <*VALUE(Virtualization_Number_of_Clusters_in_the_network)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

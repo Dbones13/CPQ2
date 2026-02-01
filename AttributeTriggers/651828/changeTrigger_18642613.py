@@ -1,0 +1,1 @@
+[IF]([GT](<*VALUE(CMS Flex Station Qty 0_60)*>,0)){<*ALLOWATTRIBUTES(CMS Flex Station Hardware Selection)*><*SELECTVALUE(CMS Flex Station Hardware Selection:STN_PER_DELL_Tower_RAID1)*>}{<*DISALLOWATTRIBUTES(CMS Flex Station Hardware Selection)*>}[ENDIF]

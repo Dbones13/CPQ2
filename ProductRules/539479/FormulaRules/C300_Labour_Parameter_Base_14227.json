@@ -1,0 +1,11 @@
+{
+    "id": 14227,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_Base",
+    "action": "[IF]([LEQ](<*VALUE(labor_parameter_io)*>,400)){<*ASSIGNVALUE(C300_Labour_Parameter_Base:24)*>}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,400),[LEQ](<*VALUE(labor_parameter_io)*>,2000))){<*ASSIGNVALUE(C300_Labour_Parameter_Base:32)*>}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,2000),[LEQ](<*VALUE(labor_parameter_io)*>,5000))){<*ASSIGNVALUE(C300_Labour_Parameter_Base:40)*>}{[IF]([GT](<*VALUE(labor_parameter_io)*>,5000)){<*ASSIGNVALUE(C300_Labour_Parameter_Base:<*CTX( Container(C300_Labor_Base_Details).Row(5).Column(Base_Values).Get )*>)*>}{<*ASSIGNVALUE(C300_Labour_Parameter_Base:0)*>}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "CXCPQ-43539\nIf io <= 400, base = 24,\n io >400 and io <=2000, base = 32,\n io >2000 and io < 5000, base = 40\n io > 5000, base = 64",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "24/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

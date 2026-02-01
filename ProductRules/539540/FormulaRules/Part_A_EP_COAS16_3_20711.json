@@ -1,0 +1,11 @@
+{
+    "id": 20711,
+    "condition": "[AND]([EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell))",
+    "name": "Part_A_EP_COAS16_3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:EP-COAS16)*><*SETATVQTY(Simulation_Bom_parts:EP-COAS16, <* Eval(<*VALUE(Simulation_red_non_red_Check)*>+<*VALUE(SS_Number_of_Simulation_PCs_required)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

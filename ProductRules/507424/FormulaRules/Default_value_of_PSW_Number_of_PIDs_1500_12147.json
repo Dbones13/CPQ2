@@ -1,0 +1,11 @@
+{
+    "id": 12147,
+    "condition": "[EQ](<*VALUE(PSW_Number_of_P&IDs_(1-500))*>,)",
+    "name": "Default value of PSW_Number_of_P&IDs_(1-500)",
+    "action": "<*ASSIGNVALUE(PSW_Number_of_P&IDs_(1-500):10)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

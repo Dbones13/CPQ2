@@ -1,0 +1,11 @@
+{
+    "id": 25787,
+    "condition": "[GT](<*VALUE(MZ_PCIS02_qnt)*>,0)",
+    "name": "MZ-PCIS02 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCIS02)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCIS02,<*VALUE(MZ_PCIS02_qnt)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37556",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

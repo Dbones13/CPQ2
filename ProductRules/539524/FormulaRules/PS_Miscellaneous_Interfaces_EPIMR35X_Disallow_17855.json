@@ -1,0 +1,11 @@
+{
+    "id": 17855,
+    "condition": "[NOT]([GT](<*CTX( Container(Miscellaneous Interfaces).Row(4).Column(Nodes).Get )*>,0))",
+    "name": "PS_Miscellaneous_Interfaces_EP-IMR35X_Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-IMR35X)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

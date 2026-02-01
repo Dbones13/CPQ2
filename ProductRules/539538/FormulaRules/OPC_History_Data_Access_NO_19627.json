@@ -1,0 +1,11 @@
+{
+    "id": 19627,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS OPC History Data Access)*>,Yes))",
+    "name": "OPC History Data Access NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HMOHDA)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

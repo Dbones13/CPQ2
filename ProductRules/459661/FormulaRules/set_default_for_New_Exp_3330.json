@@ -1,0 +1,11 @@
+{
+    "id": 3330,
+    "condition": "[NOT](<*ATTDEF(New_Expansion)*>)",
+    "name": "set default for New Exp",
+    "action": "<*SELECTVALUE(New_Expansion:New)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

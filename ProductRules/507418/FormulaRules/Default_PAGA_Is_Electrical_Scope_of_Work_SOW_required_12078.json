@@ -1,0 +1,11 @@
+{
+    "id": 12078,
+    "condition": "[EQ](<*VALUE(PAGA_Is_Electrical_Scope_of_Work_(SOW)_required?)*>,)",
+    "name": "Default_PAGA_Is_Electrical_Scope_of_Work_(SOW)_required?",
+    "action": "<*SELECTVALUE(PAGA_Is_Electrical_Scope_of_Work_(SOW)_required?:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

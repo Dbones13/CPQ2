@@ -1,0 +1,11 @@
+{
+    "id": 13376,
+    "condition": "1",
+    "name": "labor_parameter_s",
+    "action": "<*ASSIGNVALUE(labor_parameter_s:<* Eval((0<*VALUE(labor_parameter_ss)*>*0.5)+0<*VALUE(labor_parameter_ms)*>+(0<*VALUE(labor_parameter_cs)*>*1.5)+(0<*VALUE(labor_parameter_vcs)*>*2)+(0<*VALUE(labor_parameter_rs)*>*0.25)) *>)*>",
+    "description": "S = ss * 0.5 + ms + cs * 1.5 + vcs * 2 + rs * 0.25",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

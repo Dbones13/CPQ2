@@ -1,0 +1,11 @@
+{
+    "id": 10749,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[OR]([EQ](<*VALUE(QCS_Mig_Server_Grade_QCS_as_Server_or_Workstation)*>,WS with Non-Touch Monitor),[EQ](<*VALUE(QCS_Mig_Server_Grade_QCS_as_Server_or_Workstation)*>,WS with Touch Monitor),[EQ](<*VALUE(QCS_Mig_Server_Grade_QCS_as_Server_or_Workstation)*>,WS without Monitor)))",
+    "name": "QCS_Mig_Hide_mount",
+    "action": "<*DISALLOWATTRIBUTES(QCS_Mig_Rack_Mount_Server)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

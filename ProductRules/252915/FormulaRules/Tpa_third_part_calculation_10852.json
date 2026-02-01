@@ -1,0 +1,11 @@
+{
+    "id": 10852,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Tpa third part calculation",
+    "action": "<* ExecuteScript(PS_TPA_Calculation) *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26083,
+    "condition": "[OR]([EQ](<*VALUE(Additional Stations)*>,0),[EQ](<*VALUE(Station Type)*>,STN_PER_DELL_Rack_RAID1))",
+    "name": "Hide_Additional_Station_Cabinet_Mounting_Type",
+    "action": "<*DISALLOWATTRIBUTES(Additional_Station_Cabinet_Mounting_Type)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

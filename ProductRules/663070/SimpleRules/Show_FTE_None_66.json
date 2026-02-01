@@ -1,0 +1,10 @@
+{
+    "id": 66,
+    "condition": "Supervisory Network Type:FTE",
+    "name": "Show_FTE_None",
+    "action": "Disallow LAN Type : Ethernet",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20178,
+    "condition": "[EQ](<*VALUE(DVM_Same_Source_Video_Streaming)*>,)",
+    "name": "Default_DVM_Same_Source_Video_Streaming",
+    "action": "<*SELECTVALUE(DVM_Same_Source_Video_Streaming:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

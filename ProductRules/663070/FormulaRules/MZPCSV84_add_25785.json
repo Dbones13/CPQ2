@@ -1,0 +1,11 @@
+{
+    "id": 25785,
+    "condition": "[GT](<*VALUE(MZ_PCSV84_qnt)*>,0)",
+    "name": "MZ-PCSV84 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCSV84)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCSV84,<*VALUE(MZ_PCSV84_qnt)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37555",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

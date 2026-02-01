@@ -1,0 +1,11 @@
+{
+    "id": 17838,
+    "condition": "[AND]([GT](<*CTX( Container(Flow Computer Interfaces).Row(1).Column(Nodes).Get )*>,0),[EQ](<*CTX( Container(Flow Computer Interfaces).Row(2).Column(Devices).Get )*>,Yes))",
+    "name": "PS_Flow Computer Interface_EP-IFLXEF_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IFLXEF)*><*SELECTVALUE(SCADA_BOM_Items:EP-IFLXEF)*><*SETATVQTY(SCADA_BOM_Items:EP-IFLXEF, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

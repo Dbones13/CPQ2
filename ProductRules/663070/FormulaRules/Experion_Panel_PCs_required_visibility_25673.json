@@ -1,0 +1,11 @@
+{
+    "id": 25673,
+    "condition": "[EQ](<*VALUE(How many Experion Panel PCs required? 0_30)*>,)",
+    "name": "Experion Panel PCs required visibility",
+    "action": "<*ASSIGNVALUE(How many Experion Panel PCs required? 0_30:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

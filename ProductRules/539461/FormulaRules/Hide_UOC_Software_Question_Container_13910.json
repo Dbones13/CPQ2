@@ -1,0 +1,11 @@
+{
+    "id": 13910,
+    "condition": "1",
+    "name": "Hide_UOC_Software_Question_Container",
+    "action": "<*DISALLOWATTRIBUTES(UOC_Software_Question_Cont)*>",
+    "description": "This is to hide the container UOC_Software_Question_Cont",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

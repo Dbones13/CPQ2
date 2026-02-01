@@ -1,0 +1,11 @@
+{
+    "id": 23710,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(On-Site Installation).GetDisplayValue )*>,)",
+    "name": "Default_Value_On-Site Installation",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(On-Site Installation).Set(No) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/08/25",
+    "modifiedBy": "Narasimhan Chakravarthy"
+}

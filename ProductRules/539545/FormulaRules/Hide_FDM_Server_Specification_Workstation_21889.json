@@ -1,0 +1,11 @@
+{
+    "id": 21889,
+    "condition": "[EQ](<*VALUE(FDM_Server_Specification)*>,Workstation)",
+    "name": "Hide_FDM_Server_Specification_Workstation",
+    "action": "<*CTX ( Container(SM_Enterprise_Cluster_5).Rows.Clear )*>\n<*CTX ( Container(SM_Enterprise_Cluster_Sub_5).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(SM_Enterprise_Cluster_5,SM_Enterprise_Cluster_Sub_5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

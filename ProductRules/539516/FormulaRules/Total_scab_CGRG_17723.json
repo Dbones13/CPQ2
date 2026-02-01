@@ -1,0 +1,11 @@
+{
+    "id": 17723,
+    "condition": "1",
+    "name": "Total_scab_CG+RG",
+    "action": "<*ASSIGNVALUE(Total_Labor_Parameter_SCAB:<* Eval(<*VALUE(CG_scab_System_cabinet_count)*>+<*CTX( Container(SM_RemoteGroup_Cont).Sum(labor_parameter_scab) )*>) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13109,
+    "condition": "[NOT](<*ATTDEF(SC_WEP_Skill_Assessment_Level_OCP)*>)",
+    "name": "Default_Skill_OCP",
+    "action": "<*ASSIGNVALUE(SC_WEP_Skill_Assessment_Level_OCP:AWARENESS)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

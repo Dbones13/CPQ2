@@ -1,0 +1,11 @@
+{
+    "id": 15195,
+    "condition": "[EQ](<*VALUE(MXP_Vynil_Control)*>,Zone Control for Vinyl, Two or Three zone)",
+    "name": "Part_A_3_5840_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-5840-01)*><*SETATVQTY(MXP_Bom_Parts:3-5840-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20114,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[EQ](<*VALUE(SerC_CG_Power_System_Type)*>,))",
+    "name": "Default_SerC_CG_Power_System_Type",
+    "action": "<*SELECTVALUE(SerC_CG_Power_System_Type:Minimum Required Redundant)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25556,
+    "condition": "[AND]([AND]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System),[LIKE](<*VALUE(CE_Selected_Products)*>,ControlEdge UOC System)),[OR]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Interface with TPS Required?)*>,No)))",
+    "name": "hide_desk mound heading1",
+    "action": "<*ALLOWATTRIBUTES(Point Licenses for Enterprise Group)*>,<*DISALLOWATTRIBUTES(Experion UOC Point Licenses for Exp TPS Group)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

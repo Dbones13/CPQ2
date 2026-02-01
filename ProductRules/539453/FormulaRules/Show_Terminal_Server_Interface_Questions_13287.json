@@ -1,0 +1,11 @@
+{
+    "id": 13287,
+    "condition": "[EQ](<*VALUE(Is Terminal Server Interface in Scope?)*>,Yes)",
+    "name": "Show Terminal Server Interface Questions",
+    "action": "<*ALLOWATTRIBUTES(Number of Terminal Server Interface Types,Number of Terminal server Interfaces,Number of Terminal Server Devices)*>",
+    "description": "Display questions when Is Terminal Server Interface in Scope? = Yes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

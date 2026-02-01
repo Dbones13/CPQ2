@@ -1,0 +1,11 @@
+{
+    "id": 18623,
+    "condition": "[AND]([EQ](<*VALUE(ES_Server_Node_Type)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(ES_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ES_Trusted_Platform_Module)*>,Yes))",
+    "name": "Part_A_MZ_PCST01_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:MZ-PCST01)*><*SETATVQTY(eServer_BOM_parts:MZ-PCST01,1)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

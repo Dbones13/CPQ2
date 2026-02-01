@@ -1,0 +1,11 @@
+{
+    "id": 22606,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate GAS MeterSuite C300 Operations Manual",
+    "action": "<*ASSIGNVALUE(GAS MeterSuite C300 Operations Manual:<* Eval(<*VALUE(Gas MeterSuite C300 Quantity Factor)*>*2) *>)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

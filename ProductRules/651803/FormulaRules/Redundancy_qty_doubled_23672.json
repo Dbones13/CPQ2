@@ -1,0 +1,11 @@
+{
+    "id": 23672,
+    "condition": "1",
+    "name": "Redundancy_qty_doubled",
+    "action": "[IF]([AND](<*ISSELECTED(Secure Remote Access.Yes)*>,<*ISSELECTED(Secure Remote Access Redundancy Required.Yes)*>,<*ISSELECTED(Optional Hardware and Software Required.Yes)*>)){<*SELECTVALUES(Optional Hardware and Software Required MZCF BOM:EP-COAS22|CF-CTD001|EP-VME16C|CF-MSD000|MZ-PCVM24)*><*SETATVQTY(Optional Hardware and Software Required MZCF BOM:EP-COAS22,4)*><*SETATVQTY(Optional Hardware and Software Required MZCF BOM:CF-CTD001,4)*><*SETATVQTY(Optional Hardware and Software Required MZCF BOM:EP-VME16C,4)*><*SETATVQTY(Optional Hardware and Software Required MZCF BOM:CF-MSD000,1)*><*SETATVQTY(Optional Hardware and Software Required MZCF BOM:MZ-PCVM24,4)*>}[ENDIF]",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

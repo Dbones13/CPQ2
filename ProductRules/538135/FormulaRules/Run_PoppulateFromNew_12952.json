@@ -1,0 +1,11 @@
+{
+    "id": 12952,
+    "condition": "[EQ](<*VALUE(SC_Renewal_check)*>,0)",
+    "name": "Run_PoppulateFromNew",
+    "action": "<* ExecuteScript(PS_CBM_PopulateRenewalfromNew) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

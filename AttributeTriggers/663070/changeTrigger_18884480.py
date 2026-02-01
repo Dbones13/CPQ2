@@ -1,0 +1,2 @@
+[IF](<*ISSELECTED(Experion Server Type.Flex Server)*>){<*SELECTVALUE(Cabinet Depth:0.8M)*>}{<*SELECTVALUE(Cabinet Depth:1M)*>}[ENDIF]
+[IF](<*ISSELECTED(Experion Server Type.Server)*>){<*SELECTVALUE(Server Node Type_desk:SVR_STD_DELL_Tower_RAID1)*>}[ENDIF]

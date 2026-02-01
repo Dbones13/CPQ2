@@ -1,0 +1,141 @@
+@using WebSite.Controllers
+<div class="w960">
+    <div class="col-xs-12 col-md-12 col-sm-12 clearfix user-page-container shipping-info-page-container fiori3-shipping-info-page-container fiori3-cart-tab-container">
+        <div id="shippingCustomerContainer" class="shipping-info-container fiori3-shipping-info-container">
+            <scripting-messages></scripting-messages>
+            <!-- Start - CXCPQ-61166 - Manthan Rajguru - 18/10/2023 - Display Mandatory fields error message for respective tabs -->
+            <!-- ko if: $root.customFleldsModel.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFleldsModel.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+        		<div class="fiori3-alert fiori3-alert-warning" data-bind = "visible:ServiceContractMessages(tabsData.currentTabName(),$root.customFleldsModel.customFields()).length > 0">
+            			<p class="cart-warning-group" data-bind="text:ServiceContractMessages(tabsData.currentTabName(),$root.customFleldsModel.customFields())"></p>
+        		</div>
+            <!--/ko -->
+   <!-- END - CXCPQ-61166 - Manthan Rajguru - 18/10/2023 - Display Mandatory fields error message for respective tabs -->
+            @Html.PartialWithNameAsComment("/Views/Cart/Sections/Tabs.cshtml")    
+            <div style="display: none" data-bind="visible: isInitialized">
+                <div class="clearfix">
+                    <div class="flex">
+                      	<div class="shipping-info fiori3-shipping-info" style="width:70%">
+                          	<div class="fiori3-shipping-info-actions-wrapper" style="margin-bottom: 7px;height: 55px">
+                              	<div class="fiori3-shipping-info-actions">
+                                  	<h4 tabindex="0" class="pull-left"><span data-bind="text: 'Booking Details'"></span></h4>
+                              	</div>
+                          	</div>
+                          	<div>
+                                <!-- ko ifnot: $root.customFleldsModel.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+                              	<div data-bind="foreach: customFleldsModel.customFieldsAndQuoteTables.filterByProperty('name','Incoterms on Sales Order','Booking Tab Customer Requested Date','Booking Tab Sales ORG','DeliveryPriority','NetTerms','PackingInstructions','PONumber','ProfitCentre','PurchaseOrderDate','SalesOrderNumber','CF_Manual_Booking','SAPErrorcode','ShippingConditions','ShippingInstructions','EndUse','SC_CF_TAX_EXMPT_CERTIFICATE','Quote Sell price','SAP Project Number','Quote and Po Currency','Project Comments','Exchange Rate','Estimator Name','End User','Drop Shipment','Contractor/ Partner(C/P)','Booking Info Business Model','Booking Account','Backlog Flag','AM Name','PO Amount','Booking Info Milestone Category','Project Owner Name','Booking Account','Exchange Rate','Profit Centre Description','Legacy CRM ID_Booking Info Tab','Opportunity Siebel Id','Account Siebel Id','ApprovedControlNumber','CF_US_TAX1','CF_US_TAX2','SC_CF_Description','SC_CF_Auto_Escalate','SC_CF_Auto_Renewal','SC_CF_INVOICE_BLOCK_NEEDED','SC_CF_ORDER_REASON','SC_CF_Threshold','SC_CF_Do_not_send_Survey','SC_CF_1st_Survey_Month','SC_CF_2nd_Survey_Month','SC_CF_Velocity_Renewal',	'SC_CF_Special_Terms','SC_CF_Service_Contract_Content','SC_CF_Service_Contract_Tier','SC_CF_Service_Contract_Type','SC_CF_Callout_Response','SC_CF_Callout_Response_Comments')">
+                              <!-- START - CXCPQ-71766/CXCPQ-72606 - Manthan Rajguru - Added for service contract fields -->
+                                <!-- ko if: ['SC_CF_Do_not_send_Survey','SC_CF_Velocity_Renewal','SC_CF_Auto_Escalate','SC_CF_Auto_Renewal'].includes(name) -->
+                                	<!-- ko template: "customFieldCheckBoxTemplate" -->
+                                	<!--/ko -->
+                                <!--/ko -->
+                              <!-- END - CXCPQ-71766/CXCPQ-72606  - Manthan Rajguru - Added for service contract fields -->
+                              <!-- START - CXCPQ-71766/CXCPQ-72606  - Manthan Rajguru - Added for service contract fields -->
+                                 <!-- ko ifnot: ['SC_CF_Do_not_send_Survey','SC_CF_Velocity_Renewal','SC_CF_Auto_Escalate','SC_CF_Auto_Renewal'].includes(name) -->
+                              <!-- END - CXCPQ-71766/CXCPQ-72606  - Manthan Rajguru - Added for service contract fields -->
+                                	<!-- ko template: template+"_Quote" -->
+                                	<!--/ko -->
+                               <!-- START - CXCPQ-71766/CXCPQ-72606  - Manthan Rajguru - Added for service contract fields -->
+                                <!--/ko -->
+                                <!-- END - CXCPQ-71766/CXCPQ-72606  - Manthan Rajguru - Added for service contract fields -->
+                              	</div>
+                                <!--/ko -->
+                                <!-- ko if: $root.customFleldsModel.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+                                <div data-bind="foreach: customFleldsModel.customFieldsAndQuoteTables.filterByProperty('name','Incoterms on Sales Order','Booking Tab Customer Requested Date','PONumber','ProfitCentre','PurchaseOrderDate','SalesOrderNumber','EndUse','SC_CF_TAX_EXMPT_CERTIFICATE','CF_Manual_Booking','Profit Centre Description','SC_CF_Description','SC_CF_Auto_Escalate','SC_CF_Auto_Renewal','SC_CF_INVOICE_BLOCK_NEEDED','SC_CF_ORDER_REASON')">
+                                <!-- ko if: ['SC_CF_Auto_Escalate','SC_CF_Auto_Renewal'].includes(name) -->
+                                	<!-- ko template: "customFieldCheckBoxTemplate" -->
+                                	<!--/ko -->
+                                <!--/ko -->
+                                 <!-- ko ifnot: ['SC_CF_Auto_Escalate','SC_CF_Auto_Renewal'].includes(name) -->
+                                	<!-- ko template: template+"_Quote" -->
+                                	<!--/ko -->
+                                <!--/ko -->
+                              	</div>
+                                <!--/ko -->
+                          	</div>
+                            <div class="col-md-12 text-center">
+                                <button id="cfMainSave" class="btn btn-primary fiori3-btn-primary" data-bind="visible: customFleldsModel.isSaveButtonAvailable() && !customFleldsModel.isInViewMode() && (customFleldsModel.customFields().length > 0 || customFleldsModel.isContinueAction), text: customFleldsModel.saveActionText, click: function () { customFleldsModel.save(false, null) }, disable: customFleldsModel.hasValidationsFailed() "></button>
+                            </div>
+                      	</div>
+                      	<div data-bind="foreach: customers" class="table-display fiori3-customers-display">
+                          	<div class="fiori3-shipping-info-wrapper">
+                              	<div class="shipping-info fiori3-shipping-info" data-bind="template: { name: 'customerDataTemplate'}"></div>
+                          	</div>
+                      	</div>
+                      	<div class="shipping-info fiori3-shipping-info">
+                          	<div class="fiori3-shipping-info-actions-wrapper">
+                              	<div class="fiori3-shipping-info-actions">
+                                  	<h4 tabindex="0" class="pull-left"><span data-bind="text: 'Sold To/ End User/ Booking Account'"></span></h4>
+                              	</div>
+                          	</div>
+                          	<div class="form form-horizontal fiori3-shipping-customers-form">
+                              	<div data-bind="foreach: customFleldsModel.customFieldsAndQuoteTables.filterByProperty('name','Customer Name','SoldToAddress1','SoldToAddress2','SoldToCity','SoldToCountry','SoldToCustomerId','SoldToProvince','SoldToZipCode')">
+                                  	<div class="form-group">
+                                      	<label class="col-xs-12 control-label fiori3-control-label" data-bind="text:label"></label>
+                                      	<div class="col-xs-12 fiori3-input-group">
+                                          	<span data-bind="text:content().length > 0 ? content() : '---'"></span>
+                                      	</div>
+                                  	</div>
+                              	</div>
+                          	</div>
+                      	</div>
+                	</div>
+                    <!-- CXCPQ-72410 - Manthan Rajguru - 11/23/2023 - Added Quote table "QT_SC_FlexibleHours" for Service Contract-->
+                    <!-- ko ifnot: $root.customFleldsModel.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+					<div style="background-color:#fff;margin:5px;" data-bind="foreach:customFleldsModel.customFieldsAndQuoteTables.filterByProperty('name','QT_SC_FlexibleHours','QT_PROJECT_BOOKING_LINE_ITEM_DETAILS')" class="custom-fields">
+						<!-- ko template: template -->
+						<!-- /ko -->
+					</div>
+                    <!-- /ko -->
+            	</div>				
+        	</div>
+        </div>
+	    <div class="row cart" id="cartContainer"></div>
+    	<div id="templates" style="display: none">
+            @Html.PartialWithNameAsComment("PagerTemplate");
+            @Html.PartialWithNameAsComment("CustomerDataTemplate");
+            @Html.PartialWithNameAsComment("CustomerLookupTemplate");
+            @Html.PartialWithNameAsComment("/Views/Cart/Templates/CartCustomFieldTemplates.cshtml");
+            @Html.PartialWithNameAsComment("/Views/CartList/Dialogs/ReassignCartDialogTemplate.cshtml")
+            @Html.PartialWithNameAsComment("/Views/Cart/Dialogs/CreatePartialOrderDialogTemplate.cshtml")
+            @Html.PartialWithNameAsComment("/Views/Cart/Dialogs/UpgradeProductsProgressBarTemplate.cshtml")
+            
+            @if (CartController.HasQuoteTablesOnCurrentTab())
+            {
+                @Html.PartialWithNameAsComment("/Views/Cart/Templates/CartTableTemplate.cshtml")
+                @Html.PartialWithNameAsComment("/Views/Cart/Templates/CartTableCellTemplates.cshtml")
+                @Html.PartialWithNameAsComment("EditablePagerTemplate")
+            }
+    	</div>
+	</div>
+</div>
+<!-- Start - CXCPQ-CXCPQ-61166 - Manthan Rajguru - 18/10/2023 - Display Mandatory fields error message for respective tabs -->
+<script type="text/javascript">
+    function ServiceContractMessages(activeTab, customFields) {
+    let errorMessage = "Please enter all mandatory fields related to booking such as - ";
+    let finalMessage = "";
+    let tabMessage = "";
+    let mandatoryCF = customFields.filter((cf) => {
+        return cf.isRequired == true;
+    });
+
+    switch (activeTab) {
+        case "BOOKING INFO":
+            if (mandatoryCF) {
+                mandatoryCF.forEach(function (item, index) {
+                    if (item.content() === '') {
+                        if (tabMessage !== '') {
+                            tabMessage = `${tabMessage},`;
+                        }
+                        tabMessage = `${tabMessage}${item.label}`;
+                    }
+                });
+            }
+            break;
+    }
+    if (tabMessage !== '') {
+        finalMessage = `${errorMessage} ${tabMessage}`;
+    }
+    return finalMessage;
+}
+</script>
+<!-- End - CXCPQ-61166 - Manthan Rajguru - 18/10/2023 - Display Mandatory fields error message for respective tabs -->

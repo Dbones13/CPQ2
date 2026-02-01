@@ -1,0 +1,11 @@
+{
+    "id": 17818,
+    "condition": "[AND]([EQ](<*CTX( Container(Additional Hardware).Row(3).Column(Quantity).Get)*>,0),[EQ](<*CTX( Container(Additional Hardware).Row(4).Column(Quantity).Get)*>,0),[EQ](<*CTX( Container(Additional Hardware).Row(5).Column(Quantity).Get)*>,0))",
+    "name": "PS_Additional_Hardware_NE-FWMB01-Deselection",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:NE-FWMB01)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

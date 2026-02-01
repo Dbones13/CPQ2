@@ -1,0 +1,11 @@
+{
+    "id": 15090,
+    "condition": "[EQ](<*VALUE(MXP_MXProLine_Base_RAE)*>,)",
+    "name": "Default_Base_Rae",
+    "action": "<*SELECTVALUE(MXP_MXProLine_Base_RAE:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

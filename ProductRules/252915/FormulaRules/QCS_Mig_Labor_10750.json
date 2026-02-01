@@ -1,0 +1,11 @@
+{
+    "id": 10750,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "QCS_Mig_Labor",
+    "action": "<*DISALLOWATTRIBUTES(QCS_Mig_AllianceView_Servers_monitor_screen_type,QCS_Mig_Does_customer_have_SESP_contract,QCS_Mig_Is_this_a_Standalone_CD_node,QCS_Mig_Number_of_AllianceView_Thin_Clients,QCS_Mig_Number_of_Non_Honeywell_actuator_links,QCS_Mig_Number_of_Standalone_CD_Control_Links,QCS_Mig_Number_of_Thin_Clients,QCS_Mig_Operator_Station_monitor_screen_type,QCS_Mig_Rack_Mount_Server,QCS_Mig_Select_Thin_Client_monitor_type,QCS_Mig_switches_be_included_for_Measurement,QCS_Mig_system_contain_Serial_Communication_links,QCS_Mig_Select_AllianceView_Thin_Client_monitor,QCS_Mig_Will_QCS_be_added)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19068,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,AquaTrol),[NEQ](<*VALUE(MX_CD_Additional_Power_Control_Wire)*>,Yes))",
+    "name": "CD_Part_Dis_95511",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:95511)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

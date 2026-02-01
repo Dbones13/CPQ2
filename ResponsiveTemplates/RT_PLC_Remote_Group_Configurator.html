@@ -1,0 +1,209 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+	<div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+	  <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+		@Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+	</div>
+  
+	<!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+	<!-- /ko -->
+			<!-- ko foreach: attributes.filterByProperty('name' , "Calculation_Button") --> 
+	 <div class="row col-xs-12 swagger"> 
+		<div class="Calc_btn" >
+		  <div class="col-xs-12 col-sm-12">
+				<!-- ko template: { name: $root.getAttributeTemplate } -->
+				<!-- /ko --> 
+		  </div>
+		</div> 
+  </div>
+			<!-- /ko -->
+<!-- ko ifnot: ( localStorage.getItem("cabinate_req") === 'No') -->
+<!-- ko if: (localStorage.getItem("checkR2Q") === 'Yes' && $('#breadcrumbsContainer .breadcrumb-item:nth(3)').find('span').text() === 'R2Q New / Expansion Project') -->
+	<div class="row col-xs-12 swagger">
+	  <div id="plc-rg-cabinet">
+		<div>
+		  <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-rg-cabinet')"> -->
+			<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-rg-cabinet',$('#plc-rg-cabinet-content'), $('#plc-rg-cabinet-href'), 'slow');  }">
+<!-- ko if: (localStorage.getItem("checkR2Q") === 'Yes' && $('#breadcrumbsContainer .breadcrumb-item:nth(3)').find('span').text() !== 'R2Q New / Expansion Project') -->
+	<span>Remote IO Rack Details</span>
+<!-- /ko -->
+<!-- ko ifnot: (localStorage.getItem("checkR2Q") === 'Yes' && $('#breadcrumbsContainer .breadcrumb-item:nth(3)').find('span').text() !== 'R2Q New / Expansion Project') -->
+<span>Cabinet And Remote IO Rack Details</span>
+	
+<!-- /ko -->
+			<a id="plc-rg-cabinet-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="plc-rg-cabinet-content" class="newtoggle">
+	  <!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes') -->
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Cabinet_Cont") -->
+				<div class="text-center attribute-field-headers" data-bind="text:label">Cabinet Questions</div>
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+	   <!-- /ko -->
+<!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes') && $('#breadcrumbsContainer .breadcrumb-item:nth(3)').find('span').text() !== "Migration_New"-->
+<div class="col-xs-12 col-sm-6">
+	<!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Cabinet_Cont") -->
+	<div class="text-center attribute-field-headers" data-bind="text:label">Cabinet Questions</div>
+	<!-- ko if:$data.container.columns().length !== 0-->
+		<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+		<!-- /ko -->
+	  <!-- /ko -->
+	<!-- /ko -->
+  </div>
+<!-- /ko -->
+ <!-- ko ifnot: ( localStorage.getItem("cabinate_req") === 'No' || localStorage.getItem("cabinate_req") === 'Yes') -->
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Controller_Rack_Cont") -->
+				<div class="text-center attribute-field-headers" data-bind="text:label">Remote IO Rack Questions</div>
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+<!-- /ko -->	
+	  </div>
+		</div>
+	  </div>
+	</div>
+ <!-- /ko --> 
+ <!-- /ko --> 
+		<!-- ko if: ( localStorage.getItem("checkR2Q") === 'Yes') && $('#breadcrumbsContainer .breadcrumb-item:nth(3)').find('span').text() == "Migration_New"-->
+		<div class="row col-xs-12 swagger">
+			<div id="plc-rg-cabinet">
+				<div>
+				<!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-rg-cabinet')"> -->
+					<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-rg-cabinet',$('#plc-rg-cabinet-content'), $('#plc-rg-cabinet-href'), 'slow');  }">
+						<span>Remote IO Rack Details</span>
+						<a id="plc-rg-cabinet-href" href="#" class="swagger-toggle">&#xe066;</a>
+					</div>
+					
+					<div id="plc-rg-cabinet-content" class="newtoggle">
+						<div class="col-xs-12 col-sm-6">
+							<!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Controller_Rack_Cont") -->
+								<div class="text-center attribute-field-headers" data-bind="text:label">Remote IO Rack Questions</div>
+									<!-- ko if:$data.container.columns().length !== 0-->
+										<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+										<!-- /ko -->
+									<!-- /ko -->
+							<!-- /ko -->
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- /ko --> 
+	<!-- ko ifnot: ( localStorage.getItem("checkR2Q") === 'Yes') --> 
+			<div class="row col-xs-12 swagger">
+			  <div id="plc-rg-cabinet">
+				<div>
+				  
+					<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-rg-cabinet',$('#plc-rg-cabinet-content'), $('#plc-rg-cabinet-href'), 'slow');  }">
+		 
+			<span>Remote IO Rack Details</span> 
+		<span>Cabinet And Remote IO Rack Details</span>
+		 
+					<a id="plc-rg-cabinet-href" href="#" class="swagger-toggle">&#xe066;</a>
+				  </div>
+				  <div id="plc-rg-cabinet-content" class="newtoggle">
+				  <!-- ko if: ( cpq.models.configurator.responderModule.attributes.filterByProperty('name' ,'PLC_Cabinet_Required_Racks_Mounting')()[0]?.values()[0].displayValue !== '' && cpq.models.configurator.responderModule.attributes.filterByProperty('name' ,'PLC_Cabinet_Required_Racks_Mounting')()[0]?.values()[0].displayValue === 'Yes' && $('#breadcrumbsContainer .breadcrumb-item:nth(3)').find('span').text() === 'Migration_New') -->
+					<div class="col-xs-12 col-sm-6">
+					  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Cabinet_Cont") -->
+						<div class="text-center attribute-field-headers" data-bind="text:label">Cabinet Questions</div>
+						<!-- ko if:$data.container.columns().length !== 0-->
+						  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+						  <!-- /ko -->
+						<!-- /ko -->
+					  <!-- /ko -->
+					</div> 
+				  <!-- /ko -->
+				  <!-- ko if: ( $('#breadcrumbsContainer .breadcrumb-item:nth(3)').find('span').text() !== 'Migration_New') -->
+					<div class="col-xs-12 col-sm-6">
+					  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Cabinet_Cont") -->
+						<div class="text-center attribute-field-headers" data-bind="text:label">Cabinet Questions</div>
+						<!-- ko if:$data.container.columns().length !== 0-->
+						  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+						  <!-- /ko -->
+						<!-- /ko -->
+					  <!-- /ko -->
+					</div> 
+				  <!-- /ko -->
+					<div class="col-xs-12 col-sm-6">
+					  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Controller_Rack_Cont") -->
+						<div class="text-center attribute-field-headers" data-bind="text:label">Remote IO Rack Questions</div>
+						<!-- ko if:$data.container.columns().length !== 0-->
+						  <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+						  <!-- /ko -->
+						<!-- /ko -->
+					  <!-- /ko -->
+					</div>
+		 
+			  </div>
+				</div>
+			  </div>
+			</div>
+	<!-- /ko --> 
+	<div class="row col-xs-12 swagger">
+	  <div id="plc-rg-uio">
+		<div>
+		  <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-rg-uio')"> -->
+			<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-rg-uio',$('#plc-rg-uio-content'), $('#plc-rg-uio-href'), 'slow');  }">
+			<span>IO Count for Universal IO Module</span>
+			<a id="plc-rg-uio-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="plc-rg-uio-content" class="newtoggle">
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_UIO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_uio_1"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_UIO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_uio_2"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<div class="row col-xs-12 swagger">
+	  <div id="plc-rg-other-io">
+		<div>
+		  <!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#plc-rg-other-io')"> -->
+			<div class="swagger-header" data-bind="click: function(data,event){togglePanel(event,'plc-rg-other-io',$('#plc-rg-other-io-content'), $('#plc-rg-other-io-href'), 'slow');  }">
+			<span>IO Count for Individual IO Module</span>
+			<a id="plc-rg-other-io-href" href="#" class="swagger-toggle">&#xe066;</a>
+		  </div>
+		  <div id="plc-rg-other-io-content" class="newtoggle">
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Other_IO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_firstHalf"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+			<div class="col-xs-12 col-sm-6">
+			  <!-- ko foreach: attributes.filterByProperty('name' , "PLC_RG_Other_IO_Cont") -->
+				<!-- ko if:$data.container.columns().length !== 0-->
+				  <!-- ko template: { name: "ContainerTemplate_nomoretable_secondHalf"} -->
+				  <!-- /ko -->
+				<!-- /ko -->
+			  <!-- /ko -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>

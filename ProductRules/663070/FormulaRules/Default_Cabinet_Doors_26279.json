@@ -1,0 +1,11 @@
+{
+    "id": 26279,
+    "condition": "[EQ](<*VALUE(Cabinet Doors)*>,)",
+    "name": "Default_Cabinet_Doors",
+    "action": "<*SELECTVALUE(Cabinet Doors:Standard)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

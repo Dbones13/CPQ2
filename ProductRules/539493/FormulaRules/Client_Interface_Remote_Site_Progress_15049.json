@@ -1,0 +1,11 @@
+{
+    "id": 15049,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Client Interface Remote Site Progress",
+    "action": "<*ASSIGNVALUE(Client Interface Remote Site Progress:<* Eval((0<*VALUE(MSE_Number_Client_Meetings_Site_KOM)*>-1)*48) *>)*>",
+    "description": "(MC-1)*48",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

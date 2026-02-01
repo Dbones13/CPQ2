@@ -1,0 +1,11 @@
+{
+    "id": 19941,
+    "condition": "1",
+    "name": "RemoteGroupCountc300",
+    "action": "<*ASSIGNVALUE(RemoteGroupCountc300:<*CTX( Container(Series_C_Remote_Groups_Cont).Rows.GetCount )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

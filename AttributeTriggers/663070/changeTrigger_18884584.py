@@ -1,0 +1,6 @@
+[IF]([AND]([NEQ](<*VALUE(CMS Flex Station Qty 0_60)*>,0),[EQ](<*VALUE(Supervisory Network Type)*>,FTE))){<*SELECTVALUE(CMS Desk Station nodes LAN Interface Card:FTE)*>}{if_false}[ENDIF]
+
+[IF]([AND]([NEQ](<*VALUE(CMS Flex Station Qty 0_60)*>,0),[EQ](<*VALUE(Supervisory Network Type)*>,Ethernet))){<*SELECTVALUE(CMS Desk Station nodes LAN Interface Card:Ethernet)*>}{<*SELECTVALUE(CMS Desk Station nodes LAN Interface Card:FTE)*>}[ENDIF]
+
+[IF]([EQ](<*VALUE(CMS Flex Station Qty 0_60)*>,0)){<*SELECTVALUE(CMS Desk Station nodes LAN Interface Card:FTE)*>}{}[ENDIF]
+[IF]([AND]([OR]([EQ](<*VALUE(Experion Software Release)*>,R511),[EQ](<*VALUE(Experion Software Release)*>,R510),[EQ](<*VALUE(Experion Software Release)*>,R520)),[OR]([GT](<*VALUE(CMS Flex Station Qty 0_60)*>,0),[GT](<*VALUE(CMS Console Station Qty 0_20)*>,0),[GT](<*VALUE(CMS Console Station Extension Qty 0_15)*>,0),[GT](<*VALUE(CMS TPS Station Qty 0_20)*>,0)))){<*ALLOWATTRIBUTES(Cabinet_Statioan_Node_message)*>}{<*DISALLOWATTRIBUTES(Cabinet_Statioan_Node_message)*>}[ENDIF]<* ExecuteScript(HIde Cluster Cabinet Mounting Station) *><*SELECTVALUE(CMS Flex Station Hardware Selection:STN_PER_DELL_Tower_RAID1)*><* ExecuteScript(PS_CXDEV-7712) *><*SETREQUIRED(CMS Flex Station Hardware Selection)*><* ExecuteScript(PS_Cab_desk_defaults) *>

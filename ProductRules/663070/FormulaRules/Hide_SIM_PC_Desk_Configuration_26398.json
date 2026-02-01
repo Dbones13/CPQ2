@@ -1,0 +1,11 @@
+{
+    "id": 26398,
+    "condition": "[NEQ](<*VALUE(Simulation PC Furniture)*>,Desk)",
+    "name": "Hide_SIM_PC_Desk_Configuration",
+    "action": "<*DISALLOWATTRIBUTES(SIM PC Desk Configuration,Hardware Design Selection - Sim PC Node1,Node Supplier (Sim PC),Display Size (Sim PC),Additional Memory (Sim PC Desk),Additional Hard Disk (Sim PC Desk),Optional DVD (Sim PC Desk),Display Supplier (Sim PC),Trackball (Sim PC),Ent_sim_desk_tpm,Sim PC Cluster)*>",
+    "description": "CXCPQ-35451",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

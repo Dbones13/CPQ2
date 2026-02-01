@@ -1,0 +1,11 @@
+{
+    "id": 20514,
+    "condition": "[AND]([GT](<*VALUE(SS_LaserJet_Printer_Monochrome)*>,0),[EQ](<*VALUE(CE_Site_Voltage)*>,240V))",
+    "name": "Part_A_TP_DLBP03_200",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:TP-DLBP03-200)*><*SETATVQTY(Simulation_Bom_parts:TP-DLBP03-200,<*VALUE(SS_LaserJet_Printer_Monochrome)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19332,
+    "condition": "[GT](<* Eval(<*VALUE(PlantCruise_Scada_Calculation)*>-(INT((<*VALUE(PlantCruise_Scada_Calculation)*>)/2000))*2000) *>,999)",
+    "name": "Add_Scada_Points_CV-DSC01K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-DSC01K)*><*SETATVQTY(PlantCruise_Part_Summary:CV-DSC01K,<* Eval(INT((<*VALUE(PlantCruise_Scada_Calculation)*>- (INT((<*VALUE(PlantCruise_Scada_Calculation)*>)/2000))*2000)/1000)) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

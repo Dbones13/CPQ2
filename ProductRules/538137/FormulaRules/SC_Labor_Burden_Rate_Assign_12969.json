@@ -1,0 +1,11 @@
+{
+    "id": 12969,
+    "condition": "[AND](<*ATTSEL(SC_Labor_Resource_Type)*>,[EQ](<*VALUE(SC_Labor_Burden_for_Hr_Day)*>,))",
+    "name": "SC_Labor_Burden_Rate_Assign",
+    "action": "<*ASSIGNVALUE(SC_Labor_Burden_for_Hr_Day:<* Round(<* TABLE ( SELECT Burden_Rate FROM CT_SC_Labor_ResourceType WHERE  Type = '<*VALUECODE(SC_Labor_Resource_Type)*>'  and Country ='<*CTX( Quote.CustomField(Opportunity Tab Booking Country))*>') *>, 2) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "13/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

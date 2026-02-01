@@ -1,0 +1,11 @@
+{
+    "id": 23801,
+    "condition": "[EQ](<*VALUE(Number_of_Series_C_Control_Groups)*>,)",
+    "name": "Set default value for Series-C Control Group",
+    "action": "<*ASSIGNVALUE(Number_of_Series_C_Control_Groups:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

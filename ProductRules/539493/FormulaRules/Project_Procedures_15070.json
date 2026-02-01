@@ -1,0 +1,11 @@
+{
+    "id": 15070,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Project Procedures",
+    "action": "<*ASSIGNVALUE(Project Procedures:<* Eval(54+(<*VALUE(Unique_quantity_factor_total_scope)*>*26)+(<*VALUE(Quantity_duplication_factor_total_scope)*>*6.5)) *>)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

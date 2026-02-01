@@ -1,0 +1,11 @@
+{
+    "id": 24075,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Number_Storage_Device_Standard)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_MZ_NWSTR8",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-NWSTR8)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-NWSTR8,<*VALUE(Virtualization_Number_Storage_Device_Standard)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

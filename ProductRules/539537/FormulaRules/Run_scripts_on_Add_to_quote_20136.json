@@ -1,0 +1,11 @@
+{
+    "id": 20136,
+    "condition": "[NEQ](<*VALUE(Generate Part Summary)*>,)",
+    "name": "Run_scripts on Add to quote",
+    "action": "<* ExecuteScript(GS_Series_CG_CalculationTrigger) *>\n<* ExecuteScript(PS_C300_Sys_Cabinets_Qty)*>\n<* ExecuteScript(PS_SerC_C300_CG_Parts)*>\n<* ExecuteScript(PS_SerC_C300_CG_Parts_2)*>\n<* ExecuteScript(PS_UMC_parts)*>\n<* ExecuteScript(SerC_CG_PowerSupply_Parts)*>\n<* ExecuteScript(PS_UMC_parts)*>\n<* ExecuteScript(PS_mcar_part_add_CG)*>\n<* ExecuteScript(PS_mcar_part_add_CG2)*>\n<* ExecuteScript(C300_shipping_crate_parts_CG)*>\n<* ExecuteScript(PS_mcar_part_add_CG)*>\n<* ExecuteScript(PS_mcar_part_add_CG2)*>\n<* ExecuteScript(PS_Series_C_CG_Part_Summary_Cont_update_parts)*>\n<*CTX( Container(Series_C_CG_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(Series_C_CG_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "",
+    "rank": "999",
+    "active": true,
+    "modifiedDate": "05/12/24",
+    "modifiedBy": "Hilarian R"
+}

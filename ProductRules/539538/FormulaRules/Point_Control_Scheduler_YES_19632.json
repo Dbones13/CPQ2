@@ -1,0 +1,11 @@
+{
+    "id": 19632,
+    "condition": "[EQ](<*VALUE(Exp HS Point Control Scheduler)*>,Yes)",
+    "name": "Point Control Scheduler YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HASHED)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

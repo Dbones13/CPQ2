@@ -1,0 +1,11 @@
+{
+    "id": 25647,
+    "condition": "[EQ](<*VALUE(Optional DVD (Sim PC Cab))*>,)",
+    "name": "Default_Optional_DVD_(Sim PC Cab)",
+    "action": "<*SELECTVALUE(Optional DVD (Sim PC Cab):No)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

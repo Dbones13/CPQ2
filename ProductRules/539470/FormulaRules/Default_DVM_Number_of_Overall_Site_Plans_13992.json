@@ -1,0 +1,11 @@
+{
+    "id": 13992,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Overall_Site_Plans)*>,)",
+    "name": "Default_DVM_Number_of_Overall_Site_Plans",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Overall_Site_Plans:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

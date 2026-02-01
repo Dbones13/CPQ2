@@ -1,0 +1,11 @@
+{
+    "id": 22255,
+    "condition": "[EQ](<*VALUE(Scada_EIM_PROFINET_USE_LICENSE)*>,Yes)",
+    "name": "SCADA_TC-PNLX01_Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:TC-PNLX01)*><*SETATVQTY(SCADA_BOM_Items:TC-PNLX01, 1)*><* DoResetAtt *>",
+    "description": "Add-TC-PNLX01",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

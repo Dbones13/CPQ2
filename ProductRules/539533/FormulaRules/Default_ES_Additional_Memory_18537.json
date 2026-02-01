@@ -1,0 +1,11 @@
+{
+    "id": 18537,
+    "condition": "[EQ](<*VALUE(ES_Additional_Memory)*>,)",
+    "name": "Default_ES_Additional_Memory",
+    "action": "<*SELECTVALUE(ES_Additional_Memory:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

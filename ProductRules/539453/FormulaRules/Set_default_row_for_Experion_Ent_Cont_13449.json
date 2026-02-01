@@ -1,0 +1,11 @@
+{
+    "id": 13449,
+    "condition": "[EQ](<*CTX( Container(Experion_Enterprise_Cont).Rows.GetCount )*>,0)",
+    "name": "Set default row for Experion_Ent_Cont",
+    "action": "<*CTX( Container(Experion_Enterprise_Cont).Rows.Add(1) )*>\n<* ExecuteScript(PS_Set_Experion_Ent_Group_Attributes) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

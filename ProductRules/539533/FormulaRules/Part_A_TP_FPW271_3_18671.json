@@ -1,0 +1,11 @@
+{
+    "id": 18671,
+    "condition": "[AND]([AND]([GT](<*VALUE(ES_Displays_Server)*>,0),[EQ](<*VALUE(ES_Display_Size)*>,27 inch),[EQ](<*VALUE(ES_Display_Supplier_Server)*>,Honeywell)),[AND]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes),[EQ](<*VALUE(ES_Display_Size_Mobile_Server)*>,27 inch),[EQ](<*VALUE(ES_Display_Supplier_Mobile_Server)*>,Honeywell)))",
+    "name": "Part_A_TP_FPW271_3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:TP-FPW271)*><*SETATVQTY(eServer_BOM_parts:TP-FPW271,2)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

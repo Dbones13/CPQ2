@@ -1,0 +1,11 @@
+{
+    "id": 17854,
+    "condition": "[GT](<*CTX( Container(Miscellaneous Interfaces).Row(4).Column(Nodes).Get )*>,0)",
+    "name": "PS_Miscellaneous_Interfaces_EP-IMR35X_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IMR35X)*><*SELECTVALUE(SCADA_BOM_Items:EP-IMR35X)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IMR35X, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

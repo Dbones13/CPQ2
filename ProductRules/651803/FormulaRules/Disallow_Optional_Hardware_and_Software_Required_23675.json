@@ -1,0 +1,11 @@
+{
+    "id": 23675,
+    "condition": "<*ISSELECTED(Hardware Refresh.Yes)*>",
+    "name": "Disallow Optional Hardware and Software Required",
+    "action": "<*DISALLOWATTRIBUTES(Optional Hardware and Software Required)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

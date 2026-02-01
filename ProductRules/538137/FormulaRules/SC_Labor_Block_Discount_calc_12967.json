@@ -1,0 +1,11 @@
+{
+    "id": 12967,
+    "condition": "[NEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,)",
+    "name": "SC_Labor_Block_Discount_calc",
+    "action": "[IF]([AND]([GEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,0),[LEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,80))){<*ASSIGNVALUE(SC_Labor_Block_Discount:0.00)*>}{0}[ENDIF]\n[IF]([AND]([GEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,81),[LEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,200))){<*ASSIGNVALUE(SC_Labor_Block_Discount:10.00)*>}{0}[ENDIF]\n[IF]([AND]([GEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,201),[LEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,800))){<*ASSIGNVALUE(SC_Labor_Block_Discount:15.00)*>}{0}[ENDIF]\n[IF]([GEQ](<*VALUE(SC_Labor_Deliverable_Hours)*>,801)){<*ASSIGNVALUE(SC_Labor_Block_Discount:20.00)*>}{0}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "20/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9072,
+    "condition": "1",
+    "name": "assign value project type",
+    "action": "[IF]([EQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(Project Type).GetDisplayValue )*>,Fixed Price)){<*ASSIGNVALUE(Fix_Reimbursable_calcs_labour:8)*>}{<*ASSIGNVALUE(Fix_Reimbursable_calcs_labour:16)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

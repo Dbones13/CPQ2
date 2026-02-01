@@ -1,0 +1,11 @@
+{
+    "id": 4705,
+    "condition": "[OR](<*ISSELECTED(MX_SG_Type_of_Scanner.Q4052-00 Color C-Frame)*>,<*ISSELECTED(MX_SG_Type_of_Scanner.Q4022-34 I-Beam O-Frame)*>,<*ISSELECTED(MX_SG_Type_of_Scanner.Q4000-80 O-Frame)*>)",
+    "name": "Calibration hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_SG_Calibration_Sample_Holder)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

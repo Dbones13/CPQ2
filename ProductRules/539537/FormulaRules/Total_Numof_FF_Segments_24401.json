@@ -1,0 +1,11 @@
+{
+    "id": 24401,
+    "condition": "1",
+    "name": "Total_Numof_FF_Segments",
+    "action": "<*ASSIGNVALUE(Total_Numof_FF_Segments:<* Eval(0<*CTX( Container(SerC_CG_FIM_FF_Tot_Seg_transpose).Sum(Final_Tot_Seg) )*>)*>)*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Saratha  Gnanamani"
+}

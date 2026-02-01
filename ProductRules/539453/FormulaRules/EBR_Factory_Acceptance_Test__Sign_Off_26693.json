@@ -1,0 +1,11 @@
+{
+    "id": 26693,
+    "condition": "1",
+    "name": "EBR Factory Acceptance Test & Sign Off",
+    "action": "<*ASSIGNVALUE(EBR Factory Acceptance Test & Sign Off:<*Eval((<*VALUE(Labor_parameter_var_9)*>)*2*(<*VALUE(Labor_Percentage_FAT)*>/100))*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

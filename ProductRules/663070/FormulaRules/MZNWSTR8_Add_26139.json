@@ -1,0 +1,11 @@
+{
+    "id": 26139,
+    "condition": "[GT](<*VALUE(Number of Network Storage Device - Standard(0-100))*>,0)",
+    "name": "MZ-NWSTR8_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MZ-NWSTR8)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-NWSTR8, <*VALUE(Number of Network Storage Device - Standard(0-100))*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

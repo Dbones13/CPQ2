@@ -1,0 +1,153 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko if: currentTab().name() === "Scope Selection" -->
+
+<div class="row col-xs-12 swagger">
+		<div class="row col-xs-12 swagger-header">
+			<span>Product Family</span>
+		</div>
+		<div class="row col-xs-12">
+			<!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Product_Family") -->
+		<div class="col-xs-12 col-sm-6">
+			<!-- ko template: { name: $root.getAttributeTemplate } -->
+			<!-- /ko -->
+		</div>
+			<!-- /ko -->
+		</div>
+</div>
+
+	<div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product and Entitlements</span></div>
+	 <div class="row col-xs-12">
+	<!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Service_Product_Cont") -->
+    <div class="col-xs-12 col-sm-6">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	 </div>
+     <div class="row col-xs-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_RB_Service_Products_Saas") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Optional_Ent_Cont") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    </div>
+	
+	
+    <div class="row col-xs-12 swagger">
+    <div id="sc-file-upload">
+<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload')">
+          <span>File Upload</span>
+          <a id="sc-file-upload-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-file-upload-content" style = "display:none;" >
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+    <div class="row col-xs-6 price_exe" style="padding-top:20px;">
+    	<!-- ko foreach: attributes.filterByProperty('name' , "SC_Pricing_Escalation") -->
+    	<div class="row col-xs-12 flex" style="padding-left:8px;">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    	<!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Models_Scope_Cont","SC_Cyber_RC_Models_Scope_Cont") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Delete_ModelsScope","SC_Cyber_RC_Delete_ModelsScope") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Invalid_Cont","SC_GN_AT_RC_Invalid_Cont") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Delete_InvalidModels","SC_Cyber_RC_Delete_InvalidModels") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+        </div>
+    </div>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: currentTab().name() === "Scope Summary" -->
+    <div class="row col-xs-12 swagger">
+    <div id="sc-Entitlement">
+		<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-Entitlement')">
+          <span>Service Product and Entitlements</span>
+          <a id="sc-Entitlement-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-Entitlement-content" style = "display:none;" >
+     <div class="row col-xs-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_GN_AT_Product_Entitlement_Cont") -->
+    <div class="col-xs-12 col-sm-7">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+     </div>
+    </div>
+    </div>
+    </div>
+    <div class="row col-xs-12 swagger">
+    <div id="sc-Models">
+		<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-Models')">
+          <span>Pricing Summary</span>
+          <a id="sc-Models-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-Models-content" style = "display:none;" >
+        <!-- ko foreach: attributes.filterByProperty('name','SC_GN_AT_Model_Search','SC_TPS_RC_Entitlement_Search') -->
+        <div class = "col-xs-12 col-sm-2">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+         </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name','SC_GN_AT_Model_Search_Button','SC_TPS_RC_Entitlement_Search_Button') -->
+        <div class = "col-xs-12 col-sm-3 flex" style="margin-top:28px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+        <div class = "col-xs-12 col-sm-7"></div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name','SC_TPS_RC_Display','ComparisonSummary','SC_GN_AT_RC_Selection') -->
+        <div class = "col-xs-12 col-sm-12">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' ,"SC_GN_AT_Models_Cont","SC_Cyber_RC_Entitlements_Scope_summary") -->
+        <div class="col-xs-12 col-sm-12">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    </div>
+    </div>
+    <!-- /ko -->

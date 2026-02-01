@@ -1,0 +1,11 @@
+{
+    "id": 20278,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Console_Client)*>,Yes))",
+    "name": "DVM CONSOLE CLIENT_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMMSR)*><* DoResetAtt *>",
+    "description": "CXCPQ-45731",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

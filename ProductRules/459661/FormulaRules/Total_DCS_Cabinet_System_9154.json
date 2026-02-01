@@ -1,0 +1,11 @@
+{
+    "id": 9154,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_DCS_Cabinet_System",
+    "action": "<*ASSIGNVALUE(Total_DCS_Cabinet_System:<* Eval(<*CTX ( Container(CE_System_Cont).Sum(Total_DCS_CGRG_Cabinet_Sys) )*>+<*CTX ( Container(CE_System_Cont).Sum(DCS_UOC_CGRG_System_Cabinet) )*>+<*CTX ( Container(CE_System_Cont).Sum(DCS_RTU_cabinet_Sys) )*>+<*CTX ( Container(CE_System_Cont).Sum(PLC_System_Cabinet_Part) )*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

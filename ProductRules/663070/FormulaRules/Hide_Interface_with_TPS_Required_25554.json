@@ -1,0 +1,11 @@
+{
+    "id": 25554,
+    "condition": "[NEQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "Hide_Interface_with_TPS_Required",
+    "action": "<*SETOPTIONAL(Interface with TPS Required?)*><*DISALLOWATTRIBUTES(Interface with TPS Required?)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

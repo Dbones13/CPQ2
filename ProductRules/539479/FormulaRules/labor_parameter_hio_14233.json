@@ -1,0 +1,11 @@
+{
+    "id": 14233,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "labor_parameter_hio",
+    "action": "<*ASSIGNVALUE(Labor_Parameter_hio:<* Eval(0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AO) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(AI) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DI) )*>+0<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(DO) )*>+0<*VALUE(Sum_FFIO_AI)*>+0<*VALUE(Sum_FFIO_AO)*>+0<*VALUE(Total_Number_of_EtherNet_IP_Ios (0-10000))*>+0<*VALUE(Total_Number_of_ProfiNet_Ios (0-10000))*>+0<*VALUE(Total Number of Profibus Ios (0-10000))*>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13798,
+    "condition": "[OR]([EQ](<*VALUE(Virtualization_Ges_Location)*>,None),[EQ](<*VALUE(Virtualization_Ges_Location)*>,))",
+    "name": "Hide on GES Location",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_Labor_GES_Perct)*> <*CTX( Container(Virtualization_Labor_Deliverable).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(Virtualization_Labor_Deliverable).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Labor_Deliverable).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n\n<*DISALLOWATTRIBUTES(Virtualization_Labor_GES_Additonal_Perct)*> <*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX( Container(Virtualization_Additional_Custom_Deliverables).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

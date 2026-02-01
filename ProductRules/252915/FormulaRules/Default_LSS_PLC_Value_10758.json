@@ -1,0 +1,11 @@
+{
+    "id": 10758,
+    "condition": "1",
+    "name": "Default_LSS_PLC_Value",
+    "action": "[IF]([EQ](<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>,)){<*ASSIGNVALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Total_Number_of_new_PCDI_License)*>,)){<*ASSIGNVALUE(LSS_PLC_Total_Number_of_new_PCDI_License:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Total_number_of_Panel_PCs_required)*>,)){<*ASSIGNVALUE(LSS_PLC_Total_number_of_Panel_PCs_required:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_Scada)*>,)){<*ASSIGNVALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_Scada:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_PCDI)*>,)){<*ASSIGNVALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_PCDI:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_HPM_SI)*>,)){<*ASSIGNVALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_HPM_SI:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_EPLCG)*>,)){<*ASSIGNVALUE(LSS_PLC_Total_of_3rd_Party_PLC_via_EPLCG:0)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Server_Redundancy)*>,)){<*SELECTVALUE(LSS_PLC_Server_Redundancy:Redundant)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(LSS_PLC_Select_the_Experion_Node_to_be_installed)*>,)){<*SELECTVALUE(LSS_PLC_Select_the_Experion_Node_to_be_installed:Flex Station)*>}{}[ENDIF][IF]([EQ](<*VALUE(LSS_PLC_EPKS_Software_Release)*>,)){<*SELECTVALUE(LSS_PLC_EPKS_Software_Release:R511.x)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

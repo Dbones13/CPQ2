@@ -1,0 +1,77 @@
+	<!-- CN900 Labor Tab Responsive Template -->
+
+	<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+        <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+          <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+        </div>
+  
+        <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+        <!-- /ko -->
+  
+      <div class="row col-xs-12 swagger">
+          <div id="cn900-general">
+            <div>
+              <div class="swagger-header" onclick="toggleConfigSection(event, '#cn900-general')">
+                <span>CE CN900 Engineering</span>
+                <a id="cn900-general-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+  
+              <div id="cn900-general-content">
+        <div id="ce cn900 engineering labor container-content">
+                <div id="ce cn900 engineering labor container">
+                  <div class="col-xs-12 col-sm-12">
+                      <!-- ko foreach: attributes.filterByProperty('name' ,"CE CN900 GES Engineer %","CE CN900 Engineering Execution Country","CE CN900 Engineering Execution Year","CE CN900 Engineering Productivity") -->
+                          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-3 col-xs-3', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                          <!-- ko template: { name: $root.getAttributeTemplate } -->
+                          <!-- /ko -->
+                          </div>
+                  	  <!-- /ko -->
+                      <!-- ko foreach: attributes.filterByProperty('name' , "CE CN900 Engineering Labor Container") -->
+                          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                            <!-- ko template: { name: $root.getAttributeTemplate } -->
+                            <!-- /ko -->
+                          </div>
+                    <!-- /ko -->
+                  </div>
+                </div>
+              </div>
+        <!-- end of swagger section ce-pmd-engineering -->
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row col-xs-12 swagger">
+          <div id="cn900-labor">
+            <div>
+              <div class="swagger-header" onclick="toggleConfigSection(event, '#cn900-labor')">
+                <span>Additional Custom Deliverables</span>
+                <a id="cn900-labor-href" href="#" class="swagger-toggle">&#xe066;</a>
+              </div>
+  
+              <div id="cn900-labor-content">
+        <div id="ce cn900 engineering additional labor container-content">
+                <div id="ce cn900 engineering additional labor container">
+                  <div class="col-xs-12 col-sm-12">
+                      <!-- ko foreach: attributes.filterByProperty('name' ,"CN900_CD_LD_GES Engineer %", "CN900_CD_LaborDeliverables_Execution Country", "CN900_CD_LD_Engineering_Execution Year") -->
+                          <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-3 col-sm-3 col-xs-3', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                          <!-- ko template: { name: $root.getAttributeTemplate } -->
+                          <!-- /ko -->
+                          </div>
+                  	  <!-- /ko -->
+                    <!-- ko foreach: attributes.filterByProperty('name' , "CE CN900 Additional Custom Deliverables") -->
+                      <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                      </div>
+                    <!-- /ko -->
+                  </div>
+                </div>
+              </div>
+        <!-- end of swagger section ce-pmd-engineering -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

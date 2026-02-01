@@ -1,0 +1,1 @@
+[IF]([GEQ](<*VALUE(Tablet Quantity (0-5))*>,1)){<*ALLOWATTRIBUTES(Tablet Hardware selection)*><*SELECTVALUE(Tablet Hardware selection:STN_TAB_DELL_RUG)*>}{<*DISALLOWATTRIBUTES(Tablet Hardware selection)*>}[ENDIF]

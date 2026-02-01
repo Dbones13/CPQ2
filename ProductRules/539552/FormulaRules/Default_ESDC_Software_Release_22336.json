@@ -1,0 +1,11 @@
+{
+    "id": 22336,
+    "condition": "[EQ](<*VALUE(ESDC_Software_Release)*>,)",
+    "name": "Default_ESDC_Software_Release",
+    "action": "<*SELECTVALUE(ESDC_Software_Release:R530)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

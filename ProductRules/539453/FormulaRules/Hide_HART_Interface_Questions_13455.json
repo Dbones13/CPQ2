@@ -1,0 +1,11 @@
+{
+    "id": 13455,
+    "condition": "[NEQ](<*VALUE(Is HART Interface in Scope?)*>,Yes)",
+    "name": "Hide HART Interface Questions",
+    "action": "<*DISALLOWATTRIBUTES(Number of HART Interface Types,Number of HART Devices)*>",
+    "description": "Hide questions when Is HART Interface in Scope? != Yes",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

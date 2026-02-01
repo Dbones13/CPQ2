@@ -1,0 +1,11 @@
+{
+    "id": 9628,
+    "condition": "[EQ](<*ATTSEL(PSkid Grossmargin in Percentage)*>,1)",
+    "name": "Set Gross Margin Amt",
+    "action": "<*ASSIGNVALUE(PSkid Grossmargin Amount:<* Eval(Round((<*VALUE(Pskid Cost of goods Sold (COGS))*>* <*VALUE(PSkid Grossmargin in Percentage)*>)/100,2))*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

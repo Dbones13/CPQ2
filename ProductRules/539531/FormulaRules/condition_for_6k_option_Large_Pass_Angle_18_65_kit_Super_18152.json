@@ -1,0 +1,11 @@
+{
+    "id": 18152,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_Measurement_Type)*>,6k),[AND]([NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6080-81),[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6022-54),[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-6022-64)))",
+    "name": "condition_for_6k_option_Large_Pass_Angle_18_65_kit_Super",
+    "action": "<*DISALLOWATTRIBUTES(MXPro_Sensor_Large_Pass_Angle_18_65_kit_Super)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 9064,
+    "condition": "1",
+    "name": "Set value for sp",
+    "action": "<*ASSIGNVALUE(labor_parameter_sp:<*CTX( Container(ExpProject_Que_Right).Row(1).Column(Number of Subprojects).Get )*>)*>",
+    "description": "Number of Subprojects",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

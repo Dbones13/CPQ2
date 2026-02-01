@@ -1,0 +1,11 @@
+{
+    "id": 17974,
+    "condition": "[GT](<* Eval(INT(((<*GETATVQTY(PCD_Part_Summary:HPCD3.M6893)*>+<*GETATVQTY(PCD_Part_Summary:HPCD3.C200)*>+<*GETATVQTY(PCD_Part_Summary:HPCD3.C100)*>)*2)/3)) *>,0)",
+    "name": "Add_PCD3.K010",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PCD_Part_Summary:PCD3.K010)*><*SETATVQTY(PCD_Part_Summary:PCD3.K010,<* Eval(INT(((<*GETATVQTY(PCD_Part_Summary:HPCD3.M6893)*>+<*GETATVQTY(PCD_Part_Summary:HPCD3.C200)*>+<*GETATVQTY(PCD_Part_Summary:HPCD3.C100)*>)*2)/3)) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

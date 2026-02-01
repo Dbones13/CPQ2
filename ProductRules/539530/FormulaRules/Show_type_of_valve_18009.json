@@ -1,0 +1,11 @@
+{
+    "id": 18009,
+    "condition": "[NEQ](<*VALUE(MXP_Proflow_Type)*>,Rotational)",
+    "name": "Show_type_of_valve",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Type_of_Valve)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

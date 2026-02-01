@@ -1,0 +1,11 @@
+{
+    "id": 25791,
+    "condition": "[GT](<*VALUE(MZ_PCST82 qnt)*>,0)",
+    "name": "MZ-PCST82 add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCST82)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCST82,<*VALUE(MZ_PCST82 qnt)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37558",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

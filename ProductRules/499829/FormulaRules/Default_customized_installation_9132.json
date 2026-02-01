@@ -1,0 +1,11 @@
+{
+    "id": 9132,
+    "condition": "[EQ](<*VALUE(Trace_Software_Is_this_a_customized_installation)*>,)",
+    "name": "Default_customized_installation",
+    "action": "<*SELECTVALUE(Trace_Software_Is_this_a_customized_installation:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

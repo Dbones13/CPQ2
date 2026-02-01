@@ -1,0 +1,11 @@
+{
+    "id": 19839,
+    "condition": "[EQ](<*VALUE(SerC_Number of Redunt EIM for EIP Devices (0-300))*>,)",
+    "name": "Default_SerC_Number of Redunt EIM for EIP Devices (0-300)",
+    "action": "<*ASSIGNVALUE(SerC_Number of Redunt EIM for EIP Devices (0-300):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

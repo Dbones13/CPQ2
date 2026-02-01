@@ -1,0 +1,11 @@
+{
+    "id": 25677,
+    "condition": "[EQ](<*VALUE(Orion Console Display Supplier)*>,)",
+    "name": "Default Orion Console Display Supplier",
+    "action": "<*SELECTVALUE(Orion Console Display Supplier:Honeywell)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17881,
+    "condition": "[EQ](<*CTX( Container(OPC Application Instances).Row(8).Column(Devices).Get )*>,No)",
+    "name": "SCADA_EP-ZOPUHA_NO",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-ZOPUHA)*><* DoResetAtt *>",
+    "description": "Del-EP-ZOPUHA",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

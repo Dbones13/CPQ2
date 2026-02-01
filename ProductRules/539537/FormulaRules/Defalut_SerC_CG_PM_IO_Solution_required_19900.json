@@ -1,0 +1,11 @@
+{
+    "id": 19900,
+    "condition": "[EQ](<*VALUE(SerC_CG_PM_IO_Solution_required)*>,)",
+    "name": "Defalut_SerC_CG_PM_IO_Solution_required",
+    "action": "<*SELECTVALUE(SerC_CG_PM_IO_Solution_required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

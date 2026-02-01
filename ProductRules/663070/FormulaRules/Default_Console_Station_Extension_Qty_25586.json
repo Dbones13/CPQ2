@@ -1,0 +1,11 @@
+{
+    "id": 25586,
+    "condition": "[EQ](<*VALUE(Console Station Extension Qty  (0-15))*>,)",
+    "name": "Default Console Station Extension Qty",
+    "action": "<*ASSIGNVALUE(Console Station Extension Qty  (0-15):0)*>",
+    "description": "CXCPQ-34882",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

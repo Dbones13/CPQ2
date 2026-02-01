@@ -1,0 +1,11 @@
+{
+    "id": 19948,
+    "condition": "[NOT]([AND](<*IFANYVALUE(SerC_CG_IO_Family_Type:Series-C Mark II)*>,<*ISSELECTED(SerC_CG_Ethernet_Interface.Yes)*>))",
+    "name": "Part_DC_TEIM01_MarkII_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Series_C_CG_Part_Summary:DC-TEIM01)*><* DoResetAtt *>",
+    "description": "CXCPQ-44575",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

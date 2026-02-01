@@ -1,0 +1,11 @@
+{
+    "id": 20147,
+    "condition": "1",
+    "name": "Total_sum_ios_rg",
+    "action": "<*ASSIGNVALUE(Total_sum_ios_rg:<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(total_family_CG_ios_doc) )*>)*>\n<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntCG:<* Eval(0<*CTX( Container(C300_CG_Universal_IO_Mark_1).Sum(AI) )*>+0<*CTX( Container(C300_CG_Universal_IO_Mark_1).Sum(AO) )*>+0<*CTX( Container(C300_CG_Universal_IO_Mark_2).Sum(DI) )*>+0<*CTX( Container(C300_CG_Universal_IO_Mark_2).Sum(DO) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(AI) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(AO) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(DI) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(DO) )*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(C300_Exp_Labor_Uni_qntCG) )*>) *>)*>\n[IF]([EQ](<*VALUE(SerC_CG_Universal_Marshalling_Cabinet)*>,Yes)){<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntmarsh:<*Eval(1+<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(C300_Exp_Labor_Uni_qntmarsh) )*>)*>)*>}{<*ASSIGNVALUE(C300_Exp_Labor_Uni_qntmarsh:<*Eval(0+<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(C300_Exp_Labor_Uni_qntmarsh) )*>)*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

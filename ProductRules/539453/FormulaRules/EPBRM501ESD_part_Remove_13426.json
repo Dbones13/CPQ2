@@ -1,0 +1,11 @@
+{
+    "id": 13426,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(EBR_Server_Check)*>,Yes),[AND]([EQ](<*VALUE(Experion Backup Restore Software Release)*>,R501),[EQ](<*VALUE(Experion Backup Restore Media Delivery)*>,Electronic Download))))",
+    "name": "EP-BRM501-ESD_part_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Sys_Part_Summary:EP-BRM501-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

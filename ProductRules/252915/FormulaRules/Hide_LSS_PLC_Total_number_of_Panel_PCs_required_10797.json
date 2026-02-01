@@ -1,0 +1,11 @@
+{
+    "id": 10797,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_PLC_EPKS_Software_Release)*>,R510.x))",
+    "name": "Hide_LSS_PLC_Total_number_of_Panel_PCs_required",
+    "action": "<*DISALLOWATTRIBUTES(LSS_PLC_Total_number_of_Panel_PCs_required)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

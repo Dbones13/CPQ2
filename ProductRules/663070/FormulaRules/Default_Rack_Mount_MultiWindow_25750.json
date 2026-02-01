@@ -1,0 +1,11 @@
+{
+    "id": 25750,
+    "condition": "[EQ](<*VALUE(Multi Window Support (Flex Server))*>,)",
+    "name": "Default_Rack_Mount_MultiWindow",
+    "action": "<*SELECTVALUE(Multi Window Support (Flex Server):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

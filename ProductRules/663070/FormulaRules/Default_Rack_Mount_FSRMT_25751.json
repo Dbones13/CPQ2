@@ -1,0 +1,11 @@
+{
+    "id": 25751,
+    "condition": "[EQ](<*VALUE(Flex Server Rack Mounting Type)*>,)",
+    "name": "Default_Rack_Mount_FSRMT",
+    "action": "<*SELECTVALUE(Flex Server Rack Mounting Type:Fixed Mount)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

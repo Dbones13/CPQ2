@@ -1,0 +1,11 @@
+{
+    "id": 19938,
+    "condition": "[EQ](<*VALUE(MIB Configuration Required?)*>,Yes)",
+    "name": "SerC_CG_IO_Family_Type",
+    "action": "<*SELECTVALUE(SerC_CG_IO_Family_Type:Series-C Mark II)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

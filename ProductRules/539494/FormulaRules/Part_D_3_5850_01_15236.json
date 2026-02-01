@@ -1,0 +1,11 @@
+{
+    "id": 15236,
+    "condition": "[NEQ](<*VALUE(MXP_Profile_Control)*>,AutoProfile Control S/W for Flat Die - Single Extruder)",
+    "name": "Part_D_3_5850_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5850-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23692,
+    "condition": "[NEQ](<*CTX ( Container(AR_HCI_PHD_ProjectInputs2).Column(USM Implementation) )*>,Yes)",
+    "name": "USM Implementation",
+    "action": "<*DISALLOWATTRIBUTES(HCI_PHD_USMConfiguration)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

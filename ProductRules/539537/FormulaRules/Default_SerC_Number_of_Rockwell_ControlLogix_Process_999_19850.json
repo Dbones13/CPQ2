@@ -1,0 +1,11 @@
+{
+    "id": 19850,
+    "condition": "[GT](<*VALUE(SerC_Number of Rockwell ControlLogix Process 999)*>,)",
+    "name": "Default_SerC_Number of Rockwell ControlLogix Process 999",
+    "action": "<*ASSIGNVALUE(SerC_Number of Rockwell ControlLogix Process 999:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

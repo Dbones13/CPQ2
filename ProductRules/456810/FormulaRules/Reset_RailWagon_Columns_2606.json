@@ -1,0 +1,11 @@
+{
+    "id": 2606,
+    "condition": "[NOT](<*ISSELECTED(Terminal_Mode_of_Transport.Rail Wagon loading/unloading)*>)",
+    "name": "Reset RailWagon Columns",
+    "action": "<*RESETVALUE(Terminal_Yes_No_RailWagon:Y)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

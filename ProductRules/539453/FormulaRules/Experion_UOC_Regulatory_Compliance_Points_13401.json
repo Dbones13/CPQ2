@@ -1,0 +1,11 @@
+{
+    "id": 13401,
+    "condition": "1",
+    "name": "Experion UOC Regulatory Compliance Points",
+    "action": "<*ASSIGNVALUE(Experion UOC Regulatory Compliance Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Experion UOC Regulatory Compliance Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

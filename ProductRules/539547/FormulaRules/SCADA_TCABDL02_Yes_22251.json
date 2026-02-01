@@ -1,0 +1,11 @@
+{
+    "id": 22251,
+    "condition": "[EQ](<*VALUE(Scada_Allen_Bradley_Drive_Interface_Library)*>,Yes)",
+    "name": "SCADA_TC-ABDL02_Yes",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:TC-ABDL02)*><*SETATVQTY(SCADA_BOM_Items:TC-ABDL02, 1)*><* DoResetAtt *>",
+    "description": "Add-TC-ABDL02",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

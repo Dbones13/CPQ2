@@ -1,0 +1,11 @@
+{
+    "id": 13342,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is EtherNet IP Interface in Scope?)*>,Yes))",
+    "name": "SII Test Procedure -EtherNet IP",
+    "action": "<*ASSIGNVALUE(SII Test Procedure -EtherNet IP:<* Eval(0.15 * <*VALUE(Number of EtherNet IP Devices)*> ) *>)*>",
+    "description": "39367",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

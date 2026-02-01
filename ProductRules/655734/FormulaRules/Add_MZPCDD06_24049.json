@@ -1,0 +1,11 @@
+{
+    "id": 24049,
+    "condition": "[AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Trackball)*>,Yes))",
+    "name": "Add_MZ-PCDD06",
+    "action": "<*DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:MZ-PCDD06)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

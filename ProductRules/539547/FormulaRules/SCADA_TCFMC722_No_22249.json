@@ -1,0 +1,11 @@
+{
+    "id": 22249,
+    "condition": "[EQ](<*VALUE(Scada_FMC722_Protocol_peer_communication)*>,No)",
+    "name": "SCADA_TC-FMC722_No",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:TC-FMC722)*><* DoResetAtt *>",
+    "description": "Hide-TC-FMC722",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

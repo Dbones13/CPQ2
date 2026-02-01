@@ -1,0 +1,11 @@
+{
+    "id": 18338,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(MXP_Second_sensor_kit)*>,Yes),[IN](<*VALUE(MXP_Scanner_Type)*>,3-5080-00, 3-5080-43)))",
+    "name": "Part_D_3_4623_50",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-4623-50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 5451,
+    "condition": "[AND]([NEQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,0),[EQ](<*VALUE(TL_Number_of_Travel_Expense_Groups)*>,1))",
+    "name": "Group 1 Visibility",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_02_close,ATTCON_02_open,Header_03_close,Header_03_open,TL_Travel_Phase_2,TL_Inputs_2,ATTCON_03_close,ATTCON_03_open,Header_04_close,Header_04_open,TL_Travel_Phase_3,TL_Inputs_3,ATTCON_04_close,ATTCON_04_open,Header_05_close,Header_05_open,TL_Travel_Phase_4,TL_Inputs_4,ATTCON_05_close,ATTCON_05_open,Header_06_close,Header_06_open,TL_Travel_Phase_5,TL_Inputs_5,ATTCON_06_close,ATTCON_06_open,Header_07_close,Header_07_open,TL_Travel_Phase_6,TL_Inputs_6,ATTCON_07_close,ATTCON_07_open,Header_08_close,Header_08_open,TL_Travel_Phase_7,TL_Inputs_7,ATTCON_08_close,ATTCON_08_open,Header_09_close,Header_09_open,TL_Travel_Phase_8,TL_Inputs_8,ATTCON_09_close,ATTCON_09_open,Header_10_close,Header_10_open,TL_Travel_Phase_9,TL_Inputs_9,ATTCON_10_close,ATTCON_10_open,Header_11_close,Header_11_open,TL_Travel_Phase_10,TL_Inputs_10,TL_Expense_Calculation_Cont_2,TL_Expense_Calculation_Cont_3,TL_Expense_Calculation_Cont_4,TL_Expense_Calculation_Cont_5,TL_Expense_Calculation_Cont_6,TL_Expense_Calculation_Cont_7,TL_Expense_Calculation_Cont_8,TL_Expense_Calculation_Cont_9,TL_Expense_Calculation_Cont_10,TL_Dummy_Attr_10,TL_Dummy_Attr_9,TL_Dummy_Attr_8,TL_Dummy_Attr_7,TL_Dummy_Attr_6,TL_Dummy_Attr_5,TL_Dummy_Attr_4,TL_Dummy_Attr_3,TL_Dummy_Attr_2)*>\n<* DoResetAtt *><*ALLOWATTRIBUTES(ATTCON_01_close,ATTCON_01_open,Header_02_close,Header_02_open,TL_Travel_Phase_1,TL_Inputs_1,TL_Expense_Calculation_Cont_1)*><* DoNotResetAtt *>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

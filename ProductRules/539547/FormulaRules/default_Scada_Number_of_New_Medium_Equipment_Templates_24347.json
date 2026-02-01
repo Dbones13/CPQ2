@@ -1,0 +1,11 @@
+{
+    "id": 24347,
+    "condition": "[EQ](<*VALUE(Scada_Number_of_New_Medium_Equipment_Templates)*>,)",
+    "name": "default_Scada_Number_of_New_Medium_Equipment_Templates",
+    "action": "<*ASSIGNVALUE(Scada_Number_of_New_Medium_Equipment_Templates:30)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

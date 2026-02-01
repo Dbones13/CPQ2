@@ -1,0 +1,11 @@
+{
+    "id": 22600,
+    "condition": "[EQ](<*VALUE(Gas MeterSuite Number Of Gas Metering Station With a Master Meter (0-99))*>,)",
+    "name": "Default Gas MeterSuite Number Of Gas Metering Station With a Master Meter (0-99)",
+    "action": "<*ASSIGNVALUE(Gas MeterSuite Number Of Gas Metering Station With a Master Meter (0-99):0)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

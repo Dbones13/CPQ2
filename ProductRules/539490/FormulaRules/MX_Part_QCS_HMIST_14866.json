@@ -1,0 +1,11 @@
+{
+    "id": 14866,
+    "condition": "[AND]([EQ](<*VALUE(MX_Platform_Type)*>,Physical),[GEQ](<*VALUE(MX_number_of_operator_station)*>,1))",
+    "name": "MX_Part_QCS_HMIST",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:QCS-HMIST)*><*SETATVQTY(MX_Platform_Bom_Parts:QCS-HMIST, <* Round ( <*VALUE(MX_number_of_operator_station)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

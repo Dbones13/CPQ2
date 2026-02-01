@@ -1,0 +1,11 @@
+{
+    "id": 23379,
+    "condition": "[EQ](<*VALUE(K&E Selected Model)*>, TP-ZWDTF1)",
+    "name": "10 Station Upgrade",
+    "action": "<*DISALLOWATTRIBUTES(KE_Hardware_Selection)*>\n<*DISALLOWATTRIBUTES(KE_ISA_Adapter_Required)*>\n<*DISALLOWATTRIBUTES(KE_Key_Board_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

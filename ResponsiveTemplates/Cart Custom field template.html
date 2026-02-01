@@ -1,0 +1,460 @@
+<!-- Cart Custom field template -->
+<!-- START - CXCPQ-72412 - Manthan Rajguru - 11/24/2023 - Added class to align checkbox on booking info tab for service contract -->
+<style type="text/css">
+  .chkBox{
+      margin-top:-1px!important;
+  }
+</style>
+<!-- END - CXCPQ-72412 - Manthan Rajguru - 11/24/2023 - Added class to align checkbox on booking info tab for service contract -->
+<script type="text/html" id="CartCustomFieldHtmlTemplate">
+  <div class="fiori3-input-group col-md-4 col-sm-6 col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+ 
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <pre class="cpq-scroll " data-bind="html: content().length > 0 ? content() : '@Translation.GetRaw("CartCustomFieldTemplates.none")', css:{ 'cf-placeholder': content().length == 0 }, attr: { id: 'readOnly_' + id , title: content()}"></pre>
+       <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldFreeFormTemplate">
+  <div class="fiori3-input-group col-md-4 col-sm-6 col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class="text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+ 
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <input data-bind="valueUpdatedOnEnter: content, enable: editable, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" class="form-control col-md-6" />
+       <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+</div>
+</script>
+
+<script type="text/html" id="CartCustomFieldAttributeTemplate">
+  <div class="fiori3-input-group col-md-4 col-sm-6 col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+   
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <!-- ko if:values.length > 0 -->
+      <select class="form-control"   data-bind="options: values, optionsText: 'value', value: selectedValue, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible}"></select>
+      <!-- /ko -->
+      <!-- ko if:values.length === 0 -->
+      <select class="form-control"   data-bind="enable: false, attr: { id: $index() + '_' + id}"></select>
+      <!-- /ko -->
+     <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+</div>
+</script>
+
+<script type="text/html" id="CartCustomFieldDateTemplate">
+  <div class="fiori3-input-group col-md-4 col-sm-6 col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <div class="fiori3-input-group input-group date-field" aria-hidden="true">
+          <input data-bind="value: content, enable: editable, attr: { id: $index() + '_' + id, placeholder: '@Environment.DateFormatString', 'aria-labelledby': 'Label_' + $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible }" class="form-control" />
+          <!-- ko if: editable -->
+          <a tabindex="-1" class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="datepicker: content" aria-haspopup="true"><i class="fa fa-calendar"></i></a>
+          <!-- /ko -->
+          <!-- ko ifnot: editable -->
+          <a tabindex="-1" class="input-group-addon btn btn-default" aria-haspopup="true"><i class="fa fa-calendar"></i></a>
+          <!-- /ko -->
+            
+      </div>
+     
+  </div> 
+  <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+</div>
+</script>
+
+<script type="text/html" id="CartCustomFieldLongTextTemplate">
+  <div class="fiori3-input-group col-md-4 col-sm-6 col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+ 
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <textarea data-bind="value: content, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible }" class="form-control long-text cpq-scroll"></textarea>
+      <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+</div>
+</script>
+
+<script type="text/html" id="CartCustomFieldAutocompleteTemplate">
+  <div class="fiori3-input-group col-md-4 col-sm-6 col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class="text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id}"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+   
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <select class="form-control"   data-bind="select2: { selectedOptions: selectedRow, ajax: getSearchResults, onSelect: onSelect, onUnselect: onUnselect, placeholder: placeholder, allowClear: true, minimumInputLength: 0, closeOnSelect: true, disabled: !editable }, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible}" style="display: block; width: 100%;" role="combobox"></select>
+     <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+</div>
+</script>
+
+<script type="text/html" id="CartCustomFieldHtmlTemplate_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+  <!-- ko ifnot: ['SC_CF_CONTRACTDURYR','EGAP_Project_Duration_Months','SC_CF_Term_duration_Months','SC_CF_Threshold'].includes(name) -->
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+  <!-- /ko -->
+  <!-- ko if: ['SC_CF_CONTRACTDURYR','EGAP_Project_Duration_Months','SC_CF_Term_duration_Months','SC_CF_Threshold'].includes(name) -->
+  <label class="  text-center" data-bind="attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  >
+  <span data-bind="text:label.split('#N#')[0]"></span><span class="tooltip-trigger" data-bind="visible: label.split('#N#')[1],tooltip: { title: label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: label.split('#N#')[1]" class="sap-icon"><span>&#xe202;</span></a></span>
+  </label>
+  <!-- /ko -->
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+ 
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <pre class="cpq-scroll  " data-bind="html: content().length > 0 ? content() : '@Translation.GetRaw("CartCustomFieldTemplates.none")', css:{ 'cf-placeholder': content().length == 0 }, attr: { id: 'readOnly_' + id, title: content() } "></pre>
+       <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldFreeFormTemplate_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+  <!-- START - CXCPQ-71766 - Manthan Rajguru - 11/22/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+  <!-- ko ifnot: ['SC_CF_Threshold'].includes(name) -->
+  <!-- END - CXCPQ-71766 - Manthan Rajguru - 11/22/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+  <!-- START - CXCPQ-71766 - Manthan Rajguru - 11/22/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+  <!-- /ko -->
+  <!-- END - CXCPQ-71766 - Manthan Rajguru - 11/22/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+  <!-- START - CXCPQ-71766 - Manthan Rajguru - 11/22/2023 - Added to display info icon alongwith label on booking info tab for service contract -->
+  <!-- ko if: ['SC_CF_Threshold'].includes(name) -->
+  <label class=" text-center" data-bind="attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  >
+  <span data-bind="text:label.split('#N#')[0]"></span><span class="tooltip-trigger" data-bind="visible: label.split('#N#')[1],tooltip: { title: label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: label.split('#N#')[1]" class="sap-icon"><span>&#xe202;</span></a></span>
+  </label>
+  <!-- /ko -->
+  
+     <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+</div>
+<div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+  <!-- END - CXCPQ-71766 - Manthan Rajguru - 11/22/2023 - Added to display info icon alongwith label on booking info tab for service contract -->
+      <input data-bind="valueUpdatedOnEnter: content, enable: editable, attr: { id: $index() + '_' + id, 'aria-labelledby': 'Label_' + $index() + '_' + id}" class="form-control col-md-6"  />
+   
+    <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+      </div>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldAttributeTemplate_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+    <!-- ko if:name == 'Payment Milestones Category' -->
+      <label class=" text-center" data-bind="attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  >
+        <span data-bind="html: label"></span>
+        <span class="tooltip-trigger" data-bind="tooltip: { title: 'Lump Sum Small: Projects with end-to-end scope from initial design or engineering up to the completion of site work and Sales Price < $ 400K and Project Duration < 6 months.
+Lump Sum Large: Projects with end-to-end scope from initial design or engineering up to the completion of site work and Sales Price >= $ 400K and Project Duration >= 6 months.
+Ex-Works Small: Projects with fixed scope ends at Honeywell works. Any site work will be covered by a separate purchase order or on a T&M basis on the same purchase order and Sales Price < $ 400K and Project Duration < 6 months.
+Ex-Works Large: Projects with fixed scope ends at Honeywell works. Any site work will be covered by a separate purchase order or on a T&M basis on the same purchase order and Sales Price >= $ 400K and Project Duration >= 6 months.', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+      </label>
+    <!-- /ko -->
+    <!-- ko ifnot:name == 'Payment Milestones Category' -->
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+    <!-- /ko -->
+       <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>    
+      
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <!-- ko if:values.length > 0 -->
+      <select class="form-control"  data-bind="options: values, optionsText: 'value', value: selectedValue, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible}"></select>
+      <!-- /ko -->
+      <!-- ko if:values.length === 0 -->
+      <select class="form-control"   data-bind="enable: false, attr: { id: $index() + '_' + id}"></select>
+      <!-- /ko -->
+ <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+      </div>
+  </div>    
+</script>
+<script type="text/html" id="CartCustomFieldAttributeTemplate_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+    <!-- ko if:name == 'Payment Milestones Category' -->
+      <label class=" text-center" data-bind="attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  >
+        <span data-bind="html: label"></span>
+        <span class="tooltip-trigger" data-bind="tooltip: { title: 'Lump Sum Small: Projects with end-to-end scope from initial design or engineering up to the completion of site work and Sales Price < $ 400K and Project Duration < 6 months.
+Lump Sum Large: Projects with end-to-end scope from initial design or engineering up to the completion of site work and Sales Price >= $ 400K and Project Duration >= 6 months.
+Ex-Works Small: Projects with fixed scope ends at Honeywell works. Any site work will be covered by a separate purchase order or on a T&M basis on the same purchase order and Sales Price < $ 400K and Project Duration < 6 months.
+Ex-Works Large: Projects with fixed scope ends at Honeywell works. Any site work will be covered by a separate purchase order or on a T&M basis on the same purchase order and Sales Price >= $ 400K and Project Duration >= 6 months.', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+      </label>
+    <!-- /ko -->
+    <!-- ko ifnot:name == 'Payment Milestones Category' -->
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+    <!-- /ko -->
+       <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>    
+  
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <!-- ko if:values.length > 0 -->
+      <select class="form-control"  data-bind="options: values, optionsText: 'value', value: selectedValue, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible}"></select>
+      <!-- /ko -->
+      <!-- ko if:values.length === 0 -->
+      <select class="form-control"   data-bind="enable: false, attr: { id: $index() + '_' + id}"></select>
+      <!-- /ko -->
+        <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+      </div>
+  </div>    
+</script>
+<script type="text/html" id="CartCustomFieldAttributeTemplate_RightAlign_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+    <!-- ko if:name == 'Payment Milestones Category' -->
+      <label class=" text-center" data-bind="attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  >
+        <span data-bind="html: label"></span>
+        <span class="tooltip-trigger" data-bind="tooltip: { title: 'Lump Sum Small: Projects with end-to-end scope from initial design or engineering up to the completion of site work and Sales Price < $ 400K and Project Duration < 6 months.
+Lump Sum Large: Projects with end-to-end scope from initial design or engineering up to the completion of site work and Sales Price >= $ 400K and Project Duration >= 6 months.
+Ex-Works Small: Projects with fixed scope ends at Honeywell works. Any site work will be covered by a separate purchase order or on a T&M basis on the same purchase order and Sales Price < $ 400K and Project Duration < 6 months.
+Ex-Works Large: Projects with fixed scope ends at Honeywell works. Any site work will be covered by a separate purchase order or on a T&M basis on the same purchase order and Sales Price >= $ 400K and Project Duration >= 6 months.', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+      </label>
+    <!-- /ko -->
+    <!-- ko ifnot:name == 'Payment Milestones Category' -->
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+    <!-- /ko -->
+       <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>    
+    
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <!-- ko if:values.length > 0 -->
+      <select class="form-control"  data-bind="options: values, optionsText: 'value', value: selectedValue, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible}"></select>
+      <!-- /ko -->
+      <!-- ko if:values.length === 0 -->
+      <select class="form-control"   data-bind="enable: false, attr: { id: $index() + '_' + id}"></select>
+      <!-- /ko -->
+   <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+      </div>
+  </div>    
+</script>
+<script type="text/html" id="CartCustomFieldDateTemplate_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+  <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>      
+    
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <div class="fiori3-input-group input-group date-field" aria-hidden="true"  >
+          <input data-bind="value: content, enable: editable, attr: { id: $index() + '_' + id, placeholder: '@Environment.DateFormatString', 'aria-labelledby': 'Label_' + $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible }" class="form-control" />
+          <!-- ko if: editable -->
+          <a tabindex="-1" class="input-group-addon btn btn-default" data-date-format="@Environment.DateFormatString" data-bind="datepicker: content" aria-haspopup="true"><i class="fa fa-calendar"></i></a>
+          <!-- /ko -->
+          <!-- ko ifnot: editable -->
+          <a tabindex="-1" class="input-group-addon btn btn-default" aria-haspopup="true"><i class="fa fa-calendar"></i></a>
+          <!-- /ko -->
+            
+      </div>
+  
+      </div>
+      <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldLongTextTemplate_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+      <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <textarea data-bind="value: content, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible }" class="form-control long-text cpq-scroll col-md-6"  ></textarea>
+   <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldAutocompleteTemplate_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id}"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+        
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <select class="form-control"
+        data-bind="select2: { 
+              selectedOptions: selectedRow,
+              ajax: getSearchResults,
+              onSelect: onSelect,
+              onUnselect: onUnselect,
+              placeholder: placeholder,
+              allowClear: true,
+              minimumInputLength: 0,
+              closeOnSelect: true,
+              disabled: !editable,
+			  // Only change the displayed value (selected text) for CF_Plant
+              templateSelection: function(item) {
+                  if ($data.name === 'CF_Plant') {
+                      return formatDisplayPlantCF(item);
+                  }
+                  return item && item.text ? item.text : '';
+              }
+            }, 
+            attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible }" 
+        style="display: block; width: 100%;" 
+        role="combobox"></select>
+      <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldHtmlTemplate_RightAlign_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix" style="margin:0!important;margin-bottom:5px!important">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+        <!-- ko let: { aprBookingLOB: $root.customFields.firstWithProperty('name', 'CF_ApprovalTabBookingLOB')?.content()} -->
+         <!-- ko let: { quoteTyp: $root.customFields.firstWithProperty('name', 'Quote Type')?.content()} -->
+          <span data-bind="text:console.log('proposalTQuote Typeyp--',quoteTyp)"></span> 
+        <!-- ko if:name == 'Is_Quote_Approval_Exempted'  --> 
+        <label class=" text-center" data-bind="attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  >
+          <span data-bind="html: label"></span>     
+        <!-- ko if: (aprBookingLOB === "LSS") -->
+            <!-- ko if: sessionStorage.getItem("R2QFlag") != 'Yes' -->
+                <span class="tooltip-trigger" data-bind="tooltip: { title: 'When Walk-away Sell Price <=250,000 USD AND Regional Margin % > 50% AND Functional Review question RAFR1 = No AND CTFR1 = No AND CTFR2 = No AND CFR1 = No then quote is exempted from approval.', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+            <!-- /ko -->
+            <!-- ko if: sessionStorage.getItem("R2QFlag") ==='Yes' -->
+                <span class="tooltip-trigger" data-bind="tooltip: { title: 'Approval Exemption for R2Q Quote: Sell Price up to $2M and Pricing as per MPA discount or as per Recommended discount schedule then quote approval is exempted.', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+            <!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: (aprBookingLOB === "PAS") -->
+                  <span class="tooltip-trigger" data-bind="tooltip: { title: 'When Project Type=Fixed Price AND Walk-away Sell Price <= 100,000 USD AND Regional Margin % > 35% AND Functional Review question RAFR1 = No AND CTFR1 = No AND CTFR2 = No AND CFR1 = No AND CFR3 = Yes AND MFR2 = Yes. When Project Type= Time & Material Only AND Walk-away Sell Price <= 500,000 USD AND Regional Margin % > 50% AND Functional Review question RAFR1 = No AND CTFR1 = No AND CTFR2 = No AND CFR1 = No AND CFR3 = Yes AND MFR2 = Yes. When Quote has only Software in scope AND Walk-away Sell Price <= 250,000 USD AND Regional Margin % > 5% AND Excess Discount % <= 5% AND Functional Review question CTFR1 = No. Then quote is exempted from approval.', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>       
+        <!-- /ko -->
+        <!-- ko if: (aprBookingLOB === "HCP") -->
+          <!-- ko if: (quoteTyp === "Projects") -->
+		  <!-- ko if: sessionStorage.getItem("R2QFlag") != 'Yes' -->
+			<span class="tooltip-trigger" data-bind="tooltip: {title: 'if CTFR1 = No and RAFR1 = No and CFR1 = No and RAFR3 = No and Is Booking Country red listed = No and MPA Price Plan != empty and quoteDiscountPercent <=0 and BGP Qty >=1 and Payment milestone as per MPA/ standard = Yes and HoneywellHWRegionalMargin >= 30%, ThirdPartyMarkup >= 20%', placement: 'top auto'}"><a href="#"  class="sap-icon">&#xe202;</a></span>
+			<!-- /ko -->
+			<!-- ko if: sessionStorage.getItem("R2QFlag") ==='Yes' -->
+				<span class="tooltip-trigger" data-bind="tooltip: { title: 'Approval Exemption for R2Q Quote: Sell Price is less than 1M and margin exceeds 35 % then quote approval is exempted.', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+            <!-- /ko -->
+          <!-- /ko -->
+          <!-- ko if: (quoteTyp === "Parts and Spot") -->
+          <span class="tooltip-trigger" data-bind="tooltip: { title: 'if CTFR1 = No and RAFR1 = No and CFR1 = No and Is Booking Country red listed = No and MPA Price Plan != empty and quoteDiscountPercent <= 0 and BGP Qty >=1 and Payment milestone as per MPA/ standard = Yes', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+          <!-- /ko -->
+        <!-- /ko -->
+
+            </label>
+            <!-- /ko -->
+             <!-- /ko -->
+               <!-- ko ifnot:name == 'Is_Quote_Approval_Exempted' -->
+              <!-- ko if:name == 'Is_Quote_Approval_Exempted_due_to_MPA'  -->
+        <label class=" text-center" data-bind="attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  >
+          <span data-bind="html: label"></span>
+          		        <!-- ko if: (aprBookingLOB === "LSS") -->
+                <span class="tooltip-trigger" data-bind="tooltip: { title: 'When Valid MPA Price Plan applied AND Discount is as per MPA only AND Milestone Payment is as per MPA AND Negotiation Limit is zero AND CTFR1 = No AND RAFR1 = No AND CFR1 = No AND CFR5 = No AND CFR6 = NO AND Agreement Type = Master Purchase Agreement then quote does not require business approval. However, other approvals are still in place due to functional reasons like cash risk, cash flow, contract, technology, sourcing etc..', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+            <!-- /ko -->
+        <!-- ko if: (aprBookingLOB === "PAS") -->
+                <span class="tooltip-trigger" data-bind="tooltip: { title: 'When Opportunity Business Model is other than New Installation/Greenfield AND Opportunity is non-competitive (Q18) AND Valid MPA Price Plan applied AND Discount is as per MPA only AND Negotiation Limit is zero AND Milestone Payment is as per MPA AND CTFR1 = No AND RAFR1 = No AND CFR1 = No AND CFR5 = No AND CFR6 = NO AND Agreement Type = Master Purchase Agreement then quote requires only L2 business approval. However, other approvals are still in place due to functional reasons like cash risk, cash flow, contract, technology, sourcing etc..', placement: 'top auto' }"><a href="#"  class="sap-icon">&#xe202;</a></span>
+            <!-- /ko -->
+        </label>
+        <!-- /ko -->
+        <!-- ko ifnot:name == 'Is_Quote_Approval_Exempted_due_to_MPA'  -->
+			<label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }" ></label>
+		<!-- /ko -->
+      <!-- /ko -->
+      <!-- /ko -->
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+   
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <pre class="cpq-scroll  " data-bind="html: content().length > 0 ? content() : '@Translation.GetRaw("CartCustomFieldTemplates.none")', css:{ 'cf-placeholder': content().length == 0 }, attr: { id: 'readOnly_' + id }" style="text-align:right"></pre>
+     <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldAttributeTemplate_Question_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+      <sup style="margin-right:10px;" class="tooltip-trigger" data-bind="visible: label.split('#N#')[1],tooltip: { title: label.split('#N#')[1], placement: 'top auto' }"><a href="#" data-bind="visible: label.split('#N#')[1]"  class="sap-icon"><span>&#xe202;</span></a></sup>
+      <label class=" text-center" data-bind="html: label.split('#N#')[0].split('#BR#').join('<br/>'), attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+      <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+      <span style="margin-right:10px;" data-bind="visible: !label.split('#N#')[1]">&nbsp;</span>
+   
+  </div>
+  <div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+      <!-- ko if:values.length > 0 -->
+        <select class="form-control" style="width: 15%; display: inline-block;" data-bind="options: values, optionsText: 'value', value: selectedValue, enable: editable, attr: { id: $index() + '_' + id, 'aria-disabled': !editable, 'aria-required': isRequiredIndicatorVisible}"></select>
+      <!-- /ko -->
+      <!-- ko if:values.length === 0 -->
+        <select class="form-control" style="width: 15%; display: inline-block;" data-bind="enable: false, attr: { id: $index() + '_' + id}"></select>
+      <!-- /ko -->
+     <span data-bind="text: error, enable: editable" class="required" role="alert" aria-live="assertive"></span>
+  </div>
+  </div>
+</script>
+
+<script type="text/html" id="CartCustomFieldLongTextTemplate_Rule_Quote">
+  <div class="fiori3-input-group col-xs-12 clearfix">
+      <label class="col-md-12" data-bind="html: content, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }" ></label>
+  </div>
+</script>
+
+<script type="text/html" id="customFieldCheckBoxTemplate">
+<div class="fiori3-input-group col-xs-12 clearfix">
+  <div class="col-sm-5 col-md-5 col-xs-12 cust_field_bnr">
+<!-- START - CXCPQ-72412/CXCPQ-72606 - Manthan Rajguru - 11/24/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+<!-- ko ifnot: (['SC_CF_Do_not_send_Survey','SC_CF_Velocity_Renewal','SC_CF_Auto_Escalate','SC_CF_Auto_Renewal']).includes(name) -->
+<!-- END - CXCPQ-72412/CXCPQ-72606 - Manthan Rajguru - 11/24/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+  <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+  <!-- START - CXCPQ-72412/CXCPQ-72606 - Manthan Rajguru - 11/24/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+<!-- /ko -->
+<!-- END - CXCPQ-72412/CXCPQ-72606 - Manthan Rajguru - 11/24/2023 - Added condition to continue execute existing code for quote type other than service contract -->
+<!-- START - CXCPQ-72412/CXCPQ-72606 - Manthan Rajguru - 11/24/2023 - Modified class to align checkbox on booking info tab for service contract -->
+<!-- ko if: (['SC_CF_Do_not_send_Survey','SC_CF_Velocity_Renewal','SC_CF_Auto_Escalate','SC_CF_Auto_Renewal']).includes(name) -->
+  <label class=" text-center" data-bind="html: label, attr: { for: $index() + '_' + id, id: 'Label_' + $index() + '_' + id }"  ></label>
+<!-- /ko -->
+<!-- END - CXCPQ-72412/CXCPQ-72606 - Manthan Rajguru - 11/24/2023 - Modified class to align checkbox on booking info tab for service contract -->
+<!-- CXCPQ-72412/CXCPQ-72606 - Manthan Rajguru - 11/24/2023 - Added CSS to align checkbox position in line with label and resolved javascript error occuring on click of checkbox on booking info tab for service contract -->
+  <span data-bind="visible: isRequiredIndicatorVisible" class="required">*</span>
+</div>
+<div class="col-sm-7 col-md-7 col-xs-12 padding-0">
+  <input type="checkbox" data-bind="enable: editable,checked: ko.computed({
+                                                  read: function(){
+                                                  return content() == 'True' || content() == 'true';
+                                                  }, write :function(newValue){
+                                                  //value(newValue.toString());
+                                                  content(newValue.toString());
+                                                  }
+                                                  });, css: {chkBox: (['SC_CF_Do_not_send_Survey','SC_CF_Velocity_Renewal','SC_CF_Auto_Escalate','SC_CF_Auto_Renewal']).includes(name)}"/>
+                                              </div>
+</div>
+</script>
+
+<script type="text/javascript">
+    function formatDisplayPlantCF(cf) {
+        if (!cf || !cf.text) return '';
+
+        var currentValueFormat = cf.text.toString();
+
+        // Already in format:
+        if (currentValueFormat.indexOf(' - ') >= 0) {
+            return currentValueFormat;
+        }
+
+        // Not in format:
+        var newValueFormat = currentValueFormat.split(',');
+        if (newValueFormat.length < 2) {
+            return currentValueFormat;
+        }
+
+        var plantCode = newValueFormat[0].trim();
+        var plantName = newValueFormat.slice(1).join(',').trim();
+        return plantCode + ' - ' + plantName;
+    }
+</script>

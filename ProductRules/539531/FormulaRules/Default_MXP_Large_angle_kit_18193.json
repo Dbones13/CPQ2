@@ -1,0 +1,11 @@
+{
+    "id": 18193,
+    "condition": "[EQ](<*VALUE(MXP_Large_angle_kit)*>,)",
+    "name": "Default_MXP_Large_angle_kit",
+    "action": "<*SELECTVALUE(MXP_Large_angle_kit:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

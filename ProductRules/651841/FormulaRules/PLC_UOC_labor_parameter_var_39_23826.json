@@ -1,0 +1,11 @@
+{
+    "id": 23826,
+    "condition": "1",
+    "name": "PLC_UOC_labor_parameter_var_39",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_39:<* Eval(<*CTX ( Container(PLC_ControlGroup_Cont).Sum(PLC_UOC_labor_parameter_var_39) )*>)*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

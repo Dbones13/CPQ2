@@ -1,0 +1,11 @@
+{
+    "id": 25998,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(MIB Configuration Required?)*>,Yes),[EQ](<*VALUE(Server Mounting)*>,Cabinet),[OR]([EQ](<*VALUE(Interface with TPS Required?)*>,No),[EQ](<*VALUE(Interface with TPS Required?)*>,))))",
+    "name": "Server_Mounting_Msg_Rule",
+    "action": "<*DISALLOWATTRIBUTES(Server_Mounting_message)*>",
+    "description": "If Rack (Cabinet) is selected as Server Mounting, when MIB Configuration Required? is selected as Yes & Interface with TPS Required? as selected as No, then display message in the top of the section as 'For MIB, recommended Server option is Tower (Desk)'",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(MIB Configuration Required?)*>,Yes)){<*SELECTVALUE(SerC_CG_IO_Family_Type:Series-C Mark II)*>}{<*SELECTVALUE(SerC_CG_IO_Family_Type:Series C)*>}[ENDIF]

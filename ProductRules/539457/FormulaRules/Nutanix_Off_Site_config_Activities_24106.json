@@ -1,0 +1,11 @@
+{
+    "id": 24106,
+    "condition": "[AND]([OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR)),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix))",
+    "name": "Nutanix Off Site config Activities",
+    "action": "<*ASSIGNVALUE(Off Site Config activities:<* Eval(((<*VALUE(Labor_parameter_varn_2)*> * 4) + [IF]([EQ](<*VALUE(Labor_parameter_varn_20)*>,Yes)){<*VALUE(Labor_parameter_varn_14)*> * 4}{0}[ENDIF] + [IF]([AND]([IN](<*VALUE(Labor_parameter_var_1)*>,Premium Platforms Gen 3 - Performance A/B,Premium Platforms Gen 3 - 2 node cluster,Premium Platform for Nutanix),[EQ](<*VALUE(Labor_parameter_varn_20)*>,Yes))){<*VALUE(Labor_parameter_varn_15)*>*4}{0}[ENDIF] + (<*VALUE(Labor_parameter_varn_16)*>*2) + (0*4) + [IF]([LEQ](<*VALUE(Labor_parameter_varn_1)*>,12)){4}{4 + (<*VALUE(Labor_parameter_varn_1)*> - 12) * 1 }[ENDIF] + <*VALUE(Labor_parameter_var_12)*> * 2) + [IF]([LEQ](<*VALUE(Labor_parameter_varn_1)*>,12)){<*VALUE(Labor_parameter_varn_10)*>}{<*VALUE(Labor_parameter_varn_10)*> + (<*VALUE(Labor_parameter_varn_1)*> - 12) * 0.5}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

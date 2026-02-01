@@ -1,0 +1,11 @@
+{
+    "id": 19789,
+    "condition": "[EQ](<*VALUE(FIM_need_separate_segment_for_MOVs)*>,)",
+    "name": "Default_FIM_need_separate_segment_for_MOVs",
+    "action": "<*SELECTVALUE(FIM_need_separate_segment_for_MOVs:Yes)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

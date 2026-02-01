@@ -1,0 +1,11 @@
+{
+    "id": 10774,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "BOM_PLC_UOC_EP-REG100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-REG100)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-REG100, <*Eval(int((0<*VALUE(LSS_Experion_UOC_Regulatory_Compliance_Points)*>/100)+(<*VALUE(subcal_EP_REG100)*>)))*>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

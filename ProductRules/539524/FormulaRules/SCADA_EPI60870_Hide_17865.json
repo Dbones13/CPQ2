@@ -1,0 +1,11 @@
+{
+    "id": 17865,
+    "condition": "[EQ](<*CTX( Container(IEC/DNP3 Interfaces).Row(2).Column(Nodes).Get )*>,0)",
+    "name": "SCADA_EP-I60870_Hide",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(SCADA_BOM_Items:EP-I60870)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11942,
+    "condition": "[EQ](<*VALUE(FGC_2D_Fire _and_Gas_Plot_Plan_Layouts_Req)*>,)",
+    "name": "Default_Number of 2D_Fire _and_Gas_Plot_Plan/Detector_Layouts_Req",
+    "action": "<*SELECTVALUE(FGC_2D_Fire _and_Gas_Plot_Plan_Layouts_Req:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

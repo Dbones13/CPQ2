@@ -1,0 +1,11 @@
+{
+    "id": 23069,
+    "condition": "[OR]([NOT](<*ATTSEL(SerC_IO_Mounting_Solution)*>),<*IFANYVALUE(SerC_IO_Mounting_Solution:Cabinet,SerC_IO_Mounting_Solution:Mounting Panel)*>)",
+    "name": "Disallow_C300_RG_UPC_Cab_ID_Mod_Attr",
+    "action": "<*DISALLOWATTRIBUTES(C300_RG_UPC_Specify_Id_Heading,Header_06_open,Header_06_close,C300_RG_UPC_Cab_Count,C300_RG_UPC_Single_Mode_FOE_Type,C300_RG_UPC_Specify_Id_Modifier)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26217,
+    "condition": "[AND]([EQ](<*VALUE(Experion Software Release)*>,R530))\n[OR]([EQ](<*VALUE(DMS Flex Station Hardware Selection)*>,STN_STD_DELL_Tower_NonRAID),[EQ](<*VALUE(DMS Console Station Hardware Selection)*>,STN_STD_DELL_Tower_NonRAID),[EQ](<*VALUE(DMS Console Station Extension Hardware Selection)*>,STN_STD_DELL_Tower_NonRAID))",
+    "name": "DMS Remote Peripheral Hide",
+    "action": "<*DISALLOWVALUES(DMS Remote Peripheral Solution Type RPS:Extio3_Multi_Mode_Fiber,DMS Remote Peripheral Solution Type RPS:Extio3_Single_Mode_Fiber)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

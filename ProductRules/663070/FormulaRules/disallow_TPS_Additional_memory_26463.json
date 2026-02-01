@@ -1,0 +1,11 @@
+{
+    "id": 26463,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(Interface with TPS Required?)*>,Yes))",
+    "name": "disallow_TPS_Additional_memory",
+    "action": "<*SETOPTIONAL(Additional Memory_ACE_T)*><*DISALLOWATTRIBUTES(Additional Memory_ACE_T)*>\n<*SETOPTIONAL(Additional Memory (ACE-T))*><*DISALLOWATTRIBUTES(Additional Memory (ACE-T))*>",
+    "description": "",
+    "rank": "30",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

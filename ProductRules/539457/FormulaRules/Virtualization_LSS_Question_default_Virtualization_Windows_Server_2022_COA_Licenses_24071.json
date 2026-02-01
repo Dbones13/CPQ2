@@ -1,0 +1,11 @@
+{
+    "id": 24071,
+    "condition": "[EQ](<*VALUE(Virtualization_Windows_Server_2022_COA_Licenses)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_Windows_Server_2022_COA_Licenses",
+    "action": "<*ASSIGNVALUE(Virtualization_Windows_Server_2022_COA_Licenses:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

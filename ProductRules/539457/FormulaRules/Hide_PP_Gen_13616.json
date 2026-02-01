@@ -1,0 +1,11 @@
+{
+    "id": 13616,
+    "condition": "[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms Gen 3 - 2 node cluster)",
+    "name": "Hide_PP_Gen",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_Number_of_Clusters_in_the_network,Virtualization_Enter_the_starting_Cluster_Number,Virtualization_VMWare_VSAN_Dual_Socket_Host,Virtualization_vSphere_ENT_Plus_Dual_Socket_Host,Header_02_open)*>\n<*ALLOWATTRIBUTES(Virtualization_Number_of_Premium_Platforms_Gen)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14077,
+    "condition": "1",
+    "name": "Preselected",
+    "action": "[IF]([EQ](<*VALUE(LM_to_ELMM Cable Length)*>,)){<*RESETATTRIBUTE(LM_to_ELMM Cable Length)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

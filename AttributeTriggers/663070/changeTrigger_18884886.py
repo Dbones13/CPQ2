@@ -1,0 +1,6 @@
+[IF]([AND]([NEQ](<*VALUE(DMS Console Station Extension Qty 0_15)*>,0),[EQ](<*VALUE(Supervisory Network Type)*>,FTE))){<*SELECTVALUE(DMS Station nodes LAN Interface Card:FTE)*>}{}[ENDIF]
+
+<* ExecuteScript(DMS HIde Cluster Cabinet Mounting Station) *>
+[IF]([AND]([EQ](<*VALUE(Experion Software Release)*>,R530),[EQ](<*VALUE(DMS Desk Mounting Stations required)*>,Yes),[GT](<*VALUE(DMS Console Station Extension Qty 0_15)*>,0))
+){<*ALLOWVALUES(DMS Console Station Extension Hardware Selection:STN_STD_DELL_Tower_NonRAID)*>}{if_false}[ENDIF]
+[IF]([AND]([OR]([EQ](<*VALUE(Experion Software Release)*>,R511),[EQ](<*VALUE(Experion Software Release)*>,R510),[EQ](<*VALUE(Experion Software Release)*>,R520)),[OR]([GT](<*VALUE(DMS Flex Station Qty 0_60)*>,0),[GT](<*VALUE(DMS Console Station Qty 0_20)*>,0),[GT](<*VALUE(DMS Console Station Extension Qty 0_15)*>,0),[GT](<*VALUE(DMS TPS Station Qty 0_20)*>,0)))){<*ALLOWATTRIBUTES(Desk_Station_Node_message)*>}{<*DISALLOWATTRIBUTES(Desk_Station_Node_message)*>}[ENDIF]<* ExecuteScript(PS_CXDEV-7712) *><* ExecuteScript(PS_Cab_desk_defaults) *>

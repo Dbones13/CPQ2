@@ -1,0 +1,11 @@
+{
+    "id": 13856,
+    "condition": "[EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>,BMS)",
+    "name": "Total_IOs_SM_BMS",
+    "action": "<*ASSIGNVALUE(Total_IOs_SM_BMS:<* Eval(<*CTX ( Container(SM_ControlGroup_Cont).Sum(Total_IOs) )*>) *>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

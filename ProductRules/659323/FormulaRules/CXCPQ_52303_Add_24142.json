@@ -1,0 +1,11 @@
+{
+    "id": 24142,
+    "condition": "1",
+    "name": "CXCPQ_52303_Add",
+    "action": "<*ASSIGNVALUE(CXCPQ_52303:<*Eval(<*VALUE(ARO_existing_Flex_station_license)*>+<*VALUE(RESS_existing_Flex_station_license)*>+<*VALUE(ARO_new_Flex_Station_licenses_required)*>+<*VALUE(RESS_new_Flex_Station_licenses_required)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

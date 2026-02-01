@@ -1,0 +1,11 @@
+{
+    "id": 22228,
+    "condition": "[NEQ](<*VALUE(FDM_System_Group_Name)*>,)",
+    "name": "Add_MZ-SQLCL4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:MZ-SQLCL4)*><*SETATVQTY(FDM_Part_Summary:MZ-SQLCL4,<* Eval(<*VALUE(FDM_Dummy_Value)*>+<*VALUE(FDM_Sum_of_Server_Station_Quantities)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "90",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

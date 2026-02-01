@@ -1,0 +1,11 @@
+{
+    "id": 19891,
+    "condition": "[EQ](<*VALUE(SerC_CG_TID_Power_Supply_Cable_Length)*>,)",
+    "name": "Default_SerC_CG_TID_Power_Supply_Cable_Length",
+    "action": "<*SELECTVALUE(SerC_CG_TID_Power_Supply_Cable_Length:48 In)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

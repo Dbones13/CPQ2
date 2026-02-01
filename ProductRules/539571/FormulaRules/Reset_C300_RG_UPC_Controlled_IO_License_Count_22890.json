@@ -1,0 +1,11 @@
+{
+    "id": 22890,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_Controlled_IO_License_Count)*>)",
+    "name": "Reset_C300_RG_UPC_Controlled_IO_License_Count",
+    "action": "<*ALLOWATTRIBUTES(C300_RG_UPC_Controlled_IO_License_Count)*>;<*RESETATTRIBUTE(C300_RG_UPC_Controlled_IO_License_Count)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

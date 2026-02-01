@@ -1,0 +1,11 @@
+{
+    "id": 14072,
+    "condition": "[AND]([EQ](<*VALUE(Labor_Site_Activities)*>,Yes),[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR))",
+    "name": "Allow_SAT",
+    "action": "<*ALLOWATTRIBUTES(DVM_SAT_Duration_in_Days_for_DVM)*>",
+    "description": "CXCPQ-51198",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18689,
+    "condition": "[NEQ](<*VALUE(MX_CD_Control_Type)*>,Aqualizer MX)",
+    "name": "AqualizerMX section hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_Zone_spacing,MX_CD_MD_Rows,MX_CD_Evacuation,MX_CD_Water_Control_Unit_Aqualizer,MX_CD_Air_Control_Unit,MX_CD_Retraction)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

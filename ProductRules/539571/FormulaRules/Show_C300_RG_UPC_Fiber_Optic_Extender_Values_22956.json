@@ -1,0 +1,11 @@
+{
+    "id": 22956,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M),[NEQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,C300 CEE)))",
+    "name": "Show_C300_RG_UPC_Fiber_Optic_Extender_Values",
+    "action": "<*ALLOWVALUES(C300_RG_UPC_Fiber_Optic_Extender:Multi Mode x2,C300_RG_UPC_Fiber_Optic_Extender:Single Mode x2,C300_RG_UPC_Fiber_Optic_Extender:Single Mode x4)*>",
+    "description": "CXCPQ-52079",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

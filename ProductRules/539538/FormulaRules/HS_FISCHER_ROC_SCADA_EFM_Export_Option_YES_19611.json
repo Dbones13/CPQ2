@@ -1,0 +1,11 @@
+{
+    "id": 19611,
+    "condition": "[EQ](<*VALUE(Exp HS HS Fisher ROC SCADA, EFM Export Option)*>,Yes)",
+    "name": "HS FISCHER ROC SCADA, EFM Export Option YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HROCEF)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

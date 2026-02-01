@@ -1,0 +1,11 @@
+{
+    "id": 21923,
+    "condition": "[EQ](<*VALUE(FDM_Server_Specification)*>,Server)",
+    "name": "Show_ServerNodeOptions",
+    "action": "<*ALLOWVALUES(FDM_Server Node Type:SVR_PER_DELL_Rack_RAID1_XE,FDM_Server Node Type:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

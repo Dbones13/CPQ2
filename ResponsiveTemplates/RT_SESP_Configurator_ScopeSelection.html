@@ -1,0 +1,224 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko if: currentTab().name() === "Scope Selection" -->
+    <div class="row col-xs-12 swagger pt10">
+        <!-- ko foreach: attributes.filterByProperty('name' , "SC_Service_Product") -->
+        <div class="col-xs-12 col-sm-6">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+
+        <!-- ko foreach: attributes.filterByProperty('name' , "SC_Coverage") -->
+        <div class="col-xs-12 col-sm-6">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger pt10">
+																				  
+       <div class="swagger-header"><span>Select Optional Entitlements</span></div>
+        <!-- ko foreach: attributes.filterByProperty('name' , "SC_Entitlements") -->
+        <div class="col-xs-12 col-sm-6">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+      
+        <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' ,"SC_Training_Match_Contract_Value") -->
+    <div class="col-xs-12 brdr_bt config_row col-sm-12">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' ,"SC_Training_Match_Contract_Value_Percent") -->
+    <div class="col-xs-12 brdr_bt config_row col-sm-12">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+ 
+    <!-- /ko -->
+    <div class="col-xs-12 col-sm-12">
+        <!-- ko foreach: attributes.filterByProperty('name' ,"SC Other Cost Details") -->
+    	<div class="row col-xs-12 col-sm-6 pt10 bgclapy clear-padding">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    <!-- /ko -->
+ 	</div>
+    <div class="row col-xs-12 swagger pt10">
+        <div class="col-xs-12 col-sm-3">
+            <!-- ko foreach: attributes.filterByProperty('name','EnableSelection_SESP')-->
+            <div>
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+            <!--/ko-->
+        </div>
+        <div class="col-xs-12 col-sm-4"  data-bind="visible:attributes.filterByProperty('name' ,'SC_Product_Type')()[0]?.userInput() !=='Renewal'">
+            <!-- ko foreach: attributes.filterByProperty('name','One time upgrade')-->
+            <div>
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+            <!--/ko-->
+        </div>
+
+    </div>
+    <div class="row col-xs-12 swagger pt10" data-bind="visible:attributes.filterByProperty('name' ,'SC_Product_Type')()[0]?.userInput() !=='Renewal'">
+        <div id="sc-select-MSID">
+            <div class="swagger-header" onclick="toggleConfigSection(event, '#sc-select-MSID')">
+                <label class="onlytext">Select MSIDs</label>
+               <a id="sc-select-MSID-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a> 
+            </div>
+            <div id="sc-select-MSID-content" style="display:none;" class=" col-md-12 clear-padding ">
+                
+				<!-- ko foreach: attributes.filterByProperty('name' ,"SC_SESP_MultiSites") -->
+				<div class="col-xs-12 col-sm-12 bgclapy">
+					<!-- ko template: { name: $root.getAttributeTemplate } -->
+					<!-- /ko -->
+				</div>
+				<!-- /ko -->
+			 
+                <!-- ko foreach: attributes.filterByProperty('name','SC_SESP_MultiSites_Button') -->
+                <div class="col-xs-12 col-sm-12 pt10">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko foreach: attributes.filterByProperty('name','SC_MSID_Search_Field_Scope_Select') -->
+                <div class="col-xs-12 brdr_bt config_row col-sm-2">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+                <!-- ko foreach: attributes.filterByProperty('name','SC_MSID_Search_Scope_Select') -->
+                <div class="col-xs-12 col-sm-3 " style="padding-top:43px;" >
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+      
+                <!-- /ko -->
+
+              
+                <!-- ko foreach: attributes.filterByProperty('name' ,"SC_Select_MSID_Cont") -->
+                <div class="col-xs-12 col-sm-12">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+          
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <div class="row col-xs-12 swagger">
+            <div class="swagger-header"  id="sc-file-upload"onclick="toggleConfigSection(event, '#sc-file-upload')">
+               <label class="onlytext" data-bind="text : (attributes.filterByProperty('name' ,'SC_Product_Type')().length == 0 || attributes.filterByProperty('name' ,'SC_Product_Type')()[0]?.userInput() !=='Renewal')? 'File Upload' : 'VRW Information'"></label>
+           <a id="sc-file-upload-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a> 
+            </div>
+            <div id="sc-file-upload-content" style="display:none;" class=" col-md-12 clear-padding ">
+                <!-- ko if: (attributes.filterByProperty('name' ,'SC_Product_Type')().length == 0 || attributes.filterByProperty('name' ,'SC_Product_Type')()[0]?.userInput() !=='Renewal') -->
+                <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: (attributes.filterByProperty('name' ,'SC_Product_Type')().length > 0 && attributes.filterByProperty('name' ,'SC_Product_Type')()[0]?.userInput() ==='Renewal') -->
+                 <div class="col-md-12">
+				 <div class="row col-xs-6 price_exe" style="padding-top:10px;">
+    				<!-- ko foreach: attributes.filterByProperty('name' , "SC_Pricing_Escalation") -->
+    					<div class="row col-xs-12 flex"> 
+        					<!-- ko template: { name: $root.getAttributeTemplate } -->
+        					<!-- /ko -->
+    					</div>
+    				<!-- /ko -->
+                     <!-- ko foreach: attributes.filterByProperty('name' , "SESP_FxRate") -->
+    					<div class="row col-xs-12 flex"> 
+        					<!-- ko template: { name: $root.getAttributeTemplate } -->
+        					<!-- /ko -->
+    					</div>
+    				<!-- /ko -->
+    			</div>
+                <div class="row col-xs-12 price_exe">
+                    <!-- ko foreach: attributes.filterByProperty('name' , "SC_SESP_AVH_Data") -->
+    					<div class="row col-xs-6 flex price_exe">
+        					<!-- ko template: { name: $root.getAttributeTemplate } -->
+        					<!-- /ko -->
+    					</div>
+    				<!-- /ko -->
+                    <!-- ko foreach: attributes.filterByProperty('name','SC_SESP_AVH_Button') -->
+                        <div class="row col-xs-6 price_exe" style="padding-left:10px;">
+        					<!-- ko template: { name: $root.getAttributeTemplate } -->
+        					<!-- /ko -->
+    					</div>
+    				<!-- /ko -->
+    			</div>
+    			</div>
+                <!-- ko foreach: attributes.filterByProperty('name','SC_MSID_Search_Sope_Selection') -->
+                <div class="col-xs-12 col-sm-2">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+                <!-- ko foreach: attributes.filterByProperty('name','SC_MSID_Search_Sope_Selection_Button') -->
+                <div class="col-xs-12 col-sm-3" style="padding-top:43px;">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <div class="col-xs-12 col-sm-7"></div>
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko foreach: attributes.filterByProperty('name' , "SC_Models_Scope","SC_Models_Scope_Renewal") -->
+                <div
+                    data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+                <div class="col-xs-12 flex flex-end">
+                    <div style="margin-right:6px;">
+				<!-- ko foreach: attributes.filterByProperty('name' , "SC_SESPModels_DeleteButton_ZeroQty") -->
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                        <!-- /ko -->
+                    </div>
+                    <div>
+                <!-- ko foreach: attributes.filterByProperty('name' ,"SC_SESPModels_DeleteButton") -->
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                <!-- /ko -->
+                    </div>
+                </div>
+                <!-- ko foreach: attributes.filterByProperty('name' ,"SC_Invalid_Models","SC_Invalid_Models_Renewal") -->
+                <div
+                    data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+				<!-- ko foreach: attributes.filterByProperty('name' , "SC_SESPInvalid_DeleteButton") -->
+                <div class="flt_rt">
+                    <div
+                        data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                        <!-- ko template: { name: $root.getAttributeTemplate } -->
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <!-- /ko -->
+                <!-- ko foreach: attributes.filterByProperty('name' ,"SC_SESP_OutOfScope_Models") -->
+                <div
+                    data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                    <!-- ko template: { name: $root.getAttributeTemplate } -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+            </div>
+            </div>
+        
+    <!-- /ko -->
+</div>

@@ -1,0 +1,11 @@
+{
+    "id": 14488,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Tank Gauging Configuration",
+    "action": "<*ASSIGNVALUE(Tank Gauging Configuration:<* Eval([IF]([GT](<* Eval(<*VALUE(TGE_Number of Vertical Tanks with RADAR Gauge)*>+<*VALUE(TGE_Number of Vertical Tanks with SERVO Gauge)*>) *>,0)){160}{0}[ENDIF]+[IF]([GT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,0)){80}{0}[ENDIF]+[IF]([GT](<*VALUE(TGE_Number of Horztal Tank w Other(Optilevel)Gauge)*>,0)){160}{0}[ENDIF]+[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,1)){0}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,6)){300}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,11)){342}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,16)){402}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,21)){444}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,26)){467}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,31)){491}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,51)){516}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,76)){542}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,101)){570}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,151)){599}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,201)){629}{[IF]([LT](<*VALUE(TGE_Number of Horizontal Tanks w RADAR(GWR) Gauges)*>,501)){661}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF]+(<*VALUE(TGE_Number of Horztal Tank w Other(Optilevel)Gauge)*>+<*VALUE(TGE_Number of Vertical Tanks with RADAR Gauge)*>+<*VALUE(TGE_Number of Vertical Tanks with SERVO Gauge)*>)*8) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

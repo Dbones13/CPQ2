@@ -1,0 +1,11 @@
+{
+    "id": 23091,
+    "condition": "[OR]([EQ](<*VALUE(SerC_RG_Distance_for_SeriesC_Remote_Group)*>,4.0 KM),[EQ](<*VALUE(SerC_RG_Distance_for_SeriesC_Remote_Group)*>,3.0 KM),[NEQ](<*VALUE(SerC_RG_CN100/_FOE_Fiber_Type)*>,Multi Mode))",
+    "name": "Hide_message_fiber_optic",
+    "action": "<*DISALLOWATTRIBUTES(Message_Fiber_Optic)*>",
+    "description": "CXCPQ-44728",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

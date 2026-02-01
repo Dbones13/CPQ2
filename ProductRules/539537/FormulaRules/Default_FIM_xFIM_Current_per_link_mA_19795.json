@@ -1,0 +1,11 @@
+{
+    "id": 19795,
+    "condition": "[EQ](<*VALUE(FIM_xFIM_Current_per_link_mA)*>,)",
+    "name": "Default_FIM_xFIM_Current_per_link_mA",
+    "action": "<*ASSIGNVALUE(FIM_xFIM_Current_per_link_mA:160)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

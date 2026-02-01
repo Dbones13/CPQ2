@@ -1,0 +1,11 @@
+{
+    "id": 24258,
+    "condition": "[EQ](<*VALUE(Trackball(ERG Server))*>,)",
+    "name": "Default_Trackball(ERG Server)",
+    "action": "<*SELECTVALUE(Trackball(ERG Server):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

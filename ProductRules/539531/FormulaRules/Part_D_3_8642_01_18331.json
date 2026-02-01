@@ -1,0 +1,11 @@
+{
+    "id": 18331,
+    "condition": "[NEQ](<*VALUE(MXP_Remote_Scan_off_sheet_buttons_2)*>,Yes)",
+    "name": "Part_D_3_8642_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-8642-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

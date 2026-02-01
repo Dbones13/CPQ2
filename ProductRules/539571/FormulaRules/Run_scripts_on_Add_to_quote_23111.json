@@ -1,0 +1,11 @@
+{
+    "id": 23111,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScripts)*>,SCRIPT_RUN)",
+    "name": "Run_scripts on Add to quote",
+    "action": "<* ExecuteScript(PS_C300_UMC_Parts)*>\n<* ExecuteScript(C300_shipping_crate_parts_RG)*>\n<* ExecuteScript(PS_SerC_C300_RG_Parts_2)*>\n<* ExecuteScript(PS_C300_CNM_PartCals)*>\n<* ExecuteScript(PS_mcar_part_add_RG)*>\n<* ExecuteScript(PS_RG_label_parts)*>\n<* ExecuteScript(PS_SerC_C300_RG_Parts)*>\n<* ExecuteScript(SerC_PowerSupply_Parts)*>\n<*CTX( Container(Series_C_RG_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(Series_C_RG_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>\n<* ExecuteScript(PS_C300_UMC_Parts)*>\n<* ExecuteScript(C300_shipping_crate_parts_RG)*>\n<* ExecuteScript(PS_SerC_C300_RG_Parts_2)*>\n<* ExecuteScript(PS_C300_CNM_PartCals)*>\n<* ExecuteScript(PS_mcar_part_add_RG)*>\n<* ExecuteScript(PS_RG_label_parts)*>\n<* ExecuteScript(PS_SerC_C300_RG_Parts)*>\n<* ExecuteScript(SerC_PowerSupply_Parts)*>\n<* ExecuteScript(PS_ScriptOnAddtoQuote)*>\n<*CTX( Container(Series_C_RG_Part_Summary_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(Series_C_RG_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "",
+    "rank": "2000",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

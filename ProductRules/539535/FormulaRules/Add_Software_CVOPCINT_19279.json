@@ -1,0 +1,11 @@
+{
+    "id": 19279,
+    "condition": "[GT](<*VALUE(PlantCruise_OPC_Integrator)*>,0)",
+    "name": "Add_Software_CV-OPCINT",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-OPCINT)*><*SETATVQTY(PlantCruise_Part_Summary:CV-OPCINT,<*VALUE(PlantCruise_OPC_Integrator)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

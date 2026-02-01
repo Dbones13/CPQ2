@@ -1,0 +1,11 @@
+{
+    "id": 15081,
+    "condition": "[NEQ](<*VALUE(MXP_Platform_Type)*>,Physical)",
+    "name": "Show_Server_type",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Server_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

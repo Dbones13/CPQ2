@@ -1,0 +1,11 @@
+{
+    "id": 23108,
+    "condition": "[GT](<*CTX ( Container(Series_C_RG_Part_Summary_Cont).Rows.GetCount )*>,0)",
+    "name": "C300_Controller_and_IO_Cabinet_Sum",
+    "action": "<*ASSIGNVALUE(C300_Controller_and_IO_Cabinet_Sum:<* Eval(0<*GETATVQTY(Series_C_RG_Part_Summary:CC-CBDS01)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:CC-CBDD01)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:51454314-100)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:51454314-200)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:51454314-300)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:CC-CASS11)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:CC-CADS11)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:51454314-600)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:51454314-500)*>+0<*GETATVQTY(Series_C_RG_Part_Summary:51454314-400)*>) *>)*>",
+    "description": "",
+    "rank": "1001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

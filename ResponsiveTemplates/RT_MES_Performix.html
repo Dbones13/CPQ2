@@ -1,0 +1,129 @@
+<div class="attributes fiori3-attributes flex flex-between" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko if: currentTab().name() === "Scope Selection" -->
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_Service_Product") -->
+    <div class="col-xs-12 col-sm-5 flex">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Entitlements</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_Optional_Entitlement") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <div class="col-xs-12 col-sm-6"></div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+    <div id="sc-file-upload">
+<div class="swagger-header" onclick="toggleConfigSection(event, '#sc-file-upload')">
+          <span>File Upload</span>
+          <a id="sc-file-upload-href" href="#" class="swagger-toggle swagger-toggle-rotated">&#xe066;</a>
+        </div>
+    <div id="sc-file-upload-content" style = "display:none;" >
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+    <div class="row col-xs-6 price_exe" style="padding-top:20px;">
+    	<!-- ko foreach: attributes.filterByProperty('name' , "SC_Pricing_Escalation") -->
+    	<div class="row col-xs-12 flex" style="padding-left:8px;">
+        	<!-- ko template: { name: $root.getAttributeTemplate } -->
+        	<!-- /ko -->
+    	</div>
+    	<!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_Models_Scope","SC_MES_RC_Models_Scope") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_DeleteParts") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_Invalid_Models","SC_MES_RC_Invalid_Models") -->
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+	<div class = "col-xs-12 col-sm-12">
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_DeleteInvalidParts") -->
+        <div style="position: absolute; bottom:0;right:15px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+        </div>
+    </div>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: currentTab().name() === "Scope Summary" -->
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Service Product</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_ServiceProduct") -->
+    <div class="col-xs-12 col-sm-12">
+         <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Entitlements</span></div>
+    <!-- ko foreach: attributes.filterByProperty('name' , "SC_MES_Entitlements") -->
+    <div class="col-xs-12 col-sm-6">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+    <div class="col-xs-12 col-sm-6"></div>
+    <!-- /ko -->
+    </div>
+    <div class="row col-xs-12 swagger">
+        <div class="row col-xs-12 swagger-header"><span>Pricing Summary</span></div>
+        <!-- ko foreach: attributes.filterByProperty('name','ComparisonSummary') -->
+        	<div class="col-xs-12 col-sm-12">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+        	</div>
+        <!-- /ko -->
+        <!-- ko foreach: attributes.filterByProperty('name','SC_MES_RC_Selection') -->
+        <div class = "col-xs-12 col-sm-12">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+         </div>
+    <!-- /ko -->
+        <!-- ko foreach: attributes.filterByProperty('name','SC_MES_Search_Model') -->
+        <div class = "col-xs-12 col-sm-2">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+         </div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name','SC_MES_Search_Model_Button') -->
+        <div class = "col-xs-12 col-sm-3" style="padding-top:43px;">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+        </div>
+        <div class = "col-xs-12 col-sm-7"></div>
+    <!-- /ko -->
+    <!-- ko foreach: attributes.filterByProperty('name' ,"SC_MES_Models","SC_MES_RC_Models") -->
+        <div class="col-xs-12 col-sm-12">
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+    <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    </div>

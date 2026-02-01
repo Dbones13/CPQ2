@@ -1,0 +1,11 @@
+{
+    "id": 13072,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide Contract Dates",
+    "action": "<*DISALLOWATTRIBUTES(ContractStartDate_EnabledService,ContractEndDate_EnabledService,DurationOfPlan_enabledServices)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22412,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID1_RUG),[NEQ](<*VALUE(ESDC_Node_Supplier_Server)*>,Honeywell),[NEQ](<*VALUE(ESDC_Trusted_Platform_Module)*>,Yes))",
+    "name": "Part_D_MZ_PCIS02",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-PCIS02)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

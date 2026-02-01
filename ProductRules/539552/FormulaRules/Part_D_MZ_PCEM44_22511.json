@@ -1,0 +1,11 @@
+{
+    "id": 22511,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID5),[NEQ](<*VALUE(ESDC_Node_Supplier_Server)*>,Honeywell),[NEQ](<*VALUE(ESDC_Additional_Memory)*>,16GB))",
+    "name": "Part_D_MZ_PCEM44",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-PCEM44)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

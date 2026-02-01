@@ -1,0 +1,11 @@
+{
+    "id": 19017,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Aqualizer MX),[NEQ](<*VALUE(MX_CD_Zone_spacing)*>,50mm),[NEQ](<*VALUE(MX_CD_MD_Rows)*>,4),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0))",
+    "name": "CD_Part_Dis_9580_64_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9580-64-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

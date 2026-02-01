@@ -1,0 +1,11 @@
+{
+    "id": 25860,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Orion_3P_Base_Unit_Left)*>,0),<*ISSELECTED(Node Supplier.Honeywell)*>))",
+    "name": "MP-OCEXT1-100_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCEXT1-100)*><* DoResetAtt *>",
+    "description": "CXCPQ-38217",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

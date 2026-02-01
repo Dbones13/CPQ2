@@ -1,0 +1,11 @@
+{
+    "id": 20400,
+    "condition": "[EQ](<*VALUE(SS_Flex_Station_Qty_Desk)*>,)",
+    "name": "Default_SS_Flex_Station_Qty_Desk",
+    "action": "<*ASSIGNVALUE(SS_Flex_Station_Qty_Desk:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

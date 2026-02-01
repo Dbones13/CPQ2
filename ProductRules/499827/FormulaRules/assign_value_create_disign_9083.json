@@ -1,0 +1,11 @@
+{
+    "id": 9083,
+    "condition": "[EQ](<*VALUE(Crate Design)*>,)",
+    "name": "assign value create disign",
+    "action": "<*SELECTVALUE(Crate Design:Standard)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "05/10/24",
+    "modifiedBy": "Shiva Kumar Gurram"
+}

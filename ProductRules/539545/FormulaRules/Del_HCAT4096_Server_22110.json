@@ -1,0 +1,11 @@
+{
+    "id": 22110,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Server),[GEQ](<* Eval(<*VALUE(FDM Audit Trail Blocks (0-16000))*> - (INT((<*VALUE(FDM Audit Trail Blocks (0-16000))*> + 15)/16000))*16000 - (INT((<*VALUE(FDM Audit Trail Blocks (0-16000))*> - (INT((<*VALUE(FDM Audit Trail Blocks (0-16000))*> + 15)/16000))*16000 + 15)/8192))*8192 + 15) *>,4096)))",
+    "name": "Del_HC-AT4096_Server",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-AT4096)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

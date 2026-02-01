@@ -1,0 +1,11 @@
+{
+    "id": 26347,
+    "condition": "1",
+    "name": "assign Port 48 Network Switch",
+    "action": "<*ASSIGNVALUE(Port 48 Network Switch:<*EVAL(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SI-920LN8)*>+<*VALUE(Port 48 Network Switchcluster)*>)*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

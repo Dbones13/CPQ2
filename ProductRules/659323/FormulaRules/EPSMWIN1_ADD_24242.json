@@ -1,0 +1,11 @@
+{
+    "id": 24242,
+    "condition": "[OR]([GT](<*VALUE(ARO_Stations_require_Multiwindow_support)*>,0),[GT](<*VALUE(RESS_Stations_require_Multiwindow_support)*>,0))",
+    "name": "EP-SMWIN1_ADD",
+    "action": "[IF]([AND]([EQ](<*VALUE(ARO_System_Required)*>,Yes),[EQ](<*VALUE(RESS_System_Required)*>,Yes))){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-SMWIN1)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-SMWIN1, <*Eval(<*VALUE(ARO_Stations_require_Multiwindow_support)*>+<*VALUE(RESS_Stations_require_Multiwindow_support)*>) *>.)*><* DoResetAtt *>}{[IF]([EQ](<*VALUE(ARO_System_Required)*>,Yes)){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-SMWIN1)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-SMWIN1, <*Eval(<*VALUE(ARO_Stations_require_Multiwindow_support)*>) *>.)*><* DoResetAtt *>}{[IF]([EQ](<*VALUE(RESS_System_Required)*>,Yes)){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-SMWIN1)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-SMWIN1, <*Eval(<*VALUE(RESS_Stations_require_Multiwindow_support)*>) *>.)*><* DoResetAtt *>}{0}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "cxcpq-50112",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15127,
+    "condition": "[OR]([EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,QCS CD),[EQ](<*VALUE(MXP_What_QCS_System_is_required)*>,Standalone CD))",
+    "name": "Show_MXP_Scanner_Group",
+    "action": "<*CTX( Container(MXP_Scanner_group).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(CE_Add_System_Rows)*>\n<*DISALLOWATTRIBUTES(Header_07_open)*>\n<*DISALLOWATTRIBUTES(Header_07_close)*>\n<*DISALLOWATTRIBUTES(MXP_Scanner_Group_Count)*>\n<*DISALLOWATTRIBUTES(MXP_Scanner_group)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

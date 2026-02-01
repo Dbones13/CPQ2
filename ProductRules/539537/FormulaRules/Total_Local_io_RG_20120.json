@@ -1,0 +1,11 @@
+{
+    "id": 20120,
+    "condition": "1",
+    "name": "Total Local io RG",
+    "action": "<*ASSIGNVALUE(Total SeriesC RG Local Io:<* Eval(0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(AI) )*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(AO) )*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(DI) )*>+0<*CTX ( Container(Series_C_Remote_Groups_Cont).Sum(DO) )*>) *>)*>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

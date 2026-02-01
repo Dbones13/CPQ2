@@ -1,0 +1,11 @@
+{
+    "id": 25613,
+    "condition": "[AND]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion Enterprise System),[LIKE](<*VALUE(CE_Selected_Products)*>,ControlEdge UOC System))",
+    "name": "allow_ent_uoc_section",
+    "action": "<*ALLOWATTRIBUTES(Experion UOC Analog Points (0-61440),Experion UOC Batch Points (0-61440),Experion UOC Composite Device License (0-61440),Experion UOC Digital Points (0-61440),Experion UOC Regulatory Compliance Points (0-61440))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

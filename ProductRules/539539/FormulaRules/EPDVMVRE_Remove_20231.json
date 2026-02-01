@@ -1,0 +1,11 @@
+{
+    "id": 20231,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Video_Recording_Encryption)*>,Yes))",
+    "name": "EP-DVMVRE_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMVRE)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

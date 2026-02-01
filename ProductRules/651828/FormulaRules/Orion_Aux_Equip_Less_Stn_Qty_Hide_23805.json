@@ -1,0 +1,11 @@
+{
+    "id": 23805,
+    "condition": "[EQ](<* Eval(<*VALUE(Orion Console Left Auxiliary Equipment Unit (0-40))*>) *>,<* Eval(<*VALUE(Orion_2P_Base_Unit_Left)*> + <*VALUE(Orion_3P_Base_Unit_Left)*> ) *>)",
+    "name": "Orion_Aux_Equip_Less_Stn_Qty_Hide",
+    "action": "<*DISALLOWATTRIBUTES(Orion_Aux_Qty_Less_Stn_Qty)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

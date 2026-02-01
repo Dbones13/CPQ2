@@ -1,0 +1,11 @@
+{
+    "id": 26508,
+    "condition": "[OR]([EQ](<*VALUE(Backbone Switch Required)*>,No),[EQ](<*VALUE(Tree A 10m cable (0-1000))*>,0))",
+    "name": "Hide_51305482-110",
+    "action": "{<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51305482-110)*><* DoResetAtt *>}[ENDIF]",
+    "description": "CXCPQ-38351",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

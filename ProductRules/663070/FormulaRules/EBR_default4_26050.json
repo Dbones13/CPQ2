@@ -1,0 +1,11 @@
+{
+    "id": 26050,
+    "condition": "[EQ](<*VALUE(Experion Backup & Restore (Mobile Terminal Server))*>,)",
+    "name": "EBR_default4",
+    "action": "<*SELECTVALUE(Experion Backup & Restore (Mobile Terminal Server):No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

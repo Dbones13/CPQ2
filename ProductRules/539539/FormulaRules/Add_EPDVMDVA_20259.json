@@ -1,0 +1,11 @@
+{
+    "id": 20259,
+    "condition": "[EQ](<*VALUE(DVM_Distributed_Video_Architecture)*>,Yes)",
+    "name": "Add_EP-DVMDVA",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMDVA)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMDVA, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45722",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

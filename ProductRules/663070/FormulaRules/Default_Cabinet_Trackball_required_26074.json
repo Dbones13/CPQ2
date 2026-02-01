@@ -1,0 +1,11 @@
+{
+    "id": 26074,
+    "condition": "[EQ](<*VALUE(Cabinet_Trackball_required)*>,)",
+    "name": "Default_Cabinet_Trackball_required",
+    "action": "<*SELECTVALUE(Cabinet_Trackball_required:No)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

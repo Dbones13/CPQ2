@@ -1,0 +1,11 @@
+{
+    "id": 22887,
+    "condition": "[NOT](<*ATTSEL(C300_RG_UPC_Cab_Mat_Type)*>)",
+    "name": "Reset_C300_RG_UPC_Cab_Mat_Type",
+    "action": "<*RESETATTRIBUTE(C300_RG_UPC_Cab_Mat_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

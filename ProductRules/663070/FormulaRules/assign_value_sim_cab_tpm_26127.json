@@ -1,0 +1,11 @@
+{
+    "id": 26127,
+    "condition": "[EQ](<*VALUE(Ent_sim_cab_tpm)*>,)",
+    "name": "assign value sim_cab_tpm",
+    "action": "<*SELECTVALUE(Ent_sim_cab_tpm:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

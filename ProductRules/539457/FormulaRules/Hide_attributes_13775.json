@@ -1,0 +1,11 @@
+{
+    "id": 13775,
+    "condition": "[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers)",
+    "name": "Hide attributes",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_Will_Honeywell_perform_equipment)*>",
+    "description": "Hide Will Honeywell perform equipment installation activities?  if \"Platform Options\" = 'Premium Platforms-Dell Servers'",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

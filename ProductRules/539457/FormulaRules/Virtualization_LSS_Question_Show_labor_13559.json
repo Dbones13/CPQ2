@@ -1,0 +1,11 @@
+{
+    "id": 13559,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW))",
+    "name": "Virtualization_LSS_Question_Show_labor",
+    "action": "<*ALLOWATTRIBUTES(Virtualization_Adapter_for_Redundant_FTE_Networks,Header_04_open,Virtualization_VMWare_Essentials_Plus_Licenses,Virtualization_vSphere_Single_Socket_Host_Licenses,Virtualization_VSAN_Single_Socket_Host_Licenses,Virtualization_VMWare_vSphere_Plus_Single_Socket,Virtualization_VMWare_vSphere_Dual_Socket,Virtualization_VMWare_VSAN_Dual_Socket_Host,Virtualization_vSphere_ENT_Plus_Dual_Socket_Host,Virtualization_VMWare_vSphere_Foundation_Licenses,Virtualization_VMWare_vCenter_Standard_Licenses,Virtualization_Experion_Virtualization_Server_CAL,Virtualization_Experion_Virtualization_Client_CAL,Virtualization_FDM_Virtualization_Server_CAL,Virtualization_FDM_Virtualization_Client_CAL,Virtualization_Microsoft_SQL_Client_Access_Lic,Header_04_close,ATTCON_03_open,ATTCON_03_close,Header_06_open,Virtualization_Third_party_items,Header_06_close)*>\n[IF]([AND]([EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes),[EQ](<*CTX ( Quote.CustomField(IsR2QRequest) )*>,Yes))){<*ALLOWATTRIBUTES(Virtualization_Windows_RDS_CAL)*>}{<*DISALLOWATTRIBUTES(Virtualization_Windows_RDS_CAL)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Lahu Giri"
+}

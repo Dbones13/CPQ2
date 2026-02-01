@@ -1,0 +1,11 @@
+{
+    "id": 20253,
+    "condition": "[EQ](<*VALUE(DVM_Matrox_Encoder_Adapter)*>,Yes)",
+    "name": "Add_EP-DVMMEA",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(DVM_Sys_Grp_Part_Summary:EP-DVMMEA)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMMEA, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-45744",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 3338,
+    "condition": "1",
+    "name": "HideNewValue",
+    "action": "[IF]([EQ](<*VALUE(New_Expansion)*>,New)){<*CTX( Container(CE_General_Inputs_Cont).Column(CE_Cutover).SetPermission(Hidden) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_System_Asset).SetPermission(Hidden) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_System_Number).SetPermission(Hidden) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_EBR_Media).SetPermission(Hidden) )*>}{<*CTX( Container(CE_General_Inputs_Cont).Column(CE_Cutover).SetPermission(Editable) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_System_Asset).SetPermission(Editable) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_System_Number).SetPermission(Editable) )*><*CTX( Container(CE_General_Inputs_Cont).Column(CE_EBR_Media).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

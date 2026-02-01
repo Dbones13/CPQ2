@@ -1,0 +1,11 @@
+{
+    "id": 18187,
+    "condition": "[EQ](<*VALUE(MXP_Remote_PMP)*>,)",
+    "name": "Default_MXP_Remote_PMP",
+    "action": "<*SELECTVALUE(MXP_Remote_PMP:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

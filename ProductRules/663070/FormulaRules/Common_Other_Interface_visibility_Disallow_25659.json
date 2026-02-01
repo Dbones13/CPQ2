@@ -1,0 +1,11 @@
+{
+    "id": 25659,
+    "condition": "[EQ](<*VALUE(Experion Software Release)*>,R510)",
+    "name": "Common Other Interface visibility Disallow",
+    "action": "<*SETOPTIONAL(Experion node to be installed on each Panel PC,How many Experion Panel PCs required? 0_30)*><*DISALLOWATTRIBUTES(Experion node to be installed on each Panel PC,How many Experion Panel PCs required? 0_30,Common Other Interface,ATTCON_23_open,ATTCON_23_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

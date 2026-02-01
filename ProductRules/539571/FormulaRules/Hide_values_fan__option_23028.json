@@ -1,0 +1,11 @@
+{
+    "id": 23028,
+    "condition": "[IN](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II,Turbomachinery)",
+    "name": "Hide_values_fan _option",
+    "action": "<*DISALLOWVALUES(SerC_RG_Fan_Option:24V Assembly,SerC_RG_Fan_Option:Grille,SerC_RG_Fan_Option:TopCoverPlate)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

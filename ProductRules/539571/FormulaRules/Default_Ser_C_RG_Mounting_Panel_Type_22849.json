@@ -1,0 +1,11 @@
+{
+    "id": 22849,
+    "condition": "[EQ](<*VALUE(Ser_C_RG_Mounting_Panel_Type)*>,)",
+    "name": "Default_Ser_C_RG_Mounting_Panel_Type",
+    "action": "<*SELECTVALUE(Ser_C_RG_Mounting_Panel_Type:3 Column Wide Full Size)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

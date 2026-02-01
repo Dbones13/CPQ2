@@ -1,0 +1,11 @@
+{
+    "id": 23896,
+    "condition": "[NOT]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0))",
+    "name": "Hide Web Portal",
+    "action": "<*DISALLOWATTRIBUTES(Terminal_Web_Portal_required?)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

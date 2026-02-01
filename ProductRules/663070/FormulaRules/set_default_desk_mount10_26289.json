@@ -1,0 +1,11 @@
+{
+    "id": 26289,
+    "condition": "[EQ](<*VALUE(Display Supplier_Server)*>,)",
+    "name": "set_default_desk_mount10",
+    "action": "<*RESETVALUE(Display Supplier_Server:Honewell)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

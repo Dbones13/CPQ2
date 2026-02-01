@@ -1,0 +1,11 @@
+{
+    "id": 26680,
+    "condition": "<*ISSELECTED(Default Switch.SW_L2_RT_ARUBA_24PT)*>\n",
+    "name": "Show_SH_2930R4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:SH-2930R4)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:SH-2930R4, 2)*><* DoResetAtt *>\n",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

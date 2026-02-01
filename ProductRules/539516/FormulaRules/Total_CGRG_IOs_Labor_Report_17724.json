@@ -1,0 +1,11 @@
+{
+    "id": 17724,
+    "condition": "1",
+    "name": "Total_CGRG_IOs_Labor_Report",
+    "action": "<*ASSIGNVALUE(Total_IOs:<* Eval(0<*VALUE(SMCG_Total_AI_AO_DI_DO)*>+0<*CTX ( Container(SM_RemoteGroup_Cont).Sum(SMRG_Total_AI_AO_DI_DO) )*>) *>)*>",
+    "description": "labor report task",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

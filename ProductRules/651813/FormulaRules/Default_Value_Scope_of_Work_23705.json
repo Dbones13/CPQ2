@@ -1,0 +1,11 @@
+{
+    "id": 23705,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Scope of Work).GetDisplayValue )*>,)",
+    "name": "Default_Value_Scope of Work",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Scope of Work).Set(Yes) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/09/25",
+    "modifiedBy": "Narasimhan Chakravarthy"
+}

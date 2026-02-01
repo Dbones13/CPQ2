@@ -1,0 +1,11 @@
+{
+    "id": 24096,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_Attribute_for_Contract_Renewal",
+    "action": "<*DISALLOWATTRIBUTES(SC_GN_AT_Model_Search,SC_GN_AT_Model_Search_Button,SC_GN_AT_Models_Cont,SC_GN_AT_Models_Scope_Cont,SC_GN_AT_Invalid_Cont)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

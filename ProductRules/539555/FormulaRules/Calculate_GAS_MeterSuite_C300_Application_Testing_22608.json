@@ -1,0 +1,11 @@
+{
+    "id": 22608,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate GAS MeterSuite C300 Application Testing",
+    "action": "<*ASSIGNVALUE(GAS MeterSuite C300 Application Testing:<* Eval(<*VALUE(Gas MeterSuite C300 Quantity Factor)*>*10) *>)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

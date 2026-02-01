@@ -1,0 +1,11 @@
+{
+    "id": 12153,
+    "condition": "[EQ](<*VALUE(High Severity Scenarios in PHA Report (1-99999))*>,)",
+    "name": "Default value of High Severity Scenarios in PHA Report (1-99999)",
+    "action": "<*ASSIGNVALUE(High Severity Scenarios in PHA Report (1-99999):1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

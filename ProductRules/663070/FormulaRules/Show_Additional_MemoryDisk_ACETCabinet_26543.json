@@ -1,0 +1,11 @@
+{
+    "id": 26543,
+    "condition": "[EQ](<*VALUE(Hardware Design Selection)*>,SVR_PER_DELL_Rack_RAID5)",
+    "name": "Show_Additional_MemoryDisk_ACETCabinet",
+    "action": "[IF]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes,No,)){<*SETOPTIONAL(Additional Memory_ACE_T)*><*DISALLOWATTRIBUTES(Additional Memory_ACE_T)*>}{<*ALLOWVALUES(Additional Memory_ACE_T:16GB)*>}[ENDIF]",
+    "description": "ACE-T Node in Cabinet Preference\nCXCPQ-42837",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

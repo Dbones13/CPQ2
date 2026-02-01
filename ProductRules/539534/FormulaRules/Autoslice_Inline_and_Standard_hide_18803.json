@@ -1,0 +1,11 @@
+{
+    "id": 18803,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,AutoSlice),[AND]([NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line),[NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60L Standard)))",
+    "name": "Autoslice Inline and Standard hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_Clamping_Assembly,MX_CD_Slice_Lip,MX_CD_Spindle_Rods)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19927,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Show_SerC_CG_DO_Relay_Extension_Cable_Length",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_DO_Relay_Extension_Cable_Length)*>",
+    "description": "CXCPQ-44672",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

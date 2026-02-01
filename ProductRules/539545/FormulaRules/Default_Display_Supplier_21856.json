@@ -1,0 +1,11 @@
+{
+    "id": 21856,
+    "condition": "[EQ](<*VALUE(FDM_Display Supplier)*>,)",
+    "name": "Default_Display Supplier",
+    "action": "<*SELECTVALUE(FDM_Display Supplier:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25854,
+    "condition": "[AND]([GT](<*VALUE(Orion_3P_Base_Unit_No_Left_Right)*>,0),<*ISSELECTED(Node Supplier.Honeywell)*>)",
+    "name": "MP-OCEXT1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-OCEXT1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCEXT1, <*VALUE(Orion_3P_Base_Unit_No_Left_Right)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-38101",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

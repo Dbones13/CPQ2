@@ -1,0 +1,11 @@
+{
+    "id": 26454,
+    "condition": "1",
+    "name": "Total_Number_of_Stations",
+    "action": "<*ASSIGNVALUE(Additional_Stations:<* Eval(0<*VALUE(labor_parameter_sta1)*>+0<*VALUE(Additional Stations)*>)*>)*>",
+    "description": "Labor report Task",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18797,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Calcoil PRO),[EQ](<*VALUE(MX_CD_Temperature)*>,Regular Temperature),[EQ](<*VALUE(MX_CD_CalcoilPRO_Type)*>,Off Machine Power modules))",
+    "name": "Calcoil PRO Temperature On Machine",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_kW)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

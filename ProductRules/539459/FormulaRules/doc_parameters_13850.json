@@ -1,0 +1,11 @@
+{
+    "id": 13850,
+    "condition": "1",
+    "name": "doc_parameters",
+    "action": "<*ASSIGNVALUE(doc_parameter_io_cabinets:<*CTX ( Container(SM_ControlGroup_Cont).Sum(doc_parameter_io_cabinets) )*>)*><*ASSIGNVALUE(doc_parameter_umc:<*CTX ( Container(SM_ControlGroup_Cont).Sum(doc_parameter_umc) )*>)*><*ASSIGNVALUE(doc_parameter_usc_32_points:<*CTX ( Container(SM_ControlGroup_Cont).Sum(doc_parameter_usc_32_points) )*>)*><*ASSIGNVALUE(doc_parameter_usc_64_points:<*CTX ( Container(SM_ControlGroup_Cont).Sum(doc_parameter_usc_64_points) )*>)*><*ASSIGNVALUE(doc_parameter_usc_96_points:<*CTX ( Container(SM_ControlGroup_Cont).Sum(doc_parameter_usc_96_points) )*>)*><*ASSIGNVALUE(doc_parameter_third_party_marsh_cabinet:<*CTX ( Container(SM_Labor_Cont).Row(1).Column(Marshalling_cabinet_count).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

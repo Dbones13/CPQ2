@@ -1,0 +1,11 @@
+{
+    "id": 3333,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,Expansion)",
+    "name": "assign value exp_msid",
+    "action": "<*ASSIGNVALUE(exp_msid:<*CTX ( Container(CE_General_Inputs_Cont).Row(1).Column(CE_System_Asset).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

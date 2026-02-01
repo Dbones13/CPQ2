@@ -1,0 +1,11 @@
+{
+    "id": 4789,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Basis Weight))",
+    "name": "Measurement_Basis Weight_5",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13593,
+    "condition": "[EQ](<*VALUE(Virtualization_Microsoft_SQL_Client_Access_Lic)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_Microsoft_SQL_Client_Access_Lic",
+    "action": "<*ASSIGNVALUE(Virtualization_Microsoft_SQL_Client_Access_Lic:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

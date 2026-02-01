@@ -1,0 +1,11 @@
+{
+    "id": 15167,
+    "condition": "[EQ](<*VALUE(MXP_OPC_Ethernet_Link)*>,Yes)",
+    "name": "Part_A_3_HCI",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-HCI)*><*SETATVQTY(MXP_Bom_Parts:3-HCI,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

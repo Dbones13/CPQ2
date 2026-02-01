@@ -1,0 +1,11 @@
+{
+    "id": 24210,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[NEQ](<*VALUE(RESS_System_Required)*>,Yes))",
+    "name": "Hide_RESS_Native_window_accessibility",
+    "action": "<*SETOPTIONAL(RESS_Native_window_accessibility)*><*DISALLOWATTRIBUTES(RESS_Native_window_accessibility)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

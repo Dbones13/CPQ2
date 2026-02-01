@@ -1,0 +1,11 @@
+{
+    "id": 14620,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "MSC HMI Fuction Qunatity Factor",
+    "action": "<*ASSIGNVALUE(MSC HMI Fuction Qunatity Factor:<* Eval(4+([IF]([EQ](<*VALUE(MSC_Total_Number_Of_Gas_Pay_Meter_Streams)*>,1)){0}{<* Eval((0.5*<*VALUE(MSC_Number_Of_Gas_Metering_Systems)*>0)+(2*0<*VALUE(MSC_Number_Of_Different_Gas_Meter_Types)*>)) *>}[ENDIF])+0.5*0<*VALUE(MSC_Total_Number_Of_Gas_Pay_Meter_Streams)*>+0.5*<*VALUE(MSC_Number_Of_Gas_Systems_With_Master_Metering)*>0+0.25*0<*VALUE(MSC_Number_Of_Gas_Systems_With_Check_Metering)*>+0.2*0<*VALUE(MSC_Number_Of_Gas_Meters_With_Meter_Diagnostics)*>+0.25*0<*VALUE(MSC_Total_Number_Of_Gas_Chromatographs)*>+0.05*0<*VALUE(MSC_Total_Number_Of_Other_Gas_Analysers)*>+0.05*0<*VALUE(MSC_Total_Number_Of_Gas_Grab_Samplers)*>+([IF]([EQ](<*VALUE(MSC_Total_Number_Of_Liquid_Pay_Meter_Streams)*>,1)){0}{<* Eval((0.5*0<*VALUE(MSC_Number_Of_Liquid_Metering_Systems)*>)+(2*0<*VALUE(MSC_Number_Of_Different_Liquid_Meter_Types)*>)) *>}[ENDIF])+0.5*<*VALUE(MSC_Total_Number_Of_Liquid_Pay_Meter_Streams)*>0+0.5*0<*VALUE(MSC_Number_Of_Liquid_Systems_With_Meter_Provers)*>+0.5*0<*VALUE(MSC_Number_Of_Liquid_Systems_With_Master_Metering)*>+0.25*0<*VALUE(MSC_Number_Of_Liquid_Systems_With_Check_Metering)*>+0.2*0<*VALUE(MSC_Number_Of_Liquid_Meters_With_Meter_Diagnostics)*>+0.1*0<*VALUE(MSC_Number_Of_Fastloops)*>+0.1*0<*VALUE(MSC_Number_Of_Density_Meters)*>+0.05*0<*VALUE(MSC_Number_Of_Analysers)*>+0.05*<*VALUE(MSC_Number_Of_Fastloop_Pumps)*>+0.1*0<*VALUE(MSC_Total_Number_Of_Liquid_Grab_Samplers)*>+0.3*0<*VALUE(MSC_Number_Of_Systems_With_Batch_Reports)*>+0.3*0<*VALUE(MSC_Number_Of_Period_Reports_Per_Liquid_System)*>*0<*VALUE(MSC_Number_Of_Liquid_Metering_Systems)*>+0.3*0<*VALUE(MSC_Number_Of_Period_Reports_Per_Gas_System)*>*0<*VALUE(MSC_Number_Of_Gas_Metering_Systems)*>) *>)*>",
+    "description": "QF",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

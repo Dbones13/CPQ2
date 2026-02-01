@@ -1,0 +1,11 @@
+{
+    "id": 20768,
+    "condition": "[AND]([NEQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[NOT]([AND]([EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R530))))",
+    "name": "Part_D_EP_COAS22_4",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Simulation_Bom_parts:EP-COAS22)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

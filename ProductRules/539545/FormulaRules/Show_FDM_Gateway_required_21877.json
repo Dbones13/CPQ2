@@ -1,0 +1,11 @@
+{
+    "id": 21877,
+    "condition": "[EQ](<*VALUE(FDM_ FDM_Gateway_required)*>,Yes)",
+    "name": "Show_FDM_Gateway_required",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_07_close,ATTCON_07_open,FDM_Additional_Hard_Disk(Server),FDM_Display_Size(Server),FDM_Display_Supplier(Server),FDM_Displays_(Server),FDM_FDM_Gateway_PC_Qty(0-6),FDM_Node_Supplier(Server),FDM_Server_Node_Type,FDM_Trusted_Platform_Module(TPM),Header_07_close,Header_07_open)*>\n<*SETREQUIRED(FDM_Additional_Hard_Disk(Server),FDM_Additional_Memory(Server Disk),FDM_Display_Size(Server),FDM_Display_Supplier(Server),FDM_Displays_(Server),FDM_FDM_Gateway_PC_Qty(0-6),FDM_Node_Supplier(Server),FDM_Server_Node_Type,FDM_Trusted_Platform_Module(TPM))*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

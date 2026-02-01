@@ -1,0 +1,11 @@
+{
+    "id": 932,
+    "condition": "[EQ](<*CTX( Container(C200_Migration_Scenario_Cont).Row(1).Column(C200_Select_the_Migration_Scenario).GetDisplayValue )*>,C200 to ControlEdge UOC)",
+    "name": "C200_Third_Party_Row4",
+    "action": "<*CTX( Container(C200_Third_Party_Items_Cont).Row(4).Column(WriteIn).Set(3rd Party Hardware - Cabinet <i class='fa fa-info-circle' style='color: #106cc6' title=\"Only add third party cabinets if there is not enough space to install the new racks. Cabinets calculated in Parts Summary include 4 racks per side. This must be procured locally through sourcing department - quote currency\" ></i>) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "24/01/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

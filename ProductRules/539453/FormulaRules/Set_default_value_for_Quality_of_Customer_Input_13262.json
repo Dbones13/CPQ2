@@ -1,0 +1,11 @@
+{
+    "id": 13262,
+    "condition": "[EQ](<*VALUE(Quality of Customer Input)*>,)",
+    "name": "Set default value for Quality of Customer Input",
+    "action": "<*SELECTVALUE(Quality of Customer Input:Sketch)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

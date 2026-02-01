@@ -1,0 +1,11 @@
+{
+    "id": 23580,
+    "condition": "[IF]([EQ](<*CTX ( Container(AR_HCI_LABOR_CONTAINER).Rows.GetCount )*>,0)){1}{0}[ENDIF]",
+    "name": "DISALLOW_ATTRIBUTES",
+    "action": "<*DISALLOWATTRIBUTES(AR_HCI_SELECTALL)*>\n<*DISALLOWATTRIBUTES(AR_HCI_PRODUCT_LINE)*>\n<*DISALLOWATTRIBUTES(AR_HCI_Executioncountry)*>\n<*DISALLOWATTRIBUTES(AR_HCI_EXECUTION_YEAR)*>\n<*DISALLOWATTRIBUTES(AR_HCI_PRODUCTIVITY)*>\n<*DISALLOWATTRIBUTES(AR_APPLY)*>\n<*DISALLOWATTRIBUTES(AR_HCI_GES Location)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

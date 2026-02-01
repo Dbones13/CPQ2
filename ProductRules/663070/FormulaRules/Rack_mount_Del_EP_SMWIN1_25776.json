@@ -1,0 +1,11 @@
+{
+    "id": 25776,
+    "condition": "[NOT]([IF]([AND]([EQ](<*VALUE(Experion Server Type)*>,Flex Server),[EQ](<*VALUE(Server Mounting)*>,Rack (Cabinet)))){[EQ](<*VALUE(Multi Window Support (Flex Server))*>,Yes)}{0}[ENDIF])",
+    "name": "Rack_mount_Del_EP_SMWIN1",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-SMWIN1)*><* DoResetAtt *>",
+    "description": "Del_EP_SMWIN1",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13496,
+    "condition": "[EQ](<*VALUE(PERF_ExecuteScripts)*>,Execute)",
+    "name": "Execute_visibility",
+    "action": "<* ExecuteScript(GS_Migration_Visibility) *>\n<*RESETATTRIBUTE(PERF_ExecuteScripts)*>",
+    "description": "CXCPQ-98558",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22474,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[NEQ](<*VALUE(ESDC_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(ESDC_Client_Station_Qty)*>,0),[NEQ](<*VALUE(ESDC_Station_Node_Type)*>,STN_PER_HP_Tower_RAID1))",
+    "name": "Part_D_MZ_PCWS84",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-PCWS84)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13093,
+    "condition": "[EQ](<*VALUE(SC_Renewal_check)*>,0)",
+    "name": "Execute_PS_PopulateRenewalfromNew",
+    "action": "<* ExecuteScript(Training_Match_Attr_Allow_Disallow) *>\n<* ExecuteScript(PS_PopulateRenewalfromNew) *>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

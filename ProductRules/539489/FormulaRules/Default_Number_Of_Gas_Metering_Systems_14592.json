@@ -1,0 +1,11 @@
+{
+    "id": 14592,
+    "condition": "[EQ](<*VALUE(MSC_Number_Of_Gas_Metering_Systems)*>,)",
+    "name": "Default_Number_Of_Gas_Metering_Systems",
+    "action": "<*ASSIGNVALUE(MSC_Number_Of_Gas_Metering_Systems:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

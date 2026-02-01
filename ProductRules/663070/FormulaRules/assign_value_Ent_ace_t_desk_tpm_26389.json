@@ -1,0 +1,11 @@
+{
+    "id": 26389,
+    "condition": "[EQ](<*VALUE(Ent_ace_t_desk_tpm)*>,)",
+    "name": "assign value Ent_ace_t_desk_tpm",
+    "action": "<*SELECTVALUE(Ent_ace_t_desk_tpm:Yes)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

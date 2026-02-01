@@ -1,0 +1,11 @@
+{
+    "id": 17920,
+    "condition": "[EQ](<*CTX( Container(OPC Application Instances).Row(8).Column(Devices).Get )*>,Yes)",
+    "name": "SCADA_EP-ZOPUHA_YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-ZOPUHA)*><*SETATVQTY(SCADA_BOM_Items:EP-ZOPUHA, 1)*><* DoResetAtt *>",
+    "description": "Add-EP-ZOPUHA",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 3598,
+    "condition": "[AND](<*ISSELECTED(Identifiers.A11)*>,[EQ](<*VALUE(Scada_chek)*>,1))",
+    "name": "Control_Flow_Device_Values_DNP3",
+    "action": "<*DISALLOWVALUES(Devices:Yes)*>\n<*SELECTVALUE(Devices:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

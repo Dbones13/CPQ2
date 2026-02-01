@@ -1,0 +1,11 @@
+{
+    "id": 14610,
+    "condition": "[EQ](<*VALUE(MSC_Number_Of_Density_Meters)*>,)",
+    "name": "Default_Number_Of_Density_Meters",
+    "action": "<*ASSIGNVALUE(MSC_Number_Of_Density_Meters:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,168 @@
+ <!-- RT_EHPMHARTIO_Configurator --> 
+<!-- ko if:cpq.models.configurator.actionModule.productName != 'MSID' && cpq.models.configurator.actionModule.productName != 'Migration'  -->
+<div class="attributes fiori3-attributes flex ProductStyle" tabindex="-1" id="attributesWrapper"  >
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> 
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+	<!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="EHPM-HART-IO-questions" onclick="toggleConfigSection(event, '#EHPM-HART-IO-questions')">
+         <label class="onlytext">General questions - EHPM HART IO</label>
+        </div>
+        <div id="EHPM-HART-IO-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+     
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="EHPM-HART-IO-Configuration-migration" onclick="toggleConfigSection(event, '#EHPM-HART-IO-Configuration-migration')">
+        <label class="onlytext">EHPM HART IO Configuration</label>
+        </div>
+        <div id="EHPM-HART-IO-Configuration-migration-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Configuration_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_EHPM_HART_IO"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+     
+ 
+        <div class="config_row col-md-12 clear-padding pt10 flex banner_clps" id="EHPM-HART-IO-service-questions" onclick="toggleConfigSection(event, '#EHPM-HART-IO-service-questions')">
+         <label class="onlytext">Services</label>
+        </div>
+        <div id="EHPM-HART-IO-service-questions-content" class=" col-md-12 clear-padding">
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Which_documentation_is_required?","EHPM_HART_IO_NES","EHPM_HART_IO_WBI","EHPM_HART_IO_Wiring_termination_type","EHPM_HART_IO_Commissioning_required?","EHPM_HART_IO_Will_Honeywell_equipment_activities") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Services_Cont",) -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Services_Cont_1") -->
+              <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+</div>
+<!-- /ko -->
+<!-- ko if:cpq.models.configurator.actionModule.productName == 'MSID' || cpq.models.configurator.actionModule.productName == 'Migration' -->
+<div class="attributes fiori3-attributes flex old_migration" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> 
+            @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+	<!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+  <div class="row col-xs-12 swagger">
+    <div id="EHPM-HART-IO-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#EHPM-HART-IO-questions')">
+          <span>General questions - EHPM HART IO</span>
+          <a id="EHPM-HART-IO-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="EHPM-HART-IO-questions-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_General_Qns_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable_sitdb"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="EHPM-HART-IO-Configuration-migration">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#EHPM-HART-IO-Configuration-migration')">
+          <span>EHPM HART IO Configuration</span>
+          <a id="EHPM-HART-IO-Configuration-migration-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="EHPM-HART-IO-Configuration-migration-content">
+          <div class="col-xs-12 col-sm-9">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Configuration_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_EHPM_HART_IO"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-xs-12 swagger">
+    <div id="EHPM-HART-IO-service-questions">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#EHPM-HART-IO-service-questions')">
+          <span>Services</span>
+          <a id="EHPM-HART-IO-service-questions-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="EHPM-HART-IO-service-questions-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Which_documentation_is_required?") -->
+              <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+              </div>
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Services_Cont",) -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+          <div class="col-xs-12 col-sm-12">
+            <!-- ko foreach: attributes.filterByProperty('name' , "EHPM_HART_IO_Services_Cont_1") -->
+              <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ko -->

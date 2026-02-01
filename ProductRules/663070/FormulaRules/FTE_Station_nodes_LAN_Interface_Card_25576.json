@@ -1,0 +1,11 @@
+{
+    "id": 25576,
+    "condition": "[AND]([EQ](<*VALUE(Supervisory Network Type)*>,FTE),[OR]([GT](<*VALUE(Flex Station Qty (0-60))*>,0),[GT](<*VALUE(Console Station Qty (0-20))*>,0), [GT](<*VALUE(Console Station Extension Qty  (0-15))*>,0)))",
+    "name": "FTE Station node's LAN Interface Card",
+    "action": "<*SELECTVALUE(Desk Station node's LAN Interface Card:FTE)*>",
+    "description": "CXCPQ-34882 - 6",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

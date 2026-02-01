@@ -1,0 +1,11 @@
+{
+    "id": 25569,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(Interface with TPS Required?)*>,No),[NEQ](<*VALUE(MIB Configuration Required?)*>,Yes)),[NEQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant))",
+    "name": "Show_Server_Red_message",
+    "action": "<*DISALLOWATTRIBUTES(Server_Redundancy_Required_message)*>",
+    "description": "If Server Redundancy Requirement? is selected as Redundant, when MIB Configuration Required? is selected as Yes & Interface with TPS Required? as selected as No, then display message in top of the section as 'For MIB, recommended Server option is Non Redundant'.",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

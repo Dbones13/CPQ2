@@ -1,0 +1,11 @@
+{
+    "id": 20427,
+    "condition": "[EQ](<*VALUE(SS_Experion_Base_Media_Delivery)*>,)",
+    "name": "Default_SS_Experion_Base_Media_Delivery",
+    "action": "<*SELECTVALUE(SS_Experion_Base_Media_Delivery:Electronic Download)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

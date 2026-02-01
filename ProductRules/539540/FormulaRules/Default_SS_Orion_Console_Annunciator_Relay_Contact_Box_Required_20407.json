@@ -1,0 +1,11 @@
+{
+    "id": 20407,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Annunciator_Relay_Contact_Box_Required)*>,)",
+    "name": "Default_SS_Orion_Console_Annunciator_Relay_Contact_Box_Required",
+    "action": "<*SELECTVALUE(SS_Orion_Console_Annunciator_Relay_Contact_Box_Required:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

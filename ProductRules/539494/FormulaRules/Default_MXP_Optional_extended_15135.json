@@ -1,0 +1,11 @@
+{
+    "id": 15135,
+    "condition": "[EQ](<*VALUE(MXP_Optional_extended)*>,)",
+    "name": "Default_MXP_Optional_extended",
+    "action": "<*SELECTVALUE(MXP_Optional_extended:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

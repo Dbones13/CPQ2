@@ -1,0 +1,11 @@
+{
+    "id": 18775,
+    "condition": "[AND]([NOT]([AND]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes),[EQ](<*VALUE(ES_Hardware_Selection)*>,SVR_PER_DELL_Rack_RAID1_XE))),[NEQ](<*VALUE(ES_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID1_XE))",
+    "name": "Part_D_MZ_SQLCL4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(eServer_BOM_parts:MZ-SQLCL4)*><* DoResetAtt *>",
+    "description": "7966 Story",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19921,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[NEQ](<*VALUE(SerC_CG_MIB_Configuration_Required)*>,Yes),[GT](<*VALUE(SerC_Number of Rockwell ControlLogix Process 999)*>,0),[GT](<*VALUE(SerC_NO of Rock Ctrl Processors Redundant0-999NEW)*>,0),[GT](<*VALUE(SerC_Nu of Proc Conn I/O Devi (Redundant ) (0-999))*>,0),[GT](<*VALUE(SerC_Number of Motor Start IOMs per EIM Redun 255)*>,0),[GT](<*VALUE(SerC_Number of Redundant EIM for IEC61850)*>,0),[GT](<*VALUE(SerC_Number of Redundant EIM for Profinet Devices)*>,0),[GT](<*VALUE(SerC_Number of Redunt EIM for EIP Devices (0-300))*>,0),[GT](<*VALUE(SerC_Numbe of Rockwelix Proc EIM Redundant 0-10)*>,0))",
+    "name": "Show_message_new rule",
+    "action": "<*ALLOWATTRIBUTES(message_SerC_N0 of Redunt EIM for Profinet Devices)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

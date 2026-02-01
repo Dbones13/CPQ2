@@ -1,0 +1,11 @@
+{
+    "id": 13889,
+    "condition": "1",
+    "name": "Preselected value",
+    "action": "[IF]([EQ](<*VALUE(xPM_Distance_of_Fiber_Optic_Extenders)*>,)){<*SELECTVALUE(xPM_Distance_of_Fiber_Optic_Extenders:2 km)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(ATT_QARPCF9IOTA)*>,)){<*SELECTVALUE(ATT_QARPCF9IOTA:0)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

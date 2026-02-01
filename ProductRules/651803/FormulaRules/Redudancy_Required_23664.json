@@ -1,0 +1,11 @@
+{
+    "id": 23664,
+    "condition": "1",
+    "name": "Redudancy Required",
+    "action": "[IF]([AND](<*ISSELECTED(Secure Remote Access.Yes)*>,<*ISSELECTED(Secure Remote Access Redundancy Required.Yes)*>)){<*SELECTVALUES(Secure Remote Redudancy Required:CS-MSS-RD-B|CS-MSS-RD-ANL)*><*SETATVQTY(Secure Remote Redudancy Required:CS-MSS-RD-B, 1)*><*SETATVQTY(Secure Remote Redudancy Required:CS-MSS-RD-ANL, 1)*>}{<*RESETATTRIBUTE(Secure Remote Redudancy Required)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

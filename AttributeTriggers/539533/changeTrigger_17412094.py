@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(eServer_MZ_SQLCL4_sum2:<*VALUE(ES_Additional_Stations_for_eServer)*>)*>

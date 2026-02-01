@@ -1,0 +1,83 @@
+<script type="text/html" id="ContainerLabelTemplate">
+    <!-- ko if: $parents[2]?.name  -->
+        <!-- ko if: ["CE RTU Engineering Labor Container", "CE RTU Additional Custom Deliverables"].includes($parents[2].name()) -->
+        <div class="read-only-container-cell" data-bind="style:{ textAlign:'left', whiteSpace: 'nowrap' }">
+            <span data-bind="htmlOrNbsp: value"></span>
+        </div>
+        <!-- /ko -->
+        <!-- ko if:['Asset_details_ServiceProd_ReadOnly','Asset_details_ServiceProd','ES_PY_Asset_Details'].includes($parents[2].name())-->
+        <!-- ko if:['MSIDs'].includes(headerLabel())-->
+        <div class="read-only-container-cell" style="text-align:left;">
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }" ></span>
+        </div>
+        <!--/ko-->
+        <!-- ko ifnot:['MSIDs'].includes(headerLabel())-->
+        <div class="read-only-container-cell" style="text-align:right;">
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }" ></span>
+        </div>
+        <!--/ko-->
+        <!--/ko-->
+        <!-- ko if: ["HWOS_Model Scope_3party", "HWOS_Invalid_Model Scope_3party"].includes($parents[2].name()) -->
+        <!-- ko if: ["Unit List Price","List Price",'Ext Cost'].includes(headerLabel()) -->
+        <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+        <div class="read-only-container-cell" data-bind="style:{ textAlign:'right', whiteSpace: 'nowrap' }">
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>
+        </div>
+        <!--/ko-->
+        <!-- ko ifnot: ["Unit List Price","List Price",'Ext Cost'].includes(headerLabel()) -->
+        <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+        <div class="read-only-container-cell" data-bind="style:{ textAlign:'left', whiteSpace: 'nowrap' }">
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>
+        </div>
+        <!--/ko-->
+        <!-- /ko -->
+    
+        <!-- ko ifnot: ["CE RTU Engineering Labor Container", "CE RTU Additional Custom Deliverables","HWOS_Model Scope_3party", "HWOS_Invalid_Model Scope_3party","Asset_details_ServiceProd_ReadOnly",'Asset_details_ServiceProd', 'ES_PY_Asset_Details'].includes($parents[2].name()) -->
+        <div class="read-only-container-cell" data-bind="style: { textAlign: dataType == 1 ? 'right' : 'left', whiteSpace: 'nowrap' }">
+           <!-- ko if: ["Name"].includes(headerLabel()) && value() == "Integrated Automation Assessment Non SESP + SPB" -->
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>&nbsp;<span class="sap-icon" style="color:#0a6ed1" data-toggle="tooltip" title="Price and cost calculated from the IAA Parts & Spot quote for Non-SESP MSIDs">&#xe202;</span>
+           <!-- /ko -->
+           <!-- ko if: ["Name"].includes(headerLabel()) && value() == "Integrated Automation Assessment SESP Plus + SPB" -->
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>&nbsp;<span class="sap-icon" style="color:#0a6ed1" data-toggle="tooltip" title="Price and cost calculated from the IAA Parts & Spot quote for SESP Plus MSIDs">&#xe202;</span>
+           <!-- /ko -->
+           <!-- ko if: value() == "Integrated Automation Assessment SESP Flex + SPB" -->
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>&nbsp;<span class="sap-icon" style="color:#0a6ed1" data-toggle="tooltip" title="Price and cost calculated from the IAA Parts & Spot quote SESP Flex MSID">&#xe202;</span>
+           <!-- /ko -->
+           <!-- ko if: value() == "Number of Windows System" -->
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>&nbsp;
+            <a href="#" class="label-hint-icon autoClosePopover" data-bind="popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true, trigger: 'hover' }" aria-label="Hint popover" id="popover1645551" data-original-title="" title="" data-content="Enter the number of Windows Operating System based nodes (servers & workstations)"><span class="sap-icon">&#xe202;</span></a>
+           <!-- /ko -->
+           <!-- ko if: value() == "Number of Network Devices" -->
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>&nbsp;
+            <a href="#" class="label-hint-icon autoClosePopover" data-bind="popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true, trigger: 'hover' }" aria-label="Hint popover" id="popover1645551" data-original-title="" title="" data-content="Enter the number of Network devices (switches, routers)"><span class="sap-icon">&#xe202;</span></a>
+           <!-- /ko -->
+           <!-- ko if: value() == "Number of Firewalls" -->
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }"></span>&nbsp;
+            <a href="#" class="label-hint-icon autoClosePopover" data-bind="popover: { templateId: 'HintTemplate', container: 'body', placement: 'auto top', autoClose: true, html: true, trigger: 'hover' }" aria-label="Hint popover" id="popover1645551" data-original-title="" title="" data-content="Enter the number of Firewalls"><span class="sap-icon">&#xe202;</span></a>
+           <!-- /ko -->
+            <!-- ko if: value() !== "Integrated Automation Assessment Non SESP + SPB" && value() !== "Integrated Automation Assessment SESP Plus + SPB" && value() !== "Integrated Automation Assessment SESP Flex + SPB" && value() !== "Number of Windows System" && value() !== "Number of Network Devices" && value() !== "Number of Firewalls" -->
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value,name:value }"></span>
+           <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko ifnot: $parents[2]?.name -->
+        <!-- ko if:['MSIDs'].includes(headerLabel())-->
+        <div class="read-only-container-cell" data-bind="style:{ textAlign:'left', whiteSpace: 'nowrap' }">
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign"></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }" ></span>
+        </div>
+        <!--/ko-->
+        <!-- ko ifnot:['MSIDs'].includes(headerLabel())-->
+        <div class="read-only-container-cell" data-bind="style:{ textAlign:'right', whiteSpace: 'nowrap' }">
+            <span data-bind="visible: dataType === $root.currencyDataType, text: $root.currencySign "></span>
+            <span data-bind="htmlOrNbsp: value,attr: { title: value }" ></span>
+        </div>
+    <!-- /ko -->
+    </script>

@@ -1,0 +1,11 @@
+{
+    "id": 11601,
+    "condition": "[OR](<*ISSELECTED(MSC_ADDI_Labor_GES_Eng.SYS GES Eng-BO-CN)*>,<*ISSELECTED(MSC_ADDI_Labor_GES_Eng.SYS GES Eng-FO-CN)*>,<*ISSELECTED(MSC_ADDI_Labor_GES_Eng.SYS GES HMI Eng-BO-CN)*><*ISSELECTED(MSC_ADDI_Labor_GES_Eng.SYS GES HMI Eng-FO-CN)*>)",
+    "name": "Hide GES Location other than CN",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MSC_ADDI_Labor_GES_Eng:HPS_GES_P335B_CN|HPS_GES_P335F_CN|HPS_GES_P350B_CN|HPS_GES_P350F_CN)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

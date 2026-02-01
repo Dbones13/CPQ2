@@ -1,0 +1,11 @@
+{
+    "id": 21983,
+    "condition": "[EQ](<*VALUE(FDM_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID5)",
+    "name": "Show_Additional_Hard_Disk_(Server)",
+    "action": "<*ALLOWVALUES(FDM_Additional_Hard_Disk(Server):Yes,FDM_Additional_Memory(Server Disk):16GB)*>",
+    "description": "CXCPQ-48589",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "12/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23415,
+    "condition": "[EQ](<*CTX ( Product.Name.Translated )*>,Cyber Generic System)",
+    "name": "Cyber PartSummary Quantity Non-Editable",
+    "action": "<*CTX ( Container(Generic_System_Mig_Uploaded_Parts_Cont).Column(Quantity).SetPermission(ReadOnly) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "24/01/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

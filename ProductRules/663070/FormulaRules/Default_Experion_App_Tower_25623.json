@@ -1,0 +1,11 @@
+{
+    "id": 25623,
+    "condition": "[EQ](<*VALUE(Experion APP Node - Tower Mount)*>,)",
+    "name": "Default_Experion App Tower",
+    "action": "<*ASSIGNVALUE(Experion APP Node - Tower Mount:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

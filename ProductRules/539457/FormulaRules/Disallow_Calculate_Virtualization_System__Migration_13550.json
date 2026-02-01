@@ -1,0 +1,11 @@
+{
+    "id": 13550,
+    "condition": "[EQ](<* ProductName *>,Virtualization System Migration)",
+    "name": "Disallow_Calculate_Virtualization_System \\_Migration",
+    "action": "<*DISALLOWATTRIBUTES(Calculation_Button)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

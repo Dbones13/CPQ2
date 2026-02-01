@@ -1,0 +1,11 @@
+{
+    "id": 26446,
+    "condition": "[AND]([OR](<*ISSELECTED(Experion Server Type.Server)*>,<*ISSELECTED(Experion Server Type.Server TPS)*>),<*ISSELECTED(Server Mounting.Desk)*>,<*ISSELECTED(Server Node Type_desk.SVR_PER_DELL_Rack_RAID1_RUG)*>)",
+    "name": "Show_Marine_Desk",
+    "action": "<*ALLOWATTRIBUTES(Marine_Requirement_Desk)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

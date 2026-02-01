@@ -1,0 +1,11 @@
+{
+    "id": 22868,
+    "condition": "[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C)",
+    "name": "Allow_ SerC_IO_Mounting_Solution",
+    "action": "<*DISALLOWATTRIBUTES(Header_02_open,ATTCON_02_open,Serc_Environmental Condition,ATTCON_02_close,Header_02_close)*>",
+    "description": "cxcpq-37963",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

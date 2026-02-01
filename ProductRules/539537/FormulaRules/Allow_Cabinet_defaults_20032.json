@@ -1,0 +1,11 @@
+{
+    "id": 20032,
+    "condition": "[NOT](<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Mounting Panel)*>)",
+    "name": "Allow_Cabinet_defaults",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Cabinet_Defaults)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

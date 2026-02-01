@@ -1,0 +1,11 @@
+{
+    "id": 25625,
+    "condition": "[EQ](<*VALUE(Tree A 5m cable (0-1000))*>,)",
+    "name": "Default_Tree_A5",
+    "action": "<*ASSIGNVALUE(Tree A 5m cable (0-1000):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25603,
+    "condition": "[EQ](<*VALUE(Exp CAB Developer License(0-12))*>,)",
+    "name": "Default Exp CAB Developer License",
+    "action": "<*ASSIGNVALUE(Exp CAB Developer License(0-12):0)*>",
+    "description": "Default Exp CAB Developer License",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

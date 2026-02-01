@@ -1,0 +1,11 @@
+{
+    "id": 13430,
+    "condition": "1",
+    "name": "Labor_parameter_var_8",
+    "action": "<*ASSIGNVALUE(Labor_parameter_var_8:[IF]([GT](<*CTX ( Container(Experion_Enterprise_Cont).Sum(Labor_para_var_8) )*>,0)){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

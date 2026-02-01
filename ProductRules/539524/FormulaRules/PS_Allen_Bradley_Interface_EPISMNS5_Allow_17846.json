@@ -1,0 +1,11 @@
+{
+    "id": 17846,
+    "condition": "[GT](<*CTX( Container(Allen-Bradley/Siemens Interfaces).Row(3).Column(Nodes).Get )*>,0)",
+    "name": "PS_Allen Bradley Interface_EP-ISMNS5_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-ISMNS5)*><*SELECTVALUE(SCADA_BOM_Items:EP-ISMNS5)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-ISMNS5, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

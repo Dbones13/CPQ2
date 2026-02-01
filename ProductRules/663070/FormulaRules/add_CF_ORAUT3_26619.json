@@ -1,0 +1,11 @@
+{
+    "id": 26619,
+    "condition": "[AND]([AND]([AND]([EQ](<*VALUE(Orion Stations required)*>,Yes),[OR]([GT](<*VALUE(Flex Station Qty (0-60))*>,0),[GT](<*VALUE(Console Station Qty (0-20))*>,0),[GT](<*VALUE(Console Station Extension Qty  (0-15))*>,0))),[OR]([GT](<*VALUE(Orion Console Left Extend Auxil Equip Unit (0-40))*>,0),[GT](<*VALUE(Orion Console Right Extend Auxil Equip Unit (0-40))*>,0))),[EQ](<*VALUE(Node Supplier)*>,Honeywell))",
+    "name": "add_CF_ORAUT3",
+    "action": "<* DoNotResetAtt *>\n<*SELECTVALUES(Exp_Ent_Grp_Part_Summary:CF-ORAUT3)*>\n<*SETATVQTY(Exp_Ent_Grp_Part_Summary:CF-ORAUT3, <*Eval(<*VALUE(Orion Console Left Extend Auxil Equip Unit (0-40))*>+<*VALUE(Orion Console Right Extend Auxil Equip Unit (0-40))*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

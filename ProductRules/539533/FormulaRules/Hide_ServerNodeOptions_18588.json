@@ -1,0 +1,11 @@
+{
+    "id": 18588,
+    "condition": "[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R511)",
+    "name": "Hide_ServerNodeOptions",
+    "action": "<*DISALLOWVALUES(ES_Server_Node_Type:SVR_PER_DELL_Rack_RAID1_XE,ES_Server_Node_Type:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "7959 story",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,111 @@
+<!-- Cyber -->
+<div class="attributes fiori3-attributes flex MigrationPrd ProductStyle" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+    <!-- ko foreach: attributes --> 
+    <!-- ko if:   name() == 'AR_CyberprdInfo'   --> 
+        <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" > 
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->     
+        </div>
+    <!-- /ko -->
+
+    <!-- ko if:   name() == 'CYBER_Scope_Choices'   --> 
+        <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" > 
+        
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko --> 
+                
+        </div>
+    <!-- /ko -->
+
+    <!-- ko if: name() === 'AR_CyberPrdChoices' -->
+       <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" > 
+        
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko --> 
+                
+        </div>
+    <!-- /ko -->
+    
+    <!-- ko if: cpq.models.configurator.attributes.filterByProperty('name' , 'R2QRequest')()[0]?.userInput() =="Yes" -->
+        <!-- ko if:   name() == 'R2Q_PRJT_Proposal Language'   -->
+            <div data-bind="attr: {'name':name,  'class': (isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row') + ' disabled', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko -->
+            </div>
+        <!-- /ko -->
+		<!-- ko if:   name() == 'Project_Execution_Year'   -->
+        <div data-bind="attr: {'name':name,  'class': (isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row') + ' disabled', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <!-- ko if:   name() == 'R2Q_Alternate_Execution_Country'   -->
+        <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <!-- ko if:   name() == 'Sell Price Strategy'   -->
+        <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <!-- ko if:   name() == 'Customer_Budget_TextField'   -->
+        <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+		<!-- ko if:   name() == 'Customer_Budget_USD'   -->
+        <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    <!-- /ko -->
+    
+    <!-- ko if: name() === 'FDS & DDS Documentation Required' -->
+       <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" > 
+        
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko --> 
+                
+        </div>
+    <!-- /ko -->
+    
+    
+    <!-- ko if: name() === 'FAT Document Verification and Execution' -->
+       <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" > 
+        
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko --> 
+                
+        </div>
+    <!-- /ko -->
+    
+    
+    <!-- ko if: name() === 'SAT Document Verification and Execution' -->
+       <div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" > 
+        
+            <!-- ko template: { name: $root.getAttributeTemplate } -->
+            <!-- /ko --> 
+                
+        </div>
+    <!-- /ko -->
+    
+    <div class="fiori3-add-container-row flex flex-end" style="width:100%">
+        <!-- ko if: $data.name() === 'Cyber Configurations' -->
+        	<div data-bind="attr: {'name':name, 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-12 col-md-12 col-sm-12 col-xs-12 brdr_bt config_row ', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" >
+                <!-- ko template: { name: $root.getAttributeTemplate } -->
+                <!-- /ko --> 
+            </div>
+            
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+
+</div>

@@ -1,0 +1,11 @@
+{
+    "id": 26327,
+    "condition": "[IF]([AND]([EQ](<*VALUE(Cabinet Mounting Stations required)*>,Yes),[EQ](<*VALUE(Flex Station Qty (0-60))*>,>0))){[EQ](<*VALUE(Multi-Window Support Option Required?)*>,Yes)}{0}[ENDIF]",
+    "name": "Cabinet_mount_Station_EP_SMWIN1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-SMWIN1)*>[IF](){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-SMWIN1, Flex Station Qty (0-60))*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

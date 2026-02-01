@@ -1,0 +1,11 @@
+{
+    "id": 23983,
+    "condition": "[EQ](<*VALUE(Terminal_Manager_redundancy?)*>,Redundant)",
+    "name": "Add_TM-REDUN",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Terminal_Part_Summary:TM-REDUN)*><*SETATVQTY(Terminal_Part_Summary:TM-REDUN,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25836,
+    "condition": "[EQ](<*VALUE(NodeSupplier_FlexServer)*>,)",
+    "name": "Default_Desk_Mount_NodeType",
+    "action": "<*SELECTVALUE(NodeSupplier_FlexServer:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13379,
+    "condition": "1",
+    "name": "labor_parameter_sta_system",
+    "action": "<*ASSIGNVALUE(Labor_Parameter_Sta_System:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Labor_Parameter_Sta_Quantity) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

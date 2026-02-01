@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(SS_Server_Redundancy_Requirement)*>,Redundant)){<*ASSIGNVALUE(Simulation_red_non_red_Check:2)*>}{<*ASSIGNVALUE(Simulation_red_non_red_Check:1)*>}[ENDIF]

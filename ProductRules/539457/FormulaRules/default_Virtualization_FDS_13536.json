@@ -1,0 +1,11 @@
+{
+    "id": 13536,
+    "condition": "[EQ](<*VALUE(Virtualization FDS)*>,)",
+    "name": "default_Virtualization_FDS",
+    "action": "<*SELECTVALUE(Virtualization FDS:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

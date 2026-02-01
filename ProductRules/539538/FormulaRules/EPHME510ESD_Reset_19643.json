@@ -1,0 +1,11 @@
+{
+    "id": 19643,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(Exp HS Runtime System)*>,Yes),[EQ](<*VALUE(Exp HS Installation Media \u2013ESD Version only)*>,Yes),[EQ](<*VALUE(HS_Existing_System_Release)*>,Experion HS R510)))",
+    "name": "EP-HME510-ESD Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HME510-ESD)*><* DoResetAtt *>",
+    "description": "Experion HS Media Kit - Electronic Download R510 Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26258,
+    "condition": "[AND]([IN](<*VALUE(Experion Software Release)*>,R520,R511,R510),<*ISSELECTED(Orion Stations required.Yes)*>,[GT](<*VALUE(Console Station Extension Qty  (0-15))*>,0))",
+    "name": "Console_Station_Extension_Hardware_Selection_TPS_hide_STN_PER_HP_Tower_RAID1",
+    "action": "<*DISALLOWVALUES(Console Station Extension Hardware Selection:STN_PER_HP_Tower_RAID1,Console Station Extension Hardware Selection:STN_PER_DELL_Tower_RAID1)*><*ALLOWVALUES(Console Station Extension Hardware Selection:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "05/01/26",
+    "modifiedBy": "Jaskaran Singh"
+}

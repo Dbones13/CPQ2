@@ -1,0 +1,11 @@
+{
+    "id": 14024,
+    "condition": "[EQ](<*VALUE(DVM_FAT_Duration_in_Days_for_DVM)*>,)",
+    "name": "Default_DVM_FAT_Duration_in_Days_for_DVM",
+    "action": "<*ASSIGNVALUE(DVM_FAT_Duration_in_Days_for_DVM:8)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

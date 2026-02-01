@@ -1,0 +1,11 @@
+{
+    "id": 18893,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line),[EQ](<*VALUE(MX_CD_CDW_Mounting_Adapter)*>,Yes))",
+    "name": "CD_Part_91415",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:91415)*><*SETATVQTY(MX_CD_Bom_Parts:91415, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

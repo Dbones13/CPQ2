@@ -1,0 +1,11 @@
+{
+    "id": 14627,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculate Hours MeterSuite MSC Application Testing",
+    "action": "<*ASSIGNVALUE(MeterSuite MSC Application Testing:<* Eval(<*VALUE(QF)*> * 12) *>)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

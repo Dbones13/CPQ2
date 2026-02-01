@@ -1,0 +1,11 @@
+{
+    "id": 26597,
+    "condition": "[EQ](<*VALUE(CMS Cabinet Station Mounting Type)*>,)",
+    "name": "CMS Cabinet Station Mounting Type def",
+    "action": "<*SELECTVALUE(CMS Cabinet Station Mounting Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

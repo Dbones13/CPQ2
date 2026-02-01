@@ -1,0 +1,11 @@
+{
+    "id": 14229,
+    "condition": "[EQ](<*VALUE(C300_GES_Location)*>,None)",
+    "name": "Hide_labor_ges_column",
+    "action": "<*DISALLOWATTRIBUTES(C300_Addnl_Cust_Del_GES_Percentage,C300_Engineering_GES_Percentage)*><*CTX ( Container(C300_Engineering_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(C300_Engineering_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(C300_Engineering_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(C300_Engineering_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(C300_Engineering_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(C300_Engineering_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(C300_Engineering_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n\n\n<*CTX ( Container(C300_Additional_Custom_Deliverables_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(C300_Additional_Custom_Deliverables_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(C300_Additional_Custom_Deliverables_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(C300_Additional_Custom_Deliverables_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(C300_Additional_Custom_Deliverables_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(C300_Additional_Custom_Deliverables_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(C300_Additional_Custom_Deliverables_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

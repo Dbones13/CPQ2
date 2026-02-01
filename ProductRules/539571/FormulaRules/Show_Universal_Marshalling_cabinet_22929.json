@@ -1,0 +1,11 @@
+{
+    "id": 22929,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Show_Universal_Marshalling_cabinet",
+    "action": "<*ALLOWATTRIBUTES(Ser_RG_Universal_Marshalling_Cabinet)*>",
+    "description": "CXCPQ-44728",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

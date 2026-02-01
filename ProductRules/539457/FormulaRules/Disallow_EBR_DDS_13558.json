@@ -1,0 +1,11 @@
+{
+    "id": 13558,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Virtual_EBR_license_needs)*>,No),[AND]([NEQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR)))",
+    "name": "Disallow_EBR_DDS",
+    "action": "<*DISALLOWVALUES(Virtualization_EBR_DDS:Yes)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

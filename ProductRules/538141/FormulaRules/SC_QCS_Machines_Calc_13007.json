@@ -1,0 +1,11 @@
+{
+    "id": 13007,
+    "condition": "[AND]([EQ](<*ATTSEL(SC_QCS_Support_Center_Select)*>,1),[NEQ](<*VALUE(SC_QCS_Number of Machines)*>,))",
+    "name": "SC_QCS_Machines_Calc",
+    "action": "<*ASSIGNVALUE(SC_QCS_No_Of_Machines:<*VALUE(SC_QCS_Number of Machines)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

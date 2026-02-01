@@ -1,0 +1,11 @@
+{
+    "id": 26588,
+    "condition": "[EQ](<*VALUE(CMS TPS Station Qty 0_20)*>,)",
+    "name": "CMS TPS Station Qty 0_20 Default",
+    "action": "<*ASSIGNVALUE(CMS TPS Station Qty 0_20:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

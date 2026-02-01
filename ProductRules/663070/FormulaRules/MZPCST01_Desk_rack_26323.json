@@ -1,0 +1,11 @@
+{
+    "id": 26323,
+    "condition": "[IF]([EQ](<*VALUE(Server Mounting)*>,Tower (Desk))){[AND]([EQ](<*VALUE(Server Node Type_desk)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Node Supplier_server)*>,Honeywell),[EQ](<*VALUE(Trusted Platform Module1)*>,Yes))}{[AND]([EQ](<*VALUE(Server_NodeType)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(TrustedPlatformModule_TPM)*>,Yes))}[ENDIF]",
+    "name": "MZ-PCST01_Desk_rack",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCST01)*>[IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCST01, <* Eval(2+<*VALUE(MZ-PCST01_value)*>) *>)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCST01, 1)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "Add MZ-PCST01 for desk and rack",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

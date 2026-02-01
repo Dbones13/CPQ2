@@ -1,0 +1,11 @@
+{
+    "id": 12235,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "ELEPIU_labor_del_SW_HW_Order",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_SW_HW_Order:6)*>",
+    "description": "CXCPQ-60189",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

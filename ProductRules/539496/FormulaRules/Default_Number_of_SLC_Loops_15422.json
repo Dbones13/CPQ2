@@ -1,0 +1,11 @@
+{
+    "id": 15422,
+    "condition": "[EQ](<*VALUE(FDA Number of SLC Loops)*>,)",
+    "name": "Default Number of SLC Loops",
+    "action": "<*ASSIGNVALUE(FDA Number of SLC Loops:0)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

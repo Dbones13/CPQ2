@@ -1,0 +1,11 @@
+{
+    "id": 18573,
+    "condition": "[EQ](<*VALUE(ES_Experion_PKS_Release)*>,R520)",
+    "name": "Condition_for_EPKS_R520",
+    "action": "<*DISALLOWALLVALUESEXCEPT(ES_Experion_eServer_Release:R520)*>\n<*SELECTVALUE(ES_Experion_eServer_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

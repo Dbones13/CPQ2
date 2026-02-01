@@ -1,0 +1,11 @@
+{
+    "id": 9098,
+    "condition": "[EQ](<*CTX ( Container(New_exp_common_prj_input).Row(1).Column(CE_Site_Voltage).Get )*>,120V)",
+    "name": "set value site voltage 1",
+    "action": "<*CTX ( Container(CE_Project_Questions_Cont).Row(1).Column(CE_Site_Voltage).Set(120V) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

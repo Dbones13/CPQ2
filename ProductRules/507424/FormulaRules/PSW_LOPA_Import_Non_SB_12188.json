@@ -1,0 +1,11 @@
+{
+    "id": 12188,
+    "condition": "<*ISSELECTED(PSW_Implementation_Methodology.Non-Standard Build Estimate)*>",
+    "name": "PSW_LOPA_Import Non SB",
+    "action": "<*ASSIGNVALUE(PSW_LOPA_Import:[IF]([EQ](<*VALUE(PSW_LOPA_Import_Scope)*>,Yes)){<* Eval(40+<*VALUE(PSW_Number_of_LOPAs)*>*1+16) *>}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

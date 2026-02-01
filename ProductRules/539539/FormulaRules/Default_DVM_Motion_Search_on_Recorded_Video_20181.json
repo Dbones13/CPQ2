@@ -1,0 +1,11 @@
+{
+    "id": 20181,
+    "condition": "[EQ](<*VALUE(DVM_Motion_Search_on_Recorded_Video)*>,)",
+    "name": "Default_DVM_Motion_Search_on_Recorded_Video",
+    "action": "<*SELECTVALUE(DVM_Motion_Search_on_Recorded_Video:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

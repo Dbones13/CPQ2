@@ -1,0 +1,11 @@
+{
+    "id": 2608,
+    "condition": "[NOT](<*ISSELECTED(Terminal_Mode_of_Transport.Pipeline loading/unloading)*>)",
+    "name": "Reset Pipeline Columns",
+    "action": "<*RESETVALUE(Terminal_Yes_No_Pipeline:Y)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

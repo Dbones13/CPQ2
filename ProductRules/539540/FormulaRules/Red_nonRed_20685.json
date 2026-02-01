@@ -1,0 +1,11 @@
+{
+    "id": 20685,
+    "condition": "[EQ](<*VALUE(SS_Simulation_Server_required)*>,No)",
+    "name": "Red_nonRed",
+    "action": "<*ASSIGNVALUE(Simulation_red_non_red_Check:0)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

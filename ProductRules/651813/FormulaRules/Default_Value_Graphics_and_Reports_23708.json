@@ -1,0 +1,11 @@
+{
+    "id": 23708,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(Graphics and Reports).GetDisplayValue )*>,)",
+    "name": "Default_Value_Graphics and Reports",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs2).Row(1).Column(Graphics and Reports).Set(No) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/08/25",
+    "modifiedBy": "Narasimhan Chakravarthy"
+}

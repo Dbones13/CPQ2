@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes)){<*ASSIGNVALUE(Virtualization_Windows_2022_COA_Licenses_24:0)*><*ASSIGNVALUE(Virtualization_Windowsr_2022_COA_Licenses_16:0)*>}{<*ASSIGNVALUE(Virtualization_Windows_Server_2016_COA_Licenses:0)*><*ASSIGNVALUE(Virtualization_Windows_Server_2019_COA_Licenses:0)*>}[ENDIF]

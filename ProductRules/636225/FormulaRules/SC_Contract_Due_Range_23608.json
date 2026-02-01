@@ -1,0 +1,11 @@
+{
+    "id": 23608,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[GT](<*VALUE(SC_Contract_Duration)*>,3))",
+    "name": "SC_Contract_Due_Range",
+    "action": "<*ASSIGNVALUE(SC_Contract_Duration:3)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25809,
+    "condition": "[IF]([AND]([EQ](<*VALUE(Interface with TPS Required?)*>,Yes),[GT](<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>,0))){[AND]([EQ](<*VALUE(Hardware Design Selection_ACE_T_Node)*>,SVR_STD_DELL_Tower_RAID1),[EQ](<*VALUE(Node_Supplier_ACE_T)*>,Honeywell),[EQ](<*VALUE(Trusted Platform Module_TPM_ACE_T)*>,Yes))}{0}[ENDIF]",
+    "name": "MZ-PCST01_AceT_desk",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCST01)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MZ-PCST01,<*VALUE(ACE_T_Node _Tower_Mount_Desk)*>)*><* DoResetAtt *>",
+    "description": "Ace-T Desk",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

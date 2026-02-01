@@ -1,0 +1,11 @@
+{
+    "id": 18760,
+    "condition": "[EQ](<*VALUE(MX_CD_kW)*>,)",
+    "name": "Default_Kw",
+    "action": "<*SELECTVALUE(MX_CD_kW:4.5)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

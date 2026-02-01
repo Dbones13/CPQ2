@@ -1,0 +1,11 @@
+{
+    "id": 20477,
+    "condition": "[LEQ](<*VALUE(SS_OTS_Licenses)*>,0)",
+    "name": "Part_D_EP_OTS001",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-OTS001)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

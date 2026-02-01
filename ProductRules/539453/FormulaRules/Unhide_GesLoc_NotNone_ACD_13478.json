@@ -1,0 +1,11 @@
+{
+    "id": 13478,
+    "condition": "[NEQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,None)",
+    "name": "Unhide_GesLoc_NotNone_ACD",
+    "action": "<*ALLOWATTRIBUTES(Additional_CustomDev_GES)*><*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng).SetPermission(Editable) )*><*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

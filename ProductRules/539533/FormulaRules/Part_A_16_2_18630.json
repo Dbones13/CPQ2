@@ -1,0 +1,11 @@
+{
+    "id": 18630,
+    "condition": "[AND]([NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R520),[EQ](<*VALUE(ES_Node_Supplier_Mobile_Server)*>,Honeywell),[EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes))",
+    "name": "Part_A_16_2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(eServer_BOM_parts:EP-COAS16)*><*SETATVQTY(eServer_BOM_parts:EP-COAS16,1)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20244,
+    "condition": "[AND]([LT](<*VALUE(DVM_Internet_Explorer/ Browser_Client)*>,1),[LT](<*VALUE(DVM_Console_Client)*>,1),[LT](<*VALUE(DVM_Mobile_Client_Connections)*>,1),[LT](<*VALUE(DVM_Additional_3rd Party_Client_L)*>,1))",
+    "name": "MZ-SQLCL4_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:MZ-SQLCL4)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

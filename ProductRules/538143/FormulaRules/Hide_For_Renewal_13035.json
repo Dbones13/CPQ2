@@ -1,0 +1,11 @@
+{
+    "id": 13035,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_For_Renewal",
+    "action": "<*CTX ( Container(SC_Experion_Models_Scope).Column(Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Scope).Column(List_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Experion_Models_Summary).Column(Quantity).SetPermission(Hidden) )*><*CTX ( Container(SC_Experion_Models_Summary).Column(List_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

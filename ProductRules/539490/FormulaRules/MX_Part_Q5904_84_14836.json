@@ -1,0 +1,11 @@
+{
+    "id": 14836,
+    "condition": "[EQ](<*VALUE(MX_MD_Dry_Stock_Flow_Control)*>,Yes)",
+    "name": "MX_Part_Q5904_84",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_Platform_Bom_Parts:Q5904-84)*><*SETATVQTY(MX_Platform_Bom_Parts:Q5904-84, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

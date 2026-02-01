@@ -1,0 +1,11 @@
+{
+    "id": 13394,
+    "condition": "1",
+    "name": "Number_of_Equipment_Points",
+    "action": "<*ASSIGNVALUE(Number_of_Equipment_Points:<*CTX ( Container(Experion_Enterprise_Cont).Sum(Number_of_Equipment_Points) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

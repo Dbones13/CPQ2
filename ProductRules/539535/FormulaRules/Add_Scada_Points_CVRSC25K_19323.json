@@ -1,0 +1,11 @@
+{
+    "id": 19323,
+    "condition": "[AND]([GT](<* Eval(<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000) *>,24999),[EQ](<*VALUE(PlantCruise_Redundant_C300_Controller)*>,Yes))",
+    "name": "Add_Scada_Points_CV-RSC25K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-RSC25K)*><*SETATVQTY(PlantCruise_Part_Summary:CV-RSC25K,<* Eval(INT((<*VALUE(PlantCruise_SCADA_Points)*>- (INT(<*VALUE(PlantCruise_SCADA_Points)*>/50000))*50000)/25000)) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

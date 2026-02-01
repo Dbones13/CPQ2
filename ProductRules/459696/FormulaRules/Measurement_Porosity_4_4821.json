@@ -1,0 +1,11 @@
+{
+    "id": 4821,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-20 Compact O-Frame (Extended Head)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Porosity))",
+    "name": "Measurement_Porosity_4",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17828,
+    "condition": "[GT](<*CTX( Container(Modbus/OPC Interfaces).Row(4).Column(Nodes).Get )*>,0)",
+    "name": "PS_MODBUS_Interface_EP-IEMB00_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IEMB00)*><*SELECTVALUE(SCADA_BOM_Items:EP-IEMB00)*><*SETATVQTY(SCADA_BOM_Items:EP-IEMB00, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "09/01/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

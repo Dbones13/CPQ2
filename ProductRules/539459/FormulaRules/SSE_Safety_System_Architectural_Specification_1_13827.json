@@ -1,0 +1,11 @@
+{
+    "id": 13827,
+    "condition": "1",
+    "name": "SSE Safety System Architectural Specification 1",
+    "action": "<*ASSIGNVALUE(SSE Safety System Architectural Specification 1:<* Eval(8*0.9) *>)*>",
+    "description": "For Safety System Base deliverable:\n\nCalculated Hours= 8*0.9",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

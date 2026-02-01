@@ -1,0 +1,11 @@
+{
+    "id": 22856,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Base_(Plinth))*>,)",
+    "name": "Default_SerC_RG_Cabinet_Base_(Plinth)",
+    "action": "<*SELECTVALUE(SerC_RG_Cabinet_Base_(Plinth):No)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

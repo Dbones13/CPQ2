@@ -1,0 +1,11 @@
+{
+    "id": 26075,
+    "condition": "[EQ](<*VALUE(Cabinet_Touch_Screen_required)*>,)",
+    "name": "Default_Cabinet_Touch_Screen_required",
+    "action": "<*SELECTVALUE(Cabinet_Touch_Screen_required:No Touch Screen)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

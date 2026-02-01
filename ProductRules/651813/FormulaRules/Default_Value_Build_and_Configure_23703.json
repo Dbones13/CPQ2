@@ -1,0 +1,11 @@
+{
+    "id": 23703,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Build and Configure).GetDisplayValue )*>,)",
+    "name": "Default_Value_Build and Configure",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Build and Configure).Set(No) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

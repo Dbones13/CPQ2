@@ -1,0 +1,11 @@
+{
+    "id": 25972,
+    "condition": "[OR]([EQ](<*VALUE(Addon Advanced Solution  Pack(0-1))*>,0),[GT](<*VALUE(Advanced HMIWeb Solution  Pack(0-1))*>,0))",
+    "name": "EP-ADSPSW_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-ADSPSW)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

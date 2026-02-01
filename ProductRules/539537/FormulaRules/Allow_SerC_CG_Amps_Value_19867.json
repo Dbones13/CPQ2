@@ -1,0 +1,11 @@
+{
+    "id": 19867,
+    "condition": "[AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,<*ISSELECTED(SerC_CG_IO_Mounting_Solution.Cabinet)*>)",
+    "name": "Allow_SerC_CG_Amps_Value",
+    "action": "<*ALLOWATTRIBUTES(SerC_CG_Amps_Value)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

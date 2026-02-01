@@ -1,0 +1,11 @@
+{
+    "id": 20166,
+    "condition": "[EQ](<*VALUE(DVM_Honeywell_Maxpro_Integratio)*>,)",
+    "name": "Default_DVM_Honeywell_Maxpro_Integratio",
+    "action": "<*SELECTVALUE(DVM_Honeywell_Maxpro_Integratio:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

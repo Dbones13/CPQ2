@@ -1,0 +1,11 @@
+{
+    "id": 19658,
+    "condition": "[EQ](<*VALUE(Exp HS HS Virtualization CAL)*>,Yes)",
+    "name": "HS Virtualization CAL YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HSCVMS)*><*SETATVQTY(Experion_HS_PART_SUMMARY:EP-HSCVMS, <*GETATVQTY(Experion_HS_PART_SUMMARY:MZ-SQLCL4)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

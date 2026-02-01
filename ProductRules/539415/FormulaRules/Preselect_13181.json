@@ -1,0 +1,11 @@
+{
+    "id": 13181,
+    "condition": "1",
+    "name": "Preselect",
+    "action": "[IF]([EQ](<*VALUE(QCS_Mig_Single_phase_or_Three_phase_power)*>,)){<*RESETATTRIBUTE(QCS_Mig_Single_phase_or_Three_phase_power)*>}{}[ENDIF]\n[IF]([EQ](<*VALUE(QCS_Mig_Virtualization_Config)*>,)){<*RESETATTRIBUTE(QCS_Mig_Virtualization_Config)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

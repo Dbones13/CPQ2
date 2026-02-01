@@ -1,0 +1,11 @@
+{
+    "id": 9059,
+    "condition": "1",
+    "name": "Set value for ip",
+    "action": "<*ASSIGNVALUE(labor_parameter_ip:<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(Internal Parties).Get )*>)*>",
+    "description": "Internal Parties",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

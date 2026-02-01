@@ -1,0 +1,11 @@
+{
+    "id": 22014,
+    "condition": "[AND]([EQ](<*VALUE(Enterprise_flag_check)*>,True),[EQ](<*CTX ( Container(SM_Enterprise_Cluster_4).SelectedRow.Index )*>,4),[EQ](<*VALUE(FDM_Server_Specification)*>,Workstation))",
+    "name": "Load_Cluster5_4",
+    "action": "<*ALLOWATTRIBUTES(SM_Enterprise_Cluster_Sub_4)*>\n<*CTX( Container(SM_Enterprise_Cluster_Sub_4).LoadKeys(ListIndex).Load(select <*eval(Replace(Replace(\"<*VALUE(cluster5)*>\",\"| \",\"' as LocationCluster UNION SELECT \") + \"'\",\"#\",\" as ListIndex ,'\"))*> as LocationCluster  ))*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

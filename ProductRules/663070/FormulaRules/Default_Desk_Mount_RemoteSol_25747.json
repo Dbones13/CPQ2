@@ -1,0 +1,11 @@
+{
+    "id": 25747,
+    "condition": "[EQ](<*VALUE(Remote_Peripheral_Solution_Type_RPS)*>,)",
+    "name": "Default_Desk_Mount_RemoteSol",
+    "action": "<*SELECTVALUE(Remote_Peripheral_Solution_Type_RPS:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24110,
+    "condition": "[AND]([EQ](<*VALUE(No of Nutanix Single Node Clusters in the network)*>,),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix))",
+    "name": "premium_platform_nutanix_reset_singlenode",
+    "action": "<*RESETATTRIBUTE(No of Nutanix Single Node Clusters in the network)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10573,
+    "condition": "[EQ](<*VALUE(QCS_Mig_Virtualization_Config)*>,)",
+    "name": "QCS_Mig_Default_Virtualization",
+    "action": "<*SELECTVALUE(QCS_Mig_Virtualization_Config:Production & Management Hosts with vSphere Client)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

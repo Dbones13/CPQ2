@@ -1,0 +1,11 @@
+{
+    "id": 14639,
+    "condition": "[EQ](<*VALUE(MX_MD_Production_Economic_Optimization)*>,)",
+    "name": "Default_MX_MD_Production_Economic_Optimization",
+    "action": "<*SELECTVALUE(MX_MD_Production_Economic_Optimization:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

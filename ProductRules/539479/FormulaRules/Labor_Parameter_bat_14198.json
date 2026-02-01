@@ -1,0 +1,11 @@
+{
+    "id": 14198,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_Parameter_bat",
+    "action": "<*ASSIGNVALUE(Labor_Parameter_bat:[IF]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Pharma)){1}{[IF]([EQ](<*VALUE(C300_Process_Type)*>,Batch-Chemical)){1}{0}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

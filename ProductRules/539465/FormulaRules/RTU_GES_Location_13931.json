@@ -1,0 +1,11 @@
+{
+    "id": 13931,
+    "condition": "1",
+    "name": "RTU GES Location",
+    "action": "[IF]([EQ](<*CTX( Container(RTU_Software_Labor_Container2).Row(1).Column(RTU_GES_Location).GetDisplayValue )*>,None)){<*DISALLOWATTRIBUTES(CE RTU GES Engineer %)*> <*CTX( Container(CE RTU Engineering Labor Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(CE RTU Engineering Labor Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>}{<*ALLOWATTRIBUTES(CE RTU GES Engineer %)*> <*CTX( Container(CE RTU Engineering Labor Container).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(CE RTU Engineering Labor Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(CE RTU Engineering Labor Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "This rule shows/hides GES Eng columns based on RTU GES Location value",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

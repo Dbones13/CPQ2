@@ -1,0 +1,11 @@
+{
+    "id": 14738,
+    "condition": "[NEQ](<*VALUE(MX_Modbus_Serial_Link)*>,Yes)",
+    "name": "MX_Part_Dis_Q5324_56",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5324-56)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

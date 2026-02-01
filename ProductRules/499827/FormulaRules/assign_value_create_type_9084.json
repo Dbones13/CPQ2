@@ -1,0 +1,11 @@
+{
+    "id": 9084,
+    "condition": "[EQ](<*VALUE(Crate Type)*>,)",
+    "name": "assign value create type",
+    "action": "<*SELECTVALUE(Crate Type:Domestic/Truck)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "05/10/24",
+    "modifiedBy": "Shiva Kumar Gurram"
+}

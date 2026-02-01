@@ -1,0 +1,11 @@
+{
+    "id": 12909,
+    "condition": "[AND]([EQ](<*CTX ( Container(SC_P1P2_Parts_Details).Rows.GetCount )*>,0),[IF]([EQ](<*VALUE(SC_Product_Type)*>,New)){1}{[EQ](<*VALUE(SC_Renewal_check)*>,2)}[ENDIF])",
+    "name": "Hide_Checkbox",
+    "action": "<*DISALLOWATTRIBUTES(SC_P1P2_AutoUpdate_Editable_Ext)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

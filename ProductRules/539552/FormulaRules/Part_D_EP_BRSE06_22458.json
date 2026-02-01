@@ -1,0 +1,11 @@
+{
+    "id": 22458,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_BR_Server)*>,Yes),[NEQ](<*VALUE(ESDC_Experion_Backup_&_Restore_Release)*>,R520))",
+    "name": "Part_D_EP_BRSE06",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-BRSE06)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

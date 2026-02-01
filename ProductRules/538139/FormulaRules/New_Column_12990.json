@@ -1,0 +1,11 @@
+{
+    "id": 12990,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>, New)",
+    "name": "New_Column",
+    "action": "<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(PY_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Renewal_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Previous_Year_List_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Current_Year_List_Price).SetPermission(Hidden) )*>\n<*DISALLOWATTRIBUTES(SC_Scope Addition)*>\n\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Model_Number).SetPermission(Hidden) )*>\n\n<*CTX ( Container(SC_BGP_Invalid_Cont).Column(Model_Number).SetPermission(Hidden) )*>\n\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Previous_Year_Cost_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Current_Year_Cost_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Scope Addition Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_BGP_Models_Scope_Cont).Column(Scope Reduction Price).SetPermission(Hidden) )*>",
+    "description": "It will show new container columns",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

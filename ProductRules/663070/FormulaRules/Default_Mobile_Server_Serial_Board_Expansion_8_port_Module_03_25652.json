@@ -1,0 +1,11 @@
+{
+    "id": 25652,
+    "condition": "[EQ](<*VALUE(Mobile Server Serial Board Expansion- 8 port Module (0-3))*>,)",
+    "name": "Default_Mobile Server_Serial_Board_Expansion_8_port_Module_(0-3)",
+    "action": "<*ASSIGNVALUE(Mobile Server Serial Board Expansion- 8 port Module (0-3):0)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

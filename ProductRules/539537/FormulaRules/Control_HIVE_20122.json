@@ -1,0 +1,11 @@
+{
+    "id": 20122,
+    "condition": "[OR]([EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Physical),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,Control HIVE - Virtual))",
+    "name": "Control_HIVE",
+    "action": "<*DISALLOWVALUES(SerC_CG_C300_Controller_Module_Type:C300(PCNT02))*>",
+    "description": "CXCPQ - 51941 Requirement 8",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

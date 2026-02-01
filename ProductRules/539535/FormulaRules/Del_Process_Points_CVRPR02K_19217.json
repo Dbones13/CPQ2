@@ -1,0 +1,11 @@
+{
+    "id": 19217,
+    "condition": "[NOT]([AND]([GT](<*VALUE(PlantCruise_Process_Points)*>,1999),[EQ](<*VALUE(PlantCruise_Redundant_C300_Controller)*>,Yes)))",
+    "name": "Del_Process_Points_CV-RPR02K",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-RPR02K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

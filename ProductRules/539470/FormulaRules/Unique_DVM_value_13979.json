@@ -1,0 +1,11 @@
+{
+    "id": 13979,
+    "condition": "1",
+    "name": "Unique DVM value",
+    "action": "<*ASSIGNVALUE(DVM System Group List:<*CTX( Container(DVM_System_Group_Cont).UniqueValues(DVM_System_Group_Name).Separator(,) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

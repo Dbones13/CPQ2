@@ -1,0 +1,11 @@
+{
+    "id": 26244,
+    "condition": "[NOT]([AND]([OR]([EQ](<*VALUE(Experion Software Release)*>,R511),[EQ](<*VALUE(Experion Software Release)*>,R510),[EQ](<*VALUE(Experion Software Release)*>,R520)),[GT](<*VALUE(Additional Stations)*>,0)))",
+    "name": "Hide_Additional_Station_Node_message",
+    "action": "<*DISALLOWATTRIBUTES(Additional_Station_Node_message)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

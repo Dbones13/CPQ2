@@ -1,0 +1,11 @@
+{
+    "id": 10609,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*CTX ( Container(LSS_Third_party_items).Rows.GetCount )*>,0))",
+    "name": "Addrow for LSS Third party",
+    "action": "<*CTX ( Container(LSS_Third_party_items).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

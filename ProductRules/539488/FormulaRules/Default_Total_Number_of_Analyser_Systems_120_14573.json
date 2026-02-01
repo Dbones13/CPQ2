@@ -1,0 +1,11 @@
+{
+    "id": 14573,
+    "condition": "[EQ](<*VALUE(MSASE_Total_Number_of_Analyser_Systems_(1-20))*>,)",
+    "name": "Default Total Number of Analyser Systems (1-20)",
+    "action": "<*ASSIGNVALUE(MSASE_Total_Number_of_Analyser_Systems_(1-20):1)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

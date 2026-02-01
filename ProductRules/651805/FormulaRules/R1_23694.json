@@ -1,0 +1,11 @@
+{
+    "id": 23694,
+    "condition": "[AND]([EQ](<*VALUE(Trigger_r2q_rules)*>,True), [EQ](<*CTX ( Quote.CustomField(R2Q_Save) )*>,Submit))",
+    "name": "R1",
+    "action": "<* ExecuteScript(GS_PHD_CalculateLabour) *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

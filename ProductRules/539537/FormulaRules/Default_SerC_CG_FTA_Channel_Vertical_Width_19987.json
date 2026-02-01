@@ -1,0 +1,11 @@
+{
+    "id": 19987,
+    "condition": "[EQ](<*VALUE(SerC_CG_FTA_Channel_Vertical_Width)*>,)",
+    "name": "Default_SerC_CG_FTA_Channel_Vertical_Width",
+    "action": "<*SELECTVALUE(SerC_CG_FTA_Channel_Vertical_Width:Narrow)*>",
+    "description": "CXCPQ-52066",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

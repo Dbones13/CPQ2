@@ -1,0 +1,11 @@
+{
+    "id": 20604,
+    "condition": "[AND]([EQ](<*VALUE(SS_Display_Size)*>,24 inch),[EQ](<*VALUE(SS_Display_Supplier)*>,Honeywell))",
+    "name": "Part_A_TP_FPW241",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:TP-FPW241)*><*SETATVQTY(Simulation_Bom_parts:TP-FPW241, <*VALUE(Simulation_red_non_red_Check)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23637,
+    "condition": "[AND]([EQ](<*VALUE(R2QRequest)*>,Yes),[EQ](<*VALUE(calculate_value_set)*>,True))",
+    "name": "R2Q Trigger",
+    "action": "<* ExecuteScript(LoadPartSummary) *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/07/25",
+    "modifiedBy": "Saratha  Gnanamani"
+}

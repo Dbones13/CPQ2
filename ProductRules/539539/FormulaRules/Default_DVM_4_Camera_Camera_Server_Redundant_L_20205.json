@@ -1,0 +1,11 @@
+{
+    "id": 20205,
+    "condition": "[EQ](<*VALUE(DVM_4_Camera_Camera_Server_Redundant_L)*>,)",
+    "name": "Default_DVM_4_Camera_Camera_Server_Redundant_L",
+    "action": "<*SELECTVALUE(DVM_4_Camera_Camera_Server_Redundant_L:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

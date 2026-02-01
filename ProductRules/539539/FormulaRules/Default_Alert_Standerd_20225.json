@@ -1,0 +1,11 @@
+{
+    "id": 20225,
+    "condition": "[EQ](<*VALUE(Alert_Standerd)*>,)",
+    "name": "Default_Alert_Standerd",
+    "action": "<*ASSIGNVALUE(Alert_Standerd:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

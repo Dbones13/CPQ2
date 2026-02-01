@@ -1,0 +1,11 @@
+{
+    "id": 4713,
+    "condition": "[EQ](<*VALUE(MX_SG_Thermal_Equalizatio_System)*>,)",
+    "name": "Default_MX_SG_Thermal_Equalizatio_System",
+    "action": "<*SELECTVALUE(MX_SG_Thermal_Equalizatio_System:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

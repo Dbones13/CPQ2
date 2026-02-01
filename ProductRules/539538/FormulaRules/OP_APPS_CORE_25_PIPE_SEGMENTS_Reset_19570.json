@@ -1,0 +1,11 @@
+{
+    "id": 19570,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(Exp HS Op Apps Core 25 Pipe Segments)*>,0)*>,0))",
+    "name": "OP APPS CORE 25 PIPE SEGMENTS Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-AGBP25)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

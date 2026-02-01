@@ -1,0 +1,11 @@
+{
+    "id": 14782,
+    "condition": "[EQ](<*VALUE(MX_HC_Digital_Output_Relays_8_Channel)*>,0)",
+    "name": "MX_Part_Dis_Q8791_50",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q8791-50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

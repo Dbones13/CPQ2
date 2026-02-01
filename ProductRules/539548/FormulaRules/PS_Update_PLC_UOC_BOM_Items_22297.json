@@ -1,0 +1,11 @@
+{
+    "id": 22297,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,3rd Party PLC to ControlEdge PLC/UOC),[NEQ](<*CTX( Container(CONT_MSID_SUBPRD).UniqueValues(PLC_UOC_BOM_Items).Separator() )*>,<*Eval(Replace(\"<*VALUE(PLC_UOC_BOM_Items)*>\",\", \",\",\"))*>))",
+    "name": "PS_Update_PLC_UOC_BOM_Items",
+    "action": "<* ExecuteScript(PS_Update_PLC_UOC_BOM_Items) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

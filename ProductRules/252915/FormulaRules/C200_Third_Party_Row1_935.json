@@ -1,0 +1,11 @@
+{
+    "id": 935,
+    "condition": "[EQ](<*CTX( Container(C200_Migration_Scenario_Cont).Row(1).Column(C200_Select_the_Migration_Scenario).GetDisplayValue )*>,C200 to ControlEdge UOC)",
+    "name": "C200_Third_Party_Row1",
+    "action": "<*CTX( Container(C200_Third_Party_Items_Cont).Row(1).Column(WriteIn).Set(3rd Party Hardware - 1756-EN2TR <i class='fa fa-info-circle' style='color: #106cc6' title=\"This must be procured locally through sourcing department - quote currency\" ></i>) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "24/01/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

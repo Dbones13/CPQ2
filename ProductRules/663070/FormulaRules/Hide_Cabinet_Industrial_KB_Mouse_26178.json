@@ -1,0 +1,11 @@
+{
+    "id": 26178,
+    "condition": "[OR]([EQ](<*VALUE(Interface with TPS Required?)*>,No),[EQ](<*VALUE(New_Expansion)*>,New))",
+    "name": "Hide_Cabinet_Industrial_KB_Mouse",
+    "action": "<*DISALLOWATTRIBUTES(Cabinet_Industrial_KB_Mouse)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

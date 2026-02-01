@@ -1,0 +1,11 @@
+{
+    "id": 13511,
+    "condition": "[EQ](<*VALUE(Virtualization_EBR_Release)*>,)",
+    "name": "Default_EBR_Release",
+    "action": "<*SELECTVALUE(Virtualization_EBR_Release:R520)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

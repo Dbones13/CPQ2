@@ -1,0 +1,11 @@
+{
+    "id": 21864,
+    "condition": "[GT](<*VALUE(FDM MUX Monitoring License (0-1))*>,0)",
+    "name": "Condition for FDM MAX MUX Monitoring License (0-1)",
+    "action": "<*ASSIGNVALUE(FDM MAX MUX Monitoring License (0-1):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

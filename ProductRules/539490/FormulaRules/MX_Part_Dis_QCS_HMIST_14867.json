@@ -1,0 +1,11 @@
+{
+    "id": 14867,
+    "condition": "[OR]([NEQ](<*VALUE(MX_Platform_Type)*>,Physical),[LT](<*VALUE(MX_number_of_operator_station)*>,1))",
+    "name": "MX_Part_Dis_QCS_HMIST",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:QCS-HMIST)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

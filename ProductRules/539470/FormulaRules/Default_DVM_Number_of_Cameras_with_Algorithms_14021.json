@@ -1,0 +1,11 @@
+{
+    "id": 14021,
+    "condition": "[EQ](<*VALUE(DVM_Number_of_Cameras_with_Algorithms)*>,)",
+    "name": "Default_DVM_Number_of_Cameras_with_Algorithms",
+    "action": "<*ASSIGNVALUE(DVM_Number_of_Cameras_with_Algorithms:20)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

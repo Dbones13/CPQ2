@@ -1,0 +1,11 @@
+{
+    "id": 13263,
+    "condition": "[EQ](<*VALUE(Level of Documentation)*>,)",
+    "name": "Set default value for Level of Documentation",
+    "action": "<*SELECTVALUE(Level of Documentation:Text Description)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

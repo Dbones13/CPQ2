@@ -1,0 +1,11 @@
+{
+    "id": 4834,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame)),[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Basis Weight))",
+    "name": "show_z_Axis_and_dynamic_air",
+    "action": "<*DISALLOWATTRIBUTES(MX_SE_Z_Axis_Sensor)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

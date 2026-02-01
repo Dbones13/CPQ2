@@ -1,0 +1,11 @@
+{
+    "id": 19535,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Select WorkStation Grade Computer Platform Type)*>,HP Z4 G4),[GT](<* IsNull(<*VALUE(Exp HS Quantity of Flex Station)*>,0) *>,0))",
+    "name": "Set MZ-PCWS84",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:MZ-PCWS84)*><*SETATVQTY(Experion_HS_PART_SUMMARY:MZ-PCWS84,<*VALUE(Exp HS Quantity of Flex Station)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

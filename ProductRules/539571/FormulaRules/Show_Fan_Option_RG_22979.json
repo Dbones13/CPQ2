@@ -1,0 +1,11 @@
+{
+    "id": 22979,
+    "condition": "<*IFANYVALUE(SerC_CG_IO_Family_Type:Series-C Mark II,SerC_CG_IO_Family_Type:Turbomachinery)*>",
+    "name": "Show_Fan_Option_RG",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_Fan_Option)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

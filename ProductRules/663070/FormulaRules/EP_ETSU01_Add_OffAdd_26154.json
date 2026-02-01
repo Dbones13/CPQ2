@@ -1,0 +1,11 @@
+{
+    "id": 26154,
+    "condition": "[AND]([GT]([IF]([GT](<*VALUE(EP_ETSU01_OffAdd_int)*>,<*VALUE(EP_ETSU01_OffAdd_qty)*>)){<*VALUE(EP_ETSU01_OffAdd_Plus1)*>}{<*VALUE(EP_ETSU01_OffAdd_qty)*>}[ENDIF],0),[GT](<*VALUE(Off_Process_Base_Additional_License)*>,0))",
+    "name": "EP_ETSU01_Add_OffAdd",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-ETSU01)*>[IF]([GT](<*VALUE(EP_ETSU01_OffAdd_int)*>,<*VALUE(EP_ETSU01_OffAdd_qty)*>)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ETSU01,<*VALUE(EP_ETSU01_OffAdd_Plus1)*>)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ETSU01,<*VALUE(EP_ETSU01_OffAdd_qty)*>)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

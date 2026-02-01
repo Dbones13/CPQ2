@@ -1,0 +1,11 @@
+{
+    "id": 26344,
+    "condition": "[OR]([EQ](<*VALUE(CMS Cabinet Mounting Stations required)*>,No),[NEQ](<*VALUE(MIB Configuration Required?)*>,Yes))",
+    "name": "MIB_CMS_Validation_Message visibility",
+    "action": "<*DISALLOWATTRIBUTES(MIB_CMS_Validation_Message)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

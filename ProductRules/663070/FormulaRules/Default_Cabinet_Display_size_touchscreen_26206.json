@@ -1,0 +1,11 @@
+{
+    "id": 26206,
+    "condition": "[AND]([EQ](<*VALUE(Cabinet_Touch_Screen_required)*>,Touch Screen),[EQ](<*VALUE(Cabinet_Display_size)*>,))",
+    "name": "Default_Cabinet_Display_size_touchscreen",
+    "action": "<*SELECTVALUE(Cabinet_Display_size:24 inch Touch Dell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

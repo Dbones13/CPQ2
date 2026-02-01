@@ -1,0 +1,11 @@
+{
+    "id": 10668,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Type_of_Communication_Links_with_3rd_party)*>,)",
+    "name": "CWS_Mig_Default_Type_of_Communication_1",
+    "action": "<*SELECTVALUE(CWS_Mig_Type_of_Communication_Links_with_3rd_party:Honeywell OPC Client)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

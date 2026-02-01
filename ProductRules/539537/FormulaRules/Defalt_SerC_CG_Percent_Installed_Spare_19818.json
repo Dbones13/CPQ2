@@ -1,0 +1,11 @@
+{
+    "id": 19818,
+    "condition": "[EQ](<*VALUE(SerC_CG_Percent_Installed_Spare)*>,)",
+    "name": "Defalt_SerC_CG_Percent_Installed_Spare",
+    "action": "<*ASSIGNVALUE(SerC_CG_Percent_Installed_Spare:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13223,
+    "condition": "1",
+    "name": "PreSelectAttributeValues",
+    "action": "[IF]([EQ](<*VALUE(ATT_GMNUMSL)*>,)){<*SELECTVALUE(ATT_GMNUMSL:0)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

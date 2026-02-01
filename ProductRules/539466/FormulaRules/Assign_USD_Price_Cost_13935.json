@@ -1,0 +1,11 @@
+{
+    "id": 13935,
+    "condition": "1",
+    "name": "Assign USD Price Cost",
+    "action": "<*ASSIGNVALUE(USD Price:<*Eval(<*VALUE(Price)*>/<*CTX( Quote.CustomField(Exchange Rate) )*>)*>)*>\n<*ASSIGNVALUE(USD Cost:<*Eval(<*VALUE(cost)*>/<*CTX( Quote.CustomField(Exchange Rate) )*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10484,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "PLC_UOC_labor_parameter_var_57",
+    "action": "[IF]([IN](<*VALUE(LSS_Number_of_Miscellaneous_Logic)*>,,0)){<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_57:<*Eval(int(<* Round ( <* Eval((((0<*VALUE(PLC_UOC_labor_parameter_var_23)*>+0<*VALUE(PLC_UOC_labor_parameter_var_24)*>+0<*VALUE(PLC_UOC_labor_parameter_var_27)*>+0<*VALUE(PLC_UOC_labor_parameter_var_28)*>)*12/60+(0<*VALUE(PLC_UOC_labor_parameter_var_25)*>+0<*VALUE(PLC_UOC_labor_parameter_var_26)*>+0<*VALUE(PLC_UOC_labor_parameter_var_29)*>+0<*VALUE(PLC_UOC_labor_parameter_var_30)*>)*7/60)*0<*VALUE(PLC_UOC_Inhouse_eng_cal_parameter_1)*>)/6) *>,0) *>))*>)*>}{<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_57:<*VALUE(LSS_Number_of_Miscellaneous_Logic)*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

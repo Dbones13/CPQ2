@@ -1,0 +1,11 @@
+{
+    "id": 17752,
+    "condition": "1",
+    "name": "Total_DI_Points",
+    "action": "<*ASSIGNVALUE(Labor_parameter_di:<*Eval(0<*CTX( Container(SM_RG_IO_Count_Digital_Input_Cont).Sum(Total_DI_Points) )*> + 0<*CTX( Container(SM_RG_IO_Count_Digital_Input_1.3_Cabinet_Cont).Sum(Total_DI_Points) )*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

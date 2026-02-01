@@ -1,0 +1,11 @@
+{
+    "id": 20636,
+    "condition": "[GT](<*VALUE(SS_Number_of_Network_Storage_Device_Performance)*>,0)",
+    "name": "Part_A_MZ-NWSTR9",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-NWSTR9)*><*SETATVQTY(Simulation_Bom_parts:MZ-NWSTR9,<*VALUE(SS_Number_of_Network_Storage_Device_Performance)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15015,
+    "condition": "[AND]([EQ](<*VALUE(LSS_PLC_Server_Redundancy)*>,Redundant),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "BOM_PLC_UOC_EP-RSC100",
+    "action": "[IF]([LEQ](<*Eval(0-int(0-(((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC10K)*>*10000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC05K)*>*5000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC02K)*>*2000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC01K)*>*1000))/100)))*>,0)){}{<* DoNotResetAtt *><*SELECTVALUE(PLC_UOC_BOM_Items:EP-RSC100)*><* DoResetAtt *><*SETATVQTY(PLC_UOC_BOM_Items:EP-RSC100,<*Eval(0-int(0-(((0<*VALUE(LSS_PLC_Total_Number_of_new_SCADA_point_License)*>)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC10K)*>*10000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC05K)*>*5000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC02K)*>*2000)-(0<*GETATVQTY(PLC_UOC_BOM_Items:EP-RSC01K)*>*1000))/100)))*>)*>}[ENDIF]",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

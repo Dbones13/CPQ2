@@ -1,0 +1,62 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" style="background-color:#edeff0">
+  <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+    <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span>
+      @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+  </div>
+  <!-- ko foreach: attributes.filterByProperty('name' , "Migration_MSID_Choices") -->
+  <div style="width:100%">
+    <div class="msid-label">
+      <label data-bind="html: 'Module Questions for MSID #' + values()[0].displayValue"></label>
+    </div>
+  </div>
+  <!-- /ko -->
+
+  <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+  <!-- /ko -->
+
+  <div class="row col-xs-12 swagger">
+    <div id="ce-system">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ce-system')">
+          <!--<span id = "sys" style="margin-inline: 43%;" >System</span>-->
+          <a id="ce-system-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ce-system-content">
+          <div class="col-xs-12 col-sm-6">
+            
+              <!-- ko foreach: attributes.filterByProperty('name' , 'CE_System_Cont') -->
+
+    <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-6' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+        <!-- ko template: { name: $root.getAttributeTemplate } -->
+        <!-- /ko -->
+    </div>
+
+    <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-xs-12 swagger">
+    <div id="ce-general-inputs">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ce-general-inputs')">
+          <span>General Inputs</span>
+          <a id="ce-general-inputs-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ce-general-inputs-content">
+          <div class="col-xs-12 col-sm-6">
+            <!-- ko foreach: attributes.filterByProperty('name' , "CE_General_Inputs_Cont") -->
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+            <!-- /ko -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

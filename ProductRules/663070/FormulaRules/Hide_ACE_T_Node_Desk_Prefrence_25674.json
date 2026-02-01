@@ -1,0 +1,11 @@
+{
+    "id": 25674,
+    "condition": "[OR]([EQ](<*VALUE(New_Expansion)*>,New),[EQ](<*VALUE(Interface with TPS Required?)*>,No))",
+    "name": "Hide_ACE_T_Node_Desk_Prefrence",
+    "action": "<*DISALLOWATTRIBUTES(ACE-T Node in Desk Preference,Hardware Design Selection_ACE_T_Node,Node_Supplier_ACE_T,Trusted Platform Module_TPM_ACE_T,Additional Hard Disk (ACE-T),Additional Memory (ACE-T),Displays (ACE-T)(0-1),Display Size (ACE-T),Display Supplier (ACE-T),ServerLocationClusNetwork_Group desk)*>",
+    "description": "CXCPQ- 35416",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

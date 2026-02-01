@@ -1,0 +1,11 @@
+{
+    "id": 9055,
+    "condition": "1",
+    "name": "Hide_Project_Additional_GES",
+    "action": "[IF]([OR]([EQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,),[EQ](<*CTX( Container(CE_Project_Questions_Cont).Row(1).Column(GES_Location).GetDisplayValue )*>,None))){<*DISALLOWATTRIBUTES(Project_Additinoal_GES_%)*> <*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES Eng).SetPermission(Hidden) )*> <*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>}{<*ALLOWATTRIBUTES(Project_Additinoal_GES_%)*> <*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(PM_Additional_Custom_Deliverables_Labor_Container).Column(GES_MPA_Price).SetPermission(Editable) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

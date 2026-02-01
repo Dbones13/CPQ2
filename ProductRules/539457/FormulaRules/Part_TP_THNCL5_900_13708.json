@@ -1,0 +1,11 @@
+{
+    "id": 13708,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_5070_Universal_Thin_Client_for_5)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_TP_THNCL5_900",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:TP-THNCL5-900)*><*SETATVQTY(Virtualization_BOM_Parts:TP-THNCL5-900,<*VALUE(Virtualization_5070_Universal_Thin_Client_for_5)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

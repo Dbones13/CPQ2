@@ -1,0 +1,11 @@
+{
+    "id": 22484,
+    "condition": "[EQ](<*VALUE(ESDC_DNP3_Protocol_Interface)*>,0)",
+    "name": "Part_D_EP_IDNP3P",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-IDNP3P)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

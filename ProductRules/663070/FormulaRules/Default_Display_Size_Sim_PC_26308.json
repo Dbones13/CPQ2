@@ -1,0 +1,11 @@
+{
+    "id": 26308,
+    "condition": "[EQ](<*VALUE(Display Size (Sim PC))*>,)",
+    "name": "Default_Display_Size_(Sim PC)",
+    "action": "<*SELECTVALUE(Display Size (Sim PC):27 inch NTS NEC)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

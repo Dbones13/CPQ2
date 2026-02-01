@@ -1,0 +1,11 @@
+{
+    "id": 14068,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Hide Labor Details",
+    "action": "<*DISALLOWATTRIBUTES(Header_03_open,Header_03_close,ATTCON_03_close,ATTCON_03_open,ATTCON_04_close,ATTCON_04_open,DVM_Implementation_Methodology,DVM_GES_Location,DVM_Number_of_Reviews,DVM_Number_of_Title_Page_Sheet,DVM_Number_of_Symbols,DVM_Number_of_Riser,DVM_Number_of_Overall_Site_Plans,DVM_Number_of_Enlarged_Site_Plans,DVM_Number_of_Building_Plans,DVM_Number_of_Room_Plans,DVM_Number_of_Camera_Details_Drawings,DVM_Number_of_Other_Details_Drawings,DVM_Number_of_Server_Rack_Configurations,DVM_Number_of_Workstation_Configurations,DVM_Number_of_Camera_field_wiring_types,DVM_Number_of_Other_Detail_field_wiring_types,DVM_Number_of_Server_Rack_Wiring_Diagrams,DVM_Number_of_Workstation_Wiring_Diagrams,DVM_Number_of_VSS_Control_Panel,DVM_Number_of_Camera_Panel,DVM_Number_of_Explosion_Proof_PTZ_Cameras,DVM_Number_of_Weather_Proof_PTZ_Cameras,DVM_Number_of_Interior_PTZ_Cameras,DVM_Number_of_Thermal_PTZ_cameras,DVM_Number_of_Explosion_Proof_Fixed_Cameras,DVM_Number_of_Weather_Proof_Fixed_Cameras,DVM_Number_of_Interior_Fixed_Cameras,DVM_Number_of_Thermal_Fixed_Cameras,DVM_Number_of_Streamers,DVM_Number_of_Converters,DVM_Redundant_DVM_Servers,DVM_Number_of_DVM_DB_Servers,DVM_Number_of_DVM_CM_Servers,DVM_Number_of_Video_Analytic_Servers,DVM_Number_of_DVM_Workstations,DVM_Number_of_Cameras_with_Algorithms,DVM_Number_of_Graphics,DVM_Number_of_Network_Switches,DVM_FAT_Duration_in_Days_for_DVM,DVM_SAT_Duration_in_Days_for_DVM)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

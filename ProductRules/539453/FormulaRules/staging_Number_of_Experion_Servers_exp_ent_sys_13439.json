@@ -1,0 +1,11 @@
+{
+    "id": 13439,
+    "condition": "[NEQ](<*CTX ( Container(Experion_Enterprise_Cont).Sum(staging_Number_of_Experion_Servers_exp_ent_group) )*>,<*VALUE(staging_Number_of_Experion_Servers_exp_ent_sys)*>)",
+    "name": "staging_Number_of_Experion_Servers_exp_ent_sys",
+    "action": "<*ASSIGNVALUE(staging_Number_of_Experion_Servers_exp_ent_sys:<*CTX ( Container(Experion_Enterprise_Cont).Sum(staging_Number_of_Experion_Servers_exp_ent_group) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

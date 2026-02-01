@@ -1,0 +1,11 @@
+{
+    "id": 22518,
+    "condition": "[OR]([NEQ](<*VALUE(ESDC_BR_Station)*>,Yes),[NEQ](<*VALUE(ESDC_Experion_Backup_&_Restore_Release)*>,R501),[NEQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes),[EQ](<*VALUE(ESDC_Client_Station_Qty)*>,0),[EQ](<*VALUE(ESDC_Client_Station_Qty)*>,))",
+    "name": "Part_D_EP_BRWE05",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-BRWE05)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

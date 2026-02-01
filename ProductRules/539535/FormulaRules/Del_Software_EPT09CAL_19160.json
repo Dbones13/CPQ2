@@ -1,0 +1,11 @@
+{
+    "id": 19160,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_Windows_Server_2016_RDS_CAL)*>,0))",
+    "name": "Del_Software_EP-T09CAL",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:EP-T09CAL)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

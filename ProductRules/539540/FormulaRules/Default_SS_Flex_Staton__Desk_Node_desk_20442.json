@@ -1,0 +1,11 @@
+{
+    "id": 20442,
+    "condition": "[EQ](<*VALUE(SS_Flex Staton  Desk Node_desk)*>,)",
+    "name": "Default_SS_Flex Staton  Desk Node_desk",
+    "action": "<*SELECTVALUE(SS_Flex Staton  Desk Node_desk:STN_STD_DELL_Tower_NonRAID)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

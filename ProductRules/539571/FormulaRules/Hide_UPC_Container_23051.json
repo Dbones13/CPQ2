@@ -1,0 +1,11 @@
+{
+    "id": 23051,
+    "condition": "[AND]([NEQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M),[NEQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "Hide UPC Container",
+    "action": "<*DISALLOWATTRIBUTES(Header_25_open,Header_25_close,C300_UPC_Labor_IO_count_RG_1,C300_UPC_Labor_IO_count_RG_2,UPC_Labor_IO_Note)*>",
+    "description": "CCEECOMMBR-6972",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

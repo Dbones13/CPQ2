@@ -1,0 +1,11 @@
+{
+    "id": 25778,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Orion_2P_Base_Unit_Left_Right)*>,0),<*ISSELECTED(Node Supplier.Honeywell)*>))",
+    "name": "MP-OCBAS1-300_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MP-OCBAS1-300)*><* DoResetAtt *>",
+    "description": "CXCPQ-38225",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

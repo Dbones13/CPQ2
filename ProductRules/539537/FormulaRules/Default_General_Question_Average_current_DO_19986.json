@@ -1,0 +1,11 @@
+{
+    "id": 19986,
+    "condition": "[EQ](<*VALUE(General_Question_Average_current_DO)*>,)",
+    "name": "Default_General_Question_Average_current_DO",
+    "action": "<*ASSIGNVALUE(General_Question_Average_current_DO:300)*>",
+    "description": "#CXCPQ-50811",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

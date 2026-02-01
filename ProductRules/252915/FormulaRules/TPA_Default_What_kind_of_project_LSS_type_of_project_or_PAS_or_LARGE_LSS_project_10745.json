@@ -1,0 +1,11 @@
+{
+    "id": 10745,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_What_kind_of_project_LSS_type_of_project_or_PAS_or_LARGE_LSS_project)*>,))",
+    "name": "TPA_Default_What_kind_of_project_LSS_type_of_project_or_PAS_or_LARGE_LSS_project",
+    "action": "<*SELECTVALUE(TPA_What_kind_of_project_LSS_type_of_project_or_PAS_or_LARGE_LSS_project:Large Project (PAS/LSS))*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

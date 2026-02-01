@@ -1,0 +1,11 @@
+{
+    "id": 22498,
+    "condition": "[EQ](<*VALUE(ESDC_Software_Release)*>,R520)",
+    "name": "Part_A_19_D_16",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:EP-COAS19)*><*SETATVQTY(ESDC_BOM_Parts:EP-COAS19, <*VALUE(ESDC_Red_nonRed_Check)*>)*><*DISALLOWVALUES(ESDC_BOM_Parts:EP-COAS16)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "09/01/26",
+    "modifiedBy": "Ramesh Kumar"
+}

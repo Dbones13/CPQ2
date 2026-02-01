@@ -1,0 +1,11 @@
+{
+    "id": 4712,
+    "condition": "[EQ](<*VALUE(MX_SG_Pack_Measuring_Head_Upgrade)*>,)",
+    "name": "Default_MX_SG_Pack_Measuring_Head_Upgrade",
+    "action": "<*SELECTVALUE(MX_SG_Pack_Measuring_Head_Upgrade:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

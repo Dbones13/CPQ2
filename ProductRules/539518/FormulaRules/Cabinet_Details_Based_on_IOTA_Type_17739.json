@@ -1,0 +1,11 @@
+{
+    "id": 17739,
+    "condition": "1",
+    "name": "Cabinet Details Based on IOTA Type",
+    "action": "[IF]([EQ](<*VALUE(SM_Universal_IOTA_Type)*>,RUSIO)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_SDO_UIO_UnitLoad).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_SDO_UIO_UnitLoad).SetPermission(Hidden) )*>}[ENDIF]\n\n[IF]([EQ](<*VALUE(SM_Universal_IOTA_Type)*>,RUSIO)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_SDO_UIO_Unit_Load).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_SDO_UIO_Unit_Load).SetPermission(Hidden) )*>}[ENDIF]\n\n[IF]([EQ](<*VALUE(SM_Universal_IOTA_Type)*>,RUSIO)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_UIO_Redundant).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_UIO_Redundant).SetPermission(Hidden) )*>}[ENDIF]\n\n[IF]([EQ](<*VALUE(SM_Universal_IOTA_Type)*>,RUSIO)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_UIO).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_UIO).SetPermission(Hidden) )*>}[ENDIF]\n\n[IF]([EQ](<*VALUE(SM_Universal_IOTA_Type)*>,RUSIO)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_DIO_Redundant).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_DIO_Redundant).SetPermission(Hidden) )*>}[ENDIF]\n\n\n[IF]([EQ](<*VALUE(SM_Universal_IOTA_Type)*>,RUSIO)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_DIO).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_Shutdown_Input_DIO).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "Cabinet Details Based on IOTA Type",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

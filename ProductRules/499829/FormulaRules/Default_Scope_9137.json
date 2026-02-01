@@ -1,0 +1,11 @@
+{
+    "id": 9137,
+    "condition": "[EQ](<*VALUE(Trace_Software_Scope_Choices)*>,)",
+    "name": "Default_Scope",
+    "action": "<*SELECTVALUE(Trace_Software_Scope_Choices:HW/SW)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

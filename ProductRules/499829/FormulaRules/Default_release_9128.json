@@ -1,0 +1,11 @@
+{
+    "id": 9128,
+    "condition": "[EQ](<*VALUE(Trace_Software_Select_desired_Release)*>,)",
+    "name": "Default_release",
+    "action": "<*SELECTVALUE(Trace_Software_Select_desired_Release:R160)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "11/09/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18567,
+    "condition": "[EQ](<*VALUE(ES_Node_Supplier_Server)*>,)",
+    "name": "Default_Node_Supplier_(Server)",
+    "action": "<*SELECTVALUE(ES_Node_Supplier_Server:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18609,
+    "condition": "[AND]([EQ](<*VALUE(ES_Mobile_Server_Nodes_required)*>,Yes),[NEQ](<*VALUE(ES_Hardware_Selection)*>,SVR_PER_DELL_Rack_RAID5))",
+    "name": "Control_additional_Mobile_2",
+    "action": "<*DISALLOWVALUES(ES_Additional_Memory_Mobile_Server:16GB)*><*SELECTVALUE(ES_Additional_Memory_Mobile_Server:None)*>",
+    "description": "7960 story",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17961,
+    "condition": "[GT](<*VALUE(PCD_Qty_Serial_Interface_RS_485_galvanic_isolation)*>,0)",
+    "name": "Add_PCD7.F150S",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PCD_Part_Summary:PCD7.F150S)*><*SETATVQTY(PCD_Part_Summary:PCD7.F150S,<*VALUE(PCD_Qty_Serial_Interface_RS_485_galvanic_isolation)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

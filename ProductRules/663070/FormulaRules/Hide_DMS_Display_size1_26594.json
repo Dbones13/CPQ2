@@ -1,0 +1,11 @@
+{
+    "id": 26594,
+    "condition": "[EQ](<*VALUE(DMS Desk Mounting Stations required)*>,No)",
+    "name": "Hide_DMS_Display_size1",
+    "action": "<*DISALLOWATTRIBUTES(DMS Display size)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

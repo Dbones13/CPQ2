@@ -1,0 +1,11 @@
+{
+    "id": 18158,
+    "condition": "[NOT]([IN](<*VALUE(MXP_Scanner_Type)*>,3-4022-54,3-4022-64,Q6031-00,3-4036-10,3-4036-11,3-6056-01,3-6056-02,3-6056-04,3-4022-44))",
+    "name": "Show_MXP_Electronics_End_Cooling",
+    "action": "<*ALLOWATTRIBUTES(MXP_Electronics_End_Cooling)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

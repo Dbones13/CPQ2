@@ -1,0 +1,11 @@
+{
+    "id": 22845,
+    "condition": "[EQ](<*VALUE(SerC_RG_Power_Entry_Default)*>,)",
+    "name": "Default_SerC_RG_Power_Entry_Default",
+    "action": "<*SELECTVALUE(SerC_RG_Power_Entry_Default:None)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

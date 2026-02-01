@@ -1,0 +1,11 @@
+{
+    "id": 14588,
+    "condition": "[EQ](<*VALUE(MSASE_Number_of_Client_Meetings_at_Client_Location_(1-99))*>,)",
+    "name": "Default Number of Client Meetings at Client Location (1-99)",
+    "action": "<*ASSIGNVALUE(MSASE_Number_of_Client_Meetings_at_Client_Location_(1-99):1)*>",
+    "description": "",
+    "rank": "50",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

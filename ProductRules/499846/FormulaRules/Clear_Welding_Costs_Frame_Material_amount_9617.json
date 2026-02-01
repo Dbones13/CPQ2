@@ -1,0 +1,11 @@
+{
+    "id": 9617,
+    "condition": "[EQ](<*ATTSEL(PSkid Welding Costs Frame Material percentage)*>,0)",
+    "name": "Clear Welding Costs Frame Material amount",
+    "action": "<*ASSIGNVALUE(PSkid Welding Costs Frame Material amount:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

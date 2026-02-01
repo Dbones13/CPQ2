@@ -1,0 +1,11 @@
+{
+    "id": 14146,
+    "condition": "[EQ](<*VALUE(Input_Quality (User Requirement Specification))*>,)",
+    "name": "Default_Input_Quality",
+    "action": "<*SELECTVALUE(Input_Quality (User Requirement Specification):Only verbal Description(Function Plan must be developed from scratch) 100%)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

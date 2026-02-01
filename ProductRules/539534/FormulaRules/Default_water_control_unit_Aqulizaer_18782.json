@@ -1,0 +1,11 @@
+{
+    "id": 18782,
+    "condition": "[EQ](<*VALUE(MX_CD_Water_Control_Unit_Aqualizer)*>,)",
+    "name": "Default_water_control_unit_Aqulizaer",
+    "action": "<*SELECTVALUE(MX_CD_Water_Control_Unit_Aqualizer:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

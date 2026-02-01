@@ -1,0 +1,11 @@
+{
+    "id": 20294,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Axis_and_Updated _M-JPEG_Adapter)*>,Yes))",
+    "name": "Axis Device Adapter_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAXH)*><* DoResetAtt *>",
+    "description": "CXCPQ-45703",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

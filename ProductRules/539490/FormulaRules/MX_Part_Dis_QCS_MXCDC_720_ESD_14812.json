@@ -1,0 +1,11 @@
+{
+    "id": 14812,
+    "condition": "[OR]([NOT]([IN](<*VALUE(MX_What_QCS_System_is_required)*>,QCS CD,QCS MD & CD)),[NEQ](<*VALUE(MX_Electronic_or_physical_media)*>,Electronic))",
+    "name": "MX_Part_Dis_QCS_MXCDC_720_ESD",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:QCS-MXCDC-720-ESD)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

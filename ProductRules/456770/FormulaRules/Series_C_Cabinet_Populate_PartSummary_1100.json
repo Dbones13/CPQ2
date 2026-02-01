@@ -1,0 +1,11 @@
+{
+    "id": 1100,
+    "condition": "1",
+    "name": "Series_C_Cabinet_Populate_PartSummary",
+    "action": "<*ExecuteScript(GS_SeriesCCabinet_Populate_PartSummary)*>",
+    "description": "",
+    "rank": "999",
+    "active": true,
+    "modifiedDate": "04/05/23",
+    "modifiedBy": "Unni Krishna Tula"
+}

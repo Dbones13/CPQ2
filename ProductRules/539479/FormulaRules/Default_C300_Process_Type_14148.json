@@ -1,0 +1,11 @@
+{
+    "id": 14148,
+    "condition": "[EQ](<*VALUE(C300_Process_Type)*>,)",
+    "name": "Default_C300_Process_Type",
+    "action": "<*SELECTVALUE(C300_Process_Type:None)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

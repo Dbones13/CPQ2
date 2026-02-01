@@ -1,0 +1,11 @@
+{
+    "id": 22881,
+    "condition": "[OR]([EQ](<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_RG_Cont).Sum(Validity_Check) )*>,0),[NEQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II),[NEQ](<*VALUE(SerC_CG_MIB_Configuration_Required)*>,Yes))",
+    "name": "Hide_Enhanced_function",
+    "action": "<*DISALLOWATTRIBUTES(Enhanced_function_message)*>",
+    "description": "CXCPQ-37865",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 3341,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(CE_Selected_Products)*>,Experion HS System))",
+    "name": "Hide Container for Experion",
+    "action": "<*DISALLOWATTRIBUTES(CE_General_Inputs_Cont)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

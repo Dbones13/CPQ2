@@ -1,0 +1,11 @@
+{
+    "id": 21895,
+    "condition": "[EQ](<*VALUE(FDM_Experion_TPS_Interface_License(0-2))*>,)",
+    "name": "Default_FDM_Experion_TPS_Interface_License(0-2)",
+    "action": "<*ASSIGNVALUE(FDM_Experion_TPS_Interface_License(0-2):0)*>",
+    "description": "CXCPQ-48540",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

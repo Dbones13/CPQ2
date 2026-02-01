@@ -1,0 +1,11 @@
+{
+    "id": 18365,
+    "condition": "[NEQ](<*VALUE(MXP_Sx15_Aperture)*>,Yes)",
+    "name": "Part_D_3_4203_APT",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-4203-APT)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

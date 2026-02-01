@@ -1,0 +1,11 @@
+{
+    "id": 23626,
+    "condition": "[EQ](<* ProductName *>,Experion Extended Support - RQUP ONLY)",
+    "name": "MSID Column Hide",
+    "action": "<*CTX ( Container(SC_MSID_Container).Column(Base MSID).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_MSID_Container).Column(Additional MSID).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/05/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23095,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery)",
+    "name": "Show_Power_Sysytem_Type",
+    "action": "<*DISALLOWVALUES(SerC_RG_Power_System_Type:Locally Supplied Power,SerC_RG_Power_System_Type:Minimum Required Non Redundant,SerC_RG_Power_System_Type:Minimum Required Redundant,SerC_RG_Power_System_Type:Non Redundant 40A,SerC_RG_Power_System_Type:Redundant 40A)*><*ALLOWVALUES(SerC_RG_Power_System_Type:Redundant 20A,SerC_RG_Power_System_Type:Redundant with BBU 20A,SerC_RG_Power_System_Type:Non Redundant 20A)*>",
+    "description": "#CXCPQ-50810",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

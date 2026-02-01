@@ -1,0 +1,11 @@
+{
+    "id": 4868,
+    "condition": "[AND]([EQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture),[EQ](<*VALUE(MX_SE_Is_Sensor_Calibration_Kit_required)*>,IR Moisture Calibration kit light wt))",
+    "name": "Part_A_Q7996_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Scanner_sensor_bom_parts:Q7996-00)*><*SETATVQTY(Scanner_sensor_bom_parts:Q7996-00,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

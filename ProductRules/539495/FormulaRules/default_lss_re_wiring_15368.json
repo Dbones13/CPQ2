@@ -1,0 +1,11 @@
+{
+    "id": 15368,
+    "condition": "[EQ](<*VALUE(LSS_PLC_re_wiring)*>,)",
+    "name": "default_lss_re_wiring",
+    "action": "<*ASSIGNVALUE(LSS_PLC_re_wiring:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

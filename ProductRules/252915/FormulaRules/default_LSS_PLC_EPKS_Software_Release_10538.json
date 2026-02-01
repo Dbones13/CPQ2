@@ -1,0 +1,11 @@
+{
+    "id": 10538,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "default_LSS_PLC_EPKS_Software_Release",
+    "action": "<*ASSIGNVALUE(LSS_PLC_EPKS_Software_Release:R511.x)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

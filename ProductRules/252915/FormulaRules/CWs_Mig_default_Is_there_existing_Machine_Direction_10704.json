@@ -1,0 +1,11 @@
+{
+    "id": 10704,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Is_there_existing_Machine_Direction_Contro)*>,)",
+    "name": "CWs_Mig_default_Is_there_existing_Machine_Direction",
+    "action": "<*SELECTVALUE(CWS_Mig_Is_there_existing_Machine_Direction_Contro:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14210,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_IM",
+    "action": "<*ASSIGNVALUE(C300_Labour_Parameter_IM:[IF]([LEQ](<*VALUE(labor_parameter_io)*>,400)){60}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,400),[LEQ](<*VALUE(labor_parameter_io)*>,2000))){80}{[IF]([AND]([GT](<*VALUE(labor_parameter_io)*>,2000),[LEQ](<*VALUE(labor_parameter_io)*>,5000))){100}{[IF]([GT](<*VALUE(labor_parameter_io)*>,5000)){<*CTX( Container(C300_Labor_Base_Details).Row(3).Column(Base_Values).Get )*>}{0}[ENDIF]}[ENDIF]}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-43534\nwhen im = \"Non-Standard Build\" then use below\n if io<= 400, Base = 16\n else if  io> 400 and io<=2000, Base = 32\nElse if io>2000 and io<= 5000, Base = 64\nElse io> 5000, Base = 128\n\nwhen im = \"Standard Build\" then use below\n if io<= 400, Base = 8\n else if  io> 400 and io<=2000, Base = 16\nElse if io>2000 and io<= 5000, Base = 32\nElse io> 5000, Base = 64",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "24/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23378,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZUSRW1,TP-ZUSTW1,TP-ZUSTW2)",
+    "name": "7 Station Upgrade",
+    "action": "<*DISALLOWATTRIBUTES(KE_EBR_Required)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Release)*>\n<*DISALLOWATTRIBUTES(KE_Key_Board_Type)*>\n<*DISALLOWATTRIBUTES(KE_SESP)*>\n<*DISALLOWATTRIBUTES(KE_ISA_Adapter_Required)*>\n<*DISALLOWATTRIBUTES(KE_COA_License_Type)*>\n<*DISALLOWATTRIBUTES(KE_Hardware_Selection)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13516,
+    "condition": "[EQ](<*VALUE(Virtualization_vSphere_Client_Node_OS_Type)*>,)",
+    "name": "Default_vSphere_nodeOS_type",
+    "action": "<*SELECTVALUE(Virtualization_vSphere_Client_Node_OS_Type:Windows 10 COA License)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

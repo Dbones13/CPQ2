@@ -1,0 +1,11 @@
+{
+    "id": 20769,
+    "condition": "[NEQ](<*VALUE(SS_Experion_PKS_Release)*>,R520)",
+    "name": "Part_D_EP_COAS19_5",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-COAS19)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

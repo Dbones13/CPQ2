@@ -1,0 +1,11 @@
+{
+    "id": 13628,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,Yes),[EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers),[GT](<*VALUE(Virtualization_Windows_2022_COA_Licenses_24)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_COADC6",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-COADC6)*><*SETATVQTY(Virtualization_BOM_Parts:EP-COADC6,<*VALUE(Virtualization_Windows_2022_COA_Licenses_24)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

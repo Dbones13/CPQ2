@@ -1,0 +1,11 @@
+{
+    "id": 24169,
+    "condition": "[EQ](<*VALUE(ARO_Honeywell_to_Supply_the_hardware)*>,)",
+    "name": "Default_ARO_Honeywell_to_Supply_the_hardware",
+    "action": "<*SELECTVALUE(ARO_Honeywell_to_Supply_the_hardware:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

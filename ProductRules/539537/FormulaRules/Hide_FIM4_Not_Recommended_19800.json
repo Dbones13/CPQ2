@@ -1,0 +1,11 @@
+{
+    "id": 19800,
+    "condition": "[NOT]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>,<*ISSELECTED(SerC_CG_MIB_Configuration_Required.Yes)*>,<*ISSELECTED(FIM_Type.FIM4)*>,<*ISSELECTED(SerC_CG_Foundation_Fieldbus_Interface_required.Yes)*>))",
+    "name": "Hide_FIM4_Not_Recommended",
+    "action": "<*DISALLOWATTRIBUTES(FIM_FIM4_Not_Recommended)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

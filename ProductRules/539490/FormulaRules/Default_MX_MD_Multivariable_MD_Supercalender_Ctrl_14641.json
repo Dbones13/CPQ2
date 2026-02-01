@@ -1,0 +1,11 @@
+{
+    "id": 14641,
+    "condition": "[EQ](<*VALUE(MX_MD_Multivariable_MD_Supercalender_Ctrl)*>,)",
+    "name": "Default_MX_MD_Multivariable_MD_Supercalender_Ctrl",
+    "action": "<*SELECTVALUE(MX_MD_Multivariable_MD_Supercalender_Ctrl:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

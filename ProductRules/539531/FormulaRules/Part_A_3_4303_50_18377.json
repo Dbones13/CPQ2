@@ -1,0 +1,11 @@
+{
+    "id": 18377,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Sensor_Type)*>,Sx18 PrecisionPlus Kr 85, low ash, 0.4\" (~10mm) gap),[EQ](<*VALUE(MXP_Measurement_Type)*>,6k))",
+    "name": "Part_A_3_4303_50",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-4303-50)*><*SETATVQTY(MXP_SE_Bom_Parts:3-4303-50,1)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

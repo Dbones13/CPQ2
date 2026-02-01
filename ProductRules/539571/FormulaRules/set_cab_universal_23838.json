@@ -1,0 +1,11 @@
+{
+    "id": 23838,
+    "condition": "[AND]([EQ](<*GI(univer)*>,Universal Process Cab - 1.3M),[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "set_cab_universal",
+    "action": "<*SELECTVALUE(SerC_IO_Mounting_Solution:Universal Process Cab - 1.3M)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "27/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

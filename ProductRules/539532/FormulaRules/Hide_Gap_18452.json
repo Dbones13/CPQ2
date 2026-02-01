@@ -1,0 +1,11 @@
+{
+    "id": 18452,
+    "condition": "[NEQ](<*VALUE(MXP_New Smart_Scanner)*>,No)",
+    "name": "Hide_Gap",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Gap)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

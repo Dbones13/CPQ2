@@ -1,0 +1,11 @@
+{
+    "id": 17812,
+    "condition": "[GT](<*CTX( Container(Flow Computer Interfaces).Row(5).Column(Nodes).Get )*>,0)",
+    "name": "Scada_check_flow_r5_0",
+    "action": "<*CTX( Container(Flow Computer Interfaces).Row(6).Column(Scada_check).Set(0) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

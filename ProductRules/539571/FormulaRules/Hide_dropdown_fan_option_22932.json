@@ -1,0 +1,11 @@
+{
+    "id": 22932,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Hide_dropdown_fan_option",
+    "action": "<*DISALLOWVALUES(SerC_RG_Fan_Option:24V Assembly,SerC_RG_Fan_Option:Grille,SerC_RG_Fan_Option:TopCoverPlate)*>",
+    "description": "CXCPQ-44728",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

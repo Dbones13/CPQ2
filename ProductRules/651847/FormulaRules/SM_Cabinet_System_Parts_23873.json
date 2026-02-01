@@ -1,0 +1,11 @@
+{
+    "id": 23873,
+    "condition": "1",
+    "name": "SM_Cabinet_System_Parts",
+    "action": "<*ASSIGNVALUE(SM_Cabinet_System_Parts:<*CTX( Container(SM_RG_Universal_Safety_Cabinet_1.3M_Cont).Row(1).Column(Number_of_SM_SC_1.3M_Universal_Safety_Cabinets_(0-63)).Get )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

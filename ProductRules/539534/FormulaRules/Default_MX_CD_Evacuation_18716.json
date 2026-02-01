@@ -1,0 +1,11 @@
+{
+    "id": 18716,
+    "condition": "[EQ](<*VALUE(MX_CD_Evacuation)*>,)",
+    "name": "Default_MX_CD_Evacuation",
+    "action": "<*SELECTVALUE(MX_CD_Evacuation:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

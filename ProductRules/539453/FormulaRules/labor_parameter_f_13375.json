@@ -1,0 +1,11 @@
+{
+    "id": 13375,
+    "condition": "1",
+    "name": "labor_parameter_f",
+    "action": "<*ASSIGNVALUE(labor_parameter_f:<* Eval((0<*VALUE(labor_parameter_sf)*>*0.5)+0<*VALUE(labor_parameter_mf)*>+(0<*VALUE(labor_parameter_cf)*>*2)+(0<*VALUE(labor_parameter_vcf)*>*4)+(<*VALUE(labor_parameter_rf)*>*0.5)) *>)*>",
+    "description": "F = sf * 0.5 + mf + cf * 2 + vcf * 4 + rf * 0.5",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

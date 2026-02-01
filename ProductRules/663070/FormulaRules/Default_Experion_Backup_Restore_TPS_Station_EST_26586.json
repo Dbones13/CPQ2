@@ -1,0 +1,11 @@
+{
+    "id": 26586,
+    "condition": "[EQ](<*VALUE(Experion Backup & Restore (TPS Station ES-T))*>,)",
+    "name": "Default_Experion_Backup_Restore_(TPS Station ES-T)",
+    "action": "<*SELECTVALUE(Experion Backup & Restore (TPS Station ES-T):No)*>",
+    "description": "CXCPQ-35453",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

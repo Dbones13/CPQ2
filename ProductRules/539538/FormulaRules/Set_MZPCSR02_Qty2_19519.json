@@ -1,0 +1,11 @@
+{
+    "id": 19519,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Select Server Grade Computer Platform Type)*>,R450),[EQ](<*VALUE(Exp HS Redundant Servers)*>,Yes))",
+    "name": "Set MZ-PCSR02 Qty2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:MZ-PCSR02)*><*SETATVQTY(Experion_HS_PART_SUMMARY:MZ-PCSR02, 2)*>\n<* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

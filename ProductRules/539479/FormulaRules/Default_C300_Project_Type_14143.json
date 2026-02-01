@@ -1,0 +1,11 @@
+{
+    "id": 14143,
+    "condition": "[EQ](<*VALUE(C300_Project_Type)*>,)",
+    "name": "Default_C300_Project_Type",
+    "action": "<*SELECTVALUE(C300_Project_Type:Un-Determined)*>",
+    "description": "CXCPQ-37118",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25572,
+    "condition": "[EQ](<*VALUE(ACE Hiway Output Extension Library)*>,)",
+    "name": "Default_ACE Hiway Output Extension Library",
+    "action": "<*ASSIGNVALUE(ACE Hiway Output Extension Library:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

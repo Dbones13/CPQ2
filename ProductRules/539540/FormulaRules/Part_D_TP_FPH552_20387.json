@@ -1,0 +1,11 @@
+{
+    "id": 20387,
+    "condition": "[LEQ](<*VALUE(SS_55_inch_NTS)*>,0)",
+    "name": "Part_D_TP_FPH552",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPH552)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

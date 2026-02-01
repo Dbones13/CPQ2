@@ -1,0 +1,11 @@
+{
+    "id": 24285,
+    "condition": "[EQ](<*VALUE(Display_Qty_4)*>,)",
+    "name": "Default_RESS_Display_Qty_4",
+    "action": "<*ASSIGNVALUE(Display_Qty_4:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

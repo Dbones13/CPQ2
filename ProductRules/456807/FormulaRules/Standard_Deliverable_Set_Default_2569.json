@@ -1,0 +1,11 @@
+{
+    "id": 2569,
+    "condition": "[NOT](<*ATTDEF(HC900 AD Standard Deliverable)*>)",
+    "name": "Standard_Deliverable_Set_Default",
+    "action": "<*SELECTVALUE(HC900 AD Standard Deliverable:PEP-PQP-HSE-Org Chart-Schedule)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

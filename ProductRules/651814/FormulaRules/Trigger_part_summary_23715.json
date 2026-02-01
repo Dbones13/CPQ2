@@ -1,0 +1,11 @@
+{
+    "id": 23715,
+    "condition": "[AND]([EQ](<*VALUE(Trigger_r2q_rules)*>,True), [EQ](<*CTX ( Quote.CustomField(R2Q_Save) )*>,Submit))",
+    "name": "Trigger part summary",
+    "action": "<* ExecuteScript(HCI_PHD_PartSummary) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

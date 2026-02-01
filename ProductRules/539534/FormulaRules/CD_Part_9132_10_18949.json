@@ -1,0 +1,11 @@
+{
+    "id": 18949,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,ProCoat),[EQ](<*VALUE(MX_CD_ProCoat_Type)*>,Blade Coater),[EQ](<*VALUE(MX_CD_Actuator_Housing_ProCoat)*>,Stainless steel))",
+    "name": "CD_Part_9132_10",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9132-10)*><*SETATVQTY(MX_CD_Bom_Parts:9132-10, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

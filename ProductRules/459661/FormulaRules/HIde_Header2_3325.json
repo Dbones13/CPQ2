@@ -1,0 +1,11 @@
+{
+    "id": 3325,
+    "condition": "[EQ](<*VALUE(New_Expansion)*>,New)",
+    "name": "HIde_Header2",
+    "action": "<*DISALLOWATTRIBUTES(Header_02_open)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

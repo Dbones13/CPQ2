@@ -1,0 +1,11 @@
+{
+    "id": 13427,
+    "condition": "1",
+    "name": "EBR Site Acceptance Test & Sign Off",
+    "action": "<*ASSIGNVALUE(EBR Site Acceptance Test & Sign Off:4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

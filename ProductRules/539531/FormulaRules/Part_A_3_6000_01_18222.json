@@ -1,0 +1,11 @@
+{
+    "id": 18222,
+    "condition": "[EQ](<*VALUE(MXP_Sensor_Type)*>,Single 6K head)",
+    "name": "Part_A_3_6000_01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-6000-01)*><*SETATVQTY(MXP_SE_Bom_Parts:3-6000-01,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

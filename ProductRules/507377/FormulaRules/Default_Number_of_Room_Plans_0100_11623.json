@@ -1,0 +1,11 @@
+{
+    "id": 11623,
+    "condition": "[EQ](<*VALUE(IS_No_of_Room_Plans_(0-100))*>,)",
+    "name": "Default_Number of Room Plans (0-100)",
+    "action": "<*ASSIGNVALUE(IS_No_of_Room_Plans_(0-100):0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

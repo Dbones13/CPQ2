@@ -1,0 +1,11 @@
+{
+    "id": 15068,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Define Document Requirements",
+    "action": "<*ASSIGNVALUE(Define Document Requirements:<* Eval(2+(0<*VALUE(Unique_quantity_factor_total_scope)*>*3)+(0<*VALUE(Total_Quantity_Factor_for_Scope)*>-0<*VALUE(Unique_quantity_factor_total_scope)*>*1)+(0<*VALUE(MSE_Number_Specifications_Product_Purchases)*>*0.25)) *>)*>",
+    "description": "2+(QFU*3)+(QF-QFU*1)+(PS*0.25)",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

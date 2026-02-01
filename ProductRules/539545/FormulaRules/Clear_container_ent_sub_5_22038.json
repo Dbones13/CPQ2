@@ -1,0 +1,11 @@
+{
+    "id": 22038,
+    "condition": "[EQ](<*CTX ( Container(SM_Enterprise_Cluster_5).SelectedRow.Index )*>,)",
+    "name": "Clear_container_ent_sub_5",
+    "action": "<*CTX ( Container(SM_Enterprise_Cluster_Sub_5).Rows.Clear )*>",
+    "description": "",
+    "rank": "12",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

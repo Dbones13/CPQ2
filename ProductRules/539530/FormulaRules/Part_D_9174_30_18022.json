@@ -1,0 +1,11 @@
+{
+    "id": 18022,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow),[NEQ](<*VALUE(MXP_Proflow_Type)*>,Linear),[NEQ](<*VALUE(MXP_Type_of_Valve_length)*>,Extended stroke length),[NEQ](<*VALUE(MXP_Actuator_Housing_cover)*>,Stainless steel))",
+    "name": "Part_D_9174_30",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_CD_Bom_Parts:9174-30)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

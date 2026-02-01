@@ -1,0 +1,11 @@
+{
+    "id": 13701,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_TP_FPW231",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:TP-FPW231)*><*SETATVQTY(Virtualization_BOM_Parts:TP-FPW231,<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

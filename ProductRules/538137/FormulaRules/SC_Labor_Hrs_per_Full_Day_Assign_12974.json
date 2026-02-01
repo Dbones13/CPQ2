@@ -1,0 +1,11 @@
+{
+    "id": 12974,
+    "condition": "<*ATTSEL(SC_Labor_Resource_Type)*>",
+    "name": "SC_Labor_Hrs_per_Full_Day_Assign",
+    "action": "<*ASSIGNVALUE(SC_Labor_Hrs_per_Full_Day: <* TABLE ( SELECT Work_Hour FROM CT_SC_Labor_ResourceType WHERE Type = '<*VALUECODE(SC_Labor_Resource_Type)*>'  and Country ='<*CTX( Quote.CustomField(Opportunity Tab Booking Country))*>') *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

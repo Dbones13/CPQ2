@@ -1,0 +1,11 @@
+{
+    "id": 20143,
+    "condition": "1",
+    "name": "total_family_CG_ios_doc",
+    "action": "<*ASSIGNVALUE(total_family_CG_ios_doc:<* Eval(0<*CTX ( Container(C300_C IO MS3).Sum(DI) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_2).Sum(DI) )*>+0<*CTX ( Container(C300_CG_Universal_IO_cont_2).Sum(DI) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont1).Sum(DI) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont2).Sum(DI) )*>+0<*CTX ( Container(C300_SerC_GIIS_CG_Cont).Sum(DI) )*>+0<*CTX ( Container(C300_C IO MS3).Sum(DO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_2).Sum(DO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_cont_2).Sum(DO) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont1).Sum(DO) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont2).Sum(DO) )*>+0<*CTX ( Container(C300_SerC_GIIS_CG_Cont).Sum(DO) )*>+0<*CTX ( Container(C300_C IO MS).Sum(AO) )*>+0<*CTX ( Container(C300_C IO MS2).Sum(AO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_1).Sum(AO) )*>+0<*CTX ( Container(C300_CG_Universal_IO_cont_1).Sum(AO) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).Sum(AO) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Sum(AO) )*>+0<*CTX ( Container(C300_SerC_GIIS_CG_Cont).Sum(AO) )*>+0<*CTX ( Container(C300_C IO MS).Sum(AI) )*>+0<*CTX ( Container(C300_C IO MS2).Sum(AI) )*>+0<*CTX ( Container(C300_CG_Universal_IO_Mark_1).Sum(AI) )*>+0<*CTX ( Container(C300_CG_Universal_IO_cont_1).Sum(AI) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont).Sum(AI) )*>+0<*CTX ( Container(C300_SerC_Enhanced_Function_IO_Mark_Group_CG_Cont1).Sum(AI) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont).Sum(AI) )*>+0<*CTX ( Container(SerC_CG_Enhanced_Function_IO_Cont2).Sum(AI) )*>+0<*CTX ( Container(C300_SerC_GIIS_CG_Cont).Sum(AI) )*>) *>)*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

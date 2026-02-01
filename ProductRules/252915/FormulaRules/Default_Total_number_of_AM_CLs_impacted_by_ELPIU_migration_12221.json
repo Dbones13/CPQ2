@@ -1,0 +1,11 @@
+{
+    "id": 12221,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[EQ](<*VALUE(ELEPIU_Total_number_of_AM_CLs_impacted_by_ELPIU)*>,))",
+    "name": "Default_Total number of AM CLs impacted by ELPIU migration",
+    "action": "<*ASSIGNVALUE(ELEPIU_Total_number_of_AM_CLs_impacted_by_ELPIU:0)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

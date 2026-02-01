@@ -1,0 +1,11 @@
+{
+    "id": 12149,
+    "condition": "[OR]([EQ](<*VALUE(PSW_Number_of_PHA_Nodes)*>,)\n,[LT](<*VALUE(PSW_Number_of_PHA_Nodes)*>,0))",
+    "name": "Default value of PSW_Number_of_PHA_Nodes",
+    "action": "<*ASSIGNVALUE(PSW_Number_of_PHA_Nodes:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

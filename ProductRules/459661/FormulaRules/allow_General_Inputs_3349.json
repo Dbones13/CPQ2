@@ -1,0 +1,11 @@
+{
+    "id": 3349,
+    "condition": "[AND]([EQ](<*CTX( Container(CE_General_Inputs_Cont).Rows.GetCount )*>,0),<*ISSELECTED(New_Expansion.Expansion)*>)",
+    "name": "allow General Inputs",
+    "action": "<*ALLOWATTRIBUTES(CE_General_Inputs_Cont)*><*CTX( Container(CE_General_Inputs_Cont).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

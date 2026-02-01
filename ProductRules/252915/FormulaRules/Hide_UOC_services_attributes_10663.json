@@ -1,0 +1,11 @@
+{
+    "id": 10663,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "Hide UOC services attributes",
+    "action": "[IF]([AND]([NEQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW),[OR]([NEQ](<*VALUE(LSS_PLC_Number_of_ControlEdge_UOC_vUOC_confi_req)*>,0),[AND]([NEQ](<*VALUE(LSS_PLC_Number_of_ControlEdge_PLC_UOC_vUOC_confi)*>,0),[OR]([LIKE](<*CTX( Container(LSS_Configuration_for_Rockwell_transpose).UniqueValues(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Separator(,) )*>,UOC),[LIKE](<*CTX( Container(LSS_Configuration_for_Rockwell_transpose).UniqueValues(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC).Separator(,) )*>,vUOC)))))){<*ALLOWATTRIBUTES(LSS_Number_of_hard_wired_Analog_Input_for_CE_UOC,LSS_Number_of_hard_wired_Analog_Output_for_CE_UOC,LSS_Number_of_hard_wired_Digital_Input_for_CE_UOC,LSS_Number_of_hard_wired_Digital_Output_for_CE_UOC)*>}{<*DISALLOWATTRIBUTES(LSS_Number_of_hard_wired_Analog_Input_for_CE_UOC,LSS_Number_of_hard_wired_Analog_Output_for_CE_UOC,LSS_Number_of_hard_wired_Digital_Input_for_CE_UOC,LSS_Number_of_hard_wired_Digital_Output_for_CE_UOC)*>}[ENDIF]",
+    "description": "This will hide the attributes on the basis of UI dependent questions",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

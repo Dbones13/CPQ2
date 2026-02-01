@@ -1,0 +1,11 @@
+{
+    "id": 20709,
+    "condition": "[AND]([AND]([EQ](<*VALUE(SS_Flex Staton  Desk Node_desk)*>,STN_STD_DELL_Tower_NonRAID),[EQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell),[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R520)),[AND]([EQ](<*VALUE(SS_Flex_Staton _Orion_Node)*>,STN_STD_DELL_Tower_NonRAID),[EQ](<*VALUE(SS_Node_Supplier_orion)*>,Honeywell)))",
+    "name": "Part_A_MZ_PCWS14_3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCWS14)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCWS14,<* Eval( <*VALUE(SS_Flex_Station_Qty_Orion)*> + <*VALUE(SS_Flex_Station_Qty_Desk)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

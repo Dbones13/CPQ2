@@ -1,0 +1,11 @@
+{
+    "id": 23015,
+    "condition": "[AND](<*IFANYVALUE(C300_RG_UPC_CN100_IO_HIVE:N)*>,<*IFANYVALUE(C300_RG_UPC_Fiber_Optic_Extender:None)*>)",
+    "name": "Update_C300_RG_UPC_Fiber_Optic_Extender",
+    "action": "<*SELECTVALUE(C300_RG_UPC_Fiber_Optic_Extender:Multi Mode x2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23699,
+    "condition": "[EQ](<*VALUE(AR_HCI_R2QConfig)*>,Yes)",
+    "name": "R2Q_DisallowGESEng",
+    "action": "<*DISALLOWVALUES(AR_HCI_No_GES_ENG:2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

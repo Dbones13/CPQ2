@@ -1,0 +1,11 @@
+{
+    "id": 24331,
+    "condition": "[OR]([AND]([EQ](<*VALUE(ARO_System_Required)*>,No),[EQ](<*VALUE(RESS_System_Required)*>,No)),[OR]([GT](<*VALUE(EP-STAT01_part_add)*>,4),[LT](<*VALUE(EP-STAT01_part_add)*>,1)))",
+    "name": "EP-STAT01_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:EP-STAT01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

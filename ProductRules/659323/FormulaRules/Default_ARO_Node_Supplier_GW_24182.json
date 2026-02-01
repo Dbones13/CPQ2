@@ -1,0 +1,11 @@
+{
+    "id": 24182,
+    "condition": "[EQ](<*VALUE(ARO_Node_Supplier_GW)*>,)",
+    "name": "Default_ARO_Node_Supplier_GW",
+    "action": "<*SELECTVALUE(ARO_Node_Supplier_GW:Honeywell)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

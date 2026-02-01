@@ -1,0 +1,11 @@
+{
+    "id": 9145,
+    "condition": "[EQ](<*VALUE(Trace_Software_What_is_the_scope)*>,New License)",
+    "name": "Show_Order_Type",
+    "action": "<*ALLOWATTRIBUTES(Trace_Software_Order_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

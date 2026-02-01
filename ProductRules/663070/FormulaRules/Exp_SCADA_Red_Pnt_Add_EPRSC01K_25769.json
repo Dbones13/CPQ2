@@ -1,0 +1,11 @@
+{
+    "id": 25769,
+    "condition": "[AND]([GT](<*VALUE(Experion SCADA Points (0 - 300000))*>,999),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant))",
+    "name": "Exp_SCADA_Red_Pnt_Add_EPRSC01K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-RSC01K)*>[IF]([GT](<<*eval(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-10000*INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000))-5000*INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000-(INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000)))*5000)/2000)))/1000))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-RSC01K, <*eval(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-10000*INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000))-5000*INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000-(INT(FIX((<*VALUE(Experion SCADA Points (0 - 300000))*>-(INT(FIX(<*VALUE(Experion SCADA Points (0 - 300000))*>/10000)))*10000)/5000)))*5000)/2000)))/1000))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP-RSC01K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

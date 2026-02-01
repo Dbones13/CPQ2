@@ -1,0 +1,11 @@
+{
+    "id": 12241,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering)\n,[EQ](<*VALUE(ELEPIU_Total_numberof_Scada_points_for_controllers)*>,))",
+    "name": "Default_Total number of Scada points for all the controllers",
+    "action": "<*ASSIGNVALUE(ELEPIU_Total_numberof_Scada_points_for_controllers:0)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

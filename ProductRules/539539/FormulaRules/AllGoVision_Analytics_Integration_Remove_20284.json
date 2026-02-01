@@ -1,0 +1,11 @@
+{
+    "id": 20284,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_AllGoVision_Analytics_Integration)*>,Yes))",
+    "name": "AllGoVision Analytics Integration_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAGV)*><* DoResetAtt *>",
+    "description": "CXCPQ-45738",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

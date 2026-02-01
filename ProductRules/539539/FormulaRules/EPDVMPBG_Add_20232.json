@@ -1,0 +1,11 @@
+{
+    "id": 20232,
+    "condition": "[EQ](<*VALUE(DVM_Public_Gateway)*>,Yes)",
+    "name": "EP-DVMPBG_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMPBG)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMPBG,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

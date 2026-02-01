@@ -1,0 +1,11 @@
+{
+    "id": 26363,
+    "condition": "[EQ](<*VALUE(Supervisory Network Type)*>,FTE)",
+    "name": "Super_Net_Type_FTE",
+    "action": "<*DISALLOWVALUES(LAN Type:Ethernet)*>",
+    "description": "Display options for LAN Type as FTE & None If Supervisory Network Type (in system level) is selected as FTE. In this case, default value for LAN Type will be FTE.",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

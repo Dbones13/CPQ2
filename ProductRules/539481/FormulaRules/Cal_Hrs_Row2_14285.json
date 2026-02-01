@@ -1,0 +1,11 @@
+{
+    "id": 14285,
+    "condition": "[GT](<*CTX ( Container(MIQ Engineering Labor Container).Rows.GetCount )*>,0)",
+    "name": "Cal_Hrs_Row2",
+    "action": "[IF]([EQ](<*VALUE(MIQ_System_architecture)*>,Corporate)){<*CTX ( Container(MIQ Engineering Labor Container).Row(2).Column(Calculated Hrs).Set(8) )*>}{<*CTX ( Container(MIQ Engineering Labor Container).Row(2).Column(Calculated Hrs).Set(0) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

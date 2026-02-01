@@ -1,0 +1,11 @@
+{
+    "id": 2595,
+    "condition": "[AND]([NOT](<*ATTSEL(PlantCruise_GES_Eng)*>),<*ISSELECTED(PlantCruise_Ges_Location_Labour.GES India)*>)",
+    "name": "PlantCruise_GES_Eng_Set_Default_India",
+    "action": "<*SELECTVALUE(PlantCruise_GES_Eng:HPS_GES_P350B_IN)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

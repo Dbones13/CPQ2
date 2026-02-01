@@ -1,0 +1,11 @@
+{
+    "id": 19511,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Select Server Grade Computer Platform Type)*>,T150),[EQ](<*VALUE(Exp HS Redundant Servers)*>,No))",
+    "name": "Set MZ-PCST01 Qty1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:MZ-PCST01)*><*SETATVQTY(Experion_HS_PART_SUMMARY:MZ-PCST01, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

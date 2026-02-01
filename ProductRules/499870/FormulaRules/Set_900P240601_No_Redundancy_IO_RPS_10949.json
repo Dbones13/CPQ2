@@ -1,0 +1,11 @@
+{
+    "id": 10949,
+    "condition": "[AND]([GT](<*CTX( Container(HC900_Rack_Size_Quantity_Cont).Sum(Quantity) )*>,0),[EQ](<*VALUE(HC900_Power_Supply_Module_Type_&_Configuration)*>,24 VDC, 60 Watt P/S),[EQ](<*VALUE(HC900_Redundant_I/O_Rack_Power_Supplies)*>,No))",
+    "name": "Set 900P24-0601 No Redundancy IO RPS",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(HC900_PART_SUMMARY:900P24-0601)*><*SETATVQTY(HC900_PART_SUMMARY:900P24-0601, <*CTX( Container(HC900_Rack_Size_Quantity_Cont).Sum(Quantity) )*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-51871",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

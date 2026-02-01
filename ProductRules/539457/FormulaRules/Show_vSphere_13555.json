@@ -1,0 +1,11 @@
+{
+    "id": 13555,
+    "condition": "[GT](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,0)",
+    "name": "Show_vSphere",
+    "action": "<*ALLOWATTRIBUTES(Virtualization_vSphere_Client_Node_OS_Type,Virtualization_vSphere_Client_Node_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Lahu Giri"
+}

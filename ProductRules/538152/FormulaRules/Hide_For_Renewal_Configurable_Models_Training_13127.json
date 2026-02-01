@@ -1,0 +1,11 @@
+{
+    "id": 13127,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_For_Renewal_Configurable_Models_Training",
+    "action": "<*CTX ( Container(SC_WEP_Configurable_Models_Training).Column(Unit_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Configurable_Models_Training).Column(List_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Configurable_Models_Training).Column(Unit_Cost).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Configurable_Models_Training).Column(Cost_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Configurable_Models_Training).Column(Quantity).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

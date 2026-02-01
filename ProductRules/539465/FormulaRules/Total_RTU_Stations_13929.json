@@ -1,0 +1,11 @@
+{
+    "id": 13929,
+    "condition": "1",
+    "name": "Total_RTU_Stations",
+    "action": "<*ASSIGNVALUE(Total_RTU_Stations:<*CTX( Container(RTU_Software_Labor_Container1).Row(1).Column(RTU_Engineering_Stations).Get )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19041,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NEQ](<*VALUE(MX_CD_Do_you_need_SCU)*>,SCU Engineered Kit, up to 22,000 lb/hr (10,000 kg/hr)))",
+    "name": "CD_Part_Dis_9203_K22",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:9203-K22)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 19092,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NEQ](<*VALUE(MX_CD_Screen_plate_upgrade)*>,Yes),[EQ](<*VALUE(MX_CD_Zone_Width)*>,0))",
+    "name": "CD_Part_Dis_92073_SMU_MM",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:92073-SMU-MM)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

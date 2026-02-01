@@ -1,0 +1,11 @@
+{
+    "id": 9114,
+    "condition": "[LIKE](<*CTX ( Container(CE_SystemGroup_Cont).UniqueValues(Include_Generic_System).Separator(,) )*>,Yes)",
+    "name": "PopulateGenericSystemName",
+    "action": "<*ASSIGNVALUE(Generic_System_Names:<*CTX ( Container(CE_SystemGroup_Cont).UniqueValues(Generic_System_Names).Separator(<br>) )*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "05/10/24",
+    "modifiedBy": "Shiva Kumar Gurram"
+}

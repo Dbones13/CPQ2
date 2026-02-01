@@ -1,0 +1,1 @@
+Product.GetContainerByName('RTU Field container').AddNewRow(False)

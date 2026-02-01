@@ -1,0 +1,11 @@
+{
+    "id": 19814,
+    "condition": "[EQ](<*VALUE(SerC_CG_Mounting_Panel_Type)*>,)",
+    "name": "Defalt_SerC_CG_Mounting_Panel_Type",
+    "action": "<*SELECTVALUE(SerC_CG_Mounting_Panel_Type:3 Column Wide Full Size)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

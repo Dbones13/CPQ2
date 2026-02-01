@@ -1,0 +1,11 @@
+{
+    "id": 25584,
+    "condition": "[EQ](<*VALUE(Console Station Qty (0-20))*>,)",
+    "name": "Default Console Station Qty",
+    "action": "<*ASSIGNVALUE(Console Station Qty (0-20):0)*>",
+    "description": "CXCPQ-34882",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

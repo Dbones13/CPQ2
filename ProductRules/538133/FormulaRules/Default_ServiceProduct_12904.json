@@ -1,0 +1,11 @@
+{
+    "id": 12904,
+    "condition": "[NOT](<*ATTDEF(SC_P1P2_ServiceProduct)*>)",
+    "name": "Default_ServiceProduct",
+    "action": "<*ASSIGNVALUE(SC_P1P2_ServiceProduct:Parts Replacement)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

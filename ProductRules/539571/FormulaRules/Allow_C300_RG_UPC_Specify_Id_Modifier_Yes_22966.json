@@ -1,0 +1,11 @@
+{
+    "id": 22966,
+    "condition": "[AND]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_Type_of_Controller_Required)*>,CN100 CEE),[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Allow_C300_RG_UPC_Specify_Id_Modifier_Yes",
+    "action": "<*ALLOWVALUES(C300_RG_UPC_Specify_Id_Modifier:YES)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

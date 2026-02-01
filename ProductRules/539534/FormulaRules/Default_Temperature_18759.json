@@ -1,0 +1,11 @@
+{
+    "id": 18759,
+    "condition": "[EQ](<*VALUE(MX_CD_Temperature)*>,)",
+    "name": "Default_Temperature",
+    "action": "<*SELECTVALUE(MX_CD_Temperature:High Temperature)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

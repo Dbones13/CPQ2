@@ -1,0 +1,11 @@
+{
+    "id": 24247,
+    "condition": "[EQ](<*VALUE(ARO_server_require_Physical_hardware)*>,Yes)",
+    "name": "Allow_ARO_Server_Table",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_03_open,ARO_Server,ARO_Server_Node_Type,ARO_Node_Supplier,ARO_Trusted_Platform_Module,ARO_Additional_Hard_Disk,ARO_Display_Size,ARO_Display_Supplier,ATTCON_03_close,ARO_Server_dummy1)*>",
+    "description": "CXCPQ-64585",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

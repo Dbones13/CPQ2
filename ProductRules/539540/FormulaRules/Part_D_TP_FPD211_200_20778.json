@@ -1,0 +1,11 @@
+{
+    "id": 20778,
+    "condition": "[NOT]([AND]([GT](<*VALUE(SS_21_33inch)*>,0),[EQ](<*VALUE(CE_Site_Voltage)*>,240V)))",
+    "name": "Part_D_TP_FPD211_200",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPD211-200)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

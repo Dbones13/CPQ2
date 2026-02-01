@@ -1,0 +1,11 @@
+{
+    "id": 20188,
+    "condition": "[EQ](<*VALUE(DVM_Distributed_Video_Architecture)*>,)",
+    "name": "Default_DVM_Distributed_Video_Architecture",
+    "action": "<*SELECTVALUE(DVM_Distributed_Video_Architecture:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

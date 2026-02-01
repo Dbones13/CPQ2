@@ -1,0 +1,11 @@
+{
+    "id": 25566,
+    "condition": "[OR]([EQ](<*VALUE(MIB Configuration Required?)*>,No),[EQ](<*VALUE(Server Type1)*>,SVR_STD_DELL_Rack_RAID1),[EQ](<*VALUE(Server Type1)*>,SVR_STD_DELL_Tower_RAID1))",
+    "name": "Message_Server_Type",
+    "action": "<*DISALLOWATTRIBUTES(Server_Type_Message)*>",
+    "description": "CXCPQ-35454",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

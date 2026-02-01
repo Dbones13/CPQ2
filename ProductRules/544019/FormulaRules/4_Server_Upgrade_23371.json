@@ -1,0 +1,11 @@
+{
+    "id": 23371,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZA2AC1,TP-ZSDRS1,TP-ZSDRA1,TP-ZAMEAP,TP-ZAM2EA,TP-ZSHRA1)",
+    "name": "4 Server Upgrade",
+    "action": "<*DISALLOWATTRIBUTES(KE_EBR_Required)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Release)*>\n<*DISALLOWATTRIBUTES(KE_Node_Type)*>\n<*DISALLOWATTRIBUTES(KE_SESP)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Media_Delivery)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14851,
+    "condition": "[NEQ](<*VALUE(MX_MD_Multivariable_MD_Coater_Ctrl)*>,Yes)",
+    "name": "MX_Part_Dis_RQUP3",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:RQUP3)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

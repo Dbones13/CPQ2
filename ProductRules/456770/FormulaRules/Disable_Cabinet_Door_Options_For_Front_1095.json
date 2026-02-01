@@ -1,0 +1,11 @@
+{
+    "id": 1095,
+    "condition": "[NOT](<*ISSELECTED(Spare_Parts_Cabinet_Type_Customer_Plans_To_Use.Front & Rear Access)*>)",
+    "name": "Disable_Cabinet_Door_Options_For_Front",
+    "action": "<*DISALLOWVALUES(Spare_Parts_Cabinet_Door_Type:Reverse Front & Rear,Spare_Parts_Cabinet_Door_Type:Reverse Rear)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

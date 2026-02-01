@@ -1,0 +1,11 @@
+{
+    "id": 15285,
+    "condition": "[OR]([NEQ](<*VALUE(MXP_ebr)*>,Yes),[NEQ](<*VALUE(MXP_Platform_Type)*>,Virtual))",
+    "name": "Part_D_EP_BRVE06",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:EP-BRVE06)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

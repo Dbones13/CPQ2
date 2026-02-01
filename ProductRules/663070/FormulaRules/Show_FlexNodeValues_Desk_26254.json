@@ -1,0 +1,11 @@
+{
+    "id": 26254,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Experion Software Release)*>,R530)),[EQ](<*VALUE(Server Mounting)*>,Desk),[EQ](<*VALUE(Experion Server Type)*>,Flex Server))",
+    "name": "Show_FlexNodeValues_Desk",
+    "action": "<*ALLOWVALUES(FlexServer_NodeType:SVR_F_PER_HP_Tower_RAID1)*><*DISALLOWVALUES(FlexServer_NodeType:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

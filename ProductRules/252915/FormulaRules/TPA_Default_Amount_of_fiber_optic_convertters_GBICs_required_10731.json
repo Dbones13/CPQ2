@@ -1,0 +1,11 @@
+{
+    "id": 10731,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Amount_of_fiber_optic_convertters_GBICs_required)*>,))",
+    "name": "TPA_Default_Amount_of_fiber_optic_convertters_GBICs_required",
+    "action": "<*ASSIGNVALUE(TPA_Amount_of_fiber_optic_convertters_GBICs_required:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

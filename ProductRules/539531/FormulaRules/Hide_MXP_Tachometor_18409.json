@@ -1,0 +1,11 @@
+{
+    "id": 18409,
+    "condition": "[IN](<*VALUE(MXP_Scanner_Type)*>,3-4036-10,3-4036-11)",
+    "name": "Hide_MXP_Tachometor",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Tachometor)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

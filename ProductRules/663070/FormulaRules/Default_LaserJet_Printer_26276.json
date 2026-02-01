@@ -1,0 +1,11 @@
+{
+    "id": 26276,
+    "condition": "[EQ](<*VALUE(LaserJet Printer - Monochrome (0-99))*>,)",
+    "name": "Default_LaserJet_Printer",
+    "action": "<*ASSIGNVALUE(LaserJet Printer - Monochrome (0-99):0)*>",
+    "description": "CXCPQ_35452",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

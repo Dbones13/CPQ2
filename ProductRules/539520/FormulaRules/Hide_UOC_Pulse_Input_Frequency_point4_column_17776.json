@@ -1,0 +1,11 @@
+{
+    "id": 17776,
+    "condition": "[EQ](<*VALUE(Controledge_Exp_PKS_software_release)*>,R511)",
+    "name": "Hide_UOC_Pulse_Input_Frequency_point4_column",
+    "action": "<*CTX( Container(UOC_CG_Other_IO_Cont).Column(UOC_Pulse_Input_Frequency_point4).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

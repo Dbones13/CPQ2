@@ -1,0 +1,11 @@
+{
+    "id": 25883,
+    "condition": "[AND]([GT](<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>,0),[OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[GT](<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>,0),[NEQ](<*VALUE(Orion Console Turret Type)*>,None))",
+    "name": "MP-OCXCS1-100",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:MP-OCXCS1-100)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:MP-OCXCS1-100, <*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>.)*><* DoResetAtt  *>",
+    "description": "CXCPQ-39365_ADD",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 4706,
+    "condition": "[NOT](<*ISSELECTED(MX_SG_Type_of_Scanner.Q4022-34 I-Beam O-Frame)*>)",
+    "name": "Universal PMP rule",
+    "action": "<*DISALLOWATTRIBUTES(MX_SG_Dusty_Environment Kit,MX_SG_Universal_PMP,MX_SG_Universal_PMP_Cooling,MX_SG_Universal_PMP_I_O_Expansion_Kit)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

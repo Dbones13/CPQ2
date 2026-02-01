@@ -1,0 +1,11 @@
+{
+    "id": 14208,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_BOM",
+    "action": "<*ASSIGNVALUE(C300_Labour_Parameter_BOM:<* Eval((1-[IF]([GT](<*VALUE(C300_Exp_Labor_Uni_qntCG)*>,0)){1}{0}[ENDIF]*0.15)*1.9*(0<*VALUE(C300_Labor_parameter_is)*>+0.1*(0<*VALUE(Labor_parameter_mar)*>+0<*VALUE(Labor_parametre_sys)*>)+2*(0<*VALUE(Labor_parameter_mar)*>+0<*VALUE(Labor_parametre_sys)*>)/(0<*VALUE(Labor_parameter_mar)*>+0<*VALUE(Labor_parametre_sys)*>+1)+2*0<*VALUE(C300_Labor_parameter_A)*>+2*<*VALUE(C300_Labor_parameter_iof)*>)) *>)*>",
+    "description": "CXCPQ-43533\nBOM Hrs = (is + 0.1 * (sys + mar) + 2 * (sys + mar) / (sys + mar + 1) + 2 * A + 2 * (1+1))",
+    "rank": "16",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

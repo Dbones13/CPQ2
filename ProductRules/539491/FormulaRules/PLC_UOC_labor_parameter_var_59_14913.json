@@ -1,0 +1,11 @@
+{
+    "id": 14913,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_59",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_59:<* Eval([IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_27)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_27)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_28)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_28)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_29)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_29)*>}[ENDIF]+[IF]([EQ](<*VALUE(PLC_UOC_labor_parameter_var_30)*>,)){0}{<*VALUE(PLC_UOC_labor_parameter_var_30)*>}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

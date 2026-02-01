@@ -1,0 +1,11 @@
+{
+    "id": 24327,
+    "condition": "[AND]([GT](<*VALUE(EP-STAT01_part_add)*>,0),[LT](<*VALUE(EP-STAT01_part_add)*>,5))",
+    "name": "EP-STAT01_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:EP-STAT01)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:EP-STAT01, <*Eval(<*VALUE(ARO_existing_Flex_station_license)*>+<*VALUE(RESS_existing_Flex_station_license)*>+<*VALUE(ARO_new_Flex_Station_licenses_required)*>+<*VALUE(RESS_new_Flex_Station_licenses_required)*>) *>.)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

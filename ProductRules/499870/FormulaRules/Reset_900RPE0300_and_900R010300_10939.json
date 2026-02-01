@@ -1,0 +1,11 @@
+{
+    "id": 10939,
+    "condition": "[NOT]([EQ](<*VALUE(HC900_Redundant_Controller_Rack_Type)*>,Split Redundant Rack))",
+    "name": "Reset 900RPE-0300 and 900R01-0300",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900RPE-0300)*><*RESETVALUE(HC900_PART_SUMMARY:900R01-0300)*><* DoResetAtt *>",
+    "description": "CXCPQ-40183",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13544,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Show Service Container",
+    "action": "<*ALLOWATTRIBUTES(ATTCON_06_close,ATTCON_06_open,Virtualization_Documentation_required,Virtualization_Will_Honeywell_perform_equipment)*><*ALLOWATTRIBUTES(Virtualization DDS,Virtualization FDS,Virtualization_AV_DDS,Virtualization_EBR_DDS,Virtualization_Update existing drawing package,Virtualization_Will Honeywell provide the HW/SW?)*><*ALLOWATTRIBUTES(Virtualization_Additional On Site Activities hours)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

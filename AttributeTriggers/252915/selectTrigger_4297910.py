@@ -1,0 +1,1 @@
+[IF]([NEQ](<*VALUE(MSID_GES_Location)*>,None)){<*ASSIGNVALUE(MSID_GES_check:Country)*>}{<*ASSIGNVALUE(MSID_GES_check:None)*>}[ENDIF]

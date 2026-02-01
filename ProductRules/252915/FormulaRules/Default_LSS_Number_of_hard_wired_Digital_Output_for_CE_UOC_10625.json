@@ -1,0 +1,11 @@
+{
+    "id": 10625,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Number_of_hard_wired_Digital_Output_for_CE_UOC)*>,))",
+    "name": "Default_LSS_Number_of_hard_wired_Digital_Output_for_CE_UOC",
+    "action": "<*ASSIGNVALUE(LSS_Number_of_hard_wired_Digital_Output_for_CE_UOC:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

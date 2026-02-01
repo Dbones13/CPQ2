@@ -1,0 +1,11 @@
+{
+    "id": 19828,
+    "condition": "[EQ](<*VALUE(SerC_CG_Complexing)*>,)",
+    "name": "Default_SerC_CG_Complexing",
+    "action": "<*SELECTVALUE(SerC_CG_Complexing:Factory)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

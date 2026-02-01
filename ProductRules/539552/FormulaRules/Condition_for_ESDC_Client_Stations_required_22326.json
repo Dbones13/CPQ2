@@ -1,0 +1,11 @@
+{
+    "id": 22326,
+    "condition": "[NEQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes)",
+    "name": "Condition for ESDC Client Stations required",
+    "action": "<*DISALLOWATTRIBUTES(ESDC_Client_Station_Qty)*>\n<*DISALLOWATTRIBUTES(ESDC_Station_Node_Type)*>\n<*DISALLOWATTRIBUTES(ESDC_Node_Supplier)*>\n<*DISALLOWATTRIBUTES(ESDC_Display_Supplier)*>\n<*DISALLOWATTRIBUTES(ESDC_Display_size_I)*>\n\n<*CTX ( Container(SM_Enterprise_Cluster_2).Rows.Clear )*>\n<*CTX ( Container(SM_Enterprise_Cluster_Sub_2).Rows.Clear )*>\n\n<*DISALLOWATTRIBUTES(SM_Enterprise_Cluster_2,SM_Enterprise_Cluster_Sub_2)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

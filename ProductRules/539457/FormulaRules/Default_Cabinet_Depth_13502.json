@@ -1,0 +1,11 @@
+{
+    "id": 13502,
+    "condition": "[EQ](<*VALUE(Virtualization_Cabinet_Depth_Size)*>,)",
+    "name": "Default_Cabinet_Depth",
+    "action": "<*SELECTVALUE(Virtualization_Cabinet_Depth_Size:1 meter)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

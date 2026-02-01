@@ -1,0 +1,11 @@
+{
+    "id": 26483,
+    "condition": "[NOT]([AND]([GT](<*CTX( Container(Exp_Ent_Grp_Part_Summary_Cont).Sum(Is_Cabinet_Part) )*>,0),[OR]([GT](<*VALUE(exp_ent_cab_qnt)*>,0),[GT](<*VALUE(Network_Cabinet_Qty)*>,0))))",
+    "name": "Remove Common Cabinet Parts",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51196958-400)*><*RESETVALUE(Exp_Ent_Grp_Part_Summary:51306194-300)*><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-KVMAD1-100)*><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-SPCMF1-101)*><*RESETVALUE(Exp_Ent_Grp_Part_Summary:TP-KVMAD2-100)*><* DoResetAtt *>",
+    "description": "CXCPQ-37834",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "11/01/26",
+    "modifiedBy": "Ravika Pupneja"
+}

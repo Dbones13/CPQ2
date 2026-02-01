@@ -1,0 +1,11 @@
+{
+    "id": 14633,
+    "condition": "[EQ](<*VALUE(MX_Platform_Type)*>,Physical)",
+    "name": "Hide_Based_on_platform_type_Physical",
+    "action": "<*DISALLOWATTRIBUTES(MX_Number_of_Thin_Clients)*><*DISALLOWATTRIBUTES(MX_RAE_Thinclient_transpose)*><*DISALLOWATTRIBUTES(MX_RAE_Thinclient)*><*CTX( Container(MX_RAE_Thinclient_transpose).Rows.Clear )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10708,
+    "condition": "[LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC)",
+    "name": "Reset_PLC_UOC_BOM_items",
+    "action": "<*RESETATTRIBUTE(PLC_UOC_BOM_Items)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

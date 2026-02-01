@@ -1,0 +1,11 @@
+{
+    "id": 24236,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[AND]([LT](<*VALUE(ARO_existing_Flex_station_license)*>,1),[LT](<*VALUE(ARO_new_Flex_Station_licenses_required)*>,1),[LT](<*VALUE(ARO_new_Console_Station_Extension_License)*>,1),[LT](<*VALUE(RESS_existing_Flex_station_license)*>,1),[LT](<*VALUE(RESS_new_Flex_Station_licenses_required)*>,1),[LT](<*VALUE(RESS_new_Console_Station_Extension_License)*>,1)))",
+    "name": "EP-T09CAL_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:EP-T09CAL)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

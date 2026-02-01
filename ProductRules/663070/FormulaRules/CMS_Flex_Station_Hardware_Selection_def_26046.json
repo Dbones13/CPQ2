@@ -1,0 +1,11 @@
+{
+    "id": 26046,
+    "condition": "[EQ](<*VALUE(CMS Flex Station Hardware Selection)*>,)",
+    "name": "CMS Flex Station Hardware Selection def",
+    "action": "<*SELECTVALUE(CMS Flex Station Hardware Selection:STN_PER_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

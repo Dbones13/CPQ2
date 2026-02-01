@@ -1,0 +1,11 @@
+{
+    "id": 20667,
+    "condition": "[IF](<*IFANYVALUE(SS_Experion_PKS_Release:R530)*>){[AND]([EQ](<*VALUE(SS_Flex Staton  Desk Node_desk)*>,STN_PER_HP_Tower_RAID1),[EQ](<*VALUE(SS_Node_Supplier_Desk)*>,Honeywell))}{}[ENDIF]",
+    "name": "Part_A_MZ_PCWS86_1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCWS86)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCWS86, <*VALUE(SS_Flex_Station_Qty_Desk)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

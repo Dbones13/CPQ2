@@ -1,0 +1,11 @@
+{
+    "id": 22194,
+    "condition": "[GEQ](<* Eval(<*VALUE(FDM_Hart)*> - (INT((<*VALUE(FDM_Hart)*>)/128))*128 - (INT((<*VALUE(FDM_Hart)*> - (INT((<*VALUE(FDM_Hart)*>)/128))*128)/64))*64) *>,32)",
+    "name": "Add_HC-FH0032",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-FH0032)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18429,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Scanner_Type)*>,3-4022-64),[EQ](<*VALUE(MXP_Measurement_Type)*>,Caliper))",
+    "name": "Condition_for_Caliper",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MXP_Sensor_Type:Contacting Caliper Thickness Sensor)*>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

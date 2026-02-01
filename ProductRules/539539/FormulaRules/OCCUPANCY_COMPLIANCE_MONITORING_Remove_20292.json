@@ -1,0 +1,11 @@
+{
+    "id": 20292,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_Occupancy_Compliance_Monitoring)*>,Yes))",
+    "name": "OCCUPANCY COMPLIANCE MONITORING_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMOCM)*><* DoResetAtt *>",
+    "description": "CXCPQ-45761",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

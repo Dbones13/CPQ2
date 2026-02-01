@@ -1,0 +1,11 @@
+{
+    "id": 17900,
+    "condition": "[AND]([GT](<*VALUE(Scada_conatiner_sum)*>,999),[EQ](<*VALUE(Scada_SCADA_Server_Redundancy)*>,Yes))",
+    "name": "SCADA_EP-RSC01K",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-RSC01K)*><*SETATVQTY(SCADA_BOM_Items:EP-RSC01K, <*eval(FIX((<*VALUE(Scada_conatiner_sum)*>-10000*INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000))-5000*INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000-(INT(FIX((<*VALUE(Scada_conatiner_sum)*>-(INT(FIX(<*VALUE(Scada_conatiner_sum)*>/10000)))*10000)/5000)))*5000)/2000)))/1000))*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

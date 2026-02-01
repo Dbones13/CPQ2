@@ -1,0 +1,11 @@
+{
+    "id": 15030,
+    "condition": "[EQ](<*VALUE(MSE_Number_Fastloops)*>,)",
+    "name": "Default_Number_Fastloops",
+    "action": "<*ASSIGNVALUE(MSE_Number_Fastloops:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

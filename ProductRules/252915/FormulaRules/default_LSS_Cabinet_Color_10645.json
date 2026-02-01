@@ -1,0 +1,11 @@
+{
+    "id": 10645,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Cabinet_Color?)*>,))",
+    "name": "default_LSS_Cabinet_Color?",
+    "action": "<*SELECTVALUE(LSS_Cabinet_Color?:Gray-RAL7035)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

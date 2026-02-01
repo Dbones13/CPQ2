@@ -1,0 +1,11 @@
+{
+    "id": 20406,
+    "condition": "[EQ](<*VALUE(SS_Custom_Logo_on_Alarm_Panel)*>,)",
+    "name": "Default_SS_Custom_Logo_on_Alarm_Panel",
+    "action": "<*SELECTVALUE(SS_Custom_Logo_on_Alarm_Panel:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

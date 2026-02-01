@@ -1,0 +1,11 @@
+{
+    "id": 20346,
+    "condition": "[EQ](<*VALUE(SS_2Position_Base_Unit_with_Left)*>,)",
+    "name": "Default_SS_2Position_Base_Unit_with_Left",
+    "action": "<*ASSIGNVALUE(SS_2Position_Base_Unit_with_Left:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

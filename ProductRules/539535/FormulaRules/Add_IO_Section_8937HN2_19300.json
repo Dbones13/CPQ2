@@ -1,0 +1,11 @@
+{
+    "id": 19300,
+    "condition": "[GT](<*VALUE(PlantCruise_Multi-mode_FO_Extender_Pair)*>,0)",
+    "name": "Add_IO_Section_8937-HN2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:8937-HN2)*><*SETATVQTY(PlantCruise_Part_Summary:8937-HN2,<* Eval(<*VALUE(PlantCruise_Multi-mode_FO_Extender_Pair)*>*4) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

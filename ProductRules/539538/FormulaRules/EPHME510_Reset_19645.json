@@ -1,0 +1,11 @@
+{
+    "id": 19645,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[EQ](<*VALUE(Exp HS Installation Media \u2013ESD Version only)*>,No),[EQ](<*VALUE(HS_Existing_System_Release)*>,Experion HS R510)))",
+    "name": "EP-HME510 Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HME510)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

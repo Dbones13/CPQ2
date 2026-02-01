@@ -1,0 +1,11 @@
+{
+    "id": 21878,
+    "condition": "[EQ](<*VALUE(FDM_ FDM_Gateway_required)*>,No)",
+    "name": "Hide_SM_Enterprise_Cluster",
+    "action": "<*CTX ( Container(SM_Enterprise_Cluster).Rows.Clear )*>\n<*CTX ( Container(SM_Enterprise_Cluster_Sub).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(SM_Enterprise_Cluster,SM_Enterprise_Cluster_Sub)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

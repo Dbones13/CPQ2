@@ -1,0 +1,11 @@
+{
+    "id": 13470,
+    "condition": "[EQ](<*CTX( Container(Additional_CustomDev_Labour_Container).Rows.GetCount )*>,0)",
+    "name": "Set_Default_Row_Additional_CustomDev",
+    "action": "<*CTX( Container(Additional_CustomDev_Labour_Container).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

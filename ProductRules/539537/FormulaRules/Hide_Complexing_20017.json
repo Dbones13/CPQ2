@@ -1,0 +1,11 @@
+{
+    "id": 20017,
+    "condition": "<*IFALLVALUES(SerC_CG_IO_Family_Type:Series C,Dummy_CG_IO_Mounting_Solution:Mounting Panel,MIB Configuration Required?:No)*>",
+    "name": "Hide_Complexing",
+    "action": "<*DISALLOWATTRIBUTES(SerC_CG_Complexing)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

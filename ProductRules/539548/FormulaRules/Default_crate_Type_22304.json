@@ -1,0 +1,11 @@
+{
+    "id": 22304,
+    "condition": "[EQ](<*VALUE(MSID_Crate_Type)*>,)",
+    "name": "Default_crate_Type",
+    "action": "<*SELECTVALUE(MSID_Crate_Type:Domestic/Truck)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

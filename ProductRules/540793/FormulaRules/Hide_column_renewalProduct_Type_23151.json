@@ -1,0 +1,11 @@
+{
+    "id": 23151,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_column_renewalProduct_Type",
+    "action": "<*CTX ( Container(SC_Local_Support_Standby_validModel).Column(Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Local_Support_Standby_validModel).Column(Unit List Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Local_Support_Standby_validModel).Column(List Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Local_Support_Standby_validModel).Column(Unit Cost  Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_Local_Support_Standby_validModel).Column(Cost Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_LSS_Models_Summary_Cont).Column(Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_LSS_Models_Summary_Cont).Column(List_Price).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_LSS_Models_Summary_Cont).Column(Cost_Price).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(ATTCON_03_close,ATTCON_03_open,SC_LSS_Entitlements,SC_LSS_Service_Product)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

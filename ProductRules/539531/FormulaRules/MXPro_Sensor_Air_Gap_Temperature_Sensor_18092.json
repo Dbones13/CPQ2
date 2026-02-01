@@ -1,0 +1,11 @@
+{
+    "id": 18092,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Air_Gap_Temperature_Sensor)*>,)",
+    "name": "MXPro_Sensor_Air_Gap_Temperature_Sensor",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Air_Gap_Temperature_Sensor:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

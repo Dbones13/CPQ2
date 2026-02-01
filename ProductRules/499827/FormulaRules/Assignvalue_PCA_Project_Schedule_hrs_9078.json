@@ -1,0 +1,11 @@
+{
+    "id": 9078,
+    "condition": "1",
+    "name": "Assignvalue_PCA Project Schedule_hrs",
+    "action": "<*ASSIGNVALUE(PCA Project Schedule_hrs:<*Eval((22+(8*<*VALUE(New_ex_subcontrct)*>))*<*VALUE(labor_parameter_pf)*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

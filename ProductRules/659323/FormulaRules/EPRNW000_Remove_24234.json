@@ -1,0 +1,11 @@
+{
+    "id": 24234,
+    "condition": "[OR]([NEQ](<*VALUE(New_Expansion)*>,Expansion),[AND]([LT](<*VALUE(EST_Native_window)*>,1),[LT](<*VALUE(RESS_EST_Native_window)*>,1)))",
+    "name": "EP-RNW000_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(ARO_Sys_Grp_Part_Summary:EP-RNW000)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

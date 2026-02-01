@@ -1,0 +1,112 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+    <!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+	
+	<div class="row col-xs-12 swagger">
+	<div id="ce-calculate-content">
+		<!-- ko foreach: attributes.filterByProperty('name' , 'Calculation_Button') -->
+			  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }" style="float: right;padding-left: 18%;">
+				  <!-- ko template: { name: $root.getAttributeTemplate } -->
+				  <!-- /ko -->
+			  </div>
+		<!-- /ko -->
+	</div>
+	</div>
+	
+	<div class="row col-xs-12 swagger">
+	<div id="ce-ProjectInputs">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ce-ProjectInputs')">
+          <span>Project Inputs</span>
+          <a id="ce-ProjectInputs-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ce-ProjectInputs-content">
+		<!-- ko foreach: attributes.filterByProperty('name' , 'AR_HCI_PHD_ProjectInputs1','AR_HCI_PHD_ProjectInputs2') -->
+			  <div class="col-xs-6 col-sm-6">
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+          </div>
+		<!-- /ko -->
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="row col-xs-12 swagger">
+	<div id="ce-TechnicalInputs">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ce-TechnicalInputs')">
+          <span>Technical Scope Inputs - System Interface</span>
+          <a id="ce-TechnicalInputs-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ce-TechnicalInputs-content">
+		<!-- ko foreach: attributes.filterByProperty('name' , 'HCI_PHD_NoSysInterfared','HCI_PHD_Tech_Scope') -->
+			  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				  <!-- ko template: { name: $root.getAttributeTemplate } -->
+				  <!-- /ko -->
+			  </div>
+		<!-- /ko -->
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="row col-xs-12 swagger">
+	<div id="ce-TechnicalInputs2">
+      <div>
+        <div class="swagger-header" onclick="toggleConfigSection(event, '#ce-TechnicalInputs2')">
+          <span>Technical Scope Inputs</span>
+          <a id="ce-TechnicalInputs2-href" href="#" class="swagger-toggle">&#xe066;</a>
+        </div>
+        <div id="ce-TechnicalInputs2-content">
+		<!-- ko foreach: attributes.filterByProperty('name' , 'HCI_PHD_USMConfiguration','HCI_PHD_VirtualCalculations','HCI_PHD_Hardware') -->
+			  <div class="col-xs-6 col-sm-6">
+              <!-- ko if:$data.container.columns().length !== 0-->
+                <!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+                <!-- /ko -->
+              <!-- /ko -->
+          </div>
+		<!-- /ko -->
+		<!-- ko foreach: attributes.filterByProperty('name' , 'HCI_NoOf3rdPartyClients') -->
+			  <div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+				  <!-- ko template: { name: $root.getAttributeTemplate } -->
+				  <!-- /ko -->
+			  </div>
+		<!-- /ko -->
+		
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	<!--ko if: (cpq.models.configurator.attributes.filterByProperty('name' , 'HCI_PHD_IsReports')()[0]?.userInput()==='Yes')-->
+		<div class="row col-xs-12 swagger">
+		<div id="ce-Graphics">
+		  <div>
+			<div class="swagger-header" onclick="toggleConfigSection(event, '#ce-Graphics')">
+			  <span>Graphics and Reports</span>
+			  <a id="ce-Graphics-href" href="#" class="swagger-toggle">&#xe066;</a>
+			</div>
+			<div id="ce-Graphics-content">
+			<!-- ko foreach: attributes.filterByProperty('name' , 'HCI_PHD_NewDisplaysforInsight','HCI_PHD_ExcelReports','HCI_PHD_MigratedDisplaysforInsight','HCI_PHD_CrystalReports','HCI_PHD_SSRS_Reports') -->
+				  <div class="col-xs-6 col-sm-6">
+				  <!-- ko if:$data.container.columns().length !== 0-->
+					<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+					<!-- /ko -->
+				  <!-- /ko -->
+			  </div>
+			<!-- /ko -->
+			
+			</div>
+		</div>
+		</div>
+		</div>
+	<!-- /ko -->
+</div>
+

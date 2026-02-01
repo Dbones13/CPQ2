@@ -1,0 +1,11 @@
+{
+    "id": 18544,
+    "condition": "[EQ](<*VALUE(ES_Mobile_Server_Serial_Board_Expansion)*>,)",
+    "name": "Default_Serial_Board_Expansion",
+    "action": "<*ASSIGNVALUE(ES_Mobile_Server_Serial_Board_Expansion:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

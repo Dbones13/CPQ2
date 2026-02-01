@@ -1,0 +1,11 @@
+{
+    "id": 26207,
+    "condition": "[AND]([EQ](<*VALUE(Cabinet_Touch_Screen_required)*>,No Touch Screen),[EQ](<*VALUE(Cabinet_Display_size)*>,))",
+    "name": "Default_Cabinet_Display_size_touchscreen_1",
+    "action": "<*SELECTVALUE(Cabinet_Display_size:27 inch NTS NEC)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

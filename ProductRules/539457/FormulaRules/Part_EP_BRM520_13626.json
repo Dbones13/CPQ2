@@ -1,0 +1,11 @@
+{
+    "id": 13626,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_EBR_Media_kit_type)*>,Physical delivery),[EQ](<*VALUE(Virtualization_Virtual_EBR_license_needs)*>,Yes),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_EP_BRM520",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-BRM520)*><*SETATVQTY(Virtualization_BOM_Parts:EP-BRM520, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

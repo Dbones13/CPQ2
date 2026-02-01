@@ -1,0 +1,93 @@
+<script type="text/html" id="CheckboxTemplate">
+    <!-- ko if: name() !== "PU_SelectValidParts" -->
+    <!-- ko template: { name: 'LabelTemplate' } -->
+    <!-- /ko -->
+    <!-- /ko -->
+    <div class="fiori3-chckqty-wrapper flex">
+        <ul class="chckqty" data-bind="attr: { id: name(), 'aria-label': name }">
+            <!-- ko foreach: values -->
+            <li>
+                <p class="fiori3-checkbox-template flex">
+                    <span class="checkboxes" data-bind="css: {'col-lg-6 clear-padding': $parent.dataType() == 'Attr.Quantity'}">
+                        <label class="fiori3-checkbox-group middle">
+                            <input type="checkbox" data-bind="
+                                   attr: { id: 'checkbox_' + $parent.stdAttrCode() + pavId, name: $parent.name },
+                                   value: pavId,
+                                   checked: selected,
+                                   enable: $parent.isEnabled,
+                                   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                                   hasFocus: window.lastActiveElementId == $element.id" />
+                                    <span data-bind="html: displayValueWithPrices;"></span>
+                                <!-- ko if: pavId == "993895" -->
+							      &nbsp;<a href="#" class="sap-icon" data-toggle="tooltip" title="Functional control diagrams are usually referred to as SAMA (Scientific Apparatus Manufacturers Association) diagrams. They are used to describe and document control strategies and systems made for industrial and utility applications.">&#xe202;</a>
+                                <!-- /ko -->
+                        </label>
+                    </span>
+                    <!-- ko if: $parent.dataType() == 'Attr.Quantity' -->
+                    <span class="quantity input-group fiori3-input-group qty flex">
+                        <span class="input-group-addon">@Translation.Get("Configurator.Qty")</span>
+                        <input type="text" placeholder="Qty" data-bind="
+                               attr: { id: 'qtyCheckbox_' + $parent.stdAttrCode() + pavId, name: $parent.name },
+                               css: { 'validation-error':(quantity.isValid && !quantity.isValid()), 'validation-initial': !document.dirtyList.has('qtyCheckbox_' + $parent.stdAttrCode() + pavId) },
+                               validateAttribute: quantity,
+                               value: quantity,
+                               enable: $parent.isEnabled,
+                               event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                               hasFocus: window.lastActiveElementId == $element.id" />
+                    </span>
+                    <!-- /ko -->
+                </p>
+            </li>
+            <!-- /ko -->
+        </ul>
+        <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+        <!-- /ko -->
+    </div>
+	
+</script>
+<script type="text/html" id="HW_CheckboxTemplate">
+    <td class="col-xs-8">
+        <!-- ko template: { name: 'LabelTemplate' } -->
+    <!-- /ko -->
+    </td>
+    <td  class="col-xs-4" data-bind="attr : { 'data-title' : label}">
+    <div class="fiori3-chckqty-wrapper">
+        <ul class="chckqty" data-bind="attr: { id: name(), 'aria-label': name }">
+            <!-- ko foreach: values -->
+            <li>
+                <p class="fiori3-checkbox-template flex">
+                    <span class="checkboxes" data-bind="css: {'col-lg-6 clear-padding': $parent.dataType() == 'Attr.Quantity'}">
+                        <label class="fiori3-checkbox-group middle">
+                            <input type="checkbox" data-bind="
+                                   attr: { id: 'checkbox_' + $parent.stdAttrCode() + pavId, name: $parent.name },
+                                   value: pavId,
+                                   checked: selected,
+                                   enable: $parent.isEnabled,
+                                   event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                                   hasFocus: window.lastActiveElementId == $element.id">
+                            <span data-bind="html: displayValueWithPrices;"></span>
+                        </label>
+                    </span>
+                    <!-- ko if: $parent.dataType() == 'Attr.Quantity' -->
+                    <span class="quantity input-group fiori3-input-group qty flex">
+                        <span class="input-group-addon">@Translation.Get("Configurator.Qty")</span>
+                        <input type="text" placeholder="Qty" data-bind="
+                               attr: { id: 'qtyCheckbox_' + $parent.stdAttrCode() + pavId, name: $parent.name },
+                               css: { 'validation-error':(quantity.isValid && !quantity.isValid()), 'validation-initial': !document.dirtyList.has('qtyCheckbox_' + $parent.stdAttrCode() + pavId) },
+                               validateAttribute: quantity,
+                               value: quantity,
+                               enable: $parent.isEnabled,
+                               event: { focusin: function() { window.lastActiveElementId = $element.id; } },
+                               hasFocus: window.lastActiveElementId == $element.id">
+                    </span>
+                    <!-- /ko -->
+                </p>
+            </li>
+            <!-- /ko -->
+        </ul>
+        <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+        <!-- /ko -->
+    </div>
+</td>
+</script>
+

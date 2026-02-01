@@ -1,0 +1,11 @@
+{
+    "id": 22211,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Workstation),[GEQ](<*VALUE(FDM_Station_Service)*>,128))",
+    "name": "Add_HC-SV0128_Station",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-SV0128)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

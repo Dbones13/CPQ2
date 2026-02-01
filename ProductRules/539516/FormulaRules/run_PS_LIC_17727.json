@@ -1,0 +1,11 @@
+{
+    "id": 17727,
+    "condition": "1",
+    "name": "run_PS_LIC",
+    "action": "[IF]([GT](<*CTX ( Container(SM_RemoteGroup_Cont).Rows.GetCount )*>,0)){<* ExecuteScript(PS_SM_CG_Part_Summary)*>}{if_false}[ENDIF]",
+    "description": "",
+    "rank": "2000",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

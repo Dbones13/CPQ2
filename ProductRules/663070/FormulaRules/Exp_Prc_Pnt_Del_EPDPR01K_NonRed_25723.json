@@ -1,0 +1,11 @@
+{
+    "id": 25723,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Experion Process Points (0 - 45000))*>,999),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Non Redundant)))",
+    "name": "Exp_Prc_Pnt_Del_EPDPR01K_NonRed",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-DPR01K)*><* DoResetAtt *>",
+    "description": "Delete EP-DPR01K",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

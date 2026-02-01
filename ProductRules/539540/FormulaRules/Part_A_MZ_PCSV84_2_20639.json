@@ -1,0 +1,11 @@
+{
+    "id": 20639,
+    "condition": "[AND]([EQ](<*VALUE(SS_Trusted_Platform_Module_Station)*>,Yes),[EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Server_Node_Type_Workstation)*>,SVR_PER_HP_Rack_RAID5))",
+    "name": "Part_A_MZ_PCSV84_2",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCSV84)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCSV84, <*VALUE(SS_Number_of_Simulation_PCs_required)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

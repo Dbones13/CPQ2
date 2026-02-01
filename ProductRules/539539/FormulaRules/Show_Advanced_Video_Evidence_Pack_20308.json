@@ -1,0 +1,11 @@
+{
+    "id": 20308,
+    "condition": "[IN](<*VALUE(DVM_Software_Release)*>,R800)",
+    "name": "Show_Advanced Video Evidence Pack",
+    "action": "<*ALLOWATTRIBUTES(Advanced Video Evidence Pack)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24137,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[GT](<* Eval(<*VALUE(Number of Nutanix Standard Clusters in the network)*> + <*VALUE(No of Nutanix Single Node Clusters in the network)*>) *>,0))",
+    "name": "Part_EP_PKSVMP_Nutanix",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-PKSVMP)*><*SETATVQTY(Virtualization_BOM_Parts:EP-PKSVMP,<* Eval(<*VALUE(Number of Nutanix Standard Clusters in the network)*> + <*VALUE(No of Nutanix Single Node Clusters in the network)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

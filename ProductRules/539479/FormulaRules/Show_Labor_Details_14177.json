@@ -1,0 +1,11 @@
+{
+    "id": 14177,
+    "condition": "[NEQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Show_Labor_Details",
+    "action": "<*ALLOWATTRIBUTES(C300_GES_Location,C300_Implementation_Methodology,C300_Marshalling_cabinet_count (0-500),C300_Process_Type,Enter_total_count_of_Typicals/Prototypes (0-500),No_of_Batch_Unit_Copies(Replica of Master Units),No_of_Complex_Operations_per_Product (0-100),No_of_Complex_SCMs_per_Unit (0-100),No_of_Product_on_Copy_Unit,Number_of_Peer_CDA,Number_of_Peer_PCDI,Number_of_Peer_to_Peer_Soft_IO,Number_of_SCADA_Node_Types_for_C300,Number_of_Third_Party_Soft_IO_(Serial/SCADA),Total_Number_of_Complex_Loops (0-10000),Total_Number_of_EtherNet_IP_Devices (0-10000),Total_Number_of_EtherNet_IP_Ios (0-10000),Total_Number_of_New_Typicals (0-500),Total_Number_of_ProfiNet_Devices (0-10000),Total_Number_of_ProfiNet_Ios (0-10000),Header_04_open,Header_04_close)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Payal Gupta"
+}

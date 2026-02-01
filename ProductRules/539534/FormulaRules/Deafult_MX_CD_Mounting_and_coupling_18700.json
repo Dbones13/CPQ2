@@ -1,0 +1,11 @@
+{
+    "id": 18700,
+    "condition": "[EQ](<*VALUE(MX_CD_Mounting_and_coupling)*>,)",
+    "name": "Deafult_MX_CD_Mounting_and_coupling",
+    "action": "<*SELECTVALUE(MX_CD_Mounting_and_coupling:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

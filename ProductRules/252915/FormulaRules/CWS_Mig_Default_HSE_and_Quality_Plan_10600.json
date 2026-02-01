@@ -1,0 +1,11 @@
+{
+    "id": 10600,
+    "condition": "[EQ](<*VALUE(CWS_Mig_HSE_and_Quality_Plan)*>,)",
+    "name": "CWS_Mig_Default_HSE_and_Quality_Plan",
+    "action": "<*SELECTVALUE(CWS_Mig_HSE_and_Quality_Plan:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

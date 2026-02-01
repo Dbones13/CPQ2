@@ -1,0 +1,11 @@
+{
+    "id": 26488,
+    "condition": "[EQ](<*VALUE(Orion Console Display Size)*>,55 inch NTS)",
+    "name": "Orion_55inch_MultiWindow",
+    "action": "<*DISALLOWVALUES(Multi-Window Support Option Required?:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

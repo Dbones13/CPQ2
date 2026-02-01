@@ -1,0 +1,11 @@
+{
+    "id": 25981,
+    "condition": "[EQ](<*VALUE(QVCS Support)*>,Yes)",
+    "name": "TC-QVC0BS_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:TC-QVC0BS)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-QVC0BS, 1)*><* DoResetAtt *>",
+    "description": "CXCPQ-44531",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

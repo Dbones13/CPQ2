@@ -1,0 +1,11 @@
+{
+    "id": 19782,
+    "condition": "[EQ](<*VALUE(FIM_Type)*>,)",
+    "name": "Default_FIM_Type",
+    "action": "<*SELECTVALUES(FIM_Type:FIM8)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

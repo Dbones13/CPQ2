@@ -1,0 +1,11 @@
+{
+    "id": 19672,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Select the OS for Experion HS Server Node)*>,Windows 10 ENT 2019),[EQ](<*VALUE(Exp HS Redundant Servers)*>,No),[EQ](<*VALUE(Exp HS Select the OS for Exp HS Flex Station Node)*>,Windows 10 ENT 2019),[GT](<* IsNull(<*VALUE(Exp HS Quantity of Flex Station)*>,0)*>,0))",
+    "name": "MS-OSLW19 Set1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:MS-OSLW19)*>\n<*SETATVQTY(Experion_HS_PART_SUMMARY:MS-OSLW19,<*Eval(1+ <*VALUE(Exp HS Quantity of Flex Station)*>)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45837 Condition 1 : If \"Select the OS for Experion HS Server Node\"  = Windows 10 ENT 2019 AND \"Redundant Server\" = No \nThen Qty = 1  + If \"Select the OS for Experion HS Flex Station Node\" = v then add value entered by user for \"Quantity of Flex Station\"",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

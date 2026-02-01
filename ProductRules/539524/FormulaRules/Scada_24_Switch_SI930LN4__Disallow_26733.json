@@ -1,0 +1,11 @@
+{
+    "id": 26733,
+    "condition": "[NOT]([EQ](<*CTX( Container(Additional Hardware).Row(1).Column(Switch_Port).Get)*>,24 Ports))",
+    "name": "Scada_24_Switch_SI-930LN4 _Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:SI-930LN4)*>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "06/01/26",
+    "modifiedBy": "Yogesh Baisla2"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15099,
+    "condition": "[EQ](<*VALUE(MXP_Allen Bradley_PLC_Interfac_Serial_Link)*>,)",
+    "name": "Default_Allen_Bradley_PLC_Interface",
+    "action": "<*SELECTVALUE(MXP_Allen Bradley_PLC_Interfac_Serial_Link:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

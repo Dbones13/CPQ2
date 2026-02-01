@@ -1,0 +1,11 @@
+{
+    "id": 13255,
+    "condition": "[EQ](<*VALUE(Number of Station Types)*>,)",
+    "name": "Set default value for Number of Station Types",
+    "action": "<*ASSIGNVALUE(Number of Station Types:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

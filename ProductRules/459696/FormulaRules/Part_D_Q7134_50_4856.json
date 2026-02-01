@@ -1,0 +1,11 @@
+{
+    "id": 4856,
+    "condition": "[OR]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[NEQ](<*VALUE(MX_SE_Measurement_Type)*>,Caliper),[NEQ](<*VALUE(MX_SE_Outboard_mounting_platform)*>,Yes))",
+    "name": "Part_D_Q7134_50",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q7134-50)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 11650,
+    "condition": "[EQ](<*VALUE(IS_No_of_VSS_Control_cabinet/JB_Wiring_Diagrams)*>,)",
+    "name": "Default_Number of VSS Control cabinet/JB Wiring Diagrams",
+    "action": "<*ASSIGNVALUE(IS_No_of_VSS_Control_cabinet/JB_Wiring_Diagrams:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

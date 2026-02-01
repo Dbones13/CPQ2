@@ -1,0 +1,11 @@
+{
+    "id": 14257,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "parameter_CP",
+    "action": "<*ASSIGNVALUE(parameter_CP:<* Eval((0<*VALUE(Base)*> * (0<*VALUE(Labor_parameter_pT)*>* 0<*XValue(../Experion_EnterpriseGroup_Cont_count)*>) )) *>)*>",
+    "description": "CXCPQ-43531",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

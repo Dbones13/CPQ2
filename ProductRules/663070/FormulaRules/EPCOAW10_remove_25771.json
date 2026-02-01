@@ -1,0 +1,11 @@
+{
+    "id": 25771,
+    "condition": "[OR]([AND]([NEQ](<*VALUE(Experion Software Release)*>,R510),[NEQ](<*VALUE(Experion Software Release)*>,R511)),[EQ](<*VALUE(stationQnt37198)*>,0))",
+    "name": "EP-COAW10 remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-COAW10)*><* DoResetAtt *>",
+    "description": "#CXCPQ-37545",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

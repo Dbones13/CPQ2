@@ -1,0 +1,11 @@
+{
+    "id": 26456,
+    "condition": "[GT](<*CTX ( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>,0)",
+    "name": "Hide clustera",
+    "action": "<*xDisallowallValuesExcept(Server LocationClusterNetwork_desk mount  server1:<* LIST ( SELECT AttValue FROM ClusterAttValues WHERE CAST (AttValueCode AS float) <= '<*CTX( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>' ) *>)*>",
+    "description": "Servera LocationClusterNetwork_desk mount  server1",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17978,
+    "condition": "1",
+    "name": "Hide Additional Column",
+    "action": "<*CTX( Container(RTU Field container).Column(System Type).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Release).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Controller Type).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Media Type).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Calculation Library Required).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Engineering Stations).SetPermission(Hidden) )*>\n<*CTX( Container(RTU Field container).Column(Number of Groups).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

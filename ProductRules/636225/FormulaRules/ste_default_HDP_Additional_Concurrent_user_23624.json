@@ -1,0 +1,11 @@
+{
+    "id": 23624,
+    "condition": "[EQ](<*VALUE(HDP Additional Concurrent user)*>,)",
+    "name": "ste default HDP Additional Concurrent user",
+    "action": "<*ASSIGNVALUE(HDP Additional Concurrent user:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

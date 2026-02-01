@@ -1,0 +1,11 @@
+{
+    "id": 23104,
+    "condition": "<*ATTSEL(Series_C_RG_Third_Party_Part_Summary)*>",
+    "name": "Load_Series_C_RG_Standard_Third_Party_Parts",
+    "action": "<*CTX( Container(Series_c_RG_standardart_3rd_partsummary_cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(Series_C_RG_Third_Party_Part_Summary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "To load the part summary container from the part summary attribute. Always should run at last (rank highest)",
+    "rank": "1001",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

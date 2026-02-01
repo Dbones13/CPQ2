@@ -1,0 +1,11 @@
+{
+    "id": 21886,
+    "condition": "[EQ](<*VALUE(FDM_RCI_PC_Display_Supplier)*>,)",
+    "name": "Default_FDM_RCI_PC_Display_Supplier",
+    "action": "<*SELECTVALUE(FDM_RCI_PC_Display_Supplier:Honeywell)*>",
+    "description": "CXCPQ-46451",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

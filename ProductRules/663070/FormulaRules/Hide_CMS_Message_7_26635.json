@@ -1,0 +1,11 @@
+{
+    "id": 26635,
+    "condition": "[OR]([EQ](<*VALUE(CMS Cabinet Mounting Stations required)*>,No),[IN](<*VALUE(Cabinet_Display_size)*>,27 inch NTS NEC,27 inch NTS DELL),[EQ](<*VALUE(MIB Configuration Required?)*>,No))",
+    "name": "Hide_CMS Message 7",
+    "action": "<*DISALLOWATTRIBUTES(CMS Message 7)*>",
+    "description": "CXCPQ-45058",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17991,
+    "condition": "[NEQ](<*VALUE(MXP_CD_Control_Type)*>,ProFlow)",
+    "name": "Show_proflow_type",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Proflow_Type)*>\n<*DISALLOWATTRIBUTES(MXP_Type_of_Valve)*>\n<*DISALLOWATTRIBUTES(MXP_Type_of_Valve_length)*>\n<*DISALLOWATTRIBUTES(MXP_Actuator_Housing_cover,MXP_Type_of_Valve_length)*>\n<*DISALLOWATTRIBUTES(MXP_Actuator_Housing_cover)*>\n<*DISALLOWATTRIBUTES(MXP_ProFlow_Machined_Mounting_Adapter_Valve Coupling)*>\n<*DISALLOWATTRIBUTES(MXP_Machine_Mounting_Adapter)*>\n<*DISALLOWATTRIBUTES(MXP_Mounting_and_coupling)*>\n<*DISALLOWATTRIBUTES(MXP_Stop_Disc)*>\n<*DISALLOWATTRIBUTES(MXP_Communication_Link_to_Non_Honeywell_QCS)*>\n<*DISALLOWATTRIBUTES(MXP_How_many_trays)*>\n<*DISALLOWATTRIBUTES(MXP_Tray_mm)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

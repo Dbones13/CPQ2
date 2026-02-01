@@ -1,0 +1,11 @@
+{
+    "id": 12118,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Netwrok Switch Configuration",
+    "action": "<*ASSIGNVALUE(Netwrok Switch Configuration:<* Eval(2*<*VALUE(OWS_Number of Network Switches for OneWireless)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14849,
+    "condition": "[NEQ](<*VALUE(MX_MD_Supercalender_Startup_and_Shutdown)*>,Yes)",
+    "name": "MX_Part_Dis_RQUP2",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:RQUP2)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

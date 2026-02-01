@@ -1,0 +1,11 @@
+{
+    "id": 11654,
+    "condition": "[EQ](<*VALUE(IS_SAT_Duration_in_Days)*>,)",
+    "name": "Default_SAT Duration in Days",
+    "action": "<*ASSIGNVALUE(IS_SAT_Duration_in_Days:8)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14283,
+    "condition": "[OR]([NOT](<*ATTDEF(MIQ_Base_Media_Delivery)*>),<* IsNull(<*VALUE(MIQ_Base_Media_Delivery)*>,1) *>)",
+    "name": "Set Default Base Media Delivery",
+    "action": "<*SELECTVALUE(MIQ_Base_Media_Delivery:Electronic Download)*>",
+    "description": "CXCPQ-50743",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

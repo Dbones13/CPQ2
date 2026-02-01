@@ -1,0 +1,11 @@
+{
+    "id": 20675,
+    "condition": "[AND]([EQ](<*VALUE(SS_Simulation_Server_required)*>,Yes),[EQ](<*VALUE(SS_Display_Size)*>,24 inch NTS DELL),[EQ](<*VALUE(SS_Display_Supplier)*>,Honeywell))",
+    "name": "Sum24_NTS_Dell_1",
+    "action": "<*ASSIGNVALUE(SS_24inch_NTS_DELL:<* Eval(<*VALUE(SS_24inch_NTS_DELL)*>+<*VALUE(Simulation_red_non_red_Check)*>) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

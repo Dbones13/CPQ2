@@ -1,0 +1,11 @@
+{
+    "id": 12992,
+    "condition": "[EQ](<*VALUE(SC_Renewal_check)*>,0)",
+    "name": "Run_DC_Readonly",
+    "action": "<* ExecuteScript(To_Populate) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

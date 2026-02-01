@@ -1,0 +1,11 @@
+{
+    "id": 14161,
+    "condition": "[EQ](<*VALUE(Number_of_SM/FSC_Soft I/O_(SCADA))*>,)",
+    "name": "Default_Number_of_SM/FSC_Soft I/O_(SCADA)",
+    "action": "<*ASSIGNVALUE(Number_of_SM/FSC_Soft I/O_(SCADA):0)*>",
+    "description": "CXCPQ-37119",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Payal Gupta"
+}

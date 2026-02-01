@@ -1,0 +1,11 @@
+{
+    "id": 20437,
+    "condition": "[EQ](<*VALUE(SS_Server_Node_Type_Workstation)*>,)",
+    "name": "Default_SS_Server_Node_Type_Workstation",
+    "action": "<*SELECTVALUE(SS_Server_Node_Type_Workstation:SVR_STD_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

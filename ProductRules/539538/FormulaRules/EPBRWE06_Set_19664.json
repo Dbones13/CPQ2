@@ -1,0 +1,11 @@
+{
+    "id": 19664,
+    "condition": "[AND]([EQ](<*VALUE(Exp HS Need Experion Backup and Restore (EBR))*>,Yes),[GT](<*GETATVQTY(Experion_HS_PART_SUMMARY:EP-HSTA01)*>,0))",
+    "name": "EP-BRWE06 Set",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-BRWE06)*>\n<*SETATVQTY(Experion_HS_PART_SUMMARY:EP-BRWE06,<*GETATVQTY(Experion_HS_PART_SUMMARY:EP-HSTA01)*>)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

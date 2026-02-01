@@ -1,0 +1,11 @@
+{
+    "id": 1112,
+    "condition": "[NEQ](<*VALUE(Spare_Parts_Server_Cabinet_PartSummary)*>,)",
+    "name": "Load Spare_Parts_Server_Cabinet_PartSummary",
+    "action": "<*CTX( Container(Spare_Parts_Cabinet_PartSummary).LoadKeys(PartNumber).Load(select '<*Eval(Replace(\"<*VALUE(Spare_Parts_Server_Cabinet_PartSummary)*>\",\", \",\"' as PartNumber UNION SELECT '\"))*>' as PartNumber   ) )*>",
+    "description": "",
+    "rank": "10000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

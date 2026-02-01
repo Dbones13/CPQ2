@@ -1,0 +1,11 @@
+{
+    "id": 14217,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labor_parameter_sys",
+    "action": "<*ASSIGNVALUE(Labor_parametre_sys:<* Eval(<*CTX ( Container(Series_C_Control_Groups_Cont).Sum(Total_SCAB) )*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

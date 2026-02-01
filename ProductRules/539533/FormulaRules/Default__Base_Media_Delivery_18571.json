@@ -1,0 +1,11 @@
+{
+    "id": 18571,
+    "condition": "[EQ](<*VALUE(ES_eServer_Base_Media_Delivery)*>,)",
+    "name": "Default_ Base_Media_Delivery",
+    "action": "<*SELECTVALUE(ES_eServer_Base_Media_Delivery:Electronic Download)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

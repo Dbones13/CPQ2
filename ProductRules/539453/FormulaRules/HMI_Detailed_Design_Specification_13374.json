@@ -1,0 +1,11 @@
+{
+    "id": 13374,
+    "condition": "[NEQ](<*VALUE(Implementation Methodology)*>,)",
+    "name": "HMI Detailed Design Specification",
+    "action": "<*ASSIGNVALUE(HMI Detailed Design Specification:<*Eval([IF]([EQ](<*VALUE(Implementation Methodology)*>,)){(40*<*VALUE(labor_parameter_sz_shape)*>+(0<*VALUE(labor_parameter_ss)*>+0<*VALUE(labor_parameter_ms)*>+0<*VALUE(labor_parameter_cs)*>+0<*VALUE(labor_parameter_vcs)*>+0<*VALUE(labor_parameter_rs)*>)*0<*VALUE(labor_parameter_lod_shape)*>*6)*0.9}{((32*0[IF]([LEQ](<*VALUE(Total_Number_Display_Graphics)*>,50)){0.6}{[IF]([GEQ](<*VALUE(Total_Number_Display_Graphics)*>,200)){2}{1}[ENDIF]}[ENDIF]+(0<*VALUE(labor_parameter_ss)*>+0<*VALUE(labor_parameter_ms)*>+0<*VALUE(labor_parameter_cs)*>+0<*VALUE(labor_parameter_vcs)*>+0<*VALUE(labor_parameter_rs)*>)*0<*VALUE(labor_parameter_lod_shape)*>*6))}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

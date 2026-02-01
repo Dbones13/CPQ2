@@ -1,0 +1,470 @@
+@using WebSite.Controllers
+<div class="w960">
+    <div class="row user-page-container custom-fields-page-container fiori3-cart-tab-container cart-content fiori3-cart-tab-container-with-footer" id="cartContainer">
+        <div class="row cart" data-bind="visible: isInitalized" style="display: none;">
+            <div data-bind="css: { 'cart-view-mode': isInViewMode }">
+                <div class="clearfix"></div>
+
+                @*Custom fields*@
+                <div class="clearfix">
+                   <scripting-messages></scripting-messages>
+   <!-- Start - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->
+            <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+        		<div class="fiori3-alert fiori3-alert-warning" data-bind = "visible:ServiceContractMessages(tabsData.currentTabName(),$root.customFields()).length > 0">
+            			<p class="cart-warning-group" data-bind="text:ServiceContractMessages(tabsData.currentTabName(),$root.customFields())"></p>
+        		</div>
+            <!--/ko -->
+   <!-- END - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->
+   <!-- Start - CXCPQ-76298 - Manthan Rajguru - 01/18/2024 - Display warning message on commercial info tab -->
+            <!-- ko if: (customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" && tabsData.currentTabName() === "COMMERCIAL INFO") -->
+            <!-- ko foreach: customFieldsAndQuoteTables.filterByProperty('name','SC_CF_Error_Msg') -->
+            <!-- ko if: content() !== '' -->
+            <!-- ko let: { errorMsg: JSON.parse(content()) } -->
+            <!-- ko if: errorMsg.hasOwnProperty('FIN_APP_VALIDATION') -->
+            <!-- ko foreach: errorMsg.FIN_APP_VALIDATION -->
+        		 <div data-bind = "css: {'fiori3-alert fiori3-alert-danger': (Type === 'Error'),'fiori3-alert fiori3-alert-warning' : (Type === 'Warning'),'fiori3-alert fiori3-alert-info' : (Type === 'Info')}">
+                     <!-- ko if: Type === 'Error' -->
+                     	<span class="sap-icon">&#xe1ec;</span>
+                     <!--/ko -->
+                     <!-- ko if: Type === 'Warning' -->
+                     	<span class="sap-icon">&#xe053;</span>
+                     <!--/ko -->
+                     <!-- ko if: Type === 'Info' -->
+                     	<span class="sap-icon-extended">&#xf200;</span>
+                     <!--/ko -->
+            			<span data-bind="text:Text"></span>
+        		 </div>
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+            <!--/ko -->
+   <!-- END - CXCPQ-76298 - Manthan Rajguru - 01/18/2024 - Display warning message on commercial info tab -->
+                   @Html.PartialWithNameAsComment("Sections/Tabs")
+                    <div id="customFieldsBox" class="box">
+                        <div class="clearfix">
+                          <!-- ko if: tabsData.currentTabName() === "COMMERCIAL INFO" -->
+                          	<div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="text-center custom-field-headers">@Translation.Get("Commercial_terms")</div>
+                                <!-- Start - CXCPQ-60167 - Manthan Rajguru 10-08-2023 -->
+                                <!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                              <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Honeywell Entity Name','Delivery Terms','Delivery Terms- Additional Info','Final Destination','Warranty','Minimum Order Fees','Payment Terms','Proposal Validity','Quote Expiration Date','BOM','PMC BOM','EGAP_Contract_Start_Date','EGAP_Contract_End_Date','EGAP_Project_Duration_Months','EGAP_Project_Duration_Weeks','BOM Type','Sub-LOB','Proposal Template Type','Does Quote include Labor Services')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                               <!--/ko -->
+                               <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" -->
+                              <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Honeywell Entity Name','Delivery Terms','Delivery Terms- Additional Info','Final Destination','Warranty','Minimum Order Fees','Payment Terms','Proposal Validity','Quote Expiration Date','BOM','PMC BOM','BOM Type','Sub-LOB','Proposal Template Type','Does Quote include Labor Services','SC_CF_HONEYWELL_AFF_ADR','SC_CF_PRVYR_EXCH_RATE','SC_CF_PRICING_PER_VERSION','SC_CF_INVTYPE','SC_CF_SINGLE_LINE_INV','SC_CF_INV_DAY','SC_CF_INV_FREQUENCY','SC_CF_INV_IN_ADVANCE','SC_CF_FIN_APPROVAL_METHOD','SC_CF_INVOICING_COMMENTS','SC_CF_INVOICE_EMAIL_ADDRESS','SC_CF_Invoice_Portal_URL','SC_CF_invoice_Text')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                               <!--/ko -->
+                               <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+                              <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Honeywell Entity Name','Delivery Terms','Delivery Terms- Additional Info','Final Destination','Warranty','Minimum Order Fees','Payment Terms','Proposal Validity','Quote Expiration Date','BOM','PMC BOM','BOM Type','Sub-LOB','Proposal Template Type','Does Quote include Labor Services','SC_CF_HONEYWELL_AFF_ADR','SC_CF_PRVYR_EXCH_RATE','SC_CF_PRICING_PER_VERSION','SC_CF_INVTYPE','SC_CF_SINGLE_LINE_INV','SC_CF_INV_DAY','SC_CF_INV_FREQUENCY','SC_CF_INV_IN_ADVANCE','SC_CF_FIN_APPROVAL_METHOD','SC_CF_INVOICING_COMMENTS','SC_CF_invoice_Text')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                               <!--/ko -->
+                                <!-- End - CXCPQ-60167 - Manthan Rajguru -->
+                            
+                               <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Milestone','Payment Milestones Category','Payment Milestones')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                            </div>
+                          	<div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="text-center custom-field-headers">Customer Inputs</div>
+								<!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+								<div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','CF_Multiyear_Project','MSID','Published Lead Time','MPA Commercial','MPA Honeywell Ref','MPA Customer Reference No','MPA Price Plan Commercial','Payment Milestones as per Standard/MPA?','Is Payment milestones are negatively deviating from standard milestone?','Customer Comment','Customers RFQ Number','Customer Requested Date','Document Format','System Number','CF_LCM_Year_1_to_be_Escalated','Agreement Type','Is Quote Approval Exempted due to MPA?')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                  <!-- ko if: name == 'Agreement Type' && (($root.customFields.firstWithProperty('name', 'Commercial Tab Booking LOB')?.content() == 'LSS' && (['Projects','Contract New','Contract Renewal']).includes($root.customFields.firstWithProperty('name', 'Quote Type')?.content())) || ($root.customFields.firstWithProperty('name', 'Commercial Tab Booking LOB')?.content() == 'PAS' && (['Projects']).includes($root.customFields.firstWithProperty('name', 'Quote Type')?.content()))) -->
+                    <!-- ko template: template+"_Quote" -->
+                    <!--/ko -->
+                  <!--/ko -->
+                  <!-- ko ifnot: name == 'Agreement Type' -->
+								  <!-- ko template: template+"_Quote" -->
+								  <!--/ko -->
+                  <!--/ko -->
+								</div>
+								<!--/ko -->
+								<!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" -->
+								<div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','CF_Multiyear_Project','CF_LCM_Year_1_to_be_Escalated','MSID','Published Lead Time','MPA Commercial','MPA Honeywell Ref','MPA Customer Reference No','MPA Price Plan Commercial','Customer Comment','Customers RFQ Number','Customer Requested Date','Document Format','System Number')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+									<!-- ko template: template+"_Quote" -->
+									<!--/ko -->
+								</div>
+								<!--/ko -->
+								<!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+								<div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','CF_Multiyear_Project','CF_LCM_Year_1_to_be_Escalated','MSID','Published Lead Time','MPA Commercial','MPA Honeywell Ref','MPA Customer Reference No','MPA Price Plan Commercial','Customer Comment','Customers RFQ Number','Customer Requested Date','Document Format','System Number','SC_CF_INVOICE_EMAIL_ADDRESS','SC_CF_Invoice_Portal_URL')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+									<!-- ko template: template+"_Quote" -->
+									<!--/ko -->
+								</div>
+								<!--/ko -->
+                              	<!-- changes by Ankit : CXCPQ-63377 (LCM).....start -->
+                              	@Html.PartialCustomTemplate("RT_LCM_Custom_fIelds")
+                            	<!-- changes by Ankit : CXCPQ-63377 (LCM).....end -->
+                                <!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+								  <div class="row">
+                                 <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Pricing Summary Type')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <div class="text-center custom-field-headers col-xs-12" >Migration</div>
+                                      <!-- ko template: template+"_Quote"-->
+                                      <!--/ko -->
+                                  </div>
+                                </div>
+                                <div class="row">
+                                 <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','NewMigration_Pricing_Summary')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <div class="text-center custom-field-headers col-xs-12">New/Expansion</div>
+                                      <!-- ko template: template+"_Quote"-->
+                                      <!--/ko -->
+                                  </div>
+                                </div>
+                                <!--/ko -->
+                            </div>
+                            <!-- ko if: $root.customFields.firstWithProperty('name', 'Commercial Tab Booking LOB')?.content() !== 'PMC' && ($root.customFields.firstWithProperty('name', 'Commercial Tab Booking LOB')?.content() === 'LSS' && $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Parts and Spot")-->
+                            <!-- CXCPQ-60756 - Manthan Rajguru - 08/12/2023 - Added additional check to hide section for quote type Contract New or Contract Renewal -->
+                            <!-- ko ifnot: $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+                              <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="text-center custom-field-headers">Minimum order / Expedite Fee</div>
+                                <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Expedite Fee','Expedite Reason','Expedite Fee Waiver Reason','Minimum Order Fee','Minimum Order fee Waiver reason','LOB_Approver_Name')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                    <!-- ko template: template+"_Quote" -->
+                                    <!--/ko -->
+                                </div>
+                              </div>
+                            <!--/ko -->
+                            <!--/ko -->
+                           <!-- payment milestone start -->
+                        <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Payment_MileStones')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template-->
+                                  <!--/ko -->
+                              </div>
+              <!-- START - CXCPQ - 63451 - Manthan Rajguru - Display Milestone for Service Contract -->
+              <!-- ko if: $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || $root.customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->
+              <div id="customFieldsContainer" style="width:70%;"
+                data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','SC_Milestone_Table')"
+                class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                <!-- ko template: template-->
+                <!--/ko -->
+              </div>
+              <!--/ko -->
+              <!-- END - CXCPQ - 63451 - Manthan Rajguru - Display Milestone for Service Contract -->
+                            <!-- payment milestone end -->
+
+                            <!-- MSID/System Number start -->
+                        <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','MSID_System_Number_Summary')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template-->
+                                  <!--/ko -->
+                              </div>
+                            <!-- MSID/System Number end -->    
+                          
+                          <!-- Country_of_Origin start -->
+              <!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal" -->																																																			 
+                        <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Country_of_Origin')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template-->
+                                  <!--/ko -->
+                              </div>
+              <!--/ko -->						 
+                            <!-- Country_of_Origin end -->
+                          <!-- DCA Table start -->
+                        <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','DCATable')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template-->
+                                  <!--/ko -->
+                              </div>
+                            <!-- DCA Table end -->
+                          
+                          <!-- /ko -->
+                          <!-- ko if: tabsData.currentTabName() === "OPPORTUNITY INFO" -->                           
+                          	<div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="text-center custom-field-headers">@Translation.Get("Opportunity_Core_Information")</div>
+                              <!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                                <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Opportunity Number','Legacy CRM ID','CPQ_SF_OPPORTUNITY_NAME','Sales Stage','Opportunity Type','Opportunity Category','Booking LOB','Sub LOB','Opp Prod Desc','Business Model','Close Date','EstimatedSellPrice','CompetitorCount')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                                <!--/ko -->
+                                <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                                <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Opportunity Number','Legacy CRM ID','CPQ_SF_OPPORTUNITY_NAME','Sales Stage','Opportunity Type','Opportunity Category','Booking LOB','Sub LOB','Opp Prod Desc','Business Model','Close Date','EstimatedSellPrice','CompetitorCount','Primary_Competitor','OpportunitySalesTeam')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                                <!--/ko -->
+                            </div>
+                          	<div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="text-center custom-field-headers">Opportunity Details</div>
+                                <!-- ko ifnot: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                              <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Sales ORG','Sales Area','Parts Price List','Systems Price List','Market Segment','Sub Market Segment','Destination Country','Opportunity Tab Booking Country','Pole','Opportunity Record Type','Global Major Project','Order_Recipients','Opportunity Owner Name','Opportunity Owner Phone No','Opportunity Owner Email','Primary_Competitor','OpportunitySalesTeam')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                                <!--/ko -->
+                                <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                              <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Sales Area','Parts Price List','Systems Price List','Market Segment','Sub Market Segment','Destination Country','Opportunity Tab Booking Country','Pole','Opportunity Record Type','Global Major Project','Order_Recipients','Opportunity Owner Name','Opportunity Owner Phone No','Opportunity Owner Email','SC_CF_MOS_COMMENTS','SC_CF_MOS_REVIEW','SC_CF_CONTRACT_MANAGER','SC_CF_ISA_MANAGER','SC_CF_RSOM','SC_CF_FSM','SC_CF_SBM')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                                <!--/ko -->
+                            </div>
+               <!-- START - CXCPQ-67534 - 13/10/2023 - Manthan Rajguru - Added to display quote table -->
+                <!-- ko if: customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract New" || customFields.firstWithProperty('name', 'Quote Type')?.content() === "Contract Renewal"  -->
+                  <div id="customFieldsContainerRole"
+                  data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','SC_SFDC_Data_QuoteTable')"
+                  class="col-xs-6 fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                  <!-- ko template: template -->
+                  <!--/ko -->
+                  </div>
+                <!--/ko -->
+   				<!-- END - CXCPQ-67534 - 13/10/2023 - Manthan Rajguru - Added to display quote table -->																										 
+                          <!-- /ko -->
+                          <!-- ko if: tabsData.currentTabName() === "ACCOUNT" -->
+                          	<div class="col-md-4 col-sm-6 col-xs-12">
+                              <div class="text-center custom-field-headers">Account Core Information</div>
+                              <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Account Name','Account Site','Account Type','Account Address Line 1','Account Address City','Account Address State','Account Address Country','Account Address Zip Code','Account Contact Name','Account Contact Email','Account Contact Phone','Customer Segmentation')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>
+                            </div>
+                          	<div class="col-md-4 col-sm-6 col-xs-12">
+                              <div class="text-center custom-field-headers">Account Details</div>
+                              <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Account Owner Name','Account Owner Email','Account Owner Phone No','Account Manager','Account Manager Email','Account Manager Phone No','Expedite Fee Waiver','Access to Inventory','Minimum Order Fee Waiver','Entitlement','Global Account Name','SC_CF_PARENT_ACCOUNT_NAME','SC_CF_STATUS','Customer Price Group','Customer Price List')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                  <!-- ko template: template+"_Quote" -->
+                                  <!--/ko -->
+                              </div>                              
+                            </div>
+                          <!-- ko ifnot: customFields.firstWithProperty('name', 'Account Tab Opportunity Sales Type')?.content().startsWith('Direct') -->
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                               <div class="text-center custom-field-headers">Partner Account Information</div>
+                               <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','Partner Account Name','Partner Account Site','Partner Account Type','Partner Account Address (Site) Line 1','Partner Account Address City','Partner Account Address State','Partner Account Address Country','Partner Account Address Zip Code','Partner Account Contact Name','Partner Account Contact Email','Partner Account Contact Phone')" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                   <!-- ko template: template+"_Quote" -->
+                                   <!--/ko -->
+                               </div>
+                            </div>
+                          <!-- /ko -->
+                          <!-- /ko -->
+                          <!-- ko if: tabsData.currentTabName() === "APPROVAL" -->
+                            @Html.PartialCustomTemplate("RT_Approval_Template")
+                          <!-- /ko -->
+                          <!-- ko if: tabsData.currentTabName() === "CASH FLOW DETAIL" -->
+                            @Html.PartialCustomTemplate("RT_CashFlowDetail_Template")
+                          <!-- /ko -->
+                          <!-- ko if: tabsData.currentTabName() === "FUNCTIONAL QUESTIONS" -->
+                            @Html.PartialCustomTemplate("RT_FunctionalQuestions_Template")
+                          <!-- /ko --> 
+						  <!-- START - CXCPQ-76891 - Manthan Rajguru - 02/12/2024 -->
+						  <!-- ko if: tabsData.currentTabName() === "PSC INFO" -->
+							<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="text-center custom-field-headers">PSC Details</div>
+							<div id="customFieldsContainer"
+							  data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','SC_CF_Service_Contract_Content', 'SC_CF_Service_Contract_Tier', 'SC_CF_Service_Contract_Type', 'SC_CF_Special_Terms', 'SC_CF_Velocity_Renewal', 'SC_CF_1st_Survey_Month', 'SC_CF_2nd_Survey_Month', 'SC_CF_Do_not_send_Survey', 'SC_CF_Threshold')"
+							  class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+								<!-- ko if: ['SC_CF_Velocity_Renewal','SC_CF_Do_not_send_Survey'].includes(name) -->
+									<!-- ko template: "customFieldCheckBoxTemplate" -->
+									<!--/ko -->
+								<!--/ko -->
+							  <!-- ko ifnot: ['SC_CF_Velocity_Renewal','SC_CF_Do_not_send_Survey'].includes(name) -->
+								<!-- ko template: template+"_Quote" -->
+								<!--/ko -->
+							  <!--/ko -->
+							</div>
+							</div>
+							  <div id="quoteTableContainerPSC"
+							  data-bind="foreach: customFieldsAndQuoteTables.filterByProperty('name','QT_SC_PSC_Labor_Details')"
+							  class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+							  <!-- ko template: template -->
+							  <!--/ko -->
+							  </div>
+						  <!-- /ko -->
+						 <!-- END - CXCPQ-76891 - Manthan Rajguru - 02/12/2024 -->
+						 <!-- ko if: tabsData.currentTabName() === "RENEWAL SUMMARY" -->
+							<div id="customFieldsContainer" data-bind="foreach: quoteTables"
+							class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+							<!-- ko template: template -->
+							<!--/ko -->
+							</div>
+						<!-- /ko -->
+                          <!-- ko if: tabsData.currentTabName() ==="PAS DOCUMENT TAB" -->
+
+                            
+
+                               <div class="fiori3-quote-section-header clearfix" style="margin: 10px 0px;box-shadow: 0px 1px 3px #a7abac;" data-bind="click: function() { if(sessionStorage.customSec != '1'){sessionStorage.setItem('customSec', 1);location.reload();}else{$('.section1').slideToggle('slow');$('.toggle1').toggleClass('fiori3-rotated-quote-section-toggle');} }">
+
+                                   <div>
+
+                                        <div class="row">
+
+                                            <span tabindex="0" data-bind="" style="">Migration BOM section</span>
+
+                                        </div>
+
+                                    </div>
+
+            						<a class="fiori3-quote-section-toggle toggle1" data-bind="css: { 'fiori3-rotated-quote-section-toggle': sessionStorage.customSec != '1' }" tabindex="0">&#xe066;</a>
+
+                               </div>
+
+                               <!-- ko if: sessionStorage.customSec == '1' -->
+
+                                    <div class="col-md-12 section1 clearfix" style="padding: 10px !important;border: 1px solid #532d2d2b;">
+
+                                         <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables().slice(0,3)" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+
+                                            <!-- ko template: template -->
+
+                                            <!--/ko -->
+
+                                        </div>
+
+                                    </div>
+
+                              <!-- /ko --> 
+
+                               <div class="fiori3-quote-section-header clearfix" style="margin: 10px 0px;box-shadow: 0px 1px 3px #a7abac;"  data-bind="click: function() { if(sessionStorage.customSec != '2'){sessionStorage.setItem('customSec', 2);location.reload();}else{$('.section2').slideToggle('slow');$('.toggle2').toggleClass('fiori3-rotated-quote-section-toggle');} }">
+
+                                   <div>
+
+                                        <div class="row">
+
+                                            <span tabindex="0" data-bind="" style="">PAS BOM section</span>
+
+                                        </div>
+
+                                    </div>
+
+            						<a class="fiori3-quote-section-toggle toggle2" data-bind="css: { 'fiori3-rotated-quote-section-toggle': sessionStorage.customSec != '2' }"  tabindex="0">&#xe066;</a>
+
+                               </div>
+
+                               <!-- ko if: sessionStorage.customSec == '2' -->
+
+                                    <div class="col-md-12 section2 clearfix" style="padding: 10px !important;border: 1px solid #532d2d2b;">
+
+                                         <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables().slice(3,7)" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+
+                                            <!-- ko template: template -->
+
+                                            <!--/ko -->
+
+                                        </div>
+
+                                    </div>
+
+                              <!-- /ko --> 
+
+                               <div class="fiori3-quote-section-header clearfix" style="margin: 10px 0px;box-shadow: 0px 1px 3px #a7abac;"  data-bind="click: function() { if(sessionStorage.customSec != '3'){sessionStorage.setItem('customSec', 3);location.reload();}else{$('.section3').slideToggle('slow');$('.toggle3').toggleClass('fiori3-rotated-quote-section-toggle');} }">
+
+                                   <div>
+
+                                        <div class="row">
+
+                                            <span tabindex="0" data-bind="" style="">Common BOM section</span>
+
+                                        </div>
+
+                                    </div>
+
+            						<a class="fiori3-quote-section-toggle toggle3" data-bind="css: { 'fiori3-rotated-quote-section-toggle': sessionStorage.customSec != '3' }"  tabindex="0">&#xe066;</a>
+
+                               </div>
+
+                               <!-- ko if: sessionStorage.customSec == '3' -->
+
+                                    <div class="col-md-12 section3 clearfix" style="padding: 10px !important;border: 1px solid #532d2d2b;">
+
+                                         <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables().slice(7)" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+
+                                            <!-- ko template: template -->
+
+                                            <!--/ko -->
+
+                                        </div>
+
+                                    </div>
+
+                              <!-- /ko --> 
+
+                            
+
+                          <!-- /ko -->  
+
+                          <!-- ko ifnot: ['COMMERCIAL INFO', 'OPPORTUNITY INFO', 'ACCOUNT', 'APPROVAL', 'CASH FLOW DETAIL', 'FUNCTIONAL QUESTIONS','PSC INFO','RENEWAL SUMMARY','PAS DOCUMENT TAB'].includes(tabsData.currentTabName()) -->
+                           <div id="customFieldsContainer" data-bind="foreach: customFieldsAndQuoteTables" class="fiori3-custom-fields-container custom-fields custom-fields-with-footer">
+                                <!-- ko template: template -->
+                                <!--/ko -->
+                            </div>
+                          <!-- /ko -->
+                        </div>
+                        <!-- ko ifnot: ['OPPORTUNITY INFO','APPROVAL', 'CASH FLOW DETAIL', 'FUNCTIONAL QUESTIONS' , 'ACCOUNT','PSC INFO','RENEWAL SUMMARY'].includes(tabsData.currentTabName()) -->
+                        <!-- ko if: (localStorage.getItem('Opp_statusName') !== 'Approved') -->
+                        <div class="cart-page-tab-footer" data-bind="visible: isSaveButtonAvailable() && !isInViewMode() && customFields().length > 0">
+                            <button id="customFieldsSaveButton" class="phpbtn" data-bind="text: saveActionText, click: function () { save(false, null) } "></button>
+                        </div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.PartialWithNameAsComment("Templates/CartCustomFieldTemplates")
+
+@if (CartController.HasQuoteTablesOnCurrentTab())
+{
+    @Html.PartialWithNameAsComment("Templates/CartTableTemplate")
+    @Html.PartialWithNameAsComment("Templates/CartTableCellTemplates")
+    @Html.PartialWithNameAsComment("EditablePagerTemplate")
+}
+<!-- Start - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->
+<script type="text/javascript">
+    function ServiceContractMessages(activeTab, customFields) { 
+  let errorMessage = "Please enter mandatory fields such as";
+  let finalMessage = "";
+  let tabMessage = ""
+  let mandatoryCF = customFields.filter((cf) => {
+    return cf.isRequired == true;
+  });
+  switch (activeTab) {
+    case "OPPORTUNITY INFO":
+      mandatoryCF.forEach(function (item, index) {
+        if (item.name === 'SC_CF_CONTRACT_MANAGER' && item.content() === '') {
+          if (tabMessage !== '') {
+            tabMessage = `${tabMessage},`;
+          }
+          tabMessage = `${tabMessage}${item.label}`;
+        }
+        if (item.name === 'SC_CF_RSOM' && item.content() === '') {
+          if (tabMessage !== '') {
+            tabMessage = `${tabMessage},`;
+          }
+          tabMessage = `${tabMessage}${item.label}`;
+        }
+        if (item.name === 'SC_CF_SBM' && item.content() === '') {
+          if (tabMessage !== '') {
+            tabMessage = `${tabMessage},`;
+          }
+          tabMessage = `${tabMessage}${item.label}`;
+        }
+        if (item.name === 'SC_CF_FSM' && item.content() === '') {
+          if (tabMessage !== '') {
+            tabMessage = `${tabMessage},`;
+          }
+          tabMessage = `${tabMessage}${item.label}`;
+        }
+      });
+      break;
+    case "COMMERCIAL INFO":
+      mandatoryCF.forEach(function (item, index) {
+        if (item.name === 'Proposal Validity' && item.content() === '') {
+          if (tabMessage !== '') {
+            tabMessage = `${tabMessage},`;
+          }
+          tabMessage = `${tabMessage}${item.label}`;
+        }
+      });
+      break;
+  }
+   if (tabMessage !== '') {
+    finalMessage = `${errorMessage} ${tabMessage}`;
+  }
+  return finalMessage; 
+}
+</script>
+<!-- End - CXCPQ-61385 - Manthan Rajguru - 06/10/2023 - Display Mandatory fields error message for respective tabs -->

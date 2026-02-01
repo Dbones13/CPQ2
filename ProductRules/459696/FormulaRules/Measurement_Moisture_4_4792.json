@@ -1,0 +1,11 @@
+{
+    "id": 4792,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6088-20 Compact O-Frame (Extended Head)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Moisture))",
+    "name": "Measurement_Moisture_4",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:MXIR Moisture|MXIR Fiber Weight & Moisture Measurement)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

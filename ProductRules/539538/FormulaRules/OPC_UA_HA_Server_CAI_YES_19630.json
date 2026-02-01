@@ -1,0 +1,11 @@
+{
+    "id": 19630,
+    "condition": "[GT](<* IsNull(<*VALUE(Exp HS OPC UA HA Server CAI)*>,0)*>,0)",
+    "name": "OPC UA HA Server CAI YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HOPUHA)*><*SETATVQTY(Experion_HS_PART_SUMMARY:EP-HOPUHA, \n<*IsNull(<*VALUE(Exp HS OPC UA HA Server CAI)*>)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

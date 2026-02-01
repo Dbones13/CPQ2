@@ -1,0 +1,11 @@
+{
+    "id": 23459,
+    "condition": "[GT](<*VALUE(AWL Cb Base License)*>,0)",
+    "name": "HW_CSS_BOM_AWLR201_ElectronicMedia",
+    "action": "<*SELECTVALUES(HW_CSS_BOM_AWLR201_ElectronicMedia:CS-APPCTLMEDIA)*><*SETATVQTY(HW_CSS_BOM_AWLR201_ElectronicMedia:CS-APPCTLMEDIA, 1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

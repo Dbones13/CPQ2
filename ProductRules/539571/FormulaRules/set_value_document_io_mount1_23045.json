@@ -1,0 +1,11 @@
+{
+    "id": 23045,
+    "condition": "[GT](<*CTX ( Container(Document_cont_c3001).Rows.GetCount )*>,0)",
+    "name": "set value document_io_mount1",
+    "action": "[IF]([OR](<*ISSELECTED(SerC_IO_Mounting_Solution.Cabinet)*>,<*ISSELECTED(SerC_IO_Mounting_Solution.Mounting Panel)*>)){<*CTX ( Container(Document_cont_c3001).Row(1).Column(Dummy_RG_IO_Mounting_Solution).Set(No) )*>}{<*CTX ( Container(Document_cont_c3001).Row(1).Column(Dummy_RG_IO_Mounting_Solution).Set(Yes) )*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

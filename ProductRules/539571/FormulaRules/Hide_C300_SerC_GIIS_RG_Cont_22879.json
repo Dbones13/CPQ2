@@ -1,0 +1,11 @@
+{
+    "id": 22879,
+    "condition": "[OR]([NOT]([OR]([AND](<*ISSELECTED(SerC_CG_IO_Family_Type.Series C)*>,[NOT](<*ISSELECTED(SerC_IO_Mounting_Solution.Mounting Panel)*>),<*ISSELECTED(Ser_RG_Universal_Marshalling_Cabinet.No)*>),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Turbomachinery))\n),[EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Hide C300_SerC_GIIS_RG_Cont",
+    "action": "<*CTX ( Container(C300_SerC_GIIS_RG_Cont).Rows.Clear )*><*DISALLOWATTRIBUTES(C300_SerC_GIIS_RG_Cont,Header_04_close,Header_04_open)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

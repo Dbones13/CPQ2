@@ -1,0 +1,11 @@
+{
+    "id": 22492,
+    "condition": "[EQ](<*VALUE(ESDC_OPC_Client_SCADA_Interface)*>,0)",
+    "name": "Part_D_EP_OPCCLI",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:EP-OPCCLI)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

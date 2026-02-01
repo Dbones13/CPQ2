@@ -1,0 +1,1 @@
+<*CTX( Container(ARO_Sys_Grp_Part_Summery_Cont).LoadKeys(PartNumber).Load(select '<*Eval(Replace("<*VALUE(ARO_Sys_Grp_Part_Summary)*>",", ","' as PartNumber UNION SELECT '"))*>' as PartNumber   ) )*>

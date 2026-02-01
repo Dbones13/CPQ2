@@ -1,0 +1,11 @@
+{
+    "id": 10855,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Unload Third Party item",
+    "action": "<*CTX ( Container(TPA_Third_Party_Items_Cont).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(Header_32_close,Header_32_open,TPA_Third_Party_Items_Cont)*>",
+    "description": "",
+    "rank": "30",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

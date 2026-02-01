@@ -1,0 +1,11 @@
+{
+    "id": 13846,
+    "condition": "1",
+    "name": "Labor_dd_hrs",
+    "action": "<*ASSIGNVALUE(Labor_calc_temp_dd_hrs:<*Eval((16 * 0<*VALUE(Labor_parameter_ctr)*>) + (0.20 * (0<*VALUE(Labor_parameter_di)*> + 0<*VALUE(Labor_parameter_do)*>)) + (0.25 * (0<*VALUE(Labor_parameter_ai)*> + 0<*VALUE(Labor_parameter_ao)*>)) + (0<*VALUE(Labor_parameter_soe)*> * (2 + 0.015 * 0<*VALUE(Labor_parameter_io)*>)) + [IF]([EQ](<*CTX( Container(SM_Application_Hardware_Cont).Row(1).Column(Application).Get )*>,BMS)){(2 * 0<*VALUE(Labor_parameter_stn)*>) + (1 * 0<*VALUE(Labor_parameter_swt)*>)}{0}[ENDIF])*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14653,
+    "condition": "[EQ](<*VALUE(MX_MD_Dryer_Shutdown_Control)*>,)",
+    "name": "Default_MX_MD_Dryer_Shutdown_Control",
+    "action": "<*SELECTVALUE(MX_MD_Dryer_Shutdown_Control:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

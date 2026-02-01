@@ -1,0 +1,11 @@
+{
+    "id": 13512,
+    "condition": "[EQ](<*VALUE(Virtualization_EBR_Media_kit_type)*>,)",
+    "name": "Default_EBR_Kit",
+    "action": "<*SELECTVALUE(Virtualization_EBR_Media_kit_type:Electronic delivery)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20201,
+    "condition": "[EQ](<*VALUE(DVM_Sony_Adapter_License)*>,)",
+    "name": "Default_DVM_Sony_Adapter_License",
+    "action": "<*SELECTVALUE(DVM_Sony_Adapter_License:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

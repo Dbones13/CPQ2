@@ -1,0 +1,11 @@
+{
+    "id": 20014,
+    "condition": "1",
+    "name": "Total_Sumof_FF_IOs",
+    "action": "<*ASSIGNVALUE(Total_Sumof_FF_IOs:<* Eval(0<*CTX ( Container(SerC_CG_FIM_FF_IO_Cont).Sum(AI) )*>+0<*CTX ( Container(SerC_CG_FIM_FF_IO_Cont).Sum(AO) )*>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

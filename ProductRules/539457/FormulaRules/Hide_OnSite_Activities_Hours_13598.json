@@ -1,0 +1,11 @@
+{
+    "id": 13598,
+    "condition": "[EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers)",
+    "name": "Hide_OnSite_Activities_Hours",
+    "action": "<*DISALLOWATTRIBUTES(Virtualization_OnSite_Activities_hours)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

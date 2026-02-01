@@ -1,0 +1,11 @@
+{
+    "id": 17768,
+    "condition": "1",
+    "name": "Fault_Contact_GIIS_Integration_Boards",
+    "action": "[IF]([EQ](<*CTX( Container(SM_RG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>,Hardware Marshalling with P+F)){<*CTX( Container(SM_RG_Cabinet_Details_Cont_Left).Column(Fault_Contact_GIIS_Integration_Boards).SetPermission(Editable)) *>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont_Left).Column(Fault_Contact_GIIS_Integration_Boards).SetPermission(Hidden)) *>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

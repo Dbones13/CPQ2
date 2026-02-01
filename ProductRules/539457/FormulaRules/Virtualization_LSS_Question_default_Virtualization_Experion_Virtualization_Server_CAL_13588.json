@@ -1,0 +1,11 @@
+{
+    "id": 13588,
+    "condition": "[EQ](<*VALUE(Virtualization_Experion_Virtualization_Server_CAL)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_Experion_Virtualization_Server_CAL",
+    "action": "<*ASSIGNVALUE(Virtualization_Experion_Virtualization_Server_CAL:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

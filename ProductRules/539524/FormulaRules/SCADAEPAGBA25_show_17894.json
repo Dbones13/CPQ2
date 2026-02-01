@@ -1,0 +1,11 @@
+{
+    "id": 17894,
+    "condition": "[GT](<* CTX( Container(Leak Detection System Interfaces).Row(1).Column(Nodes).Get ) *>,0)",
+    "name": "SCADA-EP-AGBA25_show",
+    "action": "<*DoNotResetAtt*><*SELECTVALUE(SCADA_BOM_Items:EP-AGBA25)*><*SETATVQTY(SCADA_BOM_Items:EP-AGBA25,<* Eval(0 - INT(0 - (<*CTX( Container(Leak Detection System Interfaces).Row(1).Column(Nodes).Get )*>/25))) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

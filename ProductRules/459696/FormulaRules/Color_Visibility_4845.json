@@ -1,0 +1,11 @@
+{
+    "id": 4845,
+    "condition": "[AND]([OR]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4022-34 I-Beam O-Frame)),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Color))",
+    "name": "Color_Visibility",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Sensor_Type:Color Msmt)*>\n<*SELECTVALUE(MX_SE_Sensor_Type:Color Msmt)*>\n<*SETREQUIRED(MX_SE_Sensor_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

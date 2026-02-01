@@ -1,0 +1,11 @@
+{
+    "id": 13705,
+    "condition": "[OR]([NEQ](<*VALUE(Virtualization_vSphere_Client_Node_Type)*>,Dell OptiPlex XE4),[EQ](<*VALUE(Virtualization_Number_of_vSphere_Client_Node)*>,0))",
+    "name": "Part_DISS_EP_COAW10",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:EP-COAW21)*><* DoResetAtt *>",
+    "description": "Story 8705",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

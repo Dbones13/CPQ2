@@ -1,0 +1,11 @@
+{
+    "id": 13503,
+    "condition": "[EQ](<*VALUE(Virtualization_Power_Supply_Voltage)*>,)",
+    "name": "Default_Power_Supply",
+    "action": "<*SELECTVALUE(Virtualization_Power_Supply_Voltage:120V)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

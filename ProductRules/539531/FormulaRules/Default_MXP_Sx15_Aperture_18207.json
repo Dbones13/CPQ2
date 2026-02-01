@@ -1,0 +1,11 @@
+{
+    "id": 18207,
+    "condition": "[EQ](<*VALUE(MXP_Sx15_Aperture)*>,)",
+    "name": "Default_MXP_Sx15_Aperture",
+    "action": "<*SELECTVALUE(MXP_Sx15_Aperture:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

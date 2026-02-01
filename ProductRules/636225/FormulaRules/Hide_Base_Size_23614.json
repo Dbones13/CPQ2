@@ -1,0 +1,11 @@
+{
+    "id": 23614,
+    "condition": "[NOT]([IN](<*VALUE(HDPBase Package)*>,TPS,TPS+Exp))",
+    "name": "Hide Base Size",
+    "action": "<*DISALLOWATTRIBUTES(HDP_System_Size)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

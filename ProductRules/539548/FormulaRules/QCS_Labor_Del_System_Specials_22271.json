@@ -1,0 +1,11 @@
+{
+    "id": 22271,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "QCS_Labor_Del_System_Specials",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_System_Specials:<* Eval([IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R70x.x)){[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Low)){20}{[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Medium)){50}{100}[ENDIF]}[ENDIF]}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R61x.x)){[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Low)){30}{[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Medium)){75}{150}[ENDIF]}[ENDIF]}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R60x.x)){[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Low)){30}{[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Medium)){75}{150}[ENDIF]}[ENDIF]}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 5)){[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Low)){32}{[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Medium)){80}{160}[ENDIF]}[ENDIF]}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 4)){[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Low)){34}{[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Medium)){85}{170}[ENDIF]}[ENDIF]}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 3 or Less)){[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Low)){40}{[IF]([EQ](<*VALUE(QCS_Mig_Customization_to_be_migrated)*>,Medium)){100}{200}[ENDIF]}[ENDIF]}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Manual_translation_of_databases_required_DRG_file)*>,Yes)){40}{0}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

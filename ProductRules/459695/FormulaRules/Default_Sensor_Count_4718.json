@@ -1,0 +1,11 @@
+{
+    "id": 4718,
+    "condition": "[EQ](<*VALUE(MX_sensor_count)*>,)",
+    "name": "Default_Sensor_Count",
+    "action": "<*ASSIGNVALUE(MX_sensor_count:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

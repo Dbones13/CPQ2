@@ -1,0 +1,11 @@
+{
+    "id": 10862,
+    "condition": "[AND]([NEQ](<*VALUE(HC900_Controller_(CPU)_Module_NSIL2)*>,Controller C30 CPU - SIL2),[NEQ](<*VALUE(HC900_Controller_(CPU)_Module_NSIL2)*>,Controller C50 CPU - SIL2),[NEQ](<*VALUE(HC900_Controller_(CPU)_Module_NSIL2)*>,Controller C70 CPU - SIL2),[NEQ](<*VALUE(HC900_Controller_(CPU)_Module_NSIL2)*>,Redundant Controller C75 CPU - SIL2))",
+    "name": "Set Default Value for Controller Module NSIL2",
+    "action": "<*SELECTVALUE(HC900_Controller_(CPU)_Module_NSIL2:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

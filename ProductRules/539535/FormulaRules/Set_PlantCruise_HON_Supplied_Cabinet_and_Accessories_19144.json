@@ -1,0 +1,11 @@
+{
+    "id": 19144,
+    "condition": "[NEQ](<*VALUE(PlantCruise_HON_Supplied_Cabinet_and_Accessories)*>,Yes)",
+    "name": "Set_PlantCruise_HON_Supplied_Cabinet_and_Accessories",
+    "action": "<*SELECTVALUE(PlantCruise_HON_Supplied_Cabinet_and_Accessories:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

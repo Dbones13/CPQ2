@@ -1,0 +1,11 @@
+{
+    "id": 22354,
+    "condition": "[EQ](<*VALUE(ESDC_Client_Station_Qty)*>,)",
+    "name": "Default_ESDC_Client_Station_Qty",
+    "action": "<*ASSIGNVALUE(ESDC_Client_Station_Qty:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

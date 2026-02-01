@@ -1,0 +1,11 @@
+{
+    "id": 19184,
+    "condition": "[NOT]([GT](<*VALUE(PlantCruise_PlantCruise_Virtualization_Server_CAL)*>,0))",
+    "name": "Del_Software_CV-EPCVMS",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(PlantCruise_Part_Summary:CV-EPCVMS)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

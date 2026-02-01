@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(Printer Required?)*>,No)){<*DISALLOWATTRIBUTES(LaserJet Printer - Monochrome (0-99))*>}{<*ALLOWATTRIBUTES(LaserJet Printer - Monochrome (0-99))*><*ASSIGNVALUE(LaserJet Printer - Monochrome (0-99):0)*>}[ENDIF]

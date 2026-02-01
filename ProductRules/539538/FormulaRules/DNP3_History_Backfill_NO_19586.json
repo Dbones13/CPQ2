@@ -1,0 +1,11 @@
+{
+    "id": 19586,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS DNP3 History Backfill)*>,Yes))",
+    "name": "DNP3 History Backfill NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HDNPHB)*><* DoResetAtt *>",
+    "description": "Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

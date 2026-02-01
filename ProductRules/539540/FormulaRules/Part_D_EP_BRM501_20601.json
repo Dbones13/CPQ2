@@ -1,0 +1,11 @@
+{
+    "id": 20601,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(SS_Experion_Backup_&_Restore_Release)*>,R501),[EQ](<*VALUE(SS_Experion_Base_Media_Delivery)*>,Physical Delivery)))",
+    "name": "Part_D_EP_BRM501",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:EP-BRM501)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

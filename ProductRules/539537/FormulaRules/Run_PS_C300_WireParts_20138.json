@@ -1,0 +1,11 @@
+{
+    "id": 20138,
+    "condition": "1",
+    "name": "Run_PS_C300_WireParts",
+    "action": "<* ExecuteScript(PS_C300_WireParts)*>",
+    "description": "",
+    "rank": "2000",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26305,
+    "condition": "[EQ](<*VALUE(Display Supplier (Sim PC))*>,)",
+    "name": "Default_Display_Supplier_(Sim PC)",
+    "action": "<*SELECTVALUE(Display Supplier (Sim PC):Honeywell)*>",
+    "description": "CXCPQ-35451",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

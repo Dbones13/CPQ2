@@ -1,0 +1,11 @@
+{
+    "id": 9167,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Total_Profibus_IOs",
+    "action": "<*ASSIGNVALUE(Total_Profibus_IOs:<*CTX ( Container(CE_System_Cont).Sum(Total_C300_Profibus_IOs) )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

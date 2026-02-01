@@ -1,0 +1,19 @@
+<script type="text/html" id="LabelTemplate">
+    <!-- ko if: isEditable -->    
+    <!-- ko if: isEmpty -->
+    <a href="#" class="editable-column empty" data-bind="click: setFocusForEditable">@Translation.Get("Msg.Empty")</a>
+    <!-- /ko -->
+    <!-- ko ifnot: isEmpty -->
+    <a href="#" class="editable-column" data-bind="htmlOrNbsp : value, click: setFocusForEditable"></a>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko ifnot: isEditable -->
+    <span data-bind="htmlOrNbsp : $parent.isBlocked && $data.columnName == 'order_status' ? options()[0].value : value,tooltip: { title: value }"></span>
+    <!-- ko if: $parent.isBlocked && $data.columnName == 'order_status' -->
+        <span style="color:#AD3A3A" data-bind="tooltip: { title: '@Translation.GetJS("StatusList.BlockedQuote")' }">
+            <span class="sap-icon">&#xe23e;</span>
+            <span data-bind="text: '@Translation.GetJS("Msg.Blocked")'"></span>
+        </span>
+    <!-- /ko -->
+    <!-- /ko -->
+</script>

@@ -1,0 +1,11 @@
+{
+    "id": 12090,
+    "condition": "[EQ](<*VALUE(OWS_EstimatedNo ofAccessPoints for Site SurveyArea)*>,)",
+    "name": "Default_Estimated_No_Access_point",
+    "action": "<*ASSIGNVALUE(OWS_EstimatedNo ofAccessPoints for Site SurveyArea:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

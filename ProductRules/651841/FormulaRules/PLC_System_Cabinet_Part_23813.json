@@ -1,0 +1,11 @@
+{
+    "id": 23813,
+    "condition": "1",
+    "name": "PLC_System_Cabinet_Part",
+    "action": "<*ASSIGNVALUE(PLC_System_Cabinet_Part:<* Eval(0<*CTX ( Container(PLC_ControlGroup_Cont).Sum(staging_PLC_Num_of_Sys_Cabinets) )*>+0<*CTX ( Container(PLC_ControlGroup_Cont).Sum(staging_PLC_Num_of_Sys_Cabinets_RG) )*>)*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

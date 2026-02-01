@@ -1,0 +1,11 @@
+{
+    "id": 9069,
+    "condition": "1",
+    "name": "Set value for fd",
+    "action": "<*ASSIGNVALUE(labor_parameter_fd:<*CTX( Container(ExpProject_Que_Right).Row(1).Column(FAT Duration in weeks).Get )*>)*>",
+    "description": "FAT Duration (in weeks)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

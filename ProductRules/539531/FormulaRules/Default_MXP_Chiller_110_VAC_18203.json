@@ -1,0 +1,11 @@
+{
+    "id": 18203,
+    "condition": "[EQ](<*VALUE(MXP_Chiller_110_VAC)*>,)",
+    "name": "Default_MXP_Chiller_110_VAC",
+    "action": "<*SELECTVALUE(MXP_Chiller_110_VAC:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

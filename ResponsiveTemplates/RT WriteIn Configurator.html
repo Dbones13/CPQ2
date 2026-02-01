@@ -1,0 +1,31 @@
+<div class="attributes flex" tabindex="-1" id="attributesWrapper">
+    <div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+        <div class="alert fiori3-alert-info"><span class="sap-icon-extended">&#xf200;</span> @Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+    </div>
+
+	<!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+    <!-- /ko -->
+    <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-4">
+          <!-- ko foreach: attributes.filterByProperty('name', "WriteInProductsChoices", "Description", "Extended Description","Product Line", "Product Line Description","Product line sub group","PLSG description","Writein_Category") -->
+          <div class="col-xs-12 flex" style="flex-direction:column">
+            <div class="col-6" style="margin-bottom : 0;" data-bind="attr: { id: id }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+            </div>
+          </div>
+          <!-- /ko -->
+        </div>
+      
+      	<div class="col-xs-12 col-sm-4">
+          <!-- ko foreach: attributes.filterByProperty('name',"ItemQuantity", "Price" , "cost" , "Unit of Measure", "USD Price", "USD Cost","Selected_WriteIn","Extended Description UI","Extended Description" ) -->
+          <div class="col-xs-12 flex" style="flex-direction:column">
+            <div class="col-6" style="margin-bottom : 0;" data-bind="attr: { id: id }">
+                  <!-- ko template: { name: $root.getAttributeTemplate } -->
+                  <!-- /ko -->
+            </div>
+          </div>
+          <!-- /ko -->
+      	</div>
+  	</div>
+</div>

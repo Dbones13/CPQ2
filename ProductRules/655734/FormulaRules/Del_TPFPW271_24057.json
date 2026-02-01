@@ -1,0 +1,11 @@
+{
+    "id": 24057,
+    "condition": "[NOT]([AND]([GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0),[EQ](<*VALUE(Terminal_Display_Required)*>,27 Inch)))",
+    "name": "Del_TP-FPW271",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TP-FPW271)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

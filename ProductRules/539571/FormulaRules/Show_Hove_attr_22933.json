@@ -1,0 +1,11 @@
+{
+    "id": 22933,
+    "condition": "[EQ](<*VALUE(SerC_IO_Mounting_Solution)*>,Cabinet))",
+    "name": "Show_Hove_attr",
+    "action": "<*ALLOWATTRIBUTES(SerC_RG_CN100_I/O_HOVE)*>",
+    "description": "CXCPQ-44728",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

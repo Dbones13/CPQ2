@@ -1,0 +1,11 @@
+{
+    "id": 20383,
+    "condition": "[AND]([EQ](<*VALUE(SS_Touch_Screen_required_desk)*>,No Touch Screen),[EQ](<*VALUE(SS_Touch_Screen_required_desk)*>,))",
+    "name": "Default_FlexDesk_NoTouchScreen",
+    "action": "<*SELECTVALUE(SS_Display_size_desk:55 inch NTS)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

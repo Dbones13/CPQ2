@@ -1,0 +1,11 @@
+{
+    "id": 23052,
+    "condition": "[NOT]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C))",
+    "name": "Disallow_SerC_Integrated_Marshalling_Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(SerC_RG_Integrated_Marshalling_Cabinet_Layout_Type)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

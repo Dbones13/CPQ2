@@ -1,0 +1,11 @@
+{
+    "id": 13094,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[NEQ](<*CTX ( Quote.CustomField(SC_CF_Parent_Quote_Number_Link) )*>,))",
+    "name": "Change ES PY List price column as editable",
+    "action": "<*CTX ( Container(ES_PY_Asset_Details ).Column(List Price).SetPermission(Editable) )*>",
+    "description": "Make the PY List price column as editable for renewal with PY Quote",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

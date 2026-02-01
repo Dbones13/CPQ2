@@ -1,0 +1,1 @@
+Product.Attr('SC_Product_Status').AssignValue("0")

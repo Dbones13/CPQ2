@@ -1,0 +1,11 @@
+{
+    "id": 9629,
+    "condition": "[EQ](<*ATTSEL(PSkid Grossmargin in Percentage)*>,1)",
+    "name": "Set Skid Net Sell Price",
+    "action": "<*ASSIGNVALUE(Pskid Net Sell Price:<*Eval(Round(<*VALUE(Pskid Cost of goods Sold (COGS))*> * 100/(100-<*VALUE(PSkid Grossmargin in Percentage)*>)+<*VALUE(PSkid Additional Inspection Costs)*>,2))*>)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

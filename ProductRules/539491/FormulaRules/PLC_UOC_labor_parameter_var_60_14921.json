@@ -1,0 +1,11 @@
+{
+    "id": 14921,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_60",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_60:<*CTX ( Container(LSS_UOC_connection_transpose).Sum(PLC_UOC_labor_parameter_var_60) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

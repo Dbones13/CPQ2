@@ -1,0 +1,11 @@
+{
+    "id": 19507,
+    "condition": "[NEQ](<*VALUE(Exp HS Use Honeywell supplied Network Switches?)*>,Yes)",
+    "name": "Hide LAN and Switch",
+    "action": "<*SETOPTIONAL(Exp HS Select Honeywell supplied switch type,Exp HS Select LAN Type)*><*DISALLOWATTRIBUTES(Exp HS Select LAN Type,Exp HS Select Honeywell supplied switch type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

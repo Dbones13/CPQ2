@@ -1,0 +1,11 @@
+{
+    "id": 26022,
+    "condition": "[AND]([NEQ](<*VALUE(Hardware_Design_Selection - EAPP Node)*>,SVR_STD_DELL_Tower_RAID1),[NEQ](<*VALUE(Hardware_Design_Selection - EAPP Node)*>,SVR_PER_DELL_Tower_RAID1))",
+    "name": "Hide_EAPP_Mounting_Type",
+    "action": "<*DISALLOWATTRIBUTES(EAPP_Mounting_Type)*>",
+    "description": "CXCPQ-45303",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

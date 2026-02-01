@@ -1,0 +1,11 @@
+{
+    "id": 20786,
+    "condition": "[LEQ](<*VALUE(SS_24inch_NTS_DELL)*>,0)",
+    "name": "Part_D_TP_FPW242",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPW242)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

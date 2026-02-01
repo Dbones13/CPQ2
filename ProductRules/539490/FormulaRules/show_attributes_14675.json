@@ -1,0 +1,11 @@
+{
+    "id": 14675,
+    "condition": "[NEQ](<*VALUE(MX_HC_GES_Location)*>,)",
+    "name": "show_attributes",
+    "action": "<*ALLOWATTRIBUTES(Experion_mx_Labor_GES_percent)*> <*CTX( Container(Experion_mx_Labor_Container).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(Experion_mx_Labor_Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_Labor_Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_Labor_Container).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_Labor_Container).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_Labor_Container).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_Labor_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n\n<*ALLOWATTRIBUTES(Experion_mx_Labor_GES_percent_adc)*> <*CTX( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Column(GES Eng).SetPermission(Editable) )*> <*CTX( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Column(GES_Regional_Cost).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Column(GES_ListPrice).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Column(GES_WTW_Cost).SetPermission(Editable) )*><*CTX ( Container(Experion_mx_labor_Additional_Cust_Deliverables_con).Column(GES_MPA_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

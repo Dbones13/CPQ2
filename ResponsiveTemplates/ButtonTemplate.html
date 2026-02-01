@@ -1,0 +1,68 @@
+<script type="text/html" id="ButtonTemplate">
+<!-- ko ifnot: name() === 'SC_SESPModels_DeleteButton' || name() === 'SearchMsid_OTU_SESP' || name() === 'RefreshParts_OTU_SESP' || name() === 'SC_Scope_Selection_Refresh_Renewal' || name() === 'SC_P1P2_Refresh_Data' || name() === 'Migration_Add_MSID_Rows' || name() === 'Migration_Apply_Product_Selection' || name() === 'SC_DeleteValidModels_HR_RWL' || name() === 'SC_DeleteInvalidModels_HR_RWL' || name() === 'Download_Invalid_Parts'-->
+    <button class="btn btn-secondary fiori3-btn-secondary pull-left" style="margin-bottom:0 !important" data-bind="text: hint, enable: isEnabled, click: buttonAction, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"></button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+<!-- /ko -->
+<!-- ko if: name() === 'Migration_Add_MSID_Rows'  -->
+    <button class="btn btn-secondary fiori3-btn-secondary " style="margin-bottom:0 !important" data-bind="text: hint, enable: isEnabled, click: buttonAction, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"></button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+<!-- /ko -->
+<!-- ko if: name() === 'Migration_Apply_Product_Selection'  -->
+    <button class="btn btn-secondary fiori3-btn-secondary" style="margin-bottom:0 !important" data-bind="text: hint, enable: isEnabled, click: buttonAction, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"> </button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+<!-- /ko -->
+<!-- ko if: name() === 'SearchMsid_OTU_SESP' -->
+    <button  class="btn btn-secondary fiori3-btn-secondary  pull-left" style="margin-bottom:0 !important" data-bind="text: hint, enable: isEnabled, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id,click : searchMsidForOTU($parent,$parents,$data)"></button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+<!-- /ko -->
+<!-- ko if: name() === 'SC_SESPModels_DeleteButton' || name() === 'RefreshParts_OTU_SESP' || name() === 'SC_DeleteValidModels_HR_RWL' || name() === 'SC_DeleteInvalidModels_HR_RWL' -->
+    <button class="btn btn-secondary fiori3-btn-secondary pull-right" style="margin-bottom:0 !important" data-bind="text: hint, enable: isEnabled, click: buttonAction, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"></button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+<!-- /ko -->
+<!-- ko if: name() === 'SC_Scope_Selection_Refresh_Renewal' || name() === 'SC_P1P2_Refresh_Data' -->
+    <button class="btn btn-secondary fiori3-btn-secondary pull-left" style="margin-right:5px !important" data-bind="text: hint, enable: isEnabled, click: buttonAction, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"></button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+<!-- /ko -->
+<!-- ko if: name() === 'Download_Invalid_Parts' -->
+    <button class="btn btn-secondary fiori3-btn-secondary pull-left" style="margin-bottom:0 !important" data-bind="text: hint, enable: isEnabled, click: buttonAction, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id" onclick='downloadExcel()'></button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+<!-- /ko -->
+</script>
+<script type="text/html" id="HW_ButtonTemplate">
+    <button class="btn btn-secondary fiori3-btn-secondary pull-right" data-bind="text: hint, enable: isEnabled, click: buttonAction, attr: { name: name, id: stdAttrCode(), 'aria-describedby': name }, event: { focusin: function() { window.lastActiveElementId = $element.id; } }, hasFocus: window.lastActiveElementId == $element.id"></button>
+    <!-- ko template: { name: 'AttributeQuantityTemplate' } -->
+    <!-- /ko -->
+</script>
+<script>
+    function downloadExcel() {
+         // Get the HTML table
+         cpq.server.executeScript("GS_Download_InvalidParts" , {} , function(data){
+            console.log(data)
+            // Create a new workbook and worksheet
+            let worksheet = data.map(function(row){
+                return row.join(',');
+                }).join('
+');
+                        
+         // Convert to a Blob object
+         let blob = new Blob([worksheet], {
+             type:'text/csv;charset=utf-8;'
+         });
+         
+         // Create a link element for download
+         let link = document.createElement('a');
+         link.href = URL.createObjectURL(blob);
+         link.download = 'Invalid_Parts.csv'; // Specify file name
+         document.body.appendChild(link);
+         link.click();
+         document.body.removeChild(link);
+         });
+     }
+ </script>

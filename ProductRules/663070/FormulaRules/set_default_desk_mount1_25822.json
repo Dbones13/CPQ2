@@ -1,0 +1,11 @@
+{
+    "id": 25822,
+    "condition": "[AND]([EQ](<*VALUE(MIB Configuration Required?)*>,Yes),[OR]([EQ](<*VALUE(Interface with TPS Required?)*>,),[EQ](<*VALUE(Interface with TPS Required?)*>,No)),[EQ](<*VALUE(Server Node Type_desk)*>,))",
+    "name": "set_default_desk_mount1",
+    "action": "<*SELECTVALUE(Server Node Type_desk:SVR_STD_DELL_Tower_RAID1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

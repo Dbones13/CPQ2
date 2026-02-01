@@ -1,0 +1,11 @@
+{
+    "id": 18503,
+    "condition": "[AND]([EQ](<*VALUE(MXP_Scanner_Type)*>,3-4022-54),[GT](<*VALUE(MXP_Trim_Width_in_Millimeters)*>,0))",
+    "name": "Part_A_3-_4022_54_MM",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SC_Bom_Parts:3-4022-54-MM)*><*SETATVQTY(MXP_SC_Bom_Parts:3-4022-54-MM,<*VALUE(MXP_Trim_Width_in_Millimeters)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

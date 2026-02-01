@@ -1,0 +1,11 @@
+{
+    "id": 15202,
+    "condition": "[NEQ](<*VALUE(MXP_Vynil_Control)*>,Profile Midrange for Vinyl)",
+    "name": "Part_D_3_5844_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5844-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

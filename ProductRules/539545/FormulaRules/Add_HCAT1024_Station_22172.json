@@ -1,0 +1,11 @@
+{
+    "id": 22172,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Workstation),[GEQ](<* Eval(<*VALUE(FDM_Audit_Trail_Blocks(0-4000))*> - (INT((<*VALUE(FDM_Audit_Trail_Blocks(0-4000))*> + 15)/2048))*2048 + 15) *>,1024))",
+    "name": "Add_HC-AT1024_Station",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-AT1024)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

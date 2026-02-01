@@ -1,0 +1,11 @@
+{
+    "id": 1089,
+    "condition": "[NOT](<*ANYSELATT(Spare_Parts_Cabinet_Keylock_Type)*>)",
+    "name": "Reset_Default_Value_Spare_Parts_Cabinet_Keylock_Type",
+    "action": "<*RESETATTRIBUTE(Spare_Parts_Cabinet_Keylock_Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

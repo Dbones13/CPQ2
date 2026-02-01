@@ -1,0 +1,11 @@
+{
+    "id": 24278,
+    "condition": "[NEQ](<*VALUE(Experion_server_type_at_location)*>,Server TPS)",
+    "name": "Disallow_RESS_Native_Window",
+    "action": "<*DISALLOWATTRIBUTES(Native_window_accessibility_through_ARO)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

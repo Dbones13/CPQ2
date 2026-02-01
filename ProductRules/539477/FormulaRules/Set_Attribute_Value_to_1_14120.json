@@ -1,0 +1,11 @@
+{
+    "id": 14120,
+    "condition": "[EQ](<*VALUE(Number_of_PlantCruise)*>,)",
+    "name": "Set Attribute Value to 1",
+    "action": "<*SELECTVALUES(Number_of_PlantCruise:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13976,
+    "condition": "1",
+    "name": "DVM Graphics Configuration",
+    "action": "<*ASSIGNVALUE(DVM Graphics Configuration:<* Eval(6*0<*VALUE(DVM_Number_of_Graphics)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

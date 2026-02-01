@@ -1,0 +1,11 @@
+{
+    "id": 15130,
+    "condition": "[NOT]([IN](<*VALUE(MXP_Virtualization_options)*>,Basic Virtualization - Rack Server,Single virtualization with continuous backup and restore,Multiple virtualization system with continuous backup and restore))",
+    "name": "Condition_for_virtualization_option",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Number_of_Servers_Management)*><*DISALLOWATTRIBUTES(MXP_Number_of_Servers_Production)*><*DISALLOWATTRIBUTES(MXP_Number_of_vSphere_Clients)*>\n<*DISALLOWATTRIBUTES(MXP_Do_you_need_FTE_switches)*>\n<*DISALLOWATTRIBUTES(MXP_Production_Server_hardware_type)*>\n<*DISALLOWATTRIBUTES(MXP_Management_Server_hardware_type)*>\n<*DISALLOWATTRIBUTES(MXP_vSphere_Client_hardware_type)*>\n<*DISALLOWATTRIBUTES(MXP_Switch_type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

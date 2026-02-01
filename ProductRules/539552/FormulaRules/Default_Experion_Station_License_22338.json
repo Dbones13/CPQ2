@@ -1,0 +1,11 @@
+{
+    "id": 22338,
+    "condition": "[EQ](<*VALUE(ESDC_Experion_Station_License)*>,)",
+    "name": "Default_Experion_Station_License",
+    "action": "<*ASSIGNVALUE(ESDC_Experion_Station_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

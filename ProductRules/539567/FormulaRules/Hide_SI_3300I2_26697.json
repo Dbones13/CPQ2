@@ -1,0 +1,11 @@
+{
+    "id": 26697,
+    "condition": "[NOT](<*ISSELECTED(Default_Switch.SW_L2_NRT_CISCO_10PT)*>)",
+    "name": "Hide_SI_3300I2",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Location_Cluster_Part_Summary:SI-3300I2)*><* DoResetAtt *>\n",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "05/01/26",
+    "modifiedBy": "Bharadwaj Siddela"
+}

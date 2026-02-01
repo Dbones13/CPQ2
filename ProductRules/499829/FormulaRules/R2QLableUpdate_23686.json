@@ -1,0 +1,11 @@
+{
+    "id": 23686,
+    "condition": "[EQ](<*CTX( Quote.CustomField(IsR2QRequest).AttrValue )*>,Yes)",
+    "name": "R2QLableUpdate",
+    "action": "<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(1).Column(Trace_Software_Class_0_Systems).Set(<b>Class 0 Systems</b> (<b>New License</b>)) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(1).Column(Trace_Software_Class_1_Systems).Set(<b>Class 1 Systems</b> (<b>New License</b>)) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(1).Column(Trace_Software_Class_2_Systems).Set(<b>Class 2 Systems</b> (<b>New License</b>)) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(1).Column(Trace_Software_Class_3_Systems).Set(<b>Class 3 Systems</b> (<b>New License</b>)) )*>\n<*CTX( Container(Trace_Software_License_Configuration_transpose).Row(1).Column(Trace_software_header).Set(<b>New license</b>) )*>\n<*SELECTVALUE(Trace_Software_Scope_Choices:HW/SW/LABOR)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/07/25",
+    "modifiedBy": "Ramesh Kumar"
+}

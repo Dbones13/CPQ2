@@ -1,0 +1,11 @@
+{
+    "id": 21874,
+    "condition": "[EQ](<*VALUE(FDM_Display_Size(Server))*>,)",
+    "name": "Default_FDM_Display_Size(Server)",
+    "action": "<*SELECTVALUE(FDM_Display_Size(Server):24 inch NTS DELL)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

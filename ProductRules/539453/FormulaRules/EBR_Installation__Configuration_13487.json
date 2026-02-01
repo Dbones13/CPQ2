@@ -1,0 +1,11 @@
+{
+    "id": 13487,
+    "condition": "1",
+    "name": "EBR Installation & Configuration",
+    "action": "<*ASSIGNVALUE(EBR Installation & Configuration:<*Eval(0-INT(0-<* Eval(((0<*VALUE(Labor_parameter_var_4)*>)*2+(0<*VALUE(Labor_parameter_var_5)*>)*2+ [IF]([EQ](0<*VALUE(Labor_parameter_var_8)*>,1)){4}{0}[ENDIF])) *>))*>)*>",
+    "description": "",
+    "rank": "10",
+    "active": false,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Nisha Sriramulu"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10933,
+    "condition": "[NOT]([AND]([GT](<*CTX( Container(HC900_Rack_Size_Quantity_Cont).Sum(Quantity) )*>,0),\n[EQ](<*VALUE(HC900_System_Type)*>,Non-SIL HC900 System),[OR]([EQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Controller C50 CPU),[EQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Controller C70 CPU))))",
+    "name": "Reset 900S50-0460",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900S50-0460)*><* DoResetAtt *>",
+    "description": "CXCPQ-51871",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

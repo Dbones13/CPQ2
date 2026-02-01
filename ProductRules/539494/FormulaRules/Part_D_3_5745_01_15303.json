@@ -1,0 +1,11 @@
+{
+    "id": 15303,
+    "condition": "[NEQ](<*VALUE(MXP_Statistical_Process_Control)*>,Yes)",
+    "name": "Part_D_3_5745_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5745-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

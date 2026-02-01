@@ -1,0 +1,11 @@
+{
+    "id": 22983,
+    "condition": "[AND]([OR]([EQ](<*VALUE(Experion_PKS_Software_Release)*>,R530),[EQ](<*VALUE(Experion_PKS_Software_Release)*>,R520)),[EQ](<*VALUE(Dummy_RG_IO_Mounting_Solution)*>,Universal Process Cab - 1.3M))",
+    "name": "Unhide_R520_R530",
+    "action": "<*ALLOWATTRIBUTES(C300_RG_UPC_CN100_IO_HIVE)*>\n<*ALLOWATTRIBUTES(C300_RG_UPC_Controlled_IO_License_Count)*><*ALLOWATTRIBUTES(C300_RG_UPC_CNM)*>\n<*ALLOWATTRIBUTES(C300_RG_UPC_CNM_Exp_Module)*><*ALLOWATTRIBUTES(C300_RG_UPC_CNM_Uplink_SFP_Type)*><*ALLOWATTRIBUTES(C300_RG_UPC_EIM)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

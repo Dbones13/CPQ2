@@ -1,0 +1,11 @@
+{
+    "id": 12113,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "FDAP Configuration",
+    "action": "<*ASSIGNVALUE(FDAP Configuration:<* Eval((0.5*<*VALUE(OWS_Number of FDAP as Routers)*>)+(0.5*<*VALUE(OWS_Number of Field Device Access Points (FDAPs))*>)) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

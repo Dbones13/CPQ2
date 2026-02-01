@@ -1,0 +1,11 @@
+{
+    "id": 22196,
+    "condition": "[AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Server),[GEQ](<* Eval(<*VALUE(FDM Server Device Adder Blocks (0-16000))*> + 15) *>,16000))",
+    "name": "Add_HC-SV016K_Server",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-SV016K)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

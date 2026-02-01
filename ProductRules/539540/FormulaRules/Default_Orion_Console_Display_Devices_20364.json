@@ -1,0 +1,11 @@
+{
+    "id": 20364,
+    "condition": "[EQ](<*VALUE(SS_Orion_Console_Display_Devices)*>,)",
+    "name": "Default_Orion_Console_Display_Devices",
+    "action": "<*ASSIGNVALUE(SS_Orion_Console_Display_Devices:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

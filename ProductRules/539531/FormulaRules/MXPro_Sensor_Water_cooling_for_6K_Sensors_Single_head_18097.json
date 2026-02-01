@@ -1,0 +1,11 @@
+{
+    "id": 18097,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Water_cooling_for_6K_Sensors_Single_head)*>,)",
+    "name": "MXPro_Sensor_Water_cooling_for_6K_Sensors_Single_head",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Water_cooling_for_6K_Sensors_Single_head:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

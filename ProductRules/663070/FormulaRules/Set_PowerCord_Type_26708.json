@@ -1,0 +1,11 @@
+{
+    "id": 26708,
+    "condition": "[EQ](<*VALUE(Power Cord Type L3)*>,)",
+    "name": "Set_PowerCord_Type",
+    "action": "<*SELECTVALUE(Power Cord Type L3:US)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "23/12/25",
+    "modifiedBy": "Bharadwaj Siddela"
+}

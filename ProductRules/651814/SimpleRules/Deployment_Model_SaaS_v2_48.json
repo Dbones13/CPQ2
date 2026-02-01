@@ -1,0 +1,10 @@
+{
+    "id": 48,
+    "condition": "HCI_PHD_Product:Advanced Formula Manager (AFM)",
+    "name": "Deployment_Model SaaS v2",
+    "action": "Disallow HCI_PHD_LicenseModel : SaaS",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

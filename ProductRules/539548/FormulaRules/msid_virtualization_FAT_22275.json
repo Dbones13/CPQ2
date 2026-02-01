@@ -1,0 +1,11 @@
+{
+    "id": 22275,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,Virtualization System),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "msid_virtualization_FAT",
+    "action": "<*ASSIGNVALUE(msid_virtualization_FAT:<*CTX ( Container(MSID_Product_Container_Virtualization_hidden).Row(1).Column(FAT).Get )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

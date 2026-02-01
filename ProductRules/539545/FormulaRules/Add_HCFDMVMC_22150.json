@@ -1,0 +1,11 @@
+{
+    "id": 22150,
+    "condition": "[GT](<*VALUE(FDM Virtualization Client CAL License (0-100))*>,0)",
+    "name": "Add_HC-FDMVMC",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-FDMVMC)*><*SETATVQTY(FDM_Part_Summary:HC-FDMVMC,<*VALUE(FDM Virtualization Client CAL License (0-100))*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

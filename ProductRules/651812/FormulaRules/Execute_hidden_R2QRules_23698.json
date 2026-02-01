@@ -1,0 +1,11 @@
+{
+    "id": 23698,
+    "condition": "[EQ](<*VALUE(Trigger_r2q_rules)*>,True)",
+    "name": "Execute_hidden_R2QRules",
+    "action": "<* ExecuteScript(GS_AFM_LoadLabor) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

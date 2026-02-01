@@ -1,0 +1,11 @@
+{
+    "id": 22232,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Hide_Labor",
+    "action": "<*DISALLOWATTRIBUTES(Header_03_close,Header_03_open,Scada_%_of_Equip_Template_to_be_Tested_During_Pre_FAT,Scada_%_of_Equipment_Templates_to_be_Tested_During_FAT,Scada_%_of_Equipment_Templates_to_be_Tested_During_SAT,Scada_%_of_Instances_to_be_Tested_During_FAT,Scada_%_of_Instances_to_be_Tested_During_Pre_FAT,Scada_%_of_Instances_to_be_Tested_During_SAT,Scada_Are_migration_of_existing_SCADA_System,Scada_Are_there_unknown_or_unfamilar_protocols,Scada_Development_of_any_custom_applications,Scada_Development_of_Custom_Standards,Scada_Includes_Elevate,Scada_Is_Integration_Testing_Required,Scada_Is_SCADA_System_Interface_with_Enterprise,Scada_Number_of_Control_Rooms,Scada_Number_of_Distinct_Equipment_Templates,Scada_Number_of_Instances,Scada_Number_of_New_Complex_Equipment_Templates,Scada_Number_of_New_Medium_Equipment_Templates,Scada_Number_of_New_Simple_Equipment_Templates,Scada_Number_of_Third_Party_Interface_to_test,Scada_Standard_Build_Usage_for_FAT_Test_Plan,Scada_Standard_Build_Usage_for_Integration_Test_Plan,Scada_Standard_Build_Usage_for_Pre_FAT_Test_Plan,Scada_Standard_Build_Usage_for_SAT_Test_Plan,Scada_Telecommunications_infrastructure_review,SCADA_Ges_Location_Labour)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

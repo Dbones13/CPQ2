@@ -1,0 +1,11 @@
+{
+    "id": 14200,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_parameter_proT",
+    "action": "<*ASSIGNVALUE(Labor_parameter_proT:[IF]([EQ](<*VALUE(New_Expansion)*>,Expansion)){1}{0}[ENDIF])*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

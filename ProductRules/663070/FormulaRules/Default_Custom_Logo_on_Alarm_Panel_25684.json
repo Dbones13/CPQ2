@@ -1,0 +1,11 @@
+{
+    "id": 25684,
+    "condition": "[EQ](<*VALUE(Custom Logo on Alarm Panel)*>,)",
+    "name": "Default Custom Logo on Alarm Panel",
+    "action": "<*SELECTVALUE(Custom Logo on Alarm Panel:No)*>",
+    "description": "CXCPQ-34905",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

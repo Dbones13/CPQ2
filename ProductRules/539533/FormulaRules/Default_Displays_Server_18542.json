@@ -1,0 +1,11 @@
+{
+    "id": 18542,
+    "condition": "[EQ](<*VALUE(ES_Displays_Server)*>,)",
+    "name": "Default_Displays_Server",
+    "action": "<*ASSIGNVALUE(ES_Displays_Server:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

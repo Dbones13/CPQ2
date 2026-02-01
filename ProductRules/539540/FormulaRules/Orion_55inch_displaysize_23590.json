@@ -1,0 +1,11 @@
+{
+    "id": 23590,
+    "condition": "[AND]([GT] (<*VALUE(SS_Orion_Console_Display_Devices)*>,1),[EQ](<*VALUE(SS_Orion_Console_Display_Size)*>,55 inch NTS))",
+    "name": "Orion_55inch_displaysize",
+    "action": "<*RESETVALUE(SS_Orion_Console_Display_Devices:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

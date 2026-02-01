@@ -1,0 +1,11 @@
+{
+    "id": 21811,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "ELEPIU_labor_del_Migration_DDS",
+    "action": "<*ASSIGNVALUE(ELEPIU_labor_del_Migration_DDS:<* Eval([IF]([EQ](<*VALUE(ELEPIU_Documentation_required?)*>,Yes)){<* Eval(14+0.1*(<*VALUE(ELEPIU_Total_number_of_LEPIU_to_be_migrated)*>-1)+[IF]([GT](<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>,16)){<* Eval(0.1*(<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>-16)) *>}{0}[ENDIF]) *>}{0}[ENDIF]) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

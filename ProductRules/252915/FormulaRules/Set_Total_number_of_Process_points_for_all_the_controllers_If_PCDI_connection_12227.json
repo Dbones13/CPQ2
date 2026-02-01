@@ -1,0 +1,11 @@
+{
+    "id": 12227,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[EQ](<*CTX ( Quote.CustomField(EGAP_Proposal_Type) )*>,Budgetary))",
+    "name": "Set_Total number of Process points for all the controllers (If PCDI connection)",
+    "action": "<*ASSIGNVALUE(ELEPIU_Total_number_of_Process_points_controllers:<* Eval([IF]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Serial Interface)){0}{[IF]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,PCDI)){<* Eval(<*VALUE(ELEPIU_Total_number_of_MUX_boxes_to_be_migrated)*>*16) *>}{0}[ENDIF]}[ENDIF]\n) *>)*>\n",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

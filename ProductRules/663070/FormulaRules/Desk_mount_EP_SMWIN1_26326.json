@@ -1,0 +1,11 @@
+{
+    "id": 26326,
+    "condition": "[IF]([AND]([EQ](<*VALUE(Experion Server Type)*>,Flex Server),[EQ](<*VALUE(Server Mounting)*>,Tower (Desk)))){[AND]([EQ](<*VALUE(Multi Window Support (Flex Server))*>,Yes),[OR]([EQ](<*VALUE(Flex Station Qty (0-60))*>,>0),[EQ](<*VALUE(TPS Station Qty (0-20))*>,>0)))}{0}[ENDIF]",
+    "name": "Desk_mount_EP_SMWIN1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-SMWIN1)*>[IF]([EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-SMWIN1, 2)*>}{<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-SMWIN1, 1)*>}[ENDIF]<* DoResetAtt *>",
+    "description": "Add Part at Desk mount and Flex server",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

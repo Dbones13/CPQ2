@@ -1,0 +1,11 @@
+{
+    "id": 24002,
+    "condition": "[NEQ](<*VALUE(Terminal_TM_Test_System_required?)*>,Yes)",
+    "name": "Del_TM-STDTST",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Terminal_Part_Summary:TM-STDTST)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

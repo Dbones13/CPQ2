@@ -1,0 +1,11 @@
+{
+    "id": 13707,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(Virtualization_Giga_Byte_C2960X_CISCO_Switch)*>,0))",
+    "name": "Part_DISS_SI_920LN4",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:SI-920LN4)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

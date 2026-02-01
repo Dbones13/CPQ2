@@ -1,0 +1,11 @@
+{
+    "id": 25678,
+    "condition": "[EQ](<*VALUE(ACE Node Tower Mount Desk)*>,0)",
+    "name": "hide ACE Node in Desk Preference",
+    "action": "<*SETOPTIONAL(Hardware Design Selection_ ACE_Node,Node Supplier_ACE1,Trusted Platform Module_TPM_ACE_desk,Additional Memory ACE_desk_pre,Additional Hard Disk ACE desk pre,Optional DVDACE desk pre,Displays_ace_desk_pre,Display Size _ACE_desk_pre,Display Supplier (ACE),Trackball (ACE),ServerLocationClusterNetwork_Group desk,ACE Node in Desk Preference)*><*DISALLOWATTRIBUTES(Hardware Design Selection_ ACE_Node,Node Supplier_ACE1,Trusted Platform Module_TPM_ACE_desk,Additional Memory ACE_desk_pre,Additional Hard Disk ACE desk pre,Optional DVDACE desk pre,Displays_ace_desk_pre,Display Size _ACE_desk_pre,Display Supplier (ACE),Trackball (ACE),ServerLocationClusterNetwork_Group desk,ACE Node in Desk Preference)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

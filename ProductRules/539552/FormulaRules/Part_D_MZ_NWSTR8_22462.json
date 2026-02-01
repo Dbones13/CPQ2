@@ -1,0 +1,11 @@
+{
+    "id": 22462,
+    "condition": "[EQ](<*VALUE(ESDC_Network_Standard)*>,0)",
+    "name": "Part_D_MZ_NWSTR8",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-NWSTR8)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 17994,
+    "condition": "[EQ](<*VALUE(MXP_Machine_Mounting_Adapter)*>,)",
+    "name": "Default_MXP_Machine_Mounting_Adapter",
+    "action": "<*SELECTVALUE(MXP_Machine_Mounting_Adapter:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

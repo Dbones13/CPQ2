@@ -1,0 +1,11 @@
+{
+    "id": 13113,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,New)",
+    "name": "Hide_For_New_HIF",
+    "action": "<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(PY_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(CY_Quantity).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(PY_UnitPrice).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(PY_ListPrice).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(PY_UnitCost).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(PY_CostPrice).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(CY_UnitPrice).SetPermission(Hidden) )*>\n<*CTX ( Container(SC_WEP_Models_Scope_HIF).Column(CY_UnitCost).SetPermission(Hidden) )*><*DISALLOWATTRIBUTES(SC_WEP_HIF_Pricing_Escalation)*>",
+    "description": "CXCPQ-73502",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

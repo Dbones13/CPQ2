@@ -1,0 +1,11 @@
+{
+    "id": 22266,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,QCS RAE Upgrade),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "QCS_Labor_Del_Inhouse_Engineering",
+    "action": "<*ASSIGNVALUE(QCS_Labor_Del_Inhouse_Engineering:<* Eval([IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R70x.x)){80}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R61x.x)){120}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,R60x.x)){120}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 5)){128}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 4)){136}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Current_Release_on_System)*>,RAE 3 or Less)){160}{0}[ENDIF]+[IF]([EQ](<*VALUE(QCS_Mig_Manual_translation_of_databases_required_DRG_file)*>,Yes)){40}{0}[ENDIF]) *>\n)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

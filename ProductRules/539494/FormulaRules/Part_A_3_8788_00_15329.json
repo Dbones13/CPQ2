@@ -1,0 +1,11 @@
+{
+    "id": 15329,
+    "condition": "[GT](<*VALUE(MXP_HC_900_Digital_Inputs_Contact_type_16_point)*>,0)",
+    "name": "Part_A_3_8788_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_Bom_Parts:3-8788-00)*><*SETATVQTY(MXP_Bom_Parts:3-8788-00,<*VALUE(MXP_HC_900_Digital_Inputs_Contact_type_16_point)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

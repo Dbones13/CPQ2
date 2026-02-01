@@ -1,0 +1,11 @@
+{
+    "id": 17718,
+    "condition": "1",
+    "name": "Total_DI_Points",
+    "action": "<*ASSIGNVALUE(Labor_parameter_di:<*Eval(0<*CTX( Container(SM_IO_Count_Digital_Input_Cont).Sum(Total DI Point) )*> +0<*CTX( Container(SM_CG_DI_RLY_NMR_Cont).Sum(Total DI NMR Point) )*> )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Pavan Koganty"
+}

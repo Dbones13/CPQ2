@@ -1,0 +1,11 @@
+{
+    "id": 14133,
+    "condition": "[NEQ](<*VALUE(HC900_Ges_Location_Labour)*>,None)",
+    "name": "GES_Location_Not_None",
+    "action": "<*CTX( Container(HC900 Engineering Labor Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX( Container(HC900 Additional Custom Deliverables).Column(GES Eng).SetPermission(Editable) )*><*CTX( Container(HC900 Additional Custom Deliverables).Column(GES Eng % Split).SetPermission(Editable) )*><*ALLOWATTRIBUTES(HC900_GES_%)*><*ALLOWATTRIBUTES(HC900_ACD_GES_%)*><*CTX( Container(HC900 Engineering Labor Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(HC900 Engineering Labor Container).Column(GES_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(HC900 Engineering Labor Container).Column(GES_ListPrice).SetPermission(Editable) )*>\n<*CTX( Container(HC900 Engineering Labor Container).Column(GES_WTW_Cost).SetPermission(Editable) )*>\n<*CTX( Container(HC900 Engineering Labor Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n<*CTX( Container(HC900 Additional Custom Deliverables).Column(GES_Unit_Regional_Cost).SetPermission(Editable))*>\n<*CTX( Container(HC900 Additional Custom Deliverables).Column(GES_Regional_Cost).SetPermission(Editable))*>\n<*CTX( Container(HC900 Additional Custom Deliverables).Column(GES_ListPrice).SetPermission(Editable))*>\n<*CTX( Container(HC900 Additional Custom Deliverables).Column(GES_WTW_Cost).SetPermission(Editable))*>\n<*CTX( Container(HC900 Additional Custom Deliverables).Column(GES_MPA_Price).SetPermission(Hidden))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

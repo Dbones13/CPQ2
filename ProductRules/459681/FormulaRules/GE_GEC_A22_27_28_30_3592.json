@@ -1,0 +1,11 @@
+{
+    "id": 3592,
+    "condition": "[OR](<*ISSELECTED(Identifiers.A22)*>,<*ISSELECTED(Identifiers.A27)*>,<*ISSELECTED(Identifiers.A28)*>,<*ISSELECTED(Identifiers.A30)*>)",
+    "name": "GE_GEC_A22_27_28_30",
+    "action": "<*DISALLOWVALUES(Network Type:RS232,Network Type:RS485)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

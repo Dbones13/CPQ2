@@ -1,0 +1,11 @@
+{
+    "id": 13260,
+    "condition": "[EQ](<*VALUE(Number of OPC Interface Types)*>,)",
+    "name": "Set default value for Number of OPC Interface Types",
+    "action": "<*ASSIGNVALUE(Number of OPC Interface Types:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14845,
+    "condition": "[NEQ](<*VALUE(MX_MD_Crepe_ratio_Control)*>,Yes)",
+    "name": "MX_Part_Dis_Q5904_89",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5904-89)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

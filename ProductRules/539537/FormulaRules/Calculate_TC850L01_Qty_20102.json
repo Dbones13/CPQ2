@@ -1,0 +1,11 @@
+{
+    "id": 20102,
+    "condition": "<*IFANYVALUE(SerC_CG_IO_Family_Type:Series C,SerC_CG_IO_Family_Type:Series-C Mark II)*>",
+    "name": "Calculate_TC-850L01_Qty",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Series_C_CG_Part_Summary:TC-850L01)*><*SETATVQTY(Series_C_CG_Part_Summary:TC-850L01,<* Eval(0<*VALUE(SerC_Number of Non Redundant EIM for IEC61850)*> +0<*VALUE(SerC_Number of Redundant EIM for IEC61850)*>) *>)*>\n<* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

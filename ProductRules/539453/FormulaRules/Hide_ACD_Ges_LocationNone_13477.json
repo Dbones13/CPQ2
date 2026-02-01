@@ -1,0 +1,11 @@
+{
+    "id": 13477,
+    "condition": "[EQ](<*VALUE(Experion_HS_Ges_Location_Labour)*>,None)",
+    "name": "Hide_ACD_Ges_LocationNone",
+    "action": "{<*DISALLOWATTRIBUTES(Additional_CustomDev_GES)*><*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng).SetPermission(Hidden) )*><*CTX( Container(Additional_CustomDev_Labour_Container).Column(GES Eng % Split).SetPermission(Hidden) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_Unit_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_Regional_Cost).SetPermission(Hidden) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_ListPrice).SetPermission(Hidden) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_WTW_Cost).SetPermission(Hidden) )*><*CTX ( Container(Additional_CustomDev_Labour_Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>}",
+    "description": "Hide GES Location for GES Eng and GES Eng % Split",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

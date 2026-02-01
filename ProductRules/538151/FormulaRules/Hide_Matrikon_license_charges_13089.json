@@ -1,0 +1,11 @@
+{
+    "id": 13089,
+    "condition": "[NEQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide Matrikon license charges",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_04_open,ATTCON_04_close,SC_ES_Matrikon_License)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

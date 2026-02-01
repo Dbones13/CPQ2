@@ -1,0 +1,11 @@
+{
+    "id": 21873,
+    "condition": "[EQ](<*VALUE(FDM_Displays_(Server))*>,)",
+    "name": "Default_FDM_Displays_(Server)",
+    "action": "<*ASSIGNVALUE(FDM_Displays_(Server):0)*>",
+    "description": "CXCPQ-45712",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

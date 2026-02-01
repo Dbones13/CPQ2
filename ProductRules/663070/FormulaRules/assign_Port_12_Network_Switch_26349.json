@@ -1,0 +1,11 @@
+{
+    "id": 26349,
+    "condition": "1",
+    "name": "assign Port 12 Network Switch",
+    "action": "<*ASSIGNVALUE(Port 12 Network Switch:<*EVAL(<*GETATVQTY(Exp_Ent_Grp_Part_Summary:SM-G512I2)*>+<*VALUE(Port 12 Network Switchcluster)*>)*>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

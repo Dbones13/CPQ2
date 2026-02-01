@@ -1,0 +1,11 @@
+{
+    "id": 14051,
+    "condition": "[EQ](<*VALUE(DVM_Base_Media_Delivery)*>,)",
+    "name": "Default_DVM_Base_Media_Delivery",
+    "action": "<*SELECTVALUE(DVM_Base_Media_Delivery:Electronic Download)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

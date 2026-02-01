@@ -1,0 +1,11 @@
+{
+    "id": 21967,
+    "condition": "[AND]([EQ](<*VALUE(Enterprise_flag_check)*>,True),[EQ](<*CTX ( Container(SM_Enterprise_Cluster).SelectedRow.Index )*>,9),[EQ](<*VALUE(FDM_ FDM_Gateway_required)*>,Yes))",
+    "name": "Load_Cluster10",
+    "action": "<*ALLOWATTRIBUTES(SM_Enterprise_Cluster_Sub)*>\n<*CTX( Container(SM_Enterprise_Cluster_Sub).LoadKeys(ListIndex).Load(select <*eval(Replace(Replace(\"<*VALUE(cluster10)*>\",\"| \",\"' as LocationCluster UNION SELECT \") + \"'\",\"#\",\" as ListIndex ,'\"))*> as LocationCluster  ))*>",
+    "description": "CXCPQ-45712",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

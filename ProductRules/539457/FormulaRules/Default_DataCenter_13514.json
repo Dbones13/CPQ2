@@ -1,0 +1,11 @@
+{
+    "id": 13514,
+    "condition": "[EQ](<*VALUE(Virtualization_DataCenter_OS_to_be_offered)*>,)",
+    "name": "Default_DataCenter",
+    "action": "<*SELECTVALUE(Virtualization_DataCenter_OS_to_be_offered:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18740,
+    "condition": "[EQ](<*VALUE(MX_CD_Spindle_Rods)*>,)",
+    "name": "Default_MX_CD_Spindle_Rods",
+    "action": "<*SELECTVALUE(MX_CD_Spindle_Rods:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

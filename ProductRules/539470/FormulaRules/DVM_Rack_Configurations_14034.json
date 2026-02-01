@@ -1,0 +1,11 @@
+{
+    "id": 14034,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "DVM_Rack_Configurations",
+    "action": "<*ASSIGNVALUE(DVM_Rack_Configurations:[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Non-Standard Build Estimate)){<* Eval((4*<*VALUE(DVM_Number_of_Server_Rack_Configurations)*>+2*<*VALUE(DVM_Number_of_Workstation_Configurations)*>)+(<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Server_Rack_Configurations)*>+<*VALUE(DVM_Number_of_Workstation_Configurations)*>))*0.25) *>}{[IF]([EQ](<*VALUE(DVM_GES_Location)*>,None)){<* Eval(((4*<*VALUE(DVM_Number_of_Server_Rack_Configurations)*>+2*<*VALUE(DVM_Number_of_Workstation_Configurations)*>)+(<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Server_Rack_Configurations)*>+<*VALUE(DVM_Number_of_Workstation_Configurations)*>))*0.25)*0.5) *>}{<* Eval((((4*<*VALUE(DVM_Number_of_Server_Rack_Configurations)*>+2*<*VALUE(DVM_Number_of_Workstation_Configurations)*>)+(<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Server_Rack_Configurations)*>+<*VALUE(DVM_Number_of_Workstation_Configurations)*>))*0.25)*0.5)*1.1) *>}[ENDIF]}[ENDIF])*>",
+    "description": "CXCPQ-51098",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

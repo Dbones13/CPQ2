@@ -1,0 +1,1 @@
+[IF](<*ISSELECTED(SC_P1P2_AutoUpdate_Editable_Ext.&nbsp)*>){<*ASSIGNVALUE(SC_P1P2_PY_Parts_Ext_Price:<*CTX ( Container(SC_P1P2_Parts_Details).Sum(PY_ExtPrice) )*>)*>}{0}[ENDIF]<*ASSIGNVALUE(SC_Product_Status:0)*>

@@ -1,0 +1,11 @@
+{
+    "id": 20660,
+    "condition": "[AND]([EQ](<*VALUE(SS_Simulation_PC_Station_required)*>,Yes),\n[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R511))",
+    "name": "Hide_StationNodeTypeOptions",
+    "action": "<*DISALLOWVALUES(SS_Server_Node_Type_Workstation:SVR_PER_DELL_Rack_RAID1_XE)*>\n<*DISALLOWVALUES(SS_Server_Node_Type_Workstation:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

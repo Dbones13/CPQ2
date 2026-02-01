@@ -1,0 +1,11 @@
+{
+    "id": 4830,
+    "condition": "[AND]([EQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q4000-80 O-Frame),[EQ](<*VALUE(MX_SE_Measurement_Type)*>,Ash))",
+    "name": "Q_kit_Ash_condition",
+    "action": "<*DISALLOWALLVALUESEXCEPT(MX_SE_Is Q_Kit_required:No|Q4237-5X|Q4267-52)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

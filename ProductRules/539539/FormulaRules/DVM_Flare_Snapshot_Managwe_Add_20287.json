@@ -1,0 +1,11 @@
+{
+    "id": 20287,
+    "condition": "[EQ](<*VALUE(DVM_Flare_Snapshot_Manager)*>,Yes)",
+    "name": "DVM Flare Snapshot Managwe_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMFLR)*><*SETATVQTY(DVM_Sys_Grp_Part_Summary:EP-DVMFLR,1)*><* DoResetAtt *",
+    "description": "CXCPQ-45741",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

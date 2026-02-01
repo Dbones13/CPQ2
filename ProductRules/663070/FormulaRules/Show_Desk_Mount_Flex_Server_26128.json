@@ -1,0 +1,11 @@
+{
+    "id": 26128,
+    "condition": "[AND](([EQ](<*VALUE(Experion Server Type)*>,Flex Server)),([EQ](<*VALUE(Server Mounting)*>,Desk)))",
+    "name": "Show_Desk_Mount_Flex_Server",
+    "action": "<*ALLOWATTRIBUTES(Desk_Mount_Flex_Server,Desk_Mount_Flex_Server_Message,FlexServer_NodeType,NodeSupplier_FlexServer,TrustedPlatform_ModuleTPM,Multi_WindowSupportFlex_Server,Displays_Flex Server in Desk0_2,TouchScreen_FlexServerDesk,Display_Size_FlexServer,IKBorOEP_FlexServer,Remote_Peripheral_Solution_Type_RPS,Display_Supplier,Trackball,ServerLocation_Cluster/Network_Group)*>\n<*xDisallowallValuesExcept(ServerLocation_Cluster/Network_Group:<* LIST ( SELECT AttValue FROM ClusterAttValues WHERE CAST (AttValueCode AS float) <= '<*CTX( Container(List of Locations/Clusters/Network Groups).Rows.GetCount )*>' ) *>)*>",
+    "description": "CXCPQ-34596",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

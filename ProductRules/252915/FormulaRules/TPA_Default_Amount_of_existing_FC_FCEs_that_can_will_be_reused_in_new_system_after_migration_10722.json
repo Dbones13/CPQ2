@@ -1,0 +1,11 @@
+{
+    "id": 10722,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Amount_of_existing_FC_FCEs_that_can_will_be_reused_in_new_system_after_migration)*>,))",
+    "name": "TPA_Default_Amount_of_existing_FC_FCEs_that_can_will_be_reused_in_new_system_after_migration",
+    "action": "<*ASSIGNVALUE(TPA_Amount_of_existing_FC_FCEs_that_can_will_be_reused_in_new_system_after_migration:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

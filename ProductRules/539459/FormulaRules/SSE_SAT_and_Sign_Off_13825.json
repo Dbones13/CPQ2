@@ -1,0 +1,11 @@
+{
+    "id": 13825,
+    "condition": "1",
+    "name": "SSE SAT and Sign Off",
+    "action": "<*ASSIGNVALUE(SSE SAT and Sign Off:<* Eval(<*CTX( Math.Maximum(8,<* Eval(4*<*VALUE(Labor_parameter_scab)*>) *>) )*>+0.1 * 0.3 * (<*VALUE(Labor_parameter_mcab)*>* (40 + <*VALUE(Labor_parameter_is)*>*10))) *>)*>",
+    "description": "Calculated hours = Max(8,4*scab)+0.1 * 0.3 * (mcab* (40 + is*10))",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

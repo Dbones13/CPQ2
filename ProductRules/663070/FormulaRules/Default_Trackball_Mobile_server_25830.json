@@ -1,0 +1,11 @@
+{
+    "id": 25830,
+    "condition": "[EQ](<*VALUE(Trackball (Mobile server))*>,)",
+    "name": "Default_Trackball_Mobile_server",
+    "action": "<*SELECTVALUE(Trackball (Mobile server):No)*>",
+    "description": "CXCPQ-35423",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14032,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_DVM_Site_Acceptance_Test",
+    "action": "[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Non-Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Site_Acceptance_Test:<* Eval(<*VALUE(DVM_SAT_Duration_in_Days_for_DVM)*>*8)*>)*>}{[IF]([AND]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate),[NEQ](<*VALUE(DVM_GES_Location)*>,None))){<*ASSIGNVALUE(Labor_DVM_Site_Acceptance_Test:<* Eval(((<*VALUE(DVM_SAT_Duration_in_Days_for_DVM)*>*8)*0.8)*1.1\n) *>)*>}{[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Site_Acceptance_Test:<* Eval((<*VALUE(DVM_SAT_Duration_in_Days_for_DVM)*>*8)*0.8\n) *>)*>}{0}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "CXCPQ-51146",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

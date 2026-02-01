@@ -1,0 +1,11 @@
+{
+    "id": 18926,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Type_of_Valve_Autoslice)*>,CDW60 In-Line),[NEQ](<*VALUE(MX_CD_Profile_Bar)*>,Titanium),[EQ](<*VALUE(MX_CD_Zone_Width)*>,0)\n)",
+    "name": "CD_Part_Dis_91232_MM",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:91232-MM)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

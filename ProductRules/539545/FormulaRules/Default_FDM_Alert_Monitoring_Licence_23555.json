@@ -1,0 +1,11 @@
+{
+    "id": 23555,
+    "condition": "[EQ](<*VALUE(FDM_Alert_Monitoring_License)*>,)",
+    "name": "Default_FDM_Alert_Monitoring_Licence",
+    "action": "<*ASSIGNVALUE(FDM_Alert_Monitoring_License:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "19/03/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

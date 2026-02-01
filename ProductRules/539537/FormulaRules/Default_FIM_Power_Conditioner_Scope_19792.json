@@ -1,0 +1,11 @@
+{
+    "id": 19792,
+    "condition": "[EQ](<*VALUE(FIM_Power_Conditioner_Scope)*>,)",
+    "name": "Default_FIM_Power_Conditioner_Scope",
+    "action": "<*SELECTVALUE(FIM_Power_Conditioner_Scope:Honeywell)*>",
+    "description": "CXCPQ-37930",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

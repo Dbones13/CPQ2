@@ -1,0 +1,11 @@
+{
+    "id": 13586,
+    "condition": "[EQ](<*VALUE(Virtualization_Windowsr_2022_COA_Licenses_16)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_Windowsr_2022_COA_Licenses_16",
+    "action": "<*ASSIGNVALUE(Virtualization_Windowsr_2022_COA_Licenses_16:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

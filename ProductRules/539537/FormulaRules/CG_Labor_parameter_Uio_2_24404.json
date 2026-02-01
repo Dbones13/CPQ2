@@ -1,0 +1,11 @@
+{
+    "id": 24404,
+    "condition": "1",
+    "name": "CG_Labor_parameter_Uio_2",
+    "action": "<*ASSIGNVALUE(CG_Labor_parameter_Uio_2:<* Eval(0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Red_IS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Future_Red_IS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Non_Red_IS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Red_NIS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Future_Red_NIS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Non_Red_NIS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Red_ISLTR) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Future_Red_ISLTR) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_1).Sum(Non_Red_ISLTR) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Red_IS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Future_Red_IS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Non_Red_IS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Red_NIS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Future_Red_NIS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Non_Red_NIS) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Red_ISLTR) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Future_Red_ISLTR) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Non_Red_ISLTR) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Red_RLY) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Future_Red_RLY) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Non_Red_RLY) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Red_HV_Rly) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Future_HV_Rly) )*>+0<*CTX( Container(C300_CG_Universal_IO_cont_2).Sum(Non_Red_HV_Rly) )*>+0<*CTX( Container(Series_C_Remote_Groups_Cont).Sum(Uio) )*>) *>)*>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Saratha  Gnanamani"
+}

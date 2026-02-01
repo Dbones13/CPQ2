@@ -1,0 +1,11 @@
+{
+    "id": 17859,
+    "condition": "[NOT]([GT](<*CTX( Container(Miscellaneous Interfaces).Row(6).Column(Nodes).Get )*>,0))",
+    "name": "PS_Miscellaneous_Interfaces_EP-IASEAI_Disallow",
+    "action": "<*DISALLOWVALUES(SCADA_BOM_Items:EP-IASEAI)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

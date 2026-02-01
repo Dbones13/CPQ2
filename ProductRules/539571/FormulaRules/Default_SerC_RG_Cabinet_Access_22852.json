@@ -1,0 +1,11 @@
+{
+    "id": 22852,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Access)*>,)",
+    "name": "Default_SerC_RG_Cabinet_Access",
+    "action": "<*SELECTVALUE(SerC_RG_Cabinet_Access:Dual Access)*>",
+    "description": "CXCPQ-38251",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

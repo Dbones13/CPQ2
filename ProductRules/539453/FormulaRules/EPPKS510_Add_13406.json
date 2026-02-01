@@ -1,0 +1,11 @@
+{
+    "id": 13406,
+    "condition": "[AND]([EQ](<*VALUE(Experion Software Release)*>,R510),[EQ](<*VALUE(Experion Base Media Delivery)*>,Physical Delivery))",
+    "name": "EP-PKS510_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Sys_Part_Summary:EP-PKS510)*><*SETATVQTY(Exp_Ent_Sys_Part_Summary:EP-PKS510, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

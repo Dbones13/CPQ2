@@ -1,0 +1,11 @@
+{
+    "id": 11949,
+    "condition": "[EQ](<*VALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5))*>,)",
+    "name": "Default_Number of Number_of_Reviews_(add_Asbuilts)_(2-5)",
+    "action": "<*ASSIGNVALUE(FGC_Number_of_Reviews_(add_Asbuilts)_(2-5):3)*>)",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

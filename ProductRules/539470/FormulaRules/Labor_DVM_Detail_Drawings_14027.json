@@ -1,0 +1,11 @@
+{
+    "id": 14027,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_DVM_Detail_Drawings",
+    "action": "[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Non-Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Detail_Drawings:<* Eval((5*<*VALUE(DVM_Number_of_Camera_Details_Drawings)*>+8*<*VALUE(DVM_Number_of_Other_Details_Drawings)*>)+((<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Camera_Details_Drawings)*>+<*VALUE(DVM_Number_of_Other_Details_Drawings)*>))*0.25))*>)*>}{[IF]([AND]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate),[NEQ](<*VALUE(DVM_GES_Location)*>,None))){<*ASSIGNVALUE(Labor_DVM_Detail_Drawings:<* Eval((((5*<*VALUE(DVM_Number_of_Camera_Details_Drawings)*>+8*<*VALUE(DVM_Number_of_Other_Details_Drawings)*>)+((<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Camera_Details_Drawings)*>+<*VALUE(DVM_Number_of_Other_Details_Drawings)*>))*0.25))*0.6)*1.1) *>)*>}{[IF]([EQ](<*VALUE(DVM_Implementation_Methodology)*>,Standard Build Estimate)){<*ASSIGNVALUE(Labor_DVM_Detail_Drawings:<* Eval(((5*<*VALUE(DVM_Number_of_Camera_Details_Drawings)*>+8*<*VALUE(DVM_Number_of_Other_Details_Drawings)*>)+((<*VALUE(DVM_Number_of_Reviews)*>*(<*VALUE(DVM_Number_of_Camera_Details_Drawings)*>+<*VALUE(DVM_Number_of_Other_Details_Drawings)*>))*0.25))*0.6) *>)*>}{0}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "CXCPQ-51097",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

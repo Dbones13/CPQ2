@@ -1,0 +1,43 @@
+@using WebSite.Controllers
+<div class="row" id="CustomFields" data-bind="visible: !isEmpty()">
+    <div id="custom-fields-section" class="fiori3-cart-section clearfix" data-bind="css: { 'section-toggled': isSectionCollapsed('custom-fields-section') }">
+        @*Custom fields*@
+        <div data-bind="visible: customFieldsAndQuoteTables().length > 0">
+            <div class="fiori3-quote-section-header" data-bind="click: function() { toggleQuoteSection('custom-fields-section'); }">
+                <span>@Translation.Get("Quote_Pricing")</span>
+                <a href="#" class="fiori3-quote-section-toggle" data-bind="css: { 'fiori3-rotated-quote-section-toggle': isSectionCollapsed('custom-fields-section') },
+                                                                  event: { keypress: function() { toggleQuoteSectionOnKeypress(event, 'custom-fields-section'); } }, tooltip: { title: '@Translation.GetJS("Quote.CollapseExpandSection")' }">&#xe066;</a>
+            </div>
+            
+            <div id="cartCustomFields" class="col-md-12 clearfix no-padding fiori3-quote-section-container fiori3-custom-fields-container">
+            <!-- ko ifnot: isSectionCollapsed('custom-fields-section') -->
+                    <div data-bind="foreach: quoteTables" class="custom-fields">
+                      <!-- ko if: $data.name !== 'Order_Booking_Error' -->
+                            <!-- ko template: template -->
+                            <!--/ko -->
+                      <!--/ko -->
+                    </div>
+             <!--/ko -->
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- ko if: isEmpty() && quoteTables.filterByProperty('name', 'FME_Invalid_Parts')().length -->
+<div class="row" id="CustomFieldsN" data-bind="visible: quoteTables.filterByProperty('name', 'FME_Invalid_Parts')()[0].rows().length">
+    <div id="custom-fields-section2" class="fiori3-cart-section clearfix" data-bind="css: { 'section-toggled': isSectionCollapsed('custom-fields-section') }">
+        <div>
+            <div data-bind="foreach: quoteTables.filterByProperty('name', 'FME_Invalid_Parts')" class="custom-fields">
+                <!-- ko template: template -->
+                <!--/ko -->
+            </div>
+       </div>
+    </div>
+</div>
+<!--/ko -->
+@Html.PartialWithNameAsComment("Templates/CartCustomFieldTemplates")
+
+@if (CartController.HasQuoteTablesOnCurrentTab())
+{
+    @Html.PartialWithNameAsComment("Templates/CartTableTemplate")
+    @Html.PartialWithNameAsComment("Templates/CartTableCellTemplates")
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14289,
+    "condition": "[NOT]([AND]([GT](<* IsNull(<*VALUE(MIQ_How_many_stations)*>,0)*>,0),[GT](<* IsNull(<*VALUE(MIQ_How_many_streams_per_station)*>,0)*>,0),[GT](<* IsNull(<*VALUE(MIQ_How_many_devices_per_stream)*>,0)*>,0)))",
+    "name": "MO-ADDMET Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(MIQ_PART_SUMMARY:MO-ADDMET)*><* DoResetAtt *>",
+    "description": "CXCPQ-50830",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

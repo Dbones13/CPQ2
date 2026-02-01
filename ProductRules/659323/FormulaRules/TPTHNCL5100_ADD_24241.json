@@ -1,0 +1,11 @@
+{
+    "id": 24241,
+    "condition": "[OR]([GT](<*VALUE(ARO_Qty_of_Thin_clients)*>,0),[GT](<*VALUE(RESS_Qty_of_Thin_clients)*>,0))",
+    "name": "TP-THNCL5-100_ADD",
+    "action": "[IF]([AND]([EQ](<*VALUE(ARO_System_Required)*>,Yes),[EQ](<*VALUE(RESS_System_Required)*>,Yes))){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:TP-THNCL5-100)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:TP-THNCL5-100, <*Eval(<*VALUE(ARO_Qty_of_Thin_clients)*>+<*VALUE(RESS_Qty_of_Thin_clients)*>) *>.)*><* DoResetAtt *>}{[IF]([EQ](<*VALUE(ARO_System_Required)*>,Yes)){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:TP-THNCL5-100)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:TP-THNCL5-100, <*Eval(<*VALUE(ARO_Qty_of_Thin_clients)*>) *>.)*><* DoResetAtt *>}{[IF]([EQ](<*VALUE(RESS_System_Required)*>,Yes)){<* DoNotResetAtt *><*SELECTVALUE(ARO_Sys_Grp_Part_Summary:TP-THNCL5-100)*><*SETATVQTY(ARO_Sys_Grp_Part_Summary:TP-THNCL5-100, <*Eval(<*VALUE(RESS_Qty_of_Thin_clients)*>) *>.)*><* DoResetAtt *>}{0}[ENDIF]}[ENDIF]}[ENDIF]",
+    "description": "50112",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

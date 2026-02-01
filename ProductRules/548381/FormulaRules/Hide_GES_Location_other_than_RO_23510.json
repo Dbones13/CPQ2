@@ -1,0 +1,11 @@
+{
+    "id": 23510,
+    "condition": "[OR](<*ISSELECTED(Hardware_Engineering_GES_Eng.SYS GES Eng-BO-RO)*>,<*ISSELECTED(Hardware_Engineering_GES_Eng.SYS GES Eng-FO-RO)*>)",
+    "name": "Hide GES Location other than RO",
+    "action": "<*DISALLOWALLVALUESEXCEPT(Hardware_Engineering_GES_Eng:HPS_GES_P350B_RO|HPS_GES_P350F_RO)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

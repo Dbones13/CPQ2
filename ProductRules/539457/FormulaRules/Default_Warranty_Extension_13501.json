@@ -1,0 +1,11 @@
+{
+    "id": 13501,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platforms-Dell Servers),[EQ](<*VALUE(Virtualization_Warranty_Extension)*>,),[EQ](<*CTX ( Quote.CustomField(R2QFlag) )*>,Yes))",
+    "name": "Default_Warranty_Extension",
+    "action": "<*SELECTVALUE(Virtualization_Warranty_Extension:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "08/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

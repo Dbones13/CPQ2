@@ -1,0 +1,11 @@
+{
+    "id": 18607,
+    "condition": "[NEQ](<*VALUE(ES_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID5)",
+    "name": "Control_Additional_eserver_2",
+    "action": "<*DISALLOWVALUES(ES_Additional_Memory:16GB)*><*SELECTVALUE(ES_Additional_Memory:None)*>",
+    "description": "7959 story",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "02/05/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

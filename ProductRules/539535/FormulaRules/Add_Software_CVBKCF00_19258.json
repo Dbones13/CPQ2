@@ -1,0 +1,11 @@
+{
+    "id": 19258,
+    "condition": "[GT](<*VALUE(PlantCruise_Enhanced_Bulk_Configure_Tools_for_CB)*>,0)",
+    "name": "Add_Software_CV-BKCF00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:CV-BKCF00)*><*SETATVQTY(PlantCruise_Part_Summary:CV-BKCF00,<*VALUE(PlantCruise_Enhanced_Bulk_Configure_Tools_for_CB)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

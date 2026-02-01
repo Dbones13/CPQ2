@@ -1,0 +1,11 @@
+{
+    "id": 19901,
+    "condition": "[NOT](<*ISSELECTED(SerC_CG_IO_Family_Type.Turbomachinery)*>)",
+    "name": "Hide_C300_TurboM_IOm_Cg_Cont",
+    "action": "<*CTX ( Container(C300_TurboM_IOM_CG_Cont).Rows.Clear )*><*DISALLOWATTRIBUTES(C300_TurboM_IOM_CG_Cont,Header_17_close,Header_17_open)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

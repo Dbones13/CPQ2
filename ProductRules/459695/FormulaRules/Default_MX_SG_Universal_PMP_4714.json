@@ -1,0 +1,11 @@
+{
+    "id": 4714,
+    "condition": "[EQ](<*VALUE(MX_SG_Universal_PMP)*>,)",
+    "name": "Default_MX_SG_Universal_PMP",
+    "action": "<*SELECTVALUE(MX_SG_Universal_PMP:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

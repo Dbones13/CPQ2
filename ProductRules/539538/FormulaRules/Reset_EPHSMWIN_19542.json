@@ -1,0 +1,11 @@
+{
+    "id": 19542,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(Exp HS Enter number of HS Multi-Window license)*>,0) *>,0))",
+    "name": "Reset EP-HSMWIN",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HSMWIN)*><* DoResetAtt *>",
+    "description": "CXCPQ-42958",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

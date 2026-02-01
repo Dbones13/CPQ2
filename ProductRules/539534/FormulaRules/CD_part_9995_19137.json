@@ -1,0 +1,11 @@
+{
+    "id": 19137,
+    "condition": "[EQ](<*VALUE(MXP_Communication_Link_to_Non_Honeywell_QCS)*>,Yes)",
+    "name": "CD_part_9995",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:9995)*><*SETATVQTY(MX_CD_Bom_Parts:9995, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

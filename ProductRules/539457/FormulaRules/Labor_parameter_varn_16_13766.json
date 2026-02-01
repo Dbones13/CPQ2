@@ -1,0 +1,11 @@
+{
+    "id": 13766,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_varn_16",
+    "action": "<*ASSIGNVALUE(Labor_parameter_varn_16:<* Eval(<*VALUE(Virtualization_Number_Storage_Device_Performance)*>+<*VALUE(Virtualization_Number_Storage_Device_Standard)*>) *>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

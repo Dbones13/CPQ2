@@ -1,0 +1,11 @@
+{
+    "id": 22323,
+    "condition": "1",
+    "name": "Final Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(PMD Engineering Labor Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(PMD Labor Additional Custom Deliverable).Total(Final Hrs) )*>) *>) *>)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

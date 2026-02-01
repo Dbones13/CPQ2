@@ -1,0 +1,11 @@
+{
+    "id": 19604,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS Experion MQTT Server Interface)*>,Yes))",
+    "name": "MQTT Server Interface NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:EP-HMQT00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

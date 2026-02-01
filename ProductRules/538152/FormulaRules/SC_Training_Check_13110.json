@@ -1,0 +1,11 @@
+{
+    "id": 13110,
+    "condition": "[NEQ](<*CTX ( Container(SC_WEP_Models_Scope_Training).Rows.GetCount )*>,0)",
+    "name": "SC_Training_Check",
+    "action": "<*ASSIGNVALUE(Extended Description:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13282,
+    "condition": "[EQ](<*VALUE(Is Modbus Interface in Scope?)*>,Yes)",
+    "name": "Show Modbus Interface Questions",
+    "action": "<*ALLOWATTRIBUTES(Number of Modbus Interfaces Types,Number of Modbus Interfaces)*>",
+    "description": "Display questions when Is Modbus Interface in Scope? = Yes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

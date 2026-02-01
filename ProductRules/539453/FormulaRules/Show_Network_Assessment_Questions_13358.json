@@ -1,0 +1,11 @@
+{
+    "id": 13358,
+    "condition": "[EQ](<*VALUE(Is System Network Engineering in Scope?)*>,Yes)",
+    "name": "Show Network Assessment Questions",
+    "action": "<*ALLOWATTRIBUTES(Network Assessment in scope?,Is WLAN in Scope?,Number of FTE Communities,Number of FTE Community Locations,Number of Locations with FTE Switches,Number of Non Factory Installed Servers,Number of Server Types,Number of Station Types,Number of Types of Network Devices)*>\n[IF]([EQ](<*VALUE(Is WLAN in Scope?)*>,)){<*SELECTVALUE(Is WLAN in Scope?:No)*>}{}[ENDIF]",
+    "description": "Display questions when Is System Network Engineering in Scope? = Yes",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

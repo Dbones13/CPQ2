@@ -1,0 +1,11 @@
+{
+    "id": 18298,
+    "condition": "[AND]([EQ](<*VALUE(MXPro_Sensor_Large_Pass_Angle_18_65_ kit_Dirty)*>,Yes),[EQ](<*VALUE(MXP_Measurement_Type)*>,6k))",
+    "name": "Part_A_3_8648_02",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SE_Bom_Parts:3-8648-02)*><*SETATVQTY(MXP_SE_Bom_Parts:3-8648-02,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13795,
+    "condition": "[OR]([GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX01)*>,0),[GT](<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX03)*>,0))",
+    "name": "Part_EP_VMP24C",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:EP-VMP24C)*><*SETATVQTY(Virtualization_BOM_Parts:EP-VMP24C,<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX01)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX03)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

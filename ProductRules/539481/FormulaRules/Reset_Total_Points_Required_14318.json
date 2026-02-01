@@ -1,0 +1,11 @@
+{
+    "id": 14318,
+    "condition": "[NOT]([EQ](<*VALUE(MIQ_System_architecture)*>,Corporate))",
+    "name": "Reset Total_Points_Required",
+    "action": "<*ASSIGNVALUE(MIQ_Total_Points_Required:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

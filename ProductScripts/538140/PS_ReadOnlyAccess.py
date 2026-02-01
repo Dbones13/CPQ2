@@ -1,0 +1,1 @@
+Product.Attr('SC_TPS_Service_Product').Access = AttributeAccess.ReadOnly

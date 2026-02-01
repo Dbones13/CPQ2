@@ -1,0 +1,11 @@
+{
+    "id": 18072,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(MXP_CalcoilPRO_Type)*>,Off Machine Power modules),[EQ](<*VALUE(MXP_Temperature)*>,High Temperature),[EQ](<*VALUE(MXP_CD_Control_Type)*>,Calcoil PRO)))",
+    "name": "Part_D_9760_11",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_CD_Bom_Parts:9760-11)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

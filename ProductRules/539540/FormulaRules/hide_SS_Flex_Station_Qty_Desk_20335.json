@@ -1,0 +1,11 @@
+{
+    "id": 20335,
+    "condition": "[LT](<*VALUE(SS_Flex_Station_Qty_Desk)*>,1)",
+    "name": "hide_SS_Flex_Station_Qty_Desk",
+    "action": "<*DISALLOWATTRIBUTES(SS_Flex Staton  Desk Node_desk,SS_Node_Supplier_Desk,SS_Display_size_desk,SS_Desk_Multi_Window_Support_Option_Required_desk,SS_No_of_Displays_desk,SS_Display_Supplier_desk,SS_Touch_Screen_required_desk,SS_Trackball_required_desk,SS_IKB_or_OEP_desk,SS_Station_node_LAN_Interface_Card_desk)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

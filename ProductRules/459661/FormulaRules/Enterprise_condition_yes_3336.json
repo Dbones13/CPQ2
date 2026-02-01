@@ -1,0 +1,11 @@
+{
+    "id": 3336,
+    "condition": "[AND]([LIKE](<*CTX( Container(CE_System_Cont).UniqueValues(Product Name).Separator(,) )*>,Experion Enterprise System),[OR]([LIKE](<*CTX( Container(CE_System_Cont).UniqueValues(Product Name).Separator(,) )*>,Safety Manager),[LIKE](<*CTX( Container(CE_System_Cont).UniqueValues(Product Name).Separator(,) )*>,Electrical Substation Data Collector),[LIKE](<*CTX( Container(CE_System_Cont).UniqueValues(Product Name).Separator(,) )*>,C300 System),,[LIKE](<*CTX( Container(CE_System_Cont).UniqueValues(Product Name).Separator(,) )*>,Field Device Manager),[LIKE](<*CTX( Container(CE_System_Cont).UniqueValues(Product Name).Separator(,) )*>,eServer System),[LIKE](<*CTX( Container(CE_System_Cont).UniqueValues(Product Name).Separator(,) )*>,ARO, RESS & ERG System)))",
+    "name": "Enterprise_condition_yes",
+    "action": "<*ASSIGNVALUE(Enterprise_flag_check:True)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "21/11/24",
+    "modifiedBy": "YashwanthKumar Boya"
+}

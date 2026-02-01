@@ -1,0 +1,11 @@
+{
+    "id": 8224,
+    "condition": "[IN]('<*VALUE(IO_Type)*>','Series-C: DO (32) 24VDC Relay Bus above 30V (0-5000)', 'Series-C: DO (32) 24VDC Relay Bus up to 30V (0-5000)')",
+    "name": "Hide Input 3",
+    "action": "<*DISALLOWATTRIBUTES(red_is,future_red_is,non_red_is,red_nis,future_red_nis,non_red_nis,red_isltr,future_red_isltr,non_red_isltr,red_hv_rly,future_red_hv_rly,non_red_hv_rly)*>",
+    "description": "Red (IS), \tFuture Red (IS), Non Red (IS) ,\tRed (NIS) ,Future Red (NIS) , Non Red (NIS) , Red (ISLTR) , Future Red (ISLTR), \tNon Red (ISLTR), Red (HV RLY), Future Red (HV RLY), Non Red (HV RLY).",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/04/24",
+    "modifiedBy": "Siddharth Chandrasekaran"
+}

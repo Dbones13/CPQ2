@@ -1,0 +1,11 @@
+{
+    "id": 14570,
+    "condition": "1",
+    "name": "Final Hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(MS_ASE_Engineering_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(MS_ASE_Additional_Labour_Container).Total(Final Hrs) )*>) *>) *>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

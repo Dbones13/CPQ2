@@ -1,0 +1,11 @@
+{
+    "id": 26450,
+    "condition": "[OR]([NEQ](<*VALUE(Server Mounting)*>,Cabinet),\n[EQ](<*VALUE(Experion Server Type)*>,Flex Server),[NEQ](<*VALUE(Server_NodeType)*>,SVR_PER_DELL_Rack_RAID1_RUG))",
+    "name": "Hide_Marine_Cabinet",
+    "action": "<*DISALLOWATTRIBUTES(Marine_Requirement_Cabinet)*>",
+    "description": "",
+    "rank": "7",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25743,
+    "condition": "[AND]([EQ](<*VALUE(Supervisory Network Type)*>,FTE),[GT](<*VALUE(station_37200)*>,0))",
+    "name": "51305786-502 add part",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:51305786-502)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:51305786-502,<*VALUE(station_37200)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-37200",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22151,
+    "condition": "[NEQ](<*VALUE(FDM_System_Group_Name)*>,)",
+    "name": "Add_HC-SV0001",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(FDM_Part_Summary:HC-SV0001)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "20",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

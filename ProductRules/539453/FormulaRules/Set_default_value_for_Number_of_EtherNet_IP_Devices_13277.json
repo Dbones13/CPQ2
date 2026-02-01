@@ -1,0 +1,11 @@
+{
+    "id": 13277,
+    "condition": "[EQ](<*VALUE(Number of EtherNet IP Devices)*>,)",
+    "name": "Set default value for Number of EtherNet IP Devices",
+    "action": "<*ASSIGNVALUE(Number of EtherNet IP Devices:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14123,
+    "condition": "[NEQ](<*VALUE(PlantCruise_Ges_Location_Labour)*>,None)",
+    "name": "GES_Location_Not_None",
+    "action": "<*CTX( Container(PlantCruise Engineering Labor Container).Column(GES Eng % Split).SetPermission(Editable) )*><*CTX( Container(PlantCruise Additional Custom Deliverables).Column(GES Eng).SetPermission(Editable) )*><*CTX( Container(PlantCruise Additional Custom Deliverables).Column(GES Eng % Split).SetPermission(Editable) )*><*ALLOWATTRIBUTES(PlantCruise_ACD_GES_%)*><*ALLOWATTRIBUTES(PlantCruise_GES_%)*><*CTX( Container(PlantCruise Engineering Labor Container).Column(GES_Unit_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(PlantCruise Engineering Labor Container).Column(GES_Regional_Cost).SetPermission(Editable) )*>\n<*CTX( Container(PlantCruise Engineering Labor Container).Column(GES_ListPrice).SetPermission(Editable) )*>\n<*CTX( Container(PlantCruise Engineering Labor Container).Column(GES_WTW_Cost).SetPermission(Editable) )*>\n<*CTX( Container(PlantCruise Engineering Labor Container).Column(GES_MPA_Price).SetPermission(Hidden) )*>\n<*CTX( Container(PlantCruise Additional Custom Deliverables).Column(GES_Unit_Regional_Cost).SetPermission(Editable))*>\n<*CTX( Container(PlantCruise Additional Custom Deliverables).Column(GES_Regional_Cost).SetPermission(Editable))*>\n<*CTX( Container(PlantCruise Additional Custom Deliverables).Column(GES_ListPrice).SetPermission(Editable))*>\n<*CTX( Container(PlantCruise Additional Custom Deliverables).Column(GES_WTW_Cost).SetPermission(Editable))*>\n<*CTX( Container(PlantCruise Additional Custom Deliverables).Column(GES_MPA_Price).SetPermission(Hidden))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

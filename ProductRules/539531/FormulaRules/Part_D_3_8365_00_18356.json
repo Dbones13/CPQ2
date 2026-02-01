@@ -1,0 +1,11 @@
+{
+    "id": 18356,
+    "condition": "[NOT]([AND]([IN](<*VALUE(MXP_Scanner_Type)*>,3-5080-00,3-5080-23,3-5080-24,3-6080-00,3-5080-43,3-6080-43,3-6080-46),[EQ](<*VALUE(MXP_Chiller_110_VAC)*>,Yes)))",
+    "name": "Part_D_3_8365_00",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_SE_Bom_Parts:3-8365-00)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

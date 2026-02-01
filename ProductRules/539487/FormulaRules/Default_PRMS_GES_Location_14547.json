@@ -1,0 +1,11 @@
+{
+    "id": 14547,
+    "condition": "[EQ](<*VALUE(PRMS GES Location)*>,)",
+    "name": "Default PRMS GES Location",
+    "action": "<*SELECTVALUE(PRMS GES Location:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

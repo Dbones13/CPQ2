@@ -1,0 +1,11 @@
+{
+    "id": 15094,
+    "condition": "[EQ](<*VALUE(MXP_Roll_Set_Summary)*>,)",
+    "name": "Defalut_Roll_Set_Summary",
+    "action": "<*SELECTVALUE(MXP_Roll_Set_Summary:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

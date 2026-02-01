@@ -1,0 +1,11 @@
+{
+    "id": 10937,
+    "condition": "[NOT]([OR]([EQ](<*VALUE(HC900_Controller_(CPU)_Module)*>,Redundant Controller C75 CPU),[EQ](<*VALUE(HC900_Controller_(CPU)_Module_NSIL2)*>,Redundant Controller C75 CPU - SIL2)))",
+    "name": "Reset 900RR0-0300",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:900RR0-0300)*><* DoResetAtt *>",
+    "description": "CXCPQ-40183",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

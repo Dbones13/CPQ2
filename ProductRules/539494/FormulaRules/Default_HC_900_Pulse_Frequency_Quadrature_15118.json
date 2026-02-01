@@ -1,0 +1,11 @@
+{
+    "id": 15118,
+    "condition": "[EQ](<*VALUE(MXP_HC_900_Pulse_Frequency_Quadrature_Inputs_4_point)*>,)",
+    "name": "Default_HC_900_Pulse_Frequency_Quadrature",
+    "action": "<*ASSIGNVALUE(MXP_HC_900_Pulse_Frequency_Quadrature_Inputs_4_point:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

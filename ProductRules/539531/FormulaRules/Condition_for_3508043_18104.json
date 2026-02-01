@@ -1,0 +1,11 @@
+{
+    "id": 18104,
+    "condition": "[NEQ](<*VALUE(MXP_Scanner_Type)*>,3-5080-43)",
+    "name": "Condition_for_3-5080-43",
+    "action": "<*ALLOWALLVALUESEXCEPT(MXP_Measurement_Type:Caliper|IRPlus|None|Source 12&15 Nuclear|X-Ray)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

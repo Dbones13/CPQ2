@@ -1,0 +1,11 @@
+{
+    "id": 23056,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Disallow_SerC_RG_Power_System_Type",
+    "action": "<*DISALLOWVALUES(SerC_RG_Power_System_Type:Locally Supplied Power,SerC_RG_Power_System_Type:Minimum Required Non Redundant,SerC_RG_Power_System_Type:Minimum Required Redundant,SerC_RG_Power_System_Type:Non Redundant 20A,SerC_RG_Power_System_Type:Non Redundant 40A,SerC_RG_Power_System_Type:Redundant 40A)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

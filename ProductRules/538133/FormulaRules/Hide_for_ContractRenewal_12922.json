@@ -1,0 +1,11 @@
+{
+    "id": 12922,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_for_ContractRenewal",
+    "action": "<*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(Qty).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(Ext_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_List_Summary).Column(Ext_Holding_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(Parts_Ext_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Replacement_Summary).Column(List_Price).SetPermission(Hidden) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

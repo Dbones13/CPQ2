@@ -1,0 +1,11 @@
+{
+    "id": 23631,
+    "condition": "[LIKE](<*CTX ( Container(Cyber Configurations).UniqueValues(Part Desc).Separator(,) )*>,Cyber App Control)",
+    "name": "Disallow_selected_product_Cyber_app",
+    "action": "<*DISALLOWVALUES(AR_CyberPrdChoices:Cyber App Control)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

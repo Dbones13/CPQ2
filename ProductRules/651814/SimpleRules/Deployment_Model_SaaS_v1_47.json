@@ -1,0 +1,10 @@
+{
+    "id": 47,
+    "condition": "HCI_PHD_Product:Process History Database (PHD)",
+    "name": "Deployment_Model SaaS v1",
+    "action": "Disallow HCI_PHD_LicenseModel : SaaS",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

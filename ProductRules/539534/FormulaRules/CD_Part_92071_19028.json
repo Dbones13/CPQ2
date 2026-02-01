@@ -1,0 +1,11 @@
+{
+    "id": 19028,
+    "condition": "[AND]([EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[EQ](<*VALUE(MX_CD_Wad_Deflector)*>,Yes))",
+    "name": "CD_Part_92071",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MX_CD_Bom_Parts:92071)*><*SETATVQTY(MX_CD_Bom_Parts:92071, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

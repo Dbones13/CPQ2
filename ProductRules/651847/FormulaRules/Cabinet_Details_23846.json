@@ -1,0 +1,11 @@
+{
+    "id": 23846,
+    "condition": "1",
+    "name": "Cabinet Details",
+    "action": "[IF]([EQ](<*CTX( Container(SM_RG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>,Universal Marshalling)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_DI_NAMUR_Switches_Adapter_UMC).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_DI_NAMUR_Switches_Adapter_UMC).SetPermission(Hidden) )*>}[ENDIF]\n\n[IF]([EQ](<*CTX( Container(SM_RG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>,Universal Marshalling)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_DI_DORelay_Adapter_UMC).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_DI_DORelay_Adapter_UMC).SetPermission(Hidden) )*>}[ENDIF]\n\n[IF]([EQ](<*CTX( Container(SM_RG_Cabinet_Details_Cont_Left).Row(1).Column(Marshalling_Option).GetDisplayValue )*>,Universal Marshalling)){<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_DI_Relay_resistor_Adapter_UMC).SetPermission(Editable) )*>}{<*CTX( Container(SM_RG_Cabinet_Details_Cont).Column(SM_DI_Relay_resistor_Adapter_UMC).SetPermission(Hidden) )*>}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

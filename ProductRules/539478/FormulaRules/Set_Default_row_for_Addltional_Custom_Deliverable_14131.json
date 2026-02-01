@@ -1,0 +1,11 @@
+{
+    "id": 14131,
+    "condition": "[EQ](<*CTX( Container(HC900 Additional Custom Deliverables).Rows.GetCount )*>,0)",
+    "name": "Set Default row for Addltional Custom Deliverable",
+    "action": "<*CTX( Container(HC900 Additional Custom Deliverables).Rows.Add(1) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

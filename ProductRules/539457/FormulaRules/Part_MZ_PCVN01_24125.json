@@ -1,0 +1,11 @@
+{
+    "id": 24125,
+    "condition": "[AND]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix),[GT](<* Eval(<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Sum(Number_of_Nutanix_Premium_Platform_16_Core_0_9) )*> + <*CTX ( Container(Virtualization_Single_Node_Cluster_Conf_transpose).Sum(Number_of_Nutanix_Premium_Platform_16_Core_0_1) )*> * 1) *>,0))",
+    "name": "Part_MZ_PCVN01",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:MZ-PCVN01)*><*SETATVQTY(Virtualization_BOM_Parts:MZ-PCVN01,<* Eval(<*CTX ( Container(Virtualization_Std_Cluster_Conf_transpose).Sum(Number_of_Nutanix_Premium_Platform_16_Core_0_9) )*> + <*CTX ( Container(Virtualization_Single_Node_Cluster_Conf_transpose).Sum(Number_of_Nutanix_Premium_Platform_16_Core_0_1) )*>) *>)*><* DoResetAtt *>\n",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

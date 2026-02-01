@@ -1,0 +1,11 @@
+{
+    "id": 26140,
+    "condition": "[GT](<*VALUE(Off_process_base_software)*>,0)",
+    "name": "EPETS001_Add_OffPrc",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:EP-ETS001)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-ETS001, <*VALUE(Off_process_base_software)*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-45609",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13881,
+    "condition": "1",
+    "name": "SM_System_Scope",
+    "action": "<*ASSIGNVALUE(SM_System_Scope:<*CTX( Container(SM_Common_Questions).Row(1).Column(SM_System_Scope).Get )*>)*>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

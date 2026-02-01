@@ -1,0 +1,65 @@
+<div class="attributes fiori3-attributes flex" tabindex="-1" id="attributesWrapper" role="region"
+	aria-label="@Translation.Get(" Configurator.ConfigurationAttributes")">
+	<div class="col-md-12" style="display: none" data-bind="visible : attributes().length === 0">
+		<div class="fiori3-alert fiori3-alert-info fiori3-alert-info-border" role="status" aria-live="polite">
+			<span class="sap-icon">&#xe202;</span>
+			<div>@Translation.GetJS("Configurator.NoAttributesOnTab")</div>
+		</div>
+	</div>
+
+	<!-- ko foreach: attributes.filterByProperty('name' , 'Winest Import Name') -->
+	<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }"
+		style="width: 300px;">
+		<!-- ko template: { name: $root.getAttributeTemplate } -->
+		<!-- /ko -->
+	</div>
+	<!-- /ko -->
+
+	<div class="row col-xs-12 swagger">
+		<div id="winest-labor">
+			<div>
+				<!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#winest-labor')"> -->
+				<div class="swagger-header"
+					data-bind="click: function(data,event){togglePanel(event,'winest-labor',$('#winest-labor-content'), $('#winest-labor-href'), 'slow');  }">
+					<span>Labor Deliverables</span>
+					<a id="winest-labor-href" href="#" class="swagger-toggle">&#xe066;</a>
+				</div>
+				<div id="winest-labor-content" class="newtoggle">
+					<!-- ko template: { name: 'ConfigurationImportTemplate' } -->
+					<!-- /ko -->
+					<!-- ko foreach: attributes -->
+					<!-- ko if: name() != 'Winest IO Container' && name() != 'Winest Import Name'-->
+					<div
+						data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }">
+						<!-- ko template: { name: $root.getAttributeTemplate } -->
+						<!-- /ko -->
+					</div>
+					<!-- /ko -->
+					<!-- /ko -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row col-xs-12 swagger">
+		<div id="winest-io">
+			<div>
+				<!-- <div class="swagger-header" onclick="toggleConfigSection(event, '#winest-io')"> -->
+				<div class="swagger-header"
+					data-bind="click: function(data,event){togglePanel(event,'winest-io',$('#winest-io-content'), $('#winest-io-href'), 'slow');  }">
+					<span>I/Os Count</span>
+					<a id="winest-io-href" href="#" class="swagger-toggle">&#xe066;</a>
+				</div>
+				<div id="winest-io-content" class="newtoggle">
+					<!-- ko foreach: attributes.filterByProperty('name' , 'Winest IO Container') -->
+					<div data-bind="attr: { 'class': isWholeRow() ? 'col-xs-12' : 'col-xl-3 col-md-4 col-sm-6 col-xs-12', id: id }, css: { 'fiori3-configuration-container-wrapper': isWholeRow() && dataType() === 'Container', 'full-width-attribute': isWholeRow() && dataType() !== 'Container' }"
+						style="width: 50%;">
+						<!-- ko template: { name: "ContainerTemplate_nomoretable"} -->
+						<!-- /ko -->
+					</div>
+					<!-- /ko -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

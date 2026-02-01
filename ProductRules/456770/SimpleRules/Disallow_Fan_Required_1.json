@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "condition": "Spare_Parts_Cabinet_Type_Customer_Plans_To_Use:Front Access Only",
+    "name": "Disallow_Fan_Required",
+    "action": "Disallow Spare_Parts_Cabinet_Fan_Required? : Yes - Two Sides",
+    "description": "Restricts the selection of Cabinet fan required values on the basis of user selection values of Cabinet_Type_Customer_Plans_To_Use",
+    "rank": "5",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

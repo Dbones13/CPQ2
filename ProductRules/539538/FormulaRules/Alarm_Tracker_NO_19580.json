@@ -1,0 +1,11 @@
+{
+    "id": 19580,
+    "condition": "[NOT]([EQ](<*VALUE(Exp HS HS Alarm Tracker)*>,Yes))",
+    "name": "Alarm Tracker NO",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Experion_HS_PART_SUMMARY:HS-ALMTND)*><* DoResetAtt *>",
+    "description": "Reset",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

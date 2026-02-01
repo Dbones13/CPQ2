@@ -1,0 +1,11 @@
+{
+    "id": 17850,
+    "condition": "[GT](<*CTX( Container(Miscellaneous Interfaces).Row(1).Column(Nodes).Get )*>,0)",
+    "name": "PS_Miscellaneous_Interfaces_EP-IYTMA5_Allow",
+    "action": "<*DoNotResetAtt*><*ALLOWVALUES(SCADA_BOM_Items:EP-IYTMA5)*><*SELECTVALUE(SCADA_BOM_Items:EP-IYTMA5)*>\n<*SETATVQTY(SCADA_BOM_Items:EP-IYTMA5, 1)*><*DoResetAtt*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

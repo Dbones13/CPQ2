@@ -1,0 +1,11 @@
+{
+    "id": 26283,
+    "condition": "[EQ](<*VALUE(Optimize Station License Across Groups)*>,)",
+    "name": "Default_Optimize_Station_License_Across_Groups",
+    "action": "<*SELECTVALUE(Optimize Station License Across Groups:No)*>",
+    "description": "CXCPQ-35496",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

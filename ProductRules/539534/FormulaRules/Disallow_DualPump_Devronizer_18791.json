@@ -1,0 +1,11 @@
+{
+    "id": 18791,
+    "condition": "[EQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer)",
+    "name": "Disallow_DualPump_Devronizer",
+    "action": "<*DISALLOWVALUES(MX_CD_Actuator_upgrade_to_XP10_2:Dual Pump,MX_CD_Screen_plate_upgrade:Dual Pump,MX_CD_Stainless_Steel_Walkway:Dual Pump,MX_CD_Wad_Deflector:Dual Pump)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13867,
+    "condition": "[NEQ](<*VALUE(SM_Product_Name)*>,<* ProductName *>)",
+    "name": "Hide_SM_SSE_Engineering_Labor_Container",
+    "action": "<*CTX ( Container(SM_SSE_Engineering_Labor_Container).Rows.Clear )*><*DISALLOWATTRIBUTES(SM_SSE_Engineering_Labor_Container)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

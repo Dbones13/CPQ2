@@ -1,0 +1,11 @@
+{
+    "id": 24225,
+    "condition": "[EQ](<*VALUE(RESS_Does_site_have_DMZ)*>,)",
+    "name": "Default_RESS_Does_site_have_DMZ",
+    "action": "<*SELECTVALUE(RESS_Does_site_have_DMZ:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

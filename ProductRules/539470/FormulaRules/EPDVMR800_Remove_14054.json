@@ -1,0 +1,11 @@
+{
+    "id": 14054,
+    "condition": "[NEQ](<*VALUE(DVM_Base_Media_Delivery)*>,Physical Delivery)",
+    "name": "EP-DVMR800_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Part_Summary:EP-DVMR800)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

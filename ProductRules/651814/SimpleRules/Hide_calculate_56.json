@@ -1,0 +1,10 @@
+{
+    "id": 56,
+    "condition": "R2QRequest:1",
+    "name": "Hide calculate",
+    "action": "Disallow Calculation_Button : 1",
+    "description": "",
+    "rank": "0",
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

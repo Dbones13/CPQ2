@@ -1,0 +1,11 @@
+{
+    "id": 24222,
+    "condition": "[EQ](<*VALUE(RESS_Stations_require_Multiwindow_support)*>,)",
+    "name": "Dfault_RESS_Stations_require_Multiwindow_support",
+    "action": "<*ASSIGNVALUE(RESS_Stations_require_Multiwindow_support:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25792,
+    "condition": "[EQ](<*VALUE(MZ_PCST82 qnt)*>,0)",
+    "name": "MZ-PCST82 remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:MZ-PCST82)*><* DoResetAtt *>",
+    "description": "CXCPQ-37558",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

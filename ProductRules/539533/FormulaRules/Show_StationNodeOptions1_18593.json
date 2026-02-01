@@ -1,0 +1,11 @@
+{
+    "id": 18593,
+    "condition": "[NEQ](<*VALUE(ES_Experion_PKS_Release)*>,R511)",
+    "name": "Show_StationNodeOptions1",
+    "action": "<*ALLOWVALUES(ES_eServer_Staton_Node:STN_PER_HP_Tower_RAID1)*>",
+    "description": "7960 story",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

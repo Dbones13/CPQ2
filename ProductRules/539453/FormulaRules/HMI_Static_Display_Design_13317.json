@@ -1,0 +1,11 @@
+{
+    "id": 13317,
+    "condition": "1",
+    "name": "HMI Static Display Design",
+    "action": "<*ASSIGNVALUE(HMI Static Display Design:<* Eval((0<*VALUE(labor_parameter_q)*>*(0<*VALUE(labor_parameter_sd)*>+0<*VALUE(labor_parameter_md)*>*2+0<*VALUE(labor_parameter_cd)*>*3+0<*VALUE(labor_parameter_vcd)*>*4+0<*VALUE(labor_parameter_rd)*>*0.5))*[IF](<*ISSELECTED(Experion_HS_Ges_Location_Labour.None)*>){1.2}{1.2}[ENDIF]) *>)*>",
+    "description": "If GES= None\nCalculated Hrs = Q* ( sd + md * 2 + cd * 3 + vcd * 4 + rd * 0.5 )\nElse If GES!= None\n Calculated Hrs = (Q* ( sd + md * 2 + cd * 3 + vcd * 4 + rd * 0.5 )) * 1.2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 15129,
+    "condition": "[EQ](<*VALUE(MXP_Number_of_Servers_Management)*>,)",
+    "name": "default_management",
+    "action": "<*ASSIGNVALUE(MXP_Number_of_Servers_Management:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

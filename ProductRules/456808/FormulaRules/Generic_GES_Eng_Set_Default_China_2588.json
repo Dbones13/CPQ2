@@ -1,0 +1,11 @@
+{
+    "id": 2588,
+    "condition": "[AND]([NOT](<*ATTSEL(Generic_GES_Eng)*>),<*ISSELECTED(Generic_Ges_Location_Labour.GES China)*>)",
+    "name": "Generic_GES_Eng_Set_Default_China",
+    "action": "<*SELECTVALUE(Generic_GES_Eng:HPS_GES_P350B_CN)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

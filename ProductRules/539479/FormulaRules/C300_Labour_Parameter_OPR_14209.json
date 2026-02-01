@@ -1,0 +1,11 @@
+{
+    "id": 14209,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_OPR",
+    "action": "<*ASSIGNVALUE(C300_Labour_Parameter_OPR:<* Eval((0<*VALUE(C300_Labor_parameter_is)*>*4+0<*VALUE(Labor_parameter_mar)*>+5*0<*VALUE(Labor_parameter_mar)*>/(0<*VALUE(Labor_parameter_mar)*>+1)+2*0<*VALUE(C300_Labor_parameter_A)*>)*0.8) *>)*>",
+    "description": "CXCPQ-43533\nOPR Hrs = is*4 + mar + 5 * mar / (mar + 1) + 2 * A)",
+    "rank": "18",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

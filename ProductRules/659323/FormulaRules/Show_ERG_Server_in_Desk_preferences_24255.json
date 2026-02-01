@@ -1,0 +1,11 @@
+{
+    "id": 24255,
+    "condition": "[EQ](<*VALUE(Experion Remote Gateway (ERG) System Required)*>,Yes)",
+    "name": "Show_ERG_Server_in_Desk_preferences",
+    "action": "<*ALLOWATTRIBUTES(Header_05_open,ATTCON_12_open,ERG_Server_Redundancy,ERG_Server_Node_Type,Node_Suplier(ERG Server),Trusted_Platform_Module(TPM),EMDB_Server,Displays(ERG Server)(0-1),Display_Size(ERG Server),Display_Supplier(ERG Server),Trackball(ERG Server),IS_This_Marine_Customer(ERG Server),SM_Enterprise_Cluster,SM_Enterprise_Cluster_Sub,ATTCON_12_close,Header_05_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

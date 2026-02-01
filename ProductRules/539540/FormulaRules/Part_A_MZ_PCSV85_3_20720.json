@@ -1,0 +1,11 @@
+{
+    "id": 20720,
+    "condition": "[AND]([AND]([EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module)*>,Yes),[EQ](<*VALUE(SS_Server_Node_Type)*>,SVR_PER_HP_Rack_RAID5)),[AND]([EQ](<*VALUE(SS_Trusted_Platform_Module_Station)*>,Yes),[EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Server_Node_Type_Workstation)*>,SVR_PER_HP_Rack_RAID5)),[OR]([EQ](<*VALUE(SS_Experion_PKS_Release)*>,R520),[EQ](<*VALUE(SS_Experion_PKS_Release)*>,R530)))",
+    "name": "Part_A_MZ_PCSV85_3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCSV85)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCSV85,<* Eval(<*VALUE(SS_Number_of_Simulation_PCs_required)*> + <*VALUE(Simulation_red_non_red_Check)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

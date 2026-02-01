@@ -1,0 +1,11 @@
+{
+    "id": 10494,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR)))",
+    "name": "PLC_UOC_labor_parameter_var_37",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_37:<* Eval(<*CTX ( Container(LSS_Configuration_for_Rockwell_transpose).Sum(LSS_PLC_Number_of_ControlEdge_PLC_Profinet_Usage) )*>+<*VALUE(LSS_Experion_UOC_PROFINET_Usage_Licenses)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

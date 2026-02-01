@@ -1,0 +1,11 @@
+{
+    "id": 17771,
+    "condition": "[AND]([EQ](<*VALUE(SM_RG_Enclosure_Type)*>,Cabinet),[EQ](<*VALUE(SMRG_Total_AI_AO_DI_DO)*>,0),[GT](<*CTX ( Container(SM_RG_PartSummary_Cont).Rows.GetCount )*>,0))",
+    "name": "Clear Part Summary Container",
+    "action": "<*CTX ( Container(SM_RG_PartSummary_Cont).Rows.Clear )*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

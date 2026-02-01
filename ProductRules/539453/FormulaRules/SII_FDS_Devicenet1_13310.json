@@ -1,0 +1,11 @@
+{
+    "id": 13310,
+    "condition": "[AND]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(Is DeviceNet Interface in Scope?)*>,Yes))",
+    "name": "SII_FDS_Devicenet1",
+    "action": "[IF]([GT](<*VALUE(Number of DeviceNet Interface Types)*>,0)){<*ASSIGNVALUE(SII Function Design Specification -Devicenet1:<* Eval(16 * 0.9 + (<*VALUE(Number of DeviceNet Interface Types)*> - 1 ) * 4 *0.9) *>)*>}{<*ASSIGNVALUE(SII Function Design Specification -Devicenet1:0)*>}[ENDIF]",
+    "description": "SII Function Design Specification -Devicenet1\n\nCalculated Hrs = If dnt > 0 then\n  Hrs = 16*0.9 + (dnt-1)*4*0.9\n Else Hrs = 0",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

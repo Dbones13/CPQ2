@@ -1,0 +1,11 @@
+{
+    "id": 22322,
+    "condition": "1",
+    "name": "Hide PMD Labor Details",
+    "action": "[IF]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)){<*DISALLOWATTRIBUTES(PMD_Labour_Details)*>}{<*ALLOWATTRIBUTES(PMD_Labour_Details)*>}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

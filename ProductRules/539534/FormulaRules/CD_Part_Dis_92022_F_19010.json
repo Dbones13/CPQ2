@@ -1,0 +1,11 @@
+{
+    "id": 19010,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,Devronizer),[NOT]([IN](<*VALUE(MX_CD_Type_of_devronizer)*>,Fourdrinier preheat and profiling,Non-profiling/Fourdrinier/Couch/Press)),[NEQ](<*VALUE(MX_CD_Air_Cylinder)*>,Yes))",
+    "name": "CD_Part_Dis_92022_F",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:92022-F)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

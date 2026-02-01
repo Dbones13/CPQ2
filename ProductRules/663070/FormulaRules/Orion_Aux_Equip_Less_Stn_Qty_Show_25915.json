@@ -1,0 +1,11 @@
+{
+    "id": 25915,
+    "condition": "[LT](<* Eval(3*<*VALUE(Orion Console Left Auxiliary Equipment Unit (0-40))*>+4*<*VALUE(Orion Console Left Extend Auxil Equip Unit (0-40))*>+3*<*VALUE(Orion Console Right Auxil Equip Unit (0-40))*>+4*<*VALUE(Orion Console Right Extend Auxil Equip Unit (0-40))*>+4*<*VALUE(Orion Console Center Str Auxil Equip Unit (0-40))*>+4*<*VALUE(Orion Console Center Curv Auxil Equip Unit (0-40))*>+4*<*VALUE(Orion Console Center Ext Auxil Equip Unit (0-40))*>) *>,<* Eval(<*VALUE(Flex Station Qty (0-60))*> + <*VALUE(Console Station Qty (0-20))*> + <*VALUE(TPS Station Qty (0-20))*> +  <*VALUE(Console Station Extension Qty  (0-15))*>) *>)",
+    "name": "Orion_Aux_Equip_Less_Stn_Qty_Show",
+    "action": "<*ALLOWATTRIBUTES(Orion_Aux_Qty_Less_Stn_Qty)*>",
+    "description": "CXCPQ-40742 Instance 2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

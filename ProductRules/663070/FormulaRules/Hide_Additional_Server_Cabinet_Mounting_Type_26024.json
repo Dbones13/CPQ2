@@ -1,0 +1,11 @@
+{
+    "id": 26024,
+    "condition": "[AND]([NEQ](<*VALUE(Server Type1)*>,SVR_PER_DELL_Tower_RAID1),[NEQ](<*VALUE(Server Type1)*>,SVR_STD_DELL_Tower_RAID1))",
+    "name": "Hide_Additional_Server_Cabinet_Mounting_Type",
+    "action": "<*DISALLOWATTRIBUTES(Additional Server Cabinet Mounting Type)*>",
+    "description": "CXCPQ-45303",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

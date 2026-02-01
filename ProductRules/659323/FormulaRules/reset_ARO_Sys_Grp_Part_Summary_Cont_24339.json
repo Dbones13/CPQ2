@@ -1,0 +1,11 @@
+{
+    "id": 24339,
+    "condition": "[NOT](<*ATTSEL(ARO_Sys_Grp_Part_Summary)*>)",
+    "name": "reset_ARO_Sys_Grp_Part_Summary_Cont",
+    "action": "<*CTX ( Container(ARO_Sys_Grp_Part_Summery_Cont).Rows.Clear )*>",
+    "description": "",
+    "rank": "900",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

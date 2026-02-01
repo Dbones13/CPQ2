@@ -1,0 +1,11 @@
+{
+    "id": 10876,
+    "condition": "[EQ](<*VALUE(HC900_Select_ControlEdge_HC900_R700_Media_Kit_Type)*>,Electronic)",
+    "name": "Set HC-EMD730-ESD",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(HC900_PART_SUMMARY:HC-EMD730-ESD)*><* DoResetAtt *>",
+    "description": "CXCPQ-40188",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

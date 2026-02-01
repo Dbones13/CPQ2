@@ -1,0 +1,11 @@
+{
+    "id": 9116,
+    "condition": "1",
+    "name": "LE Project Schedule",
+    "action": "<*ASSIGNVALUE(LE Project Schedule:<* Eval(5*<*VALUE(labor_parameter_Le_pf)*>*<*VALUE(labor_parameter_sp)*>) *>)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

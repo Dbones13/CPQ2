@@ -1,0 +1,11 @@
+{
+    "id": 18963,
+    "condition": "[AND]([OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,AutoSlice),[NEQ](<*VALUE(MX_CD_CDW_Digital_Display)*>,Yes),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0)),[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,ProCoat),[NEQ](<*VALUE(MX_CD_AutoSlice_ProCoat_CDW_Digital_Display)*>,Yes),[NEQ](<*VALUE(MX_CD_ProCoat_Type)*>,Rod Coater),[EQ](<*VALUE(MX_CD_Number_of_zones)*>,0)))",
+    "name": "CD_Part_Dis_91411D_Z",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_CD_Bom_Parts:91411D-Z)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

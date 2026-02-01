@@ -1,0 +1,11 @@
+{
+    "id": 12212,
+    "condition": "[OR](<*ISSELECTED(PSW_GES_Eng_dropdown_value.SYS GES Eng-BO-UZ)*>,<*ISSELECTED(PSW_GES_Eng_dropdown_value.SYS GES Eng-FO-UZ)*>)",
+    "name": "Hide GES Location other than UZ",
+    "action": "<*DISALLOWALLVALUESEXCEPT(PSW_GES_Eng_dropdown_value:HPS_GES_P350B_UZ|HPS_GES_P350F_UZ)*>",
+    "description": "",
+    "rank": "4",
+    "active": false,
+    "modifiedDate": "26/02/25",
+    "modifiedBy": "Suriyanarayanan Pazhani"
+}

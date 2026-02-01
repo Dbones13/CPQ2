@@ -1,0 +1,11 @@
+{
+    "id": 18208,
+    "condition": "[EQ](<*VALUE(MXP_Z_Axis_Sensor)*>,)",
+    "name": "Default_MXP_Z_Axis_Sensor",
+    "action": "<*SELECTVALUE(MXP_Z_Axis_Sensor:No)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

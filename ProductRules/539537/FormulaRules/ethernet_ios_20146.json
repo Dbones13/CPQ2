@@ -1,0 +1,11 @@
+{
+    "id": 20146,
+    "condition": "<*ISSELECTED(SerC_CG_Ethernet_Interface.Yes)*>",
+    "name": "ethernet_ios",
+    "action": "<*ASSIGNVALUE(ethernet_ios:<* Eval(0<*VALUE(SerC_NO of Rock Ctrl Processors Redundant0-999NEW)*>+0<*VALUE(SerC_Number_of_Rockwell_ControlLogix_Processors)*>+0<*VALUE(SerC_Nu of Proc Conn I/O Devi (Redundant ) (0-999))*>+0<*VALUE(SerC_Number of Process Connected I/O Devices 1)*>) *>)*>",
+    "description": "for proposal",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

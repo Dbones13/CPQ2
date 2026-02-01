@@ -1,0 +1,11 @@
+{
+    "id": 22051,
+    "condition": "[NOT]([GEQ](<* Eval(<*VALUE(FDM HART Multiplexer Blocks (0-2048))*> - (INT((<*VALUE(FDM HART Multiplexer Blocks (0-2048))*> + 15)/2048))*2048 - (INT((<*VALUE(FDM HART Multiplexer Blocks (0-2048))*> - (INT((<*VALUE(FDM HART Multiplexer Blocks (0-2048))*> + 15)/2048))*2048 + 15)/1024))*1024 + 15) *>,512))",
+    "name": "Del_HC-FH0512",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-FH0512)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

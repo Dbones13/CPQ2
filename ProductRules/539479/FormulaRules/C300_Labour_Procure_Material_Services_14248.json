@@ -1,0 +1,11 @@
+{
+    "id": 14248,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Procure_Material_Services",
+    "action": "<*ASSIGNVALUE(C300_Labour_Procure_Material_Services:[IF]([EQ](<*VALUE(C300_Implementation_Methodology)*>,Non Standard Build Estimate)){<* Eval(0<*VALUE(C300_Labour_Parameter_BOM)*>*0.95+0<*VALUE(C300_Labour_Paramter_IPR)*>+0<*VALUE(C300_Labour_Parameter_OPR)*>) *>}{<* Eval(0<*VALUE(C300_Labour_Parameter_BOM)*>+0<*VALUE(C300_Labour_Paramter_IPR)*>+0<*VALUE(C300_Labour_Parameter_OPR)*>) *>}[ENDIF])*>",
+    "description": "CXCPQ-43533\nCalculated Hours = BOM Hrs + IPR Hrs + OPR Hrs",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

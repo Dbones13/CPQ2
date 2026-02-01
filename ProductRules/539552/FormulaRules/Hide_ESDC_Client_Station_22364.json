@@ -1,0 +1,11 @@
+{
+    "id": 22364,
+    "condition": "[AND]([NEQ](<*VALUE(ESDC_Software_Release)*>,R530),[EQ](<*VALUE(ESDC_Client_Stations_required)*>,Yes))",
+    "name": "Hide_ESDC_Client_Station",
+    "action": "<*DISALLOWVALUES(ESDC_Station_Node_Type:STN_STD_DELL_Tower_NonRAID,ESDC_Station_Node_Type:STN_PER_HP_Tower_RAID1,ESDC_Station_Node_Type:STN_PER_DELL_Rack_RAID1,ESDC_Station_Node_Type:STN_PER_DELL_Tower_RAID1,ESDC_Station_Node_Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "30/12/25",
+    "modifiedBy": "Ramesh Kumar"
+}

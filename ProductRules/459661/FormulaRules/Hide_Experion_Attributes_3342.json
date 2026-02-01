@@ -1,0 +1,11 @@
+{
+    "id": 3342,
+    "condition": "[AND]([EQ](<*VALUE(New_Expansion)*>,Expansion),[NOT]([LIKE](<*VALUE(CE_Selected_Products)*>,Experion HS System)))",
+    "name": "Hide Experion Attributes",
+    "action": "<*SETOPTIONAL(HS_Existing_Op_Apps_Leak_Detect_25_Pipe_Segments,Experion_HS_MSID_Choices,Experion_Cutover)*><*DISALLOWATTRIBUTES(HS_Existing_Equipment_Points,HS_Existing_Op_Apps_Core_25_Pipe_Segments,HS_Existing_Op_Apps_Leak_Detect_25_Pipe_Segments,HS_Existing_System_Release,HS_Number_of_Existing_Stations,HS_Number_of_Existing_Points,Experion_HS_MSID_Choices,Experion_Cutover)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

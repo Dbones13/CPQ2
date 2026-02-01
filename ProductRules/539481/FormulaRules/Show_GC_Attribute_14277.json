@@ -1,0 +1,11 @@
+{
+    "id": 14277,
+    "condition": "[EQ](<*VALUE(MIQ_DoesEachStationHaveGas_Chromatograph)*>,No)",
+    "name": "Show GC Attribute",
+    "action": "<*DISALLOWATTRIBUTES(MIQ_Are_the_GCs_redundant)*><*ALLOWATTRIBUTES(MIQ_HowManyStationsHave_GCs)*>",
+    "description": "CXCPQ-50741",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

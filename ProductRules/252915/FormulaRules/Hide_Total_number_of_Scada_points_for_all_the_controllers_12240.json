@@ -1,0 +1,11 @@
+{
+    "id": 12240,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,ELEPIU ControlEdge RTU Migration Engineering),[AND]([EQ](<*CTX ( Quote.CustomField(EGAP_Proposal_Type) )*>,Firm),[OR]([EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,PCDI),[EQ](<*VALUE(ELEPIU_Type_of_Experion_System_Connection_Planned)*>,Serial Interface))))",
+    "name": "Hide_Total number of Scada points for all the controllers",
+    "action": "<*DISALLOWATTRIBUTES(ELEPIU_Total_numberof_Scada_points_for_controllers)*>",
+    "description": "CXCPQ-60156",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "25/11/23",
+    "modifiedBy": "Pushpita Guru"
+}

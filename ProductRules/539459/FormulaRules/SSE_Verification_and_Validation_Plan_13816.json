@@ -1,0 +1,11 @@
+{
+    "id": 13816,
+    "condition": "1",
+    "name": "SSE Verification and Validation Plan",
+    "action": "<*ASSIGNVALUE(SSE Verification and Validation Plan:4)*>",
+    "description": "SSE Verification and Validation Plan = 4 Hrs",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

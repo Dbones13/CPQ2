@@ -1,0 +1,11 @@
+{
+    "id": 22981,
+    "condition": "<*ISSELECTED(C300_RG_UPC_Fiber_Optic_Extender.Single Mode x4)*>",
+    "name": "hide_select_Single_Mode_FOE_Type",
+    "action": "<*DISALLOWVALUES(C300_RG_UPC_Single_Mode_FOE_Type_CG_Cab:Separate IOTA,C300_RG_UPC_Single_Mode_FOE_Type_CG_Cab:Single IOTA)*>\n<*SELECTVALUE(C300_RG_UPC_Single_Mode_FOE_Type_CG_Cab:DIN RAIL)*>",
+    "description": "CXCPQ-80749",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

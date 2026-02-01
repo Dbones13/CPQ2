@@ -1,0 +1,11 @@
+{
+    "id": 26443,
+    "condition": "[OR]([GT](<*VALUE(TP-OTP231_s1)*>,0),[GT](<*VALUE(TP-OTP231_S2)*>,0),[GT](<*VALUE(TP-OTP231_s3)*>,0),[GT](<*VALUE(TP-OTP231_S4)*>,0))",
+    "name": "TP-OTP231_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TP-OTP231)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-OTP231, <* Eval(<*VALUE(TP-OTP231_s1)*>+<*VALUE(TP-OTP231_S2)*>+<*VALUE(TP-OTP231_s3)*>+<*VALUE(TP-OTP231_S4)*>) *>)*><* DoResetAtt *>",
+    "description": "CXCPQ-38909,CXCPQ-48560",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 23862,
+    "condition": "[GT](<*Eval(0<*CTX( Container(SM_RG_IO_Count_Digital_Input_1.3_Cabinet_Cont).Sum(Red_IS) )*>  + 0<*CTX( Container(SM_RG_IO_Count_Digital_Input_1.3_Cabinet_Cont).Sum(Non_Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Analog_Output_Cont).Sum(Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Analog_Output_Cont).Sum(Non_Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Analog_Input_Cont).Sum(Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Analog_Input_Cont).Sum(Non_Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Digital_Output_Cont).Sum(Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Digital_Output_Cont).Sum(Non_Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Digital_Input_Cont).Sum(Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Digital_Input_Cont).Sum(Non_Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Analog_Input_1.3_Cabinet_Cont).Sum(Red_IS) )*> + 0<*CTX( Container(SM_RG_IO_Count_Analog_Input_1.3_Cabinet_Cont).Sum(Non_Red_IS) )*>)*>,0)",
+    "name": "Labor_parameter_is_1",
+    "action": "<*ASSIGNVALUE(Labor_parameter_is:1)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

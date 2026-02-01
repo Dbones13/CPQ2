@@ -1,0 +1,11 @@
+{
+    "id": 23651,
+    "condition": "<*IFANYVALUE(Assessment Type:Network)*>",
+    "name": "Firewalls (redundant pair) Hide",
+    "action": "<*DISALLOWATTRIBUTES(Firewalls (redundant pair))*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

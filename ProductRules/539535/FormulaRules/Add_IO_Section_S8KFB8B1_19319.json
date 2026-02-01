@@ -1,0 +1,11 @@
+{
+    "id": 19319,
+    "condition": "[AND]([GT](<*VALUE(PlantCruise_FIM8)*>,0),[EQ](<*VALUE(PlantCruise_Redundant_FIM8)*>,No))",
+    "name": "Add_IO_Section_S8-KFB8B1",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(PlantCruise_Part_Summary:S8-KFB8B1)*><*SETATVQTY(PlantCruise_Part_Summary:S8-KFB8B1,<*VALUE(PlantCruise_FIM8)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

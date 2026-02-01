@@ -1,0 +1,11 @@
+{
+    "id": 26126,
+    "condition": "[EQ](<*VALUE(Ent_ace_t_Cab_tpm)*>,)",
+    "name": "assign value aceT-cab_tpm",
+    "action": "<*SELECTVALUE(Ent_ace_t_Cab_tpm:Yes)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

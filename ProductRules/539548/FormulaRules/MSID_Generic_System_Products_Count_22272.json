@@ -1,0 +1,11 @@
+{
+    "id": 22272,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,Generic System),[GT](<*CTX ( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,0))",
+    "name": "MSID_Generic_System_Products_Count",
+    "action": "[IF]([EQ](<*CTX ( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,1)){<*ASSIGNVALUE(MSID_Generic_System_Products_Count:Generic System 1)*>}{}[ENDIF]\n[IF]([EQ](<*CTX ( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,2)){<*ASSIGNVALUE(MSID_Generic_System_Products_Count:Generic System 1<br>Generic System 2)*>}{}[ENDIF]\n[IF]([EQ](<*CTX ( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,3)){<*ASSIGNVALUE(MSID_Generic_System_Products_Count:Generic System 1<br>Generic System 2<br>Generic System 3)*>}{}[ENDIF]\n[IF]([EQ](<*CTX ( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,4)){<*ASSIGNVALUE(MSID_Generic_System_Products_Count:Generic System 1<br>Generic System 2<br>Generic System 3<br>Generic System 4)*>}{}[ENDIF]\n[IF]([EQ](<*CTX ( Container(MSID_Product_Container_Generic_hidden).Rows.GetCount )*>,5)){<*ASSIGNVALUE(MSID_Generic_System_Products_Count:Generic System 1<br>Generic System 2<br>Generic System 3<br>Generic System 4<br>Generic System 5)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

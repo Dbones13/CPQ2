@@ -1,0 +1,11 @@
+{
+    "id": 20148,
+    "condition": "[GT](<*CTX ( Container(Document_cont_c300).Rows.GetCount )*>,0)",
+    "name": "C300_CG_Total_IO_Load",
+    "action": "<*CTX ( Container(Document_cont_c300).Row(1).Column(C300_CG_Total_IO_Load).Set(0<*VALUE(total_family_CG_ios_doc)*>) )*>\n<*CTX ( Container(Document_cont_c300).Row(1).Column(Mounting_solution).Set(<*VALUE(SerC_CG_IO_Mounting_Solution)*>) )*>",
+    "description": "",
+    "rank": "2000",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 26007,
+    "condition": "[AND]([OR]([GT](<*VALUE(Orion Console 2Position Base Unit (0-20))*>,0),[GT](<*VALUE(Orion Console 3Position Base Unit (0-20))*>,0)),[EQ](<*VALUE(Orion Console Alarm Soundbar)*>,Yes),[EQ](<*VALUE(Node Supplier)*>, Honeywell))",
+    "name": "TP-OCSDB1_Add",
+    "action": "<* DoNotResetAtt *><*SELECTVALUES(Exp_Ent_Grp_Part_Summary:TP-OCSDB1)*><*SETATVQTY(Exp_Ent_Grp_Part_Summary:TP-OCSDB1, <* Eval((2*<*VALUE(Orion Console 2Position Base Unit (0-20))*>)+(3*<*VALUE(Orion Console 3Position Base Unit (0-20))*> ))*>)*><* DoResetAtt *>",
+    "description": "CXCPQ-39022",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14291,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(MIQ_HowManyStationsHave_GCs)*>,0)*>,0))",
+    "name": "MO-ADDGC Reset",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(MIQ_PART_SUMMARY:MO-ADDGC)*><* DoResetAtt *>",
+    "description": "CXCPQ-50830",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

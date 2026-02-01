@@ -1,0 +1,11 @@
+{
+    "id": 20179,
+    "condition": "[EQ](<*VALUE(DVM_Mobile_Client_Connections)*>,)",
+    "name": "Default_DVM_Mobile_Client_Connections",
+    "action": "<*ASSIGNVALUE(DVM_Mobile_Client_Connections:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

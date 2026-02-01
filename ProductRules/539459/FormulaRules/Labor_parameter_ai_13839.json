@@ -1,0 +1,11 @@
+{
+    "id": 13839,
+    "condition": "1",
+    "name": "Labor_parameter_ai",
+    "action": "<*ASSIGNVALUE(Labor_parameter_ai:<*CTX( Container(SM_ControlGroup_Cont).Sum(Labor_parameter_ai) )*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

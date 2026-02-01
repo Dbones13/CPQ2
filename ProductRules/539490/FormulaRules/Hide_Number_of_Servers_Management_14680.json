@@ -1,0 +1,11 @@
+{
+    "id": 14680,
+    "condition": "[NEQ](<*VALUE(MX_Virtualization_options)*>,Multiple virtualization system with continuous backup and restore)",
+    "name": "Hide_Number_of_Servers_Management",
+    "action": "<*DISALLOWATTRIBUTES(MXP_Number_of_Servers_Management)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

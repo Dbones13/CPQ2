@@ -1,0 +1,11 @@
+{
+    "id": 13247,
+    "condition": "[EQ](<*VALUE(Auxiliary Cabinet Count)*>,)",
+    "name": "Set default value for Auxiliary Cabinet Count",
+    "action": "<*ASSIGNVALUE(Auxiliary Cabinet Count:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

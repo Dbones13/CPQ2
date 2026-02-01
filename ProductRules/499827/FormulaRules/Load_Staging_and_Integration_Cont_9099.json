@@ -1,0 +1,11 @@
+{
+    "id": 9099,
+    "condition": "[AND]([EQ](<*CTX ( Container(Staging_and_Integration_Cont).Rows.GetCount )*>,0),[EQ](<*CTX( Container(New_exp_common_prj_input).Row(1).Column(Staging_Integration Required).Get )*>,Yes))",
+    "name": "Load Staging and Integration Cont",
+    "action": "<*CTX ( Container(Staging_and_Integration_Cont).LoadKeys(Questions).Load(Select COLUMN_1 as Questions from STAGING_INTEGRATION_CONT where Type='Question') )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

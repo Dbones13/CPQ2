@@ -1,0 +1,11 @@
+{
+    "id": 19607,
+    "condition": "[EQ](<*VALUE(Exp HS HC900 Universal Modbus History Backfill)*>,Yes)",
+    "name": "HC900 Universal Modbus History Backfill YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Experion_HS_PART_SUMMARY:EP-HHWUMH)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "4",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

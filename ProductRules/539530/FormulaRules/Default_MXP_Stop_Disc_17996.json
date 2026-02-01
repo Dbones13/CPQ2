@@ -1,0 +1,11 @@
+{
+    "id": 17996,
+    "condition": "[EQ](<*VALUE(MXP_Stop_Disc)*>,)",
+    "name": "Default_MXP_Stop_Disc",
+    "action": "<*SELECTVALUE(MXP_Stop_Disc:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14204,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300_Labour_Parameter_Instance",
+    "action": "<*ASSIGNVALUE(C300_Labour_Parameter_Instance:<* Eval(0<*VALUE(No_of_Batch_Unit_Copies(Replica of Master Units))*>*(5.06+5.06+6+0<*VALUE(No_of_Complex_SCMs_per_Unit (0-100))*>*1.012)+0<*VALUE(No_of_Product_on_Copy_Unit)*>*(4.75+0<*VALUE(No_of_Complex_Operations_per_Product (0-100))*>*0.95 + 0.95)) *>)*>",
+    "description": "CXCPQ-43575\nInstance Hrs = bru*(5.06 + 5.06 + 6 + bcscm*1.012) + bpr*(4.75 + bco*0.95 + 0.95)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

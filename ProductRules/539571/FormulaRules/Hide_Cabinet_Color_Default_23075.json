@@ -1,0 +1,11 @@
+{
+    "id": 23075,
+    "condition": "[EQ](<*VALUE(SerC_RG_Cabinet_Type)*>,Alternate Cabinet)",
+    "name": "Hide_Cabinet_Color_Default",
+    "action": "<*DISALLOWVALUES(SerC_RG_Cabinet_Color_Default:Custom,SerC_RG_Cabinet_Color_Default:Gray-RAL 7032)*>\n\n<*DISALLOWVALUES(SerC_RG_Cabinet_Door_Keylock_Default:Pushbutton)*>\n\n<*DISALLOWVALUES(SerC_RG_Cabinet_Hinge_Type_Default:180 Degree)*>\n<*DISALLOWALLVALUESEXCEPT(SerC_RG_Cabinet_Doors_Default:Standard)*>",
+    "description": "CXCPQ-47015",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

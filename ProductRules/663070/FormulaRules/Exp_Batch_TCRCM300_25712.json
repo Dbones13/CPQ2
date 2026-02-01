@@ -1,0 +1,11 @@
+{
+    "id": 25712,
+    "condition": "[GT](<*VALUE(Exp Batch Unit/ Recipe Control Module License(0-600))*>,299)",
+    "name": "Exp_Batch_TCRCM300",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:TC-RCM300)*>[IF]([GT](<*eval(Int(Fix(<*VALUE(Exp Batch Unit/ Recipe Control Module License(0-600))*>/300)))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:TC-RCM300, <*eval(Int(Fix(<*VALUE(Exp Batch Unit/ Recipe Control Module License(0-600))*>/300)))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add TC-RCM300",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 24276,
+    "condition": "[NEQ](<*VALUE(ARO_Client_Harware_Req)*>,Yes)",
+    "name": "DisAllow_ARO_ClientHarwareReq",
+    "action": "<*DISALLOWATTRIBUTES(ATTCON_08_open,ARO_Client_Hardware,ARO_Client_Qty_20,ARO_Client_Qty_15,ARO_Multi_Window_Client_Qty,ARO_Client_Qty_40,ARO_Client_Qty_100,ARO_Client_Node_Type,ARO_Client_Node_Supplier,ARO_Multi_Window_Client_4,ARO_Client_Display_Size,ARO_Client_Display_Supplier,ARO_Client_Peripherals,ATTCON_08_close)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

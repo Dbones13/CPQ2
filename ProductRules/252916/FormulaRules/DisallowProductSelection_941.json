@@ -1,0 +1,11 @@
+{
+    "id": 941,
+    "condition": "[NOT]([AND](<*CTX( Container(Migration_MSID_Selection_Container).IsValid )*>,<*CTX( Container(Migration_MSID_Selection_Container).Rows.GetCount )*>))",
+    "name": "DisallowProductSelection",
+    "action": "<*DISALLOWATTRIBUTES(Migration_Apply_Product_Selection,Migration_Product_Choices)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

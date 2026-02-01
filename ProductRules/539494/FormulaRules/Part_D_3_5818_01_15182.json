@@ -1,0 +1,11 @@
+{
+    "id": 15182,
+    "condition": "[NEQ](<*VALUE(MXP_Extruction_Coating_Software)*>,Ratio Control for Co-Extrusion, 1  per extruder)",
+    "name": "Part_D_3_5818_01",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MXP_Bom_Parts:3-5818-01)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

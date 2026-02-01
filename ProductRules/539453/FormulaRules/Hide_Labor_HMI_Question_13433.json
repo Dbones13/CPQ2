@@ -1,0 +1,11 @@
+{
+    "id": 13433,
+    "condition": "[EQ](<*VALUE(Is HMI Engineering in Scope?)*>,No)",
+    "name": "Hide Labor HMI Question",
+    "action": "<*DISALLOWATTRIBUTES(Are Alarm Groups in Scope?,Level of Documentation,Number of Custom Context Menus,Number of Display Prototypes,Number of HMI Training Sessions,Quality of Customer Input,SafeView Factor (Max quanity of Monitors in One Station),Test System Complexity,Test System Responsibility)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 10637,
+    "condition": "[AND]([LIKE](<*CTX( Container(MSID_Product_Container).UniqueValues(Product Name).Separator(,) )*>,3rd Party PLC to ControlEdge PLC/UOC),[EQ](<*VALUE(LSS_Is_IO_details_database_available?)*>,))",
+    "name": "default_LSS_Is_IO_details_database_available?",
+    "action": "<*SELECTVALUE(LSS_Is_IO_details_database_available?:yes)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

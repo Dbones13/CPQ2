@@ -1,0 +1,11 @@
+{
+    "id": 10716,
+    "condition": "[AND]([LIKE](<*VALUE(MSID_Selected_Products)*>,TPA/PMD Migration),[EQ](<*VALUE(TPA_Count_of_normal_TPA_PMD_HMI_graphics)*>,))",
+    "name": "TPA_Default_Count_of_normal_TPA_Default_PMD_HMI_graphics",
+    "action": "<*ASSIGNVALUE(TPA_Count_of_normal_TPA_PMD_HMI_graphics:0)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

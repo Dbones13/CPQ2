@@ -1,0 +1,11 @@
+{
+    "id": 20274,
+    "condition": "[NOT]([EQ](<*VALUE(DVM_ONVIF_Device_Integration_License)*>,Yes))",
+    "name": "ONVIF DEVICE INTEGRATION_Add",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMONV)*><* DoResetAtt *>",
+    "description": "CXCPQ-45727",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

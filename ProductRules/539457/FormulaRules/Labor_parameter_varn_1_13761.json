@@ -1,0 +1,11 @@
+{
+    "id": 13761,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_varn_1",
+    "action": "[IF]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Essentials Platforms-Dell Servers)){<*ASSIGNVALUE(Labor_parameter_varn_1:<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM24)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM25)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM26)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVM27)*>) *>)*>}{[IF]([EQ](<*VALUE(Virtualization_Platform_Options)*>,Premium Platform for Nutanix)){<*ASSIGNVALUE(Labor_parameter_varn_1:<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN01)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVN02)*>) *>)*>}{<*ASSIGNVALUE(Labor_parameter_varn_1:<* Eval(<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX04)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX05)*>+<*GETATVQTY(Virtualization_BOM_Parts:MZ-PCVX06)*>) *>)*>}[ENDIF]}[ENDIF]",
+    "description": "Story 8706 & Story 8709\nModified CXCPQ-108768",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

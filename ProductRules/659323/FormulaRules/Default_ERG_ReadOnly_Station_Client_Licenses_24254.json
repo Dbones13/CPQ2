@@ -1,0 +1,11 @@
+{
+    "id": 24254,
+    "condition": "[EQ](<*VALUE(ERG Read-Only Station Client Licenses (1-40))*>,)",
+    "name": "Default_ERG Read-Only Station Client Licenses",
+    "action": "<*ASSIGNVALUE(ERG Read-Only Station Client Licenses (1-40):1)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

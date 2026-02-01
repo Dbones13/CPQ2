@@ -1,0 +1,11 @@
+{
+    "id": 13583,
+    "condition": "[EQ](<*VALUE(Virtualization_VMWare_vCenter_Standard_Licenses)*>,)",
+    "name": "Virtualization_LSS_Question_default_Virtualization_VMWare_vCenter_Standard_Licenses",
+    "action": "<*ASSIGNVALUE(Virtualization_VMWare_vCenter_Standard_Licenses:0)*>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,1 @@
+[IF]([EQ](<*VALUE(SS_Simulation_Server_required)*>,No)){<*ASSIGNVALUE(Simulation_red_non_red_Check:0)*>}{}[ENDIF]

@@ -1,0 +1,11 @@
+{
+    "id": 18741,
+    "condition": "[EQ](<*VALUE(MX_CD_CDW_Mounting_Adapter)*>,)",
+    "name": "Default_MX_CD_CDW_Mounting_Adapter",
+    "action": "<*SELECTVALUE(MX_CD_CDW_Mounting_Adapter:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

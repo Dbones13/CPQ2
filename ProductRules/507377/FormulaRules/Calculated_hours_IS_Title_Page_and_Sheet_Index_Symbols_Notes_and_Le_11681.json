@@ -1,0 +1,11 @@
+{
+    "id": 11681,
+    "condition": "[OR](<*ISSELECTED(CE_Scope_Choices.LABOR)*>,<*ISSELECTED(CE_Scope_Choices.HW/SW + LABOR)*>)",
+    "name": "Calculated hours IS Title Page and Sheet Index Symbols Notes and Le",
+    "action": "<*ASSIGNVALUE(IS Title Page and Sheet Index Symbols Notes and Le:[IF](<*ISSELECTED(IS_Implementation_Methodology.Non-Standard Build Estimate)*>){<* Eval(((1.5 * <*VALUE(IS_No_of_Title_Page_Sheet_Index_(1-20))*> + 0.75 * <*VALUE(IS_No_of_Symbols_Notes_and_Legend_(0-2))*>) + ((<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> * (<*VALUE(IS_No_of_Title_Page_Sheet_Index_(1-20))*> + <*VALUE(IS_No_of_Symbols_Notes_and_Legend_(0-2))*>)) * 0.25))) *>}{[IF]([AND](<*ISSELECTED(IS_Implementation_Methodology.Standard Build Estimate)*>,<*ISSELECTED(IS_GES_Location.None)*>)){<* Eval((((1.5 * <*VALUE(IS_No_of_Title_Page_Sheet_Index_(1-20))*> + 0.75 * <*VALUE(IS_No_of_Symbols_Notes_and_Legend_(0-2))*>) + ((<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> * (<*VALUE(IS_No_of_Title_Page_Sheet_Index_(1-20))*> + <*VALUE(IS_No_of_Symbols_Notes_and_Legend_(0-2))*>)) * 0.25)))*0.8) *>}{<* Eval(((((1.5 * <*VALUE(IS_No_of_Title_Page_Sheet_Index_(1-20))*> + 0.75 * <*VALUE(IS_No_of_Symbols_Notes_and_Legend_(0-2))*>) + ((<*VALUE(IS_No_of_Reviews_(add_Asbuilts)_(2-5))*> * (<*VALUE(IS_No_of_Title_Page_Sheet_Index_(1-20))*> + <*VALUE(IS_No_of_Symbols_Notes_and_Legend_(0-2))*>)) * 0.25)))*0.8)*1.1) *>}[ENDIF]}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

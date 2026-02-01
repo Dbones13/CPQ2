@@ -1,0 +1,11 @@
+{
+    "id": 20331,
+    "condition": "[EQ](<*VALUE(Advanced Video Evidence Pack)*>,No)",
+    "name": "EP-DVMAVEP_Advanced Video Evidence Pack_Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(DVM_Sys_Grp_Part_Summary:EP-DVMAVEP)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

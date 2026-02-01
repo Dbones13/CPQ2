@@ -1,0 +1,11 @@
+{
+    "id": 18486,
+    "condition": "[EQ](<*VALUE(MXP_Scanner_Type)*>,Q6031-00)",
+    "name": "Part_A_Q6031_00",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(MXP_SC_Bom_Parts:Q6031-00)*><*SETATVQTY(MXP_SC_Bom_Parts:Q6031-00,1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

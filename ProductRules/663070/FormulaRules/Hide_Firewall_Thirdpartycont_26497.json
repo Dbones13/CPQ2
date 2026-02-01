@@ -1,0 +1,11 @@
+{
+    "id": 26497,
+    "condition": "<*IFANYVALUE(Firewall Required:No)*>",
+    "name": "Hide_Firewall_Thirdpartycont",
+    "action": "<*DISALLOWATTRIBUTES(Firewall_Thirdpartycont)*>\n<*DISALLOWATTRIBUTES(EPKS_Part_Summary_Cont_3rd_Party)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

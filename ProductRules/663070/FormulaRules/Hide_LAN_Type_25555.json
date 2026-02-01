@@ -1,0 +1,11 @@
+{
+    "id": 25555,
+    "condition": "[EQ](<*VALUE(Interface with TPS Required?)*>,Yes)",
+    "name": "Hide_LAN_Type",
+    "action": "<*SETOPTIONAL(LAN Type)*><*DISALLOWATTRIBUTES(LAN Type)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

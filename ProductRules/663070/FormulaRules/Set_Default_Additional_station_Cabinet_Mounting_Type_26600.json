@@ -1,0 +1,11 @@
+{
+    "id": 26600,
+    "condition": "[EQ](<*VALUE(Additional_Station_Cabinet_Mounting_Type)*>,)",
+    "name": "Set_Default_Additional_station_Cabinet_Mounting_Type",
+    "action": "<*SELECTVALUE(Additional_Station_Cabinet_Mounting_Type:None)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

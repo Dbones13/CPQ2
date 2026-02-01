@@ -1,0 +1,11 @@
+{
+    "id": 14950,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_labor_parameter_var_20",
+    "action": "<*ASSIGNVALUE(PLC_UOC_labor_parameter_var_20:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "06/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14928,
+    "condition": "[OR]([EQ](<*VALUE(Scope)*>,LABOR),[EQ](<*VALUE(Scope)*>,HW/SW/LABOR))",
+    "name": "PLC_UOC_SW_HW_Order",
+    "action": "<*ASSIGNVALUE(SW_HW Order:4)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

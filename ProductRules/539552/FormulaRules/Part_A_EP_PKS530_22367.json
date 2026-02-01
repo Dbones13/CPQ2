@@ -1,0 +1,11 @@
+{
+    "id": 22367,
+    "condition": "[AND]([EQ](<*VALUE(ESDC_Software_Release)*>,R530),[EQ](<*VALUE(ESDC_base_media)*>,Physical Delivery))",
+    "name": "Part_A_EP_PKS530",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(ESDC_BOM_Parts:EP-PKS530)*><*SETATVQTY(ESDC_BOM_Parts:EP-PKS530, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

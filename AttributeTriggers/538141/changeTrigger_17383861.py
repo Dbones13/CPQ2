@@ -1,0 +1,1 @@
+<*ASSIGNVALUE(SC_Product_Status:0)*>

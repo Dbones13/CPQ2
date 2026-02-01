@@ -1,0 +1,126 @@
+<div class="row" id="Items">
+    <div id="items-section" class="clearfix fiori3-items-section" style="position: relative">
+        <div class="fiori3-quote-section-header items-section-header">
+            <span>
+                @Translation.Get("xsltQuoteCartProducts")&nbsp;
+                <a id="toggleAllItemsTrigger" data-bind="visible: !isEmpty(), click: toggleItemsState, css: { 'items-collapsed': areItemsCollapsed() }, tooltip: { title: 'Expand/Collapse Items' }" class="toggle-expand-collapse-items-icon" href="#"><span class="sap-icon visible-md-inline visible-lg-inline">&#xe1f9;</span></a>
+            </span>
+            <div class="fiori3-product-section-action-row">
+                <div class="add-product pull-right clear-padding">
+                    <div class="fiori3-input-group" data-bind="style: { display: (customFields.firstWithProperty('name', 'CF_NewCurrency')?.content() === '' || (customFields.firstWithProperty('name', 'CF_NewCurrency')?.content() === customFields.firstWithProperty('name', 'Currency')?.content())) ? '' : 'none' }">
+						<!-- START - CXCPQ-69218 - 20/10/2023 - Manthan Rajguru - Display price toggle field for service contract quote -->
+                        <div class="fiori3-input-group col-sm-5" data-bind = "foreach: customFields.filterByProperty('name','SC_CF_PRICE_TOGGLE')">
+                        <!-- ko template: template + "_Quote" -->
+                        <!--/ko -->
+                    	</div>
+                        <!-- END - CXCPQ-69218 - 20/10/2023 - Manthan Rajguru - Display price toggle field for service contract quote -->
+                        <div class="fiori3-search-input-wrapper" data-bind="visible: diplayAddProdSection">
+                            <input tabindex="0" autocomplete="off" aria-label="@Translation.Get("xsltAddItems")" id="quickAddInput" type="text" class="form-control" placeholder="@Translation.Get("xsltAddItems")" data-bind="value: quickAdd.quickAddSearch, valueUpdate: 'afterkeyup', hasfocus: quickAdd.quickAddHasFocus, popover: { templateId: 'QuickAddTemplate', moduleFactory: QuickAddModuleFactory, trigger: 'manual', autoClose: true, placement: 'bottom' },disable: isServiceContractProduct(items.renderingMainItems())" />
+                            <span class="sap-icon" data-bind="tooltip: { title:'@Translation.GetJS("RD.Cart.SearchItems")' }">&#xe00d;</span>
+                        </div>
+                        <div class="input-group-btn flex">
+                            <div class="fiori3-single-action-wrapper flex">
+                                <button class="btn fiori3-icon-button" data-bind="visible: showQuickConfig && diplayAddProdSection, click: quickAdd.quickConfig, tooltip: { title: quickAdd.quickConfigTranslation }, disable: isServiceContractProduct(items.renderingMainItems())"><span class="sap-icon">&#xe0a6;</span></button>
+                                <a class="fiori3-icon-button" data-bind="visible: diplayAddProdSection, css: { disabled: isServiceContractProduct(items.renderingMainItems(),$root.customFields.firstWithProperty('name', 'Quote Type')?.content())}, attr: { href: !isServiceContractProduct(items.renderingMainItems(),$root.customFields.firstWithProperty('name', 'Quote Type')?.content())? quickAdd.searchCatalogUrl : '#' }, tooltip: { title: '@Translation.GetJS("Cart.BrowseCatalog")' }"><span class="sap-icon">&#xe058;</span></a>
+                                <!-- ko if: $root.useNewQuoteEngine -->
+                                <button id="itemsFilter" class="btn fiori3-icon-button" data-bind="click: toggleFilterEditor, tooltip: { title: 'Filter Items' }, visible: !isEmpty()"><span class="sap-icon">&#xe076;</span></button>
+                                <!-- /ko -->
+                                <button class="btn fiori3-icon-button" data-bind="enable: isAnyItemSelected(), visible: !isEmpty() && !$root.useNewQuoteEngine && diplayAddProdSection, css: { 'disabled': !isAnyItemSelected() }, click: deleteSelectedItems, tooltip: { title: '@Translation.GetJS("Cart.DeleteSelectedItems")' }"><span class="sap-icon">&#xe03d;</span></button>
+                                <button class="btn fiori3-icon-button" data-bind="enable: isAnyItemSelected(), visible: !isEmpty() && isItemTypeEditable() && !$root.useNewQuoteEngine && diplayAddProdSection, css: { 'disabled': !isAnyItemSelected() }, popover: { templateId: 'ItemsTypeEditTemplate', autoClose: true, placement: 'top' }, tooltip: { title: '@Translation.GetJS("Cart.SetItemType")' }"><span class="sap-icon">&#xe224;</span></button>
+                            </div>
+                            <div class="fiori3-manage-items-buttons flex" data-bind="visible: diplayAddProdSection">
+                                <button class="btn btn-secondary fiori3-btn-secondary btn-xs" data-bind="click: updateCartItems, visible: canManageItems()">@Translation.GetJS("Cart.Reorder")</button>
+                                <button class="btn btn-secondary fiori3-btn-secondary btn-xs" data-bind="click: replaceCartItems, visible: canManageItems() && canReplaceItems()">@Translation.GetJS("Cart.Replace")</button>
+                                <button class="btn fiori3-icon-button" data-bind="click: toggleCanManageItems, visible: !isEmpty() && !isInViewMode() && !$root.useNewQuoteEngine, tooltip: { title: '@Translation.GetJS("Cart.ManageItems")'}"><span class="sap-icon">&#xe1b7;</span></button>
+                            </div>
+                        </div>
+
+                        <script type="text/html" id="ItemsTypeEditTemplate">
+                            <div class="item-type-popover">
+                                <ul class="chckqty">
+                                    <li>
+                                        <label class="fiori3-radio-button">
+                                            <input type="radio" name="itemsType" value="0" data-bind="checked: selectedItemsType">
+                                            <span>@Translation.Get("ItemType.Base.Label")</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="fiori3-radio-button">
+                                            <input type="radio" name="itemsType" value="3" data-bind="checked: selectedItemsType">
+                                            <span>@Translation.Get("ItemType.Optional.Label")</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="center">
+                                    <button class="btn btn-primary fiori3-btn-primary" data-bind="click: changeItemsType">@Translation.Get("ItemTypes.Save")</button>
+                                    <button class="btn btn-tertiary fiori3-btn-tertiary" data-bind="click: close">@Translation.Get("ItemTypes.Cancel")</button>
+                                </div>
+                            </div>
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div id="items-container" class="clearfix col-md-12 fiori3-quote-section-container fiori3-items-container">
+            
+    <div class="fiori3-input-group search-items add-product col-sm-12 clear-padding" data-bind="style: { display: areItemsPaged() && isMobile() ? 'block' : 'none' }">
+        <input id="searchInput1" type="text" class="form-control" placeholder="@Translation.Get("RD.Cart.SearchItems")" tabindex="51" data-bind="value: itemsSearch.search, valueUpdate: 'afterkeydown', hasfocus: itemsSearch.hasFocus, popover: { templateId: 'ItemsSearchTemplate', moduleFactory: ItemsSearchModuleFactory, trigger: 'manual', autoClose: true, placement: 'bottom' }" />
+    </div>
+    <div class="quote-filter-pills-container col-md-12 fiori3-pills-container" style="display: none; padding-right: 250px" data-bind="visible: displayFilterPills().length">
+        <ul>
+            <!-- ko foreach: displayFilterPills -->
+            <li>
+                <span class="fiori3-pills">
+                    <span style="padding: 0 5px;" data-bind="text: label + ':'"></span>
+                    <span style="padding: 0 5px;font-weight: bold" data-bind="text: displayValue()"></span>
+                    <a href="#" class="sap-icon" data-bind="click: $root.removeFilterCriteria, tooltip: { title: '@Translation.GetJS("xsltRemove")' }, attr: { 'aria-label': '@Translation.GetJS("xsltRemove")', id: label + '_' + displayValue() }">&#xe03e;</a>
+                </span>
+            </li>
+            <!-- /ko -->
+            <li>
+                <a class="close-filter-pill" href="#" data-bind="visible: displayFilterPills().length, click: clearFilters">@Translation.Get("QuoteList.ClearFilters")</a>
+            </li>
+        </ul>
+        
+        <div class="filtered-total-value">@Translation.Get("QuoteItemsFilter.FilteredTotalAmount") <!-- ko text: $root.filteredTotalAmount() --><!-- /ko --></div>
+    </div>
+    <div class="clearfix"></div>
+    <div style="display: none" data-bind="visible: isEmpty() && !itemsLoading()">
+        <div class="alert alert-warning">
+            @Translation.Get("View.Items.CartIsEmpty")
+        </div>
+    </div>
+    @Html.Action("GetItemTableView")
+</div>
+</div>
+</div>
+
+@Html.PartialWithNameAsComment("Templates/QuickAddTemplate")
+@Html.PartialWithNameAsComment("Templates/ItemsSearchTemplate")
+
+<script type = "text/javascript">
+function isServiceContractProduct(itemDesc, quoteType){
+    var startTime = performance.now();
+    let isContractRenewal = false;
+   if ((itemDesc.length > 0 && itemDesc[0].itemDescription.partNumber() === "Service Contract") || (quoteType === "Contract Renewal")) {
+        isContractRenewal = true;
+    }
+    return isContractRenewal;
+var endTime = performance.now();
+    var executionTime = endTime - startTime;
+    //console.log('Script execution time for isServiceContractProduct RT_SectionItems: ' + executionTime + ' milliseconds');
+}
+cpq.ready(function () {
+    if(document.referrer.indexOf("LoadQuote.aspx") != -1 || document.referrer.indexOf("crm/landing?") != -1){
+        interval = setInterval(function(){
+            if(cpq.models.cart.items.renderingMainItems().length ){
+              if(! cpq.models.cart.areItemsCollapsed()) cpq.models.cart.collapseAll();
+              if(!  cpq.models.cart.isSectionCollapsed('custom-fields-section'))cpq.models.cart.toggleQuoteSection('custom-fields-section');
+              if(cpq.models.cart.pager.pageSize() != 5)cpq.models.cart.pager.pageSize(5);
+              clearInterval(interval);
+            }
+        },1000);
+    }
+});
+</script>

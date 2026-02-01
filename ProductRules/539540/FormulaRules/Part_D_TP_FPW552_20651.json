@@ -1,0 +1,11 @@
+{
+    "id": 20651,
+    "condition": "[NOT]([AND]([GT](<*VALUE(SS_Flex_Station_Qty_Orion)*>,0),[EQ](<*VALUE(SS_Orion_Console_Display_Size)*>,55 inch),[EQ](<*VALUE(SS_Orion_Console_Display_Supplier)*>,Honeywell),[OR]([GT](<*VALUE(SS_Orion_Console_2_Position_Base_Unit_Total)*>,0),[GT](<*VALUE(SS_Orion_Console_3_Position_Base_Unit_Total)*>,0))))",
+    "name": "Part_D_TP_FPW552",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Simulation_Bom_parts:TP-FPH552)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

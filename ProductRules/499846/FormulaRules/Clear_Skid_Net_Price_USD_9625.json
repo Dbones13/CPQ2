@@ -1,0 +1,11 @@
+{
+    "id": 9625,
+    "condition": "[OR]([EQ](<*ATTSEL(Pskid Cost of goods Sold (COGS))*>,0),[EQ](<*ATTSEL(PSkid Grossmargin in Percentage)*>,0))",
+    "name": "Clear Skid Net Price USD",
+    "action": "<*ASSIGNVALUE(Pskid Net Sell Price USD:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

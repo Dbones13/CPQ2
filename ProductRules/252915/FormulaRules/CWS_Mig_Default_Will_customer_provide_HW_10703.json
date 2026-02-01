@@ -1,0 +1,11 @@
+{
+    "id": 10703,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Will_customer_provide_HW_for_QCS_Standard)*>,)",
+    "name": "CWS_Mig_Default_Will_customer_provide_HW",
+    "action": "<*SELECTVALUE(CWS_Mig_Will_customer_provide_HW_for_QCS_Standard:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 25720,
+    "condition": "[AND]([GT](<*VALUE(Experion Process Points (0 - 45000))*>,999),[EQ](<*VALUE(Server Redundancy Requirement?)*>,Redundant))",
+    "name": "Exp_Red_Pnt_Add_EPRPR01K_Red",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Exp_Ent_Grp_Part_Summary:EP-RPR01K)*>[IF]([GT](<*eval(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-10000*INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000))-5000*INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000-(INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000)))*5000)/2000)))/1000))*>,0)){<*SETATVQTY(Exp_Ent_Grp_Part_Summary:EP-RPR01K, <*eval(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-10000*INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000))-5000*INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000))-2000*INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000-(INT(FIX((<*VALUE(Experion Process Points (0 - 45000))*>-(INT(FIX(<*VALUE(Experion Process Points (0 - 45000))*>/10000)))*10000)/5000)))*5000)/2000)))/1000))*>)*>}{0}[ENDIF]<* DoResetAtt *>",
+    "description": "Add EP-RPR01K",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

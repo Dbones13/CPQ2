@@ -1,0 +1,1 @@
+[IF]([GT](<*VALUE(labor_parameter_el)*>,2)){<*ASSIGNVALUE(labor_parameter_D:<* Eval((<*VALUE(labor_parameter_el)*> - 2) * 0.1) *>)*>}{<*ASSIGNVALUE(labor_parameter_D:<* Eval((<*VALUE(labor_parameter_el)*> - 2) * 0.05) *>)*>}[ENDIF]

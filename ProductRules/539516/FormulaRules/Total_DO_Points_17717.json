@@ -1,0 +1,11 @@
+{
+    "id": 17717,
+    "condition": "1",
+    "name": "Total_DO_Points",
+    "action": "<*ASSIGNVALUE(Labor_parameter_do:<*Eval(0<*CTX( Container(SM_IO_Count_Digital_Output_Cont).Sum(Total DO Point) )*>+ 0<*CTX( Container(SM_CG_DO_RLY_NMR_Cont).Sum(Total DO NMR Point) )*> )*>)*>",
+    "description": "Labor Report Task",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "29/10/25",
+    "modifiedBy": "Pavan Koganty"
+}

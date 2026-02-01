@@ -1,0 +1,11 @@
+{
+    "id": 23975,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(Terminal_Experion_Server_Hardware)*>,Dell R740XL),[GT](<*VALUE(Terminal_to_be_integrated_at_Enterprise_level)*>,0)))",
+    "name": "Hide_Additional_Memory",
+    "action": "<*SETOPTIONAL(Terminal_Additional_Memory)*><*DISALLOWATTRIBUTES(Terminal_Additional_Memory)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22803,
+    "condition": "[OR]([EQ](<*VALUE(Cluster_Name)*>,1),[EQ](<*VALUE(Cluster_Name)*>,))",
+    "name": "Cluster_Name_Value",
+    "action": "<*ASSIGNVALUE(Cluster_Name:<*VALUE(List of Locations/Clusters/ Network_Groups)*>)*>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

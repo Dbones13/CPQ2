@@ -1,0 +1,11 @@
+{
+    "id": 13354,
+    "condition": "1",
+    "name": "labor_parameter_HMI_ag",
+    "action": "<*ASSIGNVALUE(labor_parameter_HMI_ag:[IF]([EQ](<*VALUE(Are Alarm Groups in Scope?)*>,Yes)){1}{0}[ENDIF])*>",
+    "description": "CXCPQ-39010,39007",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

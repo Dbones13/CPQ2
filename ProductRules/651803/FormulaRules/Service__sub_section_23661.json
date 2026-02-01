@@ -1,0 +1,11 @@
+{
+    "id": 23661,
+    "condition": "1",
+    "name": "Service  sub section",
+    "action": "[IF]([NOT](<*ISSELECTED(Onsite Support Implementation Services.Yes)*>)){<*DISALLOWATTRIBUTES(Empty Section for MSS,Execution Country,FAT Document Verification and Execution,FDS & DDS Documentation Required,Microsoft Updates Install,SAT Document Verification and Execution)*>}{if_false}[ENDIF]",
+    "description": "On click of  \"Onsite support implementation services\" this sub section should be visible.",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 20692,
+    "condition": "[AND]([AND]([EQ](<*VALUE(SS_Node_Supplier)*>,Honeywell),[EQ](<*VALUE(SS_Trusted_Platform_Module)*>,No),[EQ](<*VALUE(SS_Server_Node_Type)*>,SVR_PER_DELL_Rack_RAID1)),[AND]([EQ](<*VALUE(SS_Trusted_Platform_Module_Station)*>,No),[EQ](<*VALUE(SS_Node_Supplier_Station)*>,Honeywell),[EQ](<*VALUE(SS_Server_Node_Type_Workstation)*>,SVR_PER_DELL_Rack_RAID1)))",
+    "name": "Part_A_MZ_PCSR82_3",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Simulation_Bom_parts:MZ-PCSR82)*><*SETATVQTY(Simulation_Bom_parts:MZ-PCSR82,<* Eval(<*VALUE(SS_Number_of_Simulation_PCs_required)*> + <*VALUE(Simulation_red_non_red_Check)*>) *>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": false,
+    "modifiedDate": "13/02/25",
+    "modifiedBy": "Abhijeet Shinde"
+}

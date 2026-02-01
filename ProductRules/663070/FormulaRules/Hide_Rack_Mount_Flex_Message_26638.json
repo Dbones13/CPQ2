@@ -1,0 +1,11 @@
+{
+    "id": 26638,
+    "condition": "[OR]([EQ](<*VALUE(Experion Server Type)*>,Server),[EQ](<*VALUE(Experion Server Type)*>,Server TPS),[EQ](<*VALUE(Server Mounting)*>,Desk),[EQ](<*VALUE(MIB Configuration Required?)*>,No),[EQ](<*VALUE(Interface with TPS Required?)*>,Yes),[NEQ](<*VALUE(Flex Server Node Type)*>,SVR_F_PER_DELL_Rack_RAID1))",
+    "name": "Hide_Rack_Mount_Flex_Message",
+    "action": "<*DISALLOWATTRIBUTES(Rack_Mount_Flex_Server_Message)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

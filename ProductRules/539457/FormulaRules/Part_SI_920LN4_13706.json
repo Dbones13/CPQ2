@@ -1,0 +1,11 @@
+{
+    "id": 13706,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_Giga_Byte_C2960X_CISCO_Switch)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_SI_920LN4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:SI-920LN4)*><*SETATVQTY(Virtualization_BOM_Parts:SI-920LN4,<*VALUE(Virtualization_Giga_Byte_C2960X_CISCO_Switch)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

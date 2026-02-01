@@ -1,0 +1,4 @@
+Attrlist=['FDM_HART_IP_Server_License','FDM_HART_IP_Server_DevicePoint_License','FDM_Report_Licenses','FDM_NAMUR_Diagnostic_Custom_Model_Licenses','FDM_Instrument_Alert_Monitoring_License','FDM_OPC_UA_Server_Enabler_Read-Only','FDM_OPC_UA_DA_Profile_Enabler_Read-Only','FDM_OPC_UA_HDA_Profile_Enabler_Read-Only','FDM_OPC_UA_AC_Profile_Enabler_Read-Only','FDM_OPC_UA_Server_Tag_read-only_Licenses','FDM_FF_Connector_Interface_Licenses','FDM_Devices_for_FF_Connector_Interface_License','FDM_FF_Conn_Interface_License_Fisher_Valvelink_SW']
+for att in Attrlist:
+    if Product.Attr(att).Allowed and Product.Attr(att).GetValue()=='':
+        Product.ResetAttr(att)

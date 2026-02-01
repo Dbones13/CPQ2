@@ -1,0 +1,11 @@
+{
+    "id": 23792,
+    "condition": "[NOT](<*ISSELECTED(SerC_CG_IO_Family_Type.Series-C Mark II)*>)",
+    "name": "Hide Universal IO Mark",
+    "action": "<*CTX ( Container(C300_CG_Universal_IO_Mark_1).Rows.Clear )*>\n<*CTX ( Container(C300_CG_Universal_IO_Mark_2).Rows.Clear )*>\n<*DISALLOWATTRIBUTES(C300_CG_Universal_IO_Mark_1,C300_CG_Universal_IO_Mark_2)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

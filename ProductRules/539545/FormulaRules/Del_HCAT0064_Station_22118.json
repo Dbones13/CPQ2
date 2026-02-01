@@ -1,0 +1,11 @@
+{
+    "id": 22118,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(FDM_Server_Specification)*>,Workstation),[GEQ](<* Eval( <*VALUE(FDM_Station_Audit)*>- (INT(<*VALUE(FDM_Station_Audit)*>/128))*128) *>,64)))",
+    "name": "Del_HC-AT0064_Station",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(FDM_Part_Summary:HC-AT0064)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "19",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

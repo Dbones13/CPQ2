@@ -1,0 +1,11 @@
+{
+    "id": 13773,
+    "condition": "[OR]([EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,HW/SW/LABOR),[EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Labor_parameter_store_F59",
+    "action": "<*ASSIGNVALUE(Labor_parameter_store_F59:<*Eval((0<*VALUE(Labor_parameter_varn_2)*>*8)+(0<*VALUE(Labor_parameter_varn_8)*>*2)+([IF]([EQ](<*VALUE(Labor_parameter_varn_20)*>,Yes)){(0<*VALUE(Labor_parameter_varn_14)*>*4)}{0}[ENDIF])+([IF]([AND]([EQ](<*VALUE(Labor_parameter_var_1)*>,Premium Platforms-Dell Servers),[EQ](<*VALUE(Labor_parameter_varn_20)*>,Yes))){<* Eval(0<*VALUE(Labor_parameter_varn_15)*>*4) *>}{0}[ENDIF])+(0<*VALUE(Labor_parameter_varn_16)*>*2)+(0<*VALUE(Labor_parameter_varn_17)*>*4)+(0<*VALUE(Labor_parameter_varn_18)*>*4)+(0<*VALUE(Labor_parameter_varn_1)*>*1)+(0<*VALUE(Labor_parameter_var_12)*>*2))*>)*>",
+    "description": "",
+    "rank": "6",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

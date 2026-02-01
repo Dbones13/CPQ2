@@ -1,0 +1,1 @@
+Quote.GetCustomField("R2Q_PRJT_Proposal Language").Content = Product.Attr('R2Q_PRJT_Proposal Language').GetValue()

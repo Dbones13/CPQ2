@@ -1,0 +1,11 @@
+{
+    "id": 13682,
+    "condition": "[AND]([GT](<*VALUE(Virtualization_CISCO_Virtual_Management_Switch)*>,0),[NEQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR))",
+    "name": "Part_SI_9200R4",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(Virtualization_BOM_Parts:SI-9200R4)*><*SETATVQTY(Virtualization_BOM_Parts:SI-9200R4,<*VALUE(Virtualization_CISCO_Virtual_Management_Switch)*>)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

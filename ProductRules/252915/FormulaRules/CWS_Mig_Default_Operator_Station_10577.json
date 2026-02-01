@@ -1,0 +1,11 @@
+{
+    "id": 10577,
+    "condition": "[EQ](<*VALUE(CWS_Mig_Touch_Screen_monitor_for_the_Operator_Station)*>,)",
+    "name": "CWS_Mig_Default_Operator_Station",
+    "action": "<*SELECTVALUE(CWS_Mig_Touch_Screen_monitor_for_the_Operator_Station:No)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

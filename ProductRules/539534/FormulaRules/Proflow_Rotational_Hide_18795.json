@@ -1,0 +1,11 @@
+{
+    "id": 18795,
+    "condition": "[OR]([NEQ](<*VALUE(MX_CD_Control_Type)*>,ProFlow),[EQ](<*VALUE(MX_CD_Proflow_type)*>,Rotational))",
+    "name": "Proflow Rotational Hide",
+    "action": "<*DISALLOWATTRIBUTES(MX_CD_Type_of_Valve_proflow)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

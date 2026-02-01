@@ -1,0 +1,11 @@
+{
+    "id": 13814,
+    "condition": "1",
+    "name": "SSE Engineering Plan",
+    "action": "<*ASSIGNVALUE(SSE Engineering Plan:8)*>",
+    "description": "SSE Engineering Plan = 8 Hrs",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

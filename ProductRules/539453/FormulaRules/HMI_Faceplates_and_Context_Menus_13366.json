@@ -1,0 +1,11 @@
+{
+    "id": 13366,
+    "condition": "[NEQ](<*VALUE(Implementation Methodology)*>,)",
+    "name": "HMI Faceplates and Context Menus",
+    "action": "<*ASSIGNVALUE(HMI Faceplates and Context Menus:<*Eval([IF]([EQ](<*VALUE(Implementation Methodology)*>,)){((0<*VALUE(labor_parameter_sf)*>+ 0<*VALUE(labor_parameter_mf)*>+ 0<*VALUE(labor_parameter_cf)*>+ 0<*VALUE(labor_parameter_vcf)*>+ 0<*VALUE(labor_parameter_rf)*>)*6)+0<*VALUE(Number of Custom Context Menus)*>*8}{(((0<*VALUE(labor_parameter_sf)*> + 0<*VALUE(labor_parameter_mf)*>+ 0<*VALUE(labor_parameter_cf)*>+ 0<*VALUE(labor_parameter_vcf)*> + 0<*VALUE(labor_parameter_rf)*>)*6)+0<*VALUE(Number of Custom Context Menus)*>*6)}[ENDIF])*>)*>",
+    "description": "If im=non SB then\n Calculated Hrs = ( sf + mf + cf + vcf + rf) * 6 + ccm * 8\nElse If ges= none and im=SB then\n calculated Hrs = ( sf + mf + cf + vcf + rf) * 6 + ccm * 6\nElse If  ges!=none and im=SB then\ncalculated Hrs = (( sf + mf + cf + vcf + rf) * 6 + ccm * 6 ) * 1.2",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

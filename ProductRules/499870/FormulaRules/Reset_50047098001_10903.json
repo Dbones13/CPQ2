@@ -1,0 +1,11 @@
+{
+    "id": 10903,
+    "condition": "[NOT]([GT](<* IsNull(<*VALUE(HC900 24 VDC Power Supply (2.5A))*>,0) *>,0))",
+    "name": "Reset 50047098-001",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(HC900_PART_SUMMARY:50047098-001)*><* DoResetAtt *>",
+    "description": "CXCPQ-40189",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

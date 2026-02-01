@@ -1,0 +1,11 @@
+{
+    "id": 8131,
+    "condition": "[EQ](<*VALUE(LSS_PLC_ControlEdge_PLC_UOC_or_vUOC)*>,PLC)",
+    "name": "Show_LSS_PLC_ControlEdge_PLC_System_Software_Release",
+    "action": "<*ALLOWATTRIBUTES(LSS_PLC_ControlEdge_PLC_System_Software_Release)*>[IF]([EQ](<*VALUE(LSS_PLC_ControlEdge_PLC_System_Software_Release)*>,)){<*SELECTVALUE(LSS_PLC_ControlEdge_PLC_System_Software_Release:172)*>}{}[ENDIF]",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

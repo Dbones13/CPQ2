@@ -1,0 +1,11 @@
+{
+    "id": 17892,
+    "condition": "[EQ](<*CTX( Container(GE_OR_OMNI_Interfaces).Row(1).Column(Devices).Get )*>,Yes)",
+    "name": "SCADA_EP-IGEAPI_YES",
+    "action": "<* DoNotResetAtt *><*SELECTVALUE(SCADA_BOM_Items:EP-IGEAPI)*><*SETATVQTY(SCADA_BOM_Items:EP-IGEAPI, 1)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "3",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

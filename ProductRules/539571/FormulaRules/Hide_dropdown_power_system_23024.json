@@ -1,0 +1,11 @@
+{
+    "id": 23024,
+    "condition": "[AND]([OR]([EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series C),[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)),[NEQ](<*VALUE(SerC_RG_Power_System_Vendor)*>,TDI))",
+    "name": "Hide_dropdown_power_system",
+    "action": "<*DISALLOWVALUES(SerC_RG_Power_System_Type:Non Redundant 40A,SerC_RG_Power_System_Type:Redundant 40A,SerC_RG_Power_System_Type:Redundant with BBU 20A)*>",
+    "description": "CXCPQ-44728",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

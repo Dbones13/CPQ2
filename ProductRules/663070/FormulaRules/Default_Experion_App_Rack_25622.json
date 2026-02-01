@@ -1,0 +1,11 @@
+{
+    "id": 25622,
+    "condition": "[EQ](<*VALUE(Experion APP Node - Rack Mount)*>,)",
+    "name": "Default_Experion App Rack",
+    "action": "<*ASSIGNVALUE(Experion APP Node - Rack Mount:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

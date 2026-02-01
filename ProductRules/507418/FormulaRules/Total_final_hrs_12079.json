@@ -1,0 +1,11 @@
+{
+    "id": 12079,
+    "condition": "1",
+    "name": "Total final hrs",
+    "action": "<*ASSIGNVALUE(Final_Hrs:<* Eval(<* Round (<*CTX( Container(PAGA_Labor_Container).Total(Final Hrs) )*>) *>+<* Round (<*CTX( Container(PAGA_Additional_Labour_Container).Total(Final Hrs) )*>) *>) *>)*>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

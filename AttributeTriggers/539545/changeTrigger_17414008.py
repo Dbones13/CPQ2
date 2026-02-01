@@ -1,0 +1,1 @@
+[IF]([GT](<*VALUE(FDM MUX Monitoring License (0-1))*>,0)){<*ASSIGNVALUE(FDM MAX MUX Monitoring License (0-1):0)*>}{0}[ENDIF]

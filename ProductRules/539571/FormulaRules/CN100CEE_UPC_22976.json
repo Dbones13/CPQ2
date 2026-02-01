@@ -1,0 +1,11 @@
+{
+    "id": 22976,
+    "condition": "[NOT]([OR]([NOT](<*ATTSEL(SerC_IO_Mounting_Solution)*>),<*IFANYVALUE(C300_RG_UPC_Specify_Id_Modifier:YES,SerC_IO_Mounting_Solution:Cabinet,SerC_IO_Mounting_Solution:Mounting Panel)*>))",
+    "name": "CN100CEE_UPC",
+    "action": "<*ALLOWATTRIBUTES(C300_RG_UPC_Cabinet_Header_Default,ATTCON_05_open,ATTCON_05_close,C300_RG_UPC_Cab_Mat_Type,C300_RG_UPC_Ambient_Temp_Range,C300_RG_UPC_CN100_IO_HIVE,C300_RG_UPC_Controlled_IO_License_Count,C300_RG_UPC_Ext_FDAP_Comm_Supp,C300_RG_UPC_CNM,C300_RG_UPC_CNM_Exp_Module,C300_RG_UPC_CNM_Uplink_SFP_Type,C300_RG_UPC_EIM,C300_RG_UPC_Fiber_Optic_Extender,C300_RG_UPC_FTA,C300_RG_UPC_WRO,C300_RG_UPC_Universal_IO_Count,C300_RG_UPC_UIO2_Redundancy,C300_RG_UPC_Pwr_Supp_Type,C300_RG_UPC_Pwr_Supp_Red,C300_RG_UPC_Marine_Cert,C300_RG_UPC_Abu_Dhabi_Bld_Loc,C300_RG_UPC_Single_Mode_FOE_Type_CG_Cab,C300_RG_UPC_STT650_Count,C300_RG_UPC_LLAI_Count,C300_RG_UPC_Non_GIIS_Universal_Marshalling_Count,C300_RG_UPC_GIIS_Bases_Universal_Marshalling_Count,C300_RG_UPC_GI_Bases_Universal_Marshalling_Count,Seperator)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

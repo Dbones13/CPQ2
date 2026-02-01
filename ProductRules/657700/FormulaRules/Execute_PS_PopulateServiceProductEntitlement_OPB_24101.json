@@ -1,0 +1,11 @@
+{
+    "id": 24101,
+    "condition": "[AND]([NEQ](<*VALUE(SC_OPB_Check_SP_Ent)*>,1),[EQ](<*VALUE(SC_Product_Type)*>,Renewal))",
+    "name": "Execute_PS_PopulateServiceProductEntitlement_OPB",
+    "action": "<* ExecuteScript(PS_PopulateServiceProductEntitlement_OPB) *>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

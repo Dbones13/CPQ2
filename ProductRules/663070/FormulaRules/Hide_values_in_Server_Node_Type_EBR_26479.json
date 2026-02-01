@@ -1,0 +1,11 @@
+{
+    "id": 26479,
+    "condition": "[IN](<*VALUE(Experion Software Release)*>,R510,R511)",
+    "name": "Hide_values_in_Server Node Type EBR",
+    "action": "<*DISALLOWVALUES(Server Node Type EBR:SVR_PER_DELL_Rack_RAID1_XE,Server Node Type EBR:SVR_PER_HP_Rack_RAID5)*>",
+    "description": "",
+    "rank": "1",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

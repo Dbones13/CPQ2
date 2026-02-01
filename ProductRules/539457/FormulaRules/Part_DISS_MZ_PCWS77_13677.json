@@ -1,0 +1,11 @@
+{
+    "id": 13677,
+    "condition": "[OR]([EQ](<*VALUE(MIgration_Scope_Choices)*>,LABOR),[NEQ](<*VALUE(Virtualization_vSphere_Client_Node_Type)*>,Dell R7920XL RAID))",
+    "name": "Part_DISS_MZ_PCWS77",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Virtualization_BOM_Parts:MZ-PCWS77)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

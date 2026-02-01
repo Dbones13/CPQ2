@@ -1,0 +1,11 @@
+{
+    "id": 12928,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,Renewal),[EQ](<*VALUE(SC_P1P2_PartsUsageMethod)*>,1 Year Pricing),[AND]([OR]([EQ](<*VALUE(SC_P1P2_ListPrice)*>,0),[EQ](<*VALUE(SC_P1P2_ListPrice)*>,)),[OR]([EQ](<*VALUE(SC_P1P2_PY_ListPrice)*>,0),[EQ](<*VALUE(SC_P1P2_PY_ListPrice)*>,))))",
+    "name": "Renewal_Hide_Parts_Replacement_Summary_1YP",
+    "action": "<*DISALLOWATTRIBUTES(Header_07_close,Header_07_open,SC_P1P2_Parts_Replacement_Summary)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

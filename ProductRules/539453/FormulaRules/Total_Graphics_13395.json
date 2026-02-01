@@ -1,0 +1,11 @@
+{
+    "id": 13395,
+    "condition": "1",
+    "name": "Total_Graphics",
+    "action": "<*ASSIGNVALUE(Total_Graphics:<* Eval(<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(2).Column(Labor_calc_value).Get)*>+<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(3).Column(Labor_calc_value).Get)*>+<*CTX( Container(Experion_Ent_Displays_Shapes_Faceplates).Row(4).Column(Labor_calc_value).Get)*>) *>)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 12926,
+    "condition": "[AND]([EQ](<*VALUE(SC_Product_Type)*>,New),[OR]([EQ](<*VALUE(SC_P1P2_Parts_Ext_Price)*>,0),[EQ](<*VALUE(SC_P1P2_Parts_Ext_Price)*>,)))",
+    "name": "Hide_Parts_Replacement_Summary",
+    "action": "<*DISALLOWATTRIBUTES(Header_07_close,Header_07_open,SC_P1P2_Parts_Replacement_Summary)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

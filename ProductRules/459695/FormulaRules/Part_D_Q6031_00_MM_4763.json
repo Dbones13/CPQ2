@@ -1,0 +1,11 @@
+{
+    "id": 4763,
+    "condition": "[OR]([NEQ](<*VALUE(MX_SG_Type_of_Scanner)*>,Q6031-00 Single-Sided),[LT](<*VALUE(MX_SG_Trim_Width_in_Millimeters)*>,1),[EQ](<*VALUE(MX_SG_Trim_Width_in_Millimeters)*>,0))",
+    "name": "Part_D_Q6031_00_MM",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(Scanner_sensor_bom_parts:Q6031-00-MM)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

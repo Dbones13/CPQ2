@@ -1,0 +1,11 @@
+{
+    "id": 21932,
+    "condition": "[IN](<*VALUE(FDM_Release)*>,R530,R521,R520)",
+    "name": "Show_FDM HART-IP Downlink license (0-10)",
+    "action": "<*ALLOWATTRIBUTES(FDM HART-IP Downlink license (0-10))*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

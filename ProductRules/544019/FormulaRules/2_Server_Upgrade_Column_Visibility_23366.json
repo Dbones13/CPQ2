@@ -1,0 +1,11 @@
+{
+    "id": 23366,
+    "condition": "[IN](<*VALUE(K&E Selected Model)*>,TP-ZSHRB1,TP-ZSDRR1,TP-ZA2ER4,TP-ZSDTA1,TP-ZSDTB1,TP-ZA2EL2,TP-ZA2ET2,TP-ZA2ER5)",
+    "name": "2 Server Upgrade Column Visibility",
+    "action": "<*DISALLOWATTRIBUTES(KE_Does_installed_APP)*>\n<*DISALLOWATTRIBUTES(KE_SESP)*>\n<*DISALLOWATTRIBUTES(KE_Node_Type)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Required)*>\n<*DISALLOWATTRIBUTES(KE_EBR_Release)*>\n<*DISALLOWATTRIBUTES(KE_Controller Experion peer to peer connectivity)*>",
+    "description": "TP-ZSHRB1,TP-ZSDRR1,TP-ZA2ER4,TP-ZSDTA1,TP-ZSDTB1,TP-ZA2EL2,TP-ZA2ET2,TP-ZA2ER5",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

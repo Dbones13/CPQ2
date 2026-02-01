@@ -1,0 +1,11 @@
+{
+    "id": 9095,
+    "condition": "[EQ](<*CTX ( Container(New_exp_common_prj_input).Row(1).Column(CE_Site_Frequency).Get )*>,50Hz)",
+    "name": "set value site frq _50",
+    "action": "<*CTX ( Container(CE_Project_Questions_Cont).Row(1).Column(CE_Site_Frequency).Set(50Hz) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

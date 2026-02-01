@@ -1,0 +1,2 @@
+from GS_FinalizedActivities import PopulateFinalizedActivities
+PopulateFinalizedActivities(Product)

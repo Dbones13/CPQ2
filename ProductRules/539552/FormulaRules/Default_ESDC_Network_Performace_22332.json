@@ -1,0 +1,11 @@
+{
+    "id": 22332,
+    "condition": "[EQ](<*VALUE(ESDC_Network_Performace)*>,)",
+    "name": "Default_ESDC_Network_Performace",
+    "action": "<*ASSIGNVALUE(ESDC_Network_Performace:0)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

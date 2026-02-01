@@ -1,0 +1,11 @@
+{
+    "id": 23384,
+    "condition": "1",
+    "name": "Hide_toAll",
+    "action": "<*DISALLOWATTRIBUTES(KE_Quad_Display)*>\n<*DISALLOWATTRIBUTES(KE_Additional_Hard_Disk)*>",
+    "description": "",
+    "rank": "0",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

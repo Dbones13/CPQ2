@@ -1,0 +1,11 @@
+{
+    "id": 13448,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW)",
+    "name": "Remove_Labor_Cost",
+    "action": "<*CTX ( Container(Labor_PriceCost_Cont).Rows.Clear )*>\n<*CTX ( Container(HMI_Engineering_Labor_Container).Rows.Clear )*>\n<*CTX ( Container(System_Interface_Engineering_Labor_Container).Rows.Clear )*>\n<*CTX ( Container(System_Network_Engineering_Labor_Container).Rows.Clear )*>\n<*CTX ( Container(Hardware Engineering Labour Container).Rows.Clear )*>\n<*CTX ( Container(Additional_CustomDev_Labour_Container).Rows.Clear )*>\n<*CTX ( Container(EBR_Engineering_Labor_Container).Rows.Clear )*>\n<*RESETATTRIBUTE(ErrorMessage1)*>\n<*RESETATTRIBUTE(ErrorMessage2)*>\n<*RESETATTRIBUTE(ErrorMessage3)*>\n<*RESETATTRIBUTE(ErrorMessage4)*>\n<*RESETATTRIBUTE(ErrorMessage6)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "10/12/24",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14261,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "C300 Functional Design Specification",
+    "action": "<*ASSIGNVALUE(C300 Functional Design Specification:[IF]([EQ](<*VALUE(C300_Implementation_Methodology)*>,Non-Standard Build Estimate)){<* Eval(0<*VALUE(parameter_HW)*>+ 0<*VALUE(parameter_CP)*>+ 0<*VALUE(Labor_Parameter_bat)*>*0<*VALUE(Batch)*>) *>}{<* Eval((0<*VALUE(parameter_HW)*>*0.7+ 0<*VALUE(parameter_CP)*>)+ 0<*VALUE(Labor_Parameter_bat)*>*0<*VALUE(Batch)*>) *>}[ENDIF])*>",
+    "description": "CXCPQ-43531",
+    "rank": "10",
+    "active": true,
+    "modifiedDate": "22/12/25",
+    "modifiedBy": "Yogesh Baisla2"
+}

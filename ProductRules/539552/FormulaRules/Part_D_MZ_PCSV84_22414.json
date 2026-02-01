@@ -1,0 +1,11 @@
+{
+    "id": 22414,
+    "condition": "[NOT]([AND]([EQ](<*VALUE(ESDC_Server_Node_Type)*>,SVR_PER_HP_Rack_RAID5),[EQ](<*VALUE(ESDC_Node_Supplier_Server)*>,Honeywell),[EQ](<*VALUE(ESDC_Trusted_Platform_Module)*>,Yes),[OR]([EQ](<*VALUE(ESDC_Software_Release)*>,R520),[EQ](<*VALUE(ESDC_Software_Release)*>,R530))))",
+    "name": "Part_D_MZ_PCSV84",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(ESDC_BOM_Parts:MZ-PCSV85)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "5",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 14698,
+    "condition": "[OR]([NEQ](<*VALUE(MX_Platform_Type)*>,Physical),[NEQ](<*VALUE(MX_Server_Type)*>,Tower))",
+    "name": "MX_Part_Dis_Q5000_60",
+    "action": "<* DoNotResetAtt *><*DISALLOWVALUES(MX_Platform_Bom_Parts:Q5000-60)*><* DoResetAtt *>",
+    "description": "",
+    "rank": "2",
+    "active": false,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 13463,
+    "condition": "[EQ](<*VALUE(CE_Scope_Choices)*>,HW/SW + LABOR)",
+    "name": "Labor_Parameter_SFDS",
+    "action": "<*ASSIGNVALUE(SHE Functional Design Specification:[IF]([EQ](<*VALUE(Implementation Methodology)*>,Non-Standard Build Estimate)){<* Eval(0.9*(1.2*(2*<*VALUE(Number of Physical Communication Links)*>+ <*VALUE(Number of Console Sections with Hardwired IO)*>*(4/(<*VALUE(Number of Console Sections with Hardwired IO)*>+1)+0.5)+8*([IF]([EQ](<*VALUE(Use of SPI (Intools) in Scope?)*>,Yes)){1}{0}[ENDIF])))) *>}{<* Eval(0.94*<* Eval(0.9*(1.2*(2*<*VALUE(Number of Physical Communication Links)*>+ <*VALUE(Number of Console Sections with Hardwired IO)*>*(4/(<*VALUE(Number of Console Sections with Hardwired IO)*>+1)+0.5)+8*([IF]([EQ](<*VALUE(Use of SPI (Intools) in Scope?)*>,Yes)){1}{0}[ENDIF])))) *>) *>}[ENDIF])*>",
+    "description": "",
+    "rank": "1",
+    "active": false,
+    "modifiedDate": "26/11/25",
+    "modifiedBy": "YashwanthKumar Boya"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 22876,
+    "condition": "[EQ](<*VALUE(SerC_CG_IO_Family_Type)*>,Series-C Mark II)",
+    "name": "Show_C300 IO series2and3",
+    "action": "<*ALLOWATTRIBUTES(C300_C IO_RG MS2,C300_C IO_RG MS3,Header_18_close,Header_18_open)*>",
+    "description": "38255(Showing both containers)",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

@@ -1,0 +1,11 @@
+{
+    "id": 18088,
+    "condition": "[EQ](<*VALUE(MXPro_Sensor_Outboard_Edge_Detect)*>,)",
+    "name": "MXPro_Sensor_Outboard_Edge_Detect",
+    "action": "<*SELECTVALUE(MXPro_Sensor_Outboard_Edge_Detect:No)*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

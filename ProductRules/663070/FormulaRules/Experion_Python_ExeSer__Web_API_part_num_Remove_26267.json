@@ -1,0 +1,11 @@
+{
+    "id": 26267,
+    "condition": "[OR]([EQ](<*VALUE(Experion Python Execution Service and Web API0_100)*>,0),[IN](<*VALUE(Experion Software Release)*>,R510,R511))",
+    "name": "Experion Python Exe-Ser & Web API part_num Remove",
+    "action": "<* DoNotResetAtt *><*RESETVALUE(Exp_Ent_Grp_Part_Summary:EP-AEPYW0)*><* DoResetAtt *>",
+    "description": "CCEECOMMBR-7681",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}

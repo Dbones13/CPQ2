@@ -1,0 +1,11 @@
+{
+    "id": 23701,
+    "condition": "[EQ](<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Upgrade/Update-Third Party Historian).GetDisplayValue )*>,)",
+    "name": "Default_Value_Upgrade/Update-Third Party Historian",
+    "action": "<*CTX( Container(AR_HCI_PHD_ProjectInputs1).Row(1).Column(Upgrade/Update-Third Party Historian).Set(No) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "22/08/25",
+    "modifiedBy": "Narasimhan Chakravarthy"
+}

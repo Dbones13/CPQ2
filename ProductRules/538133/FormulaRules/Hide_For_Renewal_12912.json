@@ -1,0 +1,11 @@
+{
+    "id": 12912,
+    "condition": "[EQ](<*VALUE(SC_Product_Type)*>,Renewal)",
+    "name": "Hide_For_Renewal",
+    "action": "<*CTX ( Container(SC_P1P2_Parts_Details).Column(Qty).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Details).Column(Ext_Price).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Invalid_Parts).Column(Qty).SetPermission(Hidden) )*><*CTX ( Container(SC_P1P2_Parts_Details).Column(Comments).SetPermission(ReadOnly) )*>",
+    "description": "",
+    "rank": "0",
+    "active": true,
+    "modifiedDate": "-",
+    "modifiedBy": ""
+}
